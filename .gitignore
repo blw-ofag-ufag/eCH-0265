@@ -1,0 +1,16 @@
+/**/target
+/**/bin
+/**/.jsdtscope
+/**/.DS_Store
+/**/*.rar
+/**/*.ear
+/**/*.war
+/*.zip
+/*.zip.*
+
+*.iml
+.idea/
+
+.project
+.classpath
+.settings/
