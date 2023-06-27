@@ -1,0 +1,652 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 
+Datum				Version				Autor
+*********************************************
+2022-11-30			Entwurf				Stl
+-->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:eCH-0265="http://www.ech.ch/xmlns/eCH-0265/1" xmlns:eCH-0097="http://www.ech.ch/xmlns/eCH-0097/6" xmlns:eCH-0261="http://www.ech.ch/xmlns/eCH-0261/1" xmlns:interlis-geometry="http://www.interlis.ch/geometry/1.0" targetNamespace="http://www.ech.ch/xmlns/eCH-0265/1" elementFormDefault="qualified" attributeFormDefault="unqualified" version="1.0">
+	<xs:annotation>
+		<xs:documentation xml:lang="de">Flächen und Kulturen</xs:documentation>
+	</xs:annotation>
+	<xs:import namespace="http://www.ech.ch/xmlns/eCH-0097/6" schemaLocation="http://www.ech.ch/xmlns/eCH-0097/6/eCH-0097-6-0.xsd"/>
+	<xs:import namespace="http://www.ech.ch/xmlns/eCH-0261/1" schemaLocation="../../../01_BUStammdaten/05_Eingabe_QS2/eCH-0261-1-0.xsd"/>
+	<xs:import namespace="http://www.interlis.ch/geometry/1.0" schemaLocation="https://models.interlis.ch/refhb24/geometry.xsd"/>
+	<!--Hauptdatentypen-->
+	<xs:complexType name="areaType">
+		<xs:annotation>
+			<xs:documentation xml:lang="de">Dieses Element beschreibt die geometrische Fläche als Polygon mit den
+                dazugehörigen Attributen. Einer Fläche werden eine oder mehrere Nutzungen zugeordnet.
+            </xs:documentation>
+			<xs:documentation xml:lang="en">The geometric area as a polygon with associated attributes. An area can be
+                associated with various cultivations.
+            </xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="id" type="eCH-0261:identifierType">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">Identifikator</xs:documentation>
+					<xs:documentation xml:lang="en">A unique identifier</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="fieldName" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">Flurname</xs:documentation>
+					<xs:documentation xml:lang="en">A user-friendly descriptor</xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="xs:token">
+						<xs:maxLength value="50"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="responsibleEnterprise" type="eCH-0097:uidStructureType">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">Unter Verantwortung von (Unternehmen/Betrieb)</xs:documentation>
+					<xs:documentation xml:lang="en">The enterprise (enterprise/branch) responsible for this area.
+                    </xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="geometry" type="interlis-geometry:GeometryType">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">Geometrie</xs:documentation>
+					<xs:documentation xml:lang="en">The geometric definition of this area.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="validFromInclusive" type="xs:date">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">Beginn des Zeitraums, in welchem das Polygon unverändert besteht,
+                        inklusiv
+                    </xs:documentation>
+					<xs:documentation xml:lang="en">The begin date of this definition, inclusive. This allows a
+                        definition to be entered into circulation or usage as of a specific date.
+                    </xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="validToInclusive" type="xs:date">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">Enddatum der Gültigkeit, inklusiv. Die Einträge in dieser Liste
+                        können sich ändern. Falls ein Eintrag nicht mehr existiert/geändert wurde, wird er mit dem
+                        Datum, bis zu welchem er gültig war, versehen. Die Liste bleibt so rückwärtskompatibel.
+                    </xs:documentation>
+					<xs:documentation xml:lang="en">The end date of this definition, inclusive. This allows a definition
+                        to exit circulation as of a specific date, retaining backwards compatibility, i.e. previous
+                        usage remains unaffected.
+                    </xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="cultivationType">
+		<xs:annotation>
+			<xs:documentation xml:lang="de">Dieses Element beschreibt, was auf einer Fläche angebaut wird oder vorhanden
+                ist. Innerhalb einer Fläche können mehrere Nutzungen nebeneinander angebaut werden oder vorhanden sein
+                (räumliche Abfolge). Im Verlaufe des Jahres können auf der gleichen Fläche mehrere Nutzungen stattfinden
+                (Zeitliche Abfolge). Die Fläche der Nutzung kann als nummerischen Wert angegeben werden. Diese räumliche
+                und zeitliche Abfolge ist vor allem im Gemüsebau relevant. Für den Direktzahlungsvollzug in der
+                Landwirtschaft ist wichtig zu wissen, ob es sich bei der Nutzung um eine Hauptkultur handelt oder nicht.
+                Und falls ja, zu welchem Bezugsjahr diese Hauptkultur zählt.
+            </xs:documentation>
+			<xs:documentation xml:lang="en">Describes what is planted or is present on an area. There can be multiple
+                crops on an area, next to each other (spatial sequence). There can also be consecutive crops on the same
+                area throughout the year (chronological order). An area can be described given its numeric
+                two-dimensional size. The spacial and chronological progression of the usage is relevant primarily in
+                vegetable cultivation. For direct payment fulfilment in the agricultural sector, it is important to know
+                whether the cultivation of an area constitutes the main crop or not. If that is the case, it is
+                necessary to indicate the year in which this main crop was cultivated.
+            </xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="id" type="eCH-0261:identifierType">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">Identifikator</xs:documentation>
+					<xs:documentation xml:lang="en">A unique identifier</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="allocatedFrom" type="xs:date">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">Datum, ab welchem Arbeiten für die Kultur ausgeführt werden, z.B
+                        vorbereitende Arbeiten
+                    </xs:documentation>
+					<xs:documentation xml:lang="en">Beginning date, inclusive, on which labour for the crop began, e.g.
+                        preparatory work.
+                    </xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="allocatedTo" type="xs:date" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">Datum, bis zu welchem Arbeiten der Kultur ausgeführt werden, z.B.
+                        Arbeiten, die nach der Ernte durchgeführt werden.
+                    </xs:documentation>
+					<xs:documentation xml:lang="en">End date, inclusive, on which labour for the crop ceased, e.g.
+                        follow-up work.
+                    </xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="areaSizeInm2" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">Fläche nummerisch in m2; dies soll nur sparsam verwendet werden.
+                        Mindestens die Hauptkulturen müssen geometrisch abgebildet werden.
+                    </xs:documentation>
+					<xs:documentation xml:lang="en">The size of the area in m2; use sparingly! If this is a main crop, a
+                        geometric depiction must be provided.
+                    </xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="xs:decimal">
+						<xs:fractionDigits value="2"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="sowingDate" type="xs:date" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">Saatdatum</xs:documentation>
+					<xs:documentation xml:lang="en">Sowing date</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="harvestDate" type="xs:date" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">Erntedatum</xs:documentation>
+					<xs:documentation xml:lang="en">Harvest date</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="effectiveYieldIng" type="xs:int" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">Effektiver Ertrag (g)</xs:documentation>
+					<xs:documentation xml:lang="en">The effective yield in grams</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="isMainCrop" type="xs:boolean">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">Handelt es sich um die Hauptkultur? (true = Ja, false = Nein)
+                    </xs:documentation>
+					<xs:documentation xml:lang="en">Indication whether the cultivation refers to the main crop.
+                    </xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="mainCropBaseYear" type="xs:gYear" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">Bezugsjahr der Hauptkultur</xs:documentation>
+					<xs:documentation xml:lang="en">Harvest year of the main crop</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="area" type="eCH-0265:areaType" minOccurs="1" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">Fläche</xs:documentation>
+					<xs:documentation xml:lang="en">Where the crop is/was cultivated. See referenced definition
+                    </xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="cultivationType" type="eCH-0265:cultivationTypeType">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">Nutzungsart</xs:documentation>
+					<xs:documentation xml:lang="en">The type of cultivation. See referenced definition.
+                    </xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="explicitDirectPaymentProgramme" type="eCH-0265:directPaymentProgrammeType" minOccurs="0" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">Explizites Direktzahlungsprogramm</xs:documentation>
+					<xs:documentation xml:lang="en">The direct payment program indicated here should be selected from
+                        the list of direct payment programs allowed per direct payment crop. See referenced definition.
+                    </xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="varietyType">
+		<xs:annotation>
+			<xs:documentation xml:lang="de">Die Sorte ist ein optionales Element. Die Sorte kann als Freitext eingegeben
+                werden. Allerdings soll bei bestehenden Listen auf diese referenziert werden.
+            </xs:documentation>
+			<xs:documentation xml:lang="en">The variety of the crop as defined by external systems or authorities
+                (preferred), or by freeform description.
+            </xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="item" type="eCH-0261:enumeratedItemType">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">Eintrag aus einer Liste.</xs:documentation>
+					<xs:documentation xml:lang="en">A multilingual, versioned entry from a published list.
+                    </xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="cultivationTypeType">
+		<xs:annotation>
+			<xs:documentation xml:lang="de">Dieses Element beinhaltet eine Liste von Nutzungsarten, respektive im
+                weiteren Sinne von Kulturen. Die Liste basiert auf den gemäss den «Grundlagen für die Düngung
+                landwirtschaftliche Kulturen in der Schweiz GRUD (www.grud.ch)» aufgeführten Nutzungsarten. Die Liste
+                wird mit weiteren Nutzungsarten insbesondere aus dem nicht landwirtschaftlichen Bereich erweitert. Zudem
+                sind Nutzungsarten wie Ökoelemente, Mischkulturen, Zwischenkulturen, etc. aufgeführt.
+            </xs:documentation>
+			<xs:documentation xml:lang="en">The cultivation type is an extension of a crop definition, based primarily
+                but not exclusively on the listings in the Principles of fertilisation of agricultural crops in
+                Switzerland PRIF) or in German, GRUD (www.grud.ch). The list is enhanced by other cultivation types, in
+                particular from the non-agricultural sector. Other cultivation types are also included such as organic
+                cultivation, mixed cultivation, intertillages, etc.
+            </xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="id" type="eCH-0261:identifierType">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">Identifikator</xs:documentation>
+					<xs:documentation xml:lang="en">A unique identfier</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="descriptor" type="eCH-0261:descriptorType">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">Name Nutzungsart</xs:documentation>
+					<xs:documentation xml:lang="en">The name or descriptor, multilingual</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="cultivationDurationInDays" type="xs:nonNegativeInteger" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">Anbaudauer (Standardwert Anzahl Tage)</xs:documentation>
+					<xs:documentation xml:lang="en">The default duration of the cultivation in days.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="validFromInclusive" type="xs:date">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">Startdatum der Gültigkeit. Die Einträge in dieser Liste können
+                        ändern. Hiermit können Einträge ab ein bestimmtes Datum Gültigkeit erhalten.
+                    </xs:documentation>
+					<xs:documentation xml:lang="en">The begin date of this definition, inclusive. This allows a
+                        definition to be entered into circulation or usage as of a specific date.
+                    </xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="validToInclusive" type="xs:date" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">Enddatum der Gültigkeit, inklusiv. Die Einträge in dieser Liste
+                        können sich ändern. Falls ein Eintrag nicht mehr existiert/geändert wurde, wird er mit dem
+                        Datum, bis zu welchem er gültig war, versehen. Die Liste bleibt so rückwärtskompatibel.
+                    </xs:documentation>
+					<xs:documentation xml:lang="en">The end date of this definition, inclusive. This allows a definition
+                        to exit circulation as of a specific date, retaining backwards compatibility, i.e. previous
+                        usage remains unaffected.
+                    </xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="directPaymentCrop" type="eCH-0265:directPaymentCropType" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">Kultur Direktzahlung</xs:documentation>
+					<xs:documentation xml:lang="en">The direct payment crop. See referenced definition.
+                    </xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="botanicalCrop" type="eCH-0265:botanicalCropType" minOccurs="0" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">Kultur botanisch</xs:documentation>
+					<xs:documentation xml:lang="en">The botanical crop. See referenced definition.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="programme" type="eCH-0265:programmeType" minOccurs="0" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">Massnahme</xs:documentation>
+					<xs:documentation xml:lang="en">The programme that the culitvation is subject to. See referenced
+                        definition.
+                    </xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="fertilisationStandard" type="eCH-0265:fertilizerStandardType" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">Düngungsnorm</xs:documentation>
+					<xs:documentation xml:lang="en">The fertilisation standard to which this cultivation is associated.
+                        See referenced definition.
+                    </xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="botanicalCropType">
+		<xs:annotation>
+			<xs:documentation xml:lang="de">Beschreibt eine botanische Kultur im engeren Sinne.</xs:documentation>
+			<xs:documentation xml:lang="en">A narrow definition of a botanical crop.</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="id" type="eCH-0261:identifierType">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">Identifikator</xs:documentation>
+					<xs:documentation xml:lang="en">A unique identifier.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="descriptor" type="eCH-0261:descriptorType">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">Name botanische Kultur</xs:documentation>
+					<xs:documentation xml:lang="en">The name or descriptor of this element, multilingual
+                    </xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="eppoCode" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo source="https://data.eppo.int">EPPO Data Services</xs:appinfo>
+					<xs:appinfo source="https://gd.eppo.int">EPPO Global Database, with Search Feature</xs:appinfo>
+					<xs:documentation xml:lang="de">EPPO-CODE</xs:documentation>
+					<xs:documentation xml:lang="en">EPPO-CODE.</xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="xs:token">
+						<xs:maxLength value="50"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="validFromInclusive" type="xs:date">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">Startdatum der Gültigkeit. Die Einträge in dieser Liste können
+                        ändern. Hiermit können Einträge ab ein bestimmtes Datum Gültigkeit erhalten.
+                    </xs:documentation>
+					<xs:documentation xml:lang="en">The begin date of this definition, inclusive. This allows a
+                        definition to be entered into circulation or usage as of a specific date.
+                    </xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="validToInclusive" type="xs:date" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">Enddatum der Gültigkeit, inklusiv. Die Einträge in dieser Liste
+                        können sich ändern. Falls ein Eintrag nicht mehr existiert/geändert wurde, wird er mit dem
+                        Datum, bis zu welchem er gültig war, versehen. Die Liste bleibt so rückwärtskompatibel.
+                    </xs:documentation>
+					<xs:documentation xml:lang="en">The end date of this definition, inclusive. This allows a definition
+                        to exit circulation as of a specific date, retaining backwards compatibility, i.e. previous
+                        usage remains unaffected.
+                    </xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="botanicalPlantFamily" type="eCH-0265:botanicalPlantFamilyType">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">Botanische Pflanzenfamilie</xs:documentation>
+					<xs:documentation xml:lang="en">The botanical plant family. See referenced definition.
+                    </xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="agronomicCropFamily" type="eCH-0265:agronomicCropCategoryType">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">Agronomische Kulturkategorien</xs:documentation>
+					<xs:documentation xml:lang="en">The agronimic crop category. See referenced definition.
+                    </xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="variety" type="eCH-0265:varietyType" minOccurs="0" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">Sorte</xs:documentation>
+					<xs:documentation xml:lang="en">The variety. See referenced definition.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="botanicalPlantFamilyType">
+		<xs:annotation>
+			<xs:documentation xml:lang="de">Jede botanische Kultur wird einer Pflanzfamilien zugeordnet.
+            </xs:documentation>
+			<xs:documentation xml:lang="en">The botanical plant family to which a botanical crop belongs.
+            </xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="item" type="eCH-0261:enumeratedItemType">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">Eintrag aus einer Liste.</xs:documentation>
+					<xs:documentation xml:lang="en">A multilingual, versioned entry from a published list.
+                    </xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="agronomicCropCategoryType">
+		<xs:annotation>
+			<xs:documentation xml:lang="de">Beschreibt eine agronomische Kategorisierung der botanischen Kulturen. Es
+                ist eine Liste.
+            </xs:documentation>
+			<xs:documentation xml:lang="en">The agronomic category of a botanical crop.</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="item" type="eCH-0261:enumeratedItemType">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">Eintrag aus einer Liste.</xs:documentation>
+					<xs:documentation xml:lang="en">A multilingual, versioned entry from a published list..
+                    </xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="directPaymentCropType">
+		<xs:annotation>
+			<xs:documentation xml:lang="de">Beschreibt eine Liste der «Kulturen», die gemäss Direktzahlungsverordnung im
+                Bereich Landwirtschaft relevant sind. Diese «Kulturen» werden für den Direktzahlungsvollzug verwendet.
+                Sie entsprechen den Hauptkulturen.
+            </xs:documentation>
+			<xs:documentation xml:lang="en">A definition of a crop with specific relevance to the Direct Payment
+                Programme in the agricultural sector in accordance with the regulations prescribing direct aid to
+                farmers (Direktzahlungsverordnung im Bereich Landwirtschaft). This is used for main crops.
+            </xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="id" type="eCH-0261:identifierType">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">Identifikator</xs:documentation>
+					<xs:documentation xml:lang="en">A unique identifier</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="descriptor" type="eCH-0261:descriptorType">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">Name der Direktzahlungskultur gemäss Direktzahlungsverordnung
+                    </xs:documentation>
+					<xs:documentation xml:lang="en">Multilingual name or descriptor of the element.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="biodiversityAreaQualityI" type="xs:boolean">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">Wenn true, gilt diese Kultur Direktzahlung gelten als sogenannte
+                        Biodiversitätsförderfläche mit Qualität I.
+                    </xs:documentation>
+					<xs:documentation xml:lang="en">If true, this direct payment crop is considered as a so-called
+                        biodiversity support area with quality I.
+                    </xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="validFromInclusive" type="xs:date">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">Startdatum der Gültigkeit. Die Einträge in dieser Liste können sich
+                        ändern. Hiermit können Einträge ab ein bestimmtes Datum Gültigkeit erhalten.
+                    </xs:documentation>
+					<xs:documentation xml:lang="en">The begin date of this definition, inclusive. This allows a
+                        definition to be entered into circulation or usage as of a specific date.
+                    </xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="validToInclusive" type="xs:date" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">Enddatum der Gültigkeit, inklusiv. Die Einträge in dieser Liste
+                        können sich ändern. Falls ein Eintrag nicht mehr existiert/geändert wurde, wird er mit dem
+                        Datum, bis zu welchem er gültig war, versehen. Die Liste bleibt so rückwärtskompatibel.
+                    </xs:documentation>
+					<xs:documentation xml:lang="en">The end date of this definition, inclusive. This allows a definition
+                        to exit circulation as of a specific date, retaining backwards compatibility, i.e. previous
+                        usage remains unaffected.
+                    </xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="directPaymentAreaCategory" type="eCH-0265:directPaymentAreaCategoryType">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">Flächenkategorie Direktzahlung</xs:documentation>
+					<xs:documentation xml:lang="en">The direct payment area category. See referenced definition.
+                    </xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="directPaymentProgramme" type="eCH-0265:directPaymentProgrammeType" minOccurs="0" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">Direktzahlungsprogramm</xs:documentation>
+					<xs:documentation xml:lang="en">The direct payment programme. See referenced definition.
+                    </xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="variety" type="eCH-0265:varietyType" minOccurs="0" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">Sorte</xs:documentation>
+					<xs:documentation xml:lang="en">The variety. See referenced definition.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="directPaymentAreaCategoryType">
+		<xs:annotation>
+			<xs:documentation xml:lang="de">Die «Kulturen» gemäss Direktzahlungsverordnungen werden in Flächenkategorien
+                gegliedert.
+            </xs:documentation>
+			<xs:documentation xml:lang="en">The "crops" according to the direct payment regulations are divided into
+                area categories, defined here.
+            </xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="item" type="eCH-0261:enumeratedItemType">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">Eintrag aus einer Liste.</xs:documentation>
+					<xs:documentation xml:lang="en">A multilingual, versioned entry from a published list.
+                    </xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="directPaymentProgrammeType">
+		<xs:annotation>
+			<xs:documentation xml:lang="de">Eine Kultur Direktzahlung ist für ein oder mehrere Direktzahlungsprogramme
+                zulässig. Die in der Landwirtschaft tätigen Personen können eine Nutzung gemäss den
+                Direktzahlungsprogrammen bewirtschaften.
+            </xs:documentation>
+			<xs:documentation xml:lang="en">The programmes as part of the direct payment regulations. Those persons active in agriculture can cultivate specified direct payment crops in accordance with this programme.</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="item" type="eCH-0261:enumeratedItemType">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">Eintrag aus einer Liste.</xs:documentation>
+					<xs:documentation xml:lang="en">A multilingual, versioned entry from a published list.
+                    </xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="programmeType">
+		<xs:annotation>
+			<xs:documentation xml:lang="de">Eine Nutzungsart kann gemäss Massnahmen einer Organisation (z. B. ein Label) bewirtschaftet oder genutzt werden. Diese Massnahmen werden in dieser Liste abgebildet und mit einer System ID versehen, damit die Massnahme einer Organisation zugeordnet werden kann.</xs:documentation>
+			<xs:documentation xml:lang="en">A crop can be cultivated in accordance with programmes other than the direct payment programme, e.g. programmes from label organisations. See the sourceSystemId for the originating system or authority of the respective programme.</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="item" type="eCH-0261:enumeratedItemType">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">Eintrag aus einer Liste.</xs:documentation>
+					<xs:documentation xml:lang="en">A multilingual, versioned entry from a published list.
+                    </xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="fertilizerStandardType">
+		<xs:annotation>
+			<xs:documentation xml:lang="de">Im Bereich Landwirtschaft werden einer Nutzungsart Standardwerte für die Düngung hinterlegt (Grundlagen für die Düngung landwirtschaftliche Kulturen in der Schweiz GRUD, www.grud.ch). Diese werden hier abgebildet.</xs:documentation>
+			<xs:documentation xml:lang="en">The fertilisation standards as defined in the Principles of fertilisation of agricultural crops in Switzerland (PRIF). These standards are applied to a cultivation.</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="id" type="eCH-0261:identifierType">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">Identifikator</xs:documentation>
+					<xs:documentation xml:lang="en">A unique identifier</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="requirementN" type="xs:integer">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">Stickstoffbedarf (N)</xs:documentation>
+					<xs:documentation xml:lang="en">The requirement of the Nitrogen (N) in the indicated unit.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="requirementP2O5" type="xs:integer">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">Phosphorbedarf (P2O5)</xs:documentation>
+					<xs:documentation xml:lang="en">The requirement of phosophorous pentoxide (P2O5) in the indicated unit.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="requirementK2O" type="xs:integer">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">Kaliumbedarf (K2O)</xs:documentation>
+					<xs:documentation xml:lang="en">The requirement potassium oxide (K2O) in the indicated unit.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="requirementMg" type="xs:integer">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">Magnesiumbedarf (Mg)</xs:documentation>
+					<xs:documentation xml:lang="en">The requirement of magnesium (Mg) in the indicated unit.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="nutrientRequirementExclusiveN" type="xs:integer" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">Nährstoffbedarf exkl N</xs:documentation>
+					<xs:documentation xml:lang="en">The requirement of nutrients exclusive nitrogen (N) in the indicated unit.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="standardYield" type="xs:integer" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">Standardertrag</xs:documentation>
+					<xs:documentation xml:lang="en">The standard yield in the indicated unit.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="correctableN" type="xs:boolean" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">Stickstoff korrigierbar (N)</xs:documentation>
+					<xs:documentation xml:lang="en">Indication whether nitrogen (N) is correctable.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="correctionFactorN" type="xs:decimal" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">Korrekturfaktor für Stickstoff (N)</xs:documentation>
+					<xs:documentation xml:lang="en">The correction factor for nitrogen (N).</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="maximumYield" type="xs:integer" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">Max Ertrag bei Korrektur (Wenn N Korrigierbar = 1)</xs:documentation>
+					<xs:documentation xml:lang="en">The maxiumum yield when corrected, i.e. when correctionFactorN = 1.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="validFromInclusive" type="xs:date">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">Startdatum der Gültigkeit. Die Einträge in dieser Liste können
+                        ändern. Hiermit können Einträge ab ein bestimmtes Datum Gültigkeit erhalten.
+                    </xs:documentation>
+					<xs:documentation xml:lang="en">The begin date of this definition, inclusive. This allows a
+                        definition to be entered into circulation or usage as of a specific date.
+                    </xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="validToInclusive" type="xs:date" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">Enddatum der Gültigkeit, inklusiv. Die Einträge in dieser Liste
+                        können sich ändern. Falls ein Eintrag nicht mehr existiert/geändert wurde, wird er mit dem
+                        Datum, bis zu welchem er gültig war, versehen. Die Liste bleibt so rückwärtskompatibel.
+                    </xs:documentation>
+					<xs:documentation xml:lang="en">The end date of this definition, inclusive. This allows a definition
+                        to exit circulation as of a specific date, retaining backwards compatibility, i.e. previous
+                        usage remains unaffected.
+                    </xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="unit">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">Die verwendete Einheit in dieser Definition.</xs:documentation>
+					<xs:documentation xml:lang="en">The unit used by all indicated elements of this definition.</xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="eCH-0261:unitType">
+						<xs:enumeration value="kg/m2"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<!--Root-Element-->
+	<xs:element name="root">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="area" type="eCH-0265:areaType"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>
