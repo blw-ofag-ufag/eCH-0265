@@ -436,7 +436,7 @@ Datum				Version				Autor
 			</xs:element>
 			<xs:element name="biodiversityAreaQualityI" type="xs:boolean">
 				<xs:annotation>
-					<xs:documentation xml:lang="de">Wenn true, gilt diese Kultur Direktzahlung gelten als sogenannte
+					<xs:documentation xml:lang="de">Wenn true, gilt diese Kultur Direktzahlung als sogenannte
                         Biodiversitätsförderfläche mit Qualität I.
                     </xs:documentation>
 					<xs:documentation xml:lang="en">If true, this direct payment crop is considered as a so-called
