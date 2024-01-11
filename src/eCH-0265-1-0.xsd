@@ -590,7 +590,7 @@ Datum				Version				Autor
 			</xs:element>
 			<xs:element name="correctableN" type="xs:boolean" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation xml:lang="de">Stickstoff korrigierbar (N)</xs:documentation>
+					<xs:documentation xml:lang="de">Stickstoff (N) korrigierbar</xs:documentation>
 					<xs:documentation xml:lang="en">Indication whether nitrogen (N) is correctable.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
@@ -635,7 +635,7 @@ Datum				Version				Autor
 				</xs:annotation>
 				<xs:simpleType>
 					<xs:restriction base="eCH-0261:unitType">
-						<xs:enumeration value="kg/m2"/>
+						<xs:enumeration value="g/m2"/>
 					</xs:restriction>
 				</xs:simpleType>
 			</xs:element>
