@@ -275,7 +275,7 @@ Datum				Version				Autor
                     </xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="botanicalCrop" type="eCH-0265:botanicalCropType" minOccurs="0" maxOccurs="unbounded">
+			<xs:element name="botanicalPlant" type="eCH-0265:botanicalPlantType" minOccurs="0" maxOccurs="unbounded">
 				<xs:annotation>
 					<xs:documentation xml:lang="de">Kultur botanisch</xs:documentation>
 					<xs:documentation xml:lang="en">The botanical crop. See referenced definition.</xs:documentation>
@@ -299,7 +299,7 @@ Datum				Version				Autor
 			</xs:element>
 		</xs:sequence>
 	</xs:complexType>
-	<xs:complexType name="botanicalCropType">
+	<xs:complexType name="botanicalPlantType">
 		<xs:annotation>
 			<xs:documentation xml:lang="de">Beschreibt eine botanische Kultur im engeren Sinne.</xs:documentation>
 			<xs:documentation xml:lang="en">A narrow definition of a botanical crop.</xs:documentation>
