@@ -275,7 +275,7 @@ Datum				Version				Autor
                     </xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="botanicalCrop" type="eCH-0265:botanicalCropType" minOccurs="0" maxOccurs="unbounded">
+			<xs:element name="botanicalPlant" type="eCH-0265:botanicalPlantType" minOccurs="0" maxOccurs="unbounded">
 				<xs:annotation>
 					<xs:documentation xml:lang="de">Kultur botanisch</xs:documentation>
 					<xs:documentation xml:lang="en">The botanical crop. See referenced definition.</xs:documentation>
@@ -299,7 +299,7 @@ Datum				Version				Autor
 			</xs:element>
 		</xs:sequence>
 	</xs:complexType>
-	<xs:complexType name="botanicalCropType">
+	<xs:complexType name="botanicalPlantType">
 		<xs:annotation>
 			<xs:documentation xml:lang="de">Beschreibt eine botanische Kultur im engeren Sinne.</xs:documentation>
 			<xs:documentation xml:lang="en">A narrow definition of a botanical crop.</xs:documentation>
@@ -403,7 +403,7 @@ Datum				Version				Autor
 			<xs:element name="item" type="eCH-0261:enumeratedItemType">
 				<xs:annotation>
 					<xs:documentation xml:lang="de">Eintrag aus einer Liste.</xs:documentation>
-					<xs:documentation xml:lang="en">A multilingual, versioned entry from a published list..
+					<xs:documentation xml:lang="en">A multilingual, versioned entry from a published list.
                     </xs:documentation>
 				</xs:annotation>
 			</xs:element>
@@ -436,7 +436,7 @@ Datum				Version				Autor
 			</xs:element>
 			<xs:element name="biodiversityAreaQualityI" type="xs:boolean">
 				<xs:annotation>
-					<xs:documentation xml:lang="de">Wenn true, gilt diese Kultur Direktzahlung gelten als sogenannte
+					<xs:documentation xml:lang="de">Wenn true, gilt diese Kultur Direktzahlung als sogenannte
                         Biodiversitätsförderfläche mit Qualität I.
                     </xs:documentation>
 					<xs:documentation xml:lang="en">If true, this direct payment crop is considered as a so-called
