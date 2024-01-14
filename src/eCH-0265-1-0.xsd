@@ -9,7 +9,7 @@ Datum				Version				Autor
 		<xs:documentation xml:lang="de">Flächen und Kulturen</xs:documentation>
 	</xs:annotation>
 	<xs:import namespace="http://www.ech.ch/xmlns/eCH-0097/6" schemaLocation="http://www.ech.ch/xmlns/eCH-0097/6/eCH-0097-6-0.xsd"/>
-	<xs:import namespace="http://www.ech.ch/xmlns/eCH-0261/1" schemaLocation="../../../01_BUStammdaten/05_Eingabe_QS2/eCH-0261-1-0.xsd"/>
+	<xs:import namespace="http://www.ech.ch/xmlns/eCH-0261/1" schemaLocation="../../eCH-0261/src/eCH-0261-1-0.xsd"/>
 	<xs:import namespace="http://www.interlis.ch/geometry/1.0" schemaLocation="https://models.interlis.ch/refhb24/geometry.xsd"/>
 	<!--Hauptdatentypen-->
 	<xs:complexType name="areaType">
@@ -62,7 +62,67 @@ Datum				Version				Autor
                     </xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="validToInclusive" type="xs:date">
+			<xs:element name="validToInclusive" type="xs:date" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">Enddatum der Gültigkeit, inklusiv. Die Einträge in dieser Liste
+                        können sich ändern. Falls ein Eintrag nicht mehr existiert/geändert wurde, wird er mit dem
+                        Datum, bis zu welchem er gültig war, versehen. Die Liste bleibt so rückwärtskompatibel.
+                    </xs:documentation>
+					<xs:documentation xml:lang="en">The end date of this definition, inclusive. This allows a definition
+                        to exit circulation as of a specific date, retaining backwards compatibility, i.e. previous
+                        usage remains unaffected.
+                    </xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="pointsType">
+		<xs:annotation>
+			<xs:documentation xml:lang="de">Dieses Element beschreibt eine Menge von Einzelpunkten. Es kann z.B. verwendet werden, um Bäume abzubilden.</xs:documentation>
+			<xs:documentation xml:lang="en">This element describes a set of individual points. It can be used, for example, to depict trees.</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="id" type="eCH-0261:identifierType">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">Identifikator</xs:documentation>
+					<xs:documentation xml:lang="en">A unique identifier</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="fieldName" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">Flurname</xs:documentation>
+					<xs:documentation xml:lang="en">A user-friendly descriptor</xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="xs:token">
+						<xs:maxLength value="50"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="responsibleEnterprise" type="eCH-0097:uidStructureType">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">Unter Verantwortung von (Unternehmen/Betrieb)</xs:documentation>
+					<xs:documentation xml:lang="en">The enterprise (enterprise/branch) responsible for this area.
+                    </xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="coordinates" type="interlis-geometry:CoordType">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">Geometrie</xs:documentation>
+					<xs:documentation xml:lang="en">The geometric definition of this area.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="validFromInclusive" type="xs:date">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">Beginn des Zeitraums, in welchem das Polygon unverändert besteht,
+                        inklusiv
+                    </xs:documentation>
+					<xs:documentation xml:lang="en">The begin date of this definition, inclusive. This allows a
+                        definition to be entered into circulation or usage as of a specific date.
+                    </xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="validToInclusive" type="xs:date" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation xml:lang="de">Enddatum der Gültigkeit, inklusiv. Die Einträge in dieser Liste
                         können sich ändern. Falls ein Eintrag nicht mehr existiert/geändert wurde, wird er mit dem
@@ -176,6 +236,12 @@ Datum				Version				Autor
                     </xs:documentation>
 				</xs:annotation>
 			</xs:element>
+			<xs:element name="points" type="eCH-0265:pointsType" minOccurs="0" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">Angabe von Einzelpunkten auf der Fläche</xs:documentation>
+					<xs:documentation xml:lang="en">Indication of individual points on the area</xs:documentation>
+				</xs:annotation>
+			</xs:element>
 			<xs:element name="cultivationType" type="eCH-0265:cultivationTypeType">
 				<xs:annotation>
 					<xs:documentation xml:lang="de">Nutzungsart</xs:documentation>
@@ -275,7 +341,7 @@ Datum				Version				Autor
                     </xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="botanicalCrop" type="eCH-0265:botanicalCropType" minOccurs="0" maxOccurs="unbounded">
+			<xs:element name="botanicalPlant" type="eCH-0265:botanicalPlantType" minOccurs="0" maxOccurs="unbounded">
 				<xs:annotation>
 					<xs:documentation xml:lang="de">Kultur botanisch</xs:documentation>
 					<xs:documentation xml:lang="en">The botanical crop. See referenced definition.</xs:documentation>
@@ -299,7 +365,7 @@ Datum				Version				Autor
 			</xs:element>
 		</xs:sequence>
 	</xs:complexType>
-	<xs:complexType name="botanicalCropType">
+	<xs:complexType name="botanicalPlantType">
 		<xs:annotation>
 			<xs:documentation xml:lang="de">Beschreibt eine botanische Kultur im engeren Sinne.</xs:documentation>
 			<xs:documentation xml:lang="en">A narrow definition of a botanical crop.</xs:documentation>
@@ -584,13 +650,13 @@ Datum				Version				Autor
 			</xs:element>
 			<xs:element name="standardYield" type="xs:integer" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation xml:lang="de">Standardertrag</xs:documentation>
+					<xs:documentation xml:lang="de">Standardertrag (entspricht Referenzertrag gemäss GRUD)</xs:documentation>
 					<xs:documentation xml:lang="en">The standard yield in the indicated unit.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="correctableN" type="xs:boolean" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation xml:lang="de">Stickstoff korrigierbar (N)</xs:documentation>
+					<xs:documentation xml:lang="de">Stickstoff (N) korrigierbar </xs:documentation>
 					<xs:documentation xml:lang="en">Indication whether nitrogen (N) is correctable.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
@@ -645,7 +711,7 @@ Datum				Version				Autor
 	<xs:element name="root">
 		<xs:complexType>
 			<xs:sequence>
-				<xs:element name="area" type="eCH-0265:areaType"/>
+				<xs:element name="cultivation" type="eCH-0265:cultivationType"/>
 			</xs:sequence>
 		</xs:complexType>
 	</xs:element>
