@@ -46,37 +46,21 @@ Datum				Version				Autor
                     </xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="geometry" type="interlis-geometry:GeometryType">
+			<xs:element name="multiSurface" type="interlis-geometry:MultiSurfaceType">
 				<xs:annotation>
-					<xs:documentation xml:lang="de">Geometrie</xs:documentation>
-					<xs:documentation xml:lang="en">The geometric definition of this area.</xs:documentation>
+					<xs:documentation xml:lang="de">Geometrie eines Flächenobjekts (Koordinaten werden im System LV95 CH1903+ angegeben).</xs:documentation>
+					<xs:documentation xml:lang="en">The geometric definition of this area (Coordinates are given in the LV95 CH1903+ system).</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="validFromInclusive" type="xs:date">
+			<xs:element name="validity" type="eCH-0261:validityType">
 				<xs:annotation>
-					<xs:documentation xml:lang="de">Beginn des Zeitraums, in welchem das Polygon unverändert besteht,
-                        inklusiv
-                    </xs:documentation>
-					<xs:documentation xml:lang="en">The begin date of this definition, inclusive. This allows a
-                        definition to be entered into circulation or usage as of a specific date.
-                    </xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:element name="validToInclusive" type="xs:date" minOccurs="0">
-				<xs:annotation>
-					<xs:documentation xml:lang="de">Enddatum der Gültigkeit, inklusiv. Die Einträge in dieser Liste
-                        können sich ändern. Falls ein Eintrag nicht mehr existiert/geändert wurde, wird er mit dem
-                        Datum, bis zu welchem er gültig war, versehen. Die Liste bleibt so rückwärtskompatibel.
-                    </xs:documentation>
-					<xs:documentation xml:lang="en">The end date of this definition, inclusive. This allows a definition
-                        to exit circulation as of a specific date, retaining backwards compatibility, i.e. previous
-                        usage remains unaffected.
-                    </xs:documentation>
+					<xs:documentation xml:lang="de">Informationen zur Gültigkeit (Anfangs- und Enddatum der Gültigkeit)</xs:documentation>
+					<xs:documentation xml:lang="en">Information on validity (start and end date of validity).</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
 	</xs:complexType>
-	<xs:complexType name="pointsType">
+	<xs:complexType name="pointType">
 		<xs:annotation>
 			<xs:documentation xml:lang="de">Dieses Element beschreibt eine Menge von Einzelpunkten. Es kann z.B. verwendet werden, um Bäume abzubilden.</xs:documentation>
 			<xs:documentation xml:lang="en">This element describes a set of individual points. It can be used, for example, to depict trees.</xs:documentation>
@@ -112,26 +96,10 @@ Datum				Version				Autor
 					<xs:documentation xml:lang="en">The geometric definition of this area.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="validFromInclusive" type="xs:date">
+			<xs:element name="validity" type="eCH-0261:validityType">
 				<xs:annotation>
-					<xs:documentation xml:lang="de">Beginn des Zeitraums, in welchem das Polygon unverändert besteht,
-                        inklusiv
-                    </xs:documentation>
-					<xs:documentation xml:lang="en">The begin date of this definition, inclusive. This allows a
-                        definition to be entered into circulation or usage as of a specific date.
-                    </xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:element name="validToInclusive" type="xs:date" minOccurs="0">
-				<xs:annotation>
-					<xs:documentation xml:lang="de">Enddatum der Gültigkeit, inklusiv. Die Einträge in dieser Liste
-                        können sich ändern. Falls ein Eintrag nicht mehr existiert/geändert wurde, wird er mit dem
-                        Datum, bis zu welchem er gültig war, versehen. Die Liste bleibt so rückwärtskompatibel.
-                    </xs:documentation>
-					<xs:documentation xml:lang="en">The end date of this definition, inclusive. This allows a definition
-                        to exit circulation as of a specific date, retaining backwards compatibility, i.e. previous
-                        usage remains unaffected.
-                    </xs:documentation>
+					<xs:documentation xml:lang="de">Informationen zur Gültigkeit (Anfangs- und Enddatum der Gültigkeit)</xs:documentation>
+					<xs:documentation xml:lang="en">Information on validity (start and end date of validity).</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
@@ -182,7 +150,7 @@ Datum				Version				Autor
                     </xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="areaSizeInm2" minOccurs="0">
+			<xs:element name="areaSize" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation xml:lang="de">Fläche nummerisch in m2; dies soll nur sparsam verwendet werden.
                         Mindestens die Hauptkulturen müssen geometrisch abgebildet werden.
@@ -191,11 +159,26 @@ Datum				Version				Autor
                         geometric depiction must be provided.
                     </xs:documentation>
 				</xs:annotation>
-				<xs:simpleType>
-					<xs:restriction base="xs:decimal">
-						<xs:fractionDigits value="2"/>
-					</xs:restriction>
-				</xs:simpleType>
+				<xs:complexType>
+					<xs:complexContent>
+						<xs:restriction base="eCH-0265:measurementType">
+							<xs:sequence>
+								<xs:element name="value">
+									<xs:simpleType>
+										<xs:restriction base="xs:decimal"/>
+									</xs:simpleType>
+								</xs:element>
+								<xs:element name="unit">
+									<xs:simpleType>
+										<xs:restriction base="eCH-0261:unitType">
+											<xs:enumeration value="m2"/>
+										</xs:restriction>
+									</xs:simpleType>
+								</xs:element>
+							</xs:sequence>
+						</xs:restriction>
+					</xs:complexContent>
+				</xs:complexType>
 			</xs:element>
 			<xs:element name="sowingDate" type="xs:date" minOccurs="0">
 				<xs:annotation>
@@ -209,11 +192,31 @@ Datum				Version				Autor
 					<xs:documentation xml:lang="en">Harvest date</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="effectiveYieldIng" type="xs:int" minOccurs="0">
+			<xs:element name="effectiveYield" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation xml:lang="de">Effektiver Ertrag (g)</xs:documentation>
-					<xs:documentation xml:lang="en">The effective yield in grams</xs:documentation>
+					<xs:documentation xml:lang="de">Effektiver Ertrag (kg)</xs:documentation>
+					<xs:documentation xml:lang="en">The effective yield in kilograms</xs:documentation>
 				</xs:annotation>
+				<xs:complexType>
+					<xs:complexContent>
+						<xs:restriction base="eCH-0265:measurementType">
+							<xs:sequence>
+								<xs:element name="value">
+									<xs:simpleType>
+										<xs:restriction base="xs:decimal"/>
+									</xs:simpleType>
+								</xs:element>
+								<xs:element name="unit">
+									<xs:simpleType>
+										<xs:restriction base="eCH-0261:unitType">
+											<xs:enumeration value="kg"/>
+										</xs:restriction>
+									</xs:simpleType>
+								</xs:element>
+							</xs:sequence>
+						</xs:restriction>
+					</xs:complexContent>
+				</xs:complexType>
 			</xs:element>
 			<xs:element name="isMainCrop" type="xs:boolean">
 				<xs:annotation>
@@ -236,7 +239,7 @@ Datum				Version				Autor
                     </xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="points" type="eCH-0265:pointsType" minOccurs="0" maxOccurs="unbounded">
+			<xs:element name="points" type="eCH-0265:pointType" minOccurs="0" maxOccurs="unbounded">
 				<xs:annotation>
 					<xs:documentation xml:lang="de">Angabe von Einzelpunkten auf der Fläche</xs:documentation>
 					<xs:documentation xml:lang="en">Indication of individual points on the area</xs:documentation>
@@ -355,7 +358,7 @@ Datum				Version				Autor
                     </xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="fertilisationStandard" type="eCH-0265:fertilizerStandardType" minOccurs="0">
+			<xs:element name="fertilisationStandard" type="eCH-0265:fertilisationStandardType" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation xml:lang="de">Düngungsnorm</xs:documentation>
 					<xs:documentation xml:lang="en">The fertilisation standard to which this cultivation is associated.
@@ -510,26 +513,10 @@ Datum				Version				Autor
                     </xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="validFromInclusive" type="xs:date">
+			<xs:element name="validity" type="eCH-0261:validityType">
 				<xs:annotation>
-					<xs:documentation xml:lang="de">Startdatum der Gültigkeit. Die Einträge in dieser Liste können sich
-                        ändern. Hiermit können Einträge ab ein bestimmtes Datum Gültigkeit erhalten.
-                    </xs:documentation>
-					<xs:documentation xml:lang="en">The begin date of this definition, inclusive. This allows a
-                        definition to be entered into circulation or usage as of a specific date.
-                    </xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:element name="validToInclusive" type="xs:date" minOccurs="0">
-				<xs:annotation>
-					<xs:documentation xml:lang="de">Enddatum der Gültigkeit, inklusiv. Die Einträge in dieser Liste
-                        können sich ändern. Falls ein Eintrag nicht mehr existiert/geändert wurde, wird er mit dem
-                        Datum, bis zu welchem er gültig war, versehen. Die Liste bleibt so rückwärtskompatibel.
-                    </xs:documentation>
-					<xs:documentation xml:lang="en">The end date of this definition, inclusive. This allows a definition
-                        to exit circulation as of a specific date, retaining backwards compatibility, i.e. previous
-                        usage remains unaffected.
-                    </xs:documentation>
+					<xs:documentation xml:lang="de">Informationen zur Gültigkeit (Anfangs- und Enddatum der Gültigkeit).</xs:documentation>
+					<xs:documentation xml:lang="en">Information on validity (start and end date of validity).</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="directPaymentAreaCategory" type="eCH-0265:directPaymentAreaCategoryType">
@@ -606,7 +593,7 @@ Datum				Version				Autor
 			</xs:element>
 		</xs:sequence>
 	</xs:complexType>
-	<xs:complexType name="fertilizerStandardType">
+	<xs:complexType name="fertilisationStandardType">
 		<xs:annotation>
 			<xs:documentation xml:lang="de">Im Bereich Landwirtschaft werden einer Nutzungsart Standardwerte für die Düngung hinterlegt (Grundlagen für die Düngung landwirtschaftliche Kulturen in der Schweiz GRUD, www.grud.ch). Diese werden hier abgebildet.</xs:documentation>
 			<xs:documentation xml:lang="en">The fertilisation standards as defined in the Principles of fertilisation of agricultural crops in Switzerland (PRIF). These standards are applied to a cultivation.</xs:documentation>
@@ -618,43 +605,163 @@ Datum				Version				Autor
 					<xs:documentation xml:lang="en">A unique identifier</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="requirementN" type="xs:integer">
+			<xs:element name="requirementN">
 				<xs:annotation>
 					<xs:documentation xml:lang="de">Stickstoffbedarf (N)</xs:documentation>
 					<xs:documentation xml:lang="en">The requirement of the Nitrogen (N) in the indicated unit.</xs:documentation>
 				</xs:annotation>
+				<xs:complexType>
+					<xs:complexContent>
+						<xs:restriction base="eCH-0265:measurementType">
+							<xs:sequence>
+								<xs:element name="value">
+									<xs:simpleType>
+										<xs:restriction base="xs:decimal"/>
+									</xs:simpleType>
+								</xs:element>
+								<xs:element name="unit">
+									<xs:simpleType>
+										<xs:restriction base="eCH-0261:unitType">
+											<xs:enumeration value="kg/m2"/>
+										</xs:restriction>
+									</xs:simpleType>
+								</xs:element>
+							</xs:sequence>
+						</xs:restriction>
+					</xs:complexContent>
+				</xs:complexType>
 			</xs:element>
-			<xs:element name="requirementP2O5" type="xs:integer">
+			<xs:element name="requirementP2O5">
 				<xs:annotation>
 					<xs:documentation xml:lang="de">Phosphorbedarf (P2O5)</xs:documentation>
 					<xs:documentation xml:lang="en">The requirement of phosophorous pentoxide (P2O5) in the indicated unit.</xs:documentation>
 				</xs:annotation>
+				<xs:complexType>
+					<xs:complexContent>
+						<xs:restriction base="eCH-0265:measurementType">
+							<xs:sequence>
+								<xs:element name="value">
+									<xs:simpleType>
+										<xs:restriction base="xs:decimal"/>
+									</xs:simpleType>
+								</xs:element>
+								<xs:element name="unit">
+									<xs:simpleType>
+										<xs:restriction base="eCH-0261:unitType">
+											<xs:enumeration value="kg/m2"/>
+										</xs:restriction>
+									</xs:simpleType>
+								</xs:element>
+							</xs:sequence>
+						</xs:restriction>
+					</xs:complexContent>
+				</xs:complexType>
 			</xs:element>
-			<xs:element name="requirementK2O" type="xs:integer">
+			<xs:element name="requirementK2O">
 				<xs:annotation>
 					<xs:documentation xml:lang="de">Kaliumbedarf (K2O)</xs:documentation>
 					<xs:documentation xml:lang="en">The requirement potassium oxide (K2O) in the indicated unit.</xs:documentation>
 				</xs:annotation>
+				<xs:complexType>
+					<xs:complexContent>
+						<xs:restriction base="eCH-0265:measurementType">
+							<xs:sequence>
+								<xs:element name="value">
+									<xs:simpleType>
+										<xs:restriction base="xs:decimal"/>
+									</xs:simpleType>
+								</xs:element>
+								<xs:element name="unit">
+									<xs:simpleType>
+										<xs:restriction base="eCH-0261:unitType">
+											<xs:enumeration value="kg/m2"/>
+										</xs:restriction>
+									</xs:simpleType>
+								</xs:element>
+							</xs:sequence>
+						</xs:restriction>
+					</xs:complexContent>
+				</xs:complexType>
 			</xs:element>
-			<xs:element name="requirementMg" type="xs:integer">
+			<xs:element name="requirementMg">
 				<xs:annotation>
 					<xs:documentation xml:lang="de">Magnesiumbedarf (Mg)</xs:documentation>
 					<xs:documentation xml:lang="en">The requirement of magnesium (Mg) in the indicated unit.</xs:documentation>
 				</xs:annotation>
+				<xs:complexType>
+					<xs:complexContent>
+						<xs:restriction base="eCH-0265:measurementType">
+							<xs:sequence>
+								<xs:element name="value">
+									<xs:simpleType>
+										<xs:restriction base="xs:decimal"/>
+									</xs:simpleType>
+								</xs:element>
+								<xs:element name="unit">
+									<xs:simpleType>
+										<xs:restriction base="eCH-0261:unitType">
+											<xs:enumeration value="kg/m2"/>
+										</xs:restriction>
+									</xs:simpleType>
+								</xs:element>
+							</xs:sequence>
+						</xs:restriction>
+					</xs:complexContent>
+				</xs:complexType>
 			</xs:element>
-			<xs:element name="nutrientRequirementExclusiveN" type="xs:integer" minOccurs="0">
+			<xs:element name="nutrientRequirementExclusiveN" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation xml:lang="de">Nährstoffbedarf exkl N</xs:documentation>
 					<xs:documentation xml:lang="en">The requirement of nutrients exclusive nitrogen (N) in the indicated unit.</xs:documentation>
 				</xs:annotation>
+				<xs:complexType>
+					<xs:complexContent>
+						<xs:restriction base="eCH-0265:measurementType">
+							<xs:sequence>
+								<xs:element name="value">
+									<xs:simpleType>
+										<xs:restriction base="xs:decimal"/>
+									</xs:simpleType>
+								</xs:element>
+								<xs:element name="unit">
+									<xs:simpleType>
+										<xs:restriction base="eCH-0261:unitType">
+											<xs:enumeration value="kg/m2"/>
+										</xs:restriction>
+									</xs:simpleType>
+								</xs:element>
+							</xs:sequence>
+						</xs:restriction>
+					</xs:complexContent>
+				</xs:complexType>
 			</xs:element>
-			<xs:element name="standardYield" type="xs:integer" minOccurs="0">
+			<xs:element name="standardYield" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation xml:lang="de">Standardertrag (entspricht Referenzertrag gemäss GRUD)</xs:documentation>
 					<xs:documentation xml:lang="en">The standard yield in the indicated unit.</xs:documentation>
 				</xs:annotation>
+				<xs:complexType>
+					<xs:complexContent>
+						<xs:restriction base="eCH-0265:measurementType">
+							<xs:sequence>
+								<xs:element name="value">
+									<xs:simpleType>
+										<xs:restriction base="xs:decimal"/>
+									</xs:simpleType>
+								</xs:element>
+								<xs:element name="unit">
+									<xs:simpleType>
+										<xs:restriction base="eCH-0261:unitType">
+											<xs:enumeration value="kg/m2"/>
+										</xs:restriction>
+									</xs:simpleType>
+								</xs:element>
+							</xs:sequence>
+						</xs:restriction>
+					</xs:complexContent>
+				</xs:complexType>
 			</xs:element>
-			<xs:element name="correctableN" type="xs:boolean" minOccurs="0">
+			<xs:element name="correctableN" type="eCH-0261:veracityType" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation xml:lang="de">Stickstoff (N) korrigierbar </xs:documentation>
 					<xs:documentation xml:lang="en">Indication whether nitrogen (N) is correctable.</xs:documentation>
@@ -666,42 +773,71 @@ Datum				Version				Autor
 					<xs:documentation xml:lang="en">The correction factor for nitrogen (N).</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="maximumYield" type="xs:integer" minOccurs="0">
+			<xs:element name="maximumYield" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation xml:lang="de">Max Ertrag bei Korrektur (Wenn N Korrigierbar = 1)</xs:documentation>
 					<xs:documentation xml:lang="en">The maxiumum yield when corrected, i.e. when correctionFactorN = 1.</xs:documentation>
 				</xs:annotation>
+				<xs:complexType>
+					<xs:complexContent>
+						<xs:restriction base="eCH-0265:measurementType">
+							<xs:sequence>
+								<xs:element name="value">
+									<xs:simpleType>
+										<xs:restriction base="xs:decimal"/>
+									</xs:simpleType>
+								</xs:element>
+								<xs:element name="unit">
+									<xs:simpleType>
+										<xs:restriction base="eCH-0261:unitType">
+											<xs:enumeration value="kg/m2"/>
+										</xs:restriction>
+									</xs:simpleType>
+								</xs:element>
+							</xs:sequence>
+						</xs:restriction>
+					</xs:complexContent>
+				</xs:complexType>
 			</xs:element>
-			<xs:element name="validFromInclusive" type="xs:date">
+			<xs:element name="validity" type="eCH-0261:validityType">
 				<xs:annotation>
-					<xs:documentation xml:lang="de">Startdatum der Gültigkeit. Die Einträge in dieser Liste können
-                        ändern. Hiermit können Einträge ab ein bestimmtes Datum Gültigkeit erhalten.
-                    </xs:documentation>
-					<xs:documentation xml:lang="en">The begin date of this definition, inclusive. This allows a
-                        definition to be entered into circulation or usage as of a specific date.
-                    </xs:documentation>
+					<xs:documentation xml:lang="de">Informationen zur Gültigkeit (Anfangs- und Enddatum der Gültigkeit).</xs:documentation>
+					<xs:documentation xml:lang="en">Information on validity (start and end date of validity).</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="validToInclusive" type="xs:date" minOccurs="0">
+		</xs:sequence>
+	</xs:complexType>
+	<!--MeasurementType redefinition from eCH-0261-->
+	<xs:complexType name="measurementType">
+		<xs:annotation>
+			<xs:documentation xml:lang="de">Messung mit Wert und Einheit</xs:documentation>
+			<xs:documentation xml:lang="fr">Mesure avec valeur et unité</xs:documentation>
+			<xs:documentation xml:lang="en">Measurement with value and unit</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="value" type="xs:decimal">
 				<xs:annotation>
-					<xs:documentation xml:lang="de">Enddatum der Gültigkeit, inklusiv. Die Einträge in dieser Liste
-                        können sich ändern. Falls ein Eintrag nicht mehr existiert/geändert wurde, wird er mit dem
-                        Datum, bis zu welchem er gültig war, versehen. Die Liste bleibt so rückwärtskompatibel.
-                    </xs:documentation>
-					<xs:documentation xml:lang="en">The end date of this definition, inclusive. This allows a definition
-                        to exit circulation as of a specific date, retaining backwards compatibility, i.e. previous
-                        usage remains unaffected.
-                    </xs:documentation>
+					<xs:documentation xml:lang="de">Menge, Wert</xs:documentation>
+					<xs:documentation xml:lang="fr">Quantité, valeur</xs:documentation>
+					<xs:documentation xml:lang="en">Quantity, value</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="unit">
+			<xs:element name="unit" type="eCH-0261:unitType">
 				<xs:annotation>
-					<xs:documentation xml:lang="de">Die verwendete Einheit in dieser Definition.</xs:documentation>
-					<xs:documentation xml:lang="en">The unit used by all indicated elements of this definition.</xs:documentation>
+					<xs:documentation xml:lang="de">Zugehörige Einheit</xs:documentation>
+					<xs:documentation xml:lang="fr">Unité associée</xs:documentation>
+					<xs:documentation xml:lang="en">Associated unit</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="unitName" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">Genauere Bezeichnung der Einheit, wenn im Feld «unit» die Einheit «pc» (Stück) angegeben wurde.</xs:documentation>
+					<xs:documentation xml:lang="fr">Désignation plus précise de l'unité, si l'unité "pc" (pièce) a été indiquée dans le champ "unit".</xs:documentation>
+					<xs:documentation xml:lang="en">More precise designation of the unit if the unit "pc" (piece) was specified in the "unit" field.</xs:documentation>
 				</xs:annotation>
 				<xs:simpleType>
-					<xs:restriction base="eCH-0261:unitType">
-						<xs:enumeration value="kg/m2"/>
+					<xs:restriction base="xs:token">
+						<xs:maxLength value="50"/>
 					</xs:restriction>
 				</xs:simpleType>
 			</xs:element>
@@ -712,6 +848,7 @@ Datum				Version				Autor
 		<xs:complexType>
 			<xs:sequence>
 				<xs:element name="cultivation" type="eCH-0265:cultivationType"/>
+				<xs:element name="cultivation2" type="eCH-0265:fertilisationStandardType"/>
 			</xs:sequence>
 		</xs:complexType>
 	</xs:element>
