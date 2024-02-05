@@ -1,14 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- 
-Datum				Version				Autor
-*********************************************
-2022-11-30			Entwurf				Stl
--->
-<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:eCH-0265="http://www.ech.ch/xmlns/eCH-0265/1" xmlns:eCH-0097="http://www.ech.ch/xmlns/eCH-0097/6" xmlns:eCH-0261="http://www.ech.ch/xmlns/eCH-0261/1" xmlns:interlis-geometry="http://www.interlis.ch/geometry/1.0" targetNamespace="http://www.ech.ch/xmlns/eCH-0265/1" elementFormDefault="qualified" attributeFormDefault="unqualified" version="1.0">
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:eCH-0265="http://www.ech.ch/xmlns/eCH-0265/1" xmlns:eCH-0108="http://www.ech.ch/xmlns/eCH-0108/7" xmlns:eCH-0261="http://www.ech.ch/xmlns/eCH-0261/1" xmlns:interlis-geometry="http://www.interlis.ch/geometry/1.0" targetNamespace="http://www.ech.ch/xmlns/eCH-0265/1" elementFormDefault="qualified" attributeFormDefault="unqualified" version="1.0">
 	<xs:annotation>
 		<xs:documentation xml:lang="de">Flächen und Kulturen</xs:documentation>
 	</xs:annotation>
-	<xs:import namespace="http://www.ech.ch/xmlns/eCH-0097/6" schemaLocation="http://www.ech.ch/xmlns/eCH-0097/6/eCH-0097-6-0.xsd"/>
+	<xs:import namespace="http://www.ech.ch/xmlns/eCH-0108/7" schemaLocation="./eCH-0108-7-0.xsd"/>
 	<xs:import namespace="http://www.ech.ch/xmlns/eCH-0261/1" schemaLocation="../../eCH-0261/src/eCH-0261-1-0.xsd"/>
 	<xs:import namespace="http://www.interlis.ch/geometry/1.0" schemaLocation="https://models.interlis.ch/refhb24/geometry.xsd"/>
 	<!--Hauptdatentypen-->
@@ -39,7 +34,7 @@ Datum				Version				Autor
 					</xs:restriction>
 				</xs:simpleType>
 			</xs:element>
-			<xs:element name="responsibleEnterprise" type="eCH-0097:uidStructureType">
+			<xs:element name="responsibleEnterprise" type="eCH-0108:uidType">
 				<xs:annotation>
 					<xs:documentation xml:lang="de">Unter Verantwortung von (Unternehmen/Betrieb)</xs:documentation>
 					<xs:documentation xml:lang="en">The enterprise (enterprise/branch) responsible for this area.
@@ -83,7 +78,7 @@ Datum				Version				Autor
 					</xs:restriction>
 				</xs:simpleType>
 			</xs:element>
-			<xs:element name="responsibleEnterprise" type="eCH-0097:uidStructureType">
+			<xs:element name="responsibleEnterprise" type="eCH-0108:uidType">
 				<xs:annotation>
 					<xs:documentation xml:lang="de">Unter Verantwortung von (Unternehmen/Betrieb)</xs:documentation>
 					<xs:documentation xml:lang="en">The enterprise (enterprise/branch) responsible for this area.
@@ -315,26 +310,10 @@ Datum				Version				Autor
 					<xs:documentation xml:lang="en">The default duration of the cultivation in days.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="validFromInclusive" type="xs:date">
+			<xs:element name="validity" type="eCH-0261:validityType">
 				<xs:annotation>
-					<xs:documentation xml:lang="de">Startdatum der Gültigkeit. Die Einträge in dieser Liste können
-                        ändern. Hiermit können Einträge ab ein bestimmtes Datum Gültigkeit erhalten.
-                    </xs:documentation>
-					<xs:documentation xml:lang="en">The begin date of this definition, inclusive. This allows a
-                        definition to be entered into circulation or usage as of a specific date.
-                    </xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:element name="validToInclusive" type="xs:date" minOccurs="0">
-				<xs:annotation>
-					<xs:documentation xml:lang="de">Enddatum der Gültigkeit, inklusiv. Die Einträge in dieser Liste
-                        können sich ändern. Falls ein Eintrag nicht mehr existiert/geändert wurde, wird er mit dem
-                        Datum, bis zu welchem er gültig war, versehen. Die Liste bleibt so rückwärtskompatibel.
-                    </xs:documentation>
-					<xs:documentation xml:lang="en">The end date of this definition, inclusive. This allows a definition
-                        to exit circulation as of a specific date, retaining backwards compatibility, i.e. previous
-                        usage remains unaffected.
-                    </xs:documentation>
+					<xs:documentation xml:lang="de">Informationen zur Gültigkeit (Anfangs- und Enddatum der Gültigkeit)</xs:documentation>
+					<xs:documentation xml:lang="en">Information on validity (start and end date of validity).</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="directPaymentCrop" type="eCH-0265:directPaymentCropType" minOccurs="0">
@@ -400,26 +379,10 @@ Datum				Version				Autor
 					</xs:restriction>
 				</xs:simpleType>
 			</xs:element>
-			<xs:element name="validFromInclusive" type="xs:date">
+			<xs:element name="validity" type="eCH-0261:validityType">
 				<xs:annotation>
-					<xs:documentation xml:lang="de">Startdatum der Gültigkeit. Die Einträge in dieser Liste können
-                        ändern. Hiermit können Einträge ab ein bestimmtes Datum Gültigkeit erhalten.
-                    </xs:documentation>
-					<xs:documentation xml:lang="en">The begin date of this definition, inclusive. This allows a
-                        definition to be entered into circulation or usage as of a specific date.
-                    </xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:element name="validToInclusive" type="xs:date" minOccurs="0">
-				<xs:annotation>
-					<xs:documentation xml:lang="de">Enddatum der Gültigkeit, inklusiv. Die Einträge in dieser Liste
-                        können sich ändern. Falls ein Eintrag nicht mehr existiert/geändert wurde, wird er mit dem
-                        Datum, bis zu welchem er gültig war, versehen. Die Liste bleibt so rückwärtskompatibel.
-                    </xs:documentation>
-					<xs:documentation xml:lang="en">The end date of this definition, inclusive. This allows a definition
-                        to exit circulation as of a specific date, retaining backwards compatibility, i.e. previous
-                        usage remains unaffected.
-                    </xs:documentation>
+					<xs:documentation xml:lang="de">Informationen zur Gültigkeit (Anfangs- und Enddatum der Gültigkeit).</xs:documentation>
+					<xs:documentation xml:lang="en">Information on validity (start and end date of validity).</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="botanicalPlantFamily" type="eCH-0265:botanicalPlantFamilyType">
