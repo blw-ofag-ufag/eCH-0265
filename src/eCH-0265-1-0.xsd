@@ -400,14 +400,10 @@ Datum				Version				Autor
 					</xs:restriction>
 				</xs:simpleType>
 			</xs:element>
-			<xs:element name="validFromInclusive" type="xs:date">
+			<xs:element name="validity" type="eCH-0261:validityType">
 				<xs:annotation>
-					<xs:documentation xml:lang="de">Startdatum der Gültigkeit. Die Einträge in dieser Liste können
-                        ändern. Hiermit können Einträge ab ein bestimmtes Datum Gültigkeit erhalten.
-                    </xs:documentation>
-					<xs:documentation xml:lang="en">The begin date of this definition, inclusive. This allows a
-                        definition to be entered into circulation or usage as of a specific date.
-                    </xs:documentation>
+					<xs:documentation xml:lang="de">Informationen zur Gültigkeit (Anfangs- und Enddatum der Gültigkeit).</xs:documentation>
+					<xs:documentation xml:lang="en">Information on validity (start and end date of validity).</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="validToInclusive" type="xs:date" minOccurs="0">
