@@ -4,11 +4,11 @@ Datum				Version				Autor
 *********************************************
 2022-11-30			Entwurf				Stl
 -->
-<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:eCH-0265="http://www.ech.ch/xmlns/eCH-0265/1" xmlns:eCH-0097="http://www.ech.ch/xmlns/eCH-0097/6" xmlns:eCH-0261="http://www.ech.ch/xmlns/eCH-0261/1" xmlns:interlis-geometry="http://www.interlis.ch/geometry/1.0" targetNamespace="http://www.ech.ch/xmlns/eCH-0265/1" elementFormDefault="qualified" attributeFormDefault="unqualified" version="1.0">
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:eCH-0265="http://www.ech.ch/xmlns/eCH-0265/1" xmlns:eCH-0108="http://www.ech.ch/xmlns/eCH-0108/7" xmlns:eCH-0261="http://www.ech.ch/xmlns/eCH-0261/1" xmlns:interlis-geometry="http://www.interlis.ch/geometry/1.0" targetNamespace="http://www.ech.ch/xmlns/eCH-0265/1" elementFormDefault="qualified" attributeFormDefault="unqualified" version="1.0">
 	<xs:annotation>
 		<xs:documentation xml:lang="de">Flächen und Kulturen</xs:documentation>
 	</xs:annotation>
-	<xs:import namespace="http://www.ech.ch/xmlns/eCH-0097/6" schemaLocation="http://www.ech.ch/xmlns/eCH-0097/6/eCH-0097-6-0.xsd"/>
+	<xs:import namespace="http://www.ech.ch/xmlns/eCH-0108/7" schemaLocation="./eCH-0108-7-0.xsd"/>
 	<xs:import namespace="http://www.ech.ch/xmlns/eCH-0261/1" schemaLocation="../../eCH-0261/src/eCH-0261-1-0.xsd"/>
 	<xs:import namespace="http://www.interlis.ch/geometry/1.0" schemaLocation="https://models.interlis.ch/refhb24/geometry.xsd"/>
 	<!--Hauptdatentypen-->
@@ -39,7 +39,7 @@ Datum				Version				Autor
 					</xs:restriction>
 				</xs:simpleType>
 			</xs:element>
-			<xs:element name="responsibleEnterprise" type="eCH-0097:uidStructureType">
+			<xs:element name="responsibleEnterprise" type="eCH-0108:uidType">
 				<xs:annotation>
 					<xs:documentation xml:lang="de">Unter Verantwortung von (Unternehmen/Betrieb)</xs:documentation>
 					<xs:documentation xml:lang="en">The enterprise (enterprise/branch) responsible for this area.
@@ -83,7 +83,7 @@ Datum				Version				Autor
 					</xs:restriction>
 				</xs:simpleType>
 			</xs:element>
-			<xs:element name="responsibleEnterprise" type="eCH-0097:uidStructureType">
+			<xs:element name="responsibleEnterprise" type="eCH-0108:uidType">
 				<xs:annotation>
 					<xs:documentation xml:lang="de">Unter Verantwortung von (Unternehmen/Betrieb)</xs:documentation>
 					<xs:documentation xml:lang="en">The enterprise (enterprise/branch) responsible for this area.
