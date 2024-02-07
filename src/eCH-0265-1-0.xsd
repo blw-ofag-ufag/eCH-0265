@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:eCH-0265="http://www.ech.ch/xmlns/eCH-0265/1" xmlns:eCH-0108="http://www.ech.ch/xmlns/eCH-0108/7" xmlns:eCH-0261="http://www.ech.ch/xmlns/eCH-0261/1" xmlns:interlis-geometry="http://www.interlis.ch/geometry/1.0" targetNamespace="http://www.ech.ch/xmlns/eCH-0265/1" elementFormDefault="qualified" attributeFormDefault="unqualified" version="1.0">
 	<xs:annotation>
-		<xs:documentation xml:lang="de">Flächen und Kulturen</xs:documentation>
+		<xs:documentation xml:lang="de">Agrardaten - Flächen und Kulturen</xs:documentation>
 	</xs:annotation>
-	<xs:import namespace="http://www.ech.ch/xmlns/eCH-0108/7" schemaLocation="./eCH-0108-7-0.xsd"/>
-	<xs:import namespace="http://www.ech.ch/xmlns/eCH-0261/1" schemaLocation="../../eCH-0261/src/eCH-0261-1-0.xsd"/>
+	<xs:import namespace="http://www.ech.ch/xmlns/eCH-0108/7" schemaLocation="http://www.ech.ch/xmlns/eCH-0108/7/eCH-0108-7-0.xsd"/>
+	<xs:import namespace="http://www.ech.ch/xmlns/eCH-0261/1" schemaLocation="http://www.ech.ch/xmlns/eCH-0261/1/eCH-0261-1-0.xsd"/>
 	<xs:import namespace="http://www.interlis.ch/geometry/1.0" schemaLocation="https://models.interlis.ch/refhb24/geometry.xsd"/>
 	<!--Hauptdatentypen-->
 	<xs:complexType name="areaType">
