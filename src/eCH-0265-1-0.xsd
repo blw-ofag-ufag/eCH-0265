@@ -325,8 +325,8 @@
 			</xs:element>
 			<xs:element name="botanicalPlant" type="eCH-0265:botanicalPlantType" minOccurs="0" maxOccurs="unbounded">
 				<xs:annotation>
-					<xs:documentation xml:lang="de">Kultur botanisch</xs:documentation>
-					<xs:documentation xml:lang="en">The botanical crop. See referenced definition.</xs:documentation>
+					<xs:documentation xml:lang="de">Pflanzenspezies</xs:documentation>
+					<xs:documentation xml:lang="en">The botanical species.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="programme" type="eCH-0265:programmeType" minOccurs="0" maxOccurs="unbounded">
@@ -349,8 +349,8 @@
 	</xs:complexType>
 	<xs:complexType name="botanicalPlantType">
 		<xs:annotation>
-			<xs:documentation xml:lang="de">Beschreibt eine botanische Kultur im engeren Sinne.</xs:documentation>
-			<xs:documentation xml:lang="en">A narrow definition of a botanical crop.</xs:documentation>
+			<xs:documentation xml:lang="de">Beschreibt eine Pflanzenspezies.</xs:documentation>
+			<xs:documentation xml:lang="en">A description of a botanical species.</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
 			<xs:element name="id" type="eCH-0261:identifierType">
