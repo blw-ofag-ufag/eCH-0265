@@ -24,7 +24,7 @@ Additionally, they may:
 
 - Regular external developers are integrated into the organization as **“Outside Collaborator”** and receive by default the **Write** role on all eCH repositories.
 
-Membership and roles are managed by the CCDT members.
+Membership and roles are managed by the FOAG's Competence Center for Digital Transformation (CCDT) members.
 Memberships and roles can be given or removed as soon as needed. CCDT makes a regular check of active users and adapts the accesses as needed.
 
 ## Issue management
