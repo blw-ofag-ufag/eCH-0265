@@ -1,6 +1,7 @@
 # eCH-0265: Agrardaten -- Flächen und Kulturen
 
-This is the repository for technical artefacts related to this specification.
+This is the repository for technical artefacts related to the specification 0265. The currently valid version is published on the eCH-Website https://www.ech.ch/de/ech/ech-0265.
+
 Primarily, this repo contains:
 
 * XSDs
