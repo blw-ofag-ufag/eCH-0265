@@ -543,8 +543,8 @@
 	</xs:complexType>
 	<xs:complexType name="programmeType">
 		<xs:annotation>
-			<xs:documentation xml:lang="de">Eine Nutzungsart kann gemäss Massnahmen einer Organisation (z. B. ein Label) bewirtschaftet oder genutzt werden. Diese Massnahmen werden in dieser Liste abgebildet und mit einer System ID versehen, damit die Massnahme einer Organisation zugeordnet werden kann.</xs:documentation>
-			<xs:documentation xml:lang="en">A crop can be cultivated in accordance with programmes other than the direct payment programme, e.g. programmes from label organisations. See the sourceSystemId for the originating system or authority of the respective programme.</xs:documentation>
+			<xs:documentation xml:lang="de">Programme von Label-Organisationen. Siehe „sourceSystemId“ für das Ursprungssystem oder die "authority" des jeweiligen Programms.</xs:documentation>
+			<xs:documentation xml:lang="en">Programmes from label organisations. See the sourceSystemId for the originating system or authority of the respective programme.</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
 			<xs:element name="item" type="eCH-0261:enumeratedItemType">
