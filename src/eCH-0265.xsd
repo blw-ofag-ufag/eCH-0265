@@ -189,8 +189,34 @@
 			</xs:element>
 			<xs:element name="effectiveYield" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation xml:lang="de">Effektiver Ertrag (kg)</xs:documentation>
-					<xs:documentation xml:lang="en">The effective yield in kilograms</xs:documentation>
+					<xs:documentation xml:lang="de">Effektiver Ertrag in Kilogramm (Trockensubstanz TS)</xs:documentation>
+					<xs:documentation xml:lang="en">The effective yield in kilograms (dry substance TS)</xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:complexContent>
+						<xs:restriction base="eCH-0265:measurementType">
+							<xs:sequence>
+								<xs:element name="value">
+									<xs:simpleType>
+										<xs:restriction base="xs:decimal"/>
+									</xs:simpleType>
+								</xs:element>
+								<xs:element name="unit">
+									<xs:simpleType>
+										<xs:restriction base="eCH-0261:unitType">
+											<xs:enumeration value="kg"/>
+										</xs:restriction>
+									</xs:simpleType>
+								</xs:element>
+							</xs:sequence>
+						</xs:restriction>
+					</xs:complexContent>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="effectiveYieldFS" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">Effektiver Ertrag in Kilogramm (Feuchtsubstanz FS)</xs:documentation>
+					<xs:documentation xml:lang="en">The effective yield in kilograms (wet substance FS)</xs:documentation>
 				</xs:annotation>
 				<xs:complexType>
 					<xs:complexContent>
