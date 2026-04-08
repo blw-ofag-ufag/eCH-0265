@@ -127,4 +127,4 @@ The review and publishing process of the code in this repository has 4 main step
 
 ## Contact
 
-For general questions and request write access to this repo, please send a mail to kompetenzzentrumdigitaletransformation@blw.admin.ch
+For general questions and request write access to this repo, please send a mail to [agridata.ch@blw.admin.ch](mailto:agridata.ch@blw.admin.ch)
