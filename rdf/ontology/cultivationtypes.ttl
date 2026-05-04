@@ -2020,12 +2020,14 @@ cultivationtype:501 a owl:Class ;
     schema:name "Sommergerste"@de,
         "Orge de printemps"@fr,
         "Orzo primaverile"@it ;
+    schema:description "Bezeichnet den Anbau von Gerste, die im Frühjahr ausgesät und im späten Sommer desselben Jahres geerntet wird."@de ;
     owl:intersectionOf ( cultivationtype:498 cultivationtype:1000 ) .
 
 cultivationtype:502 a owl:Class ;
     schema:name "Wintergerste"@de,
         "Orge d’automne"@fr,
         "Orzo autunnale"@it ;
+    schema:description "Umfasst den Anbau von Gerste, deren Aussaat im Herbst erfolgt, um nach der Überwinterung im darauffolgenden Sommer geerntet zu werden."@de ;
     owl:intersectionOf ( cultivationtype:19 cultivationtype:498 ) .
 
 cultivationtype:504 a owl:Class ;
@@ -2039,6 +2041,7 @@ cultivationtype:505 a owl:Class ;
     schema:name "Triticale"@de,
         "Triticale"@fr,
         "Triticale"@it ;
+    schema:description "Umfasst den Anbau der Weizen-Roggen-Kreuzung Triticale, vorwiegend als ertragreiches Futtergetreide."@de ;
     rdfs:subClassOf cultivationtype:1033 ;
     :botanicalPlant taxon:TTLRI .
 
@@ -2046,6 +2049,7 @@ cultivationtype:506 a owl:Class ;
     schema:name "Mischel Futtergetreide"@de,
         "Méteil de céréales fourragères"@fr,
         "Miscela di cereali da foraggio"@it ;
+    schema:description "Bezeichnet den gemeinsamen Anbau einer Saatgutmischung aus verschiedenen Getreidearten auf derselben Nutzfläche für die Tierfutterproduktion."@de ;
     rdfs:subClassOf cultivationtype:14,
         cultivationtype:18 .
 
@@ -2053,6 +2057,7 @@ cultivationtype:507 a owl:Class ;
     schema:name "Futterweizen gemäss Sortenliste swiss granum"@de,
         "Blé fourrager selon liste swiss granum"@fr,
         "Frumento da foraggio giusta la lista di swiss granum"@it ;
+    schema:description "Umfasst den Anbau spezifischer Weizensorten, die gemäss der offiziellen Liste von swiss granum explizit als Futterweizen eingestuft sind."@de ;
     rdfs:subClassOf cultivationtype:1003 .
 
 cultivationtype:508 a owl:Class ;
