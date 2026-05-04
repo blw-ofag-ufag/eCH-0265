@@ -38,7 +38,7 @@ shape: a owl:Ontology ;
     dcterms:creator "Damian Oswald, Lea Stauber, Marc Beringer, Christian Wilda" ;
     dcterms:title "RDF master and reference data about crops"@en ;
     dcterms:created "2026-03-05"^^xsd:date ;
-    dcterms:modified "2026-04-14"^^xsd:date ;
+    dcterms:modified "2026-05-04"^^xsd:date ;
     dcterms:description
 """
 This project addresses the challenge of fragmented agricultural crop data within the Swiss federal administration, where essential systems all use separate, non-harmonized crop terminologies.
