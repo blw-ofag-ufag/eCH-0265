@@ -7,6 +7,18 @@ mermaid.initialize({
 const urlParams = new URLSearchParams(window.location.search);
 const currentSystem = urlParams.get('system') || 'agis';
 
+const systemDisplayTexts = {
+    'agis': 'aus dem Agrarpolitischen Informationssystem AGIS',
+    'naebi': 'der Suisse-Bilanz',
+    'psm': 'aus dem Pflanzenschutzmittelverzeichnis'
+};
+
+const subtitleElement = document.querySelector('.subtitle');
+if (subtitleElement) {
+    const replacementText = systemDisplayTexts[currentSystem] || systemDisplayTexts['agis'];
+    subtitleElement.innerHTML = subtitleElement.innerHTML.replace('__SYSTEM__', replacementText);
+}
+
 const systemLabels = {
     'agis': 'direct-payments',
     'naebi': 'nutrient-balance',
