@@ -1,0 +1,17 @@
+PREFIX cube: <https://cube.link/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX schema: <http://schema.org/>
+PREFIX system: <https://agriculture.ld.admin.ch/crops/__SYSTEM__/1/> # may be 'agis', 'psm' or 'naebi'
+PREFIX cultivationtype: <https://agriculture.ld.admin.ch/crops/cultivationtype/>
+PREFIX : <https://agriculture.ld.admin.ch/crops/>
+SELECT *
+FROM <https://lindas.admin.ch/foag/crops>
+WHERE {
+    system: cube:observationSet / cube:observation ?Observation .
+    ?Observation schema:name ?Crop ; schema:identifier ?Identifier .
+    FILTER(LANG(?Crop) = "de")
+    OPTIONAL {
+        ?Observation :cultivationType ?CultivationType .
+        ?CultivationType rdfs:subClassOf* :Cultivation .
+    }
+}
