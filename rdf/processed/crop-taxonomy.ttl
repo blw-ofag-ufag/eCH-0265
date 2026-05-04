@@ -200,15 +200,6 @@ cultivationtype:1031 a owl:Class ;
     rdfs:label "Getreide-Silage mit Leguminosen"@de ;
     rdfs:subClassOf cultivationtype:543 .
 
-cultivationtype:1032 a owl:Class ;
-    rdfs:label "Kulturen mit Süssgräsern"@de,
-        "crops with sweet grasses"@en ;
-    schema:alternateName "Süssgräser (Poaceae)"@de,
-        "poacées (Gramineae)"@fr,
-        "Poacee (Graminaceae)"@it ;
-    rdfs:subClassOf cultivationtype:16 ;
-    :botanicalPlant taxon:1GRAF .
-
 cultivationtype:1033 a owl:Class ;
     rdfs:label "Getreide ohne Mais"@de,
         "Céréales sans Maïs"@fr,
@@ -1788,7 +1779,7 @@ cultivationtype:14 a owl:Class ;
         "Céréales"@fr,
         "Cereali"@it ;
     rdfs:comment "Der Anbau von verschiedenen Getreidearten wie Weizen, Gerste, Roggen, Hafer oder Dinkel. Das Hauptziel ist die Gewinnung der Körner zur Nutzung als Lebens- oder Futtermittel."@de ;
-    rdfs:subClassOf cultivationtype:1032 .
+    rdfs:subClassOf cultivationtype:1 .
 
 cultivationtype:140 a owl:Class ;
     rdfs:label "Blaue Heckenkirsche"@de,
@@ -1898,9 +1889,8 @@ cultivationtype:159 a owl:Class ;
     rdfs:subClassOf cultivationtype:41 .
 
 cultivationtype:16 a owl:Class ;
-    rdfs:label "Getreide und Pseudogetreide"@de,
-        "Grains and pseudo-cereals"@en ;
-    rdfs:comment "Der Anbau von von Getreide oder Pseudogetreide."@de ;
+    rdfs:label "Pseudogetreide"@de,
+        "Pseudo-cereals"@en ;
     rdfs:subClassOf cultivationtype:1 .
 
 cultivationtype:161 a owl:Class ;

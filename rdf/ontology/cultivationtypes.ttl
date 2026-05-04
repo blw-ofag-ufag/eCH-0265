@@ -204,7 +204,7 @@ cultivationtype:14 a owl:Class ;
         "Céréales"@fr,
         "Cereali"@it ;
     schema:description "Der Anbau von verschiedenen Getreidearten wie Weizen, Gerste, Roggen, Hafer oder Dinkel. Das Hauptziel ist die Gewinnung der Körner zur Nutzung als Lebens- oder Futtermittel."@de ;
-    rdfs:subClassOf cultivationtype:16 .
+    rdfs:subClassOf cultivationtype:1 .
 
 cultivationtype:15 a owl:Class ;
     schema:name "Leguminosen"@de ;
@@ -213,9 +213,8 @@ cultivationtype:15 a owl:Class ;
     rdfs:subClassOf cultivationtype:1 .
 
 cultivationtype:16 a owl:Class ;
-    schema:name "Getreide und Pseudogetreide"@de,
-        "Grains and pseudo-cereals"@en ;
-    schema:description "Der Anbau von von Getreide oder Pseudogetreide."@de ;
+    schema:name "Pseudogetreide"@de,
+        "Pseudo-cereals"@en ;
     rdfs:subClassOf cultivationtype:1 .
 
 cultivationtype:17 a owl:Class ;
