@@ -7,7 +7,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 PREFIX owl: <http://www.w3.org/2002/07/owl#>
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 
-SELECT ?Identifier ?Crop ?CultivationType ?BaseName ?BaseAltName ?BaseDesc ?ValidFrom ?ValidTo ?Step ?StepName ?NextStep ?NextStepName ?DisjointName ?UnionName ?IntersectionName
+SELECT DISTINCT ?Identifier ?Crop ?CultivationType ?BaseName ?BaseAltName ?BaseDesc ?ValidFrom ?ValidTo ?Step ?StepName ?NextStep ?NextStepName ?DisjointName ?UnionName ?IntersectionName
 FROM <https://lindas.admin.ch/foag/crops>
 WHERE {
     {
@@ -33,9 +33,17 @@ WHERE {
     OPTIONAL { ?CultivationType schema:description ?BaseDesc . FILTER(LANG(?BaseDesc) = "de") }
     
     OPTIONAL {
-        ?CultivationType rdfs:subClassOf* ?Step .
-        ?Step rdfs:subClassOf ?NextStep .
-        ?NextStep rdfs:subClassOf* :Cultivation .
+        {
+            # Path upwards to Cultivation
+            ?CultivationType rdfs:subClassOf* ?Step .
+            ?Step rdfs:subClassOf ?NextStep .
+            ?NextStep rdfs:subClassOf* :Cultivation .
+        } UNION {
+            # Path downwards to all subclasses
+            ?Step rdfs:subClassOf ?NextStep .
+            ?NextStep rdfs:subClassOf* ?CultivationType .
+            ?Step rdfs:subClassOf+ ?CultivationType .
+        }
         
         ?Step schema:name|rdfs:label ?StepName .
         FILTER(LANG(?StepName) = "de")

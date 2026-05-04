@@ -1,7 +1,20 @@
 mermaid.initialize({ 
     startOnLoad: false, 
-    theme: 'default',
-    state: { useMaxWidth: false }
+    theme: 'base',
+    themeVariables: {
+        fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif',
+        fontSize: '14px',
+        primaryColor: '#ffffff',       // Weisser Hintergrund für Boxen
+        primaryTextColor: '#111827',   // Dunkelgrauer Text
+        primaryBorderColor: '#111827', // Heller Rand wie bei den Karten
+        lineColor: '#9ca3af',          // Mittelgraue Pfeile
+        tertiaryColor: '#f9fafb'       // Fallback für andere Elemente
+    },
+    flowchart: { 
+        useMaxWidth: false,
+        nodeSpacing: 20,
+        rankSpacing: 30
+    }
 });
 
 const urlParams = new URLSearchParams(window.location.search);
@@ -108,7 +121,7 @@ function formatNodeLabel(text) {
     text = text.replace(/"/g, ''); 
     
     const MAX_TOTAL_LENGTH = 80;
-    const MAX_LINE_LENGTH = 30;
+    const MAX_LINE_LENGTH = 20;
     
     if (text.length > MAX_TOTAL_LENGTH) {
         text = text.substring(0, MAX_TOTAL_LENGTH).trim() + '...';
@@ -132,7 +145,7 @@ function formatNodeLabel(text) {
         lines.push(currentLine.trim());
     }
     
-    return lines.join('\\n');
+    return lines.join('<br/>');
 }
 
 function getGithubIssueUrl(cropName, slug) {
@@ -171,7 +184,6 @@ async function renderInterface(bindings, container, rawOntologyText) {
                 altNames: new Set(),
                 edges: new Set(),
                 observations: [],
-                // Initialize OWL Sets
                 disjointNames: new Set(),
                 unionNames: new Set(),
                 intersectionNames: new Set()
@@ -353,43 +365,131 @@ async function renderInterface(bindings, container, rawOntologyText) {
         card.appendChild(textPanel);
 
         if (ct.edges.size > 0) {
-            const involvedUris = new Set();
-            const edgeSources = new Set();
-            const edgeTargets = new Set();
+            const cultivationUri = 'https://agriculture.ld.admin.ch/crops/Cultivation';
+            const filteredEdges = new Set();
 
             ct.edges.forEach(edge => {
                 const [source, target] = edge.split('|');
-                involvedUris.add(source);
-                involvedUris.add(target);
-                edgeSources.add(source);
-                edgeTargets.add(target);
+                if (source !== cultivationUri && target !== cultivationUri) {
+                    filteredEdges.add(edge);
+                }
             });
 
-            const startNodes = new Set([...involvedUris].filter(uri => !edgeTargets.has(uri)));
-            const endNodes = new Set([...involvedUris].filter(uri => !edgeSources.has(uri)));
-
-            const intermediateNodes = [...involvedUris].filter(uri => !startNodes.has(uri) && !endNodes.has(uri));
-
-            if (intermediateNodes.length > 0) {
+            if (filteredEdges.size > 0) {
                 const graphPanel = document.createElement('div');
-                graphPanel.className = 'graph-panel';
+                graphPanel.className = 'graph-panel';                
+                const focusNodeUri = ct.baseUri;
+                const coreNodes = new Set([focusNodeUri]);
+                let changed = true;
+                while(changed) {
+                    changed = false;
+                    filteredEdges.forEach(edge => {
+                        const [child, parent] = edge.split('|');
+                        if (coreNodes.has(child) && !coreNodes.has(parent)) {
+                            coreNodes.add(parent);
+                            changed = true;
+                        }
+                    });
+                }
 
-                let mermaidSyntax = "stateDiagram-v2\n    direction TB\n";
+                const parentToChildren = {};
+                filteredEdges.forEach(e => {
+                    const [child, parent] = e.split('|');
+                    if(!parentToChildren[parent]) parentToChildren[parent] = [];
+                    parentToChildren[parent].push(child);
+                });
 
-                intermediateNodes.forEach(uri => {
+                const MAX_CHILDREN = 6;
+                const visibleNodes = new Set(coreNodes);
+                const visibleEdges = new Set();
+                const dummyEdges = new Set();
+                const dummyNodes = {}; 
+                const visited = new Set(coreNodes);
+                filteredEdges.forEach(edge => {
+                    const [child, parent] = edge.split('|');
+                    if (coreNodes.has(child) && coreNodes.has(parent)) {
+                        visibleEdges.add(edge);
+                    }
+                });
+
+                let queue = Array.from(coreNodes);
+
+                while(queue.length > 0) {
+                    const current = queue.shift();
+                    const children = parentToChildren[current] || [];
+
+                    const coreChildren = children.filter(c => coreNodes.has(c));
+                    const nonCoreChildren = children.filter(c => !coreNodes.has(c)).sort((a, b) => {
+                        const labelA = nodeNames[a] || a;
+                        const labelB = nodeNames[b] || b;
+                        return labelA.localeCompare(labelB);
+                    });
+                    if (coreChildren.length + nonCoreChildren.length > MAX_CHILDREN) {
+                        const availableForNonCore = Math.max(0, MAX_CHILDREN - coreChildren.length - 1);
+                        for(let i = 0; i < availableForNonCore; i++) {
+                            const c = nonCoreChildren[i];
+                            visibleNodes.add(c);
+                            visibleEdges.add(`${c}|${current}`);
+                            if (!visited.has(c)) {
+                                visited.add(c);
+                                queue.push(c);
+                            }
+                        }
+                        const hiddenCount = nonCoreChildren.length - availableForNonCore;
+                        if (hiddenCount > 0) {
+                            const dummyId = getSafeId(current) + '_dummy';
+                            dummyNodes[dummyId] = `${hiddenCount} weitere...`;
+                            dummyEdges.add(`${dummyId}|${current}`);
+                        }
+
+                    } else {
+                        nonCoreChildren.forEach(c => {
+                            visibleNodes.add(c);
+                            visibleEdges.add(`${c}|${current}`);
+                            if (!visited.has(c)) {
+                                visited.add(c);
+                                queue.push(c);
+                            }
+                        });
+                    }
+                }
+                
+                let mermaidSyntax = "flowchart BT\n";
+
+                visibleNodes.forEach(uri => {
                     const id = getSafeId(uri);
-                    const label = formatNodeLabel(nodeNames[uri]);
-                    mermaidSyntax += `    state "${label}" as ${id}\n`;
+                    let rawLabel = nodeNames[uri] || uri;
+                    if (uri === ct.baseUri && ct.baseName) {
+                        rawLabel = ct.baseName;
+                    }
+                    const label = formatNodeLabel(rawLabel);
+                    
+                    if (uri === ct.baseUri) {
+                        mermaidSyntax += `    ${id}["${label}"]:::focusNode\n`;
+                    } else {
+                        mermaidSyntax += `    ${id}["${label}"]\n`;
+                    }
                 });
 
-                ct.edges.forEach(edge => {
-                    const [source, target] = edge.split('|');
-                    
-                    const sourceStr = startNodes.has(source) ? '[*]' : getSafeId(source);
-                    const targetStr = endNodes.has(target) ? '[*]' : getSafeId(target);
-                    
-                    mermaidSyntax += `    ${sourceStr} --> ${targetStr}\n`;
+                // Dummy-Knoten rendern
+                Object.entries(dummyNodes).forEach(([dummyId, label]) => {
+                    mermaidSyntax += `    ${dummyId}["${label}"]:::dummyNode\n`;
                 });
+
+                // Reguläre Kanten
+                visibleEdges.forEach(edge => {
+                    const [source, target] = edge.split('|');
+                    mermaidSyntax += `    ${getSafeId(source)} --> ${getSafeId(target)}\n`;
+                });
+
+                // Gestrichelte Kanten für zusammengefasste Knoten
+                dummyEdges.forEach(edge => {
+                    const [source, target] = edge.split('|');
+                    mermaidSyntax += `    ${source} -.-> ${getSafeId(target)}\n`;
+                });
+
+                mermaidSyntax += `    classDef focusNode fill:#eff6ff,stroke:#3b82f6,stroke-width:2px,color:#1e40af;\n`;
+                mermaidSyntax += `    classDef dummyNode fill:#f9fafb,stroke:#9ca3af,stroke-width:1px,stroke-dasharray: 5 5,color:#6b7280;\n`;
 
                 const mermaidDiv = document.createElement('div');
                 mermaidDiv.className = 'mermaid';
