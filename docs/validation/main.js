@@ -1,3 +1,9 @@
+const ORG = 'blw-ofag-ufag';
+const REPO = 'crops';
+const BRANCH = 'main';
+const CULTIVATIONTYPES = `https://raw.githubusercontent.com/${ORG}/${REPO}/${BRANCH}/rdf/ontology/cultivationtypes.ttl`;
+const ENDPOINT = 'https://lindas.admin.ch/query';
+
 mermaid.initialize({ 
     startOnLoad: false, 
     theme: 'base',
@@ -40,9 +46,8 @@ const systemLabels = {
 const githubSystemLabel = systemLabels[currentSystem] || 'data';
 
 async function fetchOntologySource() {
-    const rawUrl = 'https://raw.githubusercontent.com/blw-ofag-ufag/crops/main/rdf/ontology/cultivationtypes.ttl';
     try {
-        const res = await fetch(rawUrl);
+        const res = await fetch(CULTIVATIONTYPES);
         if (!res.ok) throw new Error("Could not fetch ontology source.");
         return await res.text();
     } catch (e) {
@@ -79,7 +84,6 @@ function getLineNumbers(rawText, slug) {
 }
 
 async function fetchAndRenderData() {
-    const endpointUrl = 'https://lindas.admin.ch/query';
     const appDiv = document.getElementById('app');
 
     try {
@@ -92,7 +96,7 @@ async function fetchAndRenderData() {
         let sparqlQuery = await queryRes.text();
         sparqlQuery = sparqlQuery.replace('{{SYSTEM_PREFIX}}', currentSystem);
 
-        const response = await fetch(endpointUrl, {
+        const response = await fetch(ENDPOINT, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/x-www-form-urlencoded',
@@ -153,7 +157,7 @@ function getGithubIssueUrl(cropName, slug) {
     const body = `Ich habe einen Fehler bei der Kultur "${cropName}" (cultivationtype:${slug}) gefunden .\n\n## Fehlerbeschreibung\n\n[Was stimmt an der Taxonomie oder den Attributen nicht?]\n\n## Erwartetes Verhalten\n\n[Wie sollte es richtig sein?]`;
     const labels = `bug,data,${githubSystemLabel}`;
     
-    const url = new URL('https://github.com/blw-ofag-ufag/crops/issues/new');
+    const url = new URL(`https://github.com/${ORG}/${REPO}/issues/new`);
     url.searchParams.append('title', title);
     url.searchParams.append('body', body);
     url.searchParams.append('labels', labels);
@@ -163,7 +167,7 @@ function getGithubIssueUrl(cropName, slug) {
 }
 
 function getGithubSourceUrl(slug, rawText) {
-    const baseUrl = 'https://github.com/blw-ofag-ufag/crops/blob/main/rdf/ontology/cultivationtypes.ttl';
+    const baseUrl = CULTIVATIONTYPES ;
     const lines = getLineNumbers(rawText, slug);
     return lines ? `${baseUrl}#${lines}` : baseUrl; 
 }

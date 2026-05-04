@@ -1,15 +1,12 @@
-# Cultivation Graphs Explorer
+# Cultivation type validation tool
 
-Dieses Projekt visualisiert landwirtschaftliche Hierarchien des BLW als interaktive Mermaid.js-Graphen.
+This small application visualizes the cultivation types of three different source systems (agricultural policy information system `agis`, Suisse nutrient balance `naebi` and registry of plant protection products `psm`) in a manner where subject matter experts can verify/validate them.
 
-## Features
-- Dynamischer Fetch von LINDAS via SPARQL
-- GitHub Bug Report Integration (`?template=bug.yml` Support)
-- Automatische Source Code Line-Referenzierung (`raw.githubusercontent.com`)
+To view it locally, run:
 
-## Setup
-Um CORS-Fehler beim Laden der `query.rq` zu vermeiden, muss das Projekt über einen lokalen Webserver ausgeführt werden. 
-
-Starten Sie dazu einfach in diesem Verzeichnis:
-```bash
+``` bash
+cd docs/validation
 python -m http.server
+```
+
+Use URL parameter `?system=agis` to set either `agis`, `naebi` or `psm` as the system of interest. 
