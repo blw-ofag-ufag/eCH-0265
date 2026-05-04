@@ -90,7 +90,7 @@ shape:DirectPaymentCrop a sh:NodeShape ;
     rdfs:label "Direct payment crop"@en ;
     rdfs:comment "A classification scheme built for the Swiss direct payment system"@en ;
     sh:closed true ;
-    sh:targetClass cube:Observation ;
+    sh:targetClass :AgisObservation ;
     sh:property
         [
             sh:order 1 ;
@@ -142,7 +142,7 @@ shape:DirectPaymentCrop a sh:NodeShape ;
 shape:NaebiCrop a sh:NodeShape ;
     rdfs:label "Suisse Balance crop"@en ;
     sh:closed true ;
-    sh:targetClass cube:Observation ;
+    sh:targetClass :NaebiObservation ;
     sh:property
         [
             sh:order 1 ;
@@ -191,7 +191,7 @@ shape:NaebiCrop a sh:NodeShape ;
             schema:description "Stickstoff, kg/ha"@de ;
             sh:minCount 1 ;
             sh:maxCount 1 ;
-            sh:path :nitrogen ;
+            sh:path :N2 ;
             sh:nodeKind sh:Literal ;
             sh:datatype xsd:decimal ;
             qudt:hasUnit unit:KiloGM-PER-HA ;
@@ -204,7 +204,7 @@ shape:NaebiCrop a sh:NodeShape ;
             schema:description "Phosphor, kg/dt"@de ;
             sh:minCount 1 ;
             sh:maxCount 1 ;
-            sh:path :phosphorus ;
+            sh:path :P2O5 ;
             sh:nodeKind sh:Literal ;
             sh:datatype xsd:decimal ;
             qudt:hasUnit unit:KiloGM-PER-DeciTONNE ;
@@ -217,7 +217,7 @@ shape:NaebiCrop a sh:NodeShape ;
             schema:description "Kalium, kg/dt"@de ;
             sh:minCount 1 ;
             sh:maxCount 1 ;
-            sh:path :potassium ;
+            sh:path :K2O ;
             sh:nodeKind sh:Literal ;
             sh:datatype xsd:decimal ;
             qudt:hasUnit unit:KiloGM-PER-DeciTONNE ;
@@ -230,7 +230,7 @@ shape:NaebiCrop a sh:NodeShape ;
             schema:description "Mangan, kg/dt"@de ;
             sh:minCount 1 ;
             sh:maxCount 1 ;
-            sh:path :manganese ;
+            sh:path :Mg ;
             sh:nodeKind sh:Literal ;
             sh:datatype xsd:decimal ;
             qudt:hasUnit unit:KiloGM-PER-DeciTONNE ;
@@ -241,7 +241,7 @@ shape:PlantProtectionCrop a sh:NodeShape ;
     rdfs:label "Plant protection crop"@en ;
     rdfs:comment "Crop of the Swiss registry of plant protection products"@en ;
     sh:closed true ;
-    sh:targetClass cube:Observation ;
+    sh:targetClass :PlantProtectionObservation ;
     sh:property
         [
             sh:order 1 ;
@@ -264,7 +264,7 @@ shape:PlantProtectionCrop a sh:NodeShape ;
         [
             sh:order 3 ;
             sh:name "Parent crop"@en ;
-            sh:path :parent ;
+            sh:path schema:isPartOf ;
             sh:minCount 0 ;
             sh:maxCount 2 ;
             sh:node shape:PlantProtectionCrop ;
