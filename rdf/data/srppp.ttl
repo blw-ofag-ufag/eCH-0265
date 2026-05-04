@@ -52,67 +52,6 @@ psm: a void:Dataset,
     cube:observationConstraint psm:ObservationConstraint ;
     cube:observationSet psm:ObservationSet .
 
-# ==============================================================================
-# SHACL DATA MODEL
-# ------------------------------------------------------------------------------
-# These shapes are used for two purposes at the same time: They model
-# shape restrictions for data validation and also add metadata.
-# To check the shapes, run `pyshacl rdf/data/srppp.ttl --format human`
-# ==============================================================================
-
-psm:ObservationConstraint a sh:NodeShape ;
-    sh:closed true ;
-    sh:targetClass cube:Observation ;
-    sh:ignoredProperties ( rdf:type ) ;
-    sh:property
-        [
-            sh:order 1 ;
-            a cube:KeyDimension ;
-            schema:name "Identifikator"@de ;
-            schema:description "Der Identifikator aus Infofito. Neu ist das eine UUID."@de ;
-            sh:maxCount 1 ;
-            sh:minCount 1 ;
-            sh:path schema:identifier ;
-            sh:nodeKind sh:Literal ;
-            sh:datatype xsd:ID ;
-            sh:pattern "^[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}$" ;
-        ],
-        [
-            sh:order 2 ;
-            schema:name "Name"@de ;
-            schema:description "Der in Infofito eingetragene Name dieser Kultur"@de ;
-            sh:maxCount 4 ;
-            sh:minCount 2 ;
-            sh:languageIn ( "de" "fr" "it" "en" ) ;
-            sh:uniqueLang true ;
-            sh:nodeKind sh:Literal ;
-            sh:path schema:name ;
-        ],
-        [
-            sh:order 3 ;
-            schema:name "Kultur"@de ;
-            sh:maxCount 1 ;
-            sh:minCount 1 ;
-            sh:nodeKind sh:IRI ;
-            sh:path :cultivationType ;
-        ],
-        [
-            sh:order 4 ;
-            schema:name "Version"@de ;
-            sh:maxCount 1 ;
-            sh:minCount 1 ;
-            sh:path schema:version ;
-            sh:nodeKind sh:Literal ;
-            sh:datatype xsd:integer ;
-        ],
-        [
-            sh:order 5 ;
-            schema:name "Überkultur"@de ; 
-            sh:maxCount 2 ;
-            sh:nodeKind sh:IRI ;
-            sh:class cube:Observation ;
-            sh:path schema:isPartOf ;
-        ] .
 
 # ==============================================================================
 # OBSERVATION SET

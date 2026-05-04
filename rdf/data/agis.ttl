@@ -52,57 +52,6 @@ agis: a void:Dataset,
     cube:observationConstraint agis:ObservationConstraint ;
     cube:observationSet agis:ObservationSet .
 
-# ==============================================================================
-# SHACL DATA MODEL
-# ==============================================================================
-
-agis:ObservationConstraint a sh:NodeShape ;
-    sh:closed true ;
-    sh:property
-        [
-            sh:order 2 ;
-            schema:name "Kulturgruppe"@de ;
-            sh:maxCount 1 ;
-            sh:minCount 1 ;
-            sh:nodeKind sh:IRI ;
-            sh:path :cultivationGroup
-        ],
-        [
-            sh:order 3 ;
-            schema:name "Kultur"@de ;
-            sh:maxCount 1 ;
-            sh:minCount 1 ;
-            sh:nodeKind sh:IRI ;
-            sh:path :cultivationType
-        ],
-        [
-            sh:order 4 ;
-            schema:name "Gültig von"@de ;
-            schema:description "Ab welchem Jahr wurde diese Direktzahlungskultur offiziell verwendet?"@de ;
-            sh:maxCount 1 ;
-            sh:minInclusive "1999"^^xsd:gYear ;
-            sh:nodeKind sh:Literal ;
-            sh:datatype xsd:gYear ;
-            sh:path schema:validFrom ;
-        ],
-        [
-            sh:order 5 ;
-            schema:name "Gültig bis"@de ;
-            schema:description "Bis in welchem Jahr wurde diese Direktzahlungskultur offiziell verwendet?"@de ;
-            sh:maxCount 1 ;
-            sh:nodeKind sh:Literal ;
-            sh:datatype xsd:gYear ;
-            sh:path schema:validTo
-        ],
-        [
-            sh:order 1 ;
-            a cube:KeyDimension ;
-            schema:name "Identifikator"@de ;
-            schema:description "Der LNF-Code, auch Kulturcode genannt, ist der allgemein gebräuchliche Identifikator für Direktzahlungskulturen in der Schweiz. Ein LNF-Code steht immer für dieselbe Kultur. Veraltete Codes werden nicht mehr gebraucht."@de ;
-            sh:maxCount 1 ;
-            sh:minCount 1 ;
-            sh:path schema:identifier ;
-        ] .
 
 # ==============================================================================
 # OBSERVATION SET
