@@ -2980,7 +2980,9 @@ cultivationtype:413 a owl:Class ;
         "Cappuccio bianco"@it,
         "Cavolo bianco"@it ;
     schema:image <https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/Weisskohlfeld.jpg/1280px-Weisskohlfeld.jpg> ;
-    rdfs:subClassOf cultivationtype:81 .
+    rdfs:comment "Anbau von Weisskohl, in der Regel für den menschlichen Verzehr."@de ;
+    rdfs:subClassOf cultivationtype:81 ;
+    :botanicalPlant taxon:BRSOH .
 
 cultivationtype:414 a owl:Class ;
     rdfs:label "Biodiversitätsförderfläche"@de ;

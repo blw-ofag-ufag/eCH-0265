@@ -1862,7 +1862,9 @@ cultivationtype:413 a owl:Class ;
         "Chou cabus"@fr ,
         "Cavolo bianco"@it ,
         "Cappuccio bianco"@it ;
+    schema:description "Anbau von Weisskohl, in der Regel für den menschlichen Verzehr."@de ;
     schema:image <https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/Weisskohlfeld.jpg/1280px-Weisskohlfeld.jpg> ;
+    :botanicalPlant taxon:BRSOH ;
     rdfs:subClassOf cultivationtype:81 .
 
 cultivationtype:414 a owl:Class ;
