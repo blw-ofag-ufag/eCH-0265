@@ -145,6 +145,18 @@ schema:isPartOf a owl:ObjectProperty ;
         "is part of"@en ;
     owl:inverseOf schema:hasPart .
 
+:AgisObservation a owl:Class ;
+    schema:name "AGIS Observation"@en ;
+    rdfs:subClassOf cube:Observation .
+
+:NaebiObservation a owl:Class ;
+    schema:name "Suisse-Bilanz (NAEBI) Observation"@en ;
+    rdfs:subClassOf cube:Observation .
+
+:PlantProtectionObservation a owl:Class ;
+    schema:name "Plant Protection Observation"@en ;
+    rdfs:subClassOf cube:Observation .
+
 :area a owl:ObjectProperty ;
     schema:name "Bedeckt Fläche"@de,
         "Covers area"@en ;
