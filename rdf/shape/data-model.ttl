@@ -142,6 +142,7 @@ shape:DirectPaymentCrop a sh:NodeShape ;
 shape:NaebiCrop a sh:NodeShape ;
     rdfs:label "Suisse Balance crop"@en ;
     sh:closed true ;
+    sh:ignoredProperties ( rdf:type ) ;
     sh:targetClass :NaebiObservation ;
     sh:property
         [
@@ -151,18 +152,39 @@ shape:NaebiCrop a sh:NodeShape ;
             sh:maxCount 1 ;
             sh:minCount 1 ;
             sh:path schema:identifier ;
+            sh:nodeKind sh:Literal ;
+            sh:datatype xsd:string ;
         ],
         [
             sh:order 2 ;
-            schema:name "Kulturkategorie"@de ;
+            schema:name "Bezeichnung"@de,
+                "Name"@en ;
             sh:maxCount 1 ;
             sh:minCount 1 ;
-            sh:nodeKind sh:IRI ;
-            sh:path :cultivationCategory ;
-            sh:node shape:CultivationType ;
+            sh:path schema:name ;
+            sh:nodeKind sh:Literal ;
+            sh:datatype rdf:langString ;
         ],
         [
             sh:order 3 ;
+            schema:name "Kulturkategorie"@de ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:nodeKind sh:Literal ;
+            sh:datatype xsd:string ;
+            sh:path :cultivationCategory ;
+        ],
+        [
+            sh:order 4 ;
+            schema:name "Kultur-Unterkategorie"@de ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:nodeKind sh:Literal ;
+            sh:datatype xsd:string ;
+            sh:path :cultivationSubCategory ;
+        ],
+        [
+            sh:order 5 ;
             schema:name "Kultur"@de,
                 "Crop"@en ;
             a cube:KeyDimension ;
@@ -174,22 +196,9 @@ shape:NaebiCrop a sh:NodeShape ;
         ],
         [
             a cube:MeasureDimension ;
-            sh:order 4 ;
-            schema:name "Ertrag Hauptprodukt"@de ;
-            schema:description "Geerntet, mit einem bei der Ernte üblichen Wassergehalt."@de ;
-            sh:minCount 1 ;
-            sh:maxCount 1 ;
-            sh:path :yield ;
-            sh:nodeKind sh:Literal ;
-            sh:datatype xsd:decimal ;
-            qudt:hasUnit unit:EA ;
-        ],
-        [
-            a cube:MeasureDimension ;
-            sh:order 5 ;
+            sh:order 6 ;
             schema:name "N"@de ;
             schema:description "Stickstoff, kg/ha"@de ;
-            sh:minCount 1 ;
             sh:maxCount 1 ;
             sh:path :N2 ;
             sh:nodeKind sh:Literal ;
@@ -199,10 +208,9 @@ shape:NaebiCrop a sh:NodeShape ;
         ],
         [
             a cube:MeasureDimension ;
-            sh:order 6 ;
+            sh:order 7 ;
             schema:name "P₂O₅"@de ;
             schema:description "Phosphor, kg/dt"@de ;
-            sh:minCount 1 ;
             sh:maxCount 1 ;
             sh:path :P2O5 ;
             sh:nodeKind sh:Literal ;
@@ -212,10 +220,9 @@ shape:NaebiCrop a sh:NodeShape ;
         ],
         [
             a cube:MeasureDimension ;
-            sh:order 7 ;
+            sh:order 8 ;
             schema:name "K₂O"@de ;
             schema:description "Kalium, kg/dt"@de ;
-            sh:minCount 1 ;
             sh:maxCount 1 ;
             sh:path :K2O ;
             sh:nodeKind sh:Literal ;
@@ -225,10 +232,9 @@ shape:NaebiCrop a sh:NodeShape ;
         ],
         [
             a cube:MeasureDimension ;
-            sh:order 8 ;
+            sh:order 9 ;
             schema:name "Mg"@de ;
-            schema:description "Mangan, kg/dt"@de ;
-            sh:minCount 1 ;
+            schema:description "Magnesium, kg/dt"@de ;
             sh:maxCount 1 ;
             sh:path :Mg ;
             sh:nodeKind sh:Literal ;
