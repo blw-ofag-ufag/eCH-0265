@@ -90,19 +90,30 @@ shape:DirectPaymentCrop a sh:NodeShape ;
     rdfs:label "Direct payment crop"@en ;
     rdfs:comment "A classification scheme built for the Swiss direct payment system"@en ;
     sh:closed true ;
+    sh:ignoredProperties ( rdf:type ) ;
     sh:targetClass :AgisObservation ;
     sh:property
         [
             sh:order 1 ;
             a cube:KeyDimension ;
             schema:name "Identifikator"@de ;
-            schema:description "Der LNF-Code, auch Kulturcode genannt, ist der allgemein gebräuchliche Identifikator für Direktzahlungskulturen in der Schweiz. Ein LNF-Code steht immer für dieselbe Kultur. Veraltete Codes werden nicht mehr gebraucht."@de ;
+            schema:description "Der LNF-Code, auch Kulturcode genannt, ist der allgemein gebräuchliche Identifikator für Direktzahlungskulturen in der Schweiz."@de ;
             sh:maxCount 1 ;
             sh:minCount 1 ;
             sh:path schema:identifier ;
+            sh:nodeKind sh:Literal ;
+            sh:datatype xsd:ID ;
         ],
         [
             sh:order 2 ;
+            schema:name "Bezeichnung"@de, "Name"@en ;
+            sh:minCount 1 ;
+            sh:path schema:name ;
+            sh:nodeKind sh:Literal ;
+            sh:datatype rdf:langString ;
+        ],
+        [
+            sh:order 3 ;
             schema:name "Kulturgruppe"@de ;
             sh:maxCount 1 ;
             sh:minCount 1 ;
@@ -111,16 +122,16 @@ shape:DirectPaymentCrop a sh:NodeShape ;
             sh:node shape:CultivationType ;
         ],
         [
-            sh:order 3 ;
+            sh:order 4 ;
             schema:name "Kultur"@de ;
             sh:maxCount 1 ;
             sh:minCount 1 ;
             sh:nodeKind sh:IRI ;
             sh:path :cultivationType ;
-            sh:node shape:CultivationType ;
+            sh:node shape:CultivationType
         ],
         [
-            sh:order 4 ;
+            sh:order 5 ;
             schema:name "Gültig von"@de ;
             schema:description "Ab welchem Jahr wurde diese Direktzahlungskultur offiziell verwendet?"@de ;
             sh:maxCount 1 ;
@@ -130,13 +141,15 @@ shape:DirectPaymentCrop a sh:NodeShape ;
             sh:path schema:validFrom ;
         ],
         [
-            sh:order 5 ;
+            sh:order 6 ;
             schema:name "Gültig bis"@de ;
             schema:description "Bis in welchem Jahr wurde diese Direktzahlungskultur offiziell verwendet?"@de ;
             sh:maxCount 1 ;
-            sh:nodeKind sh:Literal ;
-            sh:datatype xsd:gYear ;
-            sh:path schema:validTo
+            sh:path schema:validTo ;
+            sh:or (
+                [ sh:datatype xsd:gYear ; sh:nodeKind sh:Literal ]
+                [ sh:hasValue cube:Undefined ]
+            ) ;
         ] .
 
 shape:NaebiCrop a sh:NodeShape ;
