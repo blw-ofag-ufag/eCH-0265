@@ -3256,13 +3256,15 @@ cultivationtype:512 a owl:Class ;
     rdfs:label "Sommerweizen (ohne Futterweizen der Sortenliste swiss granum)"@de,
         "Blé de printemps (sans blé fourrager de la liste swiss granum)"@fr,
         "Frumento primaverile (escl. il frumento da foraggio di swiss granum)"@it ;
-    rdfs:subClassOf cultivationtype:999 .
+    rdfs:subClassOf cultivationtype:999 ;
+    owl:disjointWith cultivationtype:507 .
 
 cultivationtype:513 a owl:Class ;
     rdfs:label "Winterweizen (ohne Futterweizen der Sortenliste swiss granum)"@de,
         "Blé d'automne (sans blé fourrager de la liste swiss granum)"@fr,
         "Frumento autunnale (escl. il frumento da foraggio di swiss granum)"@it ;
-    rdfs:subClassOf cultivationtype:1007 .
+    rdfs:subClassOf cultivationtype:1007 ;
+    owl:disjointWith cultivationtype:507 .
 
 cultivationtype:514 a owl:Class ;
     rdfs:label "Roggen"@de,
