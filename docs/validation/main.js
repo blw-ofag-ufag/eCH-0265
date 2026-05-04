@@ -136,8 +136,8 @@ function formatNodeLabel(text) {
 }
 
 function getGithubIssueUrl(cropName, slug) {
-    const title = `Fehlermeldung zu ${cropName} (cultivationtype:${slug})`;
-    const body = `Bitte beschreiben Sie den gefundenen Fehler kurz und prägnant.\n\n**Fehlerbeschreibung:**\n[Was stimmt an der Taxonomie oder den Attributen nicht?]\n\n**Erwartetes Verhalten:**\n[Wie sollte es richtig sein?]\n\n---\n*Kontext: Automatisch generiert aus dem LINDAS Graph Explorer (System: ${currentSystem})*`;
+    const title = `Fehlermeldung zu "${cropName}" (cultivationtype:${slug})`;
+    const body = `Ich habe einen Fehler bei der Kultur "${cropName}" (cultivationtype:${slug}) gefunden .\n\n## Fehlerbeschreibung\n\n[Was stimmt an der Taxonomie oder den Attributen nicht?]\n\n## Erwartetes Verhalten\n\n[Wie sollte es richtig sein?]`;
     const labels = `bug,data,${githubSystemLabel}`;
     
     const url = new URL('https://github.com/blw-ofag-ufag/crops/issues/new');
