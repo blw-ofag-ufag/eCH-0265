@@ -1862,7 +1862,8 @@ cultivationtype:413 a owl:Class ;
         "Kappes"@de ,
         "Chou cabus"@fr ,
         "Cavolo bianco"@it ,
-        "Cappuccio bianco"@it ;
+        "Cappuccio bianco"@it ,
+        "Wittekool"@nl ;
     rdfs:subClassOf cultivationtype:81 .
 
 cultivationtype:414 a owl:Class ;
