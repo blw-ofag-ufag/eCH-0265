@@ -59,7 +59,6 @@ cultivationtype:shape a sh:NodeShape ;
         sh:path schema:alternateName ;
         sh:nodeKind sh:Literal ;
         sh:datatype rdf:langString ;
-        sh:languageIn ( "de" "fr" "it" "en" ) ;
     ],
     [
         sh:path schema:description ;
