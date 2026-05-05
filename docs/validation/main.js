@@ -1,7 +1,7 @@
 const ORG = 'blw-ofag-ufag';
 const REPO = 'crops';
 const BRANCH = 'main';
-const CULTIVATIONTYPES = `https://raw.githubusercontent.com/${ORG}/${REPO}/${BRANCH}/rdf/ontology/cultivationtypes.ttl`;
+const CULTIVATIONTYPES = 'rdf/ontology/cultivationtypes.ttl';
 const ENDPOINT = 'https://lindas.admin.ch/query';
 
 mermaid.initialize({ 
@@ -47,7 +47,7 @@ const githubSystemLabel = systemLabels[currentSystem] || 'data';
 
 async function fetchOntologySource() {
     try {
-        const res = await fetch(CULTIVATIONTYPES);
+        const res = await fetch(`https://raw.githubusercontent.com/${ORG}/${REPO}/${BRANCH}/${CULTIVATIONTYPES}`);
         if (!res.ok) throw new Error("Could not fetch ontology source.");
         return await res.text();
     } catch (e) {
@@ -167,7 +167,7 @@ function getGithubIssueUrl(cropName, slug) {
 }
 
 function getGithubSourceUrl(slug, rawText) {
-    const baseUrl = CULTIVATIONTYPES ;
+    const baseUrl = `https://github.com/${ORG}/${REPO}/blob/main/${CULTIVATIONTYPES}` ;
     const lines = getLineNumbers(rawText, slug);
     return lines ? `${baseUrl}#${lines}` : baseUrl; 
 }
