@@ -2465,7 +2465,7 @@ cultivationtype:571 a owl:DeprecatedClass ;
 
 cultivationtype:572 a owl:Class ;
     schema:name "Nützlingsstreifen auf offener Ackerfläche"@de,
-        "avec des céréales ou de la caméline, au moins 30 % de lentilles lors de la récolte (pour la production de grains)"@fr,
+        "Bandes pour organismes utiles sur les terres ouvertes"@fr,
         "Strisce per organismi utili sulla superficie coltiva aperta"@it ;
     rdfs:subClassOf cultivationtype:1 ;
     :managementIntensity intensity:Extensive .
@@ -4440,7 +4440,7 @@ cultivationtype:1224 a owl:Class ;
 
 cultivationtype:1225 a owl:Class ;
     schema:name "Bohnen, Busch- Handpflück-"@de,
-        "Beans, bushnd-picked"@en,
+        "Beans, bush or hand-picked"@en,
         "Haricots nains, cueillis à la main"@fr,
         "Fagioli nani, raccolti a mano"@it ;
     rdfs:subClassOf cultivationtype:476 .
