@@ -32,11 +32,11 @@ const systemDisplayTexts = {
     'psm': 'aus dem Pflanzenschutzmittelverzeichnis'
 };
 
-const subtitleElement = document.querySelector('.subtitle');
-if (subtitleElement) {
-    const replacementText = systemDisplayTexts[currentSystem] || systemDisplayTexts['agis'];
-    subtitleElement.innerHTML = subtitleElement.innerHTML.replace('__SYSTEM__', replacementText);
-}
+const elements = document.querySelectorAll('.title, .subtitle');
+const replacementText = systemDisplayTexts[currentSystem] || systemDisplayTexts['agis'];
+elements.forEach(element => {
+    element.innerHTML = element.innerHTML.replace('__SYSTEM__', replacementText);
+});
 
 const systemLabels = {
     'agis': 'direct-payments',
