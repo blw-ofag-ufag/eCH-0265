@@ -345,12 +345,6 @@ cultivationtype:36 a owl:Class ;
     rdfs:subClassOf cultivationtype:145,
         cultivationtype:1093 .
 
-cultivationtype:37 a owl:Class ;
-    schema:name "Ysop"@de,
-        "Hysope"@fr,
-        "Issopo"@it ;
-    rdfs:subClassOf cultivationtype:67 .
-
 cultivationtype:39 a owl:Class ;
     schema:name "Knoblauch"@de,
         "Garlic"@en,
