@@ -1,0 +1,72 @@
+PREFIX : <https://agriculture.ld.admin.ch/crops/>
+PREFIX cube: <https://cube.link/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX schema: <http://schema.org/>
+PREFIX system: <https://agriculture.ld.admin.ch/crops/{{SYSTEM_PREFIX}}/1/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+
+SELECT DISTINCT ?Identifier ?Crop ?CultivationType ?BaseName ?BaseAltName ?BaseDesc ?ValidFrom ?ValidTo ?Step ?StepName ?NextStep ?NextStepName ?DisjointName ?UnionName ?IntersectionName
+FROM <https://lindas.admin.ch/foag/crops>
+WHERE {
+    {
+        SELECT ?Observation ?Identifier ?Crop ?CultivationType ?BaseName ?ValidFrom ?ValidTo
+        WHERE {
+            system: cube:observationSet / cube:observation ?Observation .
+            ?Observation schema:name ?Crop ; schema:identifier ?RawIdentifier .
+            
+            BIND(xsd:string(?RawIdentifier) AS ?Identifier)
+            
+            FILTER(LANG(?Crop) = "de")
+            
+            OPTIONAL { ?Observation schema:validFrom ?ValidFrom . }
+            OPTIONAL { ?Observation schema:validTo ?ValidTo . }
+            
+            ?Observation :cultivationType ?CultivationType . 
+            ?CultivationType schema:name|rdfs:label ?BaseName .
+            FILTER(LANG(?BaseName) = "de")
+        }
+    }
+    
+    OPTIONAL { ?CultivationType schema:alternateName ?BaseAltName . FILTER(LANG(?BaseAltName) = "de") }
+    OPTIONAL { ?CultivationType schema:description ?BaseDesc . FILTER(LANG(?BaseDesc) = "de") }
+    
+    OPTIONAL {
+        {
+            # Path upwards to Cultivation
+            ?CultivationType rdfs:subClassOf* ?Step .
+            ?Step rdfs:subClassOf ?NextStep .
+            ?NextStep rdfs:subClassOf* :Cultivation .
+        } UNION {
+            # Path downwards to all subclasses
+            ?Step rdfs:subClassOf ?NextStep .
+            ?NextStep rdfs:subClassOf* ?CultivationType .
+            ?Step rdfs:subClassOf+ ?CultivationType .
+        }
+        
+        ?Step schema:name|rdfs:label ?StepName .
+        FILTER(LANG(?StepName) = "de")
+        
+        ?NextStep schema:name|rdfs:label ?NextStepName .
+        FILTER(LANG(?NextStepName) = "de")
+    }
+
+    OPTIONAL {
+        ?CultivationType owl:disjointWith ?DisjointClass .
+        ?DisjointClass schema:name|rdfs:label ?DisjointName .
+        FILTER(LANG(?DisjointName) = "de")
+    }
+    OPTIONAL {
+        ?CultivationType owl:unionOf ?UnionList .
+        ?UnionList rdf:rest*/rdf:first ?UnionClass .
+        ?UnionClass schema:name|rdfs:label ?UnionName .
+        FILTER(LANG(?UnionName) = "de")
+    }
+    OPTIONAL {
+        ?CultivationType owl:intersectionOf ?IntersectionList .
+        ?IntersectionList rdf:rest*/rdf:first ?IntersectionClass .
+        ?IntersectionClass schema:name|rdfs:label ?IntersectionName .
+        FILTER(LANG(?IntersectionName) = "de")
+    }
+}

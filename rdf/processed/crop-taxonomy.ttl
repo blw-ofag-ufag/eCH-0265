@@ -200,15 +200,6 @@ cultivationtype:1031 a owl:Class ;
     rdfs:label "Getreide-Silage mit Leguminosen"@de ;
     rdfs:subClassOf cultivationtype:543 .
 
-cultivationtype:1032 a owl:Class ;
-    rdfs:label "Kulturen mit Süssgräsern"@de,
-        "crops with sweet grasses"@en ;
-    schema:alternateName "Süssgräser (Poaceae)"@de,
-        "poacées (Gramineae)"@fr,
-        "Poacee (Graminaceae)"@it ;
-    rdfs:subClassOf cultivationtype:16 ;
-    :botanicalPlant taxon:1GRAF .
-
 cultivationtype:1033 a owl:Class ;
     rdfs:label "Getreide ohne Mais"@de,
         "Céréales sans Maïs"@fr,
@@ -1788,7 +1779,7 @@ cultivationtype:14 a owl:Class ;
         "Céréales"@fr,
         "Cereali"@it ;
     rdfs:comment "Der Anbau von verschiedenen Getreidearten wie Weizen, Gerste, Roggen, Hafer oder Dinkel. Das Hauptziel ist die Gewinnung der Körner zur Nutzung als Lebens- oder Futtermittel."@de ;
-    rdfs:subClassOf cultivationtype:1032 .
+    rdfs:subClassOf cultivationtype:1 .
 
 cultivationtype:140 a owl:Class ;
     rdfs:label "Blaue Heckenkirsche"@de,
@@ -1898,9 +1889,8 @@ cultivationtype:159 a owl:Class ;
     rdfs:subClassOf cultivationtype:41 .
 
 cultivationtype:16 a owl:Class ;
-    rdfs:label "Getreide und Pseudogetreide"@de,
-        "Grains and pseudo-cereals"@en ;
-    rdfs:comment "Der Anbau von von Getreide oder Pseudogetreide."@de ;
+    rdfs:label "Pseudogetreide"@de,
+        "Pseudo-cereals"@en ;
     rdfs:subClassOf cultivationtype:1 .
 
 cultivationtype:161 a owl:Class ;
@@ -2989,7 +2979,10 @@ cultivationtype:413 a owl:Class ;
         "Chou cabus"@fr,
         "Cappuccio bianco"@it,
         "Cavolo bianco"@it ;
-    rdfs:subClassOf cultivationtype:81 .
+    schema:image <https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/Weisskohlfeld.jpg/1280px-Weisskohlfeld.jpg> ;
+    rdfs:comment "Anbau von Weisskohl, in der Regel für den menschlichen Verzehr."@de ;
+    rdfs:subClassOf cultivationtype:81 ;
+    :botanicalPlant taxon:BRSOH .
 
 cultivationtype:414 a owl:Class ;
     rdfs:label "Biodiversitätsförderfläche"@de ;
@@ -3186,12 +3179,14 @@ cultivationtype:501 a owl:Class ;
     rdfs:label "Sommergerste"@de,
         "Orge de printemps"@fr,
         "Orzo primaverile"@it ;
+    rdfs:comment "Bezeichnet den Anbau von Gerste, die im Frühjahr ausgesät und im späten Sommer desselben Jahres geerntet wird."@de ;
     owl:intersectionOf ( cultivationtype:498 cultivationtype:1000 ) .
 
 cultivationtype:502 a owl:Class ;
     rdfs:label "Wintergerste"@de,
         "Orge d’automne"@fr,
         "Orzo autunnale"@it ;
+    rdfs:comment "Umfasst den Anbau von Gerste, deren Aussaat im Herbst erfolgt, um nach der Überwinterung im darauffolgenden Sommer geerntet zu werden."@de ;
     owl:intersectionOf ( cultivationtype:19 cultivationtype:498 ) .
 
 cultivationtype:504 a owl:Class ;
@@ -3205,6 +3200,7 @@ cultivationtype:505 a owl:Class ;
     rdfs:label "Triticale"@de,
         "Triticale"@fr,
         "Triticale"@it ;
+    rdfs:comment "Umfasst den Anbau der Weizen-Roggen-Kreuzung Triticale, vorwiegend als ertragreiches Futtergetreide."@de ;
     rdfs:subClassOf cultivationtype:1033 ;
     :botanicalPlant taxon:TTLRI .
 
@@ -3212,6 +3208,7 @@ cultivationtype:506 a owl:Class ;
     rdfs:label "Mischel Futtergetreide"@de,
         "Méteil de céréales fourragères"@fr,
         "Miscela di cereali da foraggio"@it ;
+    rdfs:comment "Bezeichnet den gemeinsamen Anbau einer Saatgutmischung aus verschiedenen Getreidearten auf derselben Nutzfläche für die Tierfutterproduktion."@de ;
     rdfs:subClassOf cultivationtype:14,
         cultivationtype:18 .
 
@@ -3219,6 +3216,7 @@ cultivationtype:507 a owl:Class ;
     rdfs:label "Futterweizen gemäss Sortenliste swiss granum"@de,
         "Blé fourrager selon liste swiss granum"@fr,
         "Frumento da foraggio giusta la lista di swiss granum"@it ;
+    rdfs:comment "Umfasst den Anbau spezifischer Weizensorten, die gemäss der offiziellen Liste von swiss granum explizit als Futterweizen eingestuft sind."@de ;
     rdfs:subClassOf cultivationtype:1003 .
 
 cultivationtype:508 a owl:Class ;
@@ -3261,13 +3259,15 @@ cultivationtype:512 a owl:Class ;
     rdfs:label "Sommerweizen (ohne Futterweizen der Sortenliste swiss granum)"@de,
         "Blé de printemps (sans blé fourrager de la liste swiss granum)"@fr,
         "Frumento primaverile (escl. il frumento da foraggio di swiss granum)"@it ;
-    rdfs:subClassOf cultivationtype:999 .
+    rdfs:subClassOf cultivationtype:999 ;
+    owl:disjointWith cultivationtype:507 .
 
 cultivationtype:513 a owl:Class ;
     rdfs:label "Winterweizen (ohne Futterweizen der Sortenliste swiss granum)"@de,
         "Blé d'automne (sans blé fourrager de la liste swiss granum)"@fr,
         "Frumento autunnale (escl. il frumento da foraggio di swiss granum)"@it ;
-    rdfs:subClassOf cultivationtype:1007 .
+    rdfs:subClassOf cultivationtype:1007 ;
+    owl:disjointWith cultivationtype:507 .
 
 cultivationtype:514 a owl:Class ;
     rdfs:label "Roggen"@de,

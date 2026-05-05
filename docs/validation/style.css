@@ -1,0 +1,245 @@
+:root {
+    --bg-color: #f9fafb;
+    --card-bg: #ffffff;
+    --text-main: #111827;
+    --text-muted: #6b7280;
+    --node-border: #e5e7eb;
+    --node-shadow: rgba(0, 0, 0, 0.05);
+    --link-color: #3b82f6;
+    --link-hover: #2563eb;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-main);
+    margin: 0;
+    padding: 40px 20px;
+    line-height: 1.5;
+}
+
+.container {
+    max-width: 96%;
+    margin: 0 auto;
+}
+
+h1 {
+    font-weight: 300;
+    letter-spacing: -0.02em;
+    margin-bottom: 8px;
+}
+
+p.subtitle {
+    color: var(--text-muted);
+    margin-bottom: 32px;
+}
+
+.card {
+    background-color: var(--card-bg);
+    border-radius: 12px;
+    padding: 24px;
+    margin-bottom: 64px;
+    box-shadow: 0 1px 3px var(--node-shadow), 0 1px 2px var(--node-shadow);
+    border: 1px solid var(--node-border);
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    gap: 32px;
+    align-items: flex-start;
+}
+
+@media (max-width: 900px) {
+    .card {
+        flex-direction: column;
+    }
+}
+
+/* GitHub Buttons wieder oben rechts fixiert */
+.action-buttons {
+    position: absolute;
+    top: 24px;
+    right: 24px;
+    display: flex;
+    gap: 12px;
+}
+
+.action-btn {
+    color: var(--text-muted);
+    text-decoration: none;
+    font-size: 1.25em;
+    transition: color 0.2s ease;
+    display: flex;
+    align-items: center;
+}
+
+.action-btn:hover {
+    color: var(--text-main);
+}
+
+.text-panel {
+    flex: 1;
+    min-width: 300px;
+    display: flex;
+    flex-direction: column;
+}
+
+.main-title-row {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 12px;
+}
+
+.crop-name {
+    font-size: 1.5em;
+    font-weight: 600;
+    margin: 0;
+    color: var(--text-main);
+}
+
+.crop-iri {
+    font-size: 0.85em;
+    font-family: monospace;
+    color: var(--link-color);
+    text-decoration: none;
+    word-break: break-all;
+    margin-bottom: 4px;
+}
+
+.crop-iri:hover {
+    text-decoration: underline;
+    color: var(--link-hover);
+}
+
+.alt-names {
+    font-size: 1em;
+    color: var(--text-muted);
+    font-style: italic;
+    margin-bottom: 12px;
+}
+
+.description {
+    margin-top: 12px;
+    font-size: 0.95em;
+    color: #4b5563;
+    line-height: 1.6;
+    margin-bottom: 24px;
+}
+
+.attributes-container {
+    margin-top: 16px; 
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.attributes {
+    background-color: var(--bg-color);
+    border: 1px solid var(--node-border);
+    border-radius: 8px;
+    padding: 12px 16px;
+    font-size: 0.85em;
+}
+
+.attr-header {
+    font-weight: 600;
+    color: var(--text-main);
+    font-size: 1.05em;
+    margin-bottom: 10px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid var(--node-border);
+}
+
+.attr-row {
+    display: flex;
+    margin-bottom: 6px;
+    padding-bottom: 6px;
+    border-bottom: 1px dashed var(--node-border);
+}
+
+.attr-row:last-child {
+    margin-bottom: 0;
+    padding-bottom: 0;
+    border-bottom: none;
+}
+
+.attr-key {
+    font-weight: 600;
+    color: var(--text-muted);
+    width: 140px;
+    flex-shrink: 0;
+}
+
+.attr-val {
+    color: var(--text-main);
+}
+
+.graph-panel {
+    flex: 2;
+    min-width: 0; 
+    padding: 16px;
+    overflow-x: auto;
+    display: block; 
+    text-align: center;
+}
+
+.mermaid {
+    display: inline-block; 
+}
+
+.mermaid svg {
+    max-width: none !important; 
+}
+
+.loading {
+    text-align: center;
+    padding: 40px;
+    color: var(--text-muted);
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: .5; }
+}
+
+.error {
+    color: #ef4444;
+    background: #fee2e2;
+    padding: 16px;
+    border-radius: 8px;
+    border: 1px solid #fca5a5;
+}
+
+.owl-info {
+    background-color: #f8fafc;
+    border-left: 4px solid #94a3b8;
+    padding: 12px 16px;
+    border-radius: 6px;
+    font-size: 0.9em;
+    margin-bottom: 12px;
+    color: #475569;
+    line-height: 1.5;
+}
+
+.owl-info strong {
+    display: block;
+    margin-bottom: 4px;
+    color: #1e293b;
+    font-size: 1.05em;
+}
+
+.owl-info.union {
+    border-color: #3b82f6;
+    background-color: #eff6ff;
+}
+
+.owl-info.intersection {
+    border-color: #8b5cf6;
+    background-color: #f5f3ff;
+}
+
+.owl-info.disjoint {
+    border-color: #ef4444;
+    background-color: #fef2f2;
+}
