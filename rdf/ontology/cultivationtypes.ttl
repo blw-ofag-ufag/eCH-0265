@@ -147,7 +147,7 @@ cultivationtype:4 a owl:Class ;
         "Vines"@en ;
     schema:alternateName "Weinbau"@de ;
     rdfs:subClassOf :Cultivation ;
-    owl:unionOf ( cultivationtype:701 cultivationtype:735 ) .
+    owl:unionOf ( cultivationtype:701 cultivationtype:717 cultivationtype:735 ) .
 
 cultivationtype:5 a owl:Class ;
     schema:name "Obstanlagen"@de,
