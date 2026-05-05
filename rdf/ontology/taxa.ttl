@@ -288,6 +288,18 @@ taxon:AVESW a :CropTaxon ;
     :taxonName "oat (winter)" ;
     :taxonRank :Kingdom .
 
+taxon:BRSOH a :CropTaxon ;
+    schema:name "Brassica oleracea var. capitata f. alba"@lt ;
+    schema:alternateName "hvidkål"@da,
+        "witte kool"@nl,
+        "Weißkohl"@de,
+        "Weisskohl"@de,
+        "Weißkraut"@de,
+        "white cabbage"@en ;
+    :eppo <https://gd.eppo.int/taxon/BRSOH> ;
+    :taxonName "Brassica oleracea var. capitata f. alba" ;
+    :taxonRank :Species .
+
 taxon:CNISA a :CropTaxon ;
     schema:alternateName "cáñamo"@an,
         "коноп"@bg,
@@ -496,8 +508,6 @@ taxon:HORVX a :CropTaxon ;
     :parentTaxon taxon:1HORG ;
     :taxonName "Hordeum vulgare" ;
     :taxonRank :Species .
-
-taxon:NA a :CropTaxon .
 
 taxon:ORYSA a :CropTaxon ;
     schema:alternateName "посевен ориз"@bg,
