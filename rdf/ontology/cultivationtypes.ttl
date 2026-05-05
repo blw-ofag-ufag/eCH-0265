@@ -1605,7 +1605,7 @@ cultivationtype:305 a owl:Class ;
         "betteraves à sucre et fourragère"@fr,
         "Barbabietole da foraggio e da zucchero"@it ;
     rdfs:subClassOf cultivationtype:17 ;
-    owl:intersectionOf ( cultivationtype:522 cultivationtype:523 ) .
+    owl:unionOf ( cultivationtype:522 cultivationtype:523 ) .
 
 cultivationtype:306 a owl:Class ;
     schema:name "Wurzelpetersilie"@de,
@@ -4763,3 +4763,27 @@ cultivationtype:1291 a owl:Class ;
 cultivationtype:1292 a owl:Class ;
     schema:name "Hecken und Feldgehölz mit Krautsaum"@de ;
     rdfs:subClassOf cultivationtype:852 .
+
+
+[] a owl:AllDisjointClasses ;
+    owl:members (
+        cultivationtype:501 cultivationtype:502 cultivationtype:504 cultivationtype:505 cultivationtype:506 cultivationtype:507 cultivationtype:508 cultivationtype:510
+        cultivationtype:511 cultivationtype:512 cultivationtype:513 cultivationtype:514 cultivationtype:515 cultivationtype:516 cultivationtype:519 cultivationtype:520
+        cultivationtype:521 cultivationtype:522 cultivationtype:523 cultivationtype:524 cultivationtype:525 cultivationtype:526 cultivationtype:527 cultivationtype:528
+        cultivationtype:529 cultivationtype:531 cultivationtype:534 cultivationtype:536 cultivationtype:537 cultivationtype:538 cultivationtype:539 cultivationtype:540
+        cultivationtype:541 cultivationtype:543 cultivationtype:544 cultivationtype:545 cultivationtype:546 cultivationtype:547 cultivationtype:548 cultivationtype:551
+        cultivationtype:552 cultivationtype:553 cultivationtype:554 cultivationtype:556 cultivationtype:557 cultivationtype:559 cultivationtype:566 cultivationtype:567
+        cultivationtype:568 cultivationtype:569 cultivationtype:570 cultivationtype:572 cultivationtype:573 cultivationtype:574 cultivationtype:575 cultivationtype:576
+        cultivationtype:577 cultivationtype:578 cultivationtype:579 cultivationtype:580 cultivationtype:581 cultivationtype:590 cultivationtype:591 cultivationtype:592
+        cultivationtype:594 cultivationtype:595 cultivationtype:597 cultivationtype:598 cultivationtype:601 cultivationtype:602 cultivationtype:611 cultivationtype:612
+        cultivationtype:613 cultivationtype:616 cultivationtype:617 cultivationtype:618 cultivationtype:621 cultivationtype:622 cultivationtype:623 cultivationtype:625
+        cultivationtype:631 cultivationtype:632 cultivationtype:635 cultivationtype:693 cultivationtype:694 cultivationtype:697 cultivationtype:698 cultivationtype:701
+        cultivationtype:702 cultivationtype:703 cultivationtype:704 cultivationtype:705 cultivationtype:706 cultivationtype:707 cultivationtype:708 cultivationtype:709
+        cultivationtype:710 cultivationtype:711 cultivationtype:712 cultivationtype:713 cultivationtype:714 cultivationtype:717 cultivationtype:718 cultivationtype:719
+        cultivationtype:720 cultivationtype:721 cultivationtype:722 cultivationtype:723 cultivationtype:724 cultivationtype:725 cultivationtype:731 cultivationtype:735
+        cultivationtype:797 cultivationtype:798 cultivationtype:801 cultivationtype:802 cultivationtype:803 cultivationtype:804 cultivationtype:807 cultivationtype:808
+        cultivationtype:810 cultivationtype:811 cultivationtype:812 cultivationtype:813 cultivationtype:814 cultivationtype:847 cultivationtype:848 cultivationtype:849
+        cultivationtype:851 cultivationtype:852 cultivationtype:857 cultivationtype:858 cultivationtype:897 cultivationtype:898 cultivationtype:901 cultivationtype:902
+        cultivationtype:903 cultivationtype:904 cultivationtype:905 cultivationtype:906 cultivationtype:907 cultivationtype:908 cultivationtype:909 cultivationtype:911
+        cultivationtype:921 cultivationtype:922 cultivationtype:923 cultivationtype:924 cultivationtype:925 cultivationtype:926 cultivationtype:927 cultivationtype:928
+        cultivationtype:929 cultivationtype:930 cultivationtype:931 cultivationtype:933 cultivationtype:935 cultivationtype:936 cultivationtype:998 ) .
