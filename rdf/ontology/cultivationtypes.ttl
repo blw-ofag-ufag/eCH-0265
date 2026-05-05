@@ -48,6 +48,11 @@ cultivationtype:shape a sh:NodeShape ;
     # global property definitions
     sh:property
     [
+        sh:path schema:image ;
+        sh:nodeKind sh:IRI ;
+    ] ,
+
+    [
         sh:path schema:name ;
         sh:minCount 1 ;
         sh:nodeKind sh:Literal ;
