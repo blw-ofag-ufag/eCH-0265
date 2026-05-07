@@ -82,3 +82,6 @@ results/
 # Test cache
 **/__pycache__
 test.*
+
+# Exclude input data files
+data/
