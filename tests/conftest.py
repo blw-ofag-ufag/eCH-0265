@@ -21,15 +21,17 @@ def _load_graph(*filepaths):
 # ==========================================
 
 @pytest.fixture(scope="session")
-def ontology_graph():
-    """Returns a graph containing core.ttl and cultivationtypes.ttl"""
-    return _load_graph(
-        BASE_DIR / "rdf" / "ontology" / "core.ttl",
-        BASE_DIR / "rdf" / "ontology" / "cultivationtypes.ttl"
-    )
+def core_graph():
+    """Returns the core structural ontology graph"""
+    return _load_graph(BASE_DIR / "rdf" / "ontology" / "core.ttl")
 
 @pytest.fixture(scope="session")
-def shacl_graph():
+def cultivation_graph():
+    """Returns ONLY the crop taxonomy graph"""
+    return _load_graph(BASE_DIR / "rdf" / "ontology" / "cultivationtypes.ttl")
+
+@pytest.fixture(scope="session")
+def datamodel_graph():
     """Returns the SHACL shapes graph"""
     return _load_graph(BASE_DIR / "rdf" / "shape" / "data-model.ttl")
 
@@ -39,7 +41,7 @@ def agis_graph():
     return _load_graph(BASE_DIR / "rdf" / "data" / "agis.ttl")
 
 @pytest.fixture(scope="session")
-def psm_graph():
+def srppp_graph():
     """Returns the PSM (srppp) data graph"""
     return _load_graph(BASE_DIR / "rdf" / "data" / "srppp.ttl")
 
