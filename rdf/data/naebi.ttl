@@ -1,4 +1,5 @@
 @prefix : <https://agriculture.ld.admin.ch/crops/> .
+@prefix shape: <https://agriculture.ld.admin.ch/crops/shape/> .
 @prefix blw: <https://register.ld.admin.ch/opendataswiss/org/bundesamt-fur-landwirtschaft-blw> .
 @prefix cube: <https://cube.link/> .
 @prefix cultivationtype: <https://agriculture.ld.admin.ch/crops/cultivationtype/> .
@@ -45,7 +46,7 @@ naebi: a void:Dataset,
         ] ;
     dcat:theme theme:administration,
         theme:agriculture ;
-    cube:observationConstraint naebi:ObservationConstraint ;
+    cube:observationConstraint shape:NutrientBalanceCrop ;
     cube:observationSet naebi:ObservationSet .
 
 

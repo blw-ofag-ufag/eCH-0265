@@ -1,5 +1,6 @@
 @prefix : <https://agriculture.ld.admin.ch/crops/> .
 @prefix agis: <https://agriculture.ld.admin.ch/crops/agis/1/> .
+@prefix shape: <https://agriculture.ld.admin.ch/crops/shape/> .
 @prefix cultivationtype: <https://agriculture.ld.admin.ch/crops/cultivationtype/> .
 
 @prefix cube: <https://cube.link/> .
@@ -49,7 +50,7 @@ agis: a void:Dataset,
         ] ;
     dcat:theme theme:administration,
         theme:agriculture ;
-    cube:observationConstraint agis:ObservationConstraint ;
+    cube:observationConstraint shape:DirectPaymentCrop ;
     cube:observationSet agis:ObservationSet .
 
 

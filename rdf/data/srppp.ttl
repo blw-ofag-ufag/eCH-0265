@@ -1,5 +1,6 @@
 @prefix : <https://agriculture.ld.admin.ch/crops/> .
 @prefix psm: <https://agriculture.ld.admin.ch/crops/psm/1/> .
+@prefix shape: <https://agriculture.ld.admin.ch/crops/shape/> .
 @prefix cultivationtype: <https://agriculture.ld.admin.ch/crops/cultivationtype/> .
 
 @prefix cube: <https://cube.link/> .
@@ -49,7 +50,7 @@ psm: a void:Dataset,
         ] ;
     dcat:theme theme:administration,
         theme:agriculture ;
-    cube:observationConstraint psm:ObservationConstraint ;
+    cube:observationConstraint shape:PlantProtectionCrop ;
     cube:observationSet psm:ObservationSet .
 
 
