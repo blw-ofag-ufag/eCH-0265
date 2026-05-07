@@ -57,7 +57,7 @@ psm: a void:Dataset,
 # OBSERVATION SET
 # ==============================================================================
 
-psm:ObservationSet cube:observation psm:1,
+psm:ObservationSet :PlantProtectionCrop  psm:1,
         psm:10,
         psm:100,
         psm:101,
@@ -398,7 +398,7 @@ psm:ObservationSet cube:observation psm:1,
 # OBSERVATIONS
 # ==============================================================================
 
-psm:1 a cube:Observation ;
+psm:1 a :PlantProtectionCrop  ;
     schema:identifier "00D94F57-BA6F-4BA0-8F68-26D4C497539A"^^xsd:ID ;
     schema:isPartOf psm:329 ;
     schema:name "Ein- und zweijährige Zierpflanzen"@de,
@@ -407,7 +407,7 @@ psm:1 a cube:Observation ;
     schema:version 0 ;
     :cultivationType cultivationtype:405 .
 
-psm:10 a cube:Observation ;
+psm:10 a :PlantProtectionCrop  ;
     schema:identifier "9C6CEE37-8105-4E48-9CA4-11BA3AB556FB"^^xsd:ID ;
     schema:isPartOf psm:145,
         psm:310 ;
@@ -418,7 +418,7 @@ psm:10 a cube:Observation ;
     schema:version 0 ;
     :cultivationType cultivationtype:406 .
 
-psm:100 a cube:Observation ;
+psm:100 a :PlantProtectionCrop  ;
     schema:identifier "99379C08-8682-4628-BD67-6E566F5130FA"^^xsd:ID ;
     schema:isPartOf psm:27,
         psm:316 ;
@@ -428,7 +428,7 @@ psm:100 a cube:Observation ;
     schema:version 0 ;
     :cultivationType cultivationtype:520 .
 
-psm:101 a cube:Observation ;
+psm:101 a :PlantProtectionCrop  ;
     schema:identifier "9A9A2586-34FF-4256-8FA4-BA9F2FA38CAE"^^xsd:ID ;
     schema:isPartOf psm:108,
         psm:145 ;
@@ -438,7 +438,7 @@ psm:101 a cube:Observation ;
     schema:version 0 ;
     :cultivationType cultivationtype:101 .
 
-psm:102 a cube:Observation ;
+psm:102 a :PlantProtectionCrop  ;
     schema:identifier "9F6AE17C-0BE1-457A-B780-D408BCD333BF"^^xsd:ID ;
     schema:isPartOf psm:316 ;
     schema:name "Sojabohne"@de,
@@ -447,7 +447,7 @@ psm:102 a cube:Observation ;
     schema:version 0 ;
     :cultivationType cultivationtype:528 .
 
-psm:103 a cube:Observation ;
+psm:103 a :PlantProtectionCrop  ;
     schema:identifier "9CA61204-7EA7-4F2F-BAD3-BD02EDD6A829"^^xsd:ID ;
     schema:isPartOf psm:105 ;
     schema:name "Blattsalate (Asteraceae)"@de,
@@ -456,7 +456,7 @@ psm:103 a cube:Observation ;
     schema:version 0 ;
     :cultivationType cultivationtype:103 .
 
-psm:104 a cube:Observation ;
+psm:104 a :PlantProtectionCrop  ;
     schema:identifier "9B8F475B-C6FA-4642-9CD8-89A98A293D50"^^xsd:ID ;
     schema:name "Mohn"@de,
         "pavot"@fr,
@@ -464,7 +464,7 @@ psm:104 a cube:Observation ;
     schema:version 0 ;
     :cultivationType cultivationtype:566 .
 
-psm:105 a cube:Observation ;
+psm:105 a :PlantProtectionCrop  ;
     schema:identifier "33686F38-1E1A-4698-81E4-C40EE4494EF3"^^xsd:ID ;
     schema:isPartOf psm:320 ;
     schema:name "Lactuca-Salate"@de,
@@ -473,7 +473,7 @@ psm:105 a cube:Observation ;
     schema:version 0 ;
     :cultivationType cultivationtype:105 .
 
-psm:106 a cube:Observation ;
+psm:106 a :PlantProtectionCrop  ;
     schema:identifier "3C2F424F-DFA0-4A59-A3DF-6E33A6B0B97E"^^xsd:ID ;
     schema:isPartOf psm:67 ;
     schema:name "Basilikum"@de,
@@ -482,7 +482,7 @@ psm:106 a cube:Observation ;
     schema:version 0 ;
     :cultivationType cultivationtype:106 .
 
-psm:107 a cube:Observation ;
+psm:107 a :PlantProtectionCrop  ;
     schema:identifier "2AB457D1-DB9D-4545-92FF-04A6BD2CEC08"^^xsd:ID ;
     schema:isPartOf psm:327 ;
     schema:name "Karotten"@de,
@@ -491,7 +491,7 @@ psm:107 a cube:Observation ;
     schema:version 0 ;
     :cultivationType cultivationtype:107 .
 
-psm:108 a cube:Observation ;
+psm:108 a :PlantProtectionCrop  ;
     schema:identifier "2A05DA01-5722-46A2-BCCF-3B75C6D17BB6"^^xsd:ID ;
     schema:isPartOf psm:329 ;
     schema:name "Topf- und Kontainerpflanzen"@de,
@@ -500,7 +500,7 @@ psm:108 a cube:Observation ;
     schema:version 0 ;
     :cultivationType cultivationtype:108 .
 
-psm:109 a cube:Observation ;
+psm:109 a :PlantProtectionCrop  ;
     schema:identifier "2C8A4414-AD7F-4708-9C58-BF1969131693"^^xsd:ID ;
     schema:isPartOf psm:67 ;
     schema:name "Kerbel"@de,
@@ -509,7 +509,7 @@ psm:109 a cube:Observation ;
     schema:version 0 ;
     :cultivationType cultivationtype:109 .
 
-psm:11 a cube:Observation ;
+psm:11 a :PlantProtectionCrop  ;
     schema:identifier "9BA6BDE9-AD45-4F91-A190-708D39AD5B63"^^xsd:ID ;
     schema:isPartOf psm:316 ;
     schema:name "Lein"@de,
@@ -518,7 +518,7 @@ psm:11 a cube:Observation ;
     schema:version 0 ;
     :cultivationType cultivationtype:534.
 
-psm:110 a cube:Observation ;
+psm:110 a :PlantProtectionCrop  ;
     schema:identifier "1BFC9694-C7DC-4D74-84B2-1418AB94A8BA"^^xsd:ID ;
     schema:isPartOf psm:95 ;
     schema:name "Artischocken"@de,
@@ -527,7 +527,7 @@ psm:110 a cube:Observation ;
     schema:version 0 ;
     :cultivationType cultivationtype:110 .
 
-psm:111 a cube:Observation ;
+psm:111 a :PlantProtectionCrop  ;
     schema:identifier "1E129025-DFD8-42D1-8A86-D90485B282A1"^^xsd:ID ;
     schema:isPartOf psm:324 ;
     schema:name "Blumenkohl"@de,
@@ -536,7 +536,7 @@ psm:111 a cube:Observation ;
     schema:version 0 ;
     :cultivationType cultivationtype:111 .
 
-psm:112 a cube:Observation ;
+psm:112 a :PlantProtectionCrop  ;
     schema:identifier "1D9F568C-5170-43A1-86B9-B25808DD6A43"^^xsd:ID ;
     schema:isPartOf psm:85 ;
     schema:name "Cherrytomaten"@de,
@@ -545,7 +545,7 @@ psm:112 a cube:Observation ;
     schema:version 0 ;
     :cultivationType cultivationtype:112 .
 
-psm:113 a cube:Observation ;
+psm:113 a :PlantProtectionCrop  ;
     schema:identifier "24A364B9-6BD7-42A6-A9EC-AB9E94E010FF"^^xsd:ID ;
     schema:isPartOf psm:50 ;
     schema:name "Zwetschge / Pflaume"@de,
@@ -554,7 +554,7 @@ psm:113 a cube:Observation ;
     schema:version 0 ;
     :cultivationType cultivationtype:113 .
 
-psm:114 a cube:Observation ;
+psm:114 a :PlantProtectionCrop  ;
     schema:identifier "24EA0CC6-D1D5-4BB4-981C-A836E3D7125D"^^xsd:ID ;
     schema:name "Grünfläche"@de,
         "surfaces herbagères"@fr,
@@ -562,7 +562,7 @@ psm:114 a cube:Observation ;
     schema:version 0 ;
     :cultivationType cultivationtype:114 .
 
-psm:115 a cube:Observation ;
+psm:115 a :PlantProtectionCrop  ;
     schema:identifier "1F004DAA-89AD-4A9D-A172-95D24B8A45FA"^^xsd:ID ;
     schema:isPartOf psm:247 ;
     schema:name "Brassica napus-Rüben"@de,
@@ -571,7 +571,7 @@ psm:115 a cube:Observation ;
     schema:version 0 ;
     :cultivationType cultivationtype:115 .
 
-psm:116 a cube:Observation ;
+psm:116 a :PlantProtectionCrop  ;
     schema:identifier "1F03DDC0-19CF-48F1-BAB8-61CA4CEF24CF"^^xsd:ID ;
     schema:isPartOf psm:316 ;
     schema:name "Wiesen und Weiden"@de,
@@ -580,7 +580,7 @@ psm:116 a cube:Observation ;
     schema:version 0 ;
     :cultivationType cultivationtype:116 .
 
-psm:117 a cube:Observation ;
+psm:117 a :PlantProtectionCrop  ;
     schema:identifier "1F0B6451-EC2C-4647-A53A-23B0EAE626B1"^^xsd:ID ;
     schema:isPartOf psm:263 ;
     schema:name "Stachys"@de,
@@ -589,7 +589,7 @@ psm:117 a cube:Observation ;
     schema:version 0 ;
     :cultivationType cultivationtype:117 .
 
-psm:118 a cube:Observation ;
+psm:118 a :PlantProtectionCrop  ;
     schema:identifier "0A5F3E91-96B9-4C6D-B99C-2E6E4835F6D5"^^xsd:ID ;
     schema:isPartOf psm:17 ;
     schema:name "Nadelgehölze (Koniferen)"@de,
@@ -598,7 +598,7 @@ psm:118 a cube:Observation ;
     schema:version 0 ;
     :cultivationType cultivationtype:118 .
 
-psm:119 a cube:Observation ;
+psm:119 a :PlantProtectionCrop  ;
     schema:identifier "09269926-BA07-42DC-BE9D-5B34658BDBF0"^^xsd:ID ;
     schema:isPartOf psm:235 ;
     schema:name "Wassermelonen"@de,
@@ -607,7 +607,7 @@ psm:119 a cube:Observation ;
     schema:version 0 ;
     :cultivationType cultivationtype:119 .
 
-psm:12 a cube:Observation ;
+psm:12 a :PlantProtectionCrop  ;
     schema:identifier "9BB00FC5-181F-4F3F-94C8-E4141143F44A"^^xsd:ID ;
     schema:isPartOf psm:50 ;
     schema:name "Aprikose"@de,
@@ -616,7 +616,7 @@ psm:12 a cube:Observation ;
     schema:version 0 ;
     :cultivationType cultivationtype:472 .
 
-psm:120 a cube:Observation ;
+psm:120 a :PlantProtectionCrop  ;
     schema:identifier "0A3519B1-A42F-43EE-AF82-6DCF17EA8DA6"^^xsd:ID ;
     schema:isPartOf psm:62 ;
     schema:name "Knöterichgewächse (Polygonaceae)"@de,
@@ -625,7 +625,7 @@ psm:120 a cube:Observation ;
     schema:version 0 ;
     :cultivationType cultivationtype:120 .
 
-psm:121 a cube:Observation ;
+psm:121 a :PlantProtectionCrop  ;
     schema:identifier "095E9650-A880-4BD2-A1BB-39297582BCE6"^^xsd:ID ;
     schema:isPartOf psm:316 ;
     schema:name "Sonnenblume"@de,
@@ -634,7 +634,7 @@ psm:121 a cube:Observation ;
     schema:version 0 ;
     :cultivationType cultivationtype:493 .
 
-psm:122 a cube:Observation ;
+psm:122 a :PlantProtectionCrop  ;
     schema:identifier "ED17FD35-4C96-4D28-902B-ACEA3F4950D6"^^xsd:ID ;
     schema:isPartOf psm:118,
         psm:72 ;
@@ -645,7 +645,7 @@ psm:122 a cube:Observation ;
     schema:version 0 ;
     :cultivationType cultivationtype:122 .
 
-psm:123 a cube:Observation ;
+psm:123 a :PlantProtectionCrop  ;
     schema:identifier "EC349B29-6A2B-4E43-990F-C553D278DC0E"^^xsd:ID ;
     schema:name "Hagebutten"@de,
         "rose hip"@en,
@@ -654,7 +654,7 @@ psm:123 a cube:Observation ;
     schema:version 0 ;
     :cultivationType cultivationtype:123 .
 
-psm:124 a cube:Observation ;
+psm:124 a :PlantProtectionCrop  ;
     schema:identifier "F7BB2F1C-EDE5-4C95-931E-0B2C973F5A29"^^xsd:ID ;
     schema:isPartOf psm:3 ;
     schema:name "Bohnen mit Hülsen"@de,
@@ -663,7 +663,7 @@ psm:124 a cube:Observation ;
     schema:version 0 ;
     :cultivationType cultivationtype:124 .
 
-psm:125 a cube:Observation ;
+psm:125 a :PlantProtectionCrop  ;
     schema:identifier "FD180555-9DEF-42BA-86E0-EBD31AB8FABB"^^xsd:ID ;
     schema:isPartOf psm:309 ;
     schema:name "Quitte"@de,
@@ -672,7 +672,7 @@ psm:125 a cube:Observation ;
     schema:version 0 ;
     :cultivationType cultivationtype:125 .
 
-psm:126 a cube:Observation ;
+psm:126 a :PlantProtectionCrop  ;
     schema:identifier "FD18F42C-C390-4701-B07B-B8108B33320B"^^xsd:ID ;
     schema:isPartOf psm:309 ;
     schema:name "Apfel"@de,
@@ -681,7 +681,7 @@ psm:126 a cube:Observation ;
     schema:version 0 ;
     :cultivationType cultivationtype:702 .
 
-psm:127 a cube:Observation ;
+psm:127 a :PlantProtectionCrop  ;
     schema:identifier "F730D531-B0C8-4A20-AC4B-4F86445E2491"^^xsd:ID ;
     schema:isPartOf psm:210,
         psm:239 ;
@@ -691,7 +691,7 @@ psm:127 a cube:Observation ;
     schema:version 0 ;
     :cultivationType cultivationtype:500 .
 
-psm:128 a cube:Observation ;
+psm:128 a :PlantProtectionCrop  ;
     schema:identifier "F8A8C1D8-E2C7-4230-8435-4D5AEE69813E"^^xsd:ID ;
     schema:isPartOf psm:73 ;
     schema:name "Hafer"@de,
@@ -700,7 +700,7 @@ psm:128 a cube:Observation ;
     schema:version 0 ;
     :cultivationType cultivationtype:504 .
 
-psm:129 a cube:Observation ;
+psm:129 a :PlantProtectionCrop  ;
     schema:identifier "EE7EE009-EBD4-471D-AE85-1A98130F6119"^^xsd:ID ;
     schema:isPartOf psm:327 ;
     schema:name "Pastinake"@de,
@@ -709,7 +709,7 @@ psm:129 a cube:Observation ;
     schema:version 0 ;
     :cultivationType cultivationtype:129 .
 
-psm:13 a cube:Observation ;
+psm:13 a :PlantProtectionCrop  ;
     schema:identifier "9DE574C1-EE11-42BC-9C05-930BCAE13A44"^^xsd:ID ;
     schema:name "Beerenbau allg."@de,
         "culture des baies en général"@fr,
@@ -717,7 +717,7 @@ psm:13 a cube:Observation ;
     schema:version 0 ;
     :cultivationType cultivationtype:471 .
 
-psm:130 a cube:Observation ;
+psm:130 a :PlantProtectionCrop  ;
     schema:identifier "E5B9C6F0-5C57-4A12-8ED9-D65B669B8243"^^xsd:ID ;
     schema:isPartOf psm:95 ;
     schema:name "Chicorée"@de,
@@ -726,7 +726,7 @@ psm:130 a cube:Observation ;
     schema:version 0 ;
     :cultivationType cultivationtype:130 .
 
-psm:131 a cube:Observation ;
+psm:131 a :PlantProtectionCrop  ;
     schema:identifier "BE3C6915-B28E-4CC8-980E-7F243F14F519"^^xsd:ID ;
     schema:isPartOf psm:160 ;
     schema:name "Ribes Arten"@de,
@@ -735,7 +735,7 @@ psm:131 a cube:Observation ;
     schema:version 0 ;
     :cultivationType cultivationtype:131 .
 
-psm:132 a cube:Observation ;
+psm:132 a :PlantProtectionCrop  ;
     schema:identifier "C264982A-CA81-4311-9E38-67D2D956BC78"^^xsd:ID ;
     schema:isPartOf psm:48 ;
     schema:name "Cima di Rapa"@de,
@@ -744,7 +744,7 @@ psm:132 a cube:Observation ;
     schema:version 0 ;
     :cultivationType cultivationtype:132 .
 
-psm:133 a cube:Observation ;
+psm:133 a :PlantProtectionCrop  ;
     schema:identifier "B535B6DD-517D-4A62-ACC7-2948B15175ED"^^xsd:ID ;
     schema:isPartOf psm:141 ;
     schema:name "Radicchio- und Cicorino-Typen"@de,
@@ -753,7 +753,7 @@ psm:133 a cube:Observation ;
     schema:version 0 ;
     :cultivationType cultivationtype:133 .
 
-psm:134 a cube:Observation ;
+psm:134 a :PlantProtectionCrop  ;
     schema:identifier "B4CA8F81-4A66-4880-98AB-C7760AECCDA6"^^xsd:ID ;
     schema:name "Gemüsebau allg."@de,
         "culture maraîchère en général"@fr,
@@ -761,7 +761,7 @@ psm:134 a cube:Observation ;
     schema:version 0 ;
     :cultivationType cultivationtype:22 .
 
-psm:135 a cube:Observation ;
+psm:135 a :PlantProtectionCrop  ;
     schema:identifier "B82B5C60-02CB-4B7A-B3D3-A4CA34A809C3"^^xsd:ID ;
     schema:isPartOf psm:145 ;
     schema:name "Liliengewächse (Zierpflanzen)"@de,
@@ -770,7 +770,7 @@ psm:135 a cube:Observation ;
     schema:version 0 ;
     :cultivationType cultivationtype:135 .
 
-psm:136 a cube:Observation ;
+psm:136 a :PlantProtectionCrop  ;
     schema:identifier "AEC07D17-6D8B-4180-A368-056A187DE2F8"^^xsd:ID ;
     schema:isPartOf psm:312 ;
     schema:name "Dahlien"@de,
@@ -779,7 +779,7 @@ psm:136 a cube:Observation ;
     schema:version 0 ;
     :cultivationType cultivationtype:136 .
 
-psm:137 a cube:Observation ;
+psm:137 a :PlantProtectionCrop  ;
     schema:identifier "AE97719E-9D0F-425C-BCD7-0F5D84092113"^^xsd:ID ;
     schema:isPartOf psm:35 ;
     schema:name "Johanniskraut"@de,
@@ -789,7 +789,7 @@ psm:137 a cube:Observation ;
     schema:version 0 ;
     :cultivationType cultivationtype:137 .
 
-psm:138 a cube:Observation ;
+psm:138 a :PlantProtectionCrop  ;
     schema:identifier "AED83C4B-0546-4C91-B370-4AB5B425942F"^^xsd:ID ;
     schema:isPartOf psm:32 ;
     schema:name "Nostranogurken"@de,
@@ -798,7 +798,7 @@ psm:138 a cube:Observation ;
     schema:version 0 ;
     :cultivationType cultivationtype:138 .
 
-psm:139 a cube:Observation ;
+psm:139 a :PlantProtectionCrop  ;
     schema:identifier "B5FFA375-D9A5-4FD1-9DCF-76F230FEA725"^^xsd:ID ;
     schema:isPartOf psm:48 ;
     schema:name "Asia-Salate (Brassicaceae)"@de,
@@ -807,7 +807,7 @@ psm:139 a cube:Observation ;
     schema:version 0 ;
     :cultivationType cultivationtype:139 .
 
-psm:14 a cube:Observation ;
+psm:14 a :PlantProtectionCrop  ;
     schema:identifier "A519A894-B754-44D1-A032-155F57B0CBFE"^^xsd:ID ;
     schema:isPartOf psm:67 ;
     schema:name "Liebstöckel"@de,
@@ -816,7 +816,7 @@ psm:14 a cube:Observation ;
     schema:version 0 ;
     :cultivationType cultivationtype:479 .
 
-psm:140 a cube:Observation ;
+psm:140 a :PlantProtectionCrop  ;
     schema:identifier "B92BA12C-EA9D-4EA8-ADEE-A4547872DD58"^^xsd:ID ;
     schema:name "Blaue Heckenkirsche"@de,
         "camérisier bleu"@fr,
@@ -824,7 +824,7 @@ psm:140 a cube:Observation ;
     schema:version 0 ;
     :cultivationType cultivationtype:140 .
 
-psm:141 a cube:Observation ;
+psm:141 a :PlantProtectionCrop  ;
     schema:identifier "8DB1A579-6BAC-4DCB-8026-E79B65D3BD3A"^^xsd:ID ;
     schema:isPartOf psm:320 ;
     schema:name "Endivien und Blattzichorien"@de,
@@ -833,7 +833,7 @@ psm:141 a cube:Observation ;
     schema:version 0 ;
     :cultivationType cultivationtype:141 .
 
-psm:142 a cube:Observation ;
+psm:142 a :PlantProtectionCrop  ;
     schema:identifier "94589F70-1F3A-4AEF-A26A-2267EB5BDA4B"^^xsd:ID ;
     schema:isPartOf psm:141 ;
     schema:name "Zuckerhut"@de,
@@ -842,7 +842,7 @@ psm:142 a cube:Observation ;
     schema:version 0 ;
     :cultivationType cultivationtype:142 .
 
-psm:143 a cube:Observation ;
+psm:143 a :PlantProtectionCrop  ;
     schema:identifier "77267F83-907F-4537-98A8-7B9C1E4714F0"^^xsd:ID ;
     schema:isPartOf psm:75 ;
     schema:name "Gemüseportulak"@de,
@@ -851,7 +851,7 @@ psm:143 a cube:Observation ;
     schema:version 0 ;
     :cultivationType cultivationtype:143 .
 
-psm:144 a cube:Observation ;
+psm:144 a :PlantProtectionCrop  ;
     schema:identifier "74C47437-5700-45F5-86E2-D410DACD39B6"^^xsd:ID ;
     schema:isPartOf psm:175 ;
     schema:name "Andenbeere"@de,
@@ -861,7 +861,7 @@ psm:144 a cube:Observation ;
     schema:version 0 ;
     :cultivationType cultivationtype:144 .
 
-psm:145 a cube:Observation ;
+psm:145 a :PlantProtectionCrop  ;
     schema:identifier "75317E57-B194-4B3D-8FF2-3489A39AC177"^^xsd:ID ;
     schema:isPartOf psm:329 ;
     schema:name "Blumenkulturen und Grünpflanzen"@de,
@@ -870,7 +870,7 @@ psm:145 a cube:Observation ;
     schema:version 0 ;
     :cultivationType cultivationtype:145 .
 
-psm:146 a cube:Observation ;
+psm:146 a :PlantProtectionCrop  ;
     schema:identifier "7870FD70-C44A-4788-ABEA-FB673A5FD106"^^xsd:ID ;
     schema:isPartOf psm:239 ;
     schema:name "Hartweizen"@de,
@@ -879,7 +879,7 @@ psm:146 a cube:Observation ;
     schema:version 0 ;
     :cultivationType cultivationtype:510 .
 
-psm:147 a cube:Observation ;
+psm:147 a :PlantProtectionCrop  ;
     schema:identifier "7D23702C-980B-4B90-A86B-70013806D3EA"^^xsd:ID ;
     schema:name "leere Lagerräume"@de,
         "Êntrepôts vides"@fr,
@@ -887,7 +887,7 @@ psm:147 a cube:Observation ;
     schema:version 0 ;
     :cultivationType cube:Undefined .
 
-psm:148 a cube:Observation ;
+psm:148 a :PlantProtectionCrop  ;
     schema:identifier "7D65DFD2-C26E-4CAB-9E2C-66A6C7CBA641"^^xsd:ID ;
     schema:isPartOf psm:197,
         psm:210 ;
@@ -897,7 +897,7 @@ psm:148 a cube:Observation ;
     schema:version 0 ;
     :cultivationType cultivationtype:502 .
 
-psm:149 a cube:Observation ;
+psm:149 a :PlantProtectionCrop  ;
     schema:identifier "7D76F5F6-5810-4556-A7D5-84C91FDE3FF2"^^xsd:ID ;
     schema:isPartOf psm:73 ;
     schema:name "Roggen"@de,
@@ -906,7 +906,7 @@ psm:149 a cube:Observation ;
     schema:version 0 ;
     :cultivationType cultivationtype:514 .
 
-psm:15 a cube:Observation ;
+psm:15 a :PlantProtectionCrop  ;
     schema:identifier "A067CC81-6A5D-4684-BE95-7941A51B9EF2"^^xsd:ID ;
     schema:isPartOf psm:67 ;
     schema:name "Salbei"@de,
@@ -915,7 +915,7 @@ psm:15 a cube:Observation ;
     schema:version 0 ;
     :cultivationType cultivationtype:478 .
 
-psm:150 a cube:Observation ;
+psm:150 a :PlantProtectionCrop  ;
     schema:identifier "77462EAB-3BD3-4EAC-B740-F95597FFAE35"^^xsd:ID ;
     schema:isPartOf psm:186 ;
     schema:name "Nüsse"@de,
@@ -924,7 +924,7 @@ psm:150 a cube:Observation ;
     schema:version 0 ;
     :cultivationType cultivationtype:150 .
 
-psm:151 a cube:Observation ;
+psm:151 a :PlantProtectionCrop  ;
     schema:identifier "7A993953-3C2F-4BC3-98EE-2EE5E83C6E77"^^xsd:ID ;
     schema:isPartOf psm:300 ;
     schema:name "Rande"@de,
@@ -933,7 +933,7 @@ psm:151 a cube:Observation ;
     schema:version 0 ;
     :cultivationType cultivationtype:151 .
 
-psm:152 a cube:Observation ;
+psm:152 a :PlantProtectionCrop  ;
     schema:identifier "7CE53BA0-097D-44FB-82FF-C30DFD3769DD"^^xsd:ID ;
     schema:isPartOf psm:48 ;
     schema:name "Kresse"@de,
@@ -942,7 +942,7 @@ psm:152 a cube:Observation ;
     schema:version 0 ;
     :cultivationType cultivationtype:152 .
 
-psm:153 a cube:Observation ;
+psm:153 a :PlantProtectionCrop  ;
     schema:identifier "79C28385-E183-4661-AAC0-80E82C67089C"^^xsd:ID ;
     schema:isPartOf psm:118,
         psm:72 ;
@@ -952,7 +952,7 @@ psm:153 a cube:Observation ;
     schema:version 0 ;
     :cultivationType cultivationtype:153 .
 
-psm:154 a cube:Observation ;
+psm:154 a :PlantProtectionCrop  ;
     schema:identifier "B9323B4D-249D-4CF3-A5DF-4FDA2E66532F"^^xsd:ID ;
     schema:isPartOf psm:324 ;
     schema:name "Broccoli"@de,
@@ -961,7 +961,7 @@ psm:154 a cube:Observation ;
     schema:version 0 ;
     :cultivationType cultivationtype:154 .
 
-psm:155 a cube:Observation ;
+psm:155 a :PlantProtectionCrop  ;
     schema:identifier "B75AC4CC-6BB7-4A99-808A-9F7BDFCF8E6A"^^xsd:ID ;
     schema:isPartOf psm:108,
         psm:145 ;
@@ -971,7 +971,7 @@ psm:155 a cube:Observation ;
     schema:version 0 ;
     :cultivationType cultivationtype:155 .
 
-psm:156 a cube:Observation ;
+psm:156 a :PlantProtectionCrop  ;
     schema:identifier "516862FD-DCB0-42BF-8E18-ADA820B1DB90"^^xsd:ID ;
     schema:isPartOf psm:177 ;
     schema:name "Jungreben"@de,
@@ -980,7 +980,7 @@ psm:156 a cube:Observation ;
     schema:version 0 ;
     :cultivationType cultivationtype:156 .
 
-psm:157 a cube:Observation ;
+psm:157 a :PlantProtectionCrop  ;
     schema:identifier "4D799EC6-1483-4D65-90EA-8DDB6A4166CA"^^xsd:ID ;
     schema:isPartOf psm:67 ;
     schema:name "Bohnenkraut"@de,
@@ -989,7 +989,7 @@ psm:157 a cube:Observation ;
     schema:version 0 ;
     :cultivationType cultivationtype:157 .
 
-psm:158 a cube:Observation ;
+psm:158 a :PlantProtectionCrop  ;
     schema:identifier "56884AC3-B629-440D-8E82-05075A18697F"^^xsd:ID ;
     schema:isPartOf psm:94 ;
     schema:name "Knollensellerie"@de,
@@ -998,7 +998,7 @@ psm:158 a cube:Observation ;
     schema:version 0 ;
     :cultivationType cultivationtype:158 .
 
-psm:159 a cube:Observation ;
+psm:159 a :PlantProtectionCrop  ;
     schema:identifier "42466A90-AFCD-4DA6-8769-99C4BC5BE217"^^xsd:ID ;
     schema:isPartOf psm:41 ;
     schema:name "Birne"@de,
@@ -1007,7 +1007,7 @@ psm:159 a cube:Observation ;
     schema:version 0 ;
     :cultivationType cultivationtype:703 .
 
-psm:16 a cube:Observation ;
+psm:16 a :PlantProtectionCrop  ;
     schema:identifier "7971013B-801D-4595-8208-782446A6C7E0"^^xsd:ID ;
     schema:isPartOf psm:17 ;
     schema:name "Laubgehölze"@de,
@@ -1016,14 +1016,14 @@ psm:16 a cube:Observation ;
     schema:version 0 ;
     :cultivationType cultivationtype:402 .
 
-psm:160 a cube:Observation ;
+psm:160 a :PlantProtectionCrop  ;
     schema:identifier "3EAC5420-E234-4AA5-8B46-6F9E8542C7AF"^^xsd:ID ;
     schema:name "allg. Beerenbau"@de,
         "domaine app. baies"@fr ;
     schema:version 0 ;
     :cultivationType cultivationtype:471 .
 
-psm:161 a cube:Observation ;
+psm:161 a :PlantProtectionCrop  ;
     schema:identifier "42D50BC4-0019-4B55-9CB5-6C3E86C9D112"^^xsd:ID ;
     schema:isPartOf psm:160 ;
     schema:name "Schwarzer Holunder"@de,
@@ -1033,7 +1033,7 @@ psm:161 a cube:Observation ;
     schema:version 0 ;
     :cultivationType cultivationtype:161 .
 
-psm:162 a cube:Observation ;
+psm:162 a :PlantProtectionCrop  ;
     schema:identifier "43FC7C18-BDA5-4364-B4CA-74EA37B7B8DC"^^xsd:ID ;
     schema:isPartOf psm:296,
         psm:333 ;
@@ -1043,7 +1043,7 @@ psm:162 a cube:Observation ;
     schema:version 0 ;
     :cultivationType cultivationtype:162 .
 
-psm:163 a cube:Observation ;
+psm:163 a :PlantProtectionCrop  ;
     schema:identifier "449A5380-96E3-4C3F-AB31-7CB3D0579561"^^xsd:ID ;
     schema:isPartOf psm:73 ;
     schema:name "Sommergetreide"@de,
@@ -1052,14 +1052,14 @@ psm:163 a cube:Observation ;
     schema:version 0 ;
     :cultivationType cultivationtype:1000 .
 
-psm:164 a cube:Observation ;
+psm:164 a :PlantProtectionCrop  ;
     schema:identifier "43ED81C2-40E7-4A22-9114-3E623BE1B14C"^^xsd:ID ;
     schema:name "allg. Weinbau"@de,
         "domaine app. vignes"@fr ;
     schema:version 0 ;
     :cultivationType cultivationtype:4 .
 
-psm:165 a cube:Observation ;
+psm:165 a :PlantProtectionCrop  ;
     schema:identifier "56AF3EA3-01F4-4F10-B240-7EF4BE1C1CCE"^^xsd:ID ;
     schema:isPartOf psm:47 ;
     schema:name "Puffbohne"@de,
@@ -1068,7 +1068,7 @@ psm:165 a cube:Observation ;
     schema:version 0 ;
     :cultivationType cultivationtype:165 .
 
-psm:166 a cube:Observation ;
+psm:166 a :PlantProtectionCrop  ;
     schema:identifier "573B50E9-ED1D-4999-B4FD-4537CA2A6306"^^xsd:ID ;
     schema:isPartOf psm:235 ;
     schema:name "Speisekürbisse (ungeniessbare Schale)"@de,
@@ -1077,7 +1077,7 @@ psm:166 a cube:Observation ;
     schema:version 0 ;
     :cultivationType cultivationtype:166 .
 
-psm:167 a cube:Observation ;
+psm:167 a :PlantProtectionCrop  ;
     schema:identifier "5B651459-FC70-4D22-9469-4991F847EA89"^^xsd:ID ;
     schema:isPartOf psm:118,
         psm:72 ;
@@ -1087,7 +1087,7 @@ psm:167 a cube:Observation ;
     schema:version 0 ;
     :cultivationType cultivationtype:167 .
 
-psm:168 a cube:Observation ;
+psm:168 a :PlantProtectionCrop  ;
     schema:identifier "49F7DA15-E241-4080-9D42-1523ECA834B5"^^xsd:ID ;
     schema:isPartOf psm:316 ;
     schema:name "Färberdistel (Saflor)"@de,
@@ -1097,7 +1097,7 @@ psm:168 a cube:Observation ;
     schema:version 0 ;
     :cultivationType cultivationtype:567 .
 
-psm:169 a cube:Observation ;
+psm:169 a :PlantProtectionCrop  ;
     schema:identifier "4A386AE2-A36F-4A55-8668-7B896A1E8092"^^xsd:ID ;
     schema:isPartOf psm:316 ;
     schema:name "Chinaschilf"@de,
@@ -1106,7 +1106,7 @@ psm:169 a cube:Observation ;
     schema:version 0 ;
     :cultivationType cultivationtype:169 .
 
-psm:17 a cube:Observation ;
+psm:17 a :PlantProtectionCrop  ;
     schema:identifier "7B3C8CEE-526F-4381-A757-669C1864291A"^^xsd:ID ;
     schema:isPartOf psm:329 ;
     schema:name "Gehölze (ausserhalb Forst)"@de,
@@ -1115,7 +1115,7 @@ psm:17 a cube:Observation ;
     schema:version 0 ;
     :cultivationType cultivationtype:401 .
 
-psm:170 a cube:Observation ;
+psm:170 a :PlantProtectionCrop  ;
     schema:identifier "4E8A4BB8-3B5D-4695-B17C-F4C1202D5138"^^xsd:ID ;
     schema:isPartOf psm:131 ;
     schema:name "Schwarze Johannisbeere"@de,
@@ -1124,7 +1124,7 @@ psm:170 a cube:Observation ;
     schema:version 0 ;
     :cultivationType cultivationtype:170 .
 
-psm:171 a cube:Observation ;
+psm:171 a :PlantProtectionCrop  ;
     schema:identifier "102C28F6-4AFB-4079-909B-ACE8E0819A77"^^xsd:ID ;
     schema:isPartOf psm:3 ;
     schema:name "Bohnen ohne Hülsen"@de,
@@ -1133,7 +1133,7 @@ psm:171 a cube:Observation ;
     schema:version 0 ;
     :cultivationType cultivationtype:171 .
 
-psm:172 a cube:Observation ;
+psm:172 a :PlantProtectionCrop  ;
     schema:identifier "4C8B56DD-9606-453C-9B14-C9C6309E87FA"^^xsd:ID ;
     schema:name "Lorbeer"@de,
         "LURNO"@en,
@@ -1142,7 +1142,7 @@ psm:172 a cube:Observation ;
     schema:version 0 ;
     :cultivationType cultivationtype:172 .
 
-psm:173 a cube:Observation ;
+psm:173 a :PlantProtectionCrop  ;
     schema:identifier "4DD550C5-15BB-4D52-98BD-6770972575F0"^^xsd:ID ;
     schema:isPartOf psm:105 ;
     schema:name "Kopfsalate"@de,
@@ -1151,7 +1151,7 @@ psm:173 a cube:Observation ;
     schema:version 0 ;
     :cultivationType cultivationtype:173 .
 
-psm:174 a cube:Observation ;
+psm:174 a :PlantProtectionCrop  ;
     schema:identifier "122B909A-CE9C-47BC-B5CA-DCF523646D38"^^xsd:ID ;
     schema:name "Eberesche"@de,
         "sorbier des oiseleurs"@fr,
@@ -1159,7 +1159,7 @@ psm:174 a cube:Observation ;
     schema:version 0 ;
     :cultivationType cultivationtype:174 .
 
-psm:175 a cube:Observation ;
+psm:175 a :PlantProtectionCrop  ;
     schema:identifier "46901564-D096-4323-AE81-C93831AFEC64"^^xsd:ID ;
     schema:isPartOf psm:62 ;
     schema:name "Nachtschattengewächse (Solanaceae)"@de,
@@ -1168,7 +1168,7 @@ psm:175 a cube:Observation ;
     schema:version 0 ;
     :cultivationType cultivationtype:175 .
 
-psm:176 a cube:Observation ;
+psm:176 a :PlantProtectionCrop  ;
     schema:identifier "4D5AF334-29F4-4854-A14F-4457A8A87D97"^^xsd:ID ;
     schema:name "Lager- und Produktionsräume allg."@de,
         "Lager- und Produktionsräume allg."@en,
@@ -1177,7 +1177,7 @@ psm:176 a cube:Observation ;
     schema:version 0 ;
     :cultivationType cube:Undefined .
 
-psm:177 a cube:Observation ;
+psm:177 a :PlantProtectionCrop  ;
     schema:identifier "2314EB9F-7207-409F-A0D4-89B6A1177363"^^xsd:ID ;
     schema:isPartOf psm:164 ;
     schema:name "Reben"@de,
@@ -1186,7 +1186,7 @@ psm:177 a cube:Observation ;
     schema:version 0 ;
     :cultivationType cultivationtype:4 .
 
-psm:178 a cube:Observation ;
+psm:178 a :PlantProtectionCrop  ;
     schema:identifier "6569FC94-60C5-4608-8926-D76D2009B284"^^xsd:ID ;
     schema:name "allg."@de,
         "toutes les cultures"@fr,
@@ -1194,7 +1194,7 @@ psm:178 a cube:Observation ;
     schema:version 0 ;
     :cultivationType :Cultivation .
 
-psm:179 a cube:Observation ;
+psm:179 a :PlantProtectionCrop  ;
     schema:identifier "62BF86AE-FD69-4F95-A72C-1D57AF1DCD99"^^xsd:ID ;
     schema:isPartOf psm:141 ;
     schema:name "Endivien"@de,
@@ -1203,7 +1203,7 @@ psm:179 a cube:Observation ;
     schema:version 0 ;
     :cultivationType cultivationtype:179 .
 
-psm:18 a cube:Observation ;
+psm:18 a :PlantProtectionCrop  ;
     schema:identifier "7B90BAC4-B80F-4039-ADC3-ADF9225CCBB7"^^xsd:ID ;
     schema:isPartOf psm:25 ;
     schema:name "Rosenkohl"@de,
@@ -1212,7 +1212,7 @@ psm:18 a cube:Observation ;
     schema:version 0 ;
     :cultivationType cultivationtype:473 .
 
-psm:180 a cube:Observation ;
+psm:180 a :PlantProtectionCrop  ;
     schema:identifier "6388D9E7-CD0D-4823-80DD-E6FA472AF12C"^^xsd:ID ;
     schema:isPartOf psm:316 ;
     schema:name "Klee zur Saatgutproduktion"@de,
@@ -1221,7 +1221,7 @@ psm:180 a cube:Observation ;
     schema:version 0 ;
     :cultivationType cultivationtype:1052 .
 
-psm:181 a cube:Observation ;
+psm:181 a :PlantProtectionCrop  ;
     schema:identifier "52019F0F-3BAF-4161-A223-62EECBA47871"^^xsd:ID ;
     schema:isPartOf psm:64 ;
     schema:name "Mulchsaaten"@de,
@@ -1230,7 +1230,7 @@ psm:181 a cube:Observation ;
     schema:version 0 ;
     :cultivationType cultivationtype:181 .
 
-psm:182 a cube:Observation ;
+psm:182 a :PlantProtectionCrop  ;
     schema:identifier "4E1ACD79-F162-4EBB-93CB-C6857A811E9C"^^xsd:ID ;
     schema:isPartOf psm:116 ;
     schema:name "Kleegrasmischung (Kunstwiese)"@de,
@@ -1239,7 +1239,7 @@ psm:182 a cube:Observation ;
     schema:version 0 ;
     :cultivationType cultivationtype:182 .
 
-psm:183 a cube:Observation ;
+psm:183 a :PlantProtectionCrop  ;
     schema:identifier "54C75B64-57C4-46E2-BCEA-741EBC10FDDF"^^xsd:ID ;
     schema:isPartOf psm:47 ;
     schema:name "Linse"@de,
@@ -1248,14 +1248,14 @@ psm:183 a cube:Observation ;
     schema:version 0 ;
     :cultivationType cultivationtype:183 .
 
-psm:184 a cube:Observation ;
+psm:184 a :PlantProtectionCrop  ;
     schema:identifier "4D6B9837-FA9A-4E8D-BAAB-A7249BD01F2D"^^xsd:ID ;
     schema:name "allg. Nichtkulturland"@de,
         "domaine app. non agricole"@fr ;
     schema:version 0 ;
     :cultivationType cube:Undefined .
 
-psm:185 a cube:Observation ;
+psm:185 a :PlantProtectionCrop  ;
     schema:identifier "28ECDBFE-F44F-44C6-BF06-9B7E6EBFC1F6"^^xsd:ID ;
     schema:name "Leere Produktionsräume"@de,
         "Locaux de production vides"@fr,
@@ -1263,7 +1263,7 @@ psm:185 a cube:Observation ;
     schema:version 0 ;
     :cultivationType cube:Undefined .
 
-psm:186 a cube:Observation ;
+psm:186 a :PlantProtectionCrop  ;
     schema:identifier "6EDA1989-51C8-490E-90FD-974CE3E8FF03"^^xsd:ID ;
     schema:isPartOf psm:61 ;
     schema:name "Hartschalenobst"@de,
@@ -1272,7 +1272,7 @@ psm:186 a cube:Observation ;
     schema:version 0 ;
     :cultivationType cultivationtype:186 .
 
-psm:187 a cube:Observation ;
+psm:187 a :PlantProtectionCrop  ;
     schema:identifier "6C3D663E-442F-4783-87A2-A46806E119E5"^^xsd:ID ;
     schema:isPartOf psm:2 ;
     schema:name "Baby-Leaf (Brassicaceae)"@de,
@@ -1281,7 +1281,7 @@ psm:187 a cube:Observation ;
     schema:version 0 ;
     :cultivationType cultivationtype:187 .
 
-psm:188 a cube:Observation ;
+psm:188 a :PlantProtectionCrop  ;
     schema:identifier "5AC11C43-B41E-4823-8515-E991D4EA1B3C"^^xsd:ID ;
     schema:isPartOf psm:62 ;
     schema:name "Liliengewächse (Liliaceae)"@de,
@@ -1290,7 +1290,7 @@ psm:188 a cube:Observation ;
     schema:version 0 ;
     :cultivationType cultivationtype:188 .
 
-psm:189 a cube:Observation ;
+psm:189 a :PlantProtectionCrop  ;
     schema:identifier "5433C814-C0CD-4815-B236-2D02E1C66F3D"^^xsd:ID ;
     schema:isPartOf psm:57 ;
     schema:name "Zuckermais"@de,
@@ -1299,7 +1299,7 @@ psm:189 a cube:Observation ;
     schema:version 0 ;
     :cultivationType cultivationtype:189 .
 
-psm:19 a cube:Observation ;
+psm:19 a :PlantProtectionCrop  ;
     schema:identifier "7D52C099-7C6F-453C-8513-4BBFB94EE66A"^^xsd:ID ;
     schema:isPartOf psm:316 ;
     schema:name "Eiweisserbse"@de,
@@ -1308,7 +1308,7 @@ psm:19 a cube:Observation ;
     schema:version 0 ;
     :cultivationType cultivationtype:1027 .
 
-psm:190 a cube:Observation ;
+psm:190 a :PlantProtectionCrop  ;
     schema:identifier "5755AD92-721E-431E-8473-6FA2F340532F"^^xsd:ID ;
     schema:isPartOf psm:286 ;
     schema:name "Winterraps"@de,
@@ -1317,7 +1317,7 @@ psm:190 a cube:Observation ;
     schema:version 0 ;
     :cultivationType cultivationtype:190 .
 
-psm:191 a cube:Observation ;
+psm:191 a :PlantProtectionCrop  ;
     schema:identifier "5DF3AB4D-7CAC-4112-90D9-67BD80EC5E96"^^xsd:ID ;
     schema:isPartOf psm:47 ;
     schema:name "Erbsen"@de,
@@ -1326,7 +1326,7 @@ psm:191 a cube:Observation ;
     schema:version 0 ;
     :cultivationType cultivationtype:191 .
 
-psm:192 a cube:Observation ;
+psm:192 a :PlantProtectionCrop  ;
     schema:identifier "807F5A2C-7904-456D-BBC7-A80A4B207964"^^xsd:ID ;
     schema:isPartOf psm:67 ;
     schema:name "Kümmel"@de,
@@ -1336,7 +1336,7 @@ psm:192 a cube:Observation ;
     schema:version 0 ;
     :cultivationType cultivationtype:192 .
 
-psm:193 a cube:Observation ;
+psm:193 a :PlantProtectionCrop  ;
     schema:identifier "7AB6690B-B2B9-4F12-AFAE-A9B0222C2637"^^xsd:ID ;
     schema:isPartOf psm:210,
         psm:71 ;
@@ -1346,7 +1346,7 @@ psm:193 a cube:Observation ;
     schema:version 0 ;
     :cultivationType cultivationtype:490 .
 
-psm:194 a cube:Observation ;
+psm:194 a :PlantProtectionCrop  ;
     schema:identifier "811C79DC-9182-4302-8AEC-AB12D5F69188"^^xsd:ID ;
     schema:name "allg. Ökologische Ausgleichsflächen (gemäss DZV)"@de,
         "domaine surfaces de compensation écologique (selon OPD)"@fr,
@@ -1354,7 +1354,7 @@ psm:194 a cube:Observation ;
     schema:version 0 ;
     :cultivationType cultivationtype:414 .
 
-psm:195 a cube:Observation ;
+psm:195 a :PlantProtectionCrop  ;
     schema:identifier "61D9C648-0736-43D4-BF04-B8643B1D74E0"^^xsd:ID ;
     schema:isPartOf psm:145,
         psm:4 ;
@@ -1364,7 +1364,7 @@ psm:195 a cube:Observation ;
     schema:version 0 ;
     :cultivationType cultivationtype:195 .
 
-psm:196 a cube:Observation ;
+psm:196 a :PlantProtectionCrop  ;
     schema:identifier "6D06A7F9-DF91-4BB5-84B8-FB877C211E66"^^xsd:ID ;
     schema:isPartOf psm:316 ;
     schema:name "Kenaf"@de,
@@ -1373,7 +1373,7 @@ psm:196 a cube:Observation ;
     schema:version 0 ;
     :cultivationType cultivationtype:1063 .
 
-psm:197 a cube:Observation ;
+psm:197 a :PlantProtectionCrop  ;
     schema:identifier "625EA905-7C3D-4BCC-8551-BC1CB14FF647"^^xsd:ID ;
     schema:isPartOf psm:73 ;
     schema:name "Gerste"@de,
@@ -1382,7 +1382,7 @@ psm:197 a cube:Observation ;
     schema:version 0 ;
     :cultivationType cultivationtype:498 .
 
-psm:198 a cube:Observation ;
+psm:198 a :PlantProtectionCrop  ;
     schema:identifier "66B27CD1-032A-456E-99C4-28F6E989CC14"^^xsd:ID ;
     schema:isPartOf psm:113 ;
     schema:name "Zwetschge"@de,
@@ -1391,7 +1391,7 @@ psm:198 a cube:Observation ;
     schema:version 0 ;
     :cultivationType cultivationtype:198 .
 
-psm:199 a cube:Observation ;
+psm:199 a :PlantProtectionCrop  ;
     schema:identifier "5C610428-6087-4A2E-B977-3E83EDBB19F0"^^xsd:ID ;
     schema:isPartOf psm:329 ;
     schema:name "Zier- und Sportrasen"@de,
@@ -1400,7 +1400,7 @@ psm:199 a cube:Observation ;
     schema:version 0 ;
     :cultivationType cultivationtype:199 .
 
-psm:2 a cube:Observation ;
+psm:2 a :PlantProtectionCrop  ;
     schema:identifier "0106A8DF-6CDF-4E18-8F46-3D9E1D52D0E5"^^xsd:ID ;
     schema:name "Baby-Leaf"@de,
         "Baby-Leaf"@fr,
@@ -1408,7 +1408,7 @@ psm:2 a cube:Observation ;
     schema:version 0 ;
     :cultivationType cultivationtype:400 .
 
-psm:20 a cube:Observation ;
+psm:20 a :PlantProtectionCrop  ;
     schema:identifier "6F26F4E0-401C-4B16-A28B-4CC889907361"^^xsd:ID ;
     schema:isPartOf psm:25 ;
     schema:name "Blattkohle"@de,
@@ -1417,7 +1417,7 @@ psm:20 a cube:Observation ;
     schema:version 0 ;
     :cultivationType cultivationtype:475 .
 
-psm:200 a cube:Observation ;
+psm:200 a :PlantProtectionCrop  ;
     schema:identifier "3E4AFACC-03CA-4CEC-8392-520B07DDC604"^^xsd:ID ;
     schema:isPartOf psm:234 ;
     schema:name "Verarbeitungsräume"@de,
@@ -1426,7 +1426,7 @@ psm:200 a cube:Observation ;
     schema:version 0 ;
     :cultivationType cube:Undefined .
 
-psm:201 a cube:Observation ;
+psm:201 a :PlantProtectionCrop  ;
     schema:identifier "4465118D-78E7-4748-A47A-7F39E593771A"^^xsd:ID ;
     schema:isPartOf psm:124 ;
     schema:name "Stangenbohne"@de,
@@ -1435,7 +1435,7 @@ psm:201 a cube:Observation ;
     schema:version 0 ;
     :cultivationType cultivationtype:201 .
 
-psm:202 a cube:Observation ;
+psm:202 a :PlantProtectionCrop  ;
     schema:identifier "3346CB25-6DC9-42AF-8BA2-F725BD92304A"^^xsd:ID ;
     schema:isPartOf psm:95 ;
     schema:name "Kardy"@de,
@@ -1445,7 +1445,7 @@ psm:202 a cube:Observation ;
     schema:version 0 ;
     :cultivationType cultivationtype:202 .
 
-psm:203 a cube:Observation ;
+psm:203 a :PlantProtectionCrop  ;
     schema:identifier "35A8338D-9B59-4842-A50C-1B8BF93CDABA"^^xsd:ID ;
     schema:isPartOf psm:281 ;
     schema:name "TiKul"@de,
@@ -1454,7 +1454,7 @@ psm:203 a cube:Observation ;
     schema:version 0 ;
     :cultivationType cube:Undefined .
 
-psm:204 a cube:Observation ;
+psm:204 a :PlantProtectionCrop  ;
     schema:identifier "33097BFE-2487-46DB-85A0-A8A4E06030AF"^^xsd:ID ;
     schema:isPartOf psm:23 ;
     schema:name "Azaleen"@de,
@@ -1463,7 +1463,7 @@ psm:204 a cube:Observation ;
     schema:version 0 ;
     :cultivationType cultivationtype:204 .
 
-psm:205 a cube:Observation ;
+psm:205 a :PlantProtectionCrop  ;
     schema:identifier "25DC9B01-CA06-426A-B743-C0D293447898"^^xsd:ID ;
     schema:isPartOf psm:67 ;
     schema:name "Römische Kamille"@de,
@@ -1473,7 +1473,7 @@ psm:205 a cube:Observation ;
     schema:version 0 ;
     :cultivationType cultivationtype:205 .
 
-psm:206 a cube:Observation ;
+psm:206 a :PlantProtectionCrop  ;
     schema:identifier "269900C0-F407-4AFA-B3F2-D857EDACB733"^^xsd:ID ;
     schema:name "Spitzwegerich"@de,
         "plantago lanceolata"@en,
@@ -1482,7 +1482,7 @@ psm:206 a cube:Observation ;
     schema:version 0 ;
     :cultivationType cultivationtype:206 .
 
-psm:207 a cube:Observation ;
+psm:207 a :PlantProtectionCrop  ;
     schema:identifier "238AB652-AD62-4703-A74B-7550C693ED6E"^^xsd:ID ;
     schema:isPartOf psm:32 ;
     schema:name "Einlegegurken"@de,
@@ -1491,7 +1491,7 @@ psm:207 a cube:Observation ;
     schema:version 0 ;
     :cultivationType cultivationtype:207 .
 
-psm:208 a cube:Observation ;
+psm:208 a :PlantProtectionCrop  ;
     schema:identifier "25DA6F5A-1BD0-4040-A210-BB05CCB66AE4"^^xsd:ID ;
     schema:isPartOf psm:320 ;
     schema:name "Löwenzahn"@de,
@@ -1500,7 +1500,7 @@ psm:208 a cube:Observation ;
     schema:version 0 ;
     :cultivationType cultivationtype:208 .
 
-psm:209 a cube:Observation ;
+psm:209 a :PlantProtectionCrop  ;
     schema:identifier "2FAEBED2-193A-460C-A538-9B5C78024D98"^^xsd:ID ;
     schema:isPartOf psm:62 ;
     schema:name "Baldriangewächse (Valerianaceae)"@de,
@@ -1509,7 +1509,7 @@ psm:209 a cube:Observation ;
     schema:version 0 ;
     :cultivationType cultivationtype:209 .
 
-psm:21 a cube:Observation ;
+psm:21 a :PlantProtectionCrop  ;
     schema:identifier "6CC3F1FF-84DF-4E4A-A91E-57C5ECB82F61"^^xsd:ID ;
     schema:isPartOf psm:175 ;
     schema:name "Aubergine"@de,
@@ -1518,7 +1518,7 @@ psm:21 a cube:Observation ;
     schema:version 0 ;
     :cultivationType cultivationtype:474 .
 
-psm:210 a cube:Observation ;
+psm:210 a :PlantProtectionCrop  ;
     schema:identifier "287584B7-E43E-494B-84C2-D13B2C9C3736"^^xsd:ID ;
     schema:isPartOf psm:73 ;
     schema:name "Wintergetreide"@de,
@@ -1527,7 +1527,7 @@ psm:210 a cube:Observation ;
     schema:version 0 ;
     :cultivationType cultivationtype:19 .
 
-psm:211 a cube:Observation ;
+psm:211 a :PlantProtectionCrop  ;
     schema:identifier "27ACD8EA-49E8-4C99-84D4-53E2E605390E"^^xsd:ID ;
     schema:isPartOf psm:120 ;
     schema:name "Rhabarber"@de,
@@ -1536,7 +1536,7 @@ psm:211 a cube:Observation ;
     schema:version 0 ;
     :cultivationType cultivationtype:211 .
 
-psm:212 a cube:Observation ;
+psm:212 a :PlantProtectionCrop  ;
     schema:identifier "27FBFA25-5091-4D7E-9C96-3C0BC05B6474"^^xsd:ID ;
     schema:isPartOf psm:316 ;
     schema:name "Sorghum"@de,
@@ -1545,7 +1545,7 @@ psm:212 a cube:Observation ;
     schema:version 0 ;
     :cultivationType cultivationtype:549 .
 
-psm:213 a cube:Observation ;
+psm:213 a :PlantProtectionCrop  ;
     schema:identifier "293D431D-8501-4D41-A0E5-F1A5AD59C8B6"^^xsd:ID ;
     schema:isPartOf psm:177 ;
     schema:name "Ertragsreben"@de,
@@ -1554,7 +1554,7 @@ psm:213 a cube:Observation ;
     schema:version 0 ;
     :cultivationType cultivationtype:213 .
 
-psm:214 a cube:Observation ;
+psm:214 a :PlantProtectionCrop  ;
     schema:identifier "FF0DF95C-A3A9-47EE-95FA-00FCB428A4ED"^^xsd:ID ;
     schema:isPartOf psm:145 ;
     schema:name "Tulpe"@de,
@@ -1563,7 +1563,7 @@ psm:214 a cube:Observation ;
     schema:version 0 ;
     :cultivationType cultivationtype:214 .
 
-psm:215 a cube:Observation ;
+psm:215 a :PlantProtectionCrop  ;
     schema:identifier "02BF379A-E526-422A-952B-3B0CD995F8C1"^^xsd:ID ;
     schema:isPartOf psm:191 ;
     schema:name "Erbsen mit Hülsen"@de,
@@ -1572,7 +1572,7 @@ psm:215 a cube:Observation ;
     schema:version 0 ;
     :cultivationType cultivationtype:215 .
 
-psm:216 a cube:Observation ;
+psm:216 a :PlantProtectionCrop  ;
     schema:identifier "FCF24426-CAB8-43C8-9E42-B09581420287"^^xsd:ID ;
     schema:isPartOf psm:329 ;
     schema:name "Stauden"@de,
@@ -1581,7 +1581,7 @@ psm:216 a cube:Observation ;
     schema:version 0 ;
     :cultivationType cultivationtype:216 .
 
-psm:217 a cube:Observation ;
+psm:217 a :PlantProtectionCrop  ;
     schema:identifier "F4479311-1516-49F1-95BA-E232030F9AAC"^^xsd:ID ;
     schema:isPartOf psm:329 ;
     schema:name "Ziergehölze (ausserhalb Forst)"@de,
@@ -1590,7 +1590,7 @@ psm:217 a cube:Observation ;
     schema:version 0 ;
     :cultivationType cultivationtype:217 .
 
-psm:218 a cube:Observation ;
+psm:218 a :PlantProtectionCrop  ;
     schema:identifier "F718EA3C-F363-4DB2-BDF6-2D6236706822"^^xsd:ID ;
     schema:isPartOf psm:188 ;
     schema:name "Schalotten"@de,
@@ -1599,7 +1599,7 @@ psm:218 a cube:Observation ;
     schema:version 0 ;
     :cultivationType cultivationtype:218 .
 
-psm:219 a cube:Observation ;
+psm:219 a :PlantProtectionCrop  ;
     schema:identifier "FA8C26CF-E3B4-456D-AA4E-94D21AEADA1A"^^xsd:ID ;
     schema:isPartOf psm:67 ;
     schema:name "Schnittlauch"@de,
@@ -1608,7 +1608,7 @@ psm:219 a cube:Observation ;
     schema:version 0 ;
     :cultivationType cultivationtype:219 .
 
-psm:22 a cube:Observation ;
+psm:22 a :PlantProtectionCrop  ;
     schema:identifier "657E4B0A-50BD-424B-9DB4-1B84582AD3D7"^^xsd:ID ;
     schema:isPartOf psm:316 ;
     schema:name "Ackerbohne"@de,
@@ -1617,7 +1617,7 @@ psm:22 a cube:Observation ;
     schema:version 0 ;
     :cultivationType cultivationtype:468 .
 
-psm:220 a cube:Observation ;
+psm:220 a :PlantProtectionCrop  ;
     schema:identifier "F9426E5C-7D4D-45E5-80DA-64BB12336CA4"^^xsd:ID ;
     schema:isPartOf psm:27,
         psm:316 ;
@@ -1627,7 +1627,7 @@ psm:220 a cube:Observation ;
     schema:version 0 ;
     :cultivationType cultivationtype:497 .
 
-psm:221 a cube:Observation ;
+psm:221 a :PlantProtectionCrop  ;
     schema:identifier "C5188A42-9C79-4110-B1E8-AEE9D6078BEA"^^xsd:ID ;
     schema:isPartOf psm:191 ;
     schema:name "Erbsen ohne Hülsen"@de,
@@ -1636,7 +1636,7 @@ psm:221 a cube:Observation ;
     schema:version 0 ;
     :cultivationType cultivationtype:221 .
 
-psm:222 a cube:Observation ;
+psm:222 a :PlantProtectionCrop  ;
     schema:identifier "CB7061F0-B1D8-4AC0-9C50-A596763B68CF"^^xsd:ID ;
     schema:isPartOf psm:329 ;
     schema:name "Euphorbia"@de,
@@ -1645,7 +1645,7 @@ psm:222 a cube:Observation ;
     schema:version 0 ;
     :cultivationType cultivationtype:222 .
 
-psm:223 a cube:Observation ;
+psm:223 a :PlantProtectionCrop  ;
     schema:identifier "CCCD6417-ED96-4A46-82EF-2EC848F719A7"^^xsd:ID ;
     schema:isPartOf psm:160 ;
     schema:name "Erdbeere"@de,
@@ -1654,7 +1654,7 @@ psm:223 a cube:Observation ;
     schema:version 0 ;
     :cultivationType cultivationtype:223 .
 
-psm:224 a cube:Observation ;
+psm:224 a :PlantProtectionCrop  ;
     schema:identifier "BDB73EC5-46E5-413B-85B5-78D3801F4E7E"^^xsd:ID ;
     schema:isPartOf psm:95 ;
     schema:name "Topinambur"@de,
@@ -1663,7 +1663,7 @@ psm:224 a cube:Observation ;
     schema:version 0 ;
     :cultivationType cultivationtype:224 .
 
-psm:225 a cube:Observation ;
+psm:225 a :PlantProtectionCrop  ;
     schema:identifier "C1A1842A-37E5-46D3-9646-9ECC15BAEE99"^^xsd:ID ;
     schema:isPartOf psm:40 ;
     schema:name "Zucchetti"@de,
@@ -1672,7 +1672,7 @@ psm:225 a cube:Observation ;
     schema:version 0 ;
     :cultivationType cultivationtype:225 .
 
-psm:226 a cube:Observation ;
+psm:226 a :PlantProtectionCrop  ;
     schema:identifier "B74E61A6-30BD-4A63-8A24-94FC0A54D489"^^xsd:ID ;
     schema:isPartOf psm:149,
         psm:210 ;
@@ -1682,7 +1682,7 @@ psm:226 a cube:Observation ;
     schema:version 0 ;
     :cultivationType cultivationtype:1012 .
 
-psm:227 a cube:Observation ;
+psm:227 a :PlantProtectionCrop  ;
     schema:identifier "BAE217C2-8C72-4706-8A0E-911FB18FC723"^^xsd:ID ;
     schema:name "Humusdeponie"@de,
         "dépôt de terre végétale"@fr,
@@ -1690,7 +1690,7 @@ psm:227 a cube:Observation ;
     schema:version 0 ;
     :cultivationType cube:Undefined .
 
-psm:228 a cube:Observation ;
+psm:228 a :PlantProtectionCrop  ;
     schema:identifier "BBD16782-6EB3-4923-9DBB-CC7D97EBCB0E"^^xsd:ID ;
     schema:isPartOf psm:235 ;
     schema:name "Ölkürbisse"@de,
@@ -1699,7 +1699,7 @@ psm:228 a cube:Observation ;
     schema:version 0 ;
     :cultivationType cultivationtype:228 .
 
-psm:229 a cube:Observation ;
+psm:229 a :PlantProtectionCrop  ;
     schema:identifier "B7DE9539-35FD-4172-B72D-488EA12F2DF7"^^xsd:ID ;
     schema:isPartOf psm:321 ;
     schema:name "Schnittmangold"@de,
@@ -1708,7 +1708,7 @@ psm:229 a cube:Observation ;
     schema:version 0 ;
     :cultivationType cultivationtype:229 .
 
-psm:23 a cube:Observation ;
+psm:23 a :PlantProtectionCrop  ;
     schema:identifier "3A53A166-7559-4E75-BDED-F65CA6FDFDE1"^^xsd:ID ;
     schema:isPartOf psm:16,
         psm:72 ;
@@ -1718,7 +1718,7 @@ psm:23 a cube:Observation ;
     schema:version 0 ;
     :cultivationType cultivationtype:403 .
 
-psm:230 a cube:Observation ;
+psm:230 a :PlantProtectionCrop  ;
     schema:identifier "8E6C3D3A-6D7A-4D82-94CC-E4F227CC1EB2"^^xsd:ID ;
     schema:name "Pflanzen"@de,
         "plantes"@fr,
@@ -1726,7 +1726,7 @@ psm:230 a cube:Observation ;
     schema:version 0 ;
     :cultivationType cube:Undefined .
 
-psm:231 a cube:Observation ;
+psm:231 a :PlantProtectionCrop  ;
     schema:identifier "91522E50-F1AC-42B1-870B-68218110C235"^^xsd:ID ;
     schema:isPartOf psm:67 ;
     schema:name "Dill"@de,
@@ -1736,7 +1736,7 @@ psm:231 a cube:Observation ;
     schema:version 0 ;
     :cultivationType cultivationtype:231 .
 
-psm:232 a cube:Observation ;
+psm:232 a :PlantProtectionCrop  ;
     schema:identifier "874850AA-2F48-47B6-A789-C67D6DEE97DA"^^xsd:ID ;
     schema:isPartOf psm:277 ;
     schema:name "Bundzwiebeln"@de,
@@ -1745,7 +1745,7 @@ psm:232 a cube:Observation ;
     schema:version 0 ;
     :cultivationType cultivationtype:232 .
 
-psm:233 a cube:Observation ;
+psm:233 a :PlantProtectionCrop  ;
     schema:identifier "8621CDCC-EE8A-4188-9F2C-14C9497FBED3"^^xsd:ID ;
     schema:isPartOf psm:326 ;
     schema:name "Brombeere"@de,
@@ -1754,7 +1754,7 @@ psm:233 a cube:Observation ;
     schema:version 0 ;
     :cultivationType cultivationtype:233 .
 
-psm:234 a cube:Observation ;
+psm:234 a :PlantProtectionCrop  ;
     schema:identifier "8774F019-8BB4-409D-ADA9-B565ECA1A6A9"^^xsd:ID ;
     schema:isPartOf psm:184 ;
     schema:name "Allgemein Vorratsschutz"@de,
@@ -1763,7 +1763,7 @@ psm:234 a cube:Observation ;
     schema:version 0 ;
     :cultivationType cube:Undefined .
 
-psm:235 a cube:Observation ;
+psm:235 a :PlantProtectionCrop  ;
     schema:identifier "8303C191-3315-4942-91DF-668C019850D7"^^xsd:ID ;
     schema:isPartOf psm:62 ;
     schema:name "Kürbisgewächse (Cucurbitaceae)"@de,
@@ -1772,7 +1772,7 @@ psm:235 a cube:Observation ;
     schema:version 0 ;
     :cultivationType cultivationtype:235 .
 
-psm:236 a cube:Observation ;
+psm:236 a :PlantProtectionCrop  ;
     schema:identifier "8262D735-4D45-4499-AE0B-497FF4C0C4AA"^^xsd:ID ;
     schema:isPartOf psm:316 ;
     schema:name "Tabak"@de,
@@ -1781,7 +1781,7 @@ psm:236 a cube:Observation ;
     schema:version 0 ;
     :cultivationType cultivationtype:541 .
 
-psm:237 a cube:Observation ;
+psm:237 a :PlantProtectionCrop  ;
     schema:identifier "80395E92-C39B-45D9-91AC-AB7E6DCAC3DB"^^xsd:ID ;
     schema:isPartOf psm:20 ;
     schema:name "Markstammkohl"@de,
@@ -1790,7 +1790,7 @@ psm:237 a cube:Observation ;
     schema:version 0 ;
     :cultivationType cultivationtype:237 .
 
-psm:238 a cube:Observation ;
+psm:238 a :PlantProtectionCrop  ;
     schema:identifier "83A9CEC5-FC31-421C-A3B8-CA219AF649CF"^^xsd:ID ;
     schema:isPartOf psm:145,
         psm:310 ;
@@ -1800,7 +1800,7 @@ psm:238 a cube:Observation ;
     schema:version 0 ;
     :cultivationType cultivationtype:238 .
 
-psm:239 a cube:Observation ;
+psm:239 a :PlantProtectionCrop  ;
     schema:identifier "82376115-14E2-449A-8DFA-F8119476FE3F"^^xsd:ID ;
     schema:isPartOf psm:73 ;
     schema:name "Weizen"@de,
@@ -1809,7 +1809,7 @@ psm:239 a cube:Observation ;
     schema:version 0 ;
     :cultivationType cultivationtype:492 .
 
-psm:24 a cube:Observation ;
+psm:24 a :PlantProtectionCrop  ;
     schema:identifier "465E7118-95AB-46A2-9A85-7A0B9070E63A"^^xsd:ID ;
     schema:isPartOf psm:234 ;
     schema:name "Einrichtungen und Geräte"@de,
@@ -1818,7 +1818,7 @@ psm:24 a cube:Observation ;
     schema:version 0 ;
     :cultivationType cube:Undefined .
 
-psm:240 a cube:Observation ;
+psm:240 a :PlantProtectionCrop  ;
     schema:identifier "85BB3788-27A8-4E73-800A-0E8F154EC0BE"^^xsd:ID ;
     schema:isPartOf psm:48 ;
     schema:name "Blattsalate (Brassicaceae)"@de,
@@ -1827,7 +1827,7 @@ psm:240 a cube:Observation ;
     schema:version 0 ;
     :cultivationType cultivationtype:240 .
 
-psm:241 a cube:Observation ;
+psm:241 a :PlantProtectionCrop  ;
     schema:identifier "A22521E4-7D71-40C2-9FDF-B1230008D934"^^xsd:ID ;
     schema:isPartOf psm:293 ;
     schema:name "Böschungen und Grünstreifen entlang von Verkehrswegen (gem. ChemRRV)"@de,
@@ -1836,7 +1836,7 @@ psm:241 a cube:Observation ;
     schema:version 0 ;
     :cultivationType cube:Undefined .
 
-psm:242 a cube:Observation ;
+psm:242 a :PlantProtectionCrop  ;
     schema:identifier "8BDDCACC-13C1-4676-9322-402ECF20BE85"^^xsd:ID ;
     schema:isPartOf psm:194 ;
     schema:name "Offene Ackerfläche"@de,
@@ -1845,7 +1845,7 @@ psm:242 a cube:Observation ;
     schema:version 0 ;
     :cultivationType cultivationtype:1 .
 
-psm:243 a cube:Observation ;
+psm:243 a :PlantProtectionCrop  ;
     schema:identifier "8FF3D364-2BA6-40AA-A370-4B72E3CAC8DF"^^xsd:ID ;
     schema:isPartOf psm:48 ;
     schema:name "Radies"@de,
@@ -1854,7 +1854,7 @@ psm:243 a cube:Observation ;
     schema:version 0 ;
     :cultivationType cultivationtype:243 .
 
-psm:244 a cube:Observation ;
+psm:244 a :PlantProtectionCrop  ;
     schema:identifier "4B6DC713-3B11-42C5-92A8-E504D594E978"^^xsd:ID ;
     schema:name "leere Verarbeitungsräume"@de,
         "Locaux de transformation vides"@fr,
@@ -1862,7 +1862,7 @@ psm:244 a cube:Observation ;
     schema:version 0 ;
     :cultivationType cube:Undefined .
 
-psm:245 a cube:Observation ;
+psm:245 a :PlantProtectionCrop  ;
     schema:identifier "83C510D2-293A-4E1B-B691-06B1F02149B4"^^xsd:ID ;
     schema:isPartOf psm:277 ;
     schema:name "Gemüsezwiebel"@de,
@@ -1871,7 +1871,7 @@ psm:245 a cube:Observation ;
     schema:version 0 ;
     :cultivationType cultivationtype:245 .
 
-psm:246 a cube:Observation ;
+psm:246 a :PlantProtectionCrop  ;
     schema:identifier "A024CDFC-A05D-46B8-B08A-221C26BDF5DE"^^xsd:ID ;
     schema:isPartOf psm:329 ;
     schema:name "Rosen"@de,
@@ -1880,7 +1880,7 @@ psm:246 a cube:Observation ;
     schema:version 0 ;
     :cultivationType cultivationtype:246 .
 
-psm:247 a cube:Observation ;
+psm:247 a :PlantProtectionCrop  ;
     schema:identifier "A0C29069-5DBA-4E89-B7F9-4C556C272821"^^xsd:ID ;
     schema:isPartOf psm:48 ;
     schema:name "Speisekohlrüben"@de,
@@ -1889,7 +1889,7 @@ psm:247 a cube:Observation ;
     schema:version 0 ;
     :cultivationType cultivationtype:247 .
 
-psm:248 a cube:Observation ;
+psm:248 a :PlantProtectionCrop  ;
     schema:identifier "91406007-35B9-49E2-A62F-04BDE262366F"^^xsd:ID ;
     schema:isPartOf psm:131 ;
     schema:name "Rote Johannisbeere"@de,
@@ -1898,7 +1898,7 @@ psm:248 a cube:Observation ;
     schema:version 0 ;
     :cultivationType cultivationtype:248 .
 
-psm:249 a cube:Observation ;
+psm:249 a :PlantProtectionCrop  ;
     schema:identifier "930524FB-BD0A-4CA9-A89D-4FEEE1F9174F"^^xsd:ID ;
     schema:isPartOf psm:124 ;
     schema:name "Buschbohne"@de,
@@ -1907,7 +1907,7 @@ psm:249 a cube:Observation ;
     schema:version 0 ;
     :cultivationType cultivationtype:249 .
 
-psm:25 a cube:Observation ;
+psm:25 a :PlantProtectionCrop  ;
     schema:identifier "4380EC0F-E195-4783-8BB7-F6B0464B37D6"^^xsd:ID ;
     schema:isPartOf psm:48 ;
     schema:name "Kohlarten"@de,
@@ -1916,7 +1916,7 @@ psm:25 a cube:Observation ;
     schema:version 0 ;
     :cultivationType cultivationtype:25 .
 
-psm:250 a cube:Observation ;
+psm:250 a :PlantProtectionCrop  ;
     schema:identifier "93A2DA1B-F920-461B-A9C9-BA9981CDB278"^^xsd:ID ;
     schema:isPartOf psm:300 ;
     schema:name "Spinat"@de,
@@ -1925,7 +1925,7 @@ psm:250 a cube:Observation ;
     schema:version 0 ;
     :cultivationType cultivationtype:250 .
 
-psm:251 a cube:Observation ;
+psm:251 a :PlantProtectionCrop  ;
     schema:identifier "689F7BE7-DA1E-49B6-95D5-E002E210E7B9"^^xsd:ID ;
     schema:isPartOf psm:96 ;
     schema:name "Kartoffeln zur Pflanzgutproduktion"@de,
@@ -1934,7 +1934,7 @@ psm:251 a cube:Observation ;
     schema:version 0 ;
     :cultivationType cultivationtype:411 .
 
-psm:252 a cube:Observation ;
+psm:252 a :PlantProtectionCrop  ;
     schema:identifier "6D45EAF5-D29C-48AB-A212-91C67357E898"^^xsd:ID ;
     schema:isPartOf psm:150 ;
     schema:name "Walnuss"@de,
@@ -1943,7 +1943,7 @@ psm:252 a cube:Observation ;
     schema:version 0 ;
     :cultivationType cultivationtype:252 .
 
-psm:253 a cube:Observation ;
+psm:253 a :PlantProtectionCrop  ;
     schema:identifier "ABF54D5D-620B-4A08-A37D-416C1AD8D1BF"^^xsd:ID ;
     schema:isPartOf psm:67 ;
     schema:name "Estragon"@de,
@@ -1952,7 +1952,7 @@ psm:253 a cube:Observation ;
     schema:version 0 ;
     :cultivationType cultivationtype:253 .
 
-psm:254 a cube:Observation ;
+psm:254 a :PlantProtectionCrop  ;
     schema:identifier "A8647F38-2A16-46AB-8B0E-2257EBF53C63"^^xsd:ID ;
     schema:isPartOf psm:145 ;
     schema:name "Iris"@de,
@@ -1961,7 +1961,7 @@ psm:254 a cube:Observation ;
     schema:version 0 ;
     :cultivationType cultivationtype:254 .
 
-psm:255 a cube:Observation ;
+psm:255 a :PlantProtectionCrop  ;
     schema:identifier "AC0240B5-B610-4D7C-8704-AA8E182821AC"^^xsd:ID ;
     schema:isPartOf psm:234 ;
     schema:name "Lagerhallen, Mühlen, Silogebäude"@de,
@@ -1970,7 +1970,7 @@ psm:255 a cube:Observation ;
     schema:version 0 ;
     :cultivationType cube:Undefined .
 
-psm:256 a cube:Observation ;
+psm:256 a :PlantProtectionCrop  ;
     schema:identifier "A9F01BDE-468A-477A-8ED5-704359B663F6"^^xsd:ID ;
     schema:isPartOf psm:160 ;
     schema:name "Heidelbeere"@de,
@@ -1979,7 +1979,7 @@ psm:256 a cube:Observation ;
     schema:version 0 ;
     :cultivationType cultivationtype:256 .
 
-psm:257 a cube:Observation ;
+psm:257 a :PlantProtectionCrop  ;
     schema:identifier "9BCEB85B-1578-4001-839D-68BFB9CE4CD8"^^xsd:ID ;
     schema:isPartOf psm:61 ;
     schema:name "Olive"@de,
@@ -1989,7 +1989,7 @@ psm:257 a cube:Observation ;
     schema:version 0 ;
     :cultivationType cultivationtype:257 .
 
-psm:258 a cube:Observation ;
+psm:258 a :PlantProtectionCrop  ;
     schema:identifier "9BD6A435-E370-4DFE-82E5-7E7813B4D193"^^xsd:ID ;
     schema:isPartOf psm:2 ;
     schema:name "Baby-Leaf (Chenopodiaceae)"@de,
@@ -1998,7 +1998,7 @@ psm:258 a cube:Observation ;
     schema:version 0 ;
     :cultivationType cultivationtype:258 .
 
-psm:259 a cube:Observation ;
+psm:259 a :PlantProtectionCrop  ;
     schema:identifier "9C38BA77-FDC8-461A-800A-9E2467C52105"^^xsd:ID ;
     schema:isPartOf psm:113 ;
     schema:name "Pflaume"@de,
@@ -2007,7 +2007,7 @@ psm:259 a cube:Observation ;
     schema:version 0 ;
     :cultivationType cultivationtype:259 .
 
-psm:26 a cube:Observation ;
+psm:26 a :PlantProtectionCrop  ;
     schema:identifier "2D7D1AE2-E685-4C6B-B8EE-DC5C6391EC76"^^xsd:ID ;
     schema:isPartOf psm:62 ;
     schema:name "Spargelgewächse (Asparagaceae)"@de,
@@ -2016,7 +2016,7 @@ psm:26 a cube:Observation ;
     schema:version 0 ;
     :cultivationType cultivationtype:26 .
 
-psm:260 a cube:Observation ;
+psm:260 a :PlantProtectionCrop  ;
     schema:identifier "9AA59D6B-D6AA-49BE-8BF8-A7A53BE54759"^^xsd:ID ;
     schema:isPartOf psm:209 ;
     schema:name "Nüsslisalat"@de,
@@ -2025,7 +2025,7 @@ psm:260 a cube:Observation ;
     schema:version 0 ;
     :cultivationType cultivationtype:260 .
 
-psm:261 a cube:Observation ;
+psm:261 a :PlantProtectionCrop  ;
     schema:identifier "A1B43C0A-8077-47D4-9171-8E6B2C9A95C4"^^xsd:ID ;
     schema:name "Rosenwurz"@de,
         "Rhodiola rosea"@en,
@@ -2034,7 +2034,7 @@ psm:261 a cube:Observation ;
     schema:version 0 ;
     :cultivationType cultivationtype:261 .
 
-psm:262 a cube:Observation ;
+psm:262 a :PlantProtectionCrop  ;
     schema:identifier "9650E36A-38F4-4375-9594-25785BACE1DC"^^xsd:ID ;
     schema:name "Traubensilberkerze"@de,
         "actaea racemosa"@en,
@@ -2043,7 +2043,7 @@ psm:262 a cube:Observation ;
     schema:version 0 ;
     :cultivationType cultivationtype:262 .
 
-psm:263 a cube:Observation ;
+psm:263 a :PlantProtectionCrop  ;
     schema:identifier "BA6FCA8F-68B8-4408-A267-2546B1FA5764"^^xsd:ID ;
     schema:isPartOf psm:62 ;
     schema:name "Lippenblütler (Labiatae)"@de,
@@ -2052,7 +2052,7 @@ psm:263 a cube:Observation ;
     schema:version 0 ;
     :cultivationType cultivationtype:263 .
 
-psm:264 a cube:Observation ;
+psm:264 a :PlantProtectionCrop  ;
     schema:identifier "BB923645-6E65-48EE-9C64-DA2232EEE7EF"^^xsd:ID ;
     schema:isPartOf psm:48 ;
     schema:name "Rettich"@de,
@@ -2061,7 +2061,7 @@ psm:264 a cube:Observation ;
     schema:version 0 ;
     :cultivationType cultivationtype:264 .
 
-psm:265 a cube:Observation ;
+psm:265 a :PlantProtectionCrop  ;
     schema:identifier "B02E0EFA-B8AF-425A-A779-6A4DFE8D4172"^^xsd:ID ;
     schema:isPartOf psm:173 ;
     schema:name "Kopfsalat"@de,
@@ -2070,7 +2070,7 @@ psm:265 a cube:Observation ;
     schema:version 0 ;
     :cultivationType cultivationtype:265 .
 
-psm:266 a cube:Observation ;
+psm:266 a :PlantProtectionCrop  ;
     schema:identifier "AB1C4E54-EE4E-4414-8282-A3431F321DCD"^^xsd:ID ;
     schema:isPartOf psm:178 ;
     schema:name "TestKultur 12"@de,
@@ -2080,7 +2080,7 @@ psm:266 a cube:Observation ;
     schema:version 0 ;
     :cultivationType cube:Undefined .
 
-psm:267 a cube:Observation ;
+psm:267 a :PlantProtectionCrop  ;
     schema:identifier "A3E943A5-C6D8-4CB0-A069-85BFC48E8B8A"^^xsd:ID ;
     schema:name "Gojibeere"@de,
         "Goji berry, wolfberry"@en,
@@ -2089,7 +2089,7 @@ psm:267 a cube:Observation ;
     schema:version 0 ;
     :cultivationType cultivationtype:267 .
 
-psm:268 a cube:Observation ;
+psm:268 a :PlantProtectionCrop  ;
     schema:identifier "730AACDC-B956-493D-8148-7520019CE0BC"^^xsd:ID ;
     schema:isPartOf psm:67 ;
     schema:name "Thymian"@de,
@@ -2098,7 +2098,7 @@ psm:268 a cube:Observation ;
     schema:version 0 ;
     :cultivationType cultivationtype:268 .
 
-psm:269 a cube:Observation ;
+psm:269 a :PlantProtectionCrop  ;
     schema:identifier "68688AEC-44E2-490B-AC80-E8DEDCC82B8F"^^xsd:ID ;
     schema:isPartOf psm:335 ;
     schema:name "Gemüsepaprika"@de,
@@ -2107,7 +2107,7 @@ psm:269 a cube:Observation ;
     schema:version 0 ;
     :cultivationType cultivationtype:269 .
 
-psm:27 a cube:Observation ;
+psm:27 a :PlantProtectionCrop  ;
     schema:identifier "3783A322-9E9C-44F6-B683-FE35221CA6AC"^^xsd:ID ;
     schema:name "Feldbau allg."@de,
         "grande culture en général"@fr,
@@ -2115,7 +2115,7 @@ psm:27 a cube:Observation ;
     schema:version 0 ;
     :cultivationType cultivationtype:1 .
 
-psm:270 a cube:Observation ;
+psm:270 a :PlantProtectionCrop  ;
     schema:identifier "46D3C073-CBD8-4B3A-A9AA-21785BA911CA"^^xsd:ID ;
     schema:isPartOf psm:335 ;
     schema:name "Peperoni"@de,
@@ -2124,7 +2124,7 @@ psm:270 a cube:Observation ;
     schema:version 0 ;
     :cultivationType cultivationtype:270 .
 
-psm:271 a cube:Observation ;
+psm:271 a :PlantProtectionCrop  ;
     schema:identifier "3702313F-95C6-4FE9-8B6B-C7CE3987CD18"^^xsd:ID ;
     schema:isPartOf psm:94 ;
     schema:name "Stangensellerie"@de,
@@ -2133,7 +2133,7 @@ psm:271 a cube:Observation ;
     schema:version 0 ;
     :cultivationType cultivationtype:271 .
 
-psm:272 a cube:Observation ;
+psm:272 a :PlantProtectionCrop  ;
     schema:identifier "18C6314C-C067-4E7F-AAB6-2DEF3F01DF9D"^^xsd:ID ;
     schema:isPartOf psm:94 ;
     schema:name "Suppensellerie"@de,
@@ -2142,7 +2142,7 @@ psm:272 a cube:Observation ;
     schema:version 0 ;
     :cultivationType cultivationtype:272 .
 
-psm:273 a cube:Observation ;
+psm:273 a :PlantProtectionCrop  ;
     schema:identifier "0D20E815-633E-4F38-AC93-7B6578B0483E"^^xsd:ID ;
     schema:isPartOf psm:327 ;
     schema:name "Knollenfenchel"@de,
@@ -2151,7 +2151,7 @@ psm:273 a cube:Observation ;
     schema:version 0 ;
     :cultivationType cultivationtype:273 .
 
-psm:274 a cube:Observation ;
+psm:274 a :PlantProtectionCrop  ;
     schema:identifier "404C1D02-5666-4AA3-8487-65A9EEE0B53D"^^xsd:ID ;
     schema:isPartOf psm:316 ;
     schema:name "Lupinen"@de,
@@ -2160,7 +2160,7 @@ psm:274 a cube:Observation ;
     schema:version 0 ;
     :cultivationType cultivationtype:538 .
 
-psm:275 a cube:Observation ;
+psm:275 a :PlantProtectionCrop  ;
     schema:identifier "F512809F-5CC7-44A2-A378-8FDAFA67CFEA"^^xsd:ID ;
     schema:isPartOf psm:175 ;
     schema:name "Pepino"@de,
@@ -2170,7 +2170,7 @@ psm:275 a cube:Observation ;
     schema:version 0 ;
     :cultivationType cultivationtype:275 .
 
-psm:276 a cube:Observation ;
+psm:276 a :PlantProtectionCrop  ;
     schema:identifier "CE13A930-22B8-44D6-98E4-97707B0F7F6C"^^xsd:ID ;
     schema:isPartOf psm:32 ;
     schema:name "Gewächshausgurken"@de,
@@ -2179,7 +2179,7 @@ psm:276 a cube:Observation ;
     schema:version 0 ;
     :cultivationType cultivationtype:276 .
 
-psm:277 a cube:Observation ;
+psm:277 a :PlantProtectionCrop  ;
     schema:identifier "DB98FC8E-5AFA-4434-9478-960124F960CA"^^xsd:ID ;
     schema:isPartOf psm:188 ;
     schema:name "Zwiebeln"@de,
@@ -2188,7 +2188,7 @@ psm:277 a cube:Observation ;
     schema:version 0 ;
     :cultivationType cultivationtype:277 .
 
-psm:278 a cube:Observation ;
+psm:278 a :PlantProtectionCrop  ;
     schema:identifier "CC9D982D-A99F-4143-8298-BC029BD1D1AD"^^xsd:ID ;
     schema:isPartOf psm:48 ;
     schema:name "Rucola"@de,
@@ -2198,7 +2198,7 @@ psm:278 a cube:Observation ;
     schema:version 0 ;
     :cultivationType cultivationtype:278 .
 
-psm:279 a cube:Observation ;
+psm:279 a :PlantProtectionCrop  ;
     schema:identifier "C38D7DE4-C804-4F7C-AA2F-A536D03E0DFC"^^xsd:ID ;
     schema:isPartOf psm:83 ;
     schema:name "Wolliger Fingerhut"@de,
@@ -2208,7 +2208,7 @@ psm:279 a cube:Observation ;
     schema:version 0 ;
     :cultivationType cultivationtype:279 .
 
-psm:28 a cube:Observation ;
+psm:28 a :PlantProtectionCrop  ;
     schema:identifier "36D9AFE2-7506-48CE-BA39-EFD54535294A"^^xsd:ID ;
     schema:isPartOf psm:160 ;
     schema:name "Schwarze Apfelbeere"@de,
@@ -2217,7 +2217,7 @@ psm:28 a cube:Observation ;
     schema:version 0 ;
     :cultivationType cultivationtype:28 .
 
-psm:280 a cube:Observation ;
+psm:280 a :PlantProtectionCrop  ;
     schema:identifier "C763D817-B4AC-43DB-9C6E-A262CC32F400"^^xsd:ID ;
     schema:isPartOf psm:305 ;
     schema:name "Futterrübe"@de,
@@ -2226,7 +2226,7 @@ psm:280 a cube:Observation ;
     schema:version 0 ;
     :cultivationType cultivationtype:523 .
 
-psm:281 a cube:Observation ;
+psm:281 a :PlantProtectionCrop  ;
     schema:identifier "C83340F9-9BA9-4C7A-B414-A691C4853D31"^^xsd:ID ;
     schema:name "--"@de,
         "---"@fr,
@@ -2234,7 +2234,7 @@ psm:281 a cube:Observation ;
     schema:version 0 ;
     :cultivationType cube:Undefined .
 
-psm:282 a cube:Observation ;
+psm:282 a :PlantProtectionCrop  ;
     schema:identifier "DA5835F6-C295-4A4F-829D-007B1FA50A6D"^^xsd:ID ;
     schema:isPartOf psm:48 ;
     schema:name "Stielmus"@de,
@@ -2243,7 +2243,7 @@ psm:282 a cube:Observation ;
     schema:version 0 ;
     :cultivationType cultivationtype:282 .
 
-psm:283 a cube:Observation ;
+psm:283 a :PlantProtectionCrop  ;
     schema:identifier "CF9B4B3C-DCDC-4E2E-A613-D784936842D2"^^xsd:ID ;
     schema:isPartOf psm:50 ;
     schema:name "Kirsche"@de,
@@ -2252,7 +2252,7 @@ psm:283 a cube:Observation ;
     schema:version 0 ;
     :cultivationType cultivationtype:704 .
 
-psm:284 a cube:Observation ;
+psm:284 a :PlantProtectionCrop  ;
     schema:identifier "E36FADB4-A022-42A0-81CF-F041CABB93A4"^^xsd:ID ;
     schema:isPartOf psm:64 ;
     schema:name "Frässaaten"@de,
@@ -2261,7 +2261,7 @@ psm:284 a cube:Observation ;
     schema:version 0 ;
     :cultivationType cultivationtype:284 .
 
-psm:285 a cube:Observation ;
+psm:285 a :PlantProtectionCrop  ;
     schema:identifier "DA71526F-AC1D-40F1-8EF5-109E3F3FFD76"^^xsd:ID ;
     schema:name "Obstbau allg."@de,
         "arboriculture en général"@fr,
@@ -2269,7 +2269,7 @@ psm:285 a cube:Observation ;
     schema:version 0 ;
     :cultivationType cultivationtype:5 .
 
-psm:286 a cube:Observation ;
+psm:286 a :PlantProtectionCrop  ;
     schema:identifier "E58E502E-BECD-44CB-96A2-3A6771D8A7B7"^^xsd:ID ;
     schema:isPartOf psm:316 ;
     schema:name "Raps"@de,
@@ -2278,7 +2278,7 @@ psm:286 a cube:Observation ;
     schema:version 0 ;
     :cultivationType cultivationtype:494 .
 
-psm:287 a cube:Observation ;
+psm:287 a :PlantProtectionCrop  ;
     schema:identifier "D51188F1-9F8F-46E6-8F5B-550A7D45A4BE"^^xsd:ID ;
     schema:name "Melisse"@de,
         "mélisse"@fr,
@@ -2286,7 +2286,7 @@ psm:287 a cube:Observation ;
     schema:version 0 ;
     :cultivationType cultivationtype:287 .
 
-psm:288 a cube:Observation ;
+psm:288 a :PlantProtectionCrop  ;
     schema:identifier "D63D73AC-87B1-41F7-82AC-D1DFF12F6704"^^xsd:ID ;
     schema:isPartOf psm:326 ;
     schema:name "Himbeere"@de,
@@ -2295,7 +2295,7 @@ psm:288 a cube:Observation ;
     schema:version 0 ;
     :cultivationType cultivationtype:288 .
 
-psm:289 a cube:Observation ;
+psm:289 a :PlantProtectionCrop  ;
     schema:identifier "F6A02973-2AF5-47AF-B99D-FFAD9A24BCB4"^^xsd:ID ;
     schema:isPartOf psm:40 ;
     schema:name "Rondini"@de,
@@ -2304,7 +2304,7 @@ psm:289 a cube:Observation ;
     schema:version 0 ;
     :cultivationType cultivationtype:289 .
 
-psm:29 a cube:Observation ;
+psm:29 a :PlantProtectionCrop  ;
     schema:identifier "36EC3084-D6AE-494D-A5B2-EC39DCC4F412"^^xsd:ID ;
     schema:name "Anemone"@de,
         "anémone"@fr,
@@ -2312,7 +2312,7 @@ psm:29 a cube:Observation ;
     schema:version 0 ;
     :cultivationType cultivationtype:408 .
 
-psm:290 a cube:Observation ;
+psm:290 a :PlantProtectionCrop  ;
     schema:identifier "EB0C465C-50B7-4DC0-914B-ABE4C284A907"^^xsd:ID ;
     schema:isPartOf psm:62 ;
     schema:name "Kohlgemüse"@de,
@@ -2321,7 +2321,7 @@ psm:290 a cube:Observation ;
     schema:version 0 ;
     :cultivationType cultivationtype:290 .
 
-psm:291 a cube:Observation ;
+psm:291 a :PlantProtectionCrop  ;
     schema:identifier "B6669854-1833-4BBC-A931-E67505848EA7"^^xsd:ID ;
     schema:isPartOf psm:163,
         psm:71 ;
@@ -2331,7 +2331,7 @@ psm:291 a cube:Observation ;
     schema:version 0 ;
     :cultivationType cultivationtype:1006 .
 
-psm:292 a cube:Observation ;
+psm:292 a :PlantProtectionCrop  ;
     schema:identifier "75047A9C-12E2-4BAC-89D8-B14BC4C6B100"^^xsd:ID ;
     schema:name "Holzpaletten, Packholz, Stammholz"@de,
         "Palette en bois, bois d'emballage, bois en général"@fr,
@@ -2339,7 +2339,7 @@ psm:292 a cube:Observation ;
     schema:version 0 ;
     :cultivationType cube:Undefined .
 
-psm:293 a cube:Observation ;
+psm:293 a :PlantProtectionCrop  ;
     schema:identifier "7F20F06C-C950-49B9-A78F-9E2F696B079E"^^xsd:ID ;
     schema:name "Nichtkulturland allg."@de,
         "domaine non agricole en général"@fr,
@@ -2347,7 +2347,7 @@ psm:293 a cube:Observation ;
     schema:version 0 ;
     :cultivationType cube:Undefined .
 
-psm:294 a cube:Observation ;
+psm:294 a :PlantProtectionCrop  ;
     schema:identifier "71D9FB13-5AE4-42C3-9F84-956B16C379C1"^^xsd:ID ;
     schema:name "Kerbelrübe"@de,
         "Cerfeuil tubéreux"@fr,
@@ -2355,7 +2355,7 @@ psm:294 a cube:Observation ;
     schema:version 0 ;
     :cultivationType cultivationtype:294 .
 
-psm:295 a cube:Observation ;
+psm:295 a :PlantProtectionCrop  ;
     schema:identifier "710CC0C8-B138-4B31-9975-4DA04AF67792"^^xsd:ID ;
     schema:name "Majoran"@de,
         "Marjoram"@en,
@@ -2364,7 +2364,7 @@ psm:295 a cube:Observation ;
     schema:version 0 ;
     :cultivationType cultivationtype:295 .
 
-psm:296 a cube:Observation ;
+psm:296 a :PlantProtectionCrop  ;
     schema:identifier "3FEAB48F-0D66-4814-B3E3-C4BC0AB749B3"^^xsd:ID ;
     schema:name "Forstwirtschaft allg."@de,
         "sylviculture en général"@fr,
@@ -2372,7 +2372,7 @@ psm:296 a cube:Observation ;
     schema:version 0 ;
     :cultivationType cultivationtype:901 .
 
-psm:297 a cube:Observation ;
+psm:297 a :PlantProtectionCrop  ;
     schema:identifier "399AC89E-29BB-44AD-8B1F-0B2F327D5230"^^xsd:ID ;
     schema:isPartOf psm:235 ;
     schema:name "Melonen"@de,
@@ -2381,7 +2381,7 @@ psm:297 a cube:Observation ;
     schema:version 0 ;
     :cultivationType cultivationtype:297 .
 
-psm:298 a cube:Observation ;
+psm:298 a :PlantProtectionCrop  ;
     schema:identifier "3A522DC8-E6D3-426D-AA99-65C148ED1A84"^^xsd:ID ;
     schema:isPartOf psm:131 ;
     schema:name "Stachelbeere"@de,
@@ -2390,7 +2390,7 @@ psm:298 a cube:Observation ;
     schema:version 0 ;
     :cultivationType cultivationtype:298 .
 
-psm:299 a cube:Observation ;
+psm:299 a :PlantProtectionCrop  ;
     schema:identifier "37059300-8031-4A64-B75C-7490288E32BA"^^xsd:ID ;
     schema:isPartOf psm:67 ;
     schema:name "Minze"@de,
@@ -2400,7 +2400,7 @@ psm:299 a cube:Observation ;
     schema:version 0 ;
     :cultivationType cultivationtype:299 .
 
-psm:3 a cube:Observation ;
+psm:3 a :PlantProtectionCrop  ;
     schema:identifier "A8BAC5BB-239F-4EE0-8CE2-F55590DA3FC0"^^xsd:ID ;
     schema:isPartOf psm:47 ;
     schema:name "Bohnen"@de,
@@ -2409,7 +2409,7 @@ psm:3 a cube:Observation ;
     schema:version 0 ;
     :cultivationType cultivationtype:476 .
 
-psm:30 a cube:Observation ;
+psm:30 a :PlantProtectionCrop  ;
     schema:identifier "2F7BD13A-BAA5-4708-83C6-17D44E57EA4D"^^xsd:ID ;
     schema:isPartOf psm:16,
         psm:72 ;
@@ -2419,7 +2419,7 @@ psm:30 a cube:Observation ;
     schema:version 0 ;
     :cultivationType cultivationtype:30 .
 
-psm:300 a cube:Observation ;
+psm:300 a :PlantProtectionCrop  ;
     schema:identifier "39D599AA-B93E-4AC2-970E-5A99A3113572"^^xsd:ID ;
     schema:isPartOf psm:62 ;
     schema:name "Gänsefussgewächse (Chenopodiaceae)"@de,
@@ -2428,7 +2428,7 @@ psm:300 a cube:Observation ;
     schema:version 0 ;
     :cultivationType cultivationtype:300 .
 
-psm:301 a cube:Observation ;
+psm:301 a :PlantProtectionCrop  ;
     schema:identifier "19C5BA72-A0D5-4409-8D05-0A7C9D821E20"^^xsd:ID ;
     schema:isPartOf psm:48 ;
     schema:name "Brunnenkresse"@de,
@@ -2437,7 +2437,7 @@ psm:301 a cube:Observation ;
     schema:version 0 ;
     :cultivationType cultivationtype:301 .
 
-psm:302 a cube:Observation ;
+psm:302 a :PlantProtectionCrop  ;
     schema:identifier "0DAB25B6-C3AA-430B-BF83-05FA66D889A4"^^xsd:ID ;
     schema:isPartOf psm:67 ;
     schema:name "Koriander"@de,
@@ -2446,7 +2446,7 @@ psm:302 a cube:Observation ;
     schema:version 0 ;
     :cultivationType cultivationtype:302 .
 
-psm:303 a cube:Observation ;
+psm:303 a :PlantProtectionCrop  ;
     schema:identifier "048FDB44-710A-4801-849C-72F1A458DB82"^^xsd:ID ;
     schema:isPartOf psm:73 ;
     schema:name "Triticale"@de,
@@ -2455,7 +2455,7 @@ psm:303 a cube:Observation ;
     schema:version 0 ;
     :cultivationType cultivationtype:505 .
 
-psm:304 a cube:Observation ;
+psm:304 a :PlantProtectionCrop  ;
     schema:identifier "07A12E5B-DB0B-4421-A215-E306768AC0BE"^^xsd:ID ;
     schema:isPartOf psm:85 ;
     schema:name "Tomaten Spezialitäten"@de,
@@ -2464,7 +2464,7 @@ psm:304 a cube:Observation ;
     schema:version 0 ;
     :cultivationType cultivationtype:304 .
 
-psm:305 a cube:Observation ;
+psm:305 a :PlantProtectionCrop  ;
     schema:identifier "086E34F3-82E5-4F92-9224-41C9F7529E70"^^xsd:ID ;
     schema:isPartOf psm:316 ;
     schema:name "Futter- und Zuckerrüben"@de,
@@ -2473,7 +2473,7 @@ psm:305 a cube:Observation ;
     schema:version 0 ;
     :cultivationType cultivationtype:305 .
 
-psm:306 a cube:Observation ;
+psm:306 a :PlantProtectionCrop  ;
     schema:identifier "21228D46-5B00-4CDD-9C71-48C0A0B21C78"^^xsd:ID ;
     schema:isPartOf psm:327 ;
     schema:name "Wurzelpetersilie"@de,
@@ -2483,7 +2483,7 @@ psm:306 a cube:Observation ;
     schema:version 0 ;
     :cultivationType cultivationtype:306 .
 
-psm:307 a cube:Observation ;
+psm:307 a :PlantProtectionCrop  ;
     schema:identifier "2260B6A9-FC51-4F50-8E8F-D39BC6D5DA3A"^^xsd:ID ;
     schema:name "Kichererbse"@de,
         "chickpea"@en,
@@ -2492,7 +2492,7 @@ psm:307 a cube:Observation ;
     schema:version 0 ;
     :cultivationType cultivationtype:307 .
 
-psm:308 a cube:Observation ;
+psm:308 a :PlantProtectionCrop  ;
     schema:identifier "14B19DFD-331F-4C30-8724-8EDDF8E2D0D4"^^xsd:ID ;
     schema:isPartOf psm:67 ;
     schema:name "Rosmarin"@de,
@@ -2502,7 +2502,7 @@ psm:308 a cube:Observation ;
     schema:version 0 ;
     :cultivationType cultivationtype:308 .
 
-psm:309 a cube:Observation ;
+psm:309 a :PlantProtectionCrop  ;
     schema:identifier "0F5F1FEE-084C-4961-A76F-82F9B17B2635"^^xsd:ID ;
     schema:isPartOf psm:61 ;
     schema:name "Kernobst"@de,
@@ -2511,7 +2511,7 @@ psm:309 a cube:Observation ;
     schema:version 0 ;
     :cultivationType cultivationtype:309 .
 
-psm:31 a cube:Observation ;
+psm:31 a :PlantProtectionCrop  ;
     schema:identifier "307A62EA-67D6-4D28-9CF7-F1218C9BE2CD"^^xsd:ID ;
     schema:isPartOf psm:50 ;
     schema:name "Pfirsich / Nektarine"@de,
@@ -2520,7 +2520,7 @@ psm:31 a cube:Observation ;
     schema:version 0 ;
     :cultivationType cultivationtype:31 .
 
-psm:310 a cube:Observation ;
+psm:310 a :PlantProtectionCrop  ;
     schema:identifier "10642620-4F7B-4E5E-8F38-D73914354014"^^xsd:ID ;
     schema:isPartOf psm:329 ;
     schema:name "Schnittblumen"@de,
@@ -2529,7 +2529,7 @@ psm:310 a cube:Observation ;
     schema:version 0 ;
     :cultivationType cultivationtype:310 .
 
-psm:311 a cube:Observation ;
+psm:311 a :PlantProtectionCrop  ;
     schema:identifier "1A1D511B-4ABD-44F2-8BB5-55192F5310D2"^^xsd:ID ;
     schema:isPartOf psm:67 ;
     schema:name "Petersilie"@de,
@@ -2538,7 +2538,7 @@ psm:311 a cube:Observation ;
     schema:version 0 ;
     :cultivationType cultivationtype:311 .
 
-psm:312 a cube:Observation ;
+psm:312 a :PlantProtectionCrop  ;
     schema:identifier "1B9B39A9-D742-4E8D-A88E-280B65C4B913"^^xsd:ID ;
     schema:isPartOf psm:329 ;
     schema:name "Blumenknollen"@de,
@@ -2547,14 +2547,14 @@ psm:312 a cube:Observation ;
     schema:version 0 ;
     :cultivationType cultivationtype:312 .
 
-psm:313 a cube:Observation ;
+psm:313 a :PlantProtectionCrop  ;
     schema:identifier "1575BC21-D089-4248-99A6-676F14E1309F"^^xsd:ID ;
     schema:name "allg. Forstwirtschaft"@de,
         "domaine app. sylviculture"@fr ;
     schema:version 0 ;
     :cultivationType cultivationtype:901 .
 
-psm:314 a cube:Observation ;
+psm:314 a :PlantProtectionCrop  ;
     schema:identifier "3447F4C9-2E90-437F-A240-0462AFEDF2B5"^^xsd:ID ;
     schema:isPartOf psm:40 ;
     schema:name "Patisson"@de,
@@ -2563,7 +2563,7 @@ psm:314 a cube:Observation ;
     schema:version 0 ;
     :cultivationType cultivationtype:314 .
 
-psm:315 a cube:Observation ;
+psm:315 a :PlantProtectionCrop  ;
     schema:identifier "34753E17-C34D-4D0B-88A0-91143DADABB2"^^xsd:ID ;
     schema:isPartOf psm:145,
         psm:310 ;
@@ -2573,14 +2573,14 @@ psm:315 a cube:Observation ;
     schema:version 0 ;
     :cultivationType cultivationtype:315 .
 
-psm:316 a cube:Observation ;
+psm:316 a :PlantProtectionCrop  ;
     schema:identifier "1DD3F253-4B23-4B69-BFB1-1C24CE7D5508"^^xsd:ID ;
     schema:name "allg. Feldbau"@de,
         "domaine app. grande culture"@fr ;
     schema:version 0 ;
     :cultivationType cultivationtype:1 .
 
-psm:317 a cube:Observation ;
+psm:317 a :PlantProtectionCrop  ;
     schema:identifier "17CE2494-D0C9-484B-A91E-15B7B04733FD"^^xsd:ID ;
     schema:isPartOf psm:62 ;
     schema:name "Portulakgewächse (Portulacaceae)"@de,
@@ -2589,7 +2589,7 @@ psm:317 a cube:Observation ;
     schema:version 0 ;
     :cultivationType cultivationtype:317 .
 
-psm:318 a cube:Observation ;
+psm:318 a :PlantProtectionCrop  ;
     schema:identifier "230F7417-5500-4124-B273-95AA1FFB940B"^^xsd:ID ;
     schema:name "Ranunkel"@de,
         "ranunculus"@fr,
@@ -2597,7 +2597,7 @@ psm:318 a cube:Observation ;
     schema:version 0 ;
     :cultivationType cultivationtype:318 .
 
-psm:319 a cube:Observation ;
+psm:319 a :PlantProtectionCrop  ;
     schema:identifier "01AFF6EB-9C8D-4D0D-B225-0BA07B59A72F"^^xsd:ID ;
     schema:isPartOf psm:316 ;
     schema:name "Hopfen"@de,
@@ -2606,7 +2606,7 @@ psm:319 a cube:Observation ;
     schema:version 0 ;
     :cultivationType cultivationtype:708 .
 
-psm:32 a cube:Observation ;
+psm:32 a :PlantProtectionCrop  ;
     schema:identifier "30F9F737-0A18-43EC-AF88-F28940E567F1"^^xsd:ID ;
     schema:isPartOf psm:235 ;
     schema:name "Gurken"@de,
@@ -2615,7 +2615,7 @@ psm:32 a cube:Observation ;
     schema:version 0 ;
     :cultivationType cultivationtype:32 .
 
-psm:320 a cube:Observation ;
+psm:320 a :PlantProtectionCrop  ;
     schema:identifier "E786D43D-444B-49D6-B0D0-294265F91403"^^xsd:ID ;
     schema:isPartOf psm:95 ;
     schema:name "Salate (Asteraceae)"@de,
@@ -2624,7 +2624,7 @@ psm:320 a cube:Observation ;
     schema:version 0 ;
     :cultivationType cultivationtype:320 .
 
-psm:321 a cube:Observation ;
+psm:321 a :PlantProtectionCrop  ;
     schema:identifier "AB0798FE-64B8-49A2-8E75-14467EB7AB58"^^xsd:ID ;
     schema:isPartOf psm:300 ;
     schema:name "Mangold"@de,
@@ -2633,7 +2633,7 @@ psm:321 a cube:Observation ;
     schema:version 0 ;
     :cultivationType cultivationtype:321 .
 
-psm:322 a cube:Observation ;
+psm:322 a :PlantProtectionCrop  ;
     schema:identifier "AE465EA2-A950-4661-B631-D5A267B2F076"^^xsd:ID ;
     schema:name "Brachland"@de,
         "friche"@fr,
@@ -2641,7 +2641,7 @@ psm:322 a cube:Observation ;
     schema:version 0 ;
     :cultivationType cultivationtype:322 .
 
-psm:323 a cube:Observation ;
+psm:323 a :PlantProtectionCrop  ;
     schema:identifier "8DFDE2D1-C004-4C25-BF54-21CF7C815232"^^xsd:ID ;
     schema:isPartOf psm:188 ;
     schema:name "Lauch"@de,
@@ -2650,7 +2650,7 @@ psm:323 a cube:Observation ;
     schema:version 0 ;
     :cultivationType cultivationtype:323 .
 
-psm:324 a cube:Observation ;
+psm:324 a :PlantProtectionCrop  ;
     schema:identifier "4A22B9D3-747C-4323-A852-1CB1F6ADB680"^^xsd:ID ;
     schema:isPartOf psm:25 ;
     schema:name "Blumenkohle"@de,
@@ -2660,7 +2660,7 @@ psm:324 a cube:Observation ;
     schema:version 0 ;
     :cultivationType cultivationtype:324 .
 
-psm:325 a cube:Observation ;
+psm:325 a :PlantProtectionCrop  ;
     schema:identifier "394AE687-29A0-4BA6-B0B9-D7DFB0C08FCE"^^xsd:ID ;
     schema:isPartOf psm:20 ;
     schema:name "Pak-Choi"@de,
@@ -2669,7 +2669,7 @@ psm:325 a cube:Observation ;
     schema:version 0 ;
     :cultivationType cultivationtype:325 .
 
-psm:326 a cube:Observation ;
+psm:326 a :PlantProtectionCrop  ;
     schema:identifier "43F8091A-A333-40F5-8845-FF83398B9AC3"^^xsd:ID ;
     schema:isPartOf psm:160 ;
     schema:name "Rubus Arten"@de,
@@ -2678,7 +2678,7 @@ psm:326 a cube:Observation ;
     schema:version 0 ;
     :cultivationType cultivationtype:326 .
 
-psm:327 a cube:Observation ;
+psm:327 a :PlantProtectionCrop  ;
     schema:identifier "5276BCA7-CEA5-4B6D-90E3-52F3A0532490"^^xsd:ID ;
     schema:isPartOf psm:62 ;
     schema:name "Doldenblütler (Apiaceae)"@de,
@@ -2687,7 +2687,7 @@ psm:327 a cube:Observation ;
     schema:version 0 ;
     :cultivationType cultivationtype:327 .
 
-psm:328 a cube:Observation ;
+psm:328 a :PlantProtectionCrop  ;
     schema:identifier "A4BC1F92-959A-4449-A039-B98E3ABCD9B1"^^xsd:ID ;
     schema:isPartOf psm:103 ;
     schema:name "Schnittsalat"@de,
@@ -2696,7 +2696,7 @@ psm:328 a cube:Observation ;
     schema:version 0 ;
     :cultivationType cultivationtype:328 .
 
-psm:329 a cube:Observation ;
+psm:329 a :PlantProtectionCrop  ;
     schema:identifier "890D8A5E-BF86-4B2D-9B98-45B779D80F7F"^^xsd:ID ;
     schema:name "Zierpflanzen allg."@de,
         "culture ornementale en général"@fr,
@@ -2704,7 +2704,7 @@ psm:329 a cube:Observation ;
     schema:version 0 ;
     :cultivationType cultivationtype:329 .
 
-psm:33 a cube:Observation ;
+psm:33 a :PlantProtectionCrop  ;
     schema:identifier "309E5D09-3084-40C6-88F2-D4A14345136C"^^xsd:ID ;
     schema:isPartOf psm:62 ;
     schema:name "Baldrian"@de,
@@ -2714,7 +2714,7 @@ psm:33 a cube:Observation ;
     schema:version 0 ;
     :cultivationType cultivationtype:33 .
 
-psm:330 a cube:Observation ;
+psm:330 a :PlantProtectionCrop  ;
     schema:identifier "8512D352-73CC-4535-9469-965AAF1FD0B1"^^xsd:ID ;
     schema:name "Gewürzfenchel"@de,
         "fenouil aromatique"@fr,
@@ -2722,7 +2722,7 @@ psm:330 a cube:Observation ;
     schema:version 0 ;
     :cultivationType cultivationtype:330 .
 
-psm:331 a cube:Observation ;
+psm:331 a :PlantProtectionCrop  ;
     schema:identifier "8AFA14F8-CCE3-4012-BD12-9D690EBAE1AD"^^xsd:ID ;
     schema:isPartOf psm:324 ;
     schema:name "Romanesco"@de,
@@ -2731,7 +2731,7 @@ psm:331 a cube:Observation ;
     schema:version 0 ;
     :cultivationType cultivationtype:331 .
 
-psm:332 a cube:Observation ;
+psm:332 a :PlantProtectionCrop  ;
     schema:identifier "3BEFA6F7-0D34-4E29-8207-85E9D5783ECC"^^xsd:ID ;
     schema:isPartOf psm:329 ;
     schema:name "Baumschule"@de,
@@ -2740,7 +2740,7 @@ psm:332 a cube:Observation ;
     schema:version 0 ;
     :cultivationType cultivationtype:1065 .
 
-psm:333 a cube:Observation ;
+psm:333 a :PlantProtectionCrop  ;
     schema:identifier "19CC4F57-CB08-4970-BEDB-3DB2B2CB1034"^^xsd:ID ;
     schema:isPartOf psm:296 ;
     schema:name "Wald"@de,
@@ -2749,7 +2749,7 @@ psm:333 a cube:Observation ;
     schema:version 0 ;
     :cultivationType cultivationtype:901 .
 
-psm:334 a cube:Observation ;
+psm:334 a :PlantProtectionCrop  ;
     schema:identifier "0E2847EB-CEFD-4640-82EB-F09F3F1A5E13"^^xsd:ID ;
     schema:name "Oregano"@de,
         "Oregano"@en,
@@ -2758,7 +2758,7 @@ psm:334 a cube:Observation ;
     schema:version 0 ;
     :cultivationType cultivationtype:334 .
 
-psm:335 a cube:Observation ;
+psm:335 a :PlantProtectionCrop  ;
     schema:identifier "096444CD-43E6-41F9-8914-2E7DADA4C801"^^xsd:ID ;
     schema:isPartOf psm:175 ;
     schema:name "Paprika"@de,
@@ -2767,7 +2767,7 @@ psm:335 a cube:Observation ;
     schema:version 0 ;
     :cultivationType cultivationtype:335 .
 
-psm:336 a cube:Observation ;
+psm:336 a :PlantProtectionCrop  ;
     schema:identifier "17B69B05-E650-4A6F-815A-D6DA55A92CDB"^^xsd:ID ;
     schema:name "Tabak produzierende Betriebe"@de,
         "Les exploitations tabacoles"@fr,
@@ -2775,7 +2775,7 @@ psm:336 a cube:Observation ;
     schema:version 0 ;
     :cultivationType cube:Undefined .
 
-psm:34 a cube:Observation ;
+psm:34 a :PlantProtectionCrop  ;
     schema:identifier "2E38C972-4160-4D2B-8ED2-3B48FC781EF0"^^xsd:ID ;
     schema:isPartOf psm:108,
         psm:145 ;
@@ -2785,7 +2785,7 @@ psm:34 a cube:Observation ;
     schema:version 0 ;
     :cultivationType cultivationtype:34 .
 
-psm:35 a cube:Observation ;
+psm:35 a :PlantProtectionCrop  ;
     schema:identifier "31A0539F-1D4C-4BCF-876F-215CEBC4C864"^^xsd:ID ;
     schema:isPartOf psm:62 ;
     schema:name "Gewürz- und Medizinalkräuter"@de,
@@ -2794,7 +2794,7 @@ psm:35 a cube:Observation ;
     schema:version 0 ;
     :cultivationType cultivationtype:35 .
 
-psm:36 a cube:Observation ;
+psm:36 a :PlantProtectionCrop  ;
     schema:identifier "302E5676-26A3-41EB-980F-2B6BDE117D3A"^^xsd:ID ;
     schema:isPartOf psm:145 ;
     schema:name "Zierkürbis"@de,
@@ -2803,7 +2803,7 @@ psm:36 a cube:Observation ;
     schema:version 0 ;
     :cultivationType cultivationtype:36 .
 
-psm:37 a cube:Observation ;
+psm:37 a :PlantProtectionCrop  ;
     schema:identifier "0A88EFE2-B85E-4BF7-9C38-AEE8CB2BFE42"^^xsd:ID ;
     schema:isPartOf psm:67 ;
     schema:name "Ysop"@de,
@@ -2812,7 +2812,7 @@ psm:37 a cube:Observation ;
     schema:version 0 ;
     :cultivationType cultivationtype:37 .
 
-psm:38 a cube:Observation ;
+psm:38 a :PlantProtectionCrop  ;
     schema:identifier "13BB4B9E-6CEE-4729-AE29-8A4380EB33B0"^^xsd:ID ;
     schema:isPartOf psm:313 ;
     schema:name "Liegendes Rundholz im Wald und auf Lagerplätzen"@de,
@@ -2821,7 +2821,7 @@ psm:38 a cube:Observation ;
     schema:version 0 ;
     :cultivationType cube:Undefined .
 
-psm:39 a cube:Observation ;
+psm:39 a :PlantProtectionCrop  ;
     schema:identifier "037E11B2-128A-4194-9A5B-A3E980AE4113"^^xsd:ID ;
     schema:isPartOf psm:188 ;
     schema:name "Knoblauch"@de,
@@ -2830,7 +2830,7 @@ psm:39 a cube:Observation ;
     schema:version 0 ;
     :cultivationType cultivationtype:39 .
 
-psm:4 a cube:Observation ;
+psm:4 a :PlantProtectionCrop  ;
     schema:identifier "B85EF4C2-C22E-4A5A-A431-98DC8F621D92"^^xsd:ID ;
     schema:isPartOf psm:329 ;
     schema:name "Blumenzwiebeln"@de,
@@ -2839,7 +2839,7 @@ psm:4 a cube:Observation ;
     schema:version 0 ;
     :cultivationType cultivationtype:329 .
 
-psm:40 a cube:Observation ;
+psm:40 a :PlantProtectionCrop  ;
     schema:identifier "FE69D926-4BE1-4C67-840E-30C3D299442E"^^xsd:ID ;
     schema:isPartOf psm:235 ;
     schema:name "Kürbisse mit geniessbarer Schale"@de,
@@ -2848,7 +2848,7 @@ psm:40 a cube:Observation ;
     schema:version 0 ;
     :cultivationType cultivationtype:40 .
 
-psm:41 a cube:Observation ;
+psm:41 a :PlantProtectionCrop  ;
     schema:identifier "FA0F7C48-BF78-49B0-9046-FBB5ABB4BF75"^^xsd:ID ;
     schema:isPartOf psm:309 ;
     schema:name "Birne / Nashi"@de,
@@ -2857,7 +2857,7 @@ psm:41 a cube:Observation ;
     schema:version 2 ;
     :cultivationType cultivationtype:41 .
 
-psm:42 a cube:Observation ;
+psm:42 a :PlantProtectionCrop  ;
     schema:identifier "EF29B430-95C5-45D4-A812-DCCE046E1B8E"^^xsd:ID ;
     schema:name "Süsskartoffel"@de,
         "Sweet potato"@en,
@@ -2866,7 +2866,7 @@ psm:42 a cube:Observation ;
     schema:version 2 ;
     :cultivationType cultivationtype:1137 .
 
-psm:43 a cube:Observation ;
+psm:43 a :PlantProtectionCrop  ;
     schema:identifier "FFDDDA7D-B340-473C-94F4-841272B602FA"^^xsd:ID ;
     schema:isPartOf psm:131,
         psm:266 ;
@@ -2876,14 +2876,14 @@ psm:43 a cube:Observation ;
     schema:version 0 ;
     :cultivationType cultivationtype:43 .
 
-psm:44 a cube:Observation ;
+psm:44 a :PlantProtectionCrop  ;
     schema:identifier "FD7AB34C-F432-445D-9440-F44FDAB8422C"^^xsd:ID ;
     schema:name "allg. Wiesen und Weiden"@de,
         "domaine app. prairies et paturages"@fr ;
     schema:version 0 ;
     :cultivationType cultivationtype:116 .
 
-psm:45 a cube:Observation ;
+psm:45 a :PlantProtectionCrop  ;
     schema:identifier "D95CD842-A5BC-4DAA-935D-F009DA7BA748"^^xsd:ID ;
     schema:isPartOf psm:118 ;
     schema:name "Fichte"@de,
@@ -2892,7 +2892,7 @@ psm:45 a cube:Observation ;
     schema:version 0 ;
     :cultivationType cultivationtype:45 .
 
-psm:46 a cube:Observation ;
+psm:46 a :PlantProtectionCrop  ;
     schema:identifier "DAF00AE7-5272-4E07-9A66-E9F9BD8FEE43"^^xsd:ID ;
     schema:isPartOf psm:145,
         psm:310 ;
@@ -2902,7 +2902,7 @@ psm:46 a cube:Observation ;
     schema:version 0 ;
     :cultivationType cultivationtype:46 .
 
-psm:47 a cube:Observation ;
+psm:47 a :PlantProtectionCrop  ;
     schema:identifier "DB4E4C8B-016C-4C31-8DC5-587A9F1F8FFD"^^xsd:ID ;
     schema:isPartOf psm:62 ;
     schema:name "Hülsenfrüchtler (Fabaceae)"@de,
@@ -2911,7 +2911,7 @@ psm:47 a cube:Observation ;
     schema:version 0 ;
     :cultivationType cultivationtype:47 .
 
-psm:48 a cube:Observation ;
+psm:48 a :PlantProtectionCrop  ;
     schema:identifier "E55D75D3-B805-4BFD-B2B0-D02368BD32AC"^^xsd:ID ;
     schema:isPartOf psm:62 ;
     schema:name "Kreuzblütler (Brassicaceae)"@de,
@@ -2920,7 +2920,7 @@ psm:48 a cube:Observation ;
     schema:version 0 ;
     :cultivationType cultivationtype:48 .
 
-psm:49 a cube:Observation ;
+psm:49 a :PlantProtectionCrop  ;
     schema:identifier "CC08E1E6-655D-4FAA-B0E8-AD968A68A536"^^xsd:ID ;
     schema:name "Erntegut"@de,
         "denrée stockée"@fr,
@@ -2928,7 +2928,7 @@ psm:49 a cube:Observation ;
     schema:version 0 ;
     :cultivationType cube:Undefined .
 
-psm:5 a cube:Observation ;
+psm:5 a :PlantProtectionCrop  ;
     schema:identifier "B542EC7D-B423-43B4-9010-82A6889BB3B4"^^xsd:ID ;
     schema:isPartOf psm:305 ;
     schema:name "Zuckerrübe"@de,
@@ -2937,7 +2937,7 @@ psm:5 a cube:Observation ;
     schema:version 0 ;
     :cultivationType cultivationtype:522 .
 
-psm:50 a cube:Observation ;
+psm:50 a :PlantProtectionCrop  ;
     schema:identifier "CA722B7E-8F16-4502-8139-C33F749545D4"^^xsd:ID ;
     schema:isPartOf psm:61 ;
     schema:name "Steinobst"@de,
@@ -2946,7 +2946,7 @@ psm:50 a cube:Observation ;
     schema:version 0 ;
     :cultivationType cultivationtype:704 .
 
-psm:51 a cube:Observation ;
+psm:51 a :PlantProtectionCrop  ;
     schema:identifier "C96EE4F4-12EA-49DE-9BEF-21EA73B52760"^^xsd:ID ;
     schema:isPartOf psm:26 ;
     schema:name "Spargel"@de,
@@ -2955,7 +2955,7 @@ psm:51 a cube:Observation ;
     schema:version 0 ;
     :cultivationType cultivationtype:51 .
 
-psm:52 a cube:Observation ;
+psm:52 a :PlantProtectionCrop  ;
     schema:identifier "CEC488FC-D9AD-4515-A28E-DEEC6C807926"^^xsd:ID ;
     schema:isPartOf psm:210,
         psm:303 ;
@@ -2965,7 +2965,7 @@ psm:52 a cube:Observation ;
     schema:version 0 ;
     :cultivationType cultivationtype:1017 .
 
-psm:53 a cube:Observation ;
+psm:53 a :PlantProtectionCrop  ;
     schema:identifier "BA2DECCF-5987-4987-B56E-C5EC6E5D19C0"^^xsd:ID ;
     schema:isPartOf psm:48 ;
     schema:name "Barbarakraut"@de,
@@ -2974,7 +2974,7 @@ psm:53 a cube:Observation ;
     schema:version 0 ;
     :cultivationType cultivationtype:53 .
 
-psm:54 a cube:Observation ;
+psm:54 a :PlantProtectionCrop  ;
     schema:identifier "C3E12AAE-119E-47CF-9B8A-6F1CA657CF6B"^^xsd:ID ;
     schema:isPartOf psm:293 ;
     schema:name "Auf und an National- und Kantonsstrassen (gem. ChemRRV)"@de,
@@ -2983,7 +2983,7 @@ psm:54 a cube:Observation ;
     schema:version 0 ;
     :cultivationType cube:Undefined .
 
-psm:55 a cube:Observation ;
+psm:55 a :PlantProtectionCrop  ;
     schema:identifier "C3F940E4-D07C-4F4D-851C-D1024F8A6A62"^^xsd:ID ;
     schema:isPartOf psm:62 ;
     schema:name "Kräuter"@de,
@@ -2992,7 +2992,7 @@ psm:55 a cube:Observation ;
     schema:version 0 ;
     :cultivationType cultivationtype:55 .
 
-psm:56 a cube:Observation ;
+psm:56 a :PlantProtectionCrop  ;
     schema:identifier "BFD1B79E-ABD1-4A44-8E61-891FF97960A1"^^xsd:ID ;
     schema:isPartOf psm:247 ;
     schema:name "Brassica rapa-Rüben"@de,
@@ -3001,7 +3001,7 @@ psm:56 a cube:Observation ;
     schema:version 0 ;
     :cultivationType cultivationtype:56 .
 
-psm:57 a cube:Observation ;
+psm:57 a :PlantProtectionCrop  ;
     schema:identifier "BF77A7F8-C4C5-43AF-9BCD-B7F904506E7A"^^xsd:ID ;
     schema:isPartOf psm:62 ;
     schema:name "Süssgräser (Poaceae)"@de,
@@ -3010,7 +3010,7 @@ psm:57 a cube:Observation ;
     schema:version 0 ;
     :cultivationType cultivationtype:57 .
 
-psm:58 a cube:Observation ;
+psm:58 a :PlantProtectionCrop  ;
     schema:identifier "C37A7EE2-D06B-4204-809A-F50A934F79E3"^^xsd:ID ;
     schema:isPartOf psm:20 ;
     schema:name "Chinakohl"@de,
@@ -3019,7 +3019,7 @@ psm:58 a cube:Observation ;
     schema:version 0 ;
     :cultivationType cultivationtype:58 .
 
-psm:59 a cube:Observation ;
+psm:59 a :PlantProtectionCrop  ;
     schema:identifier "C026CB2D-39B4-4FDF-AD04-FBA22AD2B4F1"^^xsd:ID ;
     schema:isPartOf psm:163,
         psm:197 ;
@@ -3029,7 +3029,7 @@ psm:59 a cube:Observation ;
     schema:version 0 ;
     :cultivationType cultivationtype:501 .
 
-psm:6 a cube:Observation ;
+psm:6 a :PlantProtectionCrop  ;
     schema:identifier "A21391C3-A1A3-4472-8AA1-56449FB56B36"^^xsd:ID ;
     schema:isPartOf psm:16,
         psm:72 ;
@@ -3039,7 +3039,7 @@ psm:6 a cube:Observation ;
     schema:version 0 ;
     :cultivationType cultivationtype:404 .
 
-psm:60 a cube:Observation ;
+psm:60 a :PlantProtectionCrop  ;
     schema:identifier "C69EBD93-43E5-457F-9CBE-EE1C04791274"^^xsd:ID ;
     schema:isPartOf psm:1 ;
     schema:name "Sommerflor"@de,
@@ -3048,21 +3048,21 @@ psm:60 a cube:Observation ;
     schema:version 0 ;
     :cultivationType cultivationtype:60 .
 
-psm:61 a cube:Observation ;
+psm:61 a :PlantProtectionCrop  ;
     schema:identifier "C6EBB3D7-3050-4C36-BBC2-CBD20D6B9E56"^^xsd:ID ;
     schema:name "allg. Obstbau"@de,
         "domaine app. arboriculture"@fr ;
     schema:version 0 ;
     :cultivationType cultivationtype:5 .
 
-psm:62 a cube:Observation ;
+psm:62 a :PlantProtectionCrop  ;
     schema:identifier "E59545AD-3331-4E3D-B58D-9F67833C060B"^^xsd:ID ;
     schema:name "allg. Gemüsebau"@de,
         "domaine app. maraîchère"@fr ;
     schema:version 0 ;
     :cultivationType cultivationtype:22 .
 
-psm:63 a cube:Observation ;
+psm:63 a :PlantProtectionCrop  ;
     schema:identifier "DF455946-B2AB-45D2-9780-4A45A98D72D6"^^xsd:ID ;
     schema:isPartOf psm:16,
         psm:72 ;
@@ -3072,7 +3072,7 @@ psm:63 a cube:Observation ;
     schema:version 0 ;
     :cultivationType cultivationtype:63 .
 
-psm:64 a cube:Observation ;
+psm:64 a :PlantProtectionCrop  ;
     schema:identifier "E107FECF-24B6-43D7-B3E6-05C5C239EFBB"^^xsd:ID ;
     schema:isPartOf psm:316 ;
     schema:name "Anbautechnik"@de,
@@ -3081,7 +3081,7 @@ psm:64 a cube:Observation ;
     schema:version 0 ;
     :cultivationType cultivationtype:64 .
 
-psm:65 a cube:Observation ;
+psm:65 a :PlantProtectionCrop  ;
     schema:identifier "E8B23A5E-B65E-4DC8-977D-BD84F143A442"^^xsd:ID ;
     schema:isPartOf psm:108,
         psm:145 ;
@@ -3091,7 +3091,7 @@ psm:65 a cube:Observation ;
     schema:version 0 ;
     :cultivationType cultivationtype:65 .
 
-psm:66 a cube:Observation ;
+psm:66 a :PlantProtectionCrop  ;
     schema:identifier "EACDD832-D1CD-479C-973F-CD0DB6A9FBC3"^^xsd:ID ;
     schema:isPartOf psm:48 ;
     schema:name "Meerrettich"@de,
@@ -3100,7 +3100,7 @@ psm:66 a cube:Observation ;
     schema:version 0 ;
     :cultivationType cultivationtype:66 .
 
-psm:67 a cube:Observation ;
+psm:67 a :PlantProtectionCrop  ;
     schema:identifier "D541F2F5-8BA6-4E26-AA66-9CF469648AFF"^^xsd:ID ;
     schema:isPartOf psm:62 ;
     schema:name "Küchenkräuter"@de,
@@ -3109,7 +3109,7 @@ psm:67 a cube:Observation ;
     schema:version 0 ;
     :cultivationType cultivationtype:67 .
 
-psm:68 a cube:Observation ;
+psm:68 a :PlantProtectionCrop  ;
     schema:identifier "D3CD23DC-4C49-4EE5-8BF8-6B074E74352A"^^xsd:ID ;
     schema:isPartOf psm:316 ;
     schema:name "Luzerne"@de,
@@ -3118,7 +3118,7 @@ psm:68 a cube:Observation ;
     schema:version 0 ;
     :cultivationType cultivationtype:68 .
 
-psm:69 a cube:Observation ;
+psm:69 a :PlantProtectionCrop  ;
     schema:identifier "CA9B7EDC-8626-4E01-B979-4856CFA9893E"^^xsd:ID ;
     schema:isPartOf psm:160 ;
     schema:name "Mini-Kiwi"@de,
@@ -3127,7 +3127,7 @@ psm:69 a cube:Observation ;
     schema:version 0 ;
     :cultivationType cultivationtype:69 .
 
-psm:7 a cube:Observation ;
+psm:7 a :PlantProtectionCrop  ;
     schema:identifier "A0012475-8478-4CA9-A18A-DC1CB96D788B"^^xsd:ID ;
     schema:name "Blumenzwiebeln und Blumenknollen"@de,
         "bulbes ornementaux"@fr,
@@ -3135,7 +3135,7 @@ psm:7 a cube:Observation ;
     schema:version 0 ;
     :cultivationType cultivationtype:409 .
 
-psm:70 a cube:Observation ;
+psm:70 a :PlantProtectionCrop  ;
     schema:identifier "D3D49C53-8EBC-4DAC-9C4C-B988AA162F7D"^^xsd:ID ;
     schema:isPartOf psm:210,
         psm:239 ;
@@ -3145,7 +3145,7 @@ psm:70 a cube:Observation ;
     schema:version 0 ;
     :cultivationType cultivationtype:516 .
 
-psm:71 a cube:Observation ;
+psm:71 a :PlantProtectionCrop  ;
     schema:identifier "D3D90BE6-0924-4844-98FB-52C4D7F21A38"^^xsd:ID ;
     schema:isPartOf psm:239 ;
     schema:name "Weichweizen"@de,
@@ -3154,7 +3154,7 @@ psm:71 a cube:Observation ;
     schema:version 0 ;
     :cultivationType cultivationtype:491 .
 
-psm:72 a cube:Observation ;
+psm:72 a :PlantProtectionCrop  ;
     schema:identifier "D40E1405-757C-4E3D-B26F-07D5F2251565"^^xsd:ID ;
     schema:isPartOf psm:329 ;
     schema:name "Bäume und Sträucher (ausserhalb Forst)"@de,
@@ -3163,7 +3163,7 @@ psm:72 a cube:Observation ;
     schema:version 0 ;
     :cultivationType cultivationtype:72 .
 
-psm:73 a cube:Observation ;
+psm:73 a :PlantProtectionCrop  ;
     schema:identifier "8B5A3E2B-2534-4FC0-84C5-685915165A77"^^xsd:ID ;
     schema:isPartOf psm:27,
         psm:316 ;
@@ -3173,7 +3173,7 @@ psm:73 a cube:Observation ;
     schema:version 0 ;
     :cultivationType cultivationtype:1033 .
 
-psm:74 a cube:Observation ;
+psm:74 a :PlantProtectionCrop  ;
     schema:identifier "C3A65223-4A74-461D-AE47-0E8F7223E0C2"^^xsd:ID ;
     schema:isPartOf psm:203 ;
     schema:name "Alfalfa"@de,
@@ -3182,7 +3182,7 @@ psm:74 a cube:Observation ;
     schema:version 0 ;
     :cultivationType cultivationtype:68 .
 
-psm:75 a cube:Observation ;
+psm:75 a :PlantProtectionCrop  ;
     schema:identifier "8A00630A-32FC-4B5A-8171-EC0F41D39F48"^^xsd:ID ;
     schema:isPartOf psm:317 ;
     schema:name "Portulak"@de,
@@ -3191,7 +3191,7 @@ psm:75 a cube:Observation ;
     schema:version 0 ;
     :cultivationType cultivationtype:75 .
 
-psm:76 a cube:Observation ;
+psm:76 a :PlantProtectionCrop  ;
     schema:identifier "915B2192-1651-4B8A-B2D8-C162A5D27211"^^xsd:ID ;
     schema:isPartOf psm:321 ;
     schema:name "Krautstiel"@de,
@@ -3201,7 +3201,7 @@ psm:76 a cube:Observation ;
     schema:version 0 ;
     :cultivationType cultivationtype:76 .
 
-psm:77 a cube:Observation ;
+psm:77 a :PlantProtectionCrop  ;
     schema:identifier "C8AB8319-939E-4CF3-B78E-549A85DEF756"^^xsd:ID ;
     schema:name "Brache"@de,
         "jachère"@fr,
@@ -3209,7 +3209,7 @@ psm:77 a cube:Observation ;
     schema:version 0 ;
     :cultivationType cultivationtype:77 .
 
-psm:78 a cube:Observation ;
+psm:78 a :PlantProtectionCrop  ;
     schema:identifier "C9DB1105-33C7-44E8-92BA-9BBE5BA2BB3F"^^xsd:ID ;
     schema:isPartOf psm:128,
         psm:163 ;
@@ -3219,7 +3219,7 @@ psm:78 a cube:Observation ;
     schema:version 0 ;
     :cultivationType cultivationtype:1011 .
 
-psm:79 a cube:Observation ;
+psm:79 a :PlantProtectionCrop  ;
     schema:identifier "CDF1E5BC-0740-4214-8912-870CC2BB37F4"^^xsd:ID ;
     schema:isPartOf psm:316 ;
     schema:name "Grasbestände zur Saatgutproduktion"@de,
@@ -3228,7 +3228,7 @@ psm:79 a cube:Observation ;
     schema:version 0 ;
     :cultivationType cultivationtype:79 .
 
-psm:8 a cube:Observation ;
+psm:8 a :PlantProtectionCrop  ;
     schema:identifier "A2D2B4EC-D7D6-4A30-BEE9-0A8F907A874A"^^xsd:ID ;
     schema:name "Süssdolde"@de,
         "cicely"@en,
@@ -3237,7 +3237,7 @@ psm:8 a cube:Observation ;
     schema:version 0 ;
     :cultivationType cultivationtype:412 .
 
-psm:80 a cube:Observation ;
+psm:80 a :PlantProtectionCrop  ;
     schema:identifier "D18572C7-A270-4AA7-B766-48D62C5E9AB7"^^xsd:ID ;
     schema:name "Schwarze Maulbeere"@de,
         "mûrier noir"@fr,
@@ -3245,7 +3245,7 @@ psm:80 a cube:Observation ;
     schema:version 0 ;
     :cultivationType cultivationtype:80 .
 
-psm:81 a cube:Observation ;
+psm:81 a :PlantProtectionCrop  ;
     schema:identifier "CA58ABAE-E494-4608-BE51-5FF49D853A03"^^xsd:ID ;
     schema:isPartOf psm:25 ;
     schema:name "Kopfkohle"@de,
@@ -3254,7 +3254,7 @@ psm:81 a cube:Observation ;
     schema:version 0 ;
     :cultivationType cultivationtype:81 .
 
-psm:82 a cube:Observation ;
+psm:82 a :PlantProtectionCrop  ;
     schema:identifier "EA82A16B-4A8C-4917-A08F-C2AD3B266640"^^xsd:ID ;
     schema:isPartOf psm:27 ;
     schema:name "Hanf"@de,
@@ -3264,7 +3264,7 @@ psm:82 a cube:Observation ;
     schema:version 0 ;
     :cultivationType cultivationtype:535 .
 
-psm:83 a cube:Observation ;
+psm:83 a :PlantProtectionCrop  ;
     schema:identifier "E981BFA6-288D-4EA6-B81B-4F610611EB36"^^xsd:ID ;
     schema:name "Medizinalkräuter"@de,
         "plantes médicinales"@fr,
@@ -3272,7 +3272,7 @@ psm:83 a cube:Observation ;
     schema:version 0 ;
     :cultivationType cultivationtype:83 .
 
-psm:84 a cube:Observation ;
+psm:84 a :PlantProtectionCrop  ;
     schema:identifier "EB820B26-DE4E-4AF4-8BA3-46844F045306"^^xsd:ID ;
     schema:isPartOf psm:115 ;
     schema:name "Bodenkohlrabi"@de,
@@ -3281,7 +3281,7 @@ psm:84 a cube:Observation ;
     schema:version 0 ;
     :cultivationType cultivationtype:84 .
 
-psm:85 a cube:Observation ;
+psm:85 a :PlantProtectionCrop  ;
     schema:identifier "E9E3C127-33C1-40D9-8552-3CBE45E8E4C4"^^xsd:ID ;
     schema:isPartOf psm:175 ;
     schema:name "Tomaten"@de,
@@ -3290,7 +3290,7 @@ psm:85 a cube:Observation ;
     schema:version 0 ;
     :cultivationType cultivationtype:85 .
 
-psm:86 a cube:Observation ;
+psm:86 a :PlantProtectionCrop  ;
     schema:identifier "D8A50212-BD15-456A-9D2E-2A401C2EF21D"^^xsd:ID ;
     schema:isPartOf psm:25 ;
     schema:name "Kohlrabi"@de,
@@ -3299,7 +3299,7 @@ psm:86 a cube:Observation ;
     schema:version 0 ;
     :cultivationType cultivationtype:86 .
 
-psm:87 a cube:Observation ;
+psm:87 a :PlantProtectionCrop  ;
     schema:identifier "DF4B3775-8361-41CE-9843-AC953197403D"^^xsd:ID ;
     schema:isPartOf psm:20 ;
     schema:name "Federkohl"@de,
@@ -3308,7 +3308,7 @@ psm:87 a cube:Observation ;
     schema:version 0 ;
     :cultivationType cultivationtype:87 .
 
-psm:88 a cube:Observation ;
+psm:88 a :PlantProtectionCrop  ;
     schema:identifier "92CAB39E-ACC3-44DC-9EF3-0D27B8600E83"^^xsd:ID ;
     schema:isPartOf psm:96 ;
     schema:name "Speise- und Futterkartoffeln"@de,
@@ -3317,7 +3317,7 @@ psm:88 a cube:Observation ;
     schema:version 0 ;
     :cultivationType cultivationtype:88 .
 
-psm:89 a cube:Observation ;
+psm:89 a :PlantProtectionCrop  ;
     schema:identifier "C883F887-6B72-4917-9385-7A757E5FD8D6"^^xsd:ID ;
     schema:isPartOf psm:277 ;
     schema:name "Speisezwiebel"@de,
@@ -3326,7 +3326,7 @@ psm:89 a cube:Observation ;
     schema:version 0 ;
     :cultivationType cultivationtype:89 .
 
-psm:9 a cube:Observation ;
+psm:9 a :PlantProtectionCrop  ;
     schema:identifier "A2D0B83F-9BB5-477C-AD44-24B31F2EF276"^^xsd:ID ;
     schema:isPartOf psm:62 ;
     schema:name "Speisepilze"@de,
@@ -3335,7 +3335,7 @@ psm:9 a cube:Observation ;
     schema:version 0 ;
     :cultivationType cultivationtype:477 .
 
-psm:90 a cube:Observation ;
+psm:90 a :PlantProtectionCrop  ;
     schema:identifier "D100976A-2598-4614-AB7A-61436FF2B053"^^xsd:ID ;
     schema:isPartOf psm:85 ;
     schema:name "Rispentomaten"@de,
@@ -3344,7 +3344,7 @@ psm:90 a cube:Observation ;
     schema:version 0 ;
     :cultivationType cultivationtype:90 .
 
-psm:91 a cube:Observation ;
+psm:91 a :PlantProtectionCrop  ;
     schema:identifier "D605CAA5-9199-4739-8C9C-343C74DABAEB"^^xsd:ID ;
     schema:name "Gemeine Felsenbirne"@de,
         "amélavier commun"@fr,
@@ -3352,7 +3352,7 @@ psm:91 a cube:Observation ;
     schema:version 0 ;
     :cultivationType cultivationtype:91 .
 
-psm:92 a cube:Observation ;
+psm:92 a :PlantProtectionCrop  ;
     schema:identifier "9A9333CA-AD6C-459D-9AFF-B8E8FB2FF8D4"^^xsd:ID ;
     schema:isPartOf psm:95 ;
     schema:name "Schwarzwurzel"@de,
@@ -3361,7 +3361,7 @@ psm:92 a cube:Observation ;
     schema:version 0 ;
     :cultivationType cultivationtype:92 .
 
-psm:93 a cube:Observation ;
+psm:93 a :PlantProtectionCrop  ;
     schema:identifier "D1E8D0D6-BD3C-4C47-9017-DBEADC9215A9"^^xsd:ID ;
     schema:name "Sanddorn"@de,
         "argousier"@fr,
@@ -3369,7 +3369,7 @@ psm:93 a cube:Observation ;
     schema:version 0 ;
     :cultivationType cultivationtype:93 .
 
-psm:94 a cube:Observation ;
+psm:94 a :PlantProtectionCrop  ;
     schema:identifier "D36B92CB-136F-46C3-8217-10C3F86ECA12"^^xsd:ID ;
     schema:isPartOf psm:327 ;
     schema:name "Sellerie"@de,
@@ -3378,7 +3378,7 @@ psm:94 a cube:Observation ;
     schema:version 0 ;
     :cultivationType cultivationtype:94 .
 
-psm:95 a cube:Observation ;
+psm:95 a :PlantProtectionCrop  ;
     schema:identifier "B05127D4-FF0A-4F36-AFDD-0D487043122A"^^xsd:ID ;
     schema:isPartOf psm:62 ;
     schema:name "Korbblütler (Asteraceae)"@de,
@@ -3387,7 +3387,7 @@ psm:95 a cube:Observation ;
     schema:version 0 ;
     :cultivationType cultivationtype:95 .
 
-psm:96 a cube:Observation ;
+psm:96 a :PlantProtectionCrop  ;
     schema:identifier "B4D50F5E-6028-493D-9B95-85CAE5DADF06"^^xsd:ID ;
     schema:isPartOf psm:27,
         psm:316 ;
@@ -3397,7 +3397,7 @@ psm:96 a cube:Observation ;
     schema:version 0 ;
     :cultivationType cultivationtype:410 .
 
-psm:97 a cube:Observation ;
+psm:97 a :PlantProtectionCrop  ;
     schema:identifier "F171615D-81A1-4654-BF30-BF51620DFFB9"^^xsd:ID ;
     schema:isPartOf psm:234 ;
     schema:name "Lagerräume"@de,
@@ -3406,7 +3406,7 @@ psm:97 a cube:Observation ;
     schema:version 2 ;
     :cultivationType cube:Undefined .
 
-psm:98 a cube:Observation ;
+psm:98 a :PlantProtectionCrop  ;
     schema:identifier "E2A335E5-D797-46E7-9CE4-9CB3F301AAA2"^^xsd:ID ;
     schema:isPartOf psm:145,
         psm:310 ;
@@ -3416,7 +3416,7 @@ psm:98 a cube:Observation ;
     schema:version 0 ;
     :cultivationType cultivationtype:98 .
 
-psm:99 a cube:Observation ;
+psm:99 a :PlantProtectionCrop  ;
     schema:identifier "DB0DCB7D-CA9F-454A-8398-606F066FBF4F"^^xsd:ID ;
     schema:isPartOf psm:2 ;
     schema:name "Baby-Leaf (Asteraceae)"@de,
