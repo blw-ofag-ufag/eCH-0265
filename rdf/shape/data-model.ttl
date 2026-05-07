@@ -87,6 +87,84 @@ shape:CultivationType a sh:NodeShape ;
     ] .
 
 # --------------------------------
+# Cultivationtype
+# --------------------------------
+cultivationtype:shape a sh:NodeShape ;
+    sh:closed true ;
+    sh:targetClass owl:Class, owl:DeprecatedClass ;
+    sh:ignoredProperties ( rdf:type ) ;
+
+    # Require AT LEAST ONE of the following relationships:
+    # - a parent class (rdfs:subClassOf),
+    # - an intersection definition (owl:intersectionOf),
+    # - or being part of a parent's unionOf list (^owl:unionOf).
+    sh:or (
+        [ sh:property [ sh:path rdfs:subClassOf ; sh:minCount 1 ] ]
+        [ sh:property [ sh:path owl:intersectionOf ; sh:minCount 1 ] ]
+        [ sh:property [ 
+            sh:path (
+                [ sh:inversePath rdf:first ]
+                [ sh:zeroOrMorePath [ sh:inversePath rdf:rest ] ]
+                [ sh:inversePath owl:unionOf ]
+            ) ; 
+            sh:minCount 1 
+        ] ]
+    ) ;
+
+    # global property definitions
+    sh:property
+    [
+        sh:path schema:image ;
+        sh:nodeKind sh:IRI ;
+    ] ,
+
+    [
+        sh:path schema:name ;
+        sh:minCount 1 ;
+        sh:nodeKind sh:Literal ;
+        sh:datatype rdf:langString ;
+        sh:languageIn ( "de" "fr" "it" "en" ) ;
+        sh:uniqueLang true ;
+    ],
+    [
+        sh:path schema:alternateName ;
+        sh:nodeKind sh:Literal ;
+        sh:datatype rdf:langString ;
+    ],
+    [
+        sh:path schema:description ;
+        sh:nodeKind sh:Literal ;
+        sh:datatype rdf:langString ;
+        sh:languageIn ( "de" "fr" "it" "en" ) ;
+        sh:uniqueLang true ;
+    ],
+    [
+        sh:path rdfs:subClassOf ;
+        sh:nodeKind sh:IRI ;
+    ],
+    [
+        sh:path owl:intersectionOf ;
+    ],
+    [
+        sh:path :botanicalPlant ;
+        sh:nodeKind sh:IRI ;
+        sh:maxCount 1 ;
+    ],
+    [
+        sh:path :managementIntensity ;
+        sh:nodeKind sh:IRI ;
+        sh:maxCount 1 ;
+    ],
+    [
+        sh:path owl:disjointWith ;
+        sh:nodeKind sh:IRI ;
+        sh:node cultivationtype:shape ;
+    ],
+    [
+        sh:path owl:unionOf ;
+    ] .
+
+# --------------------------------
 # AGIS
 # --------------------------------
 
