@@ -4763,66 +4763,111 @@ cultivationtype:1292 a owl:Class ;
     schema:name "Hecken und Feldgehölz mit Krautsaum"@de ;
     rdfs:subClassOf cultivationtype:852 .
 
-# ==============================================================================
-# SIBLING DISJOINTNESS (AUTO-GENERATED)
-# ==============================================================================
-
-# Disjoint subclasses of Cultivation
+# Disjoint AGIS Cultivation Groups
 [] a owl:AllDisjointClasses ;
     owl:members (
         cultivationtype:1
         cultivationtype:10
-        cultivationtype:1024
-        cultivationtype:1065
-        cultivationtype:114
-        cultivationtype:116
         cultivationtype:12
-        cultivationtype:1291
         cultivationtype:13
         cultivationtype:20
-        cultivationtype:22
-        cultivationtype:322
-        cultivationtype:329
-        cultivationtype:4
-        cultivationtype:414
-        cultivationtype:467
-        cultivationtype:471
-        cultivationtype:5
-        cultivationtype:6
+        cultivationtype:21
         cultivationtype:7
-        cultivationtype:8
-        cultivationtype:9
-        cultivationtype:901
-        cultivationtype:950
     ) .
 
-# Disjoint subclasses of cultivationtype:21
+# Disjoint AGIS subclasses of cultivationtype:1033
 [] a owl:AllDisjointClasses ;
     owl:members (
-        cultivationtype:2
-        cultivationtype:3
-        cultivationtype:625
+        cultivationtype:504
+        cultivationtype:505
+        cultivationtype:509
+        cultivationtype:514
+        cultivationtype:515
+        cultivationtype:542
+        cultivationtype:543
+        cultivationtype:549
     ) .
 
-# Disjoint subclasses of cultivationtype:1
+# Disjoint AGIS subclasses of cultivationtype:18
 [] a owl:AllDisjointClasses ;
     owl:members (
-        cultivationtype:1064
-        cultivationtype:1265
-        cultivationtype:1277
-        cultivationtype:14
-        cultivationtype:15
-        cultivationtype:16
-        cultivationtype:17
-        cultivationtype:18
-        cultivationtype:468
-        cultivationtype:493
-        cultivationtype:494
+        cultivationtype:506
+        cultivationtype:515
+        cultivationtype:569
+        cultivationtype:570
+    ) .
+
+# Disjoint AGIS subclasses of cultivationtype:497
+[] a owl:AllDisjointClasses ;
+    owl:members (
+        cultivationtype:508
+        cultivationtype:519
+        cultivationtype:521
+    ) .
+
+# Disjoint AGIS subclasses of cultivationtype:492
+[] a owl:AllDisjointClasses ;
+    owl:members (
+        cultivationtype:510
+        cultivationtype:511
+        cultivationtype:516
+    ) .
+
+# Disjoint AGIS subclasses of cultivationtype:509
+[] a owl:AllDisjointClasses ;
+    owl:members (
+        cultivationtype:520
+        cultivationtype:529
+    ) .
+
+# Disjoint AGIS subclasses of cultivationtype:17
+[] a owl:AllDisjointClasses ;
+    owl:members (
+        cultivationtype:522
+        cultivationtype:523
+        cultivationtype:547
+    ) .
+
+# Disjoint AGIS subclasses of cultivationtype:1039
+[] a owl:AllDisjointClasses ;
+    owl:members (
+        cultivationtype:526
+        cultivationtype:590
+    ) .
+
+# Disjoint AGIS subclasses of cultivationtype:1129
+[] a owl:AllDisjointClasses ;
+    owl:members (
+        cultivationtype:527
+        cultivationtype:591
+    ) .
+
+# Disjoint AGIS subclasses of cultivationtype:15
+[] a owl:AllDisjointClasses ;
+    owl:members (
+        cultivationtype:528
+        cultivationtype:536
+        cultivationtype:537
+        cultivationtype:538
+        cultivationtype:540
+        cultivationtype:568
+        cultivationtype:631
+    ) .
+
+# Disjoint AGIS subclasses of cultivationtype:493
+[] a owl:AllDisjointClasses ;
+    owl:members (
+        cultivationtype:531
+        cultivationtype:592
+    ) .
+
+# Disjoint AGIS subclasses of cultivationtype:1
+[] a owl:AllDisjointClasses ;
+    owl:members (
         cultivationtype:534
         cultivationtype:535
         cultivationtype:541
         cultivationtype:544
-        cultivationtype:550
         cultivationtype:551
         cultivationtype:552
         cultivationtype:554
@@ -4839,654 +4884,82 @@ cultivationtype:1292 a owl:Class ;
         cultivationtype:601
         cultivationtype:602
         cultivationtype:632
-        cultivationtype:64
-        cultivationtype:68
-        cultivationtype:77
-        cultivationtype:79
     ) .
 
-# Disjoint subclasses of cultivationtype:1033
+# Disjoint AGIS subclasses of cultivationtype:24
 [] a owl:AllDisjointClasses ;
     owl:members (
-        cultivationtype:1000
-        cultivationtype:19
-        cultivationtype:492
-        cultivationtype:498
-        cultivationtype:504
-        cultivationtype:505
-        cultivationtype:509
-        cultivationtype:514
-        cultivationtype:515
-        cultivationtype:542
-        cultivationtype:543
-        cultivationtype:549
+        cultivationtype:545
+        cultivationtype:546
     ) .
 
-# Disjoint subclasses of cultivationtype:114
+# Disjoint AGIS subclasses of cultivationtype:16
 [] a owl:AllDisjointClasses ;
     owl:members (
-        cultivationtype:21
+        cultivationtype:548
+        cultivationtype:574
+    ) .
+
+# Disjoint AGIS subclasses of cultivationtype:77
+[] a owl:AllDisjointClasses ;
+    owl:members (
+        cultivationtype:556
+        cultivationtype:557
+    ) .
+
+# Disjoint AGIS subclasses of cultivationtype:535
+[] a owl:AllDisjointClasses ;
+    owl:members (
+        cultivationtype:575
+        cultivationtype:576
+        cultivationtype:577
+    ) .
+
+# Disjoint AGIS subclasses of cultivationtype:542
+[] a owl:AllDisjointClasses ;
+    owl:members (
+        cultivationtype:578
+        cultivationtype:579
+    ) .
+
+# Disjoint AGIS subclasses of cultivationtype:549
+[] a owl:AllDisjointClasses ;
+    owl:members (
+        cultivationtype:580
+        cultivationtype:581
+    ) .
+
+# Disjoint AGIS subclasses of cultivationtype:114
+[] a owl:AllDisjointClasses ;
+    owl:members (
         cultivationtype:601
         cultivationtype:602
     ) .
 
-# Disjoint subclasses of cultivationtype:48
+# Disjoint AGIS subclasses of cultivationtype:2
 [] a owl:AllDisjointClasses ;
     owl:members (
-        cultivationtype:1148
-        cultivationtype:132
-        cultivationtype:139
-        cultivationtype:152
-        cultivationtype:240
-        cultivationtype:243
-        cultivationtype:247
-        cultivationtype:25
-        cultivationtype:264
-        cultivationtype:278
-        cultivationtype:282
-        cultivationtype:301
-        cultivationtype:53
-        cultivationtype:66
+        cultivationtype:611
+        cultivationtype:612
+        cultivationtype:613
+        cultivationtype:635
+        cultivationtype:694
+        cultivationtype:697
+        cultivationtype:698
     ) .
 
-# Disjoint subclasses of cultivationtype:22
+# Disjoint AGIS subclasses of cultivationtype:3
 [] a owl:AllDisjointClasses ;
     owl:members (
-        cultivationtype:120
-        cultivationtype:124
-        cultivationtype:175
-        cultivationtype:188
-        cultivationtype:209
-        cultivationtype:235
-        cultivationtype:26
-        cultivationtype:263
-        cultivationtype:290
-        cultivationtype:300
-        cultivationtype:317
-        cultivationtype:327
-        cultivationtype:33
-        cultivationtype:35
-        cultivationtype:400
-        cultivationtype:47
-        cultivationtype:477
-        cultivationtype:48
-        cultivationtype:55
-        cultivationtype:57
-        cultivationtype:67
-        cultivationtype:95
+        cultivationtype:616
+        cultivationtype:617
+        cultivationtype:618
+        cultivationtype:693
     ) .
 
-# Disjoint subclasses of cultivationtype:471
+# Disjoint AGIS subclasses of cultivationtype:830
 [] a owl:AllDisjointClasses ;
     owl:members (
-        cultivationtype:1158
-        cultivationtype:131
-        cultivationtype:161
-        cultivationtype:223
-        cultivationtype:256
-        cultivationtype:28
-        cultivationtype:326
-    ) .
-
-# Disjoint subclasses of cultivationtype:402
-[] a owl:AllDisjointClasses ;
-    owl:members (
-        cultivationtype:174
-        cultivationtype:30
-        cultivationtype:403
-        cultivationtype:404
-        cultivationtype:63
-        cultivationtype:91
-    ) .
-
-# Disjoint subclasses of cultivationtype:72
-[] a owl:AllDisjointClasses ;
-    owl:members (
-        cultivationtype:122
-        cultivationtype:153
-        cultivationtype:167
-        cultivationtype:30
-        cultivationtype:403
-        cultivationtype:404
-        cultivationtype:63
-    ) .
-
-# Disjoint subclasses of cultivationtype:704
-[] a owl:AllDisjointClasses ;
-    owl:members (
-        cultivationtype:113
-        cultivationtype:283
-        cultivationtype:31
-        cultivationtype:472
-    ) .
-
-# Disjoint subclasses of cultivationtype:235
-[] a owl:AllDisjointClasses ;
-    owl:members (
-        cultivationtype:1079
-        cultivationtype:1093
-        cultivationtype:119
-        cultivationtype:297
-        cultivationtype:32
-    ) .
-
-# Disjoint subclasses of cultivationtype:67
-[] a owl:AllDisjointClasses ;
-    owl:members (
-        cultivationtype:106
-        cultivationtype:109
-        cultivationtype:1240
-        cultivationtype:157
-        cultivationtype:172
-        cultivationtype:192
-        cultivationtype:205
-        cultivationtype:219
-        cultivationtype:231
-        cultivationtype:253
-        cultivationtype:268
-        cultivationtype:295
-        cultivationtype:299
-        cultivationtype:302
-        cultivationtype:308
-        cultivationtype:311
-        cultivationtype:330
-        cultivationtype:334
-        cultivationtype:37
-        cultivationtype:478
-        cultivationtype:479
-    ) .
-
-# Disjoint subclasses of cultivationtype:108
-[] a owl:AllDisjointClasses ;
-    owl:members (
-        cultivationtype:101
-        cultivationtype:155
-        cultivationtype:34
-        cultivationtype:65
-    ) .
-
-# Disjoint subclasses of cultivationtype:145
-[] a owl:AllDisjointClasses ;
-    owl:members (
-        cultivationtype:101
-        cultivationtype:135
-        cultivationtype:155
-        cultivationtype:195
-        cultivationtype:214
-        cultivationtype:238
-        cultivationtype:254
-        cultivationtype:315
-        cultivationtype:318
-        cultivationtype:34
-        cultivationtype:36
-        cultivationtype:406
-        cultivationtype:408
-        cultivationtype:46
-        cultivationtype:65
-        cultivationtype:98
-    ) .
-
-# Disjoint subclasses of cultivationtype:1093
-[] a owl:AllDisjointClasses ;
-    owl:members (
-        cultivationtype:1167
-        cultivationtype:166
-        cultivationtype:228
-        cultivationtype:36
-        cultivationtype:40
-        cultivationtype:539
-    ) .
-
-# Disjoint subclasses of cultivationtype:188
-[] a owl:AllDisjointClasses ;
-    owl:members (
-        cultivationtype:218
-        cultivationtype:277
-        cultivationtype:323
-        cultivationtype:39
-    ) .
-
-# Disjoint subclasses of cultivationtype:309
-[] a owl:AllDisjointClasses ;
-    owl:members (
-        cultivationtype:1087
-        cultivationtype:1088
-        cultivationtype:125
-        cultivationtype:41
-        cultivationtype:702
-    ) .
-
-# Disjoint subclasses of cultivationtype:131
-[] a owl:AllDisjointClasses ;
-    owl:members (
-        cultivationtype:170
-        cultivationtype:248
-        cultivationtype:298
-        cultivationtype:43
-    ) .
-
-# Disjoint subclasses of cultivationtype:118
-[] a owl:AllDisjointClasses ;
-    owl:members (
-        cultivationtype:122
-        cultivationtype:153
-        cultivationtype:167
-        cultivationtype:45
-    ) .
-
-# Disjoint subclasses of cultivationtype:310
-[] a owl:AllDisjointClasses ;
-    owl:members (
-        cultivationtype:1252
-        cultivationtype:1253
-        cultivationtype:1254
-        cultivationtype:238
-        cultivationtype:315
-        cultivationtype:406
-        cultivationtype:408
-        cultivationtype:46
-        cultivationtype:98
-    ) .
-
-# Disjoint subclasses of cultivationtype:247
-[] a owl:AllDisjointClasses ;
-    owl:members (
-        cultivationtype:115
-        cultivationtype:56
-    ) .
-
-# Disjoint subclasses of cultivationtype:475
-[] a owl:AllDisjointClasses ;
-    owl:members (
-        cultivationtype:237
-        cultivationtype:325
-        cultivationtype:58
-        cultivationtype:87
-    ) .
-
-# Disjoint subclasses of cultivationtype:731
-[] a owl:AllDisjointClasses ;
-    owl:members (
-        cultivationtype:1040
-        cultivationtype:1041
-        cultivationtype:69
-    ) .
-
-# Disjoint subclasses of cultivationtype:329
-[] a owl:AllDisjointClasses ;
-    owl:members (
-        cultivationtype:108
-        cultivationtype:145
-        cultivationtype:199
-        cultivationtype:216
-        cultivationtype:217
-        cultivationtype:222
-        cultivationtype:246
-        cultivationtype:310
-        cultivationtype:401
-        cultivationtype:405
-        cultivationtype:409
-        cultivationtype:72
-    ) .
-
-# Disjoint subclasses of cultivationtype:321
-[] a owl:AllDisjointClasses ;
-    owl:members (
-        cultivationtype:229
-        cultivationtype:76
-    ) .
-
-# Disjoint subclasses of cultivationtype:25
-[] a owl:AllDisjointClasses ;
-    owl:members (
-        cultivationtype:324
-        cultivationtype:473
-        cultivationtype:475
-        cultivationtype:81
-        cultivationtype:86
-    ) .
-
-# Disjoint subclasses of cultivationtype:35
-[] a owl:AllDisjointClasses ;
-    owl:members (
-        cultivationtype:1084
-        cultivationtype:1098
-        cultivationtype:1139
-        cultivationtype:1256
-        cultivationtype:137
-        cultivationtype:553
-        cultivationtype:706
-        cultivationtype:83
-    ) .
-
-# Disjoint subclasses of cultivationtype:175
-[] a owl:AllDisjointClasses ;
-    owl:members (
-        cultivationtype:144
-        cultivationtype:275
-        cultivationtype:335
-        cultivationtype:474
-        cultivationtype:85
-    ) .
-
-# Disjoint subclasses of cultivationtype:410
-[] a owl:AllDisjointClasses ;
-    owl:members (
-        cultivationtype:411
-        cultivationtype:88
-    ) .
-
-# Disjoint subclasses of cultivationtype:277
-[] a owl:AllDisjointClasses ;
-    owl:members (
-        cultivationtype:232
-        cultivationtype:245
-        cultivationtype:89
-    ) .
-
-# Disjoint subclasses of cultivationtype:85
-[] a owl:AllDisjointClasses ;
-    owl:members (
-        cultivationtype:112
-        cultivationtype:304
-        cultivationtype:90
-    ) .
-
-# Disjoint subclasses of cultivationtype:95
-[] a owl:AllDisjointClasses ;
-    owl:members (
-        cultivationtype:110
-        cultivationtype:130
-        cultivationtype:202
-        cultivationtype:224
-        cultivationtype:320
-        cultivationtype:92
-    ) .
-
-# Disjoint subclasses of cultivationtype:1158
-[] a owl:AllDisjointClasses ;
-    owl:members (
-        cultivationtype:140
-        cultivationtype:267
-        cultivationtype:93
-    ) .
-
-# Disjoint subclasses of cultivationtype:327
-[] a owl:AllDisjointClasses ;
-    owl:members (
-        cultivationtype:107
-        cultivationtype:1266
-        cultivationtype:129
-        cultivationtype:273
-        cultivationtype:294
-        cultivationtype:306
-        cultivationtype:94
-    ) .
-
-# Disjoint subclasses of cultivationtype:400
-[] a owl:AllDisjointClasses ;
-    owl:members (
-        cultivationtype:187
-        cultivationtype:258
-        cultivationtype:99
-    ) .
-
-# Disjoint subclasses of cultivationtype:105
-[] a owl:AllDisjointClasses ;
-    owl:members (
-        cultivationtype:103
-        cultivationtype:173
-    ) .
-
-# Disjoint subclasses of cultivationtype:320
-[] a owl:AllDisjointClasses ;
-    owl:members (
-        cultivationtype:105
-        cultivationtype:1103
-        cultivationtype:1104
-        cultivationtype:141
-        cultivationtype:208
-    ) .
-
-# Disjoint subclasses of cultivationtype:324
-[] a owl:AllDisjointClasses ;
-    owl:members (
-        cultivationtype:111
-        cultivationtype:154
-        cultivationtype:331
-    ) .
-
-# Disjoint subclasses of cultivationtype:401
-[] a owl:AllDisjointClasses ;
-    owl:members (
-        cultivationtype:118
-        cultivationtype:402
-    ) .
-
-# Disjoint subclasses of cultivationtype:705
-[] a owl:AllDisjointClasses ;
-    owl:members (
-        cultivationtype:1060
-        cultivationtype:1061
-        cultivationtype:123
-    ) .
-
-# Disjoint subclasses of cultivationtype:141
-[] a owl:AllDisjointClasses ;
-    owl:members (
-        cultivationtype:1259
-        cultivationtype:1260
-        cultivationtype:133
-        cultivationtype:142
-        cultivationtype:179
-    ) .
-
-# Disjoint subclasses of cultivationtype:312
-[] a owl:AllDisjointClasses ;
-    owl:members (
-        cultivationtype:136
-        cultivationtype:408
-    ) .
-
-# Disjoint subclasses of cultivationtype:32
-[] a owl:AllDisjointClasses ;
-    owl:members (
-        cultivationtype:138
-        cultivationtype:207
-    ) .
-
-# Disjoint subclasses of cultivationtype:300
-[] a owl:AllDisjointClasses ;
-    owl:members (
-        cultivationtype:151
-        cultivationtype:250
-        cultivationtype:321
-    ) .
-
-# Disjoint subclasses of cultivationtype:4
-[] a owl:AllDisjointClasses ;
-    owl:members (
-        cultivationtype:1138
-        cultivationtype:1140
-        cultivationtype:156
-        cultivationtype:213
-        cultivationtype:717
-    ) .
-
-# Disjoint subclasses of cultivationtype:94
-[] a owl:AllDisjointClasses ;
-    owl:members (
-        cultivationtype:1230
-        cultivationtype:158
-        cultivationtype:271
-        cultivationtype:272
-    ) .
-
-# Disjoint subclasses of cultivationtype:41
-[] a owl:AllDisjointClasses ;
-    owl:members (
-        cultivationtype:159
-        cultivationtype:703
-    ) .
-
-# Disjoint subclasses of cultivationtype:47
-[] a owl:AllDisjointClasses ;
-    owl:members (
-        cultivationtype:165
-        cultivationtype:183
-        cultivationtype:191
-        cultivationtype:476
-    ) .
-
-# Disjoint subclasses of cultivationtype:476
-[] a owl:AllDisjointClasses ;
-    owl:members (
-        cultivationtype:1225
-        cultivationtype:171
-    ) .
-
-# Disjoint subclasses of cultivationtype:64
-[] a owl:AllDisjointClasses ;
-    owl:members (
-        cultivationtype:181
-        cultivationtype:284
-    ) .
-
-# Disjoint subclasses of cultivationtype:5
-[] a owl:AllDisjointClasses ;
-    owl:members (
-        cultivationtype:186
-        cultivationtype:257
-        cultivationtype:309
-        cultivationtype:704
-        cultivationtype:731
-    ) .
-
-# Disjoint subclasses of cultivationtype:494
-[] a owl:AllDisjointClasses ;
-    owl:members (
-        cultivationtype:1039
-        cultivationtype:1129
-        cultivationtype:190
-        cultivationtype:495
-        cultivationtype:496
-    ) .
-
-# Disjoint subclasses of cultivationtype:124
-[] a owl:AllDisjointClasses ;
-    owl:members (
-        cultivationtype:201
-        cultivationtype:249
-    ) .
-
-# Disjoint subclasses of cultivationtype:706
-[] a owl:AllDisjointClasses ;
-    owl:members (
-        cultivationtype:1046
-        cultivationtype:1054
-        cultivationtype:1055
-        cultivationtype:1059
-        cultivationtype:1062
-        cultivationtype:1068
-        cultivationtype:1069
-        cultivationtype:1086
-        cultivationtype:1102
-        cultivationtype:1149
-        cultivationtype:1150
-        cultivationtype:1162
-        cultivationtype:1248
-        cultivationtype:206
-        cultivationtype:261
-        cultivationtype:262
-        cultivationtype:279
-        cultivationtype:287
-        cultivationtype:412
-    ) .
-
-# Disjoint subclasses of cultivationtype:191
-[] a owl:AllDisjointClasses ;
-    owl:members (
-        cultivationtype:1074
-        cultivationtype:215
-        cultivationtype:221
-    ) .
-
-# Disjoint subclasses of cultivationtype:40
-[] a owl:AllDisjointClasses ;
-    owl:members (
-        cultivationtype:225
-        cultivationtype:289
-        cultivationtype:314
-    ) .
-
-# Disjoint subclasses of cultivationtype:326
-[] a owl:AllDisjointClasses ;
-    owl:members (
-        cultivationtype:233
-        cultivationtype:288
-    ) .
-
-# Disjoint subclasses of cultivationtype:150
-[] a owl:AllDisjointClasses ;
-    owl:members (
-        cultivationtype:1281
-        cultivationtype:252
-    ) .
-
-# Disjoint subclasses of cultivationtype:335
-[] a owl:AllDisjointClasses ;
-    owl:members (
-        cultivationtype:269
-        cultivationtype:270
-    ) .
-
-# Disjoint subclasses of cultivationtype:17
-[] a owl:AllDisjointClasses ;
-    owl:members (
-        cultivationtype:305
-        cultivationtype:410
-        cultivationtype:522
-        cultivationtype:523
-        cultivationtype:547
-    ) .
-
-# Disjoint subclasses of cultivationtype:15
-[] a owl:AllDisjointClasses ;
-    owl:members (
-        cultivationtype:1052
-        cultivationtype:1053
-        cultivationtype:1075
-        cultivationtype:1101
-        cultivationtype:1275
-        cultivationtype:307
-        cultivationtype:528
-        cultivationtype:536
-        cultivationtype:537
-        cultivationtype:538
-        cultivationtype:540
-        cultivationtype:568
-        cultivationtype:631
-    ) .
-
-# Disjoint subclasses of cultivationtype:409
-[] a owl:AllDisjointClasses ;
-    owl:members (
-        cultivationtype:312
-        cultivationtype:407
-    ) .
-
-# Disjoint subclasses of cultivationtype:81
-[] a owl:AllDisjointClasses ;
-    owl:members (
-        cultivationtype:1105
-        cultivationtype:1106
-        cultivationtype:413
-    ) .
-
-# Disjoint subclasses of cultivationtype:830
-[] a owl:AllDisjointClasses ;
-    owl:members (
-        cultivationtype:470
         cultivationtype:801
         cultivationtype:802
         cultivationtype:803
@@ -5498,218 +4971,7 @@ cultivationtype:1292 a owl:Class ;
         cultivationtype:848
     ) .
 
-# Disjoint subclasses of cultivationtype:2
-[] a owl:AllDisjointClasses ;
-    owl:members (
-        cultivationtype:1153
-        cultivationtype:1155
-        cultivationtype:480
-        cultivationtype:611
-        cultivationtype:612
-        cultivationtype:613
-        cultivationtype:635
-        cultivationtype:650
-        cultivationtype:694
-        cultivationtype:697
-        cultivationtype:698
-    ) .
-
-# Disjoint subclasses of cultivationtype:1007
-[] a owl:AllDisjointClasses ;
-    owl:members (
-        cultivationtype:1001
-        cultivationtype:1002
-        cultivationtype:490
-        cultivationtype:513
-    ) .
-
-# Disjoint subclasses of cultivationtype:491
-[] a owl:AllDisjointClasses ;
-    owl:members (
-        cultivationtype:1006
-        cultivationtype:490
-    ) .
-
-# Disjoint subclasses of cultivationtype:492
-[] a owl:AllDisjointClasses ;
-    owl:members (
-        cultivationtype:1003
-        cultivationtype:491
-        cultivationtype:510
-        cultivationtype:511
-        cultivationtype:516
-    ) .
-
-# Disjoint subclasses of cultivationtype:14
-[] a owl:AllDisjointClasses ;
-    owl:members (
-        cultivationtype:1033
-        cultivationtype:497
-        cultivationtype:506
-        cultivationtype:951
-    ) .
-
-# Disjoint subclasses of cultivationtype:511
-[] a owl:AllDisjointClasses ;
-    owl:members (
-        cultivationtype:499
-        cultivationtype:500
-    ) .
-
-# Disjoint subclasses of cultivationtype:18
-[] a owl:AllDisjointClasses ;
-    owl:members (
-        cultivationtype:506
-        cultivationtype:515
-        cultivationtype:569
-        cultivationtype:570
-    ) .
-
-# Disjoint subclasses of cultivationtype:1003
-[] a owl:AllDisjointClasses ;
-    owl:members (
-        cultivationtype:1004
-        cultivationtype:1005
-        cultivationtype:507
-    ) .
-
-# Disjoint subclasses of cultivationtype:497
-[] a owl:AllDisjointClasses ;
-    owl:members (
-        cultivationtype:1262
-        cultivationtype:508
-        cultivationtype:519
-        cultivationtype:521
-    ) .
-
-# Disjoint subclasses of cultivationtype:999
-[] a owl:AllDisjointClasses ;
-    owl:members (
-        cultivationtype:1006
-        cultivationtype:512
-    ) .
-
-# Disjoint subclasses of cultivationtype:509
-[] a owl:AllDisjointClasses ;
-    owl:members (
-        cultivationtype:520
-        cultivationtype:529
-    ) .
-
-# Disjoint subclasses of cultivationtype:1039
-[] a owl:AllDisjointClasses ;
-    owl:members (
-        cultivationtype:526
-        cultivationtype:590
-    ) .
-
-# Disjoint subclasses of cultivationtype:1129
-[] a owl:AllDisjointClasses ;
-    owl:members (
-        cultivationtype:1111
-        cultivationtype:527
-        cultivationtype:591
-    ) .
-
-# Disjoint subclasses of cultivationtype:493
-[] a owl:AllDisjointClasses ;
-    owl:members (
-        cultivationtype:531
-        cultivationtype:592
-    ) .
-
-# Disjoint subclasses of cultivationtype:24
-[] a owl:AllDisjointClasses ;
-    owl:members (
-        cultivationtype:1053
-        cultivationtype:1064
-        cultivationtype:1108
-        cultivationtype:1137
-        cultivationtype:545
-        cultivationtype:546
-    ) .
-
-# Disjoint subclasses of cultivationtype:16
-[] a owl:AllDisjointClasses ;
-    owl:members (
-        cultivationtype:548
-        cultivationtype:574
-    ) .
-
-# Disjoint subclasses of cultivationtype:77
-[] a owl:AllDisjointClasses ;
-    owl:members (
-        cultivationtype:556
-        cultivationtype:557
-    ) .
-
-# Disjoint subclasses of cultivationtype:535
-[] a owl:AllDisjointClasses ;
-    owl:members (
-        cultivationtype:575
-        cultivationtype:576
-        cultivationtype:577
-    ) .
-
-# Disjoint subclasses of cultivationtype:542
-[] a owl:AllDisjointClasses ;
-    owl:members (
-        cultivationtype:578
-        cultivationtype:579
-    ) .
-
-# Disjoint subclasses of cultivationtype:549
-[] a owl:AllDisjointClasses ;
-    owl:members (
-        cultivationtype:580
-        cultivationtype:581
-    ) .
-
-# Disjoint subclasses of cultivationtype:3
-[] a owl:AllDisjointClasses ;
-    owl:members (
-        cultivationtype:616
-        cultivationtype:617
-        cultivationtype:618
-        cultivationtype:660
-        cultivationtype:693
-    ) .
-
-# Disjoint subclasses of cultivationtype:750
-[] a owl:AllDisjointClasses ;
-    owl:members (
-        cultivationtype:705
-        cultivationtype:706
-        cultivationtype:707
-        cultivationtype:708
-        cultivationtype:709
-        cultivationtype:710
-        cultivationtype:711
-        cultivationtype:712
-        cultivationtype:713
-        cultivationtype:714
-        cultivationtype:718
-        cultivationtype:719
-        cultivationtype:720
-        cultivationtype:721
-        cultivationtype:722
-        cultivationtype:723
-        cultivationtype:724
-        cultivationtype:725
-        cultivationtype:797
-    ) .
-
-# Disjoint subclasses of cultivationtype:6
-[] a owl:AllDisjointClasses ;
-    owl:members (
-        cultivationtype:1023
-        cultivationtype:715
-        cultivationtype:750
-        cultivationtype:760
-        cultivationtype:798
-    ) .
-
-# Disjoint subclasses of cultivationtype:470
+# Disjoint AGIS subclasses of cultivationtype:470
 [] a owl:AllDisjointClasses ;
     owl:members (
         cultivationtype:804
@@ -5717,30 +4979,14 @@ cultivationtype:1292 a owl:Class ;
         cultivationtype:814
     ) .
 
-# Disjoint subclasses of cultivationtype:806
+# Disjoint AGIS subclasses of cultivationtype:806
 [] a owl:AllDisjointClasses ;
     owl:members (
         cultivationtype:811
         cultivationtype:812
     ) .
 
-# Disjoint subclasses of cultivationtype:7
-[] a owl:AllDisjointClasses ;
-    owl:members (
-        cultivationtype:1209
-        cultivationtype:830
-        cultivationtype:840
-        cultivationtype:849
-    ) .
-
-# Disjoint subclasses of cultivationtype:8
-[] a owl:AllDisjointClasses ;
-    owl:members (
-        cultivationtype:1107
-        cultivationtype:851
-    ) .
-
-# Disjoint subclasses of cultivationtype:9
+# Disjoint AGIS subclasses of cultivationtype:9
 [] a owl:AllDisjointClasses ;
     owl:members (
         cultivationtype:852
@@ -5748,7 +4994,7 @@ cultivationtype:1292 a owl:Class ;
         cultivationtype:858
     ) .
 
-# Disjoint subclasses of cultivationtype:10
+# Disjoint AGIS subclasses of cultivationtype:10
 [] a owl:AllDisjointClasses ;
     owl:members (
         cultivationtype:895
@@ -5756,7 +5002,7 @@ cultivationtype:1292 a owl:Class ;
         cultivationtype:898
     ) .
 
-# Disjoint subclasses of cultivationtype:12
+# Disjoint AGIS subclasses of cultivationtype:12
 [] a owl:AllDisjointClasses ;
     owl:members (
         cultivationtype:902
@@ -5771,7 +5017,7 @@ cultivationtype:1292 a owl:Class ;
         cultivationtype:998
     ) .
 
-# Disjoint subclasses of cultivationtype:20
+# Disjoint AGIS subclasses of cultivationtype:20
 [] a owl:AllDisjointClasses ;
     owl:members (
         cultivationtype:921
@@ -5785,7 +5031,7 @@ cultivationtype:1292 a owl:Class ;
         cultivationtype:929
     ) .
 
-# Disjoint subclasses of cultivationtype:13
+# Disjoint AGIS subclasses of cultivationtype:13
 [] a owl:AllDisjointClasses ;
     owl:members (
         cultivationtype:930
@@ -5794,367 +5040,3 @@ cultivationtype:1292 a owl:Class ;
         cultivationtype:935
         cultivationtype:936
     ) .
-
-# Disjoint subclasses of cultivationtype:502
-[] a owl:AllDisjointClasses ;
-    owl:members (
-        cultivationtype:1008
-        cultivationtype:1009
-    ) .
-
-# Disjoint subclasses of cultivationtype:19
-[] a owl:AllDisjointClasses ;
-    owl:members (
-        cultivationtype:1012
-        cultivationtype:1017
-        cultivationtype:1021
-    ) .
-
-# Disjoint subclasses of cultivationtype:1012
-[] a owl:AllDisjointClasses ;
-    owl:members (
-        cultivationtype:1013
-        cultivationtype:1014
-    ) .
-
-# Disjoint subclasses of cultivationtype:1014
-[] a owl:AllDisjointClasses ;
-    owl:members (
-        cultivationtype:1015
-        cultivationtype:1035
-    ) .
-
-# Disjoint subclasses of cultivationtype:1013
-[] a owl:AllDisjointClasses ;
-    owl:members (
-        cultivationtype:1016
-        cultivationtype:1034
-    ) .
-
-# Disjoint subclasses of cultivationtype:505
-[] a owl:AllDisjointClasses ;
-    owl:members (
-        cultivationtype:1017
-        cultivationtype:1018
-    ) .
-
-# Disjoint subclasses of cultivationtype:1017
-[] a owl:AllDisjointClasses ;
-    owl:members (
-        cultivationtype:1019
-        cultivationtype:1020
-    ) .
-
-# Disjoint subclasses of cultivationtype:521
-[] a owl:AllDisjointClasses ;
-    owl:members (
-        cultivationtype:1025
-        cultivationtype:1026
-    ) .
-
-# Disjoint subclasses of cultivationtype:581
-[] a owl:AllDisjointClasses ;
-    owl:members (
-        cultivationtype:1028
-        cultivationtype:1029
-    ) .
-
-# Disjoint subclasses of cultivationtype:543
-[] a owl:AllDisjointClasses ;
-    owl:members (
-        cultivationtype:1030
-        cultivationtype:1031
-    ) .
-
-# Disjoint subclasses of cultivationtype:710
-[] a owl:AllDisjointClasses ;
-    owl:members (
-        cultivationtype:1037
-        cultivationtype:1038
-    ) .
-
-# Disjoint subclasses of cultivationtype:601
-[] a owl:AllDisjointClasses ;
-    owl:members (
-        cultivationtype:1042
-        cultivationtype:1124
-        cultivationtype:1146
-        cultivationtype:1154
-    ) .
-
-# Disjoint subclasses of cultivationtype:323
-[] a owl:AllDisjointClasses ;
-    owl:members (
-        cultivationtype:1047
-        cultivationtype:1048
-        cultivationtype:1050
-        cultivationtype:1051
-    ) .
-
-# Disjoint subclasses of cultivationtype:1065
-[] a owl:AllDisjointClasses ;
-    owl:members (
-        cultivationtype:1066
-        cultivationtype:1067
-    ) .
-
-# Disjoint subclasses of cultivationtype:311
-[] a owl:AllDisjointClasses ;
-    owl:members (
-        cultivationtype:1072
-        cultivationtype:1073
-    ) .
-
-# Disjoint subclasses of cultivationtype:31
-[] a owl:AllDisjointClasses ;
-    owl:members (
-        cultivationtype:1077
-        cultivationtype:1078
-    ) .
-
-# Disjoint subclasses of cultivationtype:616
-[] a owl:AllDisjointClasses ;
-    owl:members (
-        cultivationtype:1080
-        cultivationtype:1085
-        cultivationtype:1126
-    ) .
-
-# Disjoint subclasses of cultivationtype:113
-[] a owl:AllDisjointClasses ;
-    owl:members (
-        cultivationtype:1082
-        cultivationtype:1083
-    ) .
-
-# Disjoint subclasses of cultivationtype:524
-[] a owl:AllDisjointClasses ;
-    owl:members (
-        cultivationtype:1089
-        cultivationtype:1090
-    ) .
-
-# Disjoint subclasses of cultivationtype:1113
-[] a owl:AllDisjointClasses ;
-    owl:members (
-        cultivationtype:1099
-        cultivationtype:1100
-    ) .
-
-# Disjoint subclasses of cultivationtype:232
-[] a owl:AllDisjointClasses ;
-    owl:members (
-        cultivationtype:1110
-        cultivationtype:1118
-        cultivationtype:1127
-    ) .
-
-# Disjoint subclasses of cultivationtype:541
-[] a owl:AllDisjointClasses ;
-    owl:members (
-        cultivationtype:1112
-        cultivationtype:1136
-    ) .
-
-# Disjoint subclasses of cultivationtype:278
-[] a owl:AllDisjointClasses ;
-    owl:members (
-        cultivationtype:1113
-        cultivationtype:1257
-        cultivationtype:1268
-    ) .
-
-# Disjoint subclasses of cultivationtype:250
-[] a owl:AllDisjointClasses ;
-    owl:members (
-        cultivationtype:1114
-        cultivationtype:1115
-        cultivationtype:1116
-        cultivationtype:1117
-        cultivationtype:1119
-        cultivationtype:1120
-        cultivationtype:1121
-        cultivationtype:1122
-        cultivationtype:1207
-    ) .
-
-# Disjoint subclasses of cultivationtype:413
-[] a owl:AllDisjointClasses ;
-    owl:members (
-        cultivationtype:1125
-        cultivationtype:1251
-        cultivationtype:1270
-    ) .
-
-# Disjoint subclasses of cultivationtype:223
-[] a owl:AllDisjointClasses ;
-    owl:members (
-        cultivationtype:1128
-        cultivationtype:1130
-    ) .
-
-# Disjoint subclasses of cultivationtype:480
-[] a owl:AllDisjointClasses ;
-    owl:members (
-        cultivationtype:1132
-        cultivationtype:1133
-        cultivationtype:1134
-    ) .
-
-# Disjoint subclasses of cultivationtype:1141
-[] a owl:AllDisjointClasses ;
-    owl:members (
-        cultivationtype:1142
-        cultivationtype:1143
-        cultivationtype:1144
-        cultivationtype:1145
-    ) .
-
-# Disjoint subclasses of cultivationtype:252
-[] a owl:AllDisjointClasses ;
-    owl:members (
-        cultivationtype:1151
-        cultivationtype:1152
-    ) .
-
-# Disjoint subclasses of cultivationtype:1207
-[] a owl:AllDisjointClasses ;
-    owl:members (
-        cultivationtype:1156
-        cultivationtype:1157
-        cultivationtype:1160
-        cultivationtype:1161
-        cultivationtype:1224
-    ) .
-
-# Disjoint subclasses of cultivationtype:225
-[] a owl:AllDisjointClasses ;
-    owl:members (
-        cultivationtype:1163
-        cultivationtype:1165
-        cultivationtype:1168
-    ) .
-
-# Disjoint subclasses of cultivationtype:111
-[] a owl:AllDisjointClasses ;
-    owl:members (
-        cultivationtype:1181
-        cultivationtype:1182
-        cultivationtype:1183
-    ) .
-
-# Disjoint subclasses of cultivationtype:233
-[] a owl:AllDisjointClasses ;
-    owl:members (
-        cultivationtype:1185
-        cultivationtype:1186
-        cultivationtype:1187
-    ) .
-
-# Disjoint subclasses of cultivationtype:1286
-[] a owl:AllDisjointClasses ;
-    owl:members (
-        cultivationtype:1188
-        cultivationtype:1189
-        cultivationtype:1190
-        cultivationtype:1191
-    ) .
-
-# Disjoint subclasses of cultivationtype:1287
-[] a owl:AllDisjointClasses ;
-    owl:members (
-        cultivationtype:1192
-        cultivationtype:1193
-        cultivationtype:1194
-        cultivationtype:1195
-    ) .
-
-# Disjoint subclasses of cultivationtype:264
-[] a owl:AllDisjointClasses ;
-    owl:members (
-        cultivationtype:1209
-        cultivationtype:1211
-    ) .
-
-# Disjoint subclasses of cultivationtype:288
-[] a owl:AllDisjointClasses ;
-    owl:members (
-        cultivationtype:1212
-        cultivationtype:1213
-        cultivationtype:1214
-    ) .
-
-# Disjoint subclasses of cultivationtype:248
-[] a owl:AllDisjointClasses ;
-    owl:members (
-        cultivationtype:1215
-        cultivationtype:1216
-        cultivationtype:1217
-    ) .
-
-# Disjoint subclasses of cultivationtype:256
-[] a owl:AllDisjointClasses ;
-    owl:members (
-        cultivationtype:1218
-        cultivationtype:1282
-    ) .
-
-# Disjoint subclasses of cultivationtype:1206
-[] a owl:AllDisjointClasses ;
-    owl:members (
-        cultivationtype:1219
-        cultivationtype:1221
-        cultivationtype:1222
-    ) .
-
-# Disjoint subclasses of cultivationtype:107
-[] a owl:AllDisjointClasses ;
-    owl:members (
-        cultivationtype:1226
-        cultivationtype:1227
-        cultivationtype:1228
-        cultivationtype:1229
-    ) .
-
-# Disjoint subclasses of cultivationtype:170
-[] a owl:AllDisjointClasses ;
-    owl:members (
-        cultivationtype:1233
-        cultivationtype:1249
-    ) .
-
-# Disjoint subclasses of cultivationtype:276
-[] a owl:AllDisjointClasses ;
-    owl:members (
-        cultivationtype:1246
-        cultivationtype:1247
-    ) .
-
-# Disjoint subclasses of cultivationtype:534
-[] a owl:AllDisjointClasses ;
-    owl:members (
-        cultivationtype:1264
-        cultivationtype:1283
-    ) .
-
-# Disjoint subclasses of cultivationtype:1266
-[] a owl:AllDisjointClasses ;
-    owl:members (
-        cultivationtype:1267
-        cultivationtype:1269
-    ) .
-
-# Disjoint subclasses of cultivationtype:298
-[] a owl:AllDisjointClasses ;
-    owl:members (
-        cultivationtype:1273
-        cultivationtype:1278
-    ) .
-
-# Disjoint subclasses of cultivationtype:55
-[] a owl:AllDisjointClasses ;
-    owl:members (
-        cultivationtype:1286
-        cultivationtype:1287
-    ) .
-
