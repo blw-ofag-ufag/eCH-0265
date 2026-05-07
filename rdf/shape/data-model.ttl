@@ -6,6 +6,7 @@
 @prefix : <https://agriculture.ld.admin.ch/crops/> .
 @prefix shape: <https://agriculture.ld.admin.ch/crops/shape/> .
 @prefix cultivationtype: <https://agriculture.ld.admin.ch/crops/cultivationtype/> .
+@prefix intensity: <https://agriculture.ld.admin.ch/crops/intensity/> .
 
 # LINDAS prefixes --------------------------------------------------------------
 @prefix country: <https://ld.admin.ch/country/> .
@@ -77,7 +78,7 @@ shape:CultivationType a sh:NodeShape ;
     sh:property
     [
         sh:order 1 ;
-        sh:path schema:name ;
+        sh:path sh:name ;
         sh:name "Name"@en, "Name"@de ;
         sh:description "Name of this cultivation type."@en ;
         sh:minCount 1 ;
@@ -94,7 +95,7 @@ shape:CultivationType a sh:NodeShape ;
     ],
     [
         sh:order 3 ;
-        sh:path schema:description ;
+        sh:path sh:description ;
         sh:name "Description"@en, "Beschreibung"@de ;
         sh:description "Textual description of this cultivation type."@en ;
         sh:nodeKind sh:Literal ;
@@ -130,6 +131,7 @@ shape:CultivationType a sh:NodeShape ;
     ],
     [
         sh:order 9 ;
+        sh:name "Botanical plant"@en ;
         sh:path :botanicalPlant ;
         sh:nodeKind sh:IRI ;
         sh:maxCount 1 ;
@@ -140,6 +142,7 @@ shape:CultivationType a sh:NodeShape ;
         sh:path :managementIntensity ;
         sh:nodeKind sh:IRI ;
         sh:maxCount 1 ;
+        sh:in ( intensity:Extensive intensity:Low intensity:Medium intensity:Intensive ) ;
     ] .
 
 # ==============================================================================
@@ -156,8 +159,8 @@ shape:DirectPaymentCrop a sh:NodeShape ;
         [
             sh:order 1 ;
             a cube:KeyDimension ;
-            schema:name "Identifikator"@de ;
-            schema:description "Der LNF-Code, auch Kulturcode genannt, ist der allgemein gebräuchliche Identifikator für Direktzahlungskulturen in der Schweiz."@de ;
+            sh:name "Identifikator"@de ;
+            sh:description "Der LNF-Code, auch Kulturcode genannt, ist der allgemein gebräuchliche Identifikator für Direktzahlungskulturen in der Schweiz."@de ;
             sh:maxCount 1 ;
             sh:minCount 1 ;
             sh:path schema:identifier ;
@@ -166,15 +169,15 @@ shape:DirectPaymentCrop a sh:NodeShape ;
         ],
         [
             sh:order 2 ;
-            schema:name "Bezeichnung"@de, "Name"@en ;
+            sh:name "Bezeichnung"@de, "Name"@en ;
             sh:minCount 1 ;
-            sh:path schema:name ;
+            sh:path sh:name ;
             sh:nodeKind sh:Literal ;
             sh:datatype rdf:langString ;
         ],
         [
             sh:order 3 ;
-            schema:name "Kulturgruppe"@de ;
+            sh:name "Kulturgruppe"@de ;
             sh:maxCount 1 ;
             sh:nodeKind sh:IRI ;
             sh:path :cultivationGroup ;
@@ -182,7 +185,7 @@ shape:DirectPaymentCrop a sh:NodeShape ;
         ],
         [
             sh:order 4 ;
-            schema:name "Kultur"@de ;
+            sh:name "Kultur"@de ;
             sh:maxCount 1 ;
             sh:minCount 1 ;
             sh:nodeKind sh:IRI ;
@@ -191,8 +194,8 @@ shape:DirectPaymentCrop a sh:NodeShape ;
         ],
         [
             sh:order 5 ;
-            schema:name "Gültig von"@de ;
-            schema:description "Ab welchem Jahr wurde diese Direktzahlungskultur offiziell verwendet?"@de ;
+            sh:name "Gültig von"@de ;
+            sh:description "Ab welchem Jahr wurde diese Direktzahlungskultur offiziell verwendet?"@de ;
             sh:maxCount 1 ;
             sh:minInclusive 1999 ;
             sh:nodeKind sh:Literal ;
@@ -201,8 +204,8 @@ shape:DirectPaymentCrop a sh:NodeShape ;
         ],
         [
             sh:order 6 ;
-            schema:name "Gültig bis"@de ;
-            schema:description "Bis in welchem Jahr wurde diese Direktzahlungskultur offiziell verwendet?"@de ;
+            sh:name "Gültig bis"@de ;
+            sh:description "Bis in welchem Jahr wurde diese Direktzahlungskultur offiziell verwendet?"@de ;
             sh:maxCount 1 ;
             sh:path schema:validTo ;
             sh:or (
@@ -223,7 +226,7 @@ shape:NutrientBalanceCrop a sh:NodeShape ;
     sh:property
         [
             sh:order 1 ;
-            schema:name "Identifikator"@de,
+            sh:name "Identifikator"@de,
                 "Identifier"@en ;
             sh:maxCount 1 ;
             sh:minCount 1 ;
@@ -233,17 +236,17 @@ shape:NutrientBalanceCrop a sh:NodeShape ;
         ],
         [
             sh:order 2 ;
-            schema:name "Bezeichnung"@de,
+            sh:name "Bezeichnung"@de,
                 "Name"@en ;
             sh:maxCount 1 ;
             sh:minCount 1 ;
-            sh:path schema:name ;
+            sh:path sh:name ;
             sh:nodeKind sh:Literal ;
             sh:datatype rdf:langString ;
         ],
         [
             sh:order 3 ;
-            schema:name "Kulturkategorie"@de ;
+            sh:name "Kulturkategorie"@de ;
             sh:maxCount 1 ;
             sh:minCount 1 ;
             sh:nodeKind sh:Literal ;
@@ -252,7 +255,7 @@ shape:NutrientBalanceCrop a sh:NodeShape ;
         ],
         [
             sh:order 4 ;
-            schema:name "Kultur-Unterkategorie"@de ;
+            sh:name "Kultur-Unterkategorie"@de ;
             sh:maxCount 1 ;
             sh:minCount 1 ;
             sh:nodeKind sh:Literal ;
@@ -261,7 +264,7 @@ shape:NutrientBalanceCrop a sh:NodeShape ;
         ],
         [
             sh:order 5 ;
-            schema:name "Kultur"@de,
+            sh:name "Kultur"@de,
                 "Crop"@en ;
             a cube:KeyDimension ;
             sh:maxCount 1 ;
@@ -273,8 +276,8 @@ shape:NutrientBalanceCrop a sh:NodeShape ;
         [
             a cube:MeasureDimension ;
             sh:order 6 ;
-            schema:name "N"@de ;
-            schema:description "Stickstoff, kg/ha"@de ;
+            sh:name "N"@de ;
+            sh:description "Stickstoff, kg/ha"@de ;
             sh:maxCount 1 ;
             sh:path :N2 ;
             sh:nodeKind sh:Literal ;
@@ -285,8 +288,8 @@ shape:NutrientBalanceCrop a sh:NodeShape ;
         [
             a cube:MeasureDimension ;
             sh:order 7 ;
-            schema:name "P₂O₅"@de ;
-            schema:description "Phosphor, kg/dt"@de ;
+            sh:name "P₂O₅"@de ;
+            sh:description "Phosphor, kg/dt"@de ;
             sh:maxCount 1 ;
             sh:path :P2O5 ;
             sh:nodeKind sh:Literal ;
@@ -297,8 +300,8 @@ shape:NutrientBalanceCrop a sh:NodeShape ;
         [
             a cube:MeasureDimension ;
             sh:order 8 ;
-            schema:name "K₂O"@de ;
-            schema:description "Kalium, kg/dt"@de ;
+            sh:name "K₂O"@de ;
+            sh:description "Kalium, kg/dt"@de ;
             sh:maxCount 1 ;
             sh:path :K2O ;
             sh:nodeKind sh:Literal ;
@@ -309,8 +312,8 @@ shape:NutrientBalanceCrop a sh:NodeShape ;
         [
             a cube:MeasureDimension ;
             sh:order 9 ;
-            schema:name "Mg"@de ;
-            schema:description "Magnesium, kg/dt"@de ;
+            sh:name "Mg"@de ;
+            sh:description "Magnesium, kg/dt"@de ;
             sh:maxCount 1 ;
             sh:path :Mg ;
             sh:nodeKind sh:Literal ;
@@ -333,8 +336,8 @@ shape:PlantProtectionCrop a sh:NodeShape ;
         [
             sh:order 1 ;
             a cube:KeyDimension ;
-            schema:name "Identifikator"@de ;
-            schema:description "Der Identifikator aus Infofito. Neu ist das eine UUID."@de ;
+            sh:name "Identifikator"@de ;
+            sh:description "Der Identifikator aus Infofito. Neu ist das eine UUID."@de ;
             sh:maxCount 1 ;
             sh:minCount 1 ;
             sh:path schema:identifier ;
@@ -344,18 +347,18 @@ shape:PlantProtectionCrop a sh:NodeShape ;
         ],
         [
             sh:order 2 ;
-            schema:name "Name"@de ;
-            schema:description "Der in Infofito eingetragene Name dieser Kultur"@de ;
+            sh:name "Name"@de ;
+            sh:description "Der in Infofito eingetragene Name dieser Kultur"@de ;
             sh:maxCount 4 ;
             sh:minCount 2 ;
             sh:languageIn ( "de" "fr" "it" "en" ) ;
             sh:uniqueLang true ;
             sh:nodeKind sh:Literal ;
-            sh:path schema:name ;
+            sh:path sh:name ;
         ],
         [
             sh:order 3 ;
-            schema:name "Kultur"@de ;
+            sh:name "Kultur"@de ;
             sh:maxCount 1 ;
             sh:minCount 1 ;
             sh:nodeKind sh:IRI ;
@@ -364,7 +367,7 @@ shape:PlantProtectionCrop a sh:NodeShape ;
         ],
         [
             sh:order 4 ;
-            schema:name "Version"@de ;
+            sh:name "Version"@de ;
             sh:maxCount 1 ;
             sh:minCount 1 ;
             sh:path schema:version ;
@@ -374,7 +377,7 @@ shape:PlantProtectionCrop a sh:NodeShape ;
         [
             sh:order 5 ;
             sh:name "Parent crop"@en ;
-            schema:name "Überkultur"@de ;
+            sh:name "Überkultur"@de ;
             sh:path schema:isPartOf ;
             sh:minCount 0 ;
             sh:maxCount 2 ;
