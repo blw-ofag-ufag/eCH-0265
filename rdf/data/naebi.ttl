@@ -53,8 +53,8 @@ naebi: a void:Dataset,
 # OBSERVATION SET
 # ==============================================================================
 
-naebi:ObservationSet a cube:ObservationSet ;
-    :NutrientBalanceCrop  naebi:1,
+naebi:ObservationSet a :NutrientBalanceCropSet ;
+    cube:observation naebi:1,
         naebi:10,
         naebi:100,
         naebi:101,
@@ -375,8 +375,8 @@ naebi:1 a :NutrientBalanceCrop  ;
     :Mg 50.0 ;
     :N2 200.0 ;
     :P2O5 100.0 ;
-    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
-    :cultivationSubCategory "CSC_PRCRP"^^xsd:string ;
+    :cultivationCategory cultivationtype:465 ;
+    :cultivationSubCategory cultivationtype:7 ;
     :cultivationType cultivationtype:1036 .
 
 naebi:10 a :NutrientBalanceCrop  ;
@@ -386,8 +386,8 @@ naebi:10 a :NutrientBalanceCrop  ;
     :Mg 20.0 ;
     :N2 140.0 ;
     :P2O5 30.0 ;
-    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
-    :cultivationSubCategory "CSC_PRMCR"^^xsd:string ;
+    :cultivationCategory cultivationtype:465 ;
+    :cultivationSubCategory cultivationtype:467 ;
     :cultivationType cultivationtype:1037 .
 
 naebi:100 a :NutrientBalanceCrop  ;
@@ -397,8 +397,8 @@ naebi:100 a :NutrientBalanceCrop  ;
     :Mg 50.0 ;
     :N2 180.0 ;
     :P2O5 60.0 ;
-    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
-    :cultivationSubCategory "CSC_PRMCR"^^xsd:string ;
+    :cultivationCategory cultivationtype:465 ;
+    :cultivationSubCategory cultivationtype:467 ;
     :cultivationType cultivationtype:708 .
 
 naebi:101 a :NutrientBalanceCrop  ;
@@ -408,8 +408,8 @@ naebi:101 a :NutrientBalanceCrop  ;
     :Mg 25.0 ;
     :N2 160.0 ;
     :P2O5 50.0 ;
-    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
-    :cultivationSubCategory "CSC_OUTVG"^^xsd:string ;
+    :cultivationCategory cultivationtype:465 ;
+    :cultivationSubCategory cultivationtype:24 ;
     :cultivationType cultivationtype:1188 .
 
 naebi:102 a :NutrientBalanceCrop  ;
@@ -419,8 +419,8 @@ naebi:102 a :NutrientBalanceCrop  ;
     :Mg 15.0 ;
     :N2 70.0 ;
     :P2O5 30.0 ;
-    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
-    :cultivationSubCategory "CSC_OUTVG"^^xsd:string ;
+    :cultivationCategory cultivationtype:465 ;
+    :cultivationSubCategory cultivationtype:24 ;
     :cultivationType cultivationtype:1189 .
 
 naebi:103 a :NutrientBalanceCrop  ;
@@ -430,8 +430,8 @@ naebi:103 a :NutrientBalanceCrop  ;
     :Mg 20.0 ;
     :N2 120.0 ;
     :P2O5 40.0 ;
-    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
-    :cultivationSubCategory "CSC_OUTVG"^^xsd:string ;
+    :cultivationCategory cultivationtype:465 ;
+    :cultivationSubCategory cultivationtype:24 ;
     :cultivationType cultivationtype:1190 .
 
 naebi:104 a :NutrientBalanceCrop  ;
@@ -441,8 +441,8 @@ naebi:104 a :NutrientBalanceCrop  ;
     :Mg 10.0 ;
     :N2 40.0 ;
     :P2O5 15.0 ;
-    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
-    :cultivationSubCategory "CSC_OUTVG"^^xsd:string ;
+    :cultivationCategory cultivationtype:465 ;
+    :cultivationSubCategory cultivationtype:24 ;
     :cultivationType cultivationtype:1191 .
 
 naebi:105 a :NutrientBalanceCrop  ;
@@ -452,8 +452,8 @@ naebi:105 a :NutrientBalanceCrop  ;
     :Mg 20.0 ;
     :N2 120.0 ;
     :P2O5 40.0 ;
-    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
-    :cultivationSubCategory "CSC_PRMCR"^^xsd:string ;
+    :cultivationCategory cultivationtype:465 ;
+    :cultivationSubCategory cultivationtype:467 ;
     :cultivationType cultivationtype:1192 .
 
 naebi:106 a :NutrientBalanceCrop  ;
@@ -463,8 +463,8 @@ naebi:106 a :NutrientBalanceCrop  ;
     :Mg 25.0 ;
     :N2 160.0 ;
     :P2O5 50.0 ;
-    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
-    :cultivationSubCategory "CSC_PRMCR"^^xsd:string ;
+    :cultivationCategory cultivationtype:465 ;
+    :cultivationSubCategory cultivationtype:467 ;
     :cultivationType cultivationtype:1193 .
 
 naebi:107 a :NutrientBalanceCrop  ;
@@ -474,8 +474,8 @@ naebi:107 a :NutrientBalanceCrop  ;
     :Mg 15.0 ;
     :N2 70.0 ;
     :P2O5 30.0 ;
-    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
-    :cultivationSubCategory "CSC_PRMCR"^^xsd:string ;
+    :cultivationCategory cultivationtype:465 ;
+    :cultivationSubCategory cultivationtype:467 ;
     :cultivationType cultivationtype:1194 .
 
 naebi:108 a :NutrientBalanceCrop  ;
@@ -485,8 +485,8 @@ naebi:108 a :NutrientBalanceCrop  ;
     :Mg 10.0 ;
     :N2 40.0 ;
     :P2O5 15.0 ;
-    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
-    :cultivationSubCategory "CSC_PRMCR"^^xsd:string ;
+    :cultivationCategory cultivationtype:465 ;
+    :cultivationSubCategory cultivationtype:467 ;
     :cultivationType cultivationtype:1195 .
 
 naebi:109 a :NutrientBalanceCrop  ;
@@ -496,8 +496,8 @@ naebi:109 a :NutrientBalanceCrop  ;
     :Mg 15.0 ;
     :N2 80.0 ;
     :P2O5 30.0 ;
-    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
-    :cultivationSubCategory "CSC_PRMCR"^^xsd:string ;
+    :cultivationCategory cultivationtype:465 ;
+    :cultivationSubCategory cultivationtype:467 ;
     :cultivationType cultivationtype:67 .
 
 naebi:11 a :NutrientBalanceCrop  ;
@@ -507,8 +507,8 @@ naebi:11 a :NutrientBalanceCrop  ;
     :Mg 20.0 ;
     :N2 150.0 ;
     :P2O5 30.0 ;
-    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
-    :cultivationSubCategory "CSC_PRMCR"^^xsd:string ;
+    :cultivationCategory cultivationtype:465 ;
+    :cultivationSubCategory cultivationtype:467 ;
     :cultivationType cultivationtype:1038 .
 
 naebi:110 a :NutrientBalanceCrop  ;
@@ -518,8 +518,8 @@ naebi:110 a :NutrientBalanceCrop  ;
     :Mg 0.25 ;
     :N2 1.2 ;
     :P2O5 0.82 ;
-    :cultivationCategory "CULT_FODDER"^^xsd:string ;
-    :cultivationSubCategory "CSC_FORAG"^^xsd:string ;
+    :cultivationCategory cultivationtype:464 ;
+    :cultivationSubCategory cultivationtype:463 ;
     :cultivationType cultivationtype:1289 .
 
 naebi:111 a :NutrientBalanceCrop  ;
@@ -529,8 +529,8 @@ naebi:111 a :NutrientBalanceCrop  ;
     :Mg 0.29 ;
     :N2 1.2 ;
     :P2O5 0.96 ;
-    :cultivationCategory "CULT_FODDER"^^xsd:string ;
-    :cultivationSubCategory "CSC_FORAG"^^xsd:string ;
+    :cultivationCategory cultivationtype:464 ;
+    :cultivationSubCategory cultivationtype:463 ;
     :cultivationType cultivationtype:1290 .
 
 naebi:112 a :NutrientBalanceCrop  ;
@@ -540,8 +540,8 @@ naebi:112 a :NutrientBalanceCrop  ;
     :Mg 10.0 ;
     :N2 250.0 ;
     :P2O5 50.0 ;
-    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
-    :cultivationSubCategory "CSC_OUTVG"^^xsd:string ;
+    :cultivationCategory cultivationtype:465 ;
+    :cultivationSubCategory cultivationtype:24 ;
     :cultivationType cultivationtype:87 .
 
 naebi:113 a :NutrientBalanceCrop  ;
@@ -551,8 +551,8 @@ naebi:113 a :NutrientBalanceCrop  ;
     :Mg 0.3 ;
     :N2 60.0 ;
     :P2O5 1.1 ;
-    :cultivationCategory "CULT_ARABLE"^^xsd:string ;
-    :cultivationSubCategory "CSC_DIVCR"^^xsd:string ;
+    :cultivationCategory cultivationtype:1 ;
+    :cultivationSubCategory cultivationtype:462 ;
     :cultivationType cultivationtype:493 .
 
 naebi:114 a :NutrientBalanceCrop  ;
@@ -562,8 +562,8 @@ naebi:114 a :NutrientBalanceCrop  ;
     :Mg 0.28 ;
     :N2 120.0 ;
     :P2O5 1.48 ;
-    :cultivationCategory "CULT_ARABLE"^^xsd:string ;
-    :cultivationSubCategory "CSC_RTCRP"^^xsd:string ;
+    :cultivationCategory cultivationtype:1 ;
+    :cultivationSubCategory cultivationtype:17 ;
     :cultivationType cultivationtype:1039 .
 
 naebi:115 a :NutrientBalanceCrop  ;
@@ -573,8 +573,8 @@ naebi:115 a :NutrientBalanceCrop  ;
     :Mg 0.09 ;
     :N2 0.0 ;
     :P2O5 0.08 ;
-    :cultivationCategory "CULT_ARABLE"^^xsd:string ;
-    :cultivationSubCategory "CSC_RTCRP"^^xsd:string ;
+    :cultivationCategory cultivationtype:1 ;
+    :cultivationSubCategory cultivationtype:17 ;
     :cultivationType cube:Undefined .
 
 naebi:116 a :NutrientBalanceCrop  ;
@@ -584,8 +584,8 @@ naebi:116 a :NutrientBalanceCrop  ;
     :Mg 0.13 ;
     :N2 0.0 ;
     :P2O5 0.98 ;
-    :cultivationCategory "CULT_ARABLE"^^xsd:string ;
-    :cultivationSubCategory "CSC_RTCRP"^^xsd:string ;
+    :cultivationCategory cultivationtype:1 ;
+    :cultivationSubCategory cultivationtype:17 ;
     :cultivationType cultivationtype:1027 .
 
 naebi:117 a :NutrientBalanceCrop  ;
@@ -595,8 +595,8 @@ naebi:117 a :NutrientBalanceCrop  ;
     :Mg 0.05 ;
     :N2 100.0 ;
     :P2O5 0.3 ;
-    :cultivationCategory "CULT_ARABLE"^^xsd:string ;
-    :cultivationSubCategory "CSC_DIVCR"^^xsd:string ;
+    :cultivationCategory cultivationtype:1 ;
+    :cultivationSubCategory cultivationtype:462 ;
     :cultivationType cultivationtype:576 .
 
 naebi:118 a :NutrientBalanceCrop  ;
@@ -606,8 +606,8 @@ naebi:118 a :NutrientBalanceCrop  ;
     :Mg 20.0 ;
     :N2 60.0 ;
     :P2O5 20.0 ;
-    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
-    :cultivationSubCategory "CSC_PRMCR"^^xsd:string ;
+    :cultivationCategory cultivationtype:465 ;
+    :cultivationSubCategory cultivationtype:467 ;
     :cultivationType cultivationtype:1288 .
 
 naebi:119 a :NutrientBalanceCrop  ;
@@ -617,8 +617,8 @@ naebi:119 a :NutrientBalanceCrop  ;
     :Mg 20.0 ;
     :N2 65.0 ;
     :P2O5 20.0 ;
-    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
-    :cultivationSubCategory "CSC_PRMCR"^^xsd:string ;
+    :cultivationCategory cultivationtype:465 ;
+    :cultivationSubCategory cultivationtype:467 ;
     :cultivationType cultivationtype:1041 .
 
 naebi:12 a :NutrientBalanceCrop  ;
@@ -628,8 +628,8 @@ naebi:12 a :NutrientBalanceCrop  ;
     :Mg 0.25 ;
     :N2 1.2 ;
     :P2O5 0.82 ;
-    :cultivationCategory "CULT_FODDER"^^xsd:string ;
-    :cultivationSubCategory "CSC_FORAG"^^xsd:string ;
+    :cultivationCategory cultivationtype:464 ;
+    :cultivationSubCategory cultivationtype:463 ;
     :cultivationType cultivationtype:1042 .
 
 naebi:120 a :NutrientBalanceCrop  ;
@@ -639,8 +639,8 @@ naebi:120 a :NutrientBalanceCrop  ;
     :Mg 15.0 ;
     :N2 50.0 ;
     :P2O5 15.0 ;
-    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
-    :cultivationSubCategory "CSC_PRMCR"^^xsd:string ;
+    :cultivationCategory cultivationtype:465 ;
+    :cultivationSubCategory cultivationtype:467 ;
     :cultivationType cultivationtype:1040 .
 
 naebi:121 a :NutrientBalanceCrop  ;
@@ -650,8 +650,8 @@ naebi:121 a :NutrientBalanceCrop  ;
     :Mg 0.13 ;
     :N2 100.0 ;
     :P2O5 0.5 ;
-    :cultivationCategory "CULT_FODDER"^^xsd:string ;
-    :cultivationSubCategory "CSC_RTCRP"^^xsd:string ;
+    :cultivationCategory cultivationtype:464 ;
+    :cultivationSubCategory cultivationtype:17 ;
     :cultivationType cultivationtype:523 .
 
 naebi:122 a :NutrientBalanceCrop  ;
@@ -661,8 +661,8 @@ naebi:122 a :NutrientBalanceCrop  ;
     :Mg 30.0 ;
     :N2 140.0 ;
     :P2O5 60.0 ;
-    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
-    :cultivationSubCategory "CSC_PRCRP"^^xsd:string ;
+    :cultivationCategory cultivationtype:465 ;
+    :cultivationSubCategory cultivationtype:7 ;
     :cultivationType cultivationtype:1043 .
 
 naebi:123 a :NutrientBalanceCrop  ;
@@ -672,8 +672,8 @@ naebi:123 a :NutrientBalanceCrop  ;
     :Mg 20.0 ;
     :N2 130.0 ;
     :P2O5 40.0 ;
-    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
-    :cultivationSubCategory "CSC_OUTVG"^^xsd:string ;
+    :cultivationCategory cultivationtype:465 ;
+    :cultivationSubCategory cultivationtype:24 ;
     :cultivationType cultivationtype:86 .
 
 naebi:124 a :NutrientBalanceCrop  ;
@@ -683,8 +683,8 @@ naebi:124 a :NutrientBalanceCrop  ;
     :Mg 30.0 ;
     :N2 170.0 ;
     :P2O5 50.0 ;
-    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
-    :cultivationSubCategory "CSC_OUTVG"^^xsd:string ;
+    :cultivationCategory cultivationtype:465 ;
+    :cultivationSubCategory cultivationtype:24 ;
     :cultivationType cultivationtype:1200 .
 
 naebi:125 a :NutrientBalanceCrop  ;
@@ -694,8 +694,8 @@ naebi:125 a :NutrientBalanceCrop  ;
     :Mg 20.0 ;
     :N2 150.0 ;
     :P2O5 30.0 ;
-    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
-    :cultivationSubCategory "CSC_OUTVG"^^xsd:string ;
+    :cultivationCategory cultivationtype:465 ;
+    :cultivationSubCategory cultivationtype:24 ;
     :cultivationType cultivationtype:84 .
 
 naebi:126 a :NutrientBalanceCrop  ;
@@ -705,8 +705,8 @@ naebi:126 a :NutrientBalanceCrop  ;
     :Mg 10.0 ;
     :N2 50.0 ;
     :P2O5 20.0 ;
-    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
-    :cultivationSubCategory "CSC_OUTVG"^^xsd:string ;
+    :cultivationCategory cultivationtype:465 ;
+    :cultivationSubCategory cultivationtype:24 ;
     :cultivationType cultivationtype:260 .
 
 naebi:127 a :NutrientBalanceCrop  ;
@@ -716,8 +716,8 @@ naebi:127 a :NutrientBalanceCrop  ;
     :Mg 0.54 ;
     :N2 60.0 ;
     :P2O5 2.54 ;
-    :cultivationCategory "CULT_ARABLE"^^xsd:string ;
-    :cultivationSubCategory "CSC_DIVCR"^^xsd:string ;
+    :cultivationCategory cultivationtype:1 ;
+    :cultivationSubCategory cultivationtype:462 ;
     :cultivationType cultivationtype:1045 .
 
 naebi:128 a :NutrientBalanceCrop  ;
@@ -727,8 +727,8 @@ naebi:128 a :NutrientBalanceCrop  ;
     :Mg 15.0 ;
     :N2 70.0 ;
     :P2O5 40.0 ;
-    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
-    :cultivationSubCategory "CSC_PRMCR"^^xsd:string ;
+    :cultivationCategory cultivationtype:465 ;
+    :cultivationSubCategory cultivationtype:467 ;
     :cultivationType cultivationtype:1046 .
 
 naebi:129 a :NutrientBalanceCrop  ;
@@ -738,8 +738,8 @@ naebi:129 a :NutrientBalanceCrop  ;
     :Mg 0.0 ;
     :N2 0.0 ;
     :P2O5 0.0 ;
-    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
-    :cultivationSubCategory "CSC_PRCRP"^^xsd:string ;
+    :cultivationCategory cultivationtype:465 ;
+    :cultivationSubCategory cultivationtype:7 ;
     :cultivationType cultivationtype:1047 .
 
 naebi:13 a :NutrientBalanceCrop  ;
@@ -749,8 +749,8 @@ naebi:13 a :NutrientBalanceCrop  ;
     :Mg 20.0 ;
     :N2 85.0 ;
     :P2O5 57.0 ;
-    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
-    :cultivationSubCategory "CSC_PRMCR"^^xsd:string ;
+    :cultivationCategory cultivationtype:465 ;
+    :cultivationSubCategory cultivationtype:467 ;
     :cultivationType cultivationtype:1186 .
 
 naebi:130 a :NutrientBalanceCrop  ;
@@ -760,8 +760,8 @@ naebi:130 a :NutrientBalanceCrop  ;
     :Mg 0.0 ;
     :N2 0.0 ;
     :P2O5 0.0 ;
-    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
-    :cultivationSubCategory "CSC_PRCRP"^^xsd:string ;
+    :cultivationCategory cultivationtype:465 ;
+    :cultivationSubCategory cultivationtype:7 ;
     :cultivationType cultivationtype:1048 .
 
 naebi:131 a :NutrientBalanceCrop  ;
@@ -771,8 +771,8 @@ naebi:131 a :NutrientBalanceCrop  ;
     :Mg 30.0 ;
     :N2 160.0 ;
     :P2O5 60.0 ;
-    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
-    :cultivationSubCategory "CSC_PRCRP"^^xsd:string ;
+    :cultivationCategory cultivationtype:465 ;
+    :cultivationSubCategory cultivationtype:7 ;
     :cultivationType cultivationtype:1049 .
 
 naebi:132 a :NutrientBalanceCrop  ;
@@ -782,8 +782,8 @@ naebi:132 a :NutrientBalanceCrop  ;
     :Mg 20.0 ;
     :N2 200.0 ;
     :P2O5 40.0 ;
-    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
-    :cultivationSubCategory "CSC_OUTVG"^^xsd:string ;
+    :cultivationCategory cultivationtype:465 ;
+    :cultivationSubCategory cultivationtype:24 ;
     :cultivationType cultivationtype:323 .
 
 naebi:133 a :NutrientBalanceCrop  ;
@@ -793,8 +793,8 @@ naebi:133 a :NutrientBalanceCrop  ;
     :Mg 0.0 ;
     :N2 0.0 ;
     :P2O5 0.0 ;
-    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
-    :cultivationSubCategory "CSC_PRCRP"^^xsd:string ;
+    :cultivationCategory cultivationtype:465 ;
+    :cultivationSubCategory cultivationtype:7 ;
     :cultivationType cultivationtype:1050 .
 
 naebi:134 a :NutrientBalanceCrop  ;
@@ -804,8 +804,8 @@ naebi:134 a :NutrientBalanceCrop  ;
     :Mg 0.0 ;
     :N2 0.0 ;
     :P2O5 0.0 ;
-    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
-    :cultivationSubCategory "CSC_PRCRP"^^xsd:string ;
+    :cultivationCategory cultivationtype:465 ;
+    :cultivationSubCategory cultivationtype:7 ;
     :cultivationType cultivationtype:1051 .
 
 naebi:135 a :NutrientBalanceCrop  ;
@@ -815,8 +815,8 @@ naebi:135 a :NutrientBalanceCrop  ;
     :Mg 0.0 ;
     :N2 0.0 ;
     :P2O5 0.0 ;
-    :cultivationCategory "CULT_FODDER"^^xsd:string ;
-    :cultivationSubCategory "CSC_FORAG"^^xsd:string ;
+    :cultivationCategory cultivationtype:464 ;
+    :cultivationSubCategory cultivationtype:463 ;
     :cultivationType cultivationtype:1052 .
 
 naebi:136 a :NutrientBalanceCrop  ;
@@ -826,8 +826,8 @@ naebi:136 a :NutrientBalanceCrop  ;
     :Mg 0.0 ;
     :N2 0.0 ;
     :P2O5 0.0 ;
-    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
-    :cultivationSubCategory "CSC_OUTVG"^^xsd:string ;
+    :cultivationCategory cultivationtype:465 ;
+    :cultivationSubCategory cultivationtype:24 ;
     :cultivationType cultivationtype:1053 .
 
 naebi:137 a :NutrientBalanceCrop  ;
@@ -837,8 +837,8 @@ naebi:137 a :NutrientBalanceCrop  ;
     :Mg 0.0 ;
     :N2 0.0 ;
     :P2O5 0.0 ;
-    :cultivationCategory "CULT_ARABLE"^^xsd:string ;
-    :cultivationSubCategory "CSC_DIVCR"^^xsd:string ;
+    :cultivationCategory cultivationtype:1 ;
+    :cultivationSubCategory cultivationtype:462 ;
     :cultivationType cultivationtype:556 .
 
 naebi:138 a :NutrientBalanceCrop  ;
@@ -848,8 +848,8 @@ naebi:138 a :NutrientBalanceCrop  ;
     :Mg 30.0 ;
     :N2 110.0 ;
     :P2O5 50.0 ;
-    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
-    :cultivationSubCategory "CSC_PRMCR"^^xsd:string ;
+    :cultivationCategory cultivationtype:465 ;
+    :cultivationSubCategory cultivationtype:467 ;
     :cultivationType cultivationtype:1054 .
 
 naebi:139 a :NutrientBalanceCrop  ;
@@ -859,8 +859,8 @@ naebi:139 a :NutrientBalanceCrop  ;
     :Mg 15.0 ;
     :N2 65.0 ;
     :P2O5 30.0 ;
-    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
-    :cultivationSubCategory "CSC_PRMCR"^^xsd:string ;
+    :cultivationCategory cultivationtype:465 ;
+    :cultivationSubCategory cultivationtype:467 ;
     :cultivationType cultivationtype:1055 .
 
 naebi:14 a :NutrientBalanceCrop  ;
@@ -870,8 +870,8 @@ naebi:14 a :NutrientBalanceCrop  ;
     :Mg 5.0 ;
     :N2 0.0 ;
     :P2O5 10.0 ;
-    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
-    :cultivationSubCategory "CSC_OUTVG"^^xsd:string ;
+    :cultivationCategory cultivationtype:465 ;
+    :cultivationSubCategory cultivationtype:24 ;
     :cultivationType cultivationtype:1056 .
 
 naebi:140 a :NutrientBalanceCrop  ;
@@ -881,8 +881,8 @@ naebi:140 a :NutrientBalanceCrop  ;
     :Mg 20.0 ;
     :N2 80.0 ;
     :P2O5 30.0 ;
-    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
-    :cultivationSubCategory "CSC_PRCRP"^^xsd:string ;
+    :cultivationCategory cultivationtype:465 ;
+    :cultivationSubCategory cultivationtype:7 ;
     :cultivationType cultivationtype:1058 .
 
 naebi:141 a :NutrientBalanceCrop  ;
@@ -892,8 +892,8 @@ naebi:141 a :NutrientBalanceCrop  ;
     :Mg 25.0 ;
     :N2 150.0 ;
     :P2O5 60.0 ;
-    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
-    :cultivationSubCategory "CSC_PRMCR"^^xsd:string ;
+    :cultivationCategory cultivationtype:465 ;
+    :cultivationSubCategory cultivationtype:467 ;
     :cultivationType cultivationtype:479 .
 
 naebi:142 a :NutrientBalanceCrop  ;
@@ -903,8 +903,8 @@ naebi:142 a :NutrientBalanceCrop  ;
     :Mg 40.0 ;
     :N2 140.0 ;
     :P2O5 30.0 ;
-    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
-    :cultivationSubCategory "CSC_OUTVG"^^xsd:string ;
+    :cultivationCategory cultivationtype:465 ;
+    :cultivationSubCategory cultivationtype:24 ;
     :cultivationType cultivationtype:297 .
 
 naebi:143 a :NutrientBalanceCrop  ;
@@ -914,8 +914,8 @@ naebi:143 a :NutrientBalanceCrop  ;
     :Mg 0.0943 ;
     :N2 80.0 ;
     :P2O5 0.566 ;
-    :cultivationCategory "CULT_FODDER"^^xsd:string ;
-    :cultivationSubCategory "CSC_GRAIN"^^xsd:string ;
+    :cultivationCategory cultivationtype:464 ;
+    :cultivationSubCategory cultivationtype:466 ;
     :cultivationType cultivationtype:1031 .
 
 naebi:144 a :NutrientBalanceCrop  ;
@@ -925,8 +925,8 @@ naebi:144 a :NutrientBalanceCrop  ;
     :Mg 20.0 ;
     :N2 120.0 ;
     :P2O5 30.0 ;
-    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
-    :cultivationSubCategory "CSC_PRMCR"^^xsd:string ;
+    :cultivationCategory cultivationtype:465 ;
+    :cultivationSubCategory cultivationtype:467 ;
     :cultivationType cultivationtype:1059 .
 
 naebi:145 a :NutrientBalanceCrop  ;
@@ -936,8 +936,8 @@ naebi:145 a :NutrientBalanceCrop  ;
     :Mg 10.0 ;
     :N2 80.0 ;
     :P2O5 30.0 ;
-    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
-    :cultivationSubCategory "CSC_OUTVG"^^xsd:string ;
+    :cultivationCategory cultivationtype:465 ;
+    :cultivationSubCategory cultivationtype:24 ;
     :cultivationType cultivationtype:1060 .
 
 naebi:146 a :NutrientBalanceCrop  ;
@@ -947,8 +947,8 @@ naebi:146 a :NutrientBalanceCrop  ;
     :Mg 20.0 ;
     :N2 100.0 ;
     :P2O5 60.0 ;
-    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
-    :cultivationSubCategory "CSC_OUTVG"^^xsd:string ;
+    :cultivationCategory cultivationtype:465 ;
+    :cultivationSubCategory cultivationtype:24 ;
     :cultivationType cultivationtype:1061 .
 
 naebi:147 a :NutrientBalanceCrop  ;
@@ -958,8 +958,8 @@ naebi:147 a :NutrientBalanceCrop  ;
     :Mg 0.0 ;
     :N2 0.0 ;
     :P2O5 0.0 ;
-    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
-    :cultivationSubCategory "CSC_PRMCR"^^xsd:string ;
+    :cultivationCategory cultivationtype:465 ;
+    :cultivationSubCategory cultivationtype:467 ;
     :cultivationType cultivationtype:716 .
 
 naebi:148 a :NutrientBalanceCrop  ;
@@ -969,8 +969,8 @@ naebi:148 a :NutrientBalanceCrop  ;
     :Mg 15.0 ;
     :N2 90.0 ;
     :P2O5 40.0 ;
-    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
-    :cultivationSubCategory "CSC_PRMCR"^^xsd:string ;
+    :cultivationCategory cultivationtype:465 ;
+    :cultivationSubCategory cultivationtype:467 ;
     :cultivationType cultivationtype:1062 .
 
 naebi:149 a :NutrientBalanceCrop  ;
@@ -980,8 +980,8 @@ naebi:149 a :NutrientBalanceCrop  ;
     :Mg 0.0 ;
     :N2 85.0 ;
     :P2O5 25.0 ;
-    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
-    :cultivationSubCategory "CSC_PRMCR"^^xsd:string ;
+    :cultivationCategory cultivationtype:465 ;
+    :cultivationSubCategory cultivationtype:467 ;
     :cultivationType cultivationtype:719 .
 
 naebi:15 a :NutrientBalanceCrop  ;
@@ -991,8 +991,8 @@ naebi:15 a :NutrientBalanceCrop  ;
     :Mg 20.0 ;
     :N2 140.0 ;
     :P2O5 40.0 ;
-    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
-    :cultivationSubCategory "CSC_OUTVG"^^xsd:string ;
+    :cultivationCategory cultivationtype:465 ;
+    :cultivationSubCategory cultivationtype:24 ;
     :cultivationType cultivationtype:151 .
 
 naebi:150 a :NutrientBalanceCrop  ;
@@ -1002,8 +1002,8 @@ naebi:150 a :NutrientBalanceCrop  ;
     :Mg 0.2 ;
     :N2 70.0 ;
     :P2O5 1.2 ;
-    :cultivationCategory "CULT_ARABLE"^^xsd:string ;
-    :cultivationSubCategory "CSC_DIVCR"^^xsd:string ;
+    :cultivationCategory cultivationtype:1 ;
+    :cultivationSubCategory cultivationtype:462 ;
     :cultivationType cultivationtype:1063 .
 
 naebi:151 a :NutrientBalanceCrop  ;
@@ -1013,8 +1013,8 @@ naebi:151 a :NutrientBalanceCrop  ;
     :Mg 0.0 ;
     :N2 30.0 ;
     :P2O5 0.0 ;
-    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
-    :cultivationSubCategory "CSC_OUTVG"^^xsd:string ;
+    :cultivationCategory cultivationtype:465 ;
+    :cultivationSubCategory cultivationtype:24 ;
     :cultivationType cultivationtype:1064 .
 
 naebi:152 a :NutrientBalanceCrop  ;
@@ -1024,8 +1024,8 @@ naebi:152 a :NutrientBalanceCrop  ;
     :Mg 8.0 ;
     :N2 45.0 ;
     :P2O5 15.0 ;
-    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
-    :cultivationSubCategory "CSC_ECOBL"^^xsd:string ;
+    :cultivationCategory cultivationtype:465 ;
+    :cultivationSubCategory cultivationtype:414 ;
     :cultivationType cultivationtype:1204 .
 
 naebi:153 a :NutrientBalanceCrop  ;
@@ -1035,8 +1035,8 @@ naebi:153 a :NutrientBalanceCrop  ;
     :Mg 13.0 ;
     :N2 115.0 ;
     :P2O5 45.0 ;
-    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
-    :cultivationSubCategory "CSC_PRMCR"^^xsd:string ;
+    :cultivationCategory cultivationtype:465 ;
+    :cultivationSubCategory cultivationtype:467 ;
     :cultivationType cultivationtype:1066 .
 
 naebi:154 a :NutrientBalanceCrop  ;
@@ -1046,8 +1046,8 @@ naebi:154 a :NutrientBalanceCrop  ;
     :Mg 5.0 ;
     :N2 50.0 ;
     :P2O5 17.0 ;
-    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
-    :cultivationSubCategory "CSC_PRMCR"^^xsd:string ;
+    :cultivationCategory cultivationtype:465 ;
+    :cultivationSubCategory cultivationtype:467 ;
     :cultivationType cultivationtype:1067 .
 
 naebi:155 a :NutrientBalanceCrop  ;
@@ -1057,8 +1057,8 @@ naebi:155 a :NutrientBalanceCrop  ;
     :Mg 0.15 ;
     :N2 0.5 ;
     :P2O5 0.57 ;
-    :cultivationCategory "CULT_FODDER"^^xsd:string ;
-    :cultivationSubCategory "CSC_FORAG"^^xsd:string ;
+    :cultivationCategory cultivationtype:464 ;
+    :cultivationSubCategory cultivationtype:463 ;
     :cultivationType cultivationtype:612 .
 
 naebi:156 a :NutrientBalanceCrop  ;
@@ -1068,8 +1068,8 @@ naebi:156 a :NutrientBalanceCrop  ;
     :Mg 0.0 ;
     :N2 0.0 ;
     :P2O5 0.0 ;
-    :cultivationCategory "CULT_ARABLE"^^xsd:string ;
-    :cultivationSubCategory "CSC_PRMCR"^^xsd:string ;
+    :cultivationCategory cultivationtype:1 ;
+    :cultivationSubCategory cultivationtype:467 ;
     :cultivationType cultivationtype:1023 .
 
 naebi:157 a :NutrientBalanceCrop  ;
@@ -1079,8 +1079,8 @@ naebi:157 a :NutrientBalanceCrop  ;
     :Mg 0.0 ;
     :N2 0.0 ;
     :P2O5 0.0 ;
-    :cultivationCategory "CULT_FODDER"^^xsd:string ;
-    :cultivationSubCategory "CSC_FORAG"^^xsd:string ;
+    :cultivationCategory cultivationtype:464 ;
+    :cultivationSubCategory cultivationtype:463 ;
     :cultivationType cultivationtype:611 .
 
 naebi:158 a :NutrientBalanceCrop  ;
@@ -1090,8 +1090,8 @@ naebi:158 a :NutrientBalanceCrop  ;
     :Mg 20.0 ;
     :N2 130.0 ;
     :P2O5 60.0 ;
-    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
-    :cultivationSubCategory "CSC_OUTVG"^^xsd:string ;
+    :cultivationCategory cultivationtype:465 ;
+    :cultivationSubCategory cultivationtype:24 ;
     :cultivationType cultivationtype:277 .
 
 naebi:159 a :NutrientBalanceCrop  ;
@@ -1101,8 +1101,8 @@ naebi:159 a :NutrientBalanceCrop  ;
     :Mg 15.0 ;
     :N2 90.0 ;
     :P2O5 50.0 ;
-    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
-    :cultivationSubCategory "CSC_PRMCR"^^xsd:string ;
+    :cultivationCategory cultivationtype:465 ;
+    :cultivationSubCategory cultivationtype:467 ;
     :cultivationType cultivationtype:1068 .
 
 naebi:16 a :NutrientBalanceCrop  ;
@@ -1112,8 +1112,8 @@ naebi:16 a :NutrientBalanceCrop  ;
     :Mg 0.6 ;
     :N2 0.0 ;
     :P2O5 0.52 ;
-    :cultivationCategory "CULT_FODDER"^^xsd:string ;
-    :cultivationSubCategory "CSC_FORAG"^^xsd:string ;
+    :cultivationCategory cultivationtype:464 ;
+    :cultivationSubCategory cultivationtype:463 ;
     :cultivationType cube:Undefined .
 
 naebi:160 a :NutrientBalanceCrop  ;
@@ -1123,8 +1123,8 @@ naebi:160 a :NutrientBalanceCrop  ;
     :Mg 15.0 ;
     :N2 80.0 ;
     :P2O5 30.0 ;
-    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
-    :cultivationSubCategory "CSC_PRMCR"^^xsd:string ;
+    :cultivationCategory cultivationtype:465 ;
+    :cultivationSubCategory cultivationtype:467 ;
     :cultivationType cultivationtype:1069 .
 
 naebi:161 a :NutrientBalanceCrop  ;
@@ -1134,8 +1134,8 @@ naebi:161 a :NutrientBalanceCrop  ;
     :Mg 5.0 ;
     :N2 50.0 ;
     :P2O5 17.0 ;
-    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
-    :cultivationSubCategory "CSC_PRMCR"^^xsd:string ;
+    :cultivationCategory cultivationtype:465 ;
+    :cultivationSubCategory cultivationtype:467 ;
     :cultivationType cultivationtype:714 .
 
 naebi:162 a :NutrientBalanceCrop  ;
@@ -1145,8 +1145,8 @@ naebi:162 a :NutrientBalanceCrop  ;
     :Mg 15.0 ;
     :N2 180.0 ;
     :P2O5 45.0 ;
-    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
-    :cultivationSubCategory "CSC_PRCRP"^^xsd:string ;
+    :cultivationCategory cultivationtype:465 ;
+    :cultivationSubCategory cultivationtype:7 ;
     :cultivationType cultivationtype:325 .
 
 naebi:163 a :NutrientBalanceCrop  ;
@@ -1156,8 +1156,8 @@ naebi:163 a :NutrientBalanceCrop  ;
     :Mg 10.0 ;
     :N2 50.0 ;
     :P2O5 10.0 ;
-    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
-    :cultivationSubCategory "CSC_OUTVG"^^xsd:string ;
+    :cultivationCategory cultivationtype:465 ;
+    :cultivationSubCategory cultivationtype:24 ;
     :cultivationType cultivationtype:1070 .
 
 naebi:164 a :NutrientBalanceCrop  ;
@@ -1167,8 +1167,8 @@ naebi:164 a :NutrientBalanceCrop  ;
     :Mg 30.0 ;
     :N2 160.0 ;
     :P2O5 50.0 ;
-    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
-    :cultivationSubCategory "CSC_PRCRP"^^xsd:string ;
+    :cultivationCategory cultivationtype:465 ;
+    :cultivationSubCategory cultivationtype:7 ;
     :cultivationType cultivationtype:1071 .
 
 naebi:165 a :NutrientBalanceCrop  ;
@@ -1178,8 +1178,8 @@ naebi:165 a :NutrientBalanceCrop  ;
     :Mg 0.0 ;
     :N2 0.0 ;
     :P2O5 0.0 ;
-    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
-    :cultivationSubCategory "CSC_OUTVG"^^xsd:string ;
+    :cultivationCategory cultivationtype:465 ;
+    :cultivationSubCategory cultivationtype:24 ;
     :cultivationType cultivationtype:1072 .
 
 naebi:166 a :NutrientBalanceCrop  ;
@@ -1189,8 +1189,8 @@ naebi:166 a :NutrientBalanceCrop  ;
     :Mg 0.0 ;
     :N2 0.0 ;
     :P2O5 0.0 ;
-    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
-    :cultivationSubCategory "CSC_OUTVG"^^xsd:string ;
+    :cultivationCategory cultivationtype:465 ;
+    :cultivationSubCategory cultivationtype:24 ;
     :cultivationType cultivationtype:306 .
 
 naebi:167 a :NutrientBalanceCrop  ;
@@ -1200,8 +1200,8 @@ naebi:167 a :NutrientBalanceCrop  ;
     :Mg 15.0 ;
     :N2 130.0 ;
     :P2O5 30.0 ;
-    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
-    :cultivationSubCategory "CSC_OUTVG"^^xsd:string ;
+    :cultivationCategory cultivationtype:465 ;
+    :cultivationSubCategory cultivationtype:24 ;
     :cultivationType cultivationtype:1073 .
 
 naebi:168 a :NutrientBalanceCrop  ;
@@ -1211,8 +1211,8 @@ naebi:168 a :NutrientBalanceCrop  ;
     :Mg 10.0 ;
     :N2 0.0 ;
     :P2O5 30.0 ;
-    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
-    :cultivationSubCategory "CSC_OUTVG"^^xsd:string ;
+    :cultivationCategory cultivationtype:465 ;
+    :cultivationSubCategory cultivationtype:24 ;
     :cultivationType cultivationtype:1075 .
 
 naebi:169 a :NutrientBalanceCrop  ;
@@ -1222,8 +1222,8 @@ naebi:169 a :NutrientBalanceCrop  ;
     :Mg 5.0 ;
     :N2 0.0 ;
     :P2O5 20.0 ;
-    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
-    :cultivationSubCategory "CSC_OUTVG"^^xsd:string ;
+    :cultivationCategory cultivationtype:465 ;
+    :cultivationSubCategory cultivationtype:24 ;
     :cultivationType cultivationtype:1076 .
 
 naebi:17 a :NutrientBalanceCrop  ;
@@ -1233,8 +1233,8 @@ naebi:17 a :NutrientBalanceCrop  ;
     :Mg 25.0 ;
     :N2 115.0 ;
     :P2O5 80.0 ;
-    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
-    :cultivationSubCategory "CSC_PRMCR"^^xsd:string ;
+    :cultivationCategory cultivationtype:465 ;
+    :cultivationSubCategory cultivationtype:467 ;
     :cultivationType cultivationtype:1187 .
 
 naebi:170 a :NutrientBalanceCrop  ;
@@ -1244,8 +1244,8 @@ naebi:170 a :NutrientBalanceCrop  ;
     :Mg 0.2 ;
     :N2 0.5 ;
     :P2O5 0.5 ;
-    :cultivationCategory "CULT_FODDER"^^xsd:string ;
-    :cultivationSubCategory "CSC_FORAG"^^xsd:string ;
+    :cultivationCategory cultivationtype:464 ;
+    :cultivationSubCategory cultivationtype:463 ;
     :cultivationType cultivationtype:617 .
 
 naebi:171 a :NutrientBalanceCrop  ;
@@ -1255,8 +1255,8 @@ naebi:171 a :NutrientBalanceCrop  ;
     :Mg 30.0 ;
     :N2 75.0 ;
     :P2O5 20.0 ;
-    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
-    :cultivationSubCategory "CSC_PRMCR"^^xsd:string ;
+    :cultivationCategory cultivationtype:465 ;
+    :cultivationSubCategory cultivationtype:467 ;
     :cultivationType cultivationtype:1077 .
 
 naebi:172 a :NutrientBalanceCrop  ;
@@ -1266,8 +1266,8 @@ naebi:172 a :NutrientBalanceCrop  ;
     :Mg 20.0 ;
     :N2 60.0 ;
     :P2O5 15.0 ;
-    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
-    :cultivationSubCategory "CSC_PRMCR"^^xsd:string ;
+    :cultivationCategory cultivationtype:465 ;
+    :cultivationSubCategory cultivationtype:467 ;
     :cultivationType cultivationtype:1078 .
 
 naebi:173 a :NutrientBalanceCrop  ;
@@ -1277,8 +1277,8 @@ naebi:173 a :NutrientBalanceCrop  ;
     :Mg 20.0 ;
     :N2 140.0 ;
     :P2O5 30.0 ;
-    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
-    :cultivationSubCategory "CSC_OUTVG"^^xsd:string ;
+    :cultivationCategory cultivationtype:465 ;
+    :cultivationSubCategory cultivationtype:24 ;
     :cultivationType cultivationtype:1079 .
 
 naebi:174 a :NutrientBalanceCrop  ;
@@ -1288,8 +1288,8 @@ naebi:174 a :NutrientBalanceCrop  ;
     :Mg 0.25 ;
     :N2 1.2 ;
     :P2O5 0.82 ;
-    :cultivationCategory "CULT_FODDER"^^xsd:string ;
-    :cultivationSubCategory "CSC_FORAG"^^xsd:string ;
+    :cultivationCategory cultivationtype:464 ;
+    :cultivationSubCategory cultivationtype:463 ;
     :cultivationType cultivationtype:1080 .
 
 naebi:175 a :NutrientBalanceCrop  ;
@@ -1299,8 +1299,8 @@ naebi:175 a :NutrientBalanceCrop  ;
     :Mg 30.0 ;
     :N2 40.0 ;
     :P2O5 80.0 ;
-    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
-    :cultivationSubCategory "CSC_PRCRP"^^xsd:string ;
+    :cultivationCategory cultivationtype:465 ;
+    :cultivationSubCategory cultivationtype:7 ;
     :cultivationType cultivationtype:1081 .
 
 naebi:176 a :NutrientBalanceCrop  ;
@@ -1310,8 +1310,8 @@ naebi:176 a :NutrientBalanceCrop  ;
     :Mg 20.0 ;
     :N2 80.0 ;
     :P2O5 20.0 ;
-    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
-    :cultivationSubCategory "CSC_PRMCR"^^xsd:string ;
+    :cultivationCategory cultivationtype:465 ;
+    :cultivationSubCategory cultivationtype:467 ;
     :cultivationType cultivationtype:1082 .
 
 naebi:177 a :NutrientBalanceCrop  ;
@@ -1321,8 +1321,8 @@ naebi:177 a :NutrientBalanceCrop  ;
     :Mg 15.0 ;
     :N2 60.0 ;
     :P2O5 15.0 ;
-    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
-    :cultivationSubCategory "CSC_PRMCR"^^xsd:string ;
+    :cultivationCategory cultivationtype:465 ;
+    :cultivationSubCategory cultivationtype:467 ;
     :cultivationType cultivationtype:1083 .
 
 naebi:178 a :NutrientBalanceCrop  ;
@@ -1332,8 +1332,8 @@ naebi:178 a :NutrientBalanceCrop  ;
     :Mg 20.0 ;
     :N2 120.0 ;
     :P2O5 40.0 ;
-    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
-    :cultivationSubCategory "CSC_OUTVG"^^xsd:string ;
+    :cultivationCategory cultivationtype:465 ;
+    :cultivationSubCategory cultivationtype:24 ;
     :cultivationType cultivationtype:1084 .
 
 naebi:179 a :NutrientBalanceCrop  ;
@@ -1343,8 +1343,8 @@ naebi:179 a :NutrientBalanceCrop  ;
     :Mg 0.2 ;
     :N2 0.95 ;
     :P2O5 0.71 ;
-    :cultivationCategory "CULT_FODDER"^^xsd:string ;
-    :cultivationSubCategory "CSC_FORAG"^^xsd:string ;
+    :cultivationCategory cultivationtype:464 ;
+    :cultivationSubCategory cultivationtype:463 ;
     :cultivationType cultivationtype:1085 .
 
 naebi:18 a :NutrientBalanceCrop  ;
@@ -1354,8 +1354,8 @@ naebi:18 a :NutrientBalanceCrop  ;
     :Mg 15.0 ;
     :N2 55.0 ;
     :P2O5 34.0 ;
-    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
-    :cultivationSubCategory "CSC_PRMCR"^^xsd:string ;
+    :cultivationCategory cultivationtype:465 ;
+    :cultivationSubCategory cultivationtype:467 ;
     :cultivationType cultivationtype:1185 .
 
 naebi:180 a :NutrientBalanceCrop  ;
@@ -1365,8 +1365,8 @@ naebi:180 a :NutrientBalanceCrop  ;
     :Mg 10.0 ;
     :N2 30.0 ;
     :P2O5 10.0 ;
-    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
-    :cultivationSubCategory "CSC_PRMCR"^^xsd:string ;
+    :cultivationCategory cultivationtype:465 ;
+    :cultivationSubCategory cultivationtype:467 ;
     :cultivationType cultivationtype:1086 .
 
 naebi:181 a :NutrientBalanceCrop  ;
@@ -1376,8 +1376,8 @@ naebi:181 a :NutrientBalanceCrop  ;
     :Mg 40.0 ;
     :N2 80.0 ;
     :P2O5 30.0 ;
-    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
-    :cultivationSubCategory "CSC_PRMCR"^^xsd:string ;
+    :cultivationCategory cultivationtype:465 ;
+    :cultivationSubCategory cultivationtype:467 ;
     :cultivationType cultivationtype:1087 .
 
 naebi:182 a :NutrientBalanceCrop  ;
@@ -1387,8 +1387,8 @@ naebi:182 a :NutrientBalanceCrop  ;
     :Mg 20.0 ;
     :N2 60.0 ;
     :P2O5 20.0 ;
-    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
-    :cultivationSubCategory "CSC_PRMCR"^^xsd:string ;
+    :cultivationCategory cultivationtype:465 ;
+    :cultivationSubCategory cultivationtype:467 ;
     :cultivationType cultivationtype:1088 .
 
 naebi:183 a :NutrientBalanceCrop  ;
@@ -1398,8 +1398,8 @@ naebi:183 a :NutrientBalanceCrop  ;
     :Mg 0.03 ;
     :N2 110.0 ;
     :P2O5 0.19 ;
-    :cultivationCategory "CULT_ARABLE"^^xsd:string ;
-    :cultivationSubCategory "CSC_RTCRP"^^xsd:string ;
+    :cultivationCategory cultivationtype:1 ;
+    :cultivationSubCategory cultivationtype:17 ;
     :cultivationType cultivationtype:1089 .
 
 naebi:184 a :NutrientBalanceCrop  ;
@@ -1409,8 +1409,8 @@ naebi:184 a :NutrientBalanceCrop  ;
     :Mg 0.03 ;
     :N2 40.0 ;
     :P2O5 0.16 ;
-    :cultivationCategory "CULT_ARABLE"^^xsd:string ;
-    :cultivationSubCategory "CSC_RTCRP"^^xsd:string ;
+    :cultivationCategory cultivationtype:1 ;
+    :cultivationSubCategory cultivationtype:17 ;
     :cultivationType cultivationtype:1090 .
 
 naebi:185 a :NutrientBalanceCrop  ;
@@ -1420,8 +1420,8 @@ naebi:185 a :NutrientBalanceCrop  ;
     :Mg 0.03 ;
     :N2 100.0 ;
     :P2O5 0.19 ;
-    :cultivationCategory "CULT_ARABLE"^^xsd:string ;
-    :cultivationSubCategory "CSC_RTCRP"^^xsd:string ;
+    :cultivationCategory cultivationtype:1 ;
+    :cultivationSubCategory cultivationtype:17 ;
     :cultivationType cultivationtype:525 .
 
 naebi:186 a :NutrientBalanceCrop  ;
@@ -1431,8 +1431,8 @@ naebi:186 a :NutrientBalanceCrop  ;
     :Mg 0.03 ;
     :N2 200.0 ;
     :P2O5 0.16 ;
-    :cultivationCategory "CULT_ARABLE"^^xsd:string ;
-    :cultivationSubCategory "CSC_RTCRP"^^xsd:string ;
+    :cultivationCategory cultivationtype:1 ;
+    :cultivationSubCategory cultivationtype:17 ;
     :cultivationType cultivationtype:1090 .
 
 naebi:187 a :NutrientBalanceCrop  ;
@@ -1442,8 +1442,8 @@ naebi:187 a :NutrientBalanceCrop  ;
     :Mg 0.03 ;
     :N2 140.0 ;
     :P2O5 0.19 ;
-    :cultivationCategory "CULT_ARABLE"^^xsd:string ;
-    :cultivationSubCategory "CSC_RTCRP"^^xsd:string ;
+    :cultivationCategory cultivationtype:1 ;
+    :cultivationSubCategory cultivationtype:17 ;
     :cultivationType cultivationtype:525 .
 
 naebi:188 a :NutrientBalanceCrop  ;
@@ -1453,8 +1453,8 @@ naebi:188 a :NutrientBalanceCrop  ;
     :Mg 0.03 ;
     :N2 60.0 ;
     :P2O5 0.19 ;
-    :cultivationCategory "CULT_ARABLE"^^xsd:string ;
-    :cultivationSubCategory "CSC_RTCRP"^^xsd:string ;
+    :cultivationCategory cultivationtype:1 ;
+    :cultivationSubCategory cultivationtype:17 ;
     :cultivationType cultivationtype:525 .
 
 naebi:189 a :NutrientBalanceCrop  ;
@@ -1464,8 +1464,8 @@ naebi:189 a :NutrientBalanceCrop  ;
     :Mg 0.03 ;
     :N2 70.0 ;
     :P2O5 0.19 ;
-    :cultivationCategory "CULT_ARABLE"^^xsd:string ;
-    :cultivationSubCategory "CSC_RTCRP"^^xsd:string ;
+    :cultivationCategory cultivationtype:1 ;
+    :cultivationSubCategory cultivationtype:17 ;
     :cultivationType cultivationtype:1089 .
 
 naebi:19 a :NutrientBalanceCrop  ;
@@ -1475,8 +1475,8 @@ naebi:19 a :NutrientBalanceCrop  ;
     :Mg 10.0 ;
     :N2 60.0 ;
     :P2O5 20.0 ;
-    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
-    :cultivationSubCategory "CSC_PRMCR"^^xsd:string ;
+    :cultivationCategory cultivationtype:465 ;
+    :cultivationSubCategory cultivationtype:467 ;
     :cultivationType cultivationtype:161 .
 
 naebi:190 a :NutrientBalanceCrop  ;
@@ -1486,8 +1486,8 @@ naebi:190 a :NutrientBalanceCrop  ;
     :Mg 0.03 ;
     :N2 150.0 ;
     :P2O5 0.19 ;
-    :cultivationCategory "CULT_ARABLE"^^xsd:string ;
-    :cultivationSubCategory "CSC_RTCRP"^^xsd:string ;
+    :cultivationCategory cultivationtype:1 ;
+    :cultivationSubCategory cultivationtype:17 ;
     :cultivationType cultivationtype:1089 .
 
 naebi:191 a :NutrientBalanceCrop  ;
@@ -1497,8 +1497,8 @@ naebi:191 a :NutrientBalanceCrop  ;
     :Mg 0.03 ;
     :N2 120.0 ;
     :P2O5 0.16 ;
-    :cultivationCategory "CULT_ARABLE"^^xsd:string ;
-    :cultivationSubCategory "CSC_RTCRP"^^xsd:string ;
+    :cultivationCategory cultivationtype:1 ;
+    :cultivationSubCategory cultivationtype:17 ;
     :cultivationType cultivationtype:1090 .
 
 naebi:192 a :NutrientBalanceCrop  ;
@@ -1508,8 +1508,8 @@ naebi:192 a :NutrientBalanceCrop  ;
     :Mg 15.0 ;
     :N2 110.0 ;
     :P2O5 60.0 ;
-    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
-    :cultivationSubCategory "CSC_PRMCR"^^xsd:string ;
+    :cultivationCategory cultivationtype:465 ;
+    :cultivationSubCategory cultivationtype:467 ;
     :cultivationType cultivationtype:1091 .
 
 naebi:193 a :NutrientBalanceCrop  ;
@@ -1519,8 +1519,8 @@ naebi:193 a :NutrientBalanceCrop  ;
     :Mg 20.0 ;
     :N2 100.0 ;
     :P2O5 50.0 ;
-    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
-    :cultivationSubCategory "CSC_PRCRP"^^xsd:string ;
+    :cultivationCategory cultivationtype:465 ;
+    :cultivationSubCategory cultivationtype:7 ;
     :cultivationType cultivationtype:1092 .
 
 naebi:194 a :NutrientBalanceCrop  ;
@@ -1530,8 +1530,8 @@ naebi:194 a :NutrientBalanceCrop  ;
     :Mg 0.25 ;
     :N2 0.0 ;
     :P2O5 1.4 ;
-    :cultivationCategory "CULT_ARABLE"^^xsd:string ;
-    :cultivationSubCategory "CSC_RTCRP"^^xsd:string ;
+    :cultivationCategory cultivationtype:1 ;
+    :cultivationSubCategory cultivationtype:17 ;
     :cultivationType cultivationtype:468 .
 
 naebi:195 a :NutrientBalanceCrop  ;
@@ -1541,8 +1541,8 @@ naebi:195 a :NutrientBalanceCrop  ;
     :Mg 25.0 ;
     :N2 180.0 ;
     :P2O5 90.0 ;
-    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
-    :cultivationSubCategory "CSC_OUTVG"^^xsd:string ;
+    :cultivationCategory cultivationtype:465 ;
+    :cultivationSubCategory cultivationtype:24 ;
     :cultivationType cultivationtype:129 .
 
 naebi:196 a :NutrientBalanceCrop  ;
@@ -1552,8 +1552,8 @@ naebi:196 a :NutrientBalanceCrop  ;
     :Mg 30.0 ;
     :N2 150.0 ;
     :P2O5 60.0 ;
-    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
-    :cultivationSubCategory "CSC_OUTVG"^^xsd:string ;
+    :cultivationCategory cultivationtype:465 ;
+    :cultivationSubCategory cultivationtype:24 ;
     :cultivationType cultivationtype:1093 .
 
 naebi:197 a :NutrientBalanceCrop  ;
@@ -1563,8 +1563,8 @@ naebi:197 a :NutrientBalanceCrop  ;
     :Mg 20.0 ;
     :N2 70.0 ;
     :P2O5 20.0 ;
-    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
-    :cultivationSubCategory "CSC_PRCRP"^^xsd:string ;
+    :cultivationCategory cultivationtype:465 ;
+    :cultivationSubCategory cultivationtype:7 ;
     :cultivationType cultivationtype:1094 .
 
 naebi:198 a :NutrientBalanceCrop  ;
@@ -1574,8 +1574,8 @@ naebi:198 a :NutrientBalanceCrop  ;
     :Mg 0.15 ;
     :N2 0.5 ;
     :P2O5 0.57 ;
-    :cultivationCategory "CULT_FODDER"^^xsd:string ;
-    :cultivationSubCategory "CSC_FORAG"^^xsd:string ;
+    :cultivationCategory cultivationtype:464 ;
+    :cultivationSubCategory cultivationtype:463 ;
     :cultivationType cultivationtype:1126 .
 
 naebi:199 a :NutrientBalanceCrop  ;
@@ -1585,8 +1585,8 @@ naebi:199 a :NutrientBalanceCrop  ;
     :Mg 0.47 ;
     :N2 120.0 ;
     :P2O5 1.15 ;
-    :cultivationCategory "CULT_ARABLE"^^xsd:string ;
-    :cultivationSubCategory "CSC_GRAIN"^^xsd:string ;
+    :cultivationCategory cultivationtype:1 ;
+    :cultivationSubCategory cultivationtype:466 ;
     :cultivationType cultivationtype:574 .
 
 naebi:2 a :NutrientBalanceCrop  ;
@@ -1596,8 +1596,8 @@ naebi:2 a :NutrientBalanceCrop  ;
     :Mg 0.2 ;
     :N2 0.0 ;
     :P2O5 1.0 ;
-    :cultivationCategory "CULT_ARABLE"^^xsd:string ;
-    :cultivationSubCategory "CSC_DIVCR"^^xsd:string ;
+    :cultivationCategory cultivationtype:1 ;
+    :cultivationSubCategory cultivationtype:462 ;
     :cultivationType cultivationtype:1095 .
 
 naebi:20 a :NutrientBalanceCrop  ;
@@ -1607,8 +1607,8 @@ naebi:20 a :NutrientBalanceCrop  ;
     :Mg 10.0 ;
     :N2 120.0 ;
     :P2O5 30.0 ;
-    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
-    :cultivationSubCategory "CSC_OUTVG"^^xsd:string ;
+    :cultivationCategory cultivationtype:465 ;
+    :cultivationSubCategory cultivationtype:24 ;
     :cultivationType cultivationtype:92 .
 
 naebi:200 a :NutrientBalanceCrop  ;
@@ -1618,8 +1618,8 @@ naebi:200 a :NutrientBalanceCrop  ;
     :Mg 10.0 ;
     :N2 50.0 ;
     :P2O5 20.0 ;
-    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
-    :cultivationSubCategory "CSC_OUTVG"^^xsd:string ;
+    :cultivationCategory cultivationtype:465 ;
+    :cultivationSubCategory cultivationtype:24 ;
     :cultivationType cultivationtype:1208 .
 
 naebi:201 a :NutrientBalanceCrop  ;
@@ -1629,8 +1629,8 @@ naebi:201 a :NutrientBalanceCrop  ;
     :Mg 30.0 ;
     :N2 90.0 ;
     :P2O5 50.0 ;
-    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
-    :cultivationSubCategory "CSC_PRCRP"^^xsd:string ;
+    :cultivationCategory cultivationtype:465 ;
+    :cultivationSubCategory cultivationtype:7 ;
     :cultivationType cultivationtype:1209 .
 
 naebi:202 a :NutrientBalanceCrop  ;
@@ -1640,8 +1640,8 @@ naebi:202 a :NutrientBalanceCrop  ;
     :Mg 20.0 ;
     :N2 60.0 ;
     :P2O5 30.0 ;
-    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
-    :cultivationSubCategory "CSC_PRCRP"^^xsd:string ;
+    :cultivationCategory cultivationtype:465 ;
+    :cultivationSubCategory cultivationtype:7 ;
     :cultivationType cultivationtype:1210 .
 
 naebi:203 a :NutrientBalanceCrop  ;
@@ -1651,8 +1651,8 @@ naebi:203 a :NutrientBalanceCrop  ;
     :Mg 10.0 ;
     :N2 110.0 ;
     :P2O5 40.0 ;
-    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
-    :cultivationSubCategory "CSC_OUTVG"^^xsd:string ;
+    :cultivationCategory cultivationtype:465 ;
+    :cultivationSubCategory cultivationtype:24 ;
     :cultivationType cultivationtype:1211 .
 
 naebi:204 a :NutrientBalanceCrop  ;
@@ -1662,8 +1662,8 @@ naebi:204 a :NutrientBalanceCrop  ;
     :Mg 10.0 ;
     :N2 110.0 ;
     :P2O5 20.0 ;
-    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
-    :cultivationSubCategory "CSC_OUTVG"^^xsd:string ;
+    :cultivationCategory cultivationtype:465 ;
+    :cultivationSubCategory cultivationtype:24 ;
     :cultivationType cultivationtype:133 .
 
 naebi:205 a :NutrientBalanceCrop  ;
@@ -1673,8 +1673,8 @@ naebi:205 a :NutrientBalanceCrop  ;
     :Mg 15.0 ;
     :N2 130.0 ;
     :P2O5 25.0 ;
-    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
-    :cultivationSubCategory "CSC_OUTVG"^^xsd:string ;
+    :cultivationCategory cultivationtype:465 ;
+    :cultivationSubCategory cultivationtype:24 ;
     :cultivationType cultivationtype:1096 .
 
 naebi:206 a :NutrientBalanceCrop  ;
@@ -1684,8 +1684,8 @@ naebi:206 a :NutrientBalanceCrop  ;
     :Mg 15.0 ;
     :N2 130.0 ;
     :P2O5 80.0 ;
-    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
-    :cultivationSubCategory "CSC_DIVCR"^^xsd:string ;
+    :cultivationCategory cultivationtype:465 ;
+    :cultivationSubCategory cultivationtype:462 ;
     :cultivationType cultivationtype:1097 .
 
 naebi:207 a :NutrientBalanceCrop  ;
@@ -1695,8 +1695,8 @@ naebi:207 a :NutrientBalanceCrop  ;
     :Mg 15.0 ;
     :N2 45.0 ;
     :P2O5 23.0 ;
-    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
-    :cultivationSubCategory "CSC_PRMCR"^^xsd:string ;
+    :cultivationCategory cultivationtype:465 ;
+    :cultivationSubCategory cultivationtype:467 ;
     :cultivationType cultivationtype:1212 .
 
 naebi:208 a :NutrientBalanceCrop  ;
@@ -1706,8 +1706,8 @@ naebi:208 a :NutrientBalanceCrop  ;
     :Mg 30.0 ;
     :N2 105.0 ;
     :P2O5 69.0 ;
-    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
-    :cultivationSubCategory "CSC_PRMCR"^^xsd:string ;
+    :cultivationCategory cultivationtype:465 ;
+    :cultivationSubCategory cultivationtype:467 ;
     :cultivationType cultivationtype:1213 .
 
 naebi:209 a :NutrientBalanceCrop  ;
@@ -1717,8 +1717,8 @@ naebi:209 a :NutrientBalanceCrop  ;
     :Mg 20.0 ;
     :N2 75.0 ;
     :P2O5 46.0 ;
-    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
-    :cultivationSubCategory "CSC_PRMCR"^^xsd:string ;
+    :cultivationCategory cultivationtype:465 ;
+    :cultivationSubCategory cultivationtype:467 ;
     :cultivationType cultivationtype:1214 .
 
 naebi:21 a :NutrientBalanceCrop  ;
@@ -1728,8 +1728,8 @@ naebi:21 a :NutrientBalanceCrop  ;
     :Mg 25.0 ;
     :N2 150.0 ;
     :P2O5 60.0 ;
-    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
-    :cultivationSubCategory "CSC_OUTVG"^^xsd:string ;
+    :cultivationCategory cultivationtype:465 ;
+    :cultivationSubCategory cultivationtype:24 ;
     :cultivationType cultivationtype:1098 .
 
 naebi:210 a :NutrientBalanceCrop  ;
@@ -1739,8 +1739,8 @@ naebi:210 a :NutrientBalanceCrop  ;
     :Mg 15.0 ;
     :N2 85.0 ;
     :P2O5 46.0 ;
-    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
-    :cultivationSubCategory "CSC_PRMCR"^^xsd:string ;
+    :cultivationCategory cultivationtype:465 ;
+    :cultivationSubCategory cultivationtype:467 ;
     :cultivationType cultivationtype:1215 .
 
 naebi:211 a :NutrientBalanceCrop  ;
@@ -1750,8 +1750,8 @@ naebi:211 a :NutrientBalanceCrop  ;
     :Mg 25.0 ;
     :N2 160.0 ;
     :P2O5 80.0 ;
-    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
-    :cultivationSubCategory "CSC_PRMCR"^^xsd:string ;
+    :cultivationCategory cultivationtype:465 ;
+    :cultivationSubCategory cultivationtype:467 ;
     :cultivationType cultivationtype:1216 .
 
 naebi:212 a :NutrientBalanceCrop  ;
@@ -1761,8 +1761,8 @@ naebi:212 a :NutrientBalanceCrop  ;
     :Mg 10.0 ;
     :N2 130.0 ;
     :P2O5 30.0 ;
-    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
-    :cultivationSubCategory "CSC_PRMCR"^^xsd:string ;
+    :cultivationCategory cultivationtype:465 ;
+    :cultivationSubCategory cultivationtype:467 ;
     :cultivationType cultivationtype:211 .
 
 naebi:213 a :NutrientBalanceCrop  ;
@@ -1772,8 +1772,8 @@ naebi:213 a :NutrientBalanceCrop  ;
     :Mg 10.0 ;
     :N2 0.0 ;
     :P2O5 60.0 ;
-    :cultivationCategory "CULT_ARABLE"^^xsd:string ;
-    :cultivationSubCategory "CSC_DIVCR"^^xsd:string ;
+    :cultivationCategory cultivationtype:1 ;
+    :cultivationSubCategory cultivationtype:462 ;
     :cultivationType cultivationtype:1101 .
 
 naebi:214 a :NutrientBalanceCrop  ;
@@ -1783,8 +1783,8 @@ naebi:214 a :NutrientBalanceCrop  ;
     :Mg 0.0 ;
     :N2 0.0 ;
     :P2O5 0.0 ;
-    :cultivationCategory "CULT_FODDER"^^xsd:string ;
-    :cultivationSubCategory "CSC_FORAG"^^xsd:string ;
+    :cultivationCategory cultivationtype:464 ;
+    :cultivationSubCategory cultivationtype:463 ;
     :cultivationType cultivationtype:634 .
 
 naebi:215 a :NutrientBalanceCrop  ;
@@ -1794,8 +1794,8 @@ naebi:215 a :NutrientBalanceCrop  ;
     :Mg 20.0 ;
     :N2 110.0 ;
     :P2O5 57.0 ;
-    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
-    :cultivationSubCategory "CSC_PRMCR"^^xsd:string ;
+    :cultivationCategory cultivationtype:465 ;
+    :cultivationSubCategory cultivationtype:467 ;
     :cultivationType cultivationtype:1217 .
 
 naebi:216 a :NutrientBalanceCrop  ;
@@ -1805,8 +1805,8 @@ naebi:216 a :NutrientBalanceCrop  ;
     :Mg 10.0 ;
     :N2 150.0 ;
     :P2O5 30.0 ;
-    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
-    :cultivationSubCategory "CSC_PRCRP"^^xsd:string ;
+    :cultivationCategory cultivationtype:465 ;
+    :cultivationSubCategory cultivationtype:7 ;
     :cultivationType cultivationtype:1099 .
 
 naebi:217 a :NutrientBalanceCrop  ;
@@ -1816,8 +1816,8 @@ naebi:217 a :NutrientBalanceCrop  ;
     :Mg 20.0 ;
     :N2 210.0 ;
     :P2O5 40.0 ;
-    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
-    :cultivationSubCategory "CSC_PRCRP"^^xsd:string ;
+    :cultivationCategory cultivationtype:465 ;
+    :cultivationSubCategory cultivationtype:7 ;
     :cultivationType cultivationtype:1100 .
 
 naebi:218 a :NutrientBalanceCrop  ;
@@ -1827,8 +1827,8 @@ naebi:218 a :NutrientBalanceCrop  ;
     :Mg 0.0 ;
     :N2 0.0 ;
     :P2O5 0.0 ;
-    :cultivationCategory "CULT_FODDER"^^xsd:string ;
-    :cultivationSubCategory "CSC_FORAG"^^xsd:string ;
+    :cultivationCategory cultivationtype:464 ;
+    :cultivationSubCategory cultivationtype:463 ;
     :cultivationType cultivationtype:308 .
 
 naebi:219 a :NutrientBalanceCrop  ;
@@ -1838,8 +1838,8 @@ naebi:219 a :NutrientBalanceCrop  ;
     :Mg 15.0 ;
     :N2 60.0 ;
     :P2O5 30.0 ;
-    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
-    :cultivationSubCategory "CSC_PRMCR"^^xsd:string ;
+    :cultivationCategory cultivationtype:465 ;
+    :cultivationSubCategory cultivationtype:467 ;
     :cultivationType cultivationtype:308 .
 
 naebi:22 a :NutrientBalanceCrop  ;
@@ -1849,8 +1849,8 @@ naebi:22 a :NutrientBalanceCrop  ;
     :Mg 20.0 ;
     :N2 55.0 ;
     :P2O5 23.0 ;
-    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
-    :cultivationSubCategory "CSC_PRMCR"^^xsd:string ;
+    :cultivationCategory cultivationtype:465 ;
+    :cultivationSubCategory cultivationtype:467 ;
     :cultivationType cultivationtype:1218 .
 
 naebi:220 a :NutrientBalanceCrop  ;
@@ -1860,8 +1860,8 @@ naebi:220 a :NutrientBalanceCrop  ;
     :Mg 5.0 ;
     :N2 30.0 ;
     :P2O5 20.0 ;
-    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
-    :cultivationSubCategory "CSC_PRMCR"^^xsd:string ;
+    :cultivationCategory cultivationtype:465 ;
+    :cultivationSubCategory cultivationtype:467 ;
     :cultivationType cultivationtype:1102 .
 
 naebi:221 a :NutrientBalanceCrop  ;
@@ -1871,8 +1871,8 @@ naebi:221 a :NutrientBalanceCrop  ;
     :Mg 10.0 ;
     :N2 110.0 ;
     :P2O5 40.0 ;
-    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
-    :cultivationSubCategory "CSC_OUTVG"^^xsd:string ;
+    :cultivationCategory cultivationtype:465 ;
+    :cultivationSubCategory cultivationtype:24 ;
     :cultivationType cultivationtype:1103 .
 
 naebi:222 a :NutrientBalanceCrop  ;
@@ -1882,8 +1882,8 @@ naebi:222 a :NutrientBalanceCrop  ;
     :Mg 10.0 ;
     :N2 90.0 ;
     :P2O5 20.0 ;
-    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
-    :cultivationSubCategory "CSC_OUTVG"^^xsd:string ;
+    :cultivationCategory cultivationtype:465 ;
+    :cultivationSubCategory cultivationtype:24 ;
     :cultivationType cultivationtype:1104 .
 
 naebi:223 a :NutrientBalanceCrop  ;
@@ -1893,8 +1893,8 @@ naebi:223 a :NutrientBalanceCrop  ;
     :Mg 10.0 ;
     :N2 120.0 ;
     :P2O5 30.0 ;
-    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
-    :cultivationSubCategory "CSC_OUTVG"^^xsd:string ;
+    :cultivationCategory cultivationtype:465 ;
+    :cultivationSubCategory cultivationtype:24 ;
     :cultivationType cultivationtype:1105 .
 
 naebi:224 a :NutrientBalanceCrop  ;
@@ -1904,8 +1904,8 @@ naebi:224 a :NutrientBalanceCrop  ;
     :Mg 10.0 ;
     :N2 140.0 ;
     :P2O5 40.0 ;
-    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
-    :cultivationSubCategory "CSC_OUTVG"^^xsd:string ;
+    :cultivationCategory cultivationtype:465 ;
+    :cultivationSubCategory cultivationtype:24 ;
     :cultivationType cultivationtype:1106 .
 
 naebi:225 a :NutrientBalanceCrop  ;
@@ -1915,8 +1915,8 @@ naebi:225 a :NutrientBalanceCrop  ;
     :Mg 0.0 ;
     :N2 0.0 ;
     :P2O5 0.0 ;
-    :cultivationCategory "CULT_ARABLE"^^xsd:string ;
-    :cultivationSubCategory "CSC_ECOBL"^^xsd:string ;
+    :cultivationCategory cultivationtype:1 ;
+    :cultivationSubCategory cultivationtype:414 ;
     :cultivationType cultivationtype:1107 .
 
 naebi:226 a :NutrientBalanceCrop  ;
@@ -1926,8 +1926,8 @@ naebi:226 a :NutrientBalanceCrop  ;
     :Mg 8.0 ;
     :N2 45.0 ;
     :P2O5 15.0 ;
-    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
-    :cultivationSubCategory "CSC_ECOBL"^^xsd:string ;
+    :cultivationCategory cultivationtype:465 ;
+    :cultivationSubCategory cultivationtype:414 ;
     :cultivationType cultivationtype:923 .
 
 naebi:227 a :NutrientBalanceCrop  ;
@@ -1937,8 +1937,8 @@ naebi:227 a :NutrientBalanceCrop  ;
     :Mg 15.0 ;
     :N2 120.0 ;
     :P2O5 30.0 ;
-    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
-    :cultivationSubCategory "CSC_OUTVG"^^xsd:string ;
+    :cultivationCategory cultivationtype:465 ;
+    :cultivationSubCategory cultivationtype:24 ;
     :cultivationType cultivationtype:1108 .
 
 naebi:228 a :NutrientBalanceCrop  ;
@@ -1948,8 +1948,8 @@ naebi:228 a :NutrientBalanceCrop  ;
     :Mg 15.0 ;
     :N2 120.0 ;
     :P2O5 40.0 ;
-    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
-    :cultivationSubCategory "CSC_PRMCR"^^xsd:string ;
+    :cultivationCategory cultivationtype:465 ;
+    :cultivationSubCategory cultivationtype:467 ;
     :cultivationType cultivationtype:478 .
 
 naebi:229 a :NutrientBalanceCrop  ;
@@ -1959,8 +1959,8 @@ naebi:229 a :NutrientBalanceCrop  ;
     :Mg 35.0 ;
     :N2 130.0 ;
     :P2O5 60.0 ;
-    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
-    :cultivationSubCategory "CSC_PRCRP"^^xsd:string ;
+    :cultivationCategory cultivationtype:465 ;
+    :cultivationSubCategory cultivationtype:7 ;
     :cultivationType cultivationtype:1109 .
 
 naebi:23 a :NutrientBalanceCrop  ;
@@ -1970,8 +1970,8 @@ naebi:23 a :NutrientBalanceCrop  ;
     :Mg 10.0 ;
     :N2 155.0 ;
     :P2O5 30.0 ;
-    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
-    :cultivationSubCategory "CSC_OUTVG"^^xsd:string ;
+    :cultivationCategory cultivationtype:465 ;
+    :cultivationSubCategory cultivationtype:24 ;
     :cultivationType cultivationtype:1110 .
 
 naebi:230 a :NutrientBalanceCrop  ;
@@ -1981,8 +1981,8 @@ naebi:230 a :NutrientBalanceCrop  ;
     :Mg 0.11 ;
     :N2 90.0 ;
     :P2O5 0.84 ;
-    :cultivationCategory "CULT_ARABLE"^^xsd:string ;
-    :cultivationSubCategory "CSC_GRAIN"^^xsd:string ;
+    :cultivationCategory cultivationtype:1 ;
+    :cultivationSubCategory cultivationtype:466 ;
     :cultivationType cultivationtype:501 .
 
 naebi:231 a :NutrientBalanceCrop  ;
@@ -1992,8 +1992,8 @@ naebi:231 a :NutrientBalanceCrop  ;
     :Mg 0.09 ;
     :N2 110.0 ;
     :P2O5 0.76 ;
-    :cultivationCategory "CULT_ARABLE"^^xsd:string ;
-    :cultivationSubCategory "CSC_RTCRP"^^xsd:string ;
+    :cultivationCategory cultivationtype:1 ;
+    :cultivationSubCategory cultivationtype:17 ;
     :cultivationType cultivationtype:508 .
 
 naebi:232 a :NutrientBalanceCrop  ;
@@ -2003,8 +2003,8 @@ naebi:232 a :NutrientBalanceCrop  ;
     :Mg 0.11 ;
     :N2 90.0 ;
     :P2O5 0.8 ;
-    :cultivationCategory "CULT_ARABLE"^^xsd:string ;
-    :cultivationSubCategory "CSC_GRAIN"^^xsd:string ;
+    :cultivationCategory cultivationtype:1 ;
+    :cultivationSubCategory cultivationtype:466 ;
     :cultivationType cultivationtype:1011 .
 
 naebi:233 a :NutrientBalanceCrop  ;
@@ -2014,8 +2014,8 @@ naebi:233 a :NutrientBalanceCrop  ;
     :Mg 0.23 ;
     :N2 150.0 ;
     :P2O5 1.43 ;
-    :cultivationCategory "CULT_ARABLE"^^xsd:string ;
-    :cultivationSubCategory "CSC_RTCRP"^^xsd:string ;
+    :cultivationCategory cultivationtype:1 ;
+    :cultivationSubCategory cultivationtype:17 ;
     :cultivationType cultivationtype:1111 .
 
 naebi:234 a :NutrientBalanceCrop  ;
@@ -2025,8 +2025,8 @@ naebi:234 a :NutrientBalanceCrop  ;
     :Mg 0.1 ;
     :N2 70.0 ;
     :P2O5 0.65 ;
-    :cultivationCategory "CULT_FODDER"^^xsd:string ;
-    :cultivationSubCategory "CSC_FORAG"^^xsd:string ;
+    :cultivationCategory cultivationtype:464 ;
+    :cultivationSubCategory cultivationtype:463 ;
     :cultivationType cultivationtype:1029 .
 
 naebi:235 a :NutrientBalanceCrop  ;
@@ -2036,8 +2036,8 @@ naebi:235 a :NutrientBalanceCrop  ;
     :Mg 0.28 ;
     :N2 170.0 ;
     :P2O5 0.72 ;
-    :cultivationCategory "CULT_ARABLE"^^xsd:string ;
-    :cultivationSubCategory "CSC_DIVCR"^^xsd:string ;
+    :cultivationCategory cultivationtype:1 ;
+    :cultivationSubCategory cultivationtype:462 ;
     :cultivationType cultivationtype:1112 .
 
 naebi:236 a :NutrientBalanceCrop  ;
@@ -2047,8 +2047,8 @@ naebi:236 a :NutrientBalanceCrop  ;
     :Mg 20.0 ;
     :N2 160.0 ;
     :P2O5 25.0 ;
-    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
-    :cultivationSubCategory "CSC_OUTVG"^^xsd:string ;
+    :cultivationCategory cultivationtype:465 ;
+    :cultivationSubCategory cultivationtype:24 ;
     :cultivationType cultivationtype:1114 .
 
 naebi:237 a :NutrientBalanceCrop  ;
@@ -2058,8 +2058,8 @@ naebi:237 a :NutrientBalanceCrop  ;
     :Mg 25.0 ;
     :N2 170.0 ;
     :P2O5 40.0 ;
-    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
-    :cultivationSubCategory "CSC_OUTVG"^^xsd:string ;
+    :cultivationCategory cultivationtype:465 ;
+    :cultivationSubCategory cultivationtype:24 ;
     :cultivationType cultivationtype:1115 .
 
 naebi:238 a :NutrientBalanceCrop  ;
@@ -2069,8 +2069,8 @@ naebi:238 a :NutrientBalanceCrop  ;
     :Mg 25.0 ;
     :N2 190.0 ;
     :P2O5 40.0 ;
-    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
-    :cultivationSubCategory "CSC_OUTVG"^^xsd:string ;
+    :cultivationCategory cultivationtype:465 ;
+    :cultivationSubCategory cultivationtype:24 ;
     :cultivationType cultivationtype:1116 .
 
 naebi:239 a :NutrientBalanceCrop  ;
@@ -2080,8 +2080,8 @@ naebi:239 a :NutrientBalanceCrop  ;
     :Mg 25.0 ;
     :N2 190.0 ;
     :P2O5 30.0 ;
-    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
-    :cultivationSubCategory "CSC_OUTVG"^^xsd:string ;
+    :cultivationCategory cultivationtype:465 ;
+    :cultivationSubCategory cultivationtype:24 ;
     :cultivationType cultivationtype:1117 .
 
 naebi:24 a :NutrientBalanceCrop  ;
@@ -2091,8 +2091,8 @@ naebi:24 a :NutrientBalanceCrop  ;
     :Mg 10.0 ;
     :N2 145.0 ;
     :P2O5 30.0 ;
-    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
-    :cultivationSubCategory "CSC_OUTVG"^^xsd:string ;
+    :cultivationCategory cultivationtype:465 ;
+    :cultivationSubCategory cultivationtype:24 ;
     :cultivationType cultivationtype:1118 .
 
 naebi:240 a :NutrientBalanceCrop  ;
@@ -2102,8 +2102,8 @@ naebi:240 a :NutrientBalanceCrop  ;
     :Mg 25.0 ;
     :N2 180.0 ;
     :P2O5 30.0 ;
-    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
-    :cultivationSubCategory "CSC_OUTVG"^^xsd:string ;
+    :cultivationCategory cultivationtype:465 ;
+    :cultivationSubCategory cultivationtype:24 ;
     :cultivationType cultivationtype:1119 .
 
 naebi:241 a :NutrientBalanceCrop  ;
@@ -2113,8 +2113,8 @@ naebi:241 a :NutrientBalanceCrop  ;
     :Mg 25.0 ;
     :N2 200.0 ;
     :P2O5 35.0 ;
-    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
-    :cultivationSubCategory "CSC_OUTVG"^^xsd:string ;
+    :cultivationCategory cultivationtype:465 ;
+    :cultivationSubCategory cultivationtype:24 ;
     :cultivationType cultivationtype:1120 .
 
 naebi:242 a :NutrientBalanceCrop  ;
@@ -2124,8 +2124,8 @@ naebi:242 a :NutrientBalanceCrop  ;
     :Mg 25.0 ;
     :N2 190.0 ;
     :P2O5 35.0 ;
-    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
-    :cultivationSubCategory "CSC_OUTVG"^^xsd:string ;
+    :cultivationCategory cultivationtype:465 ;
+    :cultivationSubCategory cultivationtype:24 ;
     :cultivationType cultivationtype:1121 .
 
 naebi:243 a :NutrientBalanceCrop  ;
@@ -2135,8 +2135,8 @@ naebi:243 a :NutrientBalanceCrop  ;
     :Mg 20.0 ;
     :N2 180.0 ;
     :P2O5 25.0 ;
-    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
-    :cultivationSubCategory "CSC_OUTVG"^^xsd:string ;
+    :cultivationCategory cultivationtype:465 ;
+    :cultivationSubCategory cultivationtype:24 ;
     :cultivationType cultivationtype:1122 .
 
 naebi:244 a :NutrientBalanceCrop  ;
@@ -2146,8 +2146,8 @@ naebi:244 a :NutrientBalanceCrop  ;
     :Mg 20.0 ;
     :N2 100.0 ;
     :P2O5 30.0 ;
-    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
-    :cultivationSubCategory "CSC_PRCRP"^^xsd:string ;
+    :cultivationCategory cultivationtype:465 ;
+    :cultivationSubCategory cultivationtype:7 ;
     :cultivationType cultivationtype:1123 .
 
 naebi:245 a :NutrientBalanceCrop  ;
@@ -2157,8 +2157,8 @@ naebi:245 a :NutrientBalanceCrop  ;
     :Mg 0.25 ;
     :N2 1.2 ;
     :P2O5 0.82 ;
-    :cultivationCategory "CULT_FODDER"^^xsd:string ;
-    :cultivationSubCategory "CSC_FORAG"^^xsd:string ;
+    :cultivationCategory cultivationtype:464 ;
+    :cultivationSubCategory cultivationtype:463 ;
     :cultivationType cultivationtype:1124 .
 
 naebi:246 a :NutrientBalanceCrop  ;
@@ -2168,8 +2168,8 @@ naebi:246 a :NutrientBalanceCrop  ;
     :Mg 25.0 ;
     :N2 120.0 ;
     :P2O5 46.0 ;
-    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
-    :cultivationSubCategory "CSC_DIVCR"^^xsd:string ;
+    :cultivationCategory cultivationtype:465 ;
+    :cultivationSubCategory cultivationtype:462 ;
     :cultivationType cultivationtype:1219 .
 
 naebi:247 a :NutrientBalanceCrop  ;
@@ -2179,8 +2179,8 @@ naebi:247 a :NutrientBalanceCrop  ;
     :Mg 10.0 ;
     :N2 90.0 ;
     :P2O5 40.0 ;
-    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
-    :cultivationSubCategory "CSC_PRMCR"^^xsd:string ;
+    :cultivationCategory cultivationtype:465 ;
+    :cultivationSubCategory cultivationtype:467 ;
     :cultivationType cultivationtype:137 .
 
 naebi:248 a :NutrientBalanceCrop  ;
@@ -2190,8 +2190,8 @@ naebi:248 a :NutrientBalanceCrop  ;
     :Mg 20.0 ;
     :N2 190.0 ;
     :P2O5 50.0 ;
-    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
-    :cultivationSubCategory "CSC_OUTVG"^^xsd:string ;
+    :cultivationCategory cultivationtype:465 ;
+    :cultivationSubCategory cultivationtype:24 ;
     :cultivationType cultivationtype:1125 .
 
 naebi:249 a :NutrientBalanceCrop  ;
@@ -2201,8 +2201,8 @@ naebi:249 a :NutrientBalanceCrop  ;
     :Mg 0.11 ;
     :N2 0.0 ;
     :P2O5 0.19 ;
-    :cultivationCategory "CULT_ARABLE"^^xsd:string ;
-    :cultivationSubCategory "CSC_GRAIN"^^xsd:string ;
+    :cultivationCategory cultivationtype:1 ;
+    :cultivationSubCategory cultivationtype:466 ;
     :cultivationType cube:Undefined .
 
 naebi:25 a :NutrientBalanceCrop  ;
@@ -2212,8 +2212,8 @@ naebi:25 a :NutrientBalanceCrop  ;
     :Mg 5.0 ;
     :N2 145.0 ;
     :P2O5 20.0 ;
-    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
-    :cultivationSubCategory "CSC_OUTVG"^^xsd:string ;
+    :cultivationCategory cultivationtype:465 ;
+    :cultivationSubCategory cultivationtype:24 ;
     :cultivationType cultivationtype:1127 .
 
 naebi:250 a :NutrientBalanceCrop  ;
@@ -2223,8 +2223,8 @@ naebi:250 a :NutrientBalanceCrop  ;
     :Mg 20.0 ;
     :N2 100.0 ;
     :P2O5 34.0 ;
-    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
-    :cultivationSubCategory "CSC_DIVCR"^^xsd:string ;
+    :cultivationCategory cultivationtype:465 ;
+    :cultivationSubCategory cultivationtype:462 ;
     :cultivationType cultivationtype:1221 .
 
 naebi:251 a :NutrientBalanceCrop  ;
@@ -2234,8 +2234,8 @@ naebi:251 a :NutrientBalanceCrop  ;
     :Mg 40.0 ;
     :N2 180.0 ;
     :P2O5 80.0 ;
-    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
-    :cultivationSubCategory "CSC_DIVCR"^^xsd:string ;
+    :cultivationCategory cultivationtype:465 ;
+    :cultivationSubCategory cultivationtype:462 ;
     :cultivationType cultivationtype:1222 .
 
 naebi:252 a :NutrientBalanceCrop  ;
@@ -2245,8 +2245,8 @@ naebi:252 a :NutrientBalanceCrop  ;
     :Mg 0.1038 ;
     :N2 110.0 ;
     :P2O5 0.5943 ;
-    :cultivationCategory "CULT_FODDER"^^xsd:string ;
-    :cultivationSubCategory "CSC_GRAIN"^^xsd:string ;
+    :cultivationCategory cultivationtype:464 ;
+    :cultivationSubCategory cultivationtype:466 ;
     :cultivationType cultivationtype:1030 .
 
 naebi:253 a :NutrientBalanceCrop  ;
@@ -2256,8 +2256,8 @@ naebi:253 a :NutrientBalanceCrop  ;
     :Mg 20.0 ;
     :N2 100.0 ;
     :P2O5 34.0 ;
-    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
-    :cultivationSubCategory "CSC_PRMCR"^^xsd:string ;
+    :cultivationCategory cultivationtype:465 ;
+    :cultivationSubCategory cultivationtype:467 ;
     :cultivationType cultivationtype:1128 .
 
 naebi:254 a :NutrientBalanceCrop  ;
@@ -2267,8 +2267,8 @@ naebi:254 a :NutrientBalanceCrop  ;
     :Mg 0.0 ;
     :N2 0.0 ;
     :P2O5 0.0 ;
-    :cultivationCategory "CULT_ARABLE"^^xsd:string ;
-    :cultivationSubCategory "CSC_DIVCR"^^xsd:string ;
+    :cultivationCategory cultivationtype:1 ;
+    :cultivationSubCategory cultivationtype:462 ;
     :cultivationType cultivationtype:572 .
 
 naebi:255 a :NutrientBalanceCrop  ;
@@ -2278,8 +2278,8 @@ naebi:255 a :NutrientBalanceCrop  ;
     :Mg 0.09 ;
     :N2 100.0 ;
     :P2O5 0.71 ;
-    :cultivationCategory "CULT_ARABLE"^^xsd:string ;
-    :cultivationSubCategory "CSC_GRAIN"^^xsd:string ;
+    :cultivationCategory cultivationtype:1 ;
+    :cultivationSubCategory cultivationtype:466 ;
     :cultivationType cultivationtype:1018 .
 
 naebi:256 a :NutrientBalanceCrop  ;
@@ -2289,8 +2289,8 @@ naebi:256 a :NutrientBalanceCrop  ;
     :Mg 20.0 ;
     :N2 120.0 ;
     :P2O5 34.0 ;
-    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
-    :cultivationSubCategory "CSC_DIVCR"^^xsd:string ;
+    :cultivationCategory cultivationtype:465 ;
+    :cultivationSubCategory cultivationtype:462 ;
     :cultivationType cultivationtype:1130 .
 
 naebi:257 a :NutrientBalanceCrop  ;
@@ -2300,8 +2300,8 @@ naebi:257 a :NutrientBalanceCrop  ;
     :Mg 20.0 ;
     :N2 150.0 ;
     :P2O5 50.0 ;
-    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
-    :cultivationSubCategory "CSC_OUTVG"^^xsd:string ;
+    :cultivationCategory cultivationtype:465 ;
+    :cultivationSubCategory cultivationtype:24 ;
     :cultivationType cultivationtype:1027 .
 
 naebi:258 a :NutrientBalanceCrop  ;
@@ -2311,8 +2311,8 @@ naebi:258 a :NutrientBalanceCrop  ;
     :Mg 10.0 ;
     :N2 160.0 ;
     :P2O5 20.0 ;
-    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
-    :cultivationSubCategory "CSC_OUTVG"^^xsd:string ;
+    :cultivationCategory cultivationtype:465 ;
+    :cultivationSubCategory cultivationtype:24 ;
     :cultivationType cultivationtype:1131 .
 
 naebi:259 a :NutrientBalanceCrop  ;
@@ -2322,8 +2322,8 @@ naebi:259 a :NutrientBalanceCrop  ;
     :Mg 10.0 ;
     :N2 130.0 ;
     :P2O5 20.0 ;
-    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
-    :cultivationSubCategory "CSC_OUTVG"^^xsd:string ;
+    :cultivationCategory cultivationtype:465 ;
+    :cultivationSubCategory cultivationtype:24 ;
     :cultivationType cultivationtype:142 .
 
 naebi:26 a :NutrientBalanceCrop  ;
@@ -2333,29 +2333,29 @@ naebi:26 a :NutrientBalanceCrop  ;
     :Mg 20.0 ;
     :N2 110.0 ;
     :P2O5 55.0 ;
-    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
-    :cultivationSubCategory "CSC_OUTVG"^^xsd:string ;
+    :cultivationCategory cultivationtype:465 ;
+    :cultivationSubCategory cultivationtype:24 ;
     :cultivationType cultivationtype:157 .
 
 naebi:260 a :NutrientBalanceCrop  ;
     schema:identifier "CROP_SUMEXT"^^xsd:string ;
     schema:name "Heuwiesen Sömmerungsg., extensive"@de ;
-    :cultivationCategory "CULT_FODDER"^^xsd:string ;
-    :cultivationSubCategory "CSC_FORAG"^^xsd:string ;
+    :cultivationCategory cultivationtype:464 ;
+    :cultivationSubCategory cultivationtype:463 ;
     :cultivationType cultivationtype:1132 .
 
 naebi:261 a :NutrientBalanceCrop  ;
     schema:identifier "CROP_SUMLNT"^^xsd:string ;
     schema:name "Heuwiesen Sömmerungsg., wenig intensiv"@de ;
-    :cultivationCategory "CULT_FODDER"^^xsd:string ;
-    :cultivationSubCategory "CSC_FORAG"^^xsd:string ;
+    :cultivationCategory cultivationtype:464 ;
+    :cultivationSubCategory cultivationtype:463 ;
     :cultivationType cultivationtype:1133 .
 
 naebi:262 a :NutrientBalanceCrop  ;
     schema:identifier "CROP_SUMOTH"^^xsd:string ;
     schema:name "Heuwiesen im Sömmerungsg., übrige"@de ;
-    :cultivationCategory "CULT_FODDER"^^xsd:string ;
-    :cultivationSubCategory "CSC_FORAG"^^xsd:string ;
+    :cultivationCategory cultivationtype:464 ;
+    :cultivationSubCategory cultivationtype:463 ;
     :cultivationType cultivationtype:1134 .
 
 naebi:263 a :NutrientBalanceCrop  ;
@@ -2365,8 +2365,8 @@ naebi:263 a :NutrientBalanceCrop  ;
     :Mg 50.0 ;
     :N2 200.0 ;
     :P2O5 100.0 ;
-    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
-    :cultivationSubCategory "CSC_PRCRP"^^xsd:string ;
+    :cultivationCategory cultivationtype:465 ;
+    :cultivationSubCategory cultivationtype:7 ;
     :cultivationType cultivationtype:1135 .
 
 naebi:264 a :NutrientBalanceCrop  ;
@@ -2376,8 +2376,8 @@ naebi:264 a :NutrientBalanceCrop  ;
     :Mg 0.2 ;
     :N2 30.0 ;
     :P2O5 0.56 ;
-    :cultivationCategory "CULT_ARABLE"^^xsd:string ;
-    :cultivationSubCategory "CSC_DIVCR"^^xsd:string ;
+    :cultivationCategory cultivationtype:1 ;
+    :cultivationSubCategory cultivationtype:462 ;
     :cultivationType cultivationtype:1136 .
 
 naebi:265 a :NutrientBalanceCrop  ;
@@ -2387,8 +2387,8 @@ naebi:265 a :NutrientBalanceCrop  ;
     :Mg 15.0 ;
     :N2 90.0 ;
     :P2O5 60.0 ;
-    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
-    :cultivationSubCategory "CSC_OUTVG"^^xsd:string ;
+    :cultivationCategory cultivationtype:465 ;
+    :cultivationSubCategory cultivationtype:24 ;
     :cultivationType cultivationtype:1137 .
 
 naebi:266 a :NutrientBalanceCrop  ;
@@ -2398,8 +2398,8 @@ naebi:266 a :NutrientBalanceCrop  ;
     :Mg 0.12 ;
     :N2 120.0 ;
     :P2O5 0.82 ;
-    :cultivationCategory "CULT_ARABLE"^^xsd:string ;
-    :cultivationSubCategory "CSC_GRAIN"^^xsd:string ;
+    :cultivationCategory cultivationtype:1 ;
+    :cultivationSubCategory cultivationtype:466 ;
     :cultivationType cultivationtype:999 .
 
 naebi:267 a :NutrientBalanceCrop  ;
@@ -2409,8 +2409,8 @@ naebi:267 a :NutrientBalanceCrop  ;
     :Mg 0.08 ;
     :N2 110.0 ;
     :P2O5 0.7 ;
-    :cultivationCategory "CULT_ARABLE"^^xsd:string ;
-    :cultivationSubCategory "CSC_DIVCR"^^xsd:string ;
+    :cultivationCategory cultivationtype:1 ;
+    :cultivationSubCategory cultivationtype:462 ;
     :cultivationType cultivationtype:509 .
 
 naebi:268 a :NutrientBalanceCrop  ;
@@ -2420,8 +2420,8 @@ naebi:268 a :NutrientBalanceCrop  ;
     :Mg 10.0 ;
     :N2 80.0 ;
     :P2O5 60.0 ;
-    :cultivationCategory "CULT_ARABLE"^^xsd:string ;
-    :cultivationSubCategory "CSC_DIVCR"^^xsd:string ;
+    :cultivationCategory cultivationtype:1 ;
+    :cultivationSubCategory cultivationtype:462 ;
     :cultivationType cube:Undefined .
 
 naebi:269 a :NutrientBalanceCrop  ;
@@ -2431,8 +2431,8 @@ naebi:269 a :NutrientBalanceCrop  ;
     :Mg 25.0 ;
     :N2 60.0 ;
     :P2O5 34.0 ;
-    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
-    :cultivationSubCategory "CSC_PRMCR"^^xsd:string ;
+    :cultivationCategory cultivationtype:465 ;
+    :cultivationSubCategory cultivationtype:467 ;
     :cultivationType cultivationtype:1138 .
 
 naebi:27 a :NutrientBalanceCrop  ;
@@ -2442,8 +2442,8 @@ naebi:27 a :NutrientBalanceCrop  ;
     :Mg 30.0 ;
     :N2 150.0 ;
     :P2O5 60.0 ;
-    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
-    :cultivationSubCategory "CSC_PRMCR"^^xsd:string ;
+    :cultivationCategory cultivationtype:465 ;
+    :cultivationSubCategory cultivationtype:467 ;
     :cultivationType cultivationtype:1139 .
 
 naebi:270 a :NutrientBalanceCrop  ;
@@ -2453,8 +2453,8 @@ naebi:270 a :NutrientBalanceCrop  ;
     :Mg 25.0 ;
     :N2 50.0 ;
     :P2O5 27.0 ;
-    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
-    :cultivationSubCategory "CSC_PRMCR"^^xsd:string ;
+    :cultivationCategory cultivationtype:465 ;
+    :cultivationSubCategory cultivationtype:467 ;
     :cultivationType cultivationtype:1140 .
 
 naebi:271 a :NutrientBalanceCrop  ;
@@ -2464,8 +2464,8 @@ naebi:271 a :NutrientBalanceCrop  ;
     :Mg 10.0 ;
     :N2 60.0 ;
     :P2O5 30.0 ;
-    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
-    :cultivationSubCategory "CSC_PRMCR"^^xsd:string ;
+    :cultivationCategory cultivationtype:465 ;
+    :cultivationSubCategory cultivationtype:467 ;
     :cultivationType cultivationtype:268 .
 
 naebi:272 a :NutrientBalanceCrop  ;
@@ -2475,8 +2475,8 @@ naebi:272 a :NutrientBalanceCrop  ;
     :Mg 30.0 ;
     :N2 130.0 ;
     :P2O5 50.0 ;
-    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
-    :cultivationSubCategory "CSC_OUTVG"^^xsd:string ;
+    :cultivationCategory cultivationtype:465 ;
+    :cultivationSubCategory cultivationtype:24 ;
     :cultivationType cultivationtype:85 .
 
 naebi:273 a :NutrientBalanceCrop  ;
@@ -2486,8 +2486,8 @@ naebi:273 a :NutrientBalanceCrop  ;
     :Mg 120.0 ;
     :N2 330.0 ;
     :P2O5 160.0 ;
-    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
-    :cultivationSubCategory "CSC_PRCRP"^^xsd:string ;
+    :cultivationCategory cultivationtype:465 ;
+    :cultivationSubCategory cultivationtype:7 ;
     :cultivationType cultivationtype:1142 .
 
 naebi:274 a :NutrientBalanceCrop  ;
@@ -2497,8 +2497,8 @@ naebi:274 a :NutrientBalanceCrop  ;
     :Mg 60.0 ;
     :N2 170.0 ;
     :P2O5 80.0 ;
-    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
-    :cultivationSubCategory "CSC_PRCRP"^^xsd:string ;
+    :cultivationCategory cultivationtype:465 ;
+    :cultivationSubCategory cultivationtype:7 ;
     :cultivationType cultivationtype:1143 .
 
 naebi:275 a :NutrientBalanceCrop  ;
@@ -2508,8 +2508,8 @@ naebi:275 a :NutrientBalanceCrop  ;
     :Mg 80.0 ;
     :N2 250.0 ;
     :P2O5 100.0 ;
-    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
-    :cultivationSubCategory "CSC_PRCRP"^^xsd:string ;
+    :cultivationCategory cultivationtype:465 ;
+    :cultivationSubCategory cultivationtype:7 ;
     :cultivationType cultivationtype:1144 .
 
 naebi:276 a :NutrientBalanceCrop  ;
@@ -2519,8 +2519,8 @@ naebi:276 a :NutrientBalanceCrop  ;
     :Mg 150.0 ;
     :N2 400.0 ;
     :P2O5 200.0 ;
-    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
-    :cultivationSubCategory "CSC_PRCRP"^^xsd:string ;
+    :cultivationCategory cultivationtype:465 ;
+    :cultivationSubCategory cultivationtype:7 ;
     :cultivationType cultivationtype:1145 .
 
 naebi:277 a :NutrientBalanceCrop  ;
@@ -2530,8 +2530,8 @@ naebi:277 a :NutrientBalanceCrop  ;
     :Mg 0.25 ;
     :N2 1.2 ;
     :P2O5 0.82 ;
-    :cultivationCategory "CULT_FODDER"^^xsd:string ;
-    :cultivationSubCategory "CSC_FORAG"^^xsd:string ;
+    :cultivationCategory cultivationtype:464 ;
+    :cultivationSubCategory cultivationtype:463 ;
     :cultivationType cultivationtype:1146 .
 
 naebi:278 a :NutrientBalanceCrop  ;
@@ -2541,8 +2541,8 @@ naebi:278 a :NutrientBalanceCrop  ;
     :Mg 20.0 ;
     :N2 140.0 ;
     :P2O5 30.0 ;
-    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
-    :cultivationSubCategory "CSC_OUTVG"^^xsd:string ;
+    :cultivationCategory cultivationtype:465 ;
+    :cultivationSubCategory cultivationtype:24 ;
     :cultivationType cultivationtype:1147 .
 
 naebi:279 a :NutrientBalanceCrop  ;
@@ -2552,8 +2552,8 @@ naebi:279 a :NutrientBalanceCrop  ;
     :Mg 10.0 ;
     :N2 140.0 ;
     :P2O5 40.0 ;
-    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
-    :cultivationSubCategory "CSC_OUTVG"^^xsd:string ;
+    :cultivationCategory cultivationtype:465 ;
+    :cultivationSubCategory cultivationtype:24 ;
     :cultivationType cultivationtype:1148 .
 
 naebi:28 a :NutrientBalanceCrop  ;
@@ -2563,8 +2563,8 @@ naebi:28 a :NutrientBalanceCrop  ;
     :Mg 20.0 ;
     :N2 110.0 ;
     :P2O5 60.0 ;
-    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
-    :cultivationSubCategory "CSC_OUTVG"^^xsd:string ;
+    :cultivationCategory cultivationtype:465 ;
+    :cultivationSubCategory cultivationtype:24 ;
     :cultivationType cultivationtype:1149 .
 
 naebi:280 a :NutrientBalanceCrop  ;
@@ -2574,8 +2574,8 @@ naebi:280 a :NutrientBalanceCrop  ;
     :Mg 25.0 ;
     :N2 50.0 ;
     :P2O5 27.0 ;
-    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
-    :cultivationSubCategory "CSC_PRMCR"^^xsd:string ;
+    :cultivationCategory cultivationtype:465 ;
+    :cultivationSubCategory cultivationtype:467 ;
     :cultivationType cultivationtype:717 .
 
 naebi:281 a :NutrientBalanceCrop  ;
@@ -2585,8 +2585,8 @@ naebi:281 a :NutrientBalanceCrop  ;
     :Mg 25.0 ;
     :N2 50.0 ;
     :P2O5 27.0 ;
-    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
-    :cultivationSubCategory "CSC_PRMCR"^^xsd:string ;
+    :cultivationCategory cultivationtype:465 ;
+    :cultivationSubCategory cultivationtype:467 ;
     :cultivationType cultivationtype:4 .
 
 naebi:282 a :NutrientBalanceCrop  ;
@@ -2596,8 +2596,8 @@ naebi:282 a :NutrientBalanceCrop  ;
     :Mg 10.0 ;
     :N2 40.0 ;
     :P2O5 20.0 ;
-    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
-    :cultivationSubCategory "CSC_PRMCR"^^xsd:string ;
+    :cultivationCategory cultivationtype:465 ;
+    :cultivationSubCategory cultivationtype:467 ;
     :cultivationType cultivationtype:1150 .
 
 naebi:283 a :NutrientBalanceCrop  ;
@@ -2607,8 +2607,8 @@ naebi:283 a :NutrientBalanceCrop  ;
     :Mg 30.0 ;
     :N2 80.0 ;
     :P2O5 30.0 ;
-    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
-    :cultivationSubCategory "CSC_PRMCR"^^xsd:string ;
+    :cultivationCategory cultivationtype:465 ;
+    :cultivationSubCategory cultivationtype:467 ;
     :cultivationType cultivationtype:1151 .
 
 naebi:284 a :NutrientBalanceCrop  ;
@@ -2618,8 +2618,8 @@ naebi:284 a :NutrientBalanceCrop  ;
     :Mg 50.0 ;
     :N2 120.0 ;
     :P2O5 50.0 ;
-    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
-    :cultivationSubCategory "CSC_PRMCR"^^xsd:string ;
+    :cultivationCategory cultivationtype:465 ;
+    :cultivationSubCategory cultivationtype:467 ;
     :cultivationType cultivationtype:1152 .
 
 naebi:285 a :NutrientBalanceCrop  ;
@@ -2629,8 +2629,8 @@ naebi:285 a :NutrientBalanceCrop  ;
     :Mg 0.2 ;
     :N2 0.95 ;
     :P2O5 0.71 ;
-    :cultivationCategory "CULT_FODDER"^^xsd:string ;
-    :cultivationSubCategory "CSC_FORAG"^^xsd:string ;
+    :cultivationCategory cultivationtype:464 ;
+    :cultivationSubCategory cultivationtype:463 ;
     :cultivationType cultivationtype:2 .
 
 naebi:286 a :NutrientBalanceCrop  ;
@@ -2640,8 +2640,8 @@ naebi:286 a :NutrientBalanceCrop  ;
     :Mg 0.2 ;
     :N2 0.95 ;
     :P2O5 0.71 ;
-    :cultivationCategory "CULT_FODDER"^^xsd:string ;
-    :cultivationSubCategory "CSC_FORAG"^^xsd:string ;
+    :cultivationCategory cultivationtype:464 ;
+    :cultivationSubCategory cultivationtype:463 ;
     :cultivationType cultivationtype:1154 .
 
 naebi:287 a :NutrientBalanceCrop  ;
@@ -2651,8 +2651,8 @@ naebi:287 a :NutrientBalanceCrop  ;
     :Mg 0.25 ;
     :N2 1.2 ;
     :P2O5 0.82 ;
-    :cultivationCategory "CULT_FODDER"^^xsd:string ;
-    :cultivationSubCategory "CSC_FORAG"^^xsd:string ;
+    :cultivationCategory cultivationtype:464 ;
+    :cultivationSubCategory cultivationtype:463 ;
     :cultivationType cultivationtype:1155 .
 
 naebi:288 a :NutrientBalanceCrop  ;
@@ -2662,8 +2662,8 @@ naebi:288 a :NutrientBalanceCrop  ;
     :Mg 0.12 ;
     :N2 110.0 ;
     :P2O5 0.85 ;
-    :cultivationCategory "CULT_ARABLE"^^xsd:string ;
-    :cultivationSubCategory "CSC_GRAIN"^^xsd:string ;
+    :cultivationCategory cultivationtype:1 ;
+    :cultivationSubCategory cultivationtype:466 ;
     :cultivationType cultivationtype:1008 .
 
 naebi:289 a :NutrientBalanceCrop  ;
@@ -2673,8 +2673,8 @@ naebi:289 a :NutrientBalanceCrop  ;
     :Mg 0.12 ;
     :N2 110.0 ;
     :P2O5 0.85 ;
-    :cultivationCategory "CULT_ARABLE"^^xsd:string ;
-    :cultivationSubCategory "CSC_GRAIN"^^xsd:string ;
+    :cultivationCategory cultivationtype:1 ;
+    :cultivationSubCategory cultivationtype:466 ;
     :cultivationType cultivationtype:1009 .
 
 naebi:29 a :NutrientBalanceCrop  ;
@@ -2684,8 +2684,8 @@ naebi:29 a :NutrientBalanceCrop  ;
     :Mg 10.0 ;
     :N2 220.0 ;
     :P2O5 30.0 ;
-    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
-    :cultivationSubCategory "CSC_OUTVG"^^xsd:string ;
+    :cultivationCategory cultivationtype:465 ;
+    :cultivationSubCategory cultivationtype:24 ;
     :cultivationType cultivationtype:154 .
 
 naebi:290 a :NutrientBalanceCrop  ;
@@ -2695,8 +2695,8 @@ naebi:290 a :NutrientBalanceCrop  ;
     :Mg 0.13 ;
     :N2 110.0 ;
     :P2O5 0.58 ;
-    :cultivationCategory "CULT_FODDER"^^xsd:string ;
-    :cultivationSubCategory "CSC_RTCRP"^^xsd:string ;
+    :cultivationCategory cultivationtype:464 ;
+    :cultivationSubCategory cultivationtype:17 ;
     :cultivationType cultivationtype:1028 .
 
 naebi:291 a :NutrientBalanceCrop  ;
@@ -2706,8 +2706,8 @@ naebi:291 a :NutrientBalanceCrop  ;
     :Mg 0.23 ;
     :N2 150.0 ;
     :P2O5 1.43 ;
-    :cultivationCategory "CULT_ARABLE"^^xsd:string ;
-    :cultivationSubCategory "CSC_RTCRP"^^xsd:string ;
+    :cultivationCategory cultivationtype:1 ;
+    :cultivationSubCategory cultivationtype:17 ;
     :cultivationType cultivationtype:1129 .
 
 naebi:292 a :NutrientBalanceCrop  ;
@@ -2717,8 +2717,8 @@ naebi:292 a :NutrientBalanceCrop  ;
     :Mg 0.11 ;
     :N2 100.0 ;
     :P2O5 0.8 ;
-    :cultivationCategory "CULT_ARABLE"^^xsd:string ;
-    :cultivationSubCategory "CSC_GRAIN"^^xsd:string ;
+    :cultivationCategory cultivationtype:1 ;
+    :cultivationSubCategory cultivationtype:466 ;
     :cultivationType cultivationtype:1021 .
 
 naebi:293 a :NutrientBalanceCrop  ;
@@ -2728,8 +2728,8 @@ naebi:293 a :NutrientBalanceCrop  ;
     :Mg 0.11 ;
     :N2 90.0 ;
     :P2O5 0.8 ;
-    :cultivationCategory "CULT_ARABLE"^^xsd:string ;
-    :cultivationSubCategory "CSC_GRAIN"^^xsd:string ;
+    :cultivationCategory cultivationtype:1 ;
+    :cultivationSubCategory cultivationtype:466 ;
     :cultivationType cultivationtype:1010 .
 
 naebi:294 a :NutrientBalanceCrop  ;
@@ -2739,8 +2739,8 @@ naebi:294 a :NutrientBalanceCrop  ;
     :Mg 0.11 ;
     :N2 90.0 ;
     :P2O5 0.8 ;
-    :cultivationCategory "CULT_ARABLE"^^xsd:string ;
-    :cultivationSubCategory "CSC_GRAIN"^^xsd:string ;
+    :cultivationCategory cultivationtype:1 ;
+    :cultivationSubCategory cultivationtype:466 ;
     :cultivationType cultivationtype:1034 .
 
 naebi:295 a :NutrientBalanceCrop  ;
@@ -2750,8 +2750,8 @@ naebi:295 a :NutrientBalanceCrop  ;
     :Mg 0.11 ;
     :N2 90.0 ;
     :P2O5 0.8 ;
-    :cultivationCategory "CULT_ARABLE"^^xsd:string ;
-    :cultivationSubCategory "CSC_GRAIN"^^xsd:string ;
+    :cultivationCategory cultivationtype:1 ;
+    :cultivationSubCategory cultivationtype:466 ;
     :cultivationType cultivationtype:1015 .
 
 naebi:296 a :NutrientBalanceCrop  ;
@@ -2761,8 +2761,8 @@ naebi:296 a :NutrientBalanceCrop  ;
     :Mg 0.11 ;
     :N2 90.0 ;
     :P2O5 0.8 ;
-    :cultivationCategory "CULT_ARABLE"^^xsd:string ;
-    :cultivationSubCategory "CSC_GRAIN"^^xsd:string ;
+    :cultivationCategory cultivationtype:1 ;
+    :cultivationSubCategory cultivationtype:466 ;
     :cultivationType cultivationtype:1035 .
 
 naebi:297 a :NutrientBalanceCrop  ;
@@ -2772,8 +2772,8 @@ naebi:297 a :NutrientBalanceCrop  ;
     :Mg 0.11 ;
     :N2 90.0 ;
     :P2O5 0.8 ;
-    :cultivationCategory "CULT_ARABLE"^^xsd:string ;
-    :cultivationSubCategory "CSC_GRAIN"^^xsd:string ;
+    :cultivationCategory cultivationtype:1 ;
+    :cultivationSubCategory cultivationtype:466 ;
     :cultivationType cultivationtype:1016 .
 
 naebi:298 a :NutrientBalanceCrop  ;
@@ -2783,8 +2783,8 @@ naebi:298 a :NutrientBalanceCrop  ;
     :Mg 15.0 ;
     :N2 185.0 ;
     :P2O5 25.0 ;
-    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
-    :cultivationSubCategory "CSC_OUTVG"^^xsd:string ;
+    :cultivationCategory cultivationtype:465 ;
+    :cultivationSubCategory cultivationtype:24 ;
     :cultivationType cultivationtype:1224 .
 
 naebi:299 a :NutrientBalanceCrop  ;
@@ -2794,8 +2794,8 @@ naebi:299 a :NutrientBalanceCrop  ;
     :Mg 20.0 ;
     :N2 200.0 ;
     :P2O5 40.0 ;
-    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
-    :cultivationSubCategory "CSC_OUTVG"^^xsd:string ;
+    :cultivationCategory cultivationtype:465 ;
+    :cultivationSubCategory cultivationtype:24 ;
     :cultivationType cultivationtype:1157 .
 
 naebi:3 a :NutrientBalanceCrop  ;
@@ -2805,8 +2805,8 @@ naebi:3 a :NutrientBalanceCrop  ;
     :Mg 15.0 ;
     :N2 85.0 ;
     :P2O5 46.0 ;
-    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
-    :cultivationSubCategory "CSC_PRMCR"^^xsd:string ;
+    :cultivationCategory cultivationtype:465 ;
+    :cultivationSubCategory cultivationtype:467 ;
     :cultivationType cultivationtype:1158 .
 
 naebi:30 a :NutrientBalanceCrop  ;
@@ -2816,8 +2816,8 @@ naebi:30 a :NutrientBalanceCrop  ;
     :Mg 10.0 ;
     :N2 300.0 ;
     :P2O5 35.0 ;
-    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
-    :cultivationSubCategory "CSC_OUTVG"^^xsd:string ;
+    :cultivationCategory cultivationtype:465 ;
+    :cultivationSubCategory cultivationtype:24 ;
     :cultivationType cultivationtype:1159 .
 
 naebi:300 a :NutrientBalanceCrop  ;
@@ -2827,8 +2827,8 @@ naebi:300 a :NutrientBalanceCrop  ;
     :Mg 25.0 ;
     :N2 190.0 ;
     :P2O5 30.0 ;
-    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
-    :cultivationSubCategory "CSC_OUTVG"^^xsd:string ;
+    :cultivationCategory cultivationtype:465 ;
+    :cultivationSubCategory cultivationtype:24 ;
     :cultivationType cultivationtype:1160 .
 
 naebi:301 a :NutrientBalanceCrop  ;
@@ -2838,8 +2838,8 @@ naebi:301 a :NutrientBalanceCrop  ;
     :Mg 25.0 ;
     :N2 200.0 ;
     :P2O5 35.0 ;
-    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
-    :cultivationSubCategory "CSC_OUTVG"^^xsd:string ;
+    :cultivationCategory cultivationtype:465 ;
+    :cultivationSubCategory cultivationtype:24 ;
     :cultivationType cultivationtype:1161 .
 
 naebi:302 a :NutrientBalanceCrop  ;
@@ -2849,8 +2849,8 @@ naebi:302 a :NutrientBalanceCrop  ;
     :Mg 0.08 ;
     :N2 110.0 ;
     :P2O5 0.72 ;
-    :cultivationCategory "CULT_ARABLE"^^xsd:string ;
-    :cultivationSubCategory "CSC_GRAIN"^^xsd:string ;
+    :cultivationCategory cultivationtype:1 ;
+    :cultivationSubCategory cultivationtype:466 ;
     :cultivationType cultivationtype:1019 .
 
 naebi:303 a :NutrientBalanceCrop  ;
@@ -2860,8 +2860,8 @@ naebi:303 a :NutrientBalanceCrop  ;
     :Mg 0.08 ;
     :N2 110.0 ;
     :P2O5 0.72 ;
-    :cultivationCategory "CULT_ARABLE"^^xsd:string ;
-    :cultivationSubCategory "CSC_GRAIN"^^xsd:string ;
+    :cultivationCategory cultivationtype:1 ;
+    :cultivationSubCategory cultivationtype:466 ;
     :cultivationType cultivationtype:1020 .
 
 naebi:304 a :NutrientBalanceCrop  ;
@@ -2871,8 +2871,8 @@ naebi:304 a :NutrientBalanceCrop  ;
     :Mg 0.12 ;
     :N2 140.0 ;
     :P2O5 0.83 ;
-    :cultivationCategory "CULT_ARABLE"^^xsd:string ;
-    :cultivationSubCategory "CSC_GRAIN"^^xsd:string ;
+    :cultivationCategory cultivationtype:1 ;
+    :cultivationSubCategory cultivationtype:466 ;
     :cultivationType cultivationtype:1001 .
 
 naebi:305 a :NutrientBalanceCrop  ;
@@ -2882,8 +2882,8 @@ naebi:305 a :NutrientBalanceCrop  ;
     :Mg 0.12 ;
     :N2 140.0 ;
     :P2O5 0.83 ;
-    :cultivationCategory "CULT_ARABLE"^^xsd:string ;
-    :cultivationSubCategory "CSC_GRAIN"^^xsd:string ;
+    :cultivationCategory cultivationtype:1 ;
+    :cultivationSubCategory cultivationtype:466 ;
     :cultivationType cultivationtype:1002 .
 
 naebi:306 a :NutrientBalanceCrop  ;
@@ -2893,8 +2893,8 @@ naebi:306 a :NutrientBalanceCrop  ;
     :Mg 20.0 ;
     :N2 50.0 ;
     :P2O5 35.0 ;
-    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
-    :cultivationSubCategory "CSC_PRMCR"^^xsd:string ;
+    :cultivationCategory cultivationtype:465 ;
+    :cultivationSubCategory cultivationtype:467 ;
     :cultivationType cultivationtype:712 .
 
 naebi:307 a :NutrientBalanceCrop  ;
@@ -2904,8 +2904,8 @@ naebi:307 a :NutrientBalanceCrop  ;
     :Mg 20.0 ;
     :N2 100.0 ;
     :P2O5 50.0 ;
-    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
-    :cultivationSubCategory "CSC_PRMCR"^^xsd:string ;
+    :cultivationCategory cultivationtype:465 ;
+    :cultivationSubCategory cultivationtype:467 ;
     :cultivationType cultivationtype:1162 .
 
 naebi:308 a :NutrientBalanceCrop  ;
@@ -2915,8 +2915,8 @@ naebi:308 a :NutrientBalanceCrop  ;
     :Mg 20.0 ;
     :N2 180.0 ;
     :P2O5 30.0 ;
-    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
-    :cultivationSubCategory "CSC_OUTVG"^^xsd:string ;
+    :cultivationCategory cultivationtype:465 ;
+    :cultivationSubCategory cultivationtype:24 ;
     :cultivationType cultivationtype:1163 .
 
 naebi:309 a :NutrientBalanceCrop  ;
@@ -2926,8 +2926,8 @@ naebi:309 a :NutrientBalanceCrop  ;
     :Mg 30.0 ;
     :N2 160.0 ;
     :P2O5 60.0 ;
-    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
-    :cultivationSubCategory "CSC_PRCRP"^^xsd:string ;
+    :cultivationCategory cultivationtype:465 ;
+    :cultivationSubCategory cultivationtype:7 ;
     :cultivationType cultivationtype:1164 .
 
 naebi:31 a :NutrientBalanceCrop  ;
@@ -2937,8 +2937,8 @@ naebi:31 a :NutrientBalanceCrop  ;
     :Mg 5.0 ;
     :N2 260.0 ;
     :P2O5 50.0 ;
-    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
-    :cultivationSubCategory "CSC_OUTVG"^^xsd:string ;
+    :cultivationCategory cultivationtype:465 ;
+    :cultivationSubCategory cultivationtype:24 ;
     :cultivationType cultivationtype:473 .
 
 naebi:310 a :NutrientBalanceCrop  ;
@@ -2948,8 +2948,8 @@ naebi:310 a :NutrientBalanceCrop  ;
     :Mg 20.0 ;
     :N2 190.0 ;
     :P2O5 35.0 ;
-    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
-    :cultivationSubCategory "CSC_OUTVG"^^xsd:string ;
+    :cultivationCategory cultivationtype:465 ;
+    :cultivationSubCategory cultivationtype:24 ;
     :cultivationType cultivationtype:1165 .
 
 naebi:311 a :NutrientBalanceCrop  ;
@@ -2959,8 +2959,8 @@ naebi:311 a :NutrientBalanceCrop  ;
     :Mg 15.0 ;
     :N2 190.0 ;
     :P2O5 35.0 ;
-    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
-    :cultivationSubCategory "CSC_PRCRP"^^xsd:string ;
+    :cultivationCategory cultivationtype:465 ;
+    :cultivationSubCategory cultivationtype:7 ;
     :cultivationType cultivationtype:1166 .
 
 naebi:312 a :NutrientBalanceCrop  ;
@@ -2970,8 +2970,8 @@ naebi:312 a :NutrientBalanceCrop  ;
     :Mg 30.0 ;
     :N2 150.0 ;
     :P2O5 60.0 ;
-    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
-    :cultivationSubCategory "CSC_OUTVG"^^xsd:string ;
+    :cultivationCategory cultivationtype:465 ;
+    :cultivationSubCategory cultivationtype:24 ;
     :cultivationType cultivationtype:1167 .
 
 naebi:313 a :NutrientBalanceCrop  ;
@@ -2981,8 +2981,8 @@ naebi:313 a :NutrientBalanceCrop  ;
     :Mg 15.0 ;
     :N2 170.0 ;
     :P2O5 30.0 ;
-    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
-    :cultivationSubCategory "CSC_OUTVG"^^xsd:string ;
+    :cultivationCategory cultivationtype:465 ;
+    :cultivationSubCategory cultivationtype:24 ;
     :cultivationType cultivationtype:1168 .
 
 naebi:32 a :NutrientBalanceCrop  ;
@@ -2992,8 +2992,8 @@ naebi:32 a :NutrientBalanceCrop  ;
     :Mg 15.0 ;
     :N2 100.0 ;
     :P2O5 30.0 ;
-    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
-    :cultivationSubCategory "CSC_OUTVG"^^xsd:string ;
+    :cultivationCategory cultivationtype:465 ;
+    :cultivationSubCategory cultivationtype:24 ;
     :cultivationType cultivationtype:106 .
 
 naebi:33 a :NutrientBalanceCrop  ;
@@ -3003,8 +3003,8 @@ naebi:33 a :NutrientBalanceCrop  ;
     :Mg 5.0 ;
     :N2 0.0 ;
     :P2O5 20.0 ;
-    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
-    :cultivationSubCategory "CSC_OUTVG"^^xsd:string ;
+    :cultivationCategory cultivationtype:465 ;
+    :cultivationSubCategory cultivationtype:24 ;
     :cultivationType cultivationtype:1225 .
 
 naebi:34 a :NutrientBalanceCrop  ;
@@ -3014,8 +3014,8 @@ naebi:34 a :NutrientBalanceCrop  ;
     :Mg 20.0 ;
     :N2 130.0 ;
     :P2O5 50.0 ;
-    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
-    :cultivationSubCategory "CSC_OUTVG"^^xsd:string ;
+    :cultivationCategory cultivationtype:465 ;
+    :cultivationSubCategory cultivationtype:24 ;
     :cultivationType cultivationtype:1226 .
 
 naebi:35 a :NutrientBalanceCrop  ;
@@ -3025,8 +3025,8 @@ naebi:35 a :NutrientBalanceCrop  ;
     :Mg 20.0 ;
     :N2 110.0 ;
     :P2O5 40.0 ;
-    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
-    :cultivationSubCategory "CSC_OUTVG"^^xsd:string ;
+    :cultivationCategory cultivationtype:465 ;
+    :cultivationSubCategory cultivationtype:24 ;
     :cultivationType cultivationtype:1227 .
 
 naebi:36 a :NutrientBalanceCrop  ;
@@ -3036,8 +3036,8 @@ naebi:36 a :NutrientBalanceCrop  ;
     :Mg 10.0 ;
     :N2 50.0 ;
     :P2O5 30.0 ;
-    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
-    :cultivationSubCategory "CSC_OUTVG"^^xsd:string ;
+    :cultivationCategory cultivationtype:465 ;
+    :cultivationSubCategory cultivationtype:24 ;
     :cultivationType cultivationtype:1228 .
 
 naebi:37 a :NutrientBalanceCrop  ;
@@ -3047,8 +3047,8 @@ naebi:37 a :NutrientBalanceCrop  ;
     :Mg 15.0 ;
     :N2 290.0 ;
     :P2O5 40.0 ;
-    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
-    :cultivationSubCategory "CSC_OUTVG"^^xsd:string ;
+    :cultivationCategory cultivationtype:465 ;
+    :cultivationSubCategory cultivationtype:24 ;
     :cultivationType cultivationtype:1181 .
 
 naebi:38 a :NutrientBalanceCrop  ;
@@ -3058,8 +3058,8 @@ naebi:38 a :NutrientBalanceCrop  ;
     :Mg 0.0 ;
     :N2 0.0 ;
     :P2O5 0.0 ;
-    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
-    :cultivationSubCategory "CSC_OUTVG"^^xsd:string ;
+    :cultivationCategory cultivationtype:465 ;
+    :cultivationSubCategory cultivationtype:24 ;
     :cultivationType cultivationtype:1182 .
 
 naebi:39 a :NutrientBalanceCrop  ;
@@ -3069,8 +3069,8 @@ naebi:39 a :NutrientBalanceCrop  ;
     :Mg 0.0 ;
     :N2 0.0 ;
     :P2O5 0.0 ;
-    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
-    :cultivationSubCategory "CSC_OUTVG"^^xsd:string ;
+    :cultivationCategory cultivationtype:465 ;
+    :cultivationSubCategory cultivationtype:24 ;
     :cultivationType cultivationtype:1183 .
 
 naebi:4 a :NutrientBalanceCrop  ;
@@ -3080,8 +3080,8 @@ naebi:4 a :NutrientBalanceCrop  ;
     :Mg 30.0 ;
     :N2 75.0 ;
     :P2O5 30.0 ;
-    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
-    :cultivationSubCategory "CSC_PRMCR"^^xsd:string ;
+    :cultivationCategory cultivationtype:465 ;
+    :cultivationSubCategory cultivationtype:467 ;
     :cultivationType cultivationtype:1180 .
 
 naebi:40 a :NutrientBalanceCrop  ;
@@ -3091,8 +3091,8 @@ naebi:40 a :NutrientBalanceCrop  ;
     :Mg 20.0 ;
     :N2 100.0 ;
     :P2O5 40.0 ;
-    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
-    :cultivationSubCategory "CSC_OUTVG"^^xsd:string ;
+    :cultivationCategory cultivationtype:465 ;
+    :cultivationSubCategory cultivationtype:24 ;
     :cultivationType cultivationtype:1229 .
 
 naebi:41 a :NutrientBalanceCrop  ;
@@ -3102,8 +3102,8 @@ naebi:41 a :NutrientBalanceCrop  ;
     :Mg 0.13 ;
     :N2 110.0 ;
     :P2O5 0.58 ;
-    :cultivationCategory "CULT_FODDER"^^xsd:string ;
-    :cultivationSubCategory "CSC_RTCRP"^^xsd:string ;
+    :cultivationCategory cultivationtype:464 ;
+    :cultivationSubCategory cultivationtype:17 ;
     :cultivationType cultivationtype:1026 .
 
 naebi:42 a :NutrientBalanceCrop  ;
@@ -3113,8 +3113,8 @@ naebi:42 a :NutrientBalanceCrop  ;
     :Mg 30.0 ;
     :N2 120.0 ;
     :P2O5 70.0 ;
-    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
-    :cultivationSubCategory "CSC_PRCRP"^^xsd:string ;
+    :cultivationCategory cultivationtype:465 ;
+    :cultivationSubCategory cultivationtype:7 ;
     :cultivationType cultivationtype:1230 .
 
 naebi:43 a :NutrientBalanceCrop  ;
@@ -3124,8 +3124,8 @@ naebi:43 a :NutrientBalanceCrop  ;
     :Mg 20.0 ;
     :N2 190.0 ;
     :P2O5 70.0 ;
-    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
-    :cultivationSubCategory "CSC_OUTVG"^^xsd:string ;
+    :cultivationCategory cultivationtype:465 ;
+    :cultivationSubCategory cultivationtype:24 ;
     :cultivationType cultivationtype:158 .
 
 naebi:44 a :NutrientBalanceCrop  ;
@@ -3135,8 +3135,8 @@ naebi:44 a :NutrientBalanceCrop  ;
     :Mg 20.0 ;
     :N2 180.0 ;
     :P2O5 70.0 ;
-    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
-    :cultivationSubCategory "CSC_OUTVG"^^xsd:string ;
+    :cultivationCategory cultivationtype:465 ;
+    :cultivationSubCategory cultivationtype:24 ;
     :cultivationType cultivationtype:271 .
 
 naebi:45 a :NutrientBalanceCrop  ;
@@ -3146,8 +3146,8 @@ naebi:45 a :NutrientBalanceCrop  ;
     :Mg 25.0 ;
     :N2 130.0 ;
     :P2O5 69.0 ;
-    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
-    :cultivationSubCategory "CSC_PRMCR"^^xsd:string ;
+    :cultivationCategory cultivationtype:465 ;
+    :cultivationSubCategory cultivationtype:467 ;
     :cultivationType cultivationtype:1249 .
 
 naebi:46 a :NutrientBalanceCrop  ;
@@ -3157,8 +3157,8 @@ naebi:46 a :NutrientBalanceCrop  ;
     :Mg 30.0 ;
     :N2 150.0 ;
     :P2O5 60.0 ;
-    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
-    :cultivationSubCategory "CSC_OUTVG"^^xsd:string ;
+    :cultivationCategory cultivationtype:465 ;
+    :cultivationSubCategory cultivationtype:24 ;
     :cultivationType cultivationtype:76 .
 
 naebi:47 a :NutrientBalanceCrop  ;
@@ -3168,8 +3168,8 @@ naebi:47 a :NutrientBalanceCrop  ;
     :Mg 40.0 ;
     :N2 100.0 ;
     :P2O5 40.0 ;
-    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
-    :cultivationSubCategory "CSC_PRMCR"^^xsd:string ;
+    :cultivationCategory cultivationtype:465 ;
+    :cultivationSubCategory cultivationtype:467 ;
     :cultivationType cultivationtype:1235 .
 
 naebi:48 a :NutrientBalanceCrop  ;
@@ -3179,8 +3179,8 @@ naebi:48 a :NutrientBalanceCrop  ;
     :Mg 10.0 ;
     :N2 160.0 ;
     :P2O5 60.0 ;
-    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
-    :cultivationSubCategory "CSC_OUTVG"^^xsd:string ;
+    :cultivationCategory cultivationtype:465 ;
+    :cultivationSubCategory cultivationtype:24 ;
     :cultivationType cultivationtype:58 .
 
 naebi:49 a :NutrientBalanceCrop  ;
@@ -3190,8 +3190,8 @@ naebi:49 a :NutrientBalanceCrop  ;
     :Mg 6.0 ;
     :N2 30.0 ;
     :P2O5 20.0 ;
-    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
-    :cultivationSubCategory "CSC_PRMCR"^^xsd:string ;
+    :cultivationCategory cultivationtype:465 ;
+    :cultivationSubCategory cultivationtype:467 ;
     :cultivationType cultivationtype:169 .
 
 naebi:5 a :NutrientBalanceCrop  ;
@@ -3201,8 +3201,8 @@ naebi:5 a :NutrientBalanceCrop  ;
     :Mg 20.0 ;
     :N2 60.0 ;
     :P2O5 25.0 ;
-    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
-    :cultivationSubCategory "CSC_PRMCR"^^xsd:string ;
+    :cultivationCategory cultivationtype:465 ;
+    :cultivationSubCategory cultivationtype:467 ;
     :cultivationType cultivationtype:472 .
 
 naebi:50 a :NutrientBalanceCrop  ;
@@ -3212,8 +3212,8 @@ naebi:50 a :NutrientBalanceCrop  ;
     :Mg 20.0 ;
     :N2 170.0 ;
     :P2O5 30.0 ;
-    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
-    :cultivationSubCategory "CSC_OUTVG"^^xsd:string ;
+    :cultivationCategory cultivationtype:465 ;
+    :cultivationSubCategory cultivationtype:24 ;
     :cultivationType cultivationtype:219 .
 
 naebi:51 a :NutrientBalanceCrop  ;
@@ -3223,8 +3223,8 @@ naebi:51 a :NutrientBalanceCrop  ;
     :Mg 30.0 ;
     :N2 70.0 ;
     :P2O5 50.0 ;
-    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
-    :cultivationSubCategory "CSC_OUTVG"^^xsd:string ;
+    :cultivationCategory cultivationtype:465 ;
+    :cultivationSubCategory cultivationtype:24 ;
     :cultivationType cultivationtype:1239 .
 
 naebi:52 a :NutrientBalanceCrop  ;
@@ -3234,8 +3234,8 @@ naebi:52 a :NutrientBalanceCrop  ;
     :Mg 5.0 ;
     :N2 50.0 ;
     :P2O5 25.0 ;
-    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
-    :cultivationSubCategory "CSC_PRMCR"^^xsd:string ;
+    :cultivationCategory cultivationtype:465 ;
+    :cultivationSubCategory cultivationtype:467 ;
     :cultivationType cultivationtype:1240 .
 
 naebi:53 a :NutrientBalanceCrop  ;
@@ -3245,8 +3245,8 @@ naebi:53 a :NutrientBalanceCrop  ;
     :Mg 20.0 ;
     :N2 60.0 ;
     :P2O5 20.0 ;
-    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
-    :cultivationSubCategory "CSC_PRMCR"^^xsd:string ;
+    :cultivationCategory cultivationtype:465 ;
+    :cultivationSubCategory cultivationtype:467 ;
     :cultivationType cultivationtype:283 .
 
 naebi:54 a :NutrientBalanceCrop  ;
@@ -3256,8 +3256,8 @@ naebi:54 a :NutrientBalanceCrop  ;
     :Mg 30.0 ;
     :N2 100.0 ;
     :P2O5 40.0 ;
-    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
-    :cultivationSubCategory "CSC_PRCRP"^^xsd:string ;
+    :cultivationCategory cultivationtype:465 ;
+    :cultivationSubCategory cultivationtype:7 ;
     :cultivationType cultivationtype:1242 .
 
 naebi:55 a :NutrientBalanceCrop  ;
@@ -3267,8 +3267,8 @@ naebi:55 a :NutrientBalanceCrop  ;
     :Mg 10.0 ;
     :N2 20.0 ;
     :P2O5 10.0 ;
-    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
-    :cultivationSubCategory "CSC_PRCRP"^^xsd:string ;
+    :cultivationCategory cultivationtype:465 ;
+    :cultivationSubCategory cultivationtype:7 ;
     :cultivationType cultivationtype:1243 .
 
 naebi:56 a :NutrientBalanceCrop  ;
@@ -3278,8 +3278,8 @@ naebi:56 a :NutrientBalanceCrop  ;
     :Mg 10.0 ;
     :N2 50.0 ;
     :P2O5 10.0 ;
-    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
-    :cultivationSubCategory "CSC_PRCRP"^^xsd:string ;
+    :cultivationCategory cultivationtype:465 ;
+    :cultivationSubCategory cultivationtype:7 ;
     :cultivationType cultivationtype:1244 .
 
 naebi:57 a :NutrientBalanceCrop  ;
@@ -3289,8 +3289,8 @@ naebi:57 a :NutrientBalanceCrop  ;
     :Mg 10.0 ;
     :N2 50.0 ;
     :P2O5 10.0 ;
-    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
-    :cultivationSubCategory "CSC_PRCRP"^^xsd:string ;
+    :cultivationCategory cultivationtype:465 ;
+    :cultivationSubCategory cultivationtype:7 ;
     :cultivationType cultivationtype:1245 .
 
 naebi:58 a :NutrientBalanceCrop  ;
@@ -3300,8 +3300,8 @@ naebi:58 a :NutrientBalanceCrop  ;
     :Mg 60.0 ;
     :N2 200.0 ;
     :P2O5 100.0 ;
-    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
-    :cultivationSubCategory "CSC_PRCRP"^^xsd:string ;
+    :cultivationCategory cultivationtype:465 ;
+    :cultivationSubCategory cultivationtype:7 ;
     :cultivationType cultivationtype:1246 .
 
 naebi:59 a :NutrientBalanceCrop  ;
@@ -3311,8 +3311,8 @@ naebi:59 a :NutrientBalanceCrop  ;
     :Mg 80.0 ;
     :N2 300.0 ;
     :P2O5 150.0 ;
-    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
-    :cultivationSubCategory "CSC_PRCRP"^^xsd:string ;
+    :cultivationCategory cultivationtype:465 ;
+    :cultivationSubCategory cultivationtype:7 ;
     :cultivationType cultivationtype:1247 .
 
 naebi:6 a :NutrientBalanceCrop  ;
@@ -3322,8 +3322,8 @@ naebi:6 a :NutrientBalanceCrop  ;
     :Mg 5.0 ;
     :N2 30.0 ;
     :P2O5 20.0 ;
-    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
-    :cultivationSubCategory "CSC_PRMCR"^^xsd:string ;
+    :cultivationCategory cultivationtype:465 ;
+    :cultivationSubCategory cultivationtype:467 ;
     :cultivationType cultivationtype:1248 .
 
 naebi:60 a :NutrientBalanceCrop  ;
@@ -3333,8 +3333,8 @@ naebi:60 a :NutrientBalanceCrop  ;
     :Mg 20.0 ;
     :N2 90.0 ;
     :P2O5 46.0 ;
-    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
-    :cultivationSubCategory "CSC_PRMCR"^^xsd:string ;
+    :cultivationCategory cultivationtype:465 ;
+    :cultivationSubCategory cultivationtype:467 ;
     :cultivationType cultivationtype:1249 .
 
 naebi:61 a :NutrientBalanceCrop  ;
@@ -3344,8 +3344,8 @@ naebi:61 a :NutrientBalanceCrop  ;
     :Mg 20.0 ;
     :N2 60.0 ;
     :P2O5 20.0 ;
-    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
-    :cultivationSubCategory "CSC_OUTVG"^^xsd:string ;
+    :cultivationCategory cultivationtype:465 ;
+    :cultivationSubCategory cultivationtype:24 ;
     :cultivationType cultivationtype:328 .
 
 naebi:62 a :NutrientBalanceCrop  ;
@@ -3355,8 +3355,8 @@ naebi:62 a :NutrientBalanceCrop  ;
     :Mg 20.0 ;
     :N2 260.0 ;
     :P2O5 60.0 ;
-    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
-    :cultivationSubCategory "CSC_OUTVG"^^xsd:string ;
+    :cultivationCategory cultivationtype:465 ;
+    :cultivationSubCategory cultivationtype:24 ;
     :cultivationType cultivationtype:1251 .
 
 naebi:63 a :NutrientBalanceCrop  ;
@@ -3366,8 +3366,8 @@ naebi:63 a :NutrientBalanceCrop  ;
     :Mg 60.0 ;
     :N2 320.0 ;
     :P2O5 180.0 ;
-    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
-    :cultivationSubCategory "CSC_DIVCR"^^xsd:string ;
+    :cultivationCategory cultivationtype:465 ;
+    :cultivationSubCategory cultivationtype:462 ;
     :cultivationType cultivationtype:1252 .
 
 naebi:64 a :NutrientBalanceCrop  ;
@@ -3377,8 +3377,8 @@ naebi:64 a :NutrientBalanceCrop  ;
     :Mg 40.0 ;
     :N2 230.0 ;
     :P2O5 140.0 ;
-    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
-    :cultivationSubCategory "CSC_DIVCR"^^xsd:string ;
+    :cultivationCategory cultivationtype:465 ;
+    :cultivationSubCategory cultivationtype:462 ;
     :cultivationType cultivationtype:1253 .
 
 naebi:65 a :NutrientBalanceCrop  ;
@@ -3388,8 +3388,8 @@ naebi:65 a :NutrientBalanceCrop  ;
     :Mg 30.0 ;
     :N2 140.0 ;
     :P2O5 100.0 ;
-    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
-    :cultivationSubCategory "CSC_DIVCR"^^xsd:string ;
+    :cultivationCategory cultivationtype:465 ;
+    :cultivationSubCategory cultivationtype:462 ;
     :cultivationType cultivationtype:1254 .
 
 naebi:66 a :NutrientBalanceCrop  ;
@@ -3399,8 +3399,8 @@ naebi:66 a :NutrientBalanceCrop  ;
     :Mg 10.0 ;
     :N2 80.0 ;
     :P2O5 30.0 ;
-    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
-    :cultivationSubCategory "CSC_OUTVG"^^xsd:string ;
+    :cultivationCategory cultivationtype:465 ;
+    :cultivationSubCategory cultivationtype:24 ;
     :cultivationType cultivationtype:231 .
 
 naebi:67 a :NutrientBalanceCrop  ;
@@ -3410,8 +3410,8 @@ naebi:67 a :NutrientBalanceCrop  ;
     :Mg 5.0 ;
     :N2 40.0 ;
     :P2O5 20.0 ;
-    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
-    :cultivationSubCategory "CSC_PRMCR"^^xsd:string ;
+    :cultivationCategory cultivationtype:465 ;
+    :cultivationSubCategory cultivationtype:467 ;
     :cultivationType cultivationtype:1256 .
 
 naebi:68 a :NutrientBalanceCrop  ;
@@ -3421,8 +3421,8 @@ naebi:68 a :NutrientBalanceCrop  ;
     :Mg 10.0 ;
     :N2 170.0 ;
     :P2O5 20.0 ;
-    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
-    :cultivationSubCategory "CSC_OUTVG"^^xsd:string ;
+    :cultivationCategory cultivationtype:465 ;
+    :cultivationSubCategory cultivationtype:24 ;
     :cultivationType cultivationtype:474 .
 
 naebi:69 a :NutrientBalanceCrop  ;
@@ -3432,8 +3432,8 @@ naebi:69 a :NutrientBalanceCrop  ;
     :Mg 0.16 ;
     :N2 30.0 ;
     :P2O5 0.8 ;
-    :cultivationCategory "CULT_ARABLE"^^xsd:string ;
-    :cultivationSubCategory "CSC_GRAIN"^^xsd:string ;
+    :cultivationCategory cultivationtype:1 ;
+    :cultivationSubCategory cultivationtype:466 ;
     :cultivationType cultivationtype:511 .
 
 naebi:7 a :NutrientBalanceCrop  ;
@@ -3443,8 +3443,8 @@ naebi:7 a :NutrientBalanceCrop  ;
     :Mg 10.0 ;
     :N2 150.0 ;
     :P2O5 30.0 ;
-    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
-    :cultivationSubCategory "CSC_OUTVG"^^xsd:string ;
+    :cultivationCategory cultivationtype:465 ;
+    :cultivationSubCategory cultivationtype:24 ;
     :cultivationType cultivationtype:1257 .
 
 naebi:70 a :NutrientBalanceCrop  ;
@@ -3454,8 +3454,8 @@ naebi:70 a :NutrientBalanceCrop  ;
     :Mg 30.0 ;
     :N2 140.0 ;
     :P2O5 50.0 ;
-    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
-    :cultivationSubCategory "CSC_PRCRP"^^xsd:string ;
+    :cultivationCategory cultivationtype:465 ;
+    :cultivationSubCategory cultivationtype:7 ;
     :cultivationType cultivationtype:1258 .
 
 naebi:71 a :NutrientBalanceCrop  ;
@@ -3465,8 +3465,8 @@ naebi:71 a :NutrientBalanceCrop  ;
     :Mg 20.0 ;
     :N2 160.0 ;
     :P2O5 40.0 ;
-    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
-    :cultivationSubCategory "CSC_OUTVG"^^xsd:string ;
+    :cultivationCategory cultivationtype:465 ;
+    :cultivationSubCategory cultivationtype:24 ;
     :cultivationType cultivationtype:1259 .
 
 naebi:72 a :NutrientBalanceCrop  ;
@@ -3476,8 +3476,8 @@ naebi:72 a :NutrientBalanceCrop  ;
     :Mg 20.0 ;
     :N2 130.0 ;
     :P2O5 30.0 ;
-    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
-    :cultivationSubCategory "CSC_OUTVG"^^xsd:string ;
+    :cultivationCategory cultivationtype:465 ;
+    :cultivationSubCategory cultivationtype:24 ;
     :cultivationType cultivationtype:1260 .
 
 naebi:73 a :NutrientBalanceCrop  ;
@@ -3487,8 +3487,8 @@ naebi:73 a :NutrientBalanceCrop  ;
     :Mg 0.2 ;
     :N2 0.0 ;
     :P2O5 1.17 ;
-    :cultivationCategory "CULT_ARABLE"^^xsd:string ;
-    :cultivationSubCategory "CSC_RTCRP"^^xsd:string ;
+    :cultivationCategory cultivationtype:1 ;
+    :cultivationSubCategory cultivationtype:17 ;
     :cultivationType cultivationtype:528 .
 
 naebi:74 a :NutrientBalanceCrop  ;
@@ -3498,8 +3498,8 @@ naebi:74 a :NutrientBalanceCrop  ;
     :Mg 0.09 ;
     :N2 110.0 ;
     :P2O5 0.76 ;
-    :cultivationCategory "CULT_ARABLE"^^xsd:string ;
-    :cultivationSubCategory "CSC_RTCRP"^^xsd:string ;
+    :cultivationCategory cultivationtype:1 ;
+    :cultivationSubCategory cultivationtype:17 ;
     :cultivationType cultivationtype:1262 .
 
 naebi:75 a :NutrientBalanceCrop  ;
@@ -3509,8 +3509,8 @@ naebi:75 a :NutrientBalanceCrop  ;
     :Mg 20.0 ;
     :N2 160.0 ;
     :P2O5 30.0 ;
-    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
-    :cultivationSubCategory "CSC_OUTVG"^^xsd:string ;
+    :cultivationCategory cultivationtype:465 ;
+    :cultivationSubCategory cultivationtype:24 ;
     :cultivationType cultivationtype:273 .
 
 naebi:76 a :NutrientBalanceCrop  ;
@@ -3520,8 +3520,8 @@ naebi:76 a :NutrientBalanceCrop  ;
     :Mg 0.2 ;
     :N2 60.0 ;
     :P2O5 0.71 ;
-    :cultivationCategory "CULT_ARABLE"^^xsd:string ;
-    :cultivationSubCategory "CSC_DIVCR"^^xsd:string ;
+    :cultivationCategory cultivationtype:1 ;
+    :cultivationSubCategory cultivationtype:462 ;
     :cultivationType cultivationtype:1264 .
 
 naebi:77 a :NutrientBalanceCrop  ;
@@ -3531,8 +3531,8 @@ naebi:77 a :NutrientBalanceCrop  ;
     :Mg 0.0 ;
     :N2 0.0 ;
     :P2O5 0.0 ;
-    :cultivationCategory "CULT_ARABLE"^^xsd:string ;
-    :cultivationSubCategory "CSC_DIVCR"^^xsd:string ;
+    :cultivationCategory cultivationtype:1 ;
+    :cultivationSubCategory cultivationtype:462 ;
     :cultivationType cultivationtype:1265 .
 
 naebi:78 a :NutrientBalanceCrop  ;
@@ -3542,8 +3542,8 @@ naebi:78 a :NutrientBalanceCrop  ;
     :Mg 0.0 ;
     :N2 0.0 ;
     :P2O5 0.0 ;
-    :cultivationCategory "CULT_ARABLE"^^xsd:string ;
-    :cultivationSubCategory "CSC_DIVCR"^^xsd:string ;
+    :cultivationCategory cultivationtype:1 ;
+    :cultivationSubCategory cultivationtype:462 ;
     :cultivationType cultivationtype:557 .
 
 naebi:79 a :NutrientBalanceCrop  ;
@@ -3553,8 +3553,8 @@ naebi:79 a :NutrientBalanceCrop  ;
     :Mg 20.0 ;
     :N2 80.0 ;
     :P2O5 50.0 ;
-    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
-    :cultivationSubCategory "CSC_OUTVG"^^xsd:string ;
+    :cultivationCategory cultivationtype:465 ;
+    :cultivationSubCategory cultivationtype:24 ;
     :cultivationType cultivationtype:1267 .
 
 naebi:8 a :NutrientBalanceCrop  ;
@@ -3564,8 +3564,8 @@ naebi:8 a :NutrientBalanceCrop  ;
     :Mg 20.0 ;
     :N2 210.0 ;
     :P2O5 40.0 ;
-    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
-    :cultivationSubCategory "CSC_OUTVG"^^xsd:string ;
+    :cultivationCategory cultivationtype:465 ;
+    :cultivationSubCategory cultivationtype:24 ;
     :cultivationType cultivationtype:1268 .
 
 naebi:80 a :NutrientBalanceCrop  ;
@@ -3575,8 +3575,8 @@ naebi:80 a :NutrientBalanceCrop  ;
     :Mg 20.0 ;
     :N2 80.0 ;
     :P2O5 50.0 ;
-    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
-    :cultivationSubCategory "CSC_PRMCR"^^xsd:string ;
+    :cultivationCategory cultivationtype:465 ;
+    :cultivationSubCategory cultivationtype:467 ;
     :cultivationType cultivationtype:1269 .
 
 naebi:81 a :NutrientBalanceCrop  ;
@@ -3586,8 +3586,8 @@ naebi:81 a :NutrientBalanceCrop  ;
     :Mg 10.0 ;
     :N2 140.0 ;
     :P2O5 40.0 ;
-    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
-    :cultivationSubCategory "CSC_OUTVG"^^xsd:string ;
+    :cultivationCategory cultivationtype:465 ;
+    :cultivationSubCategory cultivationtype:24 ;
     :cultivationType cultivationtype:1270 .
 
 naebi:82 a :NutrientBalanceCrop  ;
@@ -3597,8 +3597,8 @@ naebi:82 a :NutrientBalanceCrop  ;
     :Mg 0.13 ;
     :N2 0.0 ;
     :P2O5 0.22 ;
-    :cultivationCategory "CULT_FODDER"^^xsd:string ;
-    :cultivationSubCategory "CSC_FORAG"^^xsd:string ;
+    :cultivationCategory cultivationtype:464 ;
+    :cultivationSubCategory cultivationtype:463 ;
     :cultivationType cube:Undefined .
 
 naebi:83 a :NutrientBalanceCrop  ;
@@ -3608,8 +3608,8 @@ naebi:83 a :NutrientBalanceCrop  ;
     :Mg 0.03 ;
     :N2 100.0 ;
     :P2O5 0.06 ;
-    :cultivationCategory "CULT_ARABLE"^^xsd:string ;
-    :cultivationSubCategory "CSC_RTCRP"^^xsd:string ;
+    :cultivationCategory cultivationtype:1 ;
+    :cultivationSubCategory cultivationtype:17 ;
     :cultivationType cultivationtype:522 .
 
 naebi:84 a :NutrientBalanceCrop  ;
@@ -3619,8 +3619,8 @@ naebi:84 a :NutrientBalanceCrop  ;
     :Mg 0.12 ;
     :N2 140.0 ;
     :P2O5 0.83 ;
-    :cultivationCategory "CULT_ARABLE"^^xsd:string ;
-    :cultivationSubCategory "CSC_GRAIN"^^xsd:string ;
+    :cultivationCategory cultivationtype:1 ;
+    :cultivationSubCategory cultivationtype:466 ;
     :cultivationType cultivationtype:1004 .
 
 naebi:85 a :NutrientBalanceCrop  ;
@@ -3630,8 +3630,8 @@ naebi:85 a :NutrientBalanceCrop  ;
     :Mg 0.12 ;
     :N2 140.0 ;
     :P2O5 0.83 ;
-    :cultivationCategory "CULT_ARABLE"^^xsd:string ;
-    :cultivationSubCategory "CSC_GRAIN"^^xsd:string ;
+    :cultivationCategory cultivationtype:1 ;
+    :cultivationSubCategory cultivationtype:466 ;
     :cultivationType cultivationtype:1005 .
 
 naebi:86 a :NutrientBalanceCrop  ;
@@ -3641,8 +3641,8 @@ naebi:86 a :NutrientBalanceCrop  ;
     :Mg 0.11 ;
     :N2 70.0 ;
     :P2O5 0.66 ;
-    :cultivationCategory "CULT_ARABLE"^^xsd:string ;
-    :cultivationSubCategory "CSC_GRAIN"^^xsd:string ;
+    :cultivationCategory cultivationtype:1 ;
+    :cultivationSubCategory cultivationtype:466 ;
     :cultivationType cultivationtype:542 .
 
 naebi:87 a :NutrientBalanceCrop  ;
@@ -3652,8 +3652,8 @@ naebi:87 a :NutrientBalanceCrop  ;
     :Mg 20.0 ;
     :N2 95.0 ;
     :P2O5 57.0 ;
-    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
-    :cultivationSubCategory "CSC_PRMCR"^^xsd:string ;
+    :cultivationCategory cultivationtype:465 ;
+    :cultivationSubCategory cultivationtype:467 ;
     :cultivationType cultivationtype:1273 .
 
 naebi:88 a :NutrientBalanceCrop  ;
@@ -3663,8 +3663,8 @@ naebi:88 a :NutrientBalanceCrop  ;
     :Mg 0.1 ;
     :N2 70.0 ;
     :P2O5 0.65 ;
-    :cultivationCategory "CULT_FODDER"^^xsd:string ;
-    :cultivationSubCategory "CSC_FORAG"^^xsd:string ;
+    :cultivationCategory cultivationtype:464 ;
+    :cultivationSubCategory cultivationtype:463 ;
     :cultivationType cultivationtype:1025 .
 
 naebi:89 a :NutrientBalanceCrop  ;
@@ -3674,8 +3674,8 @@ naebi:89 a :NutrientBalanceCrop  ;
     :Mg 0.0 ;
     :N2 0.0 ;
     :P2O5 0.0 ;
-    :cultivationCategory "CULT_ARABLE"^^xsd:string ;
-    :cultivationSubCategory "CSC_DIVCR"^^xsd:string ;
+    :cultivationCategory cultivationtype:1 ;
+    :cultivationSubCategory cultivationtype:462 ;
     :cultivationType cultivationtype:1275 .
 
 naebi:9 a :NutrientBalanceCrop  ;
@@ -3685,8 +3685,8 @@ naebi:9 a :NutrientBalanceCrop  ;
     :Mg 10.0 ;
     :N2 150.0 ;
     :P2O5 30.0 ;
-    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
-    :cultivationSubCategory "CSC_OUTVG"^^xsd:string ;
+    :cultivationCategory cultivationtype:465 ;
+    :cultivationSubCategory cultivationtype:24 ;
     :cultivationType cultivationtype:139 .
 
 naebi:90 a :NutrientBalanceCrop  ;
@@ -3696,8 +3696,8 @@ naebi:90 a :NutrientBalanceCrop  ;
     :Mg 0.0 ;
     :N2 0.0 ;
     :P2O5 0.0 ;
-    :cultivationCategory "CULT_ARABLE"^^xsd:string ;
-    :cultivationSubCategory "CSC_DIVCR"^^xsd:string ;
+    :cultivationCategory cultivationtype:1 ;
+    :cultivationSubCategory cultivationtype:462 ;
     :cultivationType cultivationtype:1277 .
 
 naebi:91 a :NutrientBalanceCrop  ;
@@ -3707,8 +3707,8 @@ naebi:91 a :NutrientBalanceCrop  ;
     :Mg 15.0 ;
     :N2 60.0 ;
     :P2O5 34.0 ;
-    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
-    :cultivationSubCategory "CSC_PRMCR"^^xsd:string ;
+    :cultivationCategory cultivationtype:465 ;
+    :cultivationSubCategory cultivationtype:467 ;
     :cultivationType cultivationtype:1278 .
 
 naebi:92 a :NutrientBalanceCrop  ;
@@ -3718,8 +3718,8 @@ naebi:92 a :NutrientBalanceCrop  ;
     :Mg 10.0 ;
     :N2 120.0 ;
     :P2O5 30.0 ;
-    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
-    :cultivationSubCategory "CSC_OUTVG"^^xsd:string ;
+    :cultivationCategory cultivationtype:465 ;
+    :cultivationSubCategory cultivationtype:24 ;
     :cultivationType cultivationtype:39 .
 
 naebi:93 a :NutrientBalanceCrop  ;
@@ -3729,8 +3729,8 @@ naebi:93 a :NutrientBalanceCrop  ;
     :Mg 0.25 ;
     :N2 1.7 ;
     :P2O5 0.71 ;
-    :cultivationCategory "CULT_FODDER"^^xsd:string ;
-    :cultivationSubCategory "CSC_FORAG"^^xsd:string ;
+    :cultivationCategory cultivationtype:464 ;
+    :cultivationSubCategory cultivationtype:463 ;
     :cultivationType cultivationtype:79 .
 
 naebi:94 a :NutrientBalanceCrop  ;
@@ -3740,8 +3740,8 @@ naebi:94 a :NutrientBalanceCrop  ;
     :Mg 15.0 ;
     :N2 90.0 ;
     :P2O5 25.0 ;
-    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
-    :cultivationSubCategory "CSC_PRMCR"^^xsd:string ;
+    :cultivationCategory cultivationtype:465 ;
+    :cultivationSubCategory cultivationtype:467 ;
     :cultivationType cultivationtype:1281 .
 
 naebi:95 a :NutrientBalanceCrop  ;
@@ -3751,8 +3751,8 @@ naebi:95 a :NutrientBalanceCrop  ;
     :Mg 30.0 ;
     :N2 65.0 ;
     :P2O5 46.0 ;
-    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
-    :cultivationSubCategory "CSC_PRMCR"^^xsd:string ;
+    :cultivationCategory cultivationtype:465 ;
+    :cultivationSubCategory cultivationtype:467 ;
     :cultivationType cultivationtype:1282 .
 
 naebi:96 a :NutrientBalanceCrop  ;
@@ -3762,8 +3762,8 @@ naebi:96 a :NutrientBalanceCrop  ;
     :Mg 0.05 ;
     :N2 80.0 ;
     :P2O5 1.2 ;
-    :cultivationCategory "CULT_ARABLE"^^xsd:string ;
-    :cultivationSubCategory "CSC_DIVCR"^^xsd:string ;
+    :cultivationCategory cultivationtype:1 ;
+    :cultivationSubCategory cultivationtype:462 ;
     :cultivationType cultivationtype:1283 .
 
 naebi:97 a :NutrientBalanceCrop  ;
@@ -3773,8 +3773,8 @@ naebi:97 a :NutrientBalanceCrop  ;
     :Mg 0.0 ;
     :N2 0.0 ;
     :P2O5 0.0 ;
-    :cultivationCategory "CULT_ARABLE"^^xsd:string ;
-    :cultivationSubCategory "CSC_ECOBL"^^xsd:string ;
+    :cultivationCategory cultivationtype:1 ;
+    :cultivationSubCategory cultivationtype:414 ;
     :cultivationType cultivationtype:1024 .
 
 naebi:98 a :NutrientBalanceCrop  ;
@@ -3784,8 +3784,8 @@ naebi:98 a :NutrientBalanceCrop  ;
     :Mg 8.0 ;
     :N2 45.0 ;
     :P2O5 15.0 ;
-    :cultivationCategory "CULT_SPECIAL"^^xsd:string ;
-    :cultivationSubCategory "CSC_ECOBL"^^xsd:string ;
+    :cultivationCategory cultivationtype:465 ;
+    :cultivationSubCategory cultivationtype:414 ;
     :cultivationType cultivationtype:1284 .
 
 naebi:99 a :NutrientBalanceCrop  ;
@@ -3795,6 +3795,6 @@ naebi:99 a :NutrientBalanceCrop  ;
     :Mg 0.0 ;
     :N2 0.0 ;
     :P2O5 0.0 ;
-    :cultivationCategory "CULT_ARABLE"^^xsd:string ;
-    :cultivationSubCategory "CSC_ECOBL"^^xsd:string ;
+    :cultivationCategory cultivationtype:1 ;
+    :cultivationSubCategory cultivationtype:414 ;
     :cultivationType cultivationtype:1292 .
