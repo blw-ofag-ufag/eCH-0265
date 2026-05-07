@@ -139,9 +139,9 @@ shape:DirectPaymentCrop a sh:NodeShape ;
             schema:name "Gültig von"@de ;
             schema:description "Ab welchem Jahr wurde diese Direktzahlungskultur offiziell verwendet?"@de ;
             sh:maxCount 1 ;
-            sh:minInclusive "1999"^^xsd:gYear ;
+            sh:minInclusive 1999 ;
             sh:nodeKind sh:Literal ;
-            sh:datatype xsd:gYear ;
+            sh:datatype xsd:integer ;
             sh:path schema:validFrom ;
         ],
         [
@@ -151,7 +151,7 @@ shape:DirectPaymentCrop a sh:NodeShape ;
             sh:maxCount 1 ;
             sh:path schema:validTo ;
             sh:or (
-                [ sh:datatype xsd:gYear ; sh:nodeKind sh:Literal ]
+                [ sh:datatype xsd:integer ; sh:nodeKind sh:Literal ]
                 [ sh:hasValue cube:Undefined ]
             ) ;
         ] .
