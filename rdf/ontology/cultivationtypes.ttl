@@ -48,6 +48,11 @@ cultivationtype:shape a sh:NodeShape ;
     # global property definitions
     sh:property
     [
+        sh:path schema:image ;
+        sh:nodeKind sh:IRI ;
+    ] ,
+
+    [
         sh:path schema:name ;
         sh:minCount 1 ;
         sh:nodeKind sh:Literal ;
@@ -59,7 +64,6 @@ cultivationtype:shape a sh:NodeShape ;
         sh:path schema:alternateName ;
         sh:nodeKind sh:Literal ;
         sh:datatype rdf:langString ;
-        sh:languageIn ( "de" "fr" "it" "en" ) ;
     ],
     [
         sh:path schema:description ;
@@ -147,7 +151,7 @@ cultivationtype:4 a owl:Class ;
         "Vines"@en ;
     schema:alternateName "Weinbau"@de ;
     rdfs:subClassOf :Cultivation ;
-    owl:unionOf ( cultivationtype:701 cultivationtype:735 ) .
+    owl:unionOf ( cultivationtype:701 cultivationtype:717 cultivationtype:735 ) .
 
 cultivationtype:5 a owl:Class ;
     schema:name "Obstanlagen"@de,
@@ -204,7 +208,7 @@ cultivationtype:14 a owl:Class ;
         "Céréales"@fr,
         "Cereali"@it ;
     schema:description "Der Anbau von verschiedenen Getreidearten wie Weizen, Gerste, Roggen, Hafer oder Dinkel. Das Hauptziel ist die Gewinnung der Körner zur Nutzung als Lebens- oder Futtermittel."@de ;
-    rdfs:subClassOf cultivationtype:1032 .
+    rdfs:subClassOf cultivationtype:1 .
 
 cultivationtype:15 a owl:Class ;
     schema:name "Leguminosen"@de ;
@@ -213,9 +217,8 @@ cultivationtype:15 a owl:Class ;
     rdfs:subClassOf cultivationtype:1 .
 
 cultivationtype:16 a owl:Class ;
-    schema:name "Getreide und Pseudogetreide"@de,
-        "Grains and pseudo-cereals"@en ;
-    schema:description "Der Anbau von von Getreide oder Pseudogetreide."@de ;
+    schema:name "Pseudogetreide"@de,
+        "Pseudo-cereals"@en ;
     rdfs:subClassOf cultivationtype:1 .
 
 cultivationtype:17 a owl:Class ;
@@ -344,12 +347,6 @@ cultivationtype:36 a owl:Class ;
         "Zucca ornamentale"@it ;
     rdfs:subClassOf cultivationtype:145,
         cultivationtype:1093 .
-
-cultivationtype:37 a owl:Class ;
-    schema:name "Ysop"@de,
-        "Hysope"@fr,
-        "Issopo"@it ;
-    rdfs:subClassOf cultivationtype:67 .
 
 cultivationtype:39 a owl:Class ;
     schema:name "Knoblauch"@de,
@@ -1604,7 +1601,8 @@ cultivationtype:305 a owl:Class ;
     schema:name "Futter- und Zuckerrüben"@de,
         "betteraves à sucre et fourragère"@fr,
         "Barbabietole da foraggio e da zucchero"@it ;
-    owl:intersectionOf ( cultivationtype:522 cultivationtype:523 ) .
+    rdfs:subClassOf cultivationtype:17 ;
+    owl:unionOf ( cultivationtype:522 cultivationtype:523 ) .
 
 cultivationtype:306 a owl:Class ;
     schema:name "Wurzelpetersilie"@de,
@@ -1862,7 +1860,11 @@ cultivationtype:413 a owl:Class ;
         "Kappes"@de ,
         "Chou cabus"@fr ,
         "Cavolo bianco"@it ,
-        "Cappuccio bianco"@it ;
+        "Cappuccio bianco"@it ,
+        "Wittekool"@nl ;
+    schema:description "Anbau von Weisskohl, in der Regel für den menschlichen Verzehr."@de ;
+    schema:image <https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/Weisskohlfeld.jpg/1280px-Weisskohlfeld.jpg> ;
+    :botanicalPlant taxon:BRSOH ;
     rdfs:subClassOf cultivationtype:81 .
 
 cultivationtype:414 a owl:Class ;
@@ -2021,12 +2023,14 @@ cultivationtype:501 a owl:Class ;
     schema:name "Sommergerste"@de,
         "Orge de printemps"@fr,
         "Orzo primaverile"@it ;
+    schema:description "Bezeichnet den Anbau von Gerste, die im Frühjahr ausgesät und im späten Sommer desselben Jahres geerntet wird."@de ;
     owl:intersectionOf ( cultivationtype:498 cultivationtype:1000 ) .
 
 cultivationtype:502 a owl:Class ;
     schema:name "Wintergerste"@de,
         "Orge d’automne"@fr,
         "Orzo autunnale"@it ;
+    schema:description "Umfasst den Anbau von Gerste, deren Aussaat im Herbst erfolgt, um nach der Überwinterung im darauffolgenden Sommer geerntet zu werden."@de ;
     owl:intersectionOf ( cultivationtype:19 cultivationtype:498 ) .
 
 cultivationtype:504 a owl:Class ;
@@ -2040,6 +2044,7 @@ cultivationtype:505 a owl:Class ;
     schema:name "Triticale"@de,
         "Triticale"@fr,
         "Triticale"@it ;
+    schema:description "Umfasst den Anbau der Weizen-Roggen-Kreuzung Triticale, vorwiegend als ertragreiches Futtergetreide."@de ;
     rdfs:subClassOf cultivationtype:1033 ;
     :botanicalPlant taxon:TTLRI .
 
@@ -2047,6 +2052,7 @@ cultivationtype:506 a owl:Class ;
     schema:name "Mischel Futtergetreide"@de,
         "Méteil de céréales fourragères"@fr,
         "Miscela di cereali da foraggio"@it ;
+    schema:description "Bezeichnet den gemeinsamen Anbau einer Saatgutmischung aus verschiedenen Getreidearten auf derselben Nutzfläche für die Tierfutterproduktion."@de ;
     rdfs:subClassOf cultivationtype:14,
         cultivationtype:18 .
 
@@ -2054,6 +2060,7 @@ cultivationtype:507 a owl:Class ;
     schema:name "Futterweizen gemäss Sortenliste swiss granum"@de,
         "Blé fourrager selon liste swiss granum"@fr,
         "Frumento da foraggio giusta la lista di swiss granum"@it ;
+    schema:description "Umfasst den Anbau spezifischer Weizensorten, die gemäss der offiziellen Liste von swiss granum explizit als Futterweizen eingestuft sind."@de ;
     rdfs:subClassOf cultivationtype:1003 .
 
 cultivationtype:508 a owl:Class ;
@@ -2090,12 +2097,14 @@ cultivationtype:512 a owl:Class ;
     schema:name "Sommerweizen (ohne Futterweizen der Sortenliste swiss granum)"@de,
         "Blé de printemps (sans blé fourrager de la liste swiss granum)"@fr,
         "Frumento primaverile (escl. il frumento da foraggio di swiss granum)"@it ;
+    owl:disjointWith cultivationtype:507 ;
     rdfs:subClassOf cultivationtype:999 .
 
 cultivationtype:513 a owl:Class ;
     schema:name "Winterweizen (ohne Futterweizen der Sortenliste swiss granum)"@de,
         "Blé d'automne (sans blé fourrager de la liste swiss granum)"@fr,
         "Frumento autunnale (escl. il frumento da foraggio di swiss granum)"@it ;
+    owl:disjointWith cultivationtype:507 ;
     rdfs:subClassOf cultivationtype:1007 .
 
 cultivationtype:514 a owl:Class ;
@@ -2464,7 +2473,7 @@ cultivationtype:571 a owl:DeprecatedClass ;
 
 cultivationtype:572 a owl:Class ;
     schema:name "Nützlingsstreifen auf offener Ackerfläche"@de,
-        "avec des céréales ou de la caméline, au moins 30 % de lentilles lors de la récolte (pour la production de grains)"@fr,
+        "Bandes pour organismes utiles sur les terres ouvertes"@fr,
         "Strisce per organismi utili sulla superficie coltiva aperta"@it ;
     rdfs:subClassOf cultivationtype:1 ;
     :managementIntensity intensity:Extensive .
@@ -3413,15 +3422,6 @@ cultivationtype:1030 a owl:Class ;
 cultivationtype:1031 a owl:Class ;
     schema:name "Getreide-Silage mit Leguminosen"@de ;
     rdfs:subClassOf cultivationtype:543 .
-
-cultivationtype:1032 a owl:Class ;
-    schema:name "Kulturen mit Süssgräsern"@de,
-        "crops with sweet grasses"@en ;
-    schema:alternateName "Süssgräser (Poaceae)"@de,
-        "poacées (Gramineae)"@fr,
-        "Poacee (Graminaceae)"@it ;
-    rdfs:subClassOf cultivationtype:16 ;
-    :botanicalPlant taxon:1GRAF .
 
 cultivationtype:1033 a owl:Class ;
     schema:name "Getreide ohne Mais"@de,
@@ -4439,7 +4439,7 @@ cultivationtype:1224 a owl:Class ;
 
 cultivationtype:1225 a owl:Class ;
     schema:name "Bohnen, Busch- Handpflück-"@de,
-        "Beans, bushnd-picked"@en,
+        "Beans, bush or hand-picked"@en,
         "Haricots nains, cueillis à la main"@fr,
         "Fagioli nani, raccolti a mano"@it ;
     rdfs:subClassOf cultivationtype:476 .
@@ -4762,3 +4762,281 @@ cultivationtype:1291 a owl:Class ;
 cultivationtype:1292 a owl:Class ;
     schema:name "Hecken und Feldgehölz mit Krautsaum"@de ;
     rdfs:subClassOf cultivationtype:852 .
+
+# Disjoint AGIS Cultivation Groups
+[] a owl:AllDisjointClasses ;
+    owl:members (
+        cultivationtype:1
+        cultivationtype:10
+        cultivationtype:12
+        cultivationtype:13
+        cultivationtype:20
+        cultivationtype:21
+        cultivationtype:7
+    ) .
+
+# Disjoint AGIS subclasses of cultivationtype:1033
+[] a owl:AllDisjointClasses ;
+    owl:members (
+        cultivationtype:504
+        cultivationtype:505
+        cultivationtype:509
+        cultivationtype:514
+        cultivationtype:515
+        cultivationtype:542
+        cultivationtype:543
+        cultivationtype:549
+    ) .
+
+# Disjoint AGIS subclasses of cultivationtype:18
+[] a owl:AllDisjointClasses ;
+    owl:members (
+        cultivationtype:506
+        cultivationtype:515
+        cultivationtype:569
+        cultivationtype:570
+    ) .
+
+# Disjoint AGIS subclasses of cultivationtype:497
+[] a owl:AllDisjointClasses ;
+    owl:members (
+        cultivationtype:508
+        cultivationtype:519
+        cultivationtype:521
+    ) .
+
+# Disjoint AGIS subclasses of cultivationtype:492
+[] a owl:AllDisjointClasses ;
+    owl:members (
+        cultivationtype:510
+        cultivationtype:511
+        cultivationtype:516
+    ) .
+
+# Disjoint AGIS subclasses of cultivationtype:509
+[] a owl:AllDisjointClasses ;
+    owl:members (
+        cultivationtype:520
+        cultivationtype:529
+    ) .
+
+# Disjoint AGIS subclasses of cultivationtype:17
+[] a owl:AllDisjointClasses ;
+    owl:members (
+        cultivationtype:522
+        cultivationtype:523
+        cultivationtype:547
+    ) .
+
+# Disjoint AGIS subclasses of cultivationtype:1039
+[] a owl:AllDisjointClasses ;
+    owl:members (
+        cultivationtype:526
+        cultivationtype:590
+    ) .
+
+# Disjoint AGIS subclasses of cultivationtype:1129
+[] a owl:AllDisjointClasses ;
+    owl:members (
+        cultivationtype:527
+        cultivationtype:591
+    ) .
+
+# Disjoint AGIS subclasses of cultivationtype:15
+[] a owl:AllDisjointClasses ;
+    owl:members (
+        cultivationtype:528
+        cultivationtype:536
+        cultivationtype:537
+        cultivationtype:538
+        cultivationtype:540
+        cultivationtype:568
+        cultivationtype:631
+    ) .
+
+# Disjoint AGIS subclasses of cultivationtype:493
+[] a owl:AllDisjointClasses ;
+    owl:members (
+        cultivationtype:531
+        cultivationtype:592
+    ) .
+
+# Disjoint AGIS subclasses of cultivationtype:1
+[] a owl:AllDisjointClasses ;
+    owl:members (
+        cultivationtype:534
+        cultivationtype:535
+        cultivationtype:541
+        cultivationtype:544
+        cultivationtype:551
+        cultivationtype:552
+        cultivationtype:554
+        cultivationtype:555
+        cultivationtype:559
+        cultivationtype:566
+        cultivationtype:567
+        cultivationtype:572
+        cultivationtype:573
+        cultivationtype:594
+        cultivationtype:595
+        cultivationtype:597
+        cultivationtype:598
+        cultivationtype:601
+        cultivationtype:602
+        cultivationtype:632
+    ) .
+
+# Disjoint AGIS subclasses of cultivationtype:24
+[] a owl:AllDisjointClasses ;
+    owl:members (
+        cultivationtype:545
+        cultivationtype:546
+    ) .
+
+# Disjoint AGIS subclasses of cultivationtype:16
+[] a owl:AllDisjointClasses ;
+    owl:members (
+        cultivationtype:548
+        cultivationtype:574
+    ) .
+
+# Disjoint AGIS subclasses of cultivationtype:77
+[] a owl:AllDisjointClasses ;
+    owl:members (
+        cultivationtype:556
+        cultivationtype:557
+    ) .
+
+# Disjoint AGIS subclasses of cultivationtype:535
+[] a owl:AllDisjointClasses ;
+    owl:members (
+        cultivationtype:575
+        cultivationtype:576
+        cultivationtype:577
+    ) .
+
+# Disjoint AGIS subclasses of cultivationtype:542
+[] a owl:AllDisjointClasses ;
+    owl:members (
+        cultivationtype:578
+        cultivationtype:579
+    ) .
+
+# Disjoint AGIS subclasses of cultivationtype:549
+[] a owl:AllDisjointClasses ;
+    owl:members (
+        cultivationtype:580
+        cultivationtype:581
+    ) .
+
+# Disjoint AGIS subclasses of cultivationtype:114
+[] a owl:AllDisjointClasses ;
+    owl:members (
+        cultivationtype:601
+        cultivationtype:602
+    ) .
+
+# Disjoint AGIS subclasses of cultivationtype:2
+[] a owl:AllDisjointClasses ;
+    owl:members (
+        cultivationtype:611
+        cultivationtype:612
+        cultivationtype:613
+        cultivationtype:635
+        cultivationtype:694
+        cultivationtype:697
+        cultivationtype:698
+    ) .
+
+# Disjoint AGIS subclasses of cultivationtype:3
+[] a owl:AllDisjointClasses ;
+    owl:members (
+        cultivationtype:616
+        cultivationtype:617
+        cultivationtype:618
+        cultivationtype:693
+    ) .
+
+# Disjoint AGIS subclasses of cultivationtype:830
+[] a owl:AllDisjointClasses ;
+    owl:members (
+        cultivationtype:801
+        cultivationtype:802
+        cultivationtype:803
+        cultivationtype:806
+        cultivationtype:807
+        cultivationtype:808
+        cultivationtype:810
+        cultivationtype:847
+        cultivationtype:848
+    ) .
+
+# Disjoint AGIS subclasses of cultivationtype:470
+[] a owl:AllDisjointClasses ;
+    owl:members (
+        cultivationtype:804
+        cultivationtype:813
+        cultivationtype:814
+    ) .
+
+# Disjoint AGIS subclasses of cultivationtype:806
+[] a owl:AllDisjointClasses ;
+    owl:members (
+        cultivationtype:811
+        cultivationtype:812
+    ) .
+
+# Disjoint AGIS subclasses of cultivationtype:9
+[] a owl:AllDisjointClasses ;
+    owl:members (
+        cultivationtype:852
+        cultivationtype:857
+        cultivationtype:858
+    ) .
+
+# Disjoint AGIS subclasses of cultivationtype:10
+[] a owl:AllDisjointClasses ;
+    owl:members (
+        cultivationtype:895
+        cultivationtype:897
+        cultivationtype:898
+    ) .
+
+# Disjoint AGIS subclasses of cultivationtype:12
+[] a owl:AllDisjointClasses ;
+    owl:members (
+        cultivationtype:902
+        cultivationtype:903
+        cultivationtype:904
+        cultivationtype:905
+        cultivationtype:906
+        cultivationtype:907
+        cultivationtype:908
+        cultivationtype:909
+        cultivationtype:911
+        cultivationtype:998
+    ) .
+
+# Disjoint AGIS subclasses of cultivationtype:20
+[] a owl:AllDisjointClasses ;
+    owl:members (
+        cultivationtype:921
+        cultivationtype:922
+        cultivationtype:923
+        cultivationtype:924
+        cultivationtype:925
+        cultivationtype:926
+        cultivationtype:927
+        cultivationtype:928
+        cultivationtype:929
+    ) .
+
+# Disjoint AGIS subclasses of cultivationtype:13
+[] a owl:AllDisjointClasses ;
+    owl:members (
+        cultivationtype:930
+        cultivationtype:931
+        cultivationtype:933
+        cultivationtype:935
+        cultivationtype:936
+    ) .
