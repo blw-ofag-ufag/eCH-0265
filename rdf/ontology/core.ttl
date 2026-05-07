@@ -28,7 +28,10 @@ wikidata:Q16521 a owl:Class ;
 :CultivationType a owl:Class ;
     schema:name "Nutzungsart"@de,
         "Cultivation type"@en ;
-    schema:description "The cultivation type helps group (agronomically) similar instances of cultivations together. It is a union of crop definitions from direct payments crops, principles of fertilisation of agricultural crops in Switzerland (GRUD), crops in the Swiss registry of plant protection and others. The cultivation type is distinct from the botanical plant, because it is used to classifiy cultivations, not individual plants."@en .
+    rdfs:subClassOf owl:Class .
+
+:DeprecatedCultivationType a owl:Class ;
+    rdfs:subClassOf owl:DeprecatedClass .
 
 :Geometry a owl:Class ;
     schema:name "Geometrie"@de,

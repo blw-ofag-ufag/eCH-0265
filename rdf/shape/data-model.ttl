@@ -47,48 +47,104 @@ In this project, we propose a unified master data system for crops and crop-rela
 """@en .
 
 # ==============================================================================
-# MAIN ENTITIES
+# CULTIVATION TYPE
 # ==============================================================================
-
-shape:Cultivation a sh:NodeShape ;
-    rdfs:label "Cultivation"@en ;
-    sh:targetClass :Cultivation ;
-    rdfs:comment "Represents a specific, spatio-temporally bound agricultural event. It models a single cultivation cycle of a particular crop on a defined area with start and end dates. For example, 'the 2023 summer wheat cultivation on field X12B3', as distinct from the general concept of 'wheat cultivation'."@en ;
-    sh:order 1 ;
-    sh:property [
-        sh:order 1 ;
-        sh:name "Typ"@de,
-            "Type"@en ;
-        sh:path rdf:type ;
-        sh:node shape:CultivationType ;
-        sh:minCount 1 ;
-    ] .
 
 shape:CultivationType a sh:NodeShape ;
     rdfs:label "Cultivation type"@en ;
     rdfs:comment "This is the core class for the classification of 'cultivations', i.e. for crops. (Partial) translation of other crop types is possible via the hierarchy modelled with this class. For the general hierachy modelling, we use the [RDF schema (RDFS)](https://www.w3.org/TR/rdf-schema/) as well as the [Web Ontology Language (OWL)](https://www.w3.org/TR/owl-guide/)."@en ;
-    sh:targetClass :CultivationType ;
-    sh:order 2 ;
-    sh:property [
-        sh:name "Parent cultivation type"@en ;
+    sh:closed true ;
+    sh:targetClass :CultivationType, :DeprecatedCultivationType ;
+    sh:ignoredProperties ( rdf:type ) ;
+    # Require AT LEAST ONE of the following relationships:
+    # - a parent class (rdfs:subClassOf),
+    # - an intersection definition (owl:intersectionOf),
+    # - or being part of a parent's unionOf list (^owl:unionOf).
+    sh:or (
+        [ sh:property [ sh:path rdfs:subClassOf ; sh:minCount 1 ] ]
+        [ sh:property [ sh:path owl:intersectionOf ; sh:minCount 1 ] ]
+        [ sh:property [ 
+            sh:path (
+                [ sh:inversePath rdf:first ]
+                [ sh:zeroOrMorePath [ sh:inversePath rdf:rest ] ]
+                [ sh:inversePath owl:unionOf ]
+            ) ; 
+            sh:minCount 1 
+        ] ]
+    ) ;
+
+    # global property definitions
+    sh:property
+    [
         sh:order 1 ;
+        sh:path schema:name ;
+        sh:name "Name"@en, "Name"@de ;
+        sh:description "Name of this cultivation type."@en ;
+        sh:minCount 1 ;
+        sh:nodeKind sh:Literal ;
+        sh:datatype rdf:langString ;
+        sh:languageIn ( "de" "fr" "it" "en" ) ;
+        sh:uniqueLang true ;
+    ],
+    [
+        sh:order 2 ;
+        sh:path schema:alternateName ;
+        sh:nodeKind sh:Literal ;
+        sh:datatype rdf:langString ;
+    ],
+    [
+        sh:order 3 ;
+        sh:path schema:description ;
+        sh:name "Description"@en, "Beschreibung"@de ;
+        sh:description "Textual description of this cultivation type."@en ;
+        sh:nodeKind sh:Literal ;
+        sh:datatype rdf:langString ;
+        sh:languageIn ( "de" "fr" "it" "en" ) ;
+        sh:uniqueLang true ;
+    ],
+    [
+        sh:order 4 ;
+        sh:name "Image"@en, "Bild"@de ;
+        sh:path schema:image ;
+        sh:nodeKind sh:IRI ;
+    ] ,
+    [
+        sh:order 5 ;
+        sh:name "Parent cultivation type"@en ;
         sh:path rdfs:subClassOf ;
+        sh:nodeKind sh:IRI ;
+    ],
+    [
+        sh:order 6 ;
+        sh:path owl:intersectionOf ;
+    ],
+    [
+        sh:order 7 ;
+        sh:path owl:unionOf ;
+    ],
+    [
+        sh:order 8 ;
+        sh:path owl:disjointWith ;
+        sh:nodeKind sh:IRI ;
         sh:node shape:CultivationType ;
     ],
     [
-        sh:name "Name"@en, "Name"@de ;
-        sh:description "Name of this cultivation type."@en ;
-        sh:path schema:name ;
+        sh:order 9 ;
+        sh:path :botanicalPlant ;
+        sh:nodeKind sh:IRI ;
+        sh:maxCount 1 ;
     ],
     [
-        sh:name "Description"@en, "Beschreibung"@de ;
-        sh:description "Textual description of this cultivation type."@en ;
-        sh:path schema:description ;
+        sh:order 10 ;
+        sh:name "Management intensity"@en ;
+        sh:path :managementIntensity ;
+        sh:nodeKind sh:IRI ;
+        sh:maxCount 1 ;
     ] .
 
-# --------------------------------
-# AGIS
-# --------------------------------
+# ==============================================================================
+# Direct payment crop (AGIS)
+# ==============================================================================
 
 shape:DirectPaymentCrop a sh:NodeShape ;
     rdfs:label "Direct payment crop"@en ;
@@ -155,12 +211,12 @@ shape:DirectPaymentCrop a sh:NodeShape ;
             ) ;
         ] .
 
-# -------------------------------
-# NAEBI (Suisse Bilanz)
-# -------------------------------
+# ==============================================================================
+# Nutrient Balance Crop (Suisse Bilanz, Näbi, Naebi)
+# ==============================================================================
 
 shape:NutrientBalanceCrop a sh:NodeShape ;
-    rdfs:label "Suisse Balance crop"@en ;
+    rdfs:label "Nutrient Balance Crop"@en ;
     sh:closed true ;
     sh:ignoredProperties ( rdf:type ) ;
     sh:targetClass :NutrientBalanceCrop ;
@@ -263,9 +319,9 @@ shape:NutrientBalanceCrop a sh:NodeShape ;
             qudt:scaleType qudt:RatioScale ;
         ] .
 
-# -----------------------------------
-# PSM (Plant Protection / SRPPP)
-# -----------------------------------
+# ==============================================================================
+# Plant protection crop (from the Swiss registry of plant protection products)
+# ==============================================================================
 
 shape:PlantProtectionCrop a sh:NodeShape ;
     rdfs:label "Plant protection crop"@en ;
