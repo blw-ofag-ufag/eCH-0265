@@ -120,7 +120,6 @@ shape:DirectPaymentCrop a sh:NodeShape ;
             sh:order 3 ;
             schema:name "Kulturgruppe"@de ;
             sh:maxCount 1 ;
-            sh:minCount 1 ;
             sh:nodeKind sh:IRI ;
             sh:path :cultivationGroup ;
             sh:node shape:CultivationType ;
