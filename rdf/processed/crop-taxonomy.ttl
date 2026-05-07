@@ -257,7 +257,8 @@ cultivationtype:1025 a owl:Class ;
 
 cultivationtype:1026 a owl:Class ;
     rdfs:label "Silomais"@de ;
-    rdfs:subClassOf cultivationtype:521 .
+    rdfs:subClassOf cultivationtype:464,
+        cultivationtype:521 .
 
 cultivationtype:1027 a owl:Class ;
     rdfs:label "Eiweisserbsen"@de,
@@ -2732,7 +2733,6 @@ cultivationtype:305 a owl:Class ;
     rdfs:label "Futter- und Zuckerrüben"@de,
         "betteraves à sucre et fourragère"@fr,
         "Barbabietole da foraggio e da zucchero"@it ;
-    rdfs:subClassOf cultivationtype:17 ;
     owl:unionOf ( cultivationtype:522 cultivationtype:523 ) .
 
 cultivationtype:306 a owl:Class ;
@@ -2922,8 +2922,10 @@ cultivationtype:35 a owl:Class ;
     rdfs:label "Gewürz- und Medizinalkräuter"@de,
         "herbes aromatiques et médicinales"@fr,
         "Erbe aromatiche e medicinali"@it ;
-    schema:alternateName "Gewürz- und Medizinalpflanzen"@de ;
-    rdfs:subClassOf cultivationtype:22 ;
+    schema:alternateName "Gewürz- und Medizinalpflanzen"@de,
+        "Heil- und Gewürzpflanzen"@de ;
+    rdfs:subClassOf cultivationtype:22,
+        cultivationtype:465 ;
     owl:unionOf ( cultivationtype:553 cultivationtype:706 ) .
 
 cultivationtype:36 a owl:Class ;
@@ -2952,8 +2954,8 @@ cultivationtype:4 a owl:Class ;
         "Vignobles"@fr,
         "Vigna"@it ;
     schema:alternateName "Weinbau"@de ;
-    rdfs:subClassOf :Cultivation ;
-    owl:unionOf ( cultivationtype:701 cultivationtype:717 cultivationtype:735 ) .
+    rdfs:subClassOf cultivationtype:465 ;
+    owl:unionOf ( cultivationtype:701 cultivationtype:735 ) .
 
 cultivationtype:40 a owl:Class ;
     rdfs:label "Kürbisse mit geniessbarer Schale"@de,
@@ -3097,6 +3099,30 @@ cultivationtype:46 a owl:Class ;
     rdfs:subClassOf cultivationtype:145,
         cultivationtype:310 .
 
+cultivationtype:462 a owl:Class ;
+    rdfs:label "Diverse Kulturen"@de ;
+    rdfs:subClassOf cultivationtype:1 .
+
+cultivationtype:463 a owl:Class ;
+    rdfs:label "Grundfutterproduktion"@de ;
+    rdfs:comment "Als Grundfutter gelten: (a) Futter von Grünflächen und Streueflächen: frisch, siliert oder getrocknet sowie Stroh; (b) als Futtermittel angebaute Ackerkulturen, bei denen die ganze Pflanze geerntet wird: frisch, siliert oder getrocknet, ohne Maiskolbenschrot; (c) Chicorée-Wurzeln; (d) Rübenblätter und frische Rübennass- und Rübenpressschnitzel; (e) frisches Obst; (f) unverarbeitete Kartoffeln, einschliesslich Sortierabgang; und (g) Abgänge und nicht getrocknete oder konzentrierte Nebenprodukte aus der Kartoffel-, Obst- und Gemüseverarbeitung."@de ;
+    rdfs:subClassOf :Cultivation .
+
+cultivationtype:464 a owl:Class ;
+    rdfs:label "Landwirtschaftliche Nutzfläche"@de ;
+    rdfs:comment "Als landwirtschaftliche Nutzfläche (LN) gilt die einem Betrieb zugeordnete, für den Pflanzenbau genutzte Fläche ohne die Sömmerungsfläche, die dem Bewirtschafter oder der Bewirtschafterin ganzjährig zur Verfügung steht und die ausschliesslich vom Betrieb aus bewirtschaftet wird."@de ;
+    rdfs:subClassOf :Cultivation .
+
+cultivationtype:465 a owl:Class ;
+    rdfs:label "Spezialkulturen"@de ;
+    rdfs:comment "Als Spezialkulturen gelten Reben, Hopfen, Obstanlagen, Beeren, Gemüse ausser Konservengemüse, Tabak, Heil- und Gewürzpflanzen sowie Pilze."@de ;
+    rdfs:subClassOf cultivationtype:464 .
+
+cultivationtype:466 a owl:Class ;
+    rdfs:label "Getreide und Pseudogetreide"@de ;
+    rdfs:subClassOf cultivationtype:1 ;
+    owl:unionOf ( cultivationtype:14 cultivationtype:16 ) .
+
 cultivationtype:467 a owl:Class ;
     rdfs:label "Dauerkulturen"@de ;
     rdfs:subClassOf :Cultivation ;
@@ -3124,7 +3150,7 @@ cultivationtype:470 a owl:Class ;
 
 cultivationtype:471 a owl:Class ;
     rdfs:label "Beerenbau"@de ;
-    rdfs:subClassOf :Cultivation ;
+    rdfs:subClassOf cultivationtype:465 ;
     owl:unionOf ( cultivationtype:470 cultivationtype:551 cultivationtype:469 ) .
 
 cultivationtype:472 a owl:Class ;
@@ -3255,7 +3281,7 @@ cultivationtype:5 a owl:Class ;
         "Frutteti"@it ;
     schema:alternateName "Allgemeiner Obstbau"@de,
         "Obstbau"@de ;
-    rdfs:subClassOf :Cultivation .
+    rdfs:subClassOf cultivationtype:465 .
 
 cultivationtype:500 a owl:Class ;
     rdfs:label "Emmer"@de,
@@ -3514,7 +3540,8 @@ cultivationtype:541 a owl:Class ;
     rdfs:label "Tabak"@de,
         "Tabac"@fr,
         "Tabacco"@it ;
-    rdfs:subClassOf cultivationtype:1 .
+    rdfs:subClassOf cultivationtype:1,
+        cultivationtype:465 .
 
 cultivationtype:542 a owl:Class ;
     rdfs:label "Hirse"@de,
@@ -3540,7 +3567,8 @@ cultivationtype:545 a owl:Class ;
     rdfs:label "Einjährige Freilandgemüse, ohne Konservengemüse"@de,
         "Cultures maraîchères de plein champ annuelles (sauf les légumes de conserve)"@fr,
         "Ortaggi annuali di pieno campo (esclusi quelli destinati alla conservazione)"@it ;
-    rdfs:subClassOf cultivationtype:24 .
+    rdfs:subClassOf cultivationtype:24,
+        cultivationtype:465 .
 
 cultivationtype:546 a owl:Class ;
     rdfs:label "Freiland-Konservengemüse"@de,
@@ -3681,7 +3709,7 @@ cultivationtype:570 a owl:Class ;
 
 cultivationtype:572 a owl:Class ;
     rdfs:label "Nützlingsstreifen auf offener Ackerfläche"@de,
-        "Bandes pour organismes utiles sur les terres ouvertes"@fr,
+        "avec des céréales ou de la caméline, au moins 30 % de lentilles lors de la récolte (pour la production de grains)"@fr,
         "Strisce per organismi utili sulla superficie coltiva aperta"@it ;
     rdfs:subClassOf cultivationtype:1 ;
     :managementIntensity intensity:Extensive .
@@ -4009,6 +4037,7 @@ cultivationtype:7 a owl:Class ;
     rdfs:label "Geschützter Anbau"@de,
         "Cultures protégées"@fr,
         "Colture protette tutto l’anno"@it ;
+    schema:alternateName "Geschützte Kulturen"@de ;
     rdfs:subClassOf :Cultivation .
 
 cultivationtype:701 a owl:Class ;
@@ -4056,7 +4085,8 @@ cultivationtype:708 a owl:Class ;
     rdfs:label "Hopfen"@de,
         "Houblon"@fr,
         "Luppolo"@it ;
-    rdfs:subClassOf cultivationtype:750 .
+    rdfs:subClassOf cultivationtype:465,
+        cultivationtype:750 .
 
 cultivationtype:709 a owl:Class ;
     rdfs:label "Rhabarber"@de,
@@ -4247,13 +4277,15 @@ cultivationtype:801 a owl:Class ;
     rdfs:label "Gemüsekulturen in Gewächshäusern mit festem Fundament"@de,
         "Cultures maraîchères sous abri avec fondations permanentes"@fr,
         "Colture orticole in serre con fondamenta fisse"@it ;
-    rdfs:subClassOf cultivationtype:830 .
+    rdfs:subClassOf cultivationtype:465,
+        cultivationtype:830 .
 
 cultivationtype:802 a owl:Class ;
     rdfs:label "Übrige Spezialkulturen in Gewächshäusern mit festem Fundament"@de,
         "Autres cultures spéciales sous abri avec fondations permanentes"@fr,
         "Altre colture speciali in serre con fondamenta fisse"@it ;
-    rdfs:subClassOf cultivationtype:830 .
+    rdfs:subClassOf cultivationtype:465,
+        cultivationtype:830 .
 
 cultivationtype:803 a owl:Class ;
     rdfs:label "Gärtnerische Kulturen in Gewächshäusern mit festem Fundament"@de,
@@ -4271,13 +4303,15 @@ cultivationtype:806 a owl:Class ;
     rdfs:label "Gemüsekulturen in geschütztem Anbau ohne festes Fundament"@de,
         "Cultures maraîchères sous abri sans fondations permanentes"@fr,
         "Colture orticole in serre senza fondamenta fisse"@it ;
-    rdfs:subClassOf cultivationtype:830 .
+    rdfs:subClassOf cultivationtype:465,
+        cultivationtype:830 .
 
 cultivationtype:807 a owl:Class ;
     rdfs:label "Übrige Spezialkulturen in geschütztem Anbau ohne festes Fundament"@de,
         "Autres cultures spéciales sous abri sans fondations permanentes"@fr,
         "Altre colture speciali in serre senza fondamenta fisse"@it ;
-    rdfs:subClassOf cultivationtype:830 .
+    rdfs:subClassOf cultivationtype:465,
+        cultivationtype:830 .
 
 cultivationtype:808 a owl:Class ;
     rdfs:label "Gärtnerische Kulturen in geschütztem Anbau ohne festes Fundament"@de,
@@ -4301,13 +4335,15 @@ cultivationtype:811 a owl:Class ;
     rdfs:label "Gemüsekulturen in geschütztem Anbau ohne festes Fundament; im gewachsenen Boden"@de,
         "Cultures maraîchères sous abri sans fondations permanentes; sur sol naturel"@fr,
         "Colture orticole coltivate al coperto senza fondamenta fisse; nel terreno naturale"@it ;
-    rdfs:subClassOf cultivationtype:806 .
+    rdfs:subClassOf cultivationtype:465,
+        cultivationtype:806 .
 
 cultivationtype:812 a owl:Class ;
     rdfs:label "Gemüsekulturen in geschütztem Anbau ohne festes Fundament; auf Pflanztischen oder -gestellen"@de,
         "Cultures maraîchères sous abri sans fondations permanentes; sur des tables de plantation ou des étagères"@fr,
         "Colture orticole coltivate al coperto senza fondamenta fisse; su tavole di piantagione o rastrelliere"@it ;
-    rdfs:subClassOf cultivationtype:806 ;
+    rdfs:subClassOf cultivationtype:465,
+        cultivationtype:806 ;
     owl:disjointWith cultivationtype:811 .
 
 cultivationtype:813 a owl:Class ;

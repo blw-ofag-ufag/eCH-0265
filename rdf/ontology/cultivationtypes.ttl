@@ -1608,7 +1608,7 @@ cultivationtype:305 a owl:Class ;
     schema:name "Futter- und Zuckerrüben"@de,
         "betteraves à sucre et fourragère"@fr,
         "Barbabietole da foraggio e da zucchero"@it ;
-    owl:intersectionOf ( cultivationtype:522 cultivationtype:523 ) .
+    owl:unionOf ( cultivationtype:522 cultivationtype:523 ) .
 
 cultivationtype:306 a owl:Class ;
     schema:name "Wurzelpetersilie"@de,
