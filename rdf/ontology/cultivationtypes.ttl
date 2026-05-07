@@ -1872,6 +1872,25 @@ cultivationtype:414 a owl:Class ;
     schema:alternateName "Ökologischen Ausgleichsflächen"@de ;
     rdfs:subClassOf :Cultivation .
 
+cultivationtype:462 a owl:Class ;
+    schema:name "Diverse Kulturen"@de ;
+    rdfs:subClassOf cultivationtype:1 .
+
+cultivationtype:463 a owl:Class ;
+    schema:name "Grundfutterproduktion"@de ;
+    schema:description "Als Grundfutter gelten: (a) Futter von Grünflächen und Streueflächen: frisch, siliert oder getrocknet sowie Stroh; (b) als Futtermittel angebaute Ackerkulturen, bei denen die ganze Pflanze geerntet wird: frisch, siliert oder getrocknet, ohne Maiskolbenschrot; (c) Chicorée-Wurzeln; (d) Rübenblätter und frische Rübennass- und Rübenpressschnitzel; (e) frisches Obst; (f) unverarbeitete Kartoffeln, einschliesslich Sortierabgang; und (g) Abgänge und nicht getrocknete oder konzentrierte Nebenprodukte aus der Kartoffel-, Obst- und Gemüseverarbeitung."@de ;
+    rdfs:subClassOf :Cultivation .
+
+cultivationtype:464 a owl:Class ;
+    schema:name "Landwirtschaftliche Nutzfläche"@de ;
+    schema:description "Als landwirtschaftliche Nutzfläche (LN) gilt die einem Betrieb zugeordnete, für den Pflanzenbau genutzte Fläche ohne die Sömmerungsfläche, die dem Bewirtschafter oder der Bewirtschafterin ganzjährig zur Verfügung steht und die ausschliesslich vom Betrieb aus bewirtschaftet wird."@de ;
+    rdfs:subClassOf :Cultivation .
+
+cultivationtype:465 a owl:Class ;
+    schema:name "Spezialkulturen"@de ;
+    schema:description "Als Spezialkulturen gelten Reben, Hopfen, Obstanlagen, Beeren, Gemüse ausser Konservengemüse, Tabak, Heil- und Gewürzpflanzen sowie Pilze."@de ;
+    rdfs:subClassOf cultivationtype:464 .
+
 cultivationtype:467 a owl:Class ;
     schema:name "Dauerkulturen"@de ;
     rdfs:subClassOf :Cultivation ;
