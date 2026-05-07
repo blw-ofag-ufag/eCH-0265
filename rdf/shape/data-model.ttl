@@ -38,7 +38,7 @@ shape: a owl:Ontology ;
     dcterms:creator "Damian Oswald, Lea Stauber, Marc Beringer, Christian Wilda" ;
     dcterms:title "RDF master and reference data about crops"@en ;
     dcterms:created "2026-03-05"^^xsd:date ;
-    dcterms:modified "2026-04-14"^^xsd:date ;
+    dcterms:modified "2026-05-04"^^xsd:date ;
     dcterms:description
 """
 This project addresses the challenge of fragmented agricultural crop data within the Swiss federal administration, where essential systems all use separate, non-harmonized crop terminologies.
@@ -86,63 +86,84 @@ shape:CultivationType a sh:NodeShape ;
         sh:path schema:description ;
     ] .
 
+# --------------------------------
+# AGIS
+# --------------------------------
+
 shape:DirectPaymentCrop a sh:NodeShape ;
     rdfs:label "Direct payment crop"@en ;
     rdfs:comment "A classification scheme built for the Swiss direct payment system"@en ;
     sh:closed true ;
-    sh:targetClass cube:Observation ;
+    sh:ignoredProperties ( rdf:type ) ;
+    sh:targetClass :DirectPaymentCrop ;
     sh:property
         [
             sh:order 1 ;
             a cube:KeyDimension ;
             schema:name "Identifikator"@de ;
-            schema:description "Der LNF-Code, auch Kulturcode genannt, ist der allgemein gebräuchliche Identifikator für Direktzahlungskulturen in der Schweiz. Ein LNF-Code steht immer für dieselbe Kultur. Veraltete Codes werden nicht mehr gebraucht."@de ;
+            schema:description "Der LNF-Code, auch Kulturcode genannt, ist der allgemein gebräuchliche Identifikator für Direktzahlungskulturen in der Schweiz."@de ;
             sh:maxCount 1 ;
             sh:minCount 1 ;
             sh:path schema:identifier ;
+            sh:nodeKind sh:Literal ;
+            sh:datatype xsd:ID ;
         ],
         [
             sh:order 2 ;
+            schema:name "Bezeichnung"@de, "Name"@en ;
+            sh:minCount 1 ;
+            sh:path schema:name ;
+            sh:nodeKind sh:Literal ;
+            sh:datatype rdf:langString ;
+        ],
+        [
+            sh:order 3 ;
             schema:name "Kulturgruppe"@de ;
             sh:maxCount 1 ;
-            sh:minCount 1 ;
             sh:nodeKind sh:IRI ;
             sh:path :cultivationGroup ;
             sh:node shape:CultivationType ;
         ],
         [
-            sh:order 3 ;
+            sh:order 4 ;
             schema:name "Kultur"@de ;
             sh:maxCount 1 ;
             sh:minCount 1 ;
             sh:nodeKind sh:IRI ;
             sh:path :cultivationType ;
-            sh:node shape:CultivationType ;
-        ],
-        [
-            sh:order 4 ;
-            schema:name "Gültig von"@de ;
-            schema:description "Ab welchem Jahr wurde diese Direktzahlungskultur offiziell verwendet?"@de ;
-            sh:maxCount 1 ;
-            sh:minInclusive "1999"^^xsd:gYear ;
-            sh:nodeKind sh:Literal ;
-            sh:datatype xsd:gYear ;
-            sh:path schema:validFrom ;
+            sh:node shape:CultivationType
         ],
         [
             sh:order 5 ;
+            schema:name "Gültig von"@de ;
+            schema:description "Ab welchem Jahr wurde diese Direktzahlungskultur offiziell verwendet?"@de ;
+            sh:maxCount 1 ;
+            sh:minInclusive 1999 ;
+            sh:nodeKind sh:Literal ;
+            sh:datatype xsd:integer ;
+            sh:path schema:validFrom ;
+        ],
+        [
+            sh:order 6 ;
             schema:name "Gültig bis"@de ;
             schema:description "Bis in welchem Jahr wurde diese Direktzahlungskultur offiziell verwendet?"@de ;
             sh:maxCount 1 ;
-            sh:nodeKind sh:Literal ;
-            sh:datatype xsd:gYear ;
-            sh:path schema:validTo
+            sh:path schema:validTo ;
+            sh:or (
+                [ sh:datatype xsd:integer ; sh:nodeKind sh:Literal ]
+                [ sh:hasValue cube:Undefined ]
+            ) ;
         ] .
 
-shape:NaebiCrop a sh:NodeShape ;
+# -------------------------------
+# NAEBI (Suisse Bilanz)
+# -------------------------------
+
+shape:NutrientBalanceCrop a sh:NodeShape ;
     rdfs:label "Suisse Balance crop"@en ;
     sh:closed true ;
-    sh:targetClass cube:Observation ;
+    sh:ignoredProperties ( rdf:type ) ;
+    sh:targetClass :NutrientBalanceCrop ;
     sh:property
         [
             sh:order 1 ;
@@ -151,18 +172,39 @@ shape:NaebiCrop a sh:NodeShape ;
             sh:maxCount 1 ;
             sh:minCount 1 ;
             sh:path schema:identifier ;
+            sh:nodeKind sh:Literal ;
+            sh:datatype xsd:string ;
         ],
         [
             sh:order 2 ;
-            schema:name "Kulturkategorie"@de ;
+            schema:name "Bezeichnung"@de,
+                "Name"@en ;
             sh:maxCount 1 ;
             sh:minCount 1 ;
-            sh:nodeKind sh:IRI ;
-            sh:path :cultivationCategory ;
-            sh:node shape:CultivationType ;
+            sh:path schema:name ;
+            sh:nodeKind sh:Literal ;
+            sh:datatype rdf:langString ;
         ],
         [
             sh:order 3 ;
+            schema:name "Kulturkategorie"@de ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:nodeKind sh:Literal ;
+            sh:datatype xsd:string ;
+            sh:path :cultivationCategory ;
+        ],
+        [
+            sh:order 4 ;
+            schema:name "Kultur-Unterkategorie"@de ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:nodeKind sh:Literal ;
+            sh:datatype xsd:string ;
+            sh:path :cultivationSubCategory ;
+        ],
+        [
+            sh:order 5 ;
             schema:name "Kultur"@de,
                 "Crop"@en ;
             a cube:KeyDimension ;
@@ -174,24 +216,11 @@ shape:NaebiCrop a sh:NodeShape ;
         ],
         [
             a cube:MeasureDimension ;
-            sh:order 4 ;
-            schema:name "Ertrag Hauptprodukt"@de ;
-            schema:description "Geerntet, mit einem bei der Ernte üblichen Wassergehalt."@de ;
-            sh:minCount 1 ;
-            sh:maxCount 1 ;
-            sh:path :yield ;
-            sh:nodeKind sh:Literal ;
-            sh:datatype xsd:decimal ;
-            qudt:hasUnit unit:EA ;
-        ],
-        [
-            a cube:MeasureDimension ;
-            sh:order 5 ;
+            sh:order 6 ;
             schema:name "N"@de ;
             schema:description "Stickstoff, kg/ha"@de ;
-            sh:minCount 1 ;
             sh:maxCount 1 ;
-            sh:path :nitrogen ;
+            sh:path :N2 ;
             sh:nodeKind sh:Literal ;
             sh:datatype xsd:decimal ;
             qudt:hasUnit unit:KiloGM-PER-HA ;
@@ -199,25 +228,11 @@ shape:NaebiCrop a sh:NodeShape ;
         ],
         [
             a cube:MeasureDimension ;
-            sh:order 6 ;
+            sh:order 7 ;
             schema:name "P₂O₅"@de ;
             schema:description "Phosphor, kg/dt"@de ;
-            sh:minCount 1 ;
             sh:maxCount 1 ;
-            sh:path :phosphorus ;
-            sh:nodeKind sh:Literal ;
-            sh:datatype xsd:decimal ;
-            qudt:hasUnit unit:KiloGM-PER-DeciTONNE ;
-            qudt:scaleType qudt:RatioScale ;
-        ],
-        [
-            a cube:MeasureDimension ;
-            sh:order 7 ;
-            schema:name "K₂O"@de ;
-            schema:description "Kalium, kg/dt"@de ;
-            sh:minCount 1 ;
-            sh:maxCount 1 ;
-            sh:path :potassium ;
+            sh:path :P2O5 ;
             sh:nodeKind sh:Literal ;
             sh:datatype xsd:decimal ;
             qudt:hasUnit unit:KiloGM-PER-DeciTONNE ;
@@ -226,25 +241,64 @@ shape:NaebiCrop a sh:NodeShape ;
         [
             a cube:MeasureDimension ;
             sh:order 8 ;
-            schema:name "Mg"@de ;
-            schema:description "Mangan, kg/dt"@de ;
-            sh:minCount 1 ;
+            schema:name "K₂O"@de ;
+            schema:description "Kalium, kg/dt"@de ;
             sh:maxCount 1 ;
-            sh:path :manganese ;
+            sh:path :K2O ;
+            sh:nodeKind sh:Literal ;
+            sh:datatype xsd:decimal ;
+            qudt:hasUnit unit:KiloGM-PER-DeciTONNE ;
+            qudt:scaleType qudt:RatioScale ;
+        ],
+        [
+            a cube:MeasureDimension ;
+            sh:order 9 ;
+            schema:name "Mg"@de ;
+            schema:description "Magnesium, kg/dt"@de ;
+            sh:maxCount 1 ;
+            sh:path :Mg ;
             sh:nodeKind sh:Literal ;
             sh:datatype xsd:decimal ;
             qudt:hasUnit unit:KiloGM-PER-DeciTONNE ;
             qudt:scaleType qudt:RatioScale ;
         ] .
 
+# -----------------------------------
+# PSM (Plant Protection / SRPPP)
+# -----------------------------------
+
 shape:PlantProtectionCrop a sh:NodeShape ;
     rdfs:label "Plant protection crop"@en ;
     rdfs:comment "Crop of the Swiss registry of plant protection products"@en ;
     sh:closed true ;
-    sh:targetClass cube:Observation ;
+    sh:ignoredProperties ( rdf:type ) ;
+    sh:targetClass :PlantProtectionCrop ;
     sh:property
         [
             sh:order 1 ;
+            a cube:KeyDimension ;
+            schema:name "Identifikator"@de ;
+            schema:description "Der Identifikator aus Infofito. Neu ist das eine UUID."@de ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:path schema:identifier ;
+            sh:nodeKind sh:Literal ;
+            sh:datatype xsd:ID ;
+            sh:pattern "^[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}$" ;
+        ],
+        [
+            sh:order 2 ;
+            schema:name "Name"@de ;
+            schema:description "Der in Infofito eingetragene Name dieser Kultur"@de ;
+            sh:maxCount 4 ;
+            sh:minCount 2 ;
+            sh:languageIn ( "de" "fr" "it" "en" ) ;
+            sh:uniqueLang true ;
+            sh:nodeKind sh:Literal ;
+            sh:path schema:name ;
+        ],
+        [
+            sh:order 3 ;
             schema:name "Kultur"@de ;
             sh:maxCount 1 ;
             sh:minCount 1 ;
@@ -253,19 +307,21 @@ shape:PlantProtectionCrop a sh:NodeShape ;
             sh:node shape:CultivationType ;
         ],
         [
-            sh:order 2 ;
-            a cube:KeyDimension ;
-            schema:name "Identifikator"@de ;
-            schema:description "Der offizielle Identifikator für Kulturen im schweizerischen Pflanzenschutzmittelverzeichnis."@de ;
+            sh:order 4 ;
+            schema:name "Version"@de ;
             sh:maxCount 1 ;
             sh:minCount 1 ;
-            sh:path schema:identifier ;
+            sh:path schema:version ;
+            sh:nodeKind sh:Literal ;
+            sh:datatype xsd:integer ;
         ],
         [
-            sh:order 3 ;
+            sh:order 5 ;
             sh:name "Parent crop"@en ;
-            sh:path :parent ;
+            schema:name "Überkultur"@de ;
+            sh:path schema:isPartOf ;
             sh:minCount 0 ;
             sh:maxCount 2 ;
+            sh:nodeKind sh:IRI ;
             sh:node shape:PlantProtectionCrop ;
         ] .

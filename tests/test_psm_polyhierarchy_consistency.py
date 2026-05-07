@@ -6,6 +6,7 @@ from rdflib import Graph
 
 # Configuration
 RDF_FILE_PATH = "./rdf/data/srppp.ttl"
+CORE_RDF_PATH = "./rdf/ontology/core.ttl"
 CSV_URL = "https://raw.githubusercontent.com/BLV-OSAV-USAV/PSMV-RDF/refs/heads/main/data/raw/Code.csv"
 
 def test_culture_consistency_in_rdf():
@@ -52,6 +53,7 @@ def test_culture_consistency_in_rdf():
     g = Graph()
     try:
         g.parse(RDF_FILE_PATH, format="turtle")
+        g.parse(CORE_RDF_PATH, format="turtle")
     except Exception as e:
         pytest.fail(f"Failed to parse the local RDF file at {RDF_FILE_PATH}\nError: {e}")
 
@@ -65,12 +67,14 @@ def test_culture_consistency_in_rdf():
     sparql_hierarchy = """
     PREFIX cube: <https://cube.link/>
     PREFIX schema: <http://schema.org/>
+    PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
     SELECT ?id ?parent_id
     WHERE {
       [
-        a cube:Observation ;
+        a/rdfs:subClassOf* cube:Observation ;
         schema:identifier ?id ;
-        schema:isPartOf / schema:identifier ?parent_id ;
+        schema:isPartOf / schema:identifier ?parent_id
       ]
     }
     """
@@ -81,9 +85,11 @@ def test_culture_consistency_in_rdf():
     sparql_names = """
     PREFIX cube: <https://cube.link/>
     PREFIX schema: <http://schema.org/>
+    PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
     SELECT ?id ?name
     WHERE {
-      ?obs a cube:Observation ;
+      ?obs a/rdfs:subClassOf* cube:Observation ;
            schema:identifier ?id ;
            schema:name ?name .
     }

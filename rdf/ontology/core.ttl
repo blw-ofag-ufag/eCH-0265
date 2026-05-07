@@ -7,6 +7,7 @@
 @prefix schema: <http://schema.org/> .
 @prefix wikidata: <http://www.wikidata.org/entity/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix cube: <https://cube.link/> .
 
 wikidata:Q16521 a owl:Class ;
     schema:name "Biologisches Taxon"@de,
@@ -144,6 +145,18 @@ schema:isPartOf a owl:ObjectProperty ;
     schema:name "ist Teil von"@de,
         "is part of"@en ;
     owl:inverseOf schema:hasPart .
+
+:DirectPaymentCrop a owl:Class ;
+    schema:name "AGIS Direct Payment Crop"@en ;
+    rdfs:subClassOf cube:Observation .
+
+:NutrientBalanceCrop a owl:Class ;
+    schema:name "Nutrient Balance Crop (Suisse-Bilanz, NAEBI)"@en ;
+    rdfs:subClassOf cube:Observation .
+
+:PlantProtectionCrop a owl:Class ;
+    schema:name "Plant Protection Crop"@en ;
+    rdfs:subClassOf cube:Observation .
 
 :area a owl:ObjectProperty ;
     schema:name "Bedeckt Fläche"@de,
