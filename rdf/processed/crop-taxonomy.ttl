@@ -11,6 +11,93 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 [] a owl:AllDisjointClasses ;
+    owl:members ( cultivationtype:1 cultivationtype:10 cultivationtype:12 cultivationtype:13 cultivationtype:20 cultivationtype:21 cultivationtype:7 ) .
+
+[] a owl:AllDisjointClasses ;
+    owl:members ( cultivationtype:504 cultivationtype:505 cultivationtype:509 cultivationtype:514 cultivationtype:515 cultivationtype:542 cultivationtype:543 cultivationtype:549 ) .
+
+[] a owl:AllDisjointClasses ;
+    owl:members ( cultivationtype:506 cultivationtype:515 cultivationtype:569 cultivationtype:570 ) .
+
+[] a owl:AllDisjointClasses ;
+    owl:members ( cultivationtype:508 cultivationtype:519 cultivationtype:521 ) .
+
+[] a owl:AllDisjointClasses ;
+    owl:members ( cultivationtype:510 cultivationtype:511 cultivationtype:516 ) .
+
+[] a owl:AllDisjointClasses ;
+    owl:members ( cultivationtype:520 cultivationtype:529 ) .
+
+[] a owl:AllDisjointClasses ;
+    owl:members ( cultivationtype:522 cultivationtype:523 cultivationtype:547 ) .
+
+[] a owl:AllDisjointClasses ;
+    owl:members ( cultivationtype:526 cultivationtype:590 ) .
+
+[] a owl:AllDisjointClasses ;
+    owl:members ( cultivationtype:527 cultivationtype:591 ) .
+
+[] a owl:AllDisjointClasses ;
+    owl:members ( cultivationtype:528 cultivationtype:536 cultivationtype:537 cultivationtype:538 cultivationtype:540 cultivationtype:568 cultivationtype:631 ) .
+
+[] a owl:AllDisjointClasses ;
+    owl:members ( cultivationtype:531 cultivationtype:592 ) .
+
+[] a owl:AllDisjointClasses ;
+    owl:members ( cultivationtype:534 cultivationtype:535 cultivationtype:541 cultivationtype:544 cultivationtype:551 cultivationtype:552 cultivationtype:554 cultivationtype:555 cultivationtype:559 cultivationtype:566 cultivationtype:567 cultivationtype:572 cultivationtype:573 cultivationtype:594 cultivationtype:595 cultivationtype:597 cultivationtype:598 cultivationtype:601 cultivationtype:602 cultivationtype:632 ) .
+
+[] a owl:AllDisjointClasses ;
+    owl:members ( cultivationtype:545 cultivationtype:546 ) .
+
+[] a owl:AllDisjointClasses ;
+    owl:members ( cultivationtype:548 cultivationtype:574 ) .
+
+[] a owl:AllDisjointClasses ;
+    owl:members ( cultivationtype:556 cultivationtype:557 ) .
+
+[] a owl:AllDisjointClasses ;
+    owl:members ( cultivationtype:575 cultivationtype:576 cultivationtype:577 ) .
+
+[] a owl:AllDisjointClasses ;
+    owl:members ( cultivationtype:578 cultivationtype:579 ) .
+
+[] a owl:AllDisjointClasses ;
+    owl:members ( cultivationtype:580 cultivationtype:581 ) .
+
+[] a owl:AllDisjointClasses ;
+    owl:members ( cultivationtype:601 cultivationtype:602 ) .
+
+[] a owl:AllDisjointClasses ;
+    owl:members ( cultivationtype:611 cultivationtype:612 cultivationtype:613 cultivationtype:635 cultivationtype:694 cultivationtype:697 cultivationtype:698 ) .
+
+[] a owl:AllDisjointClasses ;
+    owl:members ( cultivationtype:616 cultivationtype:617 cultivationtype:618 cultivationtype:693 ) .
+
+[] a owl:AllDisjointClasses ;
+    owl:members ( cultivationtype:801 cultivationtype:802 cultivationtype:803 cultivationtype:806 cultivationtype:807 cultivationtype:808 cultivationtype:810 cultivationtype:847 cultivationtype:848 ) .
+
+[] a owl:AllDisjointClasses ;
+    owl:members ( cultivationtype:804 cultivationtype:813 cultivationtype:814 ) .
+
+[] a owl:AllDisjointClasses ;
+    owl:members ( cultivationtype:811 cultivationtype:812 ) .
+
+[] a owl:AllDisjointClasses ;
+    owl:members ( cultivationtype:852 cultivationtype:857 cultivationtype:858 ) .
+
+[] a owl:AllDisjointClasses ;
+    owl:members ( cultivationtype:895 cultivationtype:897 cultivationtype:898 ) .
+
+[] a owl:AllDisjointClasses ;
+    owl:members ( cultivationtype:902 cultivationtype:903 cultivationtype:904 cultivationtype:905 cultivationtype:906 cultivationtype:907 cultivationtype:908 cultivationtype:909 cultivationtype:911 cultivationtype:998 ) .
+
+[] a owl:AllDisjointClasses ;
+    owl:members ( cultivationtype:921 cultivationtype:922 cultivationtype:923 cultivationtype:924 cultivationtype:925 cultivationtype:926 cultivationtype:927 cultivationtype:928 cultivationtype:929 ) .
+
+[] a owl:AllDisjointClasses ;
+    owl:members ( cultivationtype:930 cultivationtype:931 cultivationtype:933 cultivationtype:935 cultivationtype:936 ) .
+
+[] a owl:AllDisjointClasses ;
     owl:members ( cultivationtype:1 cultivationtype:4 cultivationtype:5 cultivationtype:6 cultivationtype:7 cultivationtype:8 cultivationtype:9 cultivationtype:10 cultivationtype:12 cultivationtype:13 cultivationtype:20 cultivationtype:21 ) .
 
 [] a owl:AllDisjointClasses ;
@@ -1364,7 +1451,7 @@ cultivationtype:1224 a owl:Class ;
 
 cultivationtype:1225 a owl:Class ;
     rdfs:label "Bohnen, Busch- Handpflück-"@de,
-        "Beans, bushnd-picked"@en,
+        "Beans, bush or hand-picked"@en,
         "Haricots nains, cueillis à la main"@fr,
         "Fagioli nani, raccolti a mano"@it ;
     rdfs:subClassOf cultivationtype:476 .
@@ -2645,7 +2732,8 @@ cultivationtype:305 a owl:Class ;
     rdfs:label "Futter- und Zuckerrüben"@de,
         "betteraves à sucre et fourragère"@fr,
         "Barbabietole da foraggio e da zucchero"@it ;
-    owl:intersectionOf ( cultivationtype:522 cultivationtype:523 ) .
+    rdfs:subClassOf cultivationtype:17 ;
+    owl:unionOf ( cultivationtype:522 cultivationtype:523 ) .
 
 cultivationtype:306 a owl:Class ;
     rdfs:label "Wurzelpetersilie"@de,
@@ -2865,7 +2953,7 @@ cultivationtype:4 a owl:Class ;
         "Vigna"@it ;
     schema:alternateName "Weinbau"@de ;
     rdfs:subClassOf :Cultivation ;
-    owl:unionOf ( cultivationtype:701 cultivationtype:735 ) .
+    owl:unionOf ( cultivationtype:701 cultivationtype:717 cultivationtype:735 ) .
 
 cultivationtype:40 a owl:Class ;
     rdfs:label "Kürbisse mit geniessbarer Schale"@de,
@@ -2978,7 +3066,8 @@ cultivationtype:413 a owl:Class ;
         "Weisskabis"@de-CH,
         "Chou cabus"@fr,
         "Cappuccio bianco"@it,
-        "Cavolo bianco"@it ;
+        "Cavolo bianco"@it,
+        "Wittekool"@nl ;
     schema:image <https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/Weisskohlfeld.jpg/1280px-Weisskohlfeld.jpg> ;
     rdfs:comment "Anbau von Weisskohl, in der Regel für den menschlichen Verzehr."@de ;
     rdfs:subClassOf cultivationtype:81 ;
@@ -3592,7 +3681,7 @@ cultivationtype:570 a owl:Class ;
 
 cultivationtype:572 a owl:Class ;
     rdfs:label "Nützlingsstreifen auf offener Ackerfläche"@de,
-        "avec des céréales ou de la caméline, au moins 30 % de lentilles lors de la récolte (pour la production de grains)"@fr,
+        "Bandes pour organismes utiles sur les terres ouvertes"@fr,
         "Strisce per organismi utili sulla superficie coltiva aperta"@it ;
     rdfs:subClassOf cultivationtype:1 ;
     :managementIntensity intensity:Extensive .
@@ -4694,14 +4783,15 @@ cultivationtype:shape a sh:NodeShape ;
                         sh:path rdfs:subClassOf ] ] [ sh:property [ sh:minCount 1 ;
                         sh:path owl:intersectionOf ] ] [ sh:property [ sh:minCount 1 ;
                         sh:path ( [ sh:inversePath rdf:first ] [ sh:zeroOrMorePath [ sh:inversePath rdf:rest ] ] [ sh:inversePath owl:unionOf ] ) ] ] ) ;
-    sh:property [ sh:datatype rdf:langString ;
+    sh:property [ sh:nodeKind sh:IRI ;
+            sh:path schema:image ],
+        [ sh:datatype rdf:langString ;
             sh:languageIn ( "de" "fr" "it" "en" ) ;
             sh:minCount 1 ;
             sh:nodeKind sh:Literal ;
             sh:path schema:name ;
             sh:uniqueLang true ],
         [ sh:datatype rdf:langString ;
-            sh:languageIn ( "de" "fr" "it" "en" ) ;
             sh:nodeKind sh:Literal ;
             sh:path schema:alternateName ],
         [ sh:datatype rdf:langString ;
