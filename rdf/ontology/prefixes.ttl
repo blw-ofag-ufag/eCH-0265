@@ -1,3 +1,8 @@
+# ==============================================================================
+# PREFIXES USED FOR THIS PROJECT
+# (Try to keep all the QNames used in this project in this file)
+# ==============================================================================
+
 # Project-specific namespaces/qnames
 @prefix :                <https://agriculture.ld.admin.ch/crops/> .
 @prefix psm:             <https://agriculture.ld.admin.ch/crops/psm/1/> .
@@ -16,12 +21,15 @@
 # Globally used namespaces/qnames
 @prefix dcat:            <http://www.w3.org/ns/dcat#> .
 @prefix dcterms:         <http://purl.org/dc/terms/> .
+@prefix owl:             <http://www.w3.org/2002/07/owl#> .
 @prefix qudt:            <http://qudt.org/schema/qudt/> .
 @prefix rdf:             <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:            <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema:          <http://schema.org/> .
 @prefix sh:              <http://www.w3.org/ns/shacl#> .
 @prefix vcard:           <http://www.w3.org/2006/vcard/ns#> .
 @prefix void:            <http://rdfs.org/ns/void#> .
+@prefix wikidata:        <http://www.wikidata.org/entity/> .
 @prefix xsd:             <http://www.w3.org/2001/XMLSchema#> .
 @prefix frequency:       <http://publications.europe.eu/resource/authority/frequency> .
 @prefix status:          <https://ld.admin.ch/vocabulary/CreativeWorkStatus/> .

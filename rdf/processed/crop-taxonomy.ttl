@@ -4806,3 +4806,15 @@ cultivationtype:716 a :DeprecatedCultivationType ;
         "Selve curate di castagni e noci"@it ;
     rdfs:subClassOf :Cultivation .
 
+intensity:Intensive rdfs:label "intensiv"@de,
+        "Intensive"@en .
+
+intensity:Low rdfs:label "wenig intensiv"@de,
+        "Low intensity"@en .
+
+intensity:Medium rdfs:label "mittelintensiv"@de,
+        "Medium intensity"@en .
+
+intensity:Extensive rdfs:label "extensiv"@de,
+        "Extensive"@en .
+

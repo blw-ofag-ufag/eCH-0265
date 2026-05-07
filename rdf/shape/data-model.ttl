@@ -132,13 +132,15 @@ shape:CultivationType a sh:NodeShape ;
     [
         sh:order 9 ;
         sh:name "Botanical plant"@en ;
+        sh:description "A plant taxon that specify a given cultivation type. For example, \"winter wheat\" has botanical plant *Triticum aestivum*. Note that while the first describes a form of cultivations, the latter describes a class of plant individuals."@en ;
         sh:path :botanicalPlant ;
         sh:nodeKind sh:IRI ;
         sh:maxCount 1 ;
     ],
     [
         sh:order 10 ;
-        sh:name "Management intensity"@en ;
+        sh:name "Management intensity"@en, "Anbauintensität"@de ;
+        schema:description "Anbauintensität, mit welcher Flächen der Bezugsklasse bewirtschaftet werden."@de ;
         sh:path :managementIntensity ;
         sh:nodeKind sh:IRI ;
         sh:maxCount 1 ;

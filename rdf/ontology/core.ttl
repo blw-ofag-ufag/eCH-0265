@@ -1,254 +1,119 @@
-@prefix : <https://agriculture.ld.admin.ch/crops/> .
-@prefix intensity: <https://agriculture.ld.admin.ch/crops/intensity/> .
-@prefix dcterms: <http://purl.org/dc/terms/> .
-@prefix owl: <http://www.w3.org/2002/07/owl#> .
-@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
-@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix schema: <http://schema.org/> .
-@prefix wikidata: <http://www.wikidata.org/entity/> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix cube: <https://cube.link/> .
+# ==============================================================================
+# CORE ONTOLOGICAL DEFINITIONS
+# ------------------------------------------------------------------------------
+# The purpose of this document is mainly to
+# a) Enable OWL-based reasoning, i.e. automated data completion before
+#    publishing the data on LINDAS, and
+# b) (optionally) giving classes and properties names/descriptions, which makes
+#    it easier to discover the graph structure for visitors on LINDAS.
+# ==============================================================================
 
-wikidata:Q16521 a owl:Class ;
-    schema:name "Biologisches Taxon"@de,
-        "Biological taxon"@en .
+# Project-specific namespaces/qnames
+@prefix :                <https://agriculture.ld.admin.ch/crops/> .
+@prefix psm:             <https://agriculture.ld.admin.ch/crops/psm/1/> .
+@prefix agis:            <https://agriculture.ld.admin.ch/crops/agis/1/> .
+@prefix naebi:           <https://agriculture.ld.admin.ch/crops/naebi/1/> .
+@prefix cultivationtype: <https://agriculture.ld.admin.ch/crops/cultivationtype/> .
+@prefix taxon:           <https://agriculture.ld.admin.ch/crops/taxon/> .
+@prefix intensity:       <https://agriculture.ld.admin.ch/crops/intensity/> .
 
-:Area a owl:Class ;
-    schema:name "Fläche"@de ;
-    rdfs:subClassOf :Geometry .
+# LINDAS-specific namespaces/qnames
+@prefix cube:            <https://cube.link/> .
+@prefix meta:            <https://cube.link/meta/> .
+@prefix theme:           <https://register.ld.admin.ch/opendataswiss/category/> .
+@prefix blw:             <https://register.ld.admin.ch/opendataswiss/org/bundesamt-fur-landwirtschaft-blw> .
 
-:Cultivation a owl:Class ;
-    schema:name "Nutzung"@de,
-        "Cultivation"@en ;
-    schema:description "Represents a specific, spatio-temporally bound agricultural event. It models a single cultivation cycle of a particular crop on a defined area with start and end dates. For example, 'the 2023 summer wheat cultivation on field X12B3', as distinct from the general concept of 'wheat cultivation'."@en ;
-    rdfs:subClassOf [ a owl:Restriction ;
-            owl:onProperty schema:event ;
-            owl:someValuesFrom schema:Event ] .
+# Globally used namespaces/qnames
+@prefix dcat:            <http://www.w3.org/ns/dcat#> .
+@prefix dcterms:         <http://purl.org/dc/terms/> .
+@prefix owl:             <http://www.w3.org/2002/07/owl#> .
+@prefix qudt:            <http://qudt.org/schema/qudt/> .
+@prefix rdf:             <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:            <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema:          <http://schema.org/> .
+@prefix sh:              <http://www.w3.org/ns/shacl#> .
+@prefix vcard:           <http://www.w3.org/2006/vcard/ns#> .
+@prefix void:            <http://rdfs.org/ns/void#> .
+@prefix wikidata:        <http://www.wikidata.org/entity/> .
+@prefix xsd:             <http://www.w3.org/2001/XMLSchema#> .
+@prefix frequency:       <http://publications.europe.eu/resource/authority/frequency> .
+@prefix status:          <https://ld.admin.ch/vocabulary/CreativeWorkStatus/> .
+
+
+# ==============================================================================
+# ONTOLOGY METADATA
+# ==============================================================================
+
+: a owl:Ontology ; dcterms:title "Kulturen-Ontologie"@de .
+
+
+# ==============================================================================
+# CLASSES
+# ==============================================================================
+
+:Cultivation a owl:Class .
 
 :CultivationType a owl:Class ;
-    schema:name "Nutzungsart"@de,
-        "Cultivation type"@en ;
     rdfs:subClassOf owl:Class .
 
 :DeprecatedCultivationType a owl:Class ;
     rdfs:subClassOf owl:DeprecatedClass .
 
-:Geometry a owl:Class ;
-    schema:name "Geometrie"@de,
-        "Geometry"@en .
-
-:Identifier a owl:Class ;
-    schema:name "Identifikator"@de,
-        "Identifier"@en ;
-    rdfs:subClassOf
-        [ 
-            a owl:Restriction ;
-            owl:onProperty schema:value ;
-            owl:someValuesFrom rdfs:Literal
-        ],
-        [
-            a owl:Restriction ;
-            owl:onProperty :sourceSystem ;
-            owl:someValuesFrom rdfs:Literal
-        ] .
-
-:Point a owl:Class ;
-    schema:name "Punkt"@de ;
-    rdfs:subClassOf :Geometry .
-
-:Taxon a owl:Class ;
-    schema:name "Biologisches Taxon der Kulturpflanze"@de,
-        "Crop taxon"@en ;
-    schema:description "A crop is a plant that can be grown and harvested extensively for profit or subsistence. The class of crop taxa hence contains all biological taxa of crops, for example *Triticum aestivum* or *Glycine max*."@en ;
-    rdfs:subClassOf wikidata:Q16521 .
-
-:1 a owl:NamedIndividual ;
-    schema:name "Menschliche Ernährung"@de,
-        "Human nutrition"@en .
-
-:11 a owl:NamedIndividual ;
-    schema:name "Freiland"@de,
-        "Outdoor cultivation"@en .
-
-:12 a owl:NamedIndividual ;
-    schema:name "geschützter Anbau"@de,
-        "Protected cultivation"@en .
-
-:13 a owl:NamedIndividual ;
-    schema:name "in Gewächshäusern"@de,
-        "In greenhouses"@en .
-
-:14 a owl:NamedIndividual ;
-    schema:name "im gewachsenen Boden"@de,
-        "In native soil"@en .
-
-:15 a owl:NamedIndividual ;
-    schema:name "auf Pflanztischen oder -gestellen"@de,
-        "On plant tables or racks"@en .
-
-:16 a owl:NamedIndividual ;
-    schema:name "mit festem Fundament"@de,
-        "With permanent foundation"@en .
-
-:17 a owl:NamedIndividual ;
-    schema:name "ohne festes Fundament"@de,
-        "Without permanent foundation"@en .
-
-:2 a owl:NamedIndividual ;
-    schema:name "Tierische Ernährung"@de,
-        "Animal nutrition"@en .
-
-intensity:Extensive a owl:NamedIndividual ;
-    schema:name "extensiv"@de,
-        "Extensive"@en .
-
-intensity:Low a owl:NamedIndividual ;
-    schema:name "wenig intensiv"@de,
-        "Low intensity"@en .
-
-intensity:Medium a owl:NamedIndividual ;
-    schema:name "mittelintensiv"@de,
-        "Medium intensity"@en .
-
-intensity:Intensive a owl:NamedIndividual ;
-    schema:name "intensiv"@de,
-        "Intensive"@en .
-
-:3 a owl:NamedIndividual ;
-    schema:name "Bioenergie"@de,
-        "Bioenergy"@en .
-
-:4 a owl:NamedIndividual ;
-    schema:name "Industrielle Rohstoffe"@de,
-        "Industrial materials"@en .
-
-:5 a owl:NamedIndividual ;
-    schema:name "Saatgutproduktion"@de,
-        "Seed production"@en .
-
-:6 a owl:NamedIndividual ;
-    schema:name "Bodenverbesserung"@de,
-        "Soil improvement"@en .
-
-schema:event a owl:ObjectProperty ;
-    schema:name "Ereignis"@de,
-        "Event"@en .
-
-schema:hasPart a owl:ObjectProperty ;
-    schema:name "hat Teil"@de,
-        "has part"@en ;
-    owl:inverseOf schema:isPartOf .
-
-schema:identifier a owl:ObjectProperty ;
-    schema:name "Identifikator"@de,
-        "Identifier"@en ;
-    rdfs:range :Identifier .
-
-schema:isPartOf a owl:ObjectProperty ;
-    schema:name "ist Teil von"@de,
-        "is part of"@en ;
-    owl:inverseOf schema:hasPart .
-
 :DirectPaymentCrop a owl:Class ;
-    schema:name "AGIS Direct Payment Crop"@en ;
     rdfs:subClassOf cube:Observation .
 
 :NutrientBalanceCrop a owl:Class ;
-    schema:name "Nutrient Balance Crop (Suisse-Bilanz, NAEBI)"@en ;
     rdfs:subClassOf cube:Observation .
 
 :PlantProtectionCrop a owl:Class ;
-    schema:name "Plant Protection Crop"@en ;
     rdfs:subClassOf cube:Observation .
 
-:area a owl:ObjectProperty ;
-    schema:name "Bedeckt Fläche"@de,
-        "Covers area"@en ;
-    schema:description "The area that is covered/used by a cultivation"@en ;
-    rdfs:domain :Cultivation ;
-    rdfs:range :Area .
+:Taxon a owl:Class ;
+    rdfs:subClassOf wikidata:Q16521 .
+
+
+# ==============================================================================
+# DATATYPE PROPERTIES
+# ==============================================================================
+
+schema:name a owl:DatatypeProperty .
+
+schema:alternateName a owl:DatatypeProperty .
+
+schema:description a owl:DatatypeProperty .
+
+schema:identifier a owl:DatatypeProperty .
+
+
+# ==============================================================================
+# OBJECT PROPERTIES
+# ==============================================================================
+
+schema:hasPart a owl:ObjectProperty ;
+    owl:inverseOf schema:isPartOf .
+
+schema:isPartOf a owl:ObjectProperty ;
+    owl:inverseOf schema:hasPart .
 
 :botanicalPlant a owl:ObjectProperty ;
-    schema:name "Botanical plant"@en ;
-    schema:description "One or more botanical plant taxa that specify a given cultivation type. For example, \"winter wheat\" has botanical plant *Triticum aestivum*. Note that while the first describes a form (class) of cultivations, the latter describes a class of plant individuals."@en ;
     rdfs:domain :CultivationType ;
     rdfs:range :Taxon .
 
-:cultivationMethod a owl:ObjectProperty ;
-    schema:name "Anbaumethode"@de ;
-    rdfs:domain :CultivationType ;
-    rdfs:range [ owl:oneOf ( :11 :12 :13 :14 :15 :16 :17 ) ] .
-
-:cultivationType a owl:ObjectProperty ;
-    schema:name "Cultivation type"@en ;
-    schema:description "The cultivation type that classifies a certain cultivation."@en ;
-    rdfs:domain :Cultivation ;
-    rdfs:range :CultivationType .
-
-:eligibleFor a owl:ObjectProperty ;
-    schema:name "ist beitragsberechtigt für"@de ;
-    rdfs:domain :DirectPaymentCrop ;
-    rdfs:range :DirectPaymentPrograms .
-
-:fertilisationStandard a owl:ObjectProperty ;
-    rdfs:domain :CultivationType ;
-    rdfs:range :FertilisationStandard .
-
-:hasMembership a owl:ObjectProperty ;
-    schema:name "Klassenzugehörigkeit"@de,
-        "Class membership"@en ;
-    rdfs:range :ClassMembership .
-
-:hasPart a owl:ObjectProperty ;
-    schema:name "Unterkategorie"@de,
-        "Sub-category"@en ;
-    rdfs:domain :CultivationType ;
-    rdfs:range :CultivationType ;
-    owl:inverseOf :partOf .
-
-:includes a owl:ObjectProperty ;
-    schema:name "beinhaltet"@de,
-        "includes"@en ;
-    rdfs:domain :Area ;
-    rdfs:range :Point .
-
 :managementIntensity a owl:ObjectProperty ;
-    schema:name "Anbauintensität"@de,
-        "Cultivation intensity"@en ;
-    schema:description "Anbauintensität, mit welcher Flächen der Bezugsklasse bewirtschaftet werden."@de ;
+    schema:name "Cultivation intensity"@en ;
     rdfs:domain :CultivationType ;
     rdfs:range [ owl:oneOf ( intensity:Extensive intensity:Low intensity:Medium intensity:Intensive ) ] .
-
-:memberOfClass a owl:ObjectProperty ;
-    schema:name "Klasse"@de,
-        "Class"@en ;
-    rdfs:domain :ClassMembership ;
-    rdfs:range owl:Class .
 
 :parentTaxon a owl:ObjectProperty ;
     schema:name "Parent taxon"@en ;
     rdfs:domain :Taxon ;
     rdfs:range :Taxon .
 
-:partOf a owl:ObjectProperty ;
-    schema:name "Überkategorie"@de,
-        "Super-category"@en ;
-    rdfs:domain :CultivationType ;
-    rdfs:range :CultivationType ;
-    owl:inverseOf :hasPart .
-
-:purpose a owl:ObjectProperty ;
-    schema:name "Verwendungszweck"@de ;
-    rdfs:domain :CultivationType ;
-    rdfs:range [ owl:oneOf ( :1 :2 :3 :4 :5 :6 ) ] .
-
-:sourceSystem a owl:ObjectProperty .
-
 :taxonRank a owl:ObjectProperty ;
     schema:name "Taxon rank"@en ;
     rdfs:domain :Taxon ;
     rdfs:range [ owl:oneOf ( :Variety :Subspecies :Species :Genus :Family :Order :Class :Phylum :Kingdom ) ] .
 
-: a owl:Ontology ;
-    dcterms:title "Kulturen-Ontologie"@de .
-
+:cultivationType a owl:ObjectProperty ;
+    rdfs:domain cube:Observation ;
+    rdfs:range :CultivationType .
