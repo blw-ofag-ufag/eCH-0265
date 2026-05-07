@@ -1,7 +1,7 @@
 const ORG = 'blw-ofag-ufag';
 const REPO = 'crops';
 const BRANCH = 'main';
-const CULTIVATIONTYPES = `https://raw.githubusercontent.com/${ORG}/${REPO}/${BRANCH}/rdf/ontology/cultivationtypes.ttl`;
+const CULTIVATIONTYPES = 'rdf/ontology/cultivationtypes.ttl';
 const ENDPOINT = 'https://lindas.admin.ch/query';
 
 mermaid.initialize({ 
@@ -32,11 +32,11 @@ const systemDisplayTexts = {
     'psm': 'aus dem Pflanzenschutzmittelverzeichnis'
 };
 
-const subtitleElement = document.querySelector('.subtitle');
-if (subtitleElement) {
-    const replacementText = systemDisplayTexts[currentSystem] || systemDisplayTexts['agis'];
-    subtitleElement.innerHTML = subtitleElement.innerHTML.replace('__SYSTEM__', replacementText);
-}
+const elements = document.querySelectorAll('.title, .subtitle');
+const replacementText = systemDisplayTexts[currentSystem] || systemDisplayTexts['agis'];
+elements.forEach(element => {
+    element.innerHTML = element.innerHTML.replace('__SYSTEM__', replacementText);
+});
 
 const systemLabels = {
     'agis': 'direct-payments',
@@ -47,7 +47,7 @@ const githubSystemLabel = systemLabels[currentSystem] || 'data';
 
 async function fetchOntologySource() {
     try {
-        const res = await fetch(CULTIVATIONTYPES);
+        const res = await fetch(`https://raw.githubusercontent.com/${ORG}/${REPO}/${BRANCH}/${CULTIVATIONTYPES}`);
         if (!res.ok) throw new Error("Could not fetch ontology source.");
         return await res.text();
     } catch (e) {
@@ -87,28 +87,61 @@ async function fetchAndRenderData() {
     const appDiv = document.getElementById('app');
 
     try {
-        const [queryRes, rawOntologyText] = await Promise.all([
+        const [queryRes, systemsQueryRes, rawOntologyText] = await Promise.all([
             fetch('query.rq'),
+            fetch('systems.rq'),
             fetchOntologySource()
         ]);
         
         if (!queryRes.ok) throw new Error('Fehler beim Laden von query.rq.');
+        if (!systemsQueryRes.ok) throw new Error('Fehler beim Laden von systems.rq.');
+
         let sparqlQuery = await queryRes.text();
         sparqlQuery = sparqlQuery.replace('{{SYSTEM_PREFIX}}', currentSystem);
 
-        const response = await fetch(ENDPOINT, {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/x-www-form-urlencoded',
-                'Accept': 'application/sparql-results+json'
-            },
-            body: 'query=' + encodeURIComponent(sparqlQuery)
-        });
+        let systemsSparqlQuery = await systemsQueryRes.text();
+
+        const [response, systemsResponse] = await Promise.all([
+            fetch(ENDPOINT, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/x-www-form-urlencoded',
+                    'Accept': 'application/sparql-results+json'
+                },
+                body: 'query=' + encodeURIComponent(sparqlQuery)
+            }),
+            fetch(ENDPOINT, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/x-www-form-urlencoded',
+                    'Accept': 'application/sparql-results+json'
+                },
+                body: 'query=' + encodeURIComponent(systemsSparqlQuery)
+            })
+        ]);
 
         if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
+        if (!systemsResponse.ok) throw new Error(`HTTP systems error! status: ${systemsResponse.status}`);
 
         const data = await response.json();
-        await renderInterface(data.results.bindings, appDiv, rawOntologyText);
+        const systemsData = await systemsResponse.json();
+
+        // Build mapping from CultivationType URI to set of systems
+        const nodeSystems = {};
+        systemsData.results.bindings.forEach(row => {
+            const uri = row.CultivationType.value;
+            const systemUri = row.System.value;
+            const match = systemUri.match(/crops\/([^\/]+)\//);
+            if (match) {
+                const sys = match[1];
+                if (!nodeSystems[uri]) {
+                    nodeSystems[uri] = new Set();
+                }
+                nodeSystems[uri].add(sys);
+            }
+        });
+
+        await renderInterface(data.results.bindings, appDiv, rawOntologyText, nodeSystems);
 
     } catch (error) {
         appDiv.innerHTML = `<div class="error"><strong>Fehler:</strong> ${error.message}</div>`;
@@ -167,12 +200,12 @@ function getGithubIssueUrl(cropName, slug) {
 }
 
 function getGithubSourceUrl(slug, rawText) {
-    const baseUrl = CULTIVATIONTYPES ;
+    const baseUrl = `https://github.com/${ORG}/${REPO}/blob/main/${CULTIVATIONTYPES}` ;
     const lines = getLineNumbers(rawText, slug);
     return lines ? `${baseUrl}#${lines}` : baseUrl; 
 }
 
-async function renderInterface(bindings, container, rawOntologyText) {
+async function renderInterface(bindings, container, rawOntologyText, nodeSystems) {
     const cultivationTypes = {};
     const nodeNames = {};
 
@@ -466,7 +499,19 @@ async function renderInterface(bindings, container, rawOntologyText) {
                     if (uri === ct.baseUri && ct.baseName) {
                         rawLabel = ct.baseName;
                     }
-                    const label = formatNodeLabel(rawLabel);
+                    let label = `<b>${formatNodeLabel(rawLabel)}</b>`;
+                    
+                    const sysList = nodeSystems[uri];
+                    if (sysList && sysList.size > 0) {
+                        const sysMap = {
+                            'agis': 'DZ',
+                            'naebi': 'SB',
+                            'psm': 'PSM'
+                        };
+                        const sortedSys = Array.from(sysList).sort();
+                        const sysTags = sortedSys.map(s => sysMap[s] || s).join(', ');
+                        label += `<br/><small>${sysTags}</small>`;
+                    }
                     
                     if (uri === ct.baseUri) {
                         mermaidSyntax += `    ${id}["${label}"]:::focusNode\n`;
