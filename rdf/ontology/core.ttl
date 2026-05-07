@@ -146,16 +146,16 @@ schema:isPartOf a owl:ObjectProperty ;
         "is part of"@en ;
     owl:inverseOf schema:hasPart .
 
-:AgisObservation a owl:Class ;
-    schema:name "AGIS Observation"@en ;
+:DirectPaymentCrop a owl:Class ;
+    schema:name "AGIS Direct Payment Crop"@en ;
     rdfs:subClassOf cube:Observation .
 
-:NaebiObservation a owl:Class ;
-    schema:name "Suisse-Bilanz (NAEBI) Observation"@en ;
+:NutrientBalanceCrop a owl:Class ;
+    schema:name "Nutrient Balance Crop (Suisse-Bilanz, NAEBI)"@en ;
     rdfs:subClassOf cube:Observation .
 
-:PlantProtectionObservation a owl:Class ;
-    schema:name "Plant Protection Observation"@en ;
+:PlantProtectionCrop a owl:Class ;
+    schema:name "Plant Protection Crop"@en ;
     rdfs:subClassOf cube:Observation .
 
 :area a owl:ObjectProperty ;

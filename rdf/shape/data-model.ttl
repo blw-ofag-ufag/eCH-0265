@@ -95,7 +95,7 @@ shape:DirectPaymentCrop a sh:NodeShape ;
     rdfs:comment "A classification scheme built for the Swiss direct payment system"@en ;
     sh:closed true ;
     sh:ignoredProperties ( rdf:type ) ;
-    sh:targetClass :AgisObservation ;
+    sh:targetClass :DirectPaymentCrop ;
     sh:property
         [
             sh:order 1 ;
@@ -160,11 +160,11 @@ shape:DirectPaymentCrop a sh:NodeShape ;
 # NAEBI (Suisse Bilanz)
 # -------------------------------
 
-shape:NaebiCrop a sh:NodeShape ;
+shape:NutrientBalanceCrop a sh:NodeShape ;
     rdfs:label "Suisse Balance crop"@en ;
     sh:closed true ;
     sh:ignoredProperties ( rdf:type ) ;
-    sh:targetClass :NaebiObservation ;
+    sh:targetClass :NutrientBalanceCrop ;
     sh:property
         [
             sh:order 1 ;
@@ -273,7 +273,7 @@ shape:PlantProtectionCrop a sh:NodeShape ;
     rdfs:comment "Crop of the Swiss registry of plant protection products"@en ;
     sh:closed true ;
     sh:ignoredProperties ( rdf:type ) ;
-    sh:targetClass :PlantProtectionObservation ;
+    sh:targetClass :PlantProtectionCrop ;
     sh:property
         [
             sh:order 1 ;
