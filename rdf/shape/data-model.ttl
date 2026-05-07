@@ -106,7 +106,7 @@ shape:DirectPaymentCrop a sh:NodeShape ;
             sh:minCount 1 ;
             sh:path schema:identifier ;
             sh:nodeKind sh:Literal ;
-            sh:datatype xsd:ID ;
+            sh:datatype xsd:string ;
         ],
         [
             sh:order 2 ;
@@ -283,7 +283,7 @@ shape:PlantProtectionCrop a sh:NodeShape ;
             sh:minCount 1 ;
             sh:path schema:identifier ;
             sh:nodeKind sh:Literal ;
-            sh:datatype xsd:ID ;
+            sh:datatype xsd:string ;
             sh:pattern "^[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}$" ;
         ],
         [

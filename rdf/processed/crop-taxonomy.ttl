@@ -2733,6 +2733,7 @@ cultivationtype:305 a owl:Class ;
     rdfs:label "Futter- und Zuckerrüben"@de,
         "betteraves à sucre et fourragère"@fr,
         "Barbabietole da foraggio e da zucchero"@it ;
+    rdfs:subClassOf cultivationtype:17 ;
     owl:unionOf ( cultivationtype:522 cultivationtype:523 ) .
 
 cultivationtype:306 a owl:Class ;
@@ -3435,14 +3436,12 @@ cultivationtype:521 a owl:Class ;
 cultivationtype:522 a owl:Class ;
     rdfs:label "Zuckerrüben"@de,
         "Betteraves sucrières"@fr,
-        "Barbabietole da zucchero"@it ;
-    rdfs:subClassOf cultivationtype:17 .
+        "Barbabietole da zucchero"@it .
 
 cultivationtype:523 a owl:Class ;
     rdfs:label "Futterrüben"@de,
         "Betteraves fourragères"@fr,
-        "Barbabietole da foraggio"@it ;
-    rdfs:subClassOf cultivationtype:17 .
+        "Barbabietole da foraggio"@it .
 
 cultivationtype:524 a owl:Class ;
     rdfs:label "Kartoffeln (ohne Vertragsanbau)"@de ;
