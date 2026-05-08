@@ -17,10 +17,7 @@ This graph not only allows for complex queries across formerly siloed data but a
 # Data model
 
 The general data model is doumented [here](https://shacl-play.sparna.fr/play/doc?format=html_respec&url=https%3A%2F%2Fraw.githubusercontent.com%2Fblw-ofag-ufag%2Fcrops%2Frefs%2Fheads%2Fmain%2Frdf%2Fshape%2Fdata-model.ttl&includeDiagram=true&sectionDiagram=true). Note that *SHACL Play!* reads the data from `rdf/shape/data-model.ttl` on `main`.
-
 You may inspect the crop taxonomy/ontology using WebVOWL [here](https://service.tib.eu/webvowl/#iri=https://raw.githubusercontent.com/blw-ofag-ufag/crops/refs/heads/main/rdf/processed/crop-taxonomy.ttl) or read its turtle file [here](https://raw.githubusercontent.com/blw-ofag-ufag/crops/refs/heads/main/rdf/ontology/cultivationtypes.ttl).
-
-Alternatively, we have built a [hierarchy viewer that allows you to visually inspect the hierarchical relationships](https://blw-ofag-ufag.github.io/crops/hierarchy/index.html) of the crops.
 
 > [!NOTE]
 > You may find more information on the [repository wiki](https://github.com/blw-ofag-ufag/crops/wiki).
@@ -56,18 +53,37 @@ The data integration pipeline uses all the R and python scripts in the `/scripts
     ``` sh
     python -m venv venv
     source venv/bin/activate  # On Windows use: venv\Scripts\activate
+    pip upgrade pip
+    pip install --upgrade pip
     pip install -r src/python/requirements.txt
     ```
 
-3. Run the ETL pipeline `sh src/pipeline.bash`
-4. Make sure you pass all tests with `pytest tests`
-5. Check out the results on LINDAS.
+3. Run the ETL pipeline:
+
+    ``` sh
+    bash src/pipeline.bash
+    ```
+
+    This pipeline
+
+    1. validates syntax of all RDF turtle files,
+    2. constructs a graph with inferred triples (based on the OWL-ontology),
+    3. validates the final graph based on the SHACL data model and
+    4. overrides the named graph <https://lindas.admin.ch/foag/crops> on LINDAS.
+
+4. Make sure you pass all tests with `pytest`:
+
+    ``` sh
+    pytest tests/ -v
+    ```
+
+5. Check out the results on LINDAS. ([Here's an example entity.](https://agriculture.ld.admin.ch/crops/cultivationtype/413))
 
 # Explore the graph on LINDAS
 
 You can query the crop master data system using SPARQL.
 
-Here's an [example SPARQL query](https://lindas.admin.ch/sparql/#query=PREFIX%20schema%3A%20%3Chttp%3A%2F%2Fschema.org%2F%3E%0APREFIX%20owl%3A%20%3Chttp%3A%2F%2Fwww.w3.org%2F2002%2F07%2Fowl%23%3E%20%0APREFIX%20rdfs%3A%20%3Chttp%3A%2F%2Fwww.w3.org%2F2000%2F01%2Frdf-schema%23%3E%0APREFIX%20%3A%20%3Chttps%3A%2F%2Fagriculture.ld.admin.ch%2Fcrops%2F%3E%0A%0ASELECT%20%3Fname%20%3FURI%0AFROM%20%3Chttps%3A%2F%2Flindas.admin.ch%2Ffoag%2Fcrops%3E%0AWHERE%20%7B%0A%20%20%3FURI%20a%20owl%3AClass%20%3B%0A%20%20%20%20schema%3Aname%20%3Fname%20%3B%0A%20%20%20%20rdfs%3AsubClassOf%2B%20%3ACultivation%20.%0A%20%20FILTER(LANG(%3Fname)%20%3D%20%22de%22)%0A%7D%0AORDER%20BY%20%3Fname&endpoint=https%3A%2F%2Flindas.admin.ch%2Fquery&requestMethod=POST&tabTitle=Crops&headers=%7B%7D&contentTypeConstruct=application%2Fn-triples%2C*%2F*%3Bq%3D0.9&contentTypeSelect=application%2Fsparql-results%2Bjson%2C*%2F*%3Bq%3D0.9&outputFormat=table&outputSettings=%7B%22compact%22%3Atrue%7D) that gets you all cultivation type URIs and labels in German:
+Here's an [example SPARQL query](https://s.zazuko.com/3xUUXpv) that gets you all cultivation type URIs and labels in German:
 
 ```sparql
 PREFIX schema: <http://schema.org/>
