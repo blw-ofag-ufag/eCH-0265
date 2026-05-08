@@ -1361,8 +1361,12 @@ cultivationtype:269 a :CultivationType ;
 
 cultivationtype:270 a :CultivationType ;
     schema:name "Peperoni"@de,
-        "poivron"@fr,
-        "Peperone"@it ;
+        "Hot Pepper"@en,
+        "Piment"@fr,
+        "Peperoncino"@it ;
+    schema:alternateName "Poivron"@fr,
+        "Peperoncini"@de,
+        "Chili"@de ;
     rdfs:subClassOf cultivationtype:335 .
 
 cultivationtype:271 a :CultivationType ;
