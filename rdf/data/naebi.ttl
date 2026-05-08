@@ -53,8 +53,9 @@ naebi: a void:Dataset,
 # OBSERVATION SET
 # ==============================================================================
 
-naebi:ObservationSet a :NutrientBalanceCropSet ;
-    cube:observation naebi:1,
+naebi:ObservationSet a cube:ObservationSet ;
+    cube:observation
+        naebi:1,
         naebi:10,
         naebi:100,
         naebi:101,
