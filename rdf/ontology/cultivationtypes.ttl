@@ -1441,8 +1441,17 @@ cultivationtype:284 a :CultivationType ;
 
 cultivationtype:287 a :CultivationType ;
     schema:name "Melisse"@de,
-        "mélisse"@fr,
-        "Melissa"@it ;
+        "Mélisse"@fr,
+        "Melissa"@it,
+        "Lemon balm"@en ;
+    schema:alternateName "Zitronenmelisse"@de,
+        "Mélisse citronnelle"@fr,
+        "Mélisse officinale"@fr,
+        "Melissa vera"@it,
+        "Cedronella"@it,
+        "Erba limona"@it,
+        "Balm mint"@en,
+        "Common balm"@en ;
     rdfs:subClassOf cultivationtype:706 .
 
 cultivationtype:288 a :CultivationType ;
@@ -3480,10 +3489,6 @@ cultivationtype:1053 a :CultivationType ;
     schema:description "Bezeichnet eine Zwischenkultur zur Gründüngung mit Leguminosen auf Feldern, die im Rahmen der Fruchtfolge für den Freilandgemüsebau genutzt werden."@de ;
     rdfs:subClassOf cultivationtype:15,
         cultivationtype:24 .
-
-cultivationtype:1054 a :CultivationType ;
-    schema:name "Zitronenmelisse"@de, "Mélisse citronnelle"@fr, "Melissa"@it ;
-    rdfs:subClassOf cultivationtype:706 .
 
 cultivationtype:1055 a :CultivationType ;
     schema:name "Indianernessel"@de, "Monarde"@fr, "Monarda"@it ;

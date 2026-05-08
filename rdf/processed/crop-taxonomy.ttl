@@ -417,12 +417,6 @@ cultivationtype:1053 a :CultivationType ;
     rdfs:subClassOf cultivationtype:15,
         cultivationtype:24 .
 
-cultivationtype:1054 a :CultivationType ;
-    rdfs:label "Zitronenmelisse"@de,
-        "Mélisse citronnelle"@fr,
-        "Melissa"@it ;
-    rdfs:subClassOf cultivationtype:706 .
-
 cultivationtype:1055 a :CultivationType ;
     rdfs:label "Indianernessel"@de,
         "Monarde"@fr,
@@ -2577,8 +2571,17 @@ cultivationtype:284 a :CultivationType ;
 
 cultivationtype:287 a :CultivationType ;
     rdfs:label "Melisse"@de,
-        "mélisse"@fr,
+        "Lemon balm"@en,
+        "Mélisse"@fr,
         "Melissa"@it ;
+    schema:alternateName "Zitronenmelisse"@de,
+        "Balm mint"@en,
+        "Common balm"@en,
+        "Mélisse citronnelle"@fr,
+        "Mélisse officinale"@fr,
+        "Cedronella"@it,
+        "Erba limona"@it,
+        "Melissa vera"@it ;
     rdfs:subClassOf cultivationtype:706 .
 
 cultivationtype:288 a :CultivationType ;

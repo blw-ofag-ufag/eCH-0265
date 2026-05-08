@@ -852,7 +852,7 @@ naebi:138 a :NutrientBalanceCrop  ;
     :P2O5 50.0 ;
     :cultivationCategory cultivationtype:465 ;
     :cultivationSubCategory cultivationtype:467 ;
-    :cultivationType cultivationtype:1054 .
+    :cultivationType cultivationtype:287 .
 
 naebi:139 a :NutrientBalanceCrop  ;
     schema:identifier "CROP_LMNRM" ;
