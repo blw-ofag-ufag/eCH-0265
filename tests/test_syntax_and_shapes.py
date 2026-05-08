@@ -1,35 +1,20 @@
 import pytest
 from pathlib import Path
-import rdflib
 from pyshacl import validate
 
-# Anchor the base directory dynamically to the repository root
-BASE_DIR = Path(__file__).resolve().parent.parent
+# Import the discovery function to keep the parameterization DRY
+from conftest import discover_all_ttl_files 
 
-def discover_ttl_files():
+@pytest.mark.parametrize("filepath", discover_all_ttl_files(), ids=lambda p: p.name)
+def test_turtle_syntax(filepath, parsed_ttl_cache):
     """
-    Traverses the directory tree from the project root to discover all RDF Turtle files.
-    Returns a list of Path objects.
+    Validates syntax for all discovered Turtle files by checking the session cache.
+    Eliminates redundant parsing while maintaining blanket coverage.
     """
-    if not BASE_DIR.exists() or not BASE_DIR.is_dir():
-        return []
+    _, err = parsed_ttl_cache.get(filepath, (None, Exception("File missing from cache.")))
     
-    return [
-        p for p in BASE_DIR.rglob("*.ttl")
-        if ".git" not in p.parts and "venv" not in p.parts
-    ]
-
-@pytest.mark.parametrize("filepath", discover_ttl_files(), ids=lambda p: p.name)
-def test_turtle_syntax(filepath):
-    """
-    Instantiates an ephemeral RDF graph and attempts to parse the Turtle file.
-    A parsing exception indicates invalid syntax and fails the test.
-    """
-    graph = rdflib.Graph()
-    try:
-        graph.parse(str(filepath), format="turtle")
-    except Exception as e:
-        pytest.fail(f"Syntax validation failed for {filepath.name}\nDetails: {str(e)}")
+    if err:
+        pytest.fail(f"Syntax validation failed for {filepath.name}\nDetails: {str(err)}")
 
 @pytest.mark.parametrize("data_fixture", [
     "cultivation_graph",
@@ -39,7 +24,8 @@ def test_turtle_syntax(filepath):
 ])
 def test_shacl_compliance(data_fixture, request, datamodel_graph):
     """
-    Validates multiple data graphs against the separated SHACL shapes in data-model.ttl.
+    Validates data graphs against the SHACL shapes in data-model.ttl.
+    Strictly mirrors the CLI execution: pyshacl -s data-model.ttl -i rdfs -f human <file>
     """
     data_graph = request.getfixturevalue(data_fixture)
 
@@ -52,7 +38,6 @@ def test_shacl_compliance(data_fixture, request, datamodel_graph):
         debug=False
     )
 
-    # Assert and report exactly where it failed
     assert conforms, (
         f"SHACL Validation Failed for {data_fixture}!\n"
         f"--- SHACL Report ---\n{results_text}"
