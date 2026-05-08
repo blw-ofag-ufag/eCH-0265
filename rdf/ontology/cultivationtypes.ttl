@@ -1158,12 +1158,6 @@ cultivationtype:225 a :CultivationType ;
         "Zucchine"@it ;
     rdfs:subClassOf cultivationtype:40 .
 
-cultivationtype:228 a :CultivationType ;
-    schema:name "Ölkürbisse"@de,
-        "courges oléagineuses"@fr,
-        "Zucca da olio"@it ;
-    rdfs:subClassOf cultivationtype:1093 .
-
 cultivationtype:229 a :CultivationType ;
     schema:name "Schnittmangold"@de,
         "Bette à tondre"@fr,
@@ -2204,7 +2198,16 @@ cultivationtype:538 a :CultivationType ;
 cultivationtype:539 a :CultivationType ;
     schema:name "Ölkürbisse"@de,
         "Courges à huile"@fr,
-        "Zucche per l’estrazione di olio"@it ;
+        "Zucche per l’estrazione di olio"@it,
+        "Oil pumpkins"@en ;
+    schema:alternateName "Ölkürbis"@de,
+        "courges oléagineuses"@fr,
+        "Courge à huile"@fr,
+        "Courge à graines"@fr,
+        "Zucca da olio"@it,
+        "Zucca da seme"@it,
+        "Oilseed pumpkin"@en ;
+    schema:image <https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/Steirischer_%C3%96lk%C3%BCrbis_Feld_Allhaming_20200911b.jpg/1280px-Steirischer_%C3%96lk%C3%BCrbis_Feld_Allhaming_20200911b.jpg> ;
     rdfs:subClassOf cultivationtype:1093 .
 
 cultivationtype:540 a :CultivationType ;
