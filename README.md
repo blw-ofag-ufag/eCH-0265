@@ -106,6 +106,6 @@ In order to automatically retrieve data from LINDAS, you can send a POST request
 
 ``` sh
 curl -G "https://lindas.admin.ch/query" \
-     --data-urlencode "query=SELECT * FROM <https://lindas.admin.ch/foag/crops> WHERE { ?s ?p ?o . } LIMIT 5" \
+     --data-urlencode "query=SELECT * FROM <https://lindas.admin.ch/foag/crops> WHERE { ?s ?p ?o }" \
      -H "Accept: text/csv"
 ```
