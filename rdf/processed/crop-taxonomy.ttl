@@ -460,12 +460,6 @@ cultivationtype:106 a :CultivationType ;
         "Basilico"@it ;
     rdfs:subClassOf cultivationtype:67 .
 
-cultivationtype:1060 a :CultivationType ;
-    rdfs:label "Majoran"@de,
-        "Marjolaine"@fr,
-        "Maggiorana"@it ;
-    rdfs:subClassOf cultivationtype:705 .
-
 cultivationtype:1061 a :CultivationType ;
     rdfs:label "Eibisch"@de,
         "Guimauve"@fr,
@@ -1312,13 +1306,6 @@ cultivationtype:120 a :CultivationType ;
         "polygonacées"@fr,
         "Poligonacee"@it ;
     rdfs:subClassOf cultivationtype:22 .
-
-cultivationtype:1200 a :CultivationType ;
-    rdfs:label "Verarbeitungs-Kohlrabi"@de,
-        "Kohlrabi, processing"@en,
-        "Chou-rave de transformation"@fr,
-        "Cavolo rapa da trasformazione"@it ;
-    rdfs:subClassOf cultivationtype:86 .
 
 cultivationtype:1204 a :CultivationType ;
     rdfs:label "Nussbäume, 0.01 ha/Baum"@de,
