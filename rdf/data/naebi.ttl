@@ -1127,7 +1127,7 @@ naebi:160 a :NutrientBalanceCrop  ;
     :P2O5 30.0 ;
     :cultivationCategory cultivationtype:465 ;
     :cultivationSubCategory cultivationtype:467 ;
-    :cultivationType cultivationtype:1069 .
+    :cultivationType cultivationtype:334 .
 
 naebi:161 a :NutrientBalanceCrop  ;
     schema:identifier "CROP_ORNSTB" ;

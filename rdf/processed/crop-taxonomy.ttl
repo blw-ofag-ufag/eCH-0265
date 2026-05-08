@@ -508,12 +508,6 @@ cultivationtype:1068 a :CultivationType ;
     schema:alternateName "Bergamottminze"@de ;
     rdfs:subClassOf cultivationtype:706 .
 
-cultivationtype:1069 a :CultivationType ;
-    rdfs:label "Oregano"@de,
-        "Origan"@fr,
-        "Origano"@it ;
-    rdfs:subClassOf cultivationtype:706 .
-
 cultivationtype:107 a :CultivationType ;
     rdfs:label "Karotten"@de,
         "carotte"@fr,
@@ -2841,9 +2835,18 @@ cultivationtype:331 a :CultivationType ;
 cultivationtype:334 a :CultivationType ;
     rdfs:label "Oregano"@de,
         "Oregano"@en,
-        "origan"@fr,
-        "origano"@it ;
-    rdfs:subClassOf cultivationtype:67 .
+        "Origan"@fr,
+        "Origano"@it ;
+    schema:alternateName "Echter Dost"@de,
+        "Gemeiner Dost"@de,
+        "Wilder Majoran"@de,
+        "Wild marjoram"@en,
+        "Marjolaine sauvage"@fr,
+        "Origan commun"@fr,
+        "Maggiorana selvatica"@it,
+        "Origano comune"@it ;
+    rdfs:subClassOf cultivationtype:67,
+        cultivationtype:706 .
 
 cultivationtype:335 a :CultivationType ;
     rdfs:label "Paprika"@de,
