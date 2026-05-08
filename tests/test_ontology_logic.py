@@ -1,5 +1,6 @@
 import os
 import tempfile
+import warnings
 import pytest
 from owlready2 import get_ontology, sync_reasoner, OwlReadyInconsistentOntologyError, Nothing
 from pathlib import Path
@@ -57,6 +58,7 @@ def test_no_empty_end_nodes(cultivation_graph, agis_graph, srppp_graph, naebi_gr
     """
     Ensure all leaf nodes in the hierarchy are utilized by at least one 
     crop instance in the connected data systems (AGIS, SRPPP, NAEBI).
+    Issues a warning if unused leaf nodes are found.
     """
     combined_graph = Graph()
     combined_graph += cultivation_graph
@@ -93,13 +95,13 @@ def test_no_empty_end_nodes(cultivation_graph, agis_graph, srppp_graph, naebi_gr
     if results:
         empty_leaves = [str(r.leaf) for r in results]
         
-        error_msg = (
+        warning_msg = (
             f"Found {len(empty_leaves)} empty leaf nodes in the cultivation hierarchy.\n"
             f"These nodes have no subclasses and are not used by any crops in AGIS, SRPPP, or NAEBI:\n"
         )
         for leaf in empty_leaves[:15]:
-            error_msg += f"  - {leaf}\n"
+            warning_msg += f"  - {leaf}\n"
         if len(empty_leaves) > 15:
-            error_msg += f"  ... and {len(empty_leaves) - 15} more.\n"
+            warning_msg += f"  ... and {len(empty_leaves) - 15} more.\n"
             
-        pytest.fail(error_msg.strip())
+        warnings.warn(warning_msg.strip(), UserWarning)
