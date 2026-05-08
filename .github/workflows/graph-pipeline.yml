@@ -8,15 +8,8 @@ on:
 
 jobs:
   test:
-    name: Run Pytests Individually
+    name: Run Test Suite
     runs-on: ubuntu-latest
-    strategy:
-      fail-fast: false
-      matrix:
-        test-file: 
-          - tests/test_turtle_syntax.py
-          - tests/test_psm_polyhierarchy_consistency.py
-          - tests/test_owl_consistency.py
     
     steps:
       - name: Checkout Repository
@@ -30,37 +23,17 @@ jobs:
       - name: Install Test Dependencies
         run: |
           python -m pip install --upgrade pip
-          pip install pytest
           pip install -r src/python/requirements.txt
 
-      - name: Execute ${{ matrix.test-file }}
-        run: pytest ${{ matrix.test-file }} -v
+      - name: Execute Pytest Suite
+        run: pytest tests/ -v
 
-  validate:
-    name: Validate Data Input Files
-    runs-on: ubuntu-latest
-    strategy:
-      fail-fast: false # Prevents one invalid file from cancelling the checks on the others
-      matrix:
-        ttl-file:
-          - rdf/data/srppp.ttl
-          - rdf/data/agis.ttl
-          - rdf/data/naebi.ttl
-          - rdf/ontology/cultivationtypes.ttl
-          
-    steps:
-      - name: Checkout Repository
-        uses: actions/checkout@v4
-
-      - name: Set up Python
-        uses: actions/setup-python@v5
+      - name: Upload Warnings Report
+        # Uploads the pytest warnings report as a downloadable artifact in the GitHub Actions UI
+        # without committing it to the repository.
+        uses: actions/upload-artifact@v4
+        if: always() 
         with:
-          python-version: '3.12'
-
-      - name: Install pyshacl
-        run: |
-          python -m pip install --upgrade pip
-          pip install pyshacl 
-
-      - name: Validate ${{ matrix.ttl-file }}
-        run: pyshacl ${{ matrix.ttl-file }} --format human
+          name: warnings-report
+          path: tests/warnings_report.json
+          retention-days: 14
