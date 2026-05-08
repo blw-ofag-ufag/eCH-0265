@@ -82,3 +82,4 @@ results/
 # Test cache
 **/__pycache__
 test.*
+test/warnings_report.json
