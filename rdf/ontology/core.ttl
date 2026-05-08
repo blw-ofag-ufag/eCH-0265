@@ -84,6 +84,20 @@ schema:description a owl:DatatypeProperty .
 
 schema:identifier a owl:DatatypeProperty .
 
+sh:name a owl:DatatypeProperty ;
+    rdfs:subPropertyOf schema:name .
+
+sh:description a owl:DatatypeProperty ;
+    rdfs:subPropertyOf schema:description .
+
+rdfs:label a owl:DatatypeProperty ;
+    rdfs:subPropertyOf schema:name .
+
+rdfs:comment a owl:DatatypeProperty ;
+    rdfs:subPropertyOf schema:description .
+
+dcterms:title a owl:DatatypeProperty ;
+    rdfs:subPropertyOf schema:name .
 
 # ==============================================================================
 # OBJECT PROPERTIES
