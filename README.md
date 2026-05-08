@@ -79,13 +79,13 @@ The data integration pipeline uses all the R and python scripts in the `/scripts
 
 5. Check out the results on LINDAS. ([Here's an example entity.](https://agriculture.ld.admin.ch/crops/cultivationtype/413))
 
-# Explore the graph on LINDAS
+# How can I use this data?
 
-You can query the crop master data system using SPARQL.
+You can query the crop master data system using the [SPARQL 1.1 Query Language](https://www.w3.org/TR/sparql11-query/).
 
-Here's an [example SPARQL query](https://s.zazuko.com/3xUUXpv) that gets you all cultivation type URIs and labels in German:
+Here's [an example query](https://s.zazuko.com/3xUUXpv) that gets you all cultivation type URIs and labels in German:
 
-```sparql
+``` sparql
 PREFIX schema: <http://schema.org/>
 PREFIX owl: <http://www.w3.org/2002/07/owl#> 
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
@@ -100,4 +100,12 @@ WHERE {
   FILTER(LANG(?name) = "de")
 }
 ORDER BY ?name
+```
+
+In order to automatically retrieve data from LINDAS, you can send a POST request to the LINDAS endpoint, passing the SPARQL query as a parameter.
+
+``` sh
+curl -G "https://lindas.admin.ch/query" \
+     --data-urlencode "query=SELECT * FROM <https://lindas.admin.ch/foag/crops> WHERE { ?s ?p ?o . } LIMIT 5" \
+     -H "Accept: text/csv"
 ```
