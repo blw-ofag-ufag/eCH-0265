@@ -716,7 +716,7 @@ cultivationtype:1099 a :CultivationType ;
     rdfs:label "Rucola, 1 Schnitt (geschützter Anbau)"@de,
         "Roquette (culture protégée)"@fr,
         "Rucola (coltura protetta)"@it ;
-    rdfs:subClassOf cultivationtype:1113 .
+    rdfs:subClassOf cultivationtype:278 .
 
 cultivationtype:110 a :CultivationType ;
     rdfs:label "Artischocken"@de,
@@ -728,7 +728,7 @@ cultivationtype:1100 a :CultivationType ;
     rdfs:label "Rucola, 2 Schnitte (geschützter Anbau)"@de,
         "Roquette, 2 coupes (culture protégée)"@fr,
         "Rucola, 2 tagli (coltura protetta)"@it ;
-    rdfs:subClassOf cultivationtype:1113 .
+    rdfs:subClassOf cultivationtype:1099 .
 
 cultivationtype:1101 a :CultivationType ;
     rdfs:label "Nicht aufgeführte Ackerkulturen, Leguminosen"@de,
@@ -807,12 +807,6 @@ cultivationtype:1112 a :CultivationType ;
         "Tabac Burley"@fr,
         "Tabacco Burley"@it ;
     rdfs:subClassOf cultivationtype:541 .
-
-cultivationtype:1113 a :CultivationType ;
-    rdfs:label "Rucola (geschützter Anbau)"@de,
-        "Roquette (culture protégée)"@fr,
-        "Rucola (coltura protetta)"@it ;
-    rdfs:subClassOf cultivationtype:278 .
 
 cultivationtype:1114 a :CultivationType ;
     rdfs:label "Spinat, 1 Schnitt, nach Mitte April gesät"@de,
