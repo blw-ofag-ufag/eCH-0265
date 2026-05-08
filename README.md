@@ -82,7 +82,6 @@ The data integration pipeline uses all the R and python scripts in the `/scripts
 # How can I use this data?
 
 You can query the crop master data system using the [SPARQL 1.1 Query Language](https://www.w3.org/TR/sparql11-query/).
-
 Here's [an example query](https://s.zazuko.com/3xUUXpv) that gets you all cultivation type URIs and labels in German:
 
 ``` sparql
@@ -101,6 +100,8 @@ WHERE {
 }
 ORDER BY ?name
 ```
+
+More examples are available in [`src/sparql/queries`](src/sparql/queries). Note that some of these examples are "parametrized" and thus can't be run without modifications.
 
 In order to automatically retrieve data from LINDAS, you can send a POST request to the LINDAS endpoint, passing the SPARQL query as a parameter.
 
