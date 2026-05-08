@@ -2322,7 +2322,7 @@ psm:290 a :PlantProtectionCrop  ;
         "choux"@fr,
         "Cavoli"@it ;
     schema:version 0 ;
-    :cultivationType cultivationtype:290 .
+    :cultivationType cultivationtype:25 .
 
 psm:291 a :PlantProtectionCrop  ;
     schema:identifier "B6669854-1833-4BBC-A931-E67505848EA7" ;

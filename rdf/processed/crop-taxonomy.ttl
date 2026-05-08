@@ -2415,6 +2415,7 @@ cultivationtype:25 a :CultivationType ;
     rdfs:label "Kohlarten"@de,
         "choux"@fr,
         "Specie di cavoli"@it ;
+    schema:alternateName "Kohlgemüse"@de ;
     rdfs:subClassOf cultivationtype:48 .
 
 cultivationtype:250 a :CultivationType ;
@@ -2629,12 +2630,6 @@ cultivationtype:289 a :CultivationType ;
         "rondini"@fr,
         "Rondini"@it ;
     rdfs:subClassOf cultivationtype:40 .
-
-cultivationtype:290 a :CultivationType ;
-    rdfs:label "Kohlgemüse"@de,
-        "choux"@fr,
-        "Cavoli"@it ;
-    rdfs:subClassOf cultivationtype:22 .
 
 cultivationtype:294 a :CultivationType ;
     rdfs:label "Kerbelrübe"@de,
