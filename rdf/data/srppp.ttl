@@ -58,7 +58,9 @@ psm: a void:Dataset,
 # OBSERVATION SET
 # ==============================================================================
 
-psm:ObservationSet :PlantProtectionCrop  psm:1,
+psm:ObservationSet a cube:ObservationSet ;
+    cube:observation
+        psm:1,
         psm:10,
         psm:100,
         psm:101,
