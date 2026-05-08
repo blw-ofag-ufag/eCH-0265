@@ -40,16 +40,14 @@ def test_turtle_syntax(filepath):
 def test_shacl_compliance(data_fixture, request, datamodel_graph):
     """
     Validates multiple data graphs against the separated SHACL shapes in data-model.ttl.
-    Uses request.getfixturevalue to dynamically load the graph fixture by name.
     """
     data_graph = request.getfixturevalue(data_fixture)
 
-    # Run PySHACL validation
     conforms, results_graph, results_text = validate(
         data_graph,
-        datamodel_graph=datamodel_graph,
+        shacl_graph=datamodel_graph,
         data_graph_format="turtle",
-        datamodel_graph_format="turtle",
+        shacl_graph_format="turtle",
         inference="rdfs", 
         debug=False
     )
