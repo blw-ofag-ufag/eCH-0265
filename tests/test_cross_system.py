@@ -5,6 +5,7 @@ import io
 import warnings
 from rdflib import Graph, Namespace, URIRef
 from rdflib.namespace import RDFS, OWL
+from rdflib.graph import ReadOnlyGraphAggregate
 
 CSV_URL = "https://raw.githubusercontent.com/BLV-OSAV-USAV/PSMV-RDF/refs/heads/main/data/raw/Code.csv"
 CUBE = Namespace("https://cube.link/")
@@ -115,9 +116,7 @@ def test_culture_consistency_in_rdf(srppp_graph, core_graph):
     if not csv_hierarchy and not csv_names:
         pytest.fail("The CSV filter returned 0 results. Check if the CSV structure changed.")
 
-    combined_graph = Graph()
-    combined_graph += srppp_graph
-    combined_graph += core_graph
+    combined_graph = ReadOnlyGraphAggregate([srppp_graph, core_graph])
 
     rdf_hierarchy = set()
     rdf_names = set()
