@@ -1063,8 +1063,8 @@ cultivationtype:205 a :CultivationType ;
 cultivationtype:206 a :CultivationType ;
     schema:name "Spitzwegerich"@de,
         "Ribwort plantain"@en,
-        "plantain lancéolé"@fr,
-        "piantaggine lanciuola"@it ;
+        "Plantain lancéolé"@fr,
+        "Piantaggine lanciuola"@it ;
     rdfs:subClassOf cultivationtype:706 .
 
 cultivationtype:207 a :CultivationType ;
@@ -3640,12 +3640,6 @@ cultivationtype:1083 a :CultivationType ;
         "Verger de pruniers (sans spécification de rendement)"@fr,
         "Prugneto/Susineto (senza specifica di resa)"@it ;
     rdfs:subClassOf cultivationtype:113 .
-
-cultivationtype:1084 a :CultivationType ;
-    schema:name "Spitzwegerich"@de,
-        "Plantain lancéolé"@fr,
-        "Piantaggine lanciuola"@it ;
-    rdfs:subClassOf cultivationtype:35 .
 
 cultivationtype:1085 a :CultivationType ;
     schema:name "Mittelintensive Weiden und Mähweiden"@de,

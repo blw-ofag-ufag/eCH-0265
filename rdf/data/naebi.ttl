@@ -1336,7 +1336,7 @@ naebi:178 a :NutrientBalanceCrop  ;
     :P2O5 40.0 ;
     :cultivationCategory cultivationtype:465 ;
     :cultivationSubCategory cultivationtype:24 ;
-    :cultivationType cultivationtype:1084 .
+    :cultivationType cultivationtype:206 .
 
 naebi:179 a :NutrientBalanceCrop  ;
     schema:identifier "CROP_PMEDI" ;
