@@ -401,5 +401,5 @@ shape:PlantProtectionCrop a sh:NodeShape ;
             sh:minCount 0 ;
             sh:maxCount 2 ;
             sh:nodeKind sh:IRI ;
-            sh:node shape:PlantProtectionCrop ;
+            sh:class :PlantProtectionCrop ;
         ] .
