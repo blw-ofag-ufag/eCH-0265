@@ -1086,12 +1086,6 @@ cultivationtype:209 a :CultivationType ;
         "Valerianacee"@it ;
     rdfs:subClassOf cultivationtype:22 .
 
-cultivationtype:211 a :CultivationType ;
-    schema:name "Rhabarber"@de,
-        "rhubarbe"@fr,
-        "Rabarbaro"@it ;
-    rdfs:subClassOf cultivationtype:120 .
-
 cultivationtype:213 a :CultivationType ;
     schema:name "Ertragsreben"@de,
         "vigne en production"@fr,
@@ -2748,8 +2742,12 @@ cultivationtype:708 a :CultivationType ;
 cultivationtype:709 a :CultivationType ;
     schema:name "Rhabarber"@de,
         "Rhubarbe"@fr,
-        "Rabarbaro"@it ;
-    rdfs:subClassOf cultivationtype:750 .
+        "Rabarbaro"@it,
+        "Rhubarb"@en ;
+    schema:alternateName "Garden rhubarb"@en,
+        "Pieplant"@en ;
+    rdfs:subClassOf cultivationtype:120,
+        cultivationtype:750 .
 
 cultivationtype:710 a :CultivationType ;
     schema:name "Spargel"@de,

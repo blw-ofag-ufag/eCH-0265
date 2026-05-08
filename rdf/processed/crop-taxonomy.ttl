@@ -2201,12 +2201,6 @@ cultivationtype:21 a :CultivationType ;
     rdfs:comment "Als Dauergrünfläche gilt die mit Gräsern und Kräutern bewachsene Fläche ausserhalb der Sömmerungsflächen. Sie besteht seit mehr als sechs Jahren als Dauerwiese oder als Dauerweide (Art. 19 LBV)."@de ;
     rdfs:subClassOf cultivationtype:114 .
 
-cultivationtype:211 a :CultivationType ;
-    rdfs:label "Rhabarber"@de,
-        "rhubarbe"@fr,
-        "Rabarbaro"@it ;
-    rdfs:subClassOf cultivationtype:120 .
-
 cultivationtype:213 a :CultivationType ;
     rdfs:label "Ertragsreben"@de,
         "vigne en production"@fr,
@@ -4039,9 +4033,13 @@ cultivationtype:708 a :CultivationType ;
 
 cultivationtype:709 a :CultivationType ;
     rdfs:label "Rhabarber"@de,
+        "Rhubarb"@en,
         "Rhubarbe"@fr,
         "Rabarbaro"@it ;
-    rdfs:subClassOf cultivationtype:750 .
+    schema:alternateName "Garden rhubarb"@en,
+        "Pieplant"@en ;
+    rdfs:subClassOf cultivationtype:120,
+        cultivationtype:750 .
 
 cultivationtype:710 a :CultivationType ;
     rdfs:label "Spargel"@de,
