@@ -2956,7 +2956,7 @@ psm:51 a :PlantProtectionCrop  ;
         "asperge"@fr,
         "Asparagi"@it ;
     schema:version 0 ;
-    :cultivationType cultivationtype:51 .
+    :cultivationType cultivationtype:710 .
 
 psm:52 a :PlantProtectionCrop  ;
     schema:identifier "CEC488FC-D9AD-4515-A28E-DEEC6C807926" ;

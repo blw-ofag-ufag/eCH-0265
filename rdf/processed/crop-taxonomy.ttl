@@ -3326,12 +3326,6 @@ cultivationtype:509 a :CultivationType ;
     rdfs:subClassOf cultivationtype:1033 ;
     :botanicalPlant taxon:ORYSA .
 
-cultivationtype:51 a :CultivationType ;
-    rdfs:label "Spargel"@de,
-        "asperge"@fr,
-        "Asparagi"@it ;
-    rdfs:subClassOf cultivationtype:26 .
-
 cultivationtype:510 a :CultivationType ;
     rdfs:label "Hartweizen"@de,
         "Blé dur"@fr,
@@ -4071,7 +4065,9 @@ cultivationtype:710 a :CultivationType ;
     rdfs:label "Spargel"@de,
         "Asperges"@fr,
         "Asparagi"@it ;
-    rdfs:subClassOf cultivationtype:750 .
+    rdfs:subClassOf cultivationtype:26,
+        cultivationtype:465,
+        cultivationtype:750 .
 
 cultivationtype:711 a :CultivationType ;
     rdfs:label "Pilze (Freiland)"@de,

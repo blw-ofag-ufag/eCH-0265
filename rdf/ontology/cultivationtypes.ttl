@@ -343,12 +343,6 @@ cultivationtype:48 a :CultivationType ;
         "Crocifere (Brassicacee)"@it ;
     rdfs:subClassOf cultivationtype:22 .
 
-cultivationtype:51 a :CultivationType ;
-    schema:name "Spargel"@de,
-        "asperge"@fr,
-        "Asparagi"@it ;
-    rdfs:subClassOf cultivationtype:26 .
-
 cultivationtype:53 a :CultivationType ;
     schema:name "Barbarakraut"@de,
         "Barbarée du printemps"@fr,
@@ -2761,7 +2755,9 @@ cultivationtype:710 a :CultivationType ;
     schema:name "Spargel"@de,
         "Asperges"@fr,
         "Asparagi"@it ;
-    rdfs:subClassOf cultivationtype:750 .
+    rdfs:subClassOf cultivationtype:26,
+        cultivationtype:465,
+        cultivationtype:750 .
 
 cultivationtype:711 a :CultivationType ;
     schema:name "Pilze (Freiland)"@de,
