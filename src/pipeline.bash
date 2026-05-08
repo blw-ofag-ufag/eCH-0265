@@ -16,7 +16,7 @@ python src/python/rdf-processing.py \
 
 echo "Merge all data into one graph for subsequent LINDAS upload"
 python src/python/rdf-processing.py \
-  --input rdf/ontology/*.ttl rdf/data/*.ttl \
+  --input rdf/ontology/*.ttl rdf/data/*.ttl rdf/shape/*.ttl \
   --output rdf/processed/graph.ttl \
   --rules src/sparql/inference-rules/*.sparql
 
