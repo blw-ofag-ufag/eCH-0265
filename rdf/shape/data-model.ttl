@@ -251,8 +251,8 @@ shape:NutrientBalanceCrop a sh:NodeShape ;
             sh:name "Kulturkategorie"@de ;
             sh:maxCount 1 ;
             sh:minCount 1 ;
-            sh:nodeKind sh:Literal ;
-            sh:datatype xsd:string ;
+            sh:nodeKind sh:IRI ;
+            sh:node shape:CultivationType ;
             sh:path :cultivationCategory ;
         ],
         [
@@ -260,8 +260,8 @@ shape:NutrientBalanceCrop a sh:NodeShape ;
             sh:name "Kultur-Unterkategorie"@de ;
             sh:maxCount 1 ;
             sh:minCount 1 ;
-            sh:nodeKind sh:Literal ;
-            sh:datatype xsd:string ;
+            sh:nodeKind sh:IRI ;
+            sh:node shape:CultivationType ;
             sh:path :cultivationSubCategory ;
         ],
         [
