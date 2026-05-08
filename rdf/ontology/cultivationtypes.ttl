@@ -4083,12 +4083,6 @@ cultivationtype:1155 a :CultivationType ;
     rdfs:subClassOf cultivationtype:2 ;
     :managementIntensity intensity:Intensive .
 
-cultivationtype:1156 a :CultivationType ;
-    schema:name "Winterspinat, 1 Schnitt"@de,
-        "Épinard d'hiver, 1 coupe"@fr,
-        "Spinaci invernali, 1 taglio"@it ;
-    rdfs:subClassOf cultivationtype:1207 .
-
 cultivationtype:1157 a :CultivationType ;
     schema:name "Winterspinat, 2 Schnitte"@de,
         "Épinard d'hiver, 2 coupes"@fr,
