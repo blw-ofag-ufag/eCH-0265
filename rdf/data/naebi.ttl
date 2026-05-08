@@ -2556,7 +2556,7 @@ naebi:279 a :NutrientBalanceCrop  ;
     :P2O5 40.0 ;
     :cultivationCategory cultivationtype:465 ;
     :cultivationSubCategory cultivationtype:24 ;
-    :cultivationType cultivationtype:1148 .
+    :cultivationType cultivationtype:132 .
 
 naebi:28 a :NutrientBalanceCrop  ;
     schema:identifier "CROP_BRNTT" ;

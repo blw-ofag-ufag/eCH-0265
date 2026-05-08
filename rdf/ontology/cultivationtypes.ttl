@@ -4048,12 +4048,6 @@ cultivationtype:1147 a :CultivationType ;
     schema:alternateName "Rüben Herbst-, Mai-"@de ;
     rdfs:subClassOf cultivationtype:56 .
 
-cultivationtype:1148 a :CultivationType ;
-    schema:name "Cima di Rapa"@de,
-        "Cima di rapa"@fr,
-        "Cima di rapa"@it ;
-    rdfs:subClassOf cultivationtype:48 .
-
 cultivationtype:1149 a :CultivationType ;
     schema:name "Bibernelle"@de,
         "Pimprenelle"@fr,
