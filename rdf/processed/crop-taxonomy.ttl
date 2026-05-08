@@ -1618,7 +1618,7 @@ cultivationtype:1264 a :CultivationType ;
         "Lino da fibra"@it ;
     rdfs:subClassOf cultivationtype:534 .
 
-cultivationtype:1265 a :CultivationType ;
+cultivationtype:559 a :CultivationType ;
     rdfs:label "Saum auf Ackerfläche"@de,
         "Margin on arable land"@en,
         "Bande sur surface assolée"@fr,

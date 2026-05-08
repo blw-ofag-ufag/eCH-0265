@@ -2353,8 +2353,10 @@ cultivationtype:558 a :DeprecatedCultivationType ;
 
 cultivationtype:559 a :CultivationType ;
     schema:name "Saum auf Ackerflächen"@de,
+        "Margin on arable land"@en,
         "Ourlet sur terres assolées"@fr,
         "Striscia su superficie coltiva"@it ;
+    schema:alternateName "Bande sur surface assolée"@fr ;
     rdfs:subClassOf cultivationtype:1 .
 
 cultivationtype:561 a :DeprecatedCultivationType ;
@@ -4571,13 +4573,6 @@ cultivationtype:1264 a :CultivationType ;
         "Lin à fibre"@fr,
         "Lino da fibra"@it ;
     rdfs:subClassOf cultivationtype:534 .
-
-cultivationtype:1265 a :CultivationType ;
-    schema:name "Saum auf Ackerfläche"@de,
-        "Margin on arable land"@en,
-        "Bande sur surface assolée"@fr,
-        "Striscia su superficie coltiva"@it ;
-    rdfs:subClassOf cultivationtype:1 .
 
 cultivationtype:1266 a :CultivationType ;
     schema:name "Fenchel"@de,
