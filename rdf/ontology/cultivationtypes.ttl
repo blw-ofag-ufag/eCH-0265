@@ -2141,7 +2141,7 @@ cultivationtype:527 a :CultivationType ;
     schema:name "Winterraps zur Speiseölgewinnung"@de,
         "Colza d’automne destiné à la fabrication d’huile comestible"@fr,
         "Colza autunnale per l’estrazione di olio commestibile"@it ;
-    rdfs:subClassOf cultivationtype:1129 .
+    rdfs:subClassOf cultivationtype:190 .
 
 cultivationtype:528 a :CultivationType ;
     schema:name "Soja"@de,
@@ -2497,7 +2497,7 @@ cultivationtype:591 a :CultivationType ;
     schema:name "Winterraps als nachwachsender Rohstoff"@de,
         "Colza d’automne comme matière première renouvelable"@fr,
         "Colza autunnale quale materia prima rinnovabile"@it ;
-    rdfs:subClassOf cultivationtype:1129 .
+    rdfs:subClassOf cultivationtype:190 .
 
 cultivationtype:592 a :CultivationType ;
     schema:name "Sonnenblumen als nachwachsender Rohstoff"@de,
@@ -3816,7 +3816,7 @@ cultivationtype:1111 a :CultivationType ;
     schema:name "Winterraps in 62a Nitrat-Projekt"@de,
         "Colza d'automne en projet nitrate 62a"@fr,
         "Colza autunnale in progetto nitrati 62a"@it ;
-    rdfs:subClassOf cultivationtype:1129 .
+    rdfs:subClassOf cultivationtype:190 .
 
 cultivationtype:1112 a :CultivationType ;
     schema:name "Tabak Burley"@de,
@@ -3923,12 +3923,6 @@ cultivationtype:1128 a :CultivationType ;
         "Fraises pluriannuelles"@fr,
         "Fragole pluriennali"@it ;
     rdfs:subClassOf cultivationtype:223 .
-
-cultivationtype:1129 a :CultivationType ;
-    schema:name "Winterraps"@de,
-        "Colza d'automne"@fr,
-        "Colza autunnale"@it ;
-    rdfs:subClassOf cultivationtype:494 .
 
 cultivationtype:1130 a :CultivationType ;
     schema:name "Erdbeeren-Jungpflanzen (Tray-Pflanzen)"@de,
@@ -4784,7 +4778,7 @@ cultivationtype:1292 a :CultivationType ;
         cultivationtype:590
     ) .
 
-# Disjoint AGIS subclasses of cultivationtype:1129
+# Disjoint AGIS subclasses of cultivationtype:190
 [] a owl:AllDisjointClasses ;
     owl:members (
         cultivationtype:527
