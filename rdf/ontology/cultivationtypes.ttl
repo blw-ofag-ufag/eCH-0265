@@ -2093,8 +2093,7 @@ cultivationtype:516 a :CultivationType ;
 
 cultivationtype:517 a :DeprecatedCultivationType ;
     schema:name "Getreide für die Saatgutproduktion"@de,
-        "Semences de céréales"@fr,
-        "Mais da semina (coltivazione contrattuale)"@it ;
+        "Semences de céréales"@fr ;
     rdfs:subClassOf cultivationtype:14 .
 
 cultivationtype:519 a :CultivationType ;
