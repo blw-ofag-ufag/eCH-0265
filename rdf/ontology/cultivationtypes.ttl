@@ -3511,10 +3511,6 @@ cultivationtype:1059 a :CultivationType ;
     schema:name "Andorn"@de, "Marrube blanc"@fr, "Marrubio"@it ;
     rdfs:subClassOf cultivationtype:706 .
 
-cultivationtype:1060 a :CultivationType ;
-    schema:name "Majoran"@de, "Marjolaine"@fr, "Maggiorana"@it ;
-    rdfs:subClassOf cultivationtype:705 .
-
 cultivationtype:1061 a :CultivationType ;
     schema:name "Eibisch"@de, "Guimauve"@fr, "Altea"@it ;
     rdfs:subClassOf cultivationtype:705 .
