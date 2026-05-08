@@ -1618,13 +1618,6 @@ cultivationtype:1264 a :CultivationType ;
         "Lino da fibra"@it ;
     rdfs:subClassOf cultivationtype:534 .
 
-cultivationtype:559 a :CultivationType ;
-    rdfs:label "Saum auf Ackerfläche"@de,
-        "Margin on arable land"@en,
-        "Bande sur surface assolée"@fr,
-        "Striscia su superficie coltiva"@it ;
-    rdfs:subClassOf cultivationtype:1 .
-
 cultivationtype:1266 a :CultivationType ;
     rdfs:label "Fenchel"@de,
         "Fennel"@en,
@@ -3598,8 +3591,10 @@ cultivationtype:557 a :CultivationType ;
 
 cultivationtype:559 a :CultivationType ;
     rdfs:label "Saum auf Ackerflächen"@de,
+        "Margin on arable land"@en,
         "Ourlet sur terres assolées"@fr,
         "Striscia su superficie coltiva"@it ;
+    schema:alternateName "Bande sur surface assolée"@fr ;
     rdfs:subClassOf cultivationtype:1 .
 
 cultivationtype:56 a :CultivationType ;
@@ -3754,9 +3749,9 @@ cultivationtype:594 a :CultivationType ;
     :managementIntensity intensity:Extensive .
 
 cultivationtype:595 a :CultivationType ;
-    rdfs:label "Nicht beitragsberechtigte übrige offene Ackerfläche"@de,
-        "Autres terres ouvertes ne donnant pas droit aux contributions"@fr,
-        "Altra superficie coltiva aperta, non avente diritto ai contributi"@it ;
+    rdfs:label "Nicht beitragsberechtigte übrige offene Ackerfläche (BFF)"@de,
+        "Autres terres ouvertes ne donnant pas droit aux contributions (SPB)"@fr,
+        "Altra superficie coltiva aperta, non avente diritto ai contributi (SPB)"@it ;
     rdfs:comment "Nicht beitragsberechtigte übrige offene Ackerfläche (regionsspezifische Biodiversitätsförderfläche)"@de,
         "Autres terres ouvertes ne donnant pas droit aux contributions (surfaces de promotion de la biodiversité spécifiques à la région)"@fr,
         "Altra superficie coltiva aperta, non avente diritto ai contributi (superfici per la promozione della biodiversità specifiche di una regione)"@it ;
@@ -3844,9 +3839,9 @@ cultivationtype:617 a :CultivationType ;
     :managementIntensity intensity:Extensive .
 
 cultivationtype:618 a :CultivationType ;
-    rdfs:label "Waldweiden (ohne bewaldete Fläche)"@de,
-        "Pâturages boisés (sauf surfaces boisées)"@fr,
-        "Pascoli boschivi (senza i boschi)"@it ;
+    rdfs:label "Waldweiden (ohne bewaldete Fläche, BFF)"@de,
+        "Pâturages boisés (sauf surfaces boisées, SPB)"@fr,
+        "Pascoli boschivi (senza i boschi, SPB)"@it ;
     rdfs:subClassOf cultivationtype:3 .
 
 cultivationtype:621 a :CultivationType ;

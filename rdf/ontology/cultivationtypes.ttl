@@ -2536,9 +2536,9 @@ cultivationtype:594 a :CultivationType ;
     :managementIntensity intensity:Extensive .
 
 cultivationtype:595 a :CultivationType ;
-    schema:name "Nicht beitragsberechtigte übrige offene Ackerfläche"@de,
-        "Autres terres ouvertes ne donnant pas droit aux contributions"@fr,
-        "Altra superficie coltiva aperta, non avente diritto ai contributi"@it ;
+    schema:name "Nicht beitragsberechtigte übrige offene Ackerfläche (BFF)"@de,
+        "Autres terres ouvertes ne donnant pas droit aux contributions (SPB)"@fr,
+        "Altra superficie coltiva aperta, non avente diritto ai contributi (SPB)"@it ;
     schema:description "Nicht beitragsberechtigte übrige offene Ackerfläche (regionsspezifische Biodiversitätsförderfläche)"@de,
         "Autres terres ouvertes ne donnant pas droit aux contributions (surfaces de promotion de la biodiversité spécifiques à la région)"@fr,
         "Altra superficie coltiva aperta, non avente diritto ai contributi (superfici per la promozione della biodiversità specifiche di una regione)"@it ;
@@ -2612,9 +2612,9 @@ cultivationtype:617 a :CultivationType ;
     :managementIntensity intensity:Extensive .
 
 cultivationtype:618 a :CultivationType ;
-    schema:name "Waldweiden (ohne bewaldete Fläche)"@de,
-        "Pâturages boisés (sauf surfaces boisées)"@fr,
-        "Pascoli boschivi (senza i boschi)"@it ;
+    schema:name "Waldweiden (ohne bewaldete Fläche, BFF)"@de,
+        "Pâturages boisés (sauf surfaces boisées, SPB)"@fr,
+        "Pascoli boschivi (senza i boschi, SPB)"@it ;
     rdfs:subClassOf cultivationtype:3 .
 
 cultivationtype:619 a :DeprecatedCultivationType ;
