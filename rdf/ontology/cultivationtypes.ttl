@@ -3033,7 +3033,7 @@ cultivationtype:852 a :CultivationType ;
 
 cultivationtype:857 a :CultivationType ;
     schema:name "Hecken-, Feld- und Ufergehölze (mit Pufferstreifen)"@de,
-        "Haies, bosquets champêtres et berges boisées (avec la bande herbeuse)"@fr,
+        "Haies, bosquets champêtres et berges boisées (avec la bande tampon)"@fr,
         "Siepi, boschetti campestri e rivieraschi (con fascia tampone)"@it ;
     rdfs:subClassOf cultivationtype:9 .
 
