@@ -105,3 +105,51 @@ def test_no_empty_end_nodes(cultivation_graph, agis_graph, srppp_graph, naebi_gr
             warning_msg += f"  ... and {len(empty_leaves) - 15} more.\n"
             
         warnings.warn(warning_msg.strip(), UserWarning)
+
+def test_no_unsatisfiable_classes_via_disjointness(cultivation_graph):
+    """
+    Searches for classes that become empty sets (unsatisfiable) because they are 
+    directly or indirectly subclasses of two disjoint classes.
+    """
+    # This SPARQL query finds logical contradictions without requiring
+    # an external reasoner or an XML export.
+    query = """
+    PREFIX owl: <http://www.w3.org/2002/07/owl#>
+    PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+    PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+
+    SELECT DISTINCT ?brokenClass ?parent1 ?parent2
+    WHERE {
+        # 1. Find all pairs of classes that are mutually exclusive (disjoint)
+        {
+            ?parent1 owl:disjointWith ?parent2 .
+        } UNION {
+            ?parent2 owl:disjointWith ?parent1 .
+        } UNION {
+            # Also handle the owl:AllDisjointClasses lists used in the code
+            ?adc a owl:AllDisjointClasses ;
+                 owl:members ?list .
+            ?list rdf:rest*/rdf:first ?parent1 .
+            ?list rdf:rest*/rdf:first ?parent2 .
+            FILTER (?parent1 != ?parent2)
+        }
+
+        # 2. Find a class that is (directly or indirectly) a subclass of BOTH
+        ?brokenClass rdfs:subClassOf+ ?parent1 .
+        ?brokenClass rdfs:subClassOf+ ?parent2 .
+    }
+    """
+    
+    results = list(cultivation_graph.query(query))
+    
+    if results:
+        error_msg = f"Ontology Error: Found {len(results)} unsatisfiable classes (empty sets)!\n"
+        error_msg += "These classes are subclasses of disjoint (mutually exclusive) concepts:\n"
+        
+        for row in results:
+            b_class = str(row.brokenClass).split('/')[-1]
+            p1 = str(row.parent1).split('/')[-1]
+            p2 = str(row.parent2).split('/')[-1]
+            error_msg += f"  -> Class <{b_class}> contradictorily inherits from <{p1}> AND <{p2}>\n"
+            
+        pytest.fail(error_msg.strip())
