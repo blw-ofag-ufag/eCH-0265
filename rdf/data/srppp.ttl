@@ -1700,7 +1700,7 @@ psm:228 a :PlantProtectionCrop  ;
         "courges oléagineuses"@fr,
         "Zucca da olio"@it ;
     schema:version 0 ;
-    :cultivationType cultivationtype:228 .
+    :cultivationType cultivationtype:539 .
 
 psm:229 a :PlantProtectionCrop  ;
     schema:identifier "B7DE9539-35FD-4172-B72D-488EA12F2DF7" ;
