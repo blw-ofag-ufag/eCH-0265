@@ -76,7 +76,7 @@ shape:CultivationType a sh:NodeShape ;
     sh:property
     [
         sh:order 1 ;
-        sh:path sh:name ;
+        sh:path schema:name ;
         sh:name "Name"@en, "Name"@de ;
         sh:description "Name of this cultivation type."@en ;
         sh:minCount 1 ;
@@ -93,7 +93,7 @@ shape:CultivationType a sh:NodeShape ;
     ],
     [
         sh:order 3 ;
-        sh:path sh:description ;
+        sh:path schema:description ;
         sh:name "Description"@en, "Beschreibung"@de ;
         sh:description "Textual description of this cultivation type."@en ;
         sh:nodeKind sh:Literal ;
@@ -171,7 +171,7 @@ shape:DirectPaymentCrop a sh:NodeShape ;
             sh:order 2 ;
             sh:name "Bezeichnung"@de, "Name"@en ;
             sh:minCount 1 ;
-            sh:path sh:name ;
+            sh:path schema:name ;
             sh:nodeKind sh:Literal ;
             sh:datatype rdf:langString ;
         ],
@@ -240,7 +240,7 @@ shape:NutrientBalanceCrop a sh:NodeShape ;
                 "Name"@en ;
             sh:maxCount 1 ;
             sh:minCount 1 ;
-            sh:path sh:name ;
+            sh:path schema:name ;
             sh:nodeKind sh:Literal ;
             sh:datatype rdf:langString ;
         ],
@@ -354,7 +354,7 @@ shape:PlantProtectionCrop a sh:NodeShape ;
             sh:languageIn ( "de" "fr" "it" "en" ) ;
             sh:uniqueLang true ;
             sh:nodeKind sh:Literal ;
-            sh:path sh:name ;
+            sh:path schema:name ;
         ],
         [
             sh:order 3 ;
