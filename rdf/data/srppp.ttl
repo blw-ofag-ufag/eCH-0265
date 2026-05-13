@@ -953,7 +953,7 @@ psm:153 a :PlantProtectionCrop  ;
         "arbres de Noël"@fr,
         "Alberi di Natale"@it ;
     schema:version 0 ;
-    :cultivationType cultivationtype:153 .
+    :cultivationType cultivationtype:712 .
 
 psm:154 a :PlantProtectionCrop  ;
     schema:identifier "B9323B4D-249D-4CF3-A5DF-4FDA2E66532F" ;
@@ -1537,7 +1537,7 @@ psm:211 a :PlantProtectionCrop  ;
         "rhubarbe"@fr,
         "Rabarbaro"@it ;
     schema:version 0 ;
-    :cultivationType cultivationtype:211 .
+    :cultivationType cultivationtype:709 .
 
 psm:212 a :PlantProtectionCrop  ;
     schema:identifier "27FBFA25-5091-4D7E-9C96-3C0BC05B6474" ;
@@ -1700,7 +1700,7 @@ psm:228 a :PlantProtectionCrop  ;
         "courges oléagineuses"@fr,
         "Zucca da olio"@it ;
     schema:version 0 ;
-    :cultivationType cultivationtype:228 .
+    :cultivationType cultivationtype:539 .
 
 psm:229 a :PlantProtectionCrop  ;
     schema:identifier "B7DE9539-35FD-4172-B72D-488EA12F2DF7" ;
@@ -2322,7 +2322,7 @@ psm:290 a :PlantProtectionCrop  ;
         "choux"@fr,
         "Cavoli"@it ;
     schema:version 0 ;
-    :cultivationType cultivationtype:290 .
+    :cultivationType cultivationtype:25 .
 
 psm:291 a :PlantProtectionCrop  ;
     schema:identifier "B6669854-1833-4BBC-A931-E67505848EA7" ;
@@ -2956,7 +2956,7 @@ psm:51 a :PlantProtectionCrop  ;
         "asperge"@fr,
         "Asparagi"@it ;
     schema:version 0 ;
-    :cultivationType cultivationtype:51 .
+    :cultivationType cultivationtype:710 .
 
 psm:52 a :PlantProtectionCrop  ;
     schema:identifier "CEC488FC-D9AD-4515-A28E-DEEC6C807926" ;

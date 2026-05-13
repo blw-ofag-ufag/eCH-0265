@@ -687,7 +687,7 @@ naebi:124 a :NutrientBalanceCrop  ;
     :P2O5 50.0 ;
     :cultivationCategory cultivationtype:465 ;
     :cultivationSubCategory cultivationtype:24 ;
-    :cultivationType cultivationtype:1200 .
+    :cultivationType cultivationtype:1044 .
 
 naebi:125 a :NutrientBalanceCrop  ;
     schema:identifier "CROP_KOHRA" ;
@@ -852,7 +852,7 @@ naebi:138 a :NutrientBalanceCrop  ;
     :P2O5 50.0 ;
     :cultivationCategory cultivationtype:465 ;
     :cultivationSubCategory cultivationtype:467 ;
-    :cultivationType cultivationtype:1054 .
+    :cultivationType cultivationtype:287 .
 
 naebi:139 a :NutrientBalanceCrop  ;
     schema:identifier "CROP_LMNRM" ;
@@ -940,7 +940,7 @@ naebi:145 a :NutrientBalanceCrop  ;
     :P2O5 30.0 ;
     :cultivationCategory cultivationtype:465 ;
     :cultivationSubCategory cultivationtype:24 ;
-    :cultivationType cultivationtype:1060 .
+    :cultivationType cultivationtype:295 .
 
 naebi:146 a :NutrientBalanceCrop  ;
     schema:identifier "CROP_MRSHW" ;
@@ -1127,7 +1127,7 @@ naebi:160 a :NutrientBalanceCrop  ;
     :P2O5 30.0 ;
     :cultivationCategory cultivationtype:465 ;
     :cultivationSubCategory cultivationtype:467 ;
-    :cultivationType cultivationtype:1069 .
+    :cultivationType cultivationtype:334 .
 
 naebi:161 a :NutrientBalanceCrop  ;
     schema:identifier "CROP_ORNSTB" ;
@@ -1336,7 +1336,7 @@ naebi:178 a :NutrientBalanceCrop  ;
     :P2O5 40.0 ;
     :cultivationCategory cultivationtype:465 ;
     :cultivationSubCategory cultivationtype:24 ;
-    :cultivationType cultivationtype:1084 .
+    :cultivationType cultivationtype:206 .
 
 naebi:179 a :NutrientBalanceCrop  ;
     schema:identifier "CROP_PMEDI" ;
@@ -1765,7 +1765,7 @@ naebi:212 a :NutrientBalanceCrop  ;
     :P2O5 30.0 ;
     :cultivationCategory cultivationtype:465 ;
     :cultivationSubCategory cultivationtype:467 ;
-    :cultivationType cultivationtype:211 .
+    :cultivationType cultivationtype:709 .
 
 naebi:213 a :NutrientBalanceCrop  ;
     schema:identifier "CROP_RICE" ;
@@ -1831,7 +1831,7 @@ naebi:218 a :NutrientBalanceCrop  ;
     :P2O5 0.0 ;
     :cultivationCategory cultivationtype:464 ;
     :cultivationSubCategory cultivationtype:463 ;
-    :cultivationType cultivationtype:308 .
+    :cultivationType cube:Undefined .
 
 naebi:219 a :NutrientBalanceCrop  ;
     schema:identifier "CROP_RSMRY" ;
@@ -2556,7 +2556,7 @@ naebi:279 a :NutrientBalanceCrop  ;
     :P2O5 40.0 ;
     :cultivationCategory cultivationtype:465 ;
     :cultivationSubCategory cultivationtype:24 ;
-    :cultivationType cultivationtype:1148 .
+    :cultivationType cultivationtype:132 .
 
 naebi:28 a :NutrientBalanceCrop  ;
     schema:identifier "CROP_BRNTT" ;
@@ -2710,7 +2710,7 @@ naebi:291 a :NutrientBalanceCrop  ;
     :P2O5 1.43 ;
     :cultivationCategory cultivationtype:1 ;
     :cultivationSubCategory cultivationtype:17 ;
-    :cultivationType cultivationtype:1129 .
+    :cultivationType cultivationtype:190 .
 
 naebi:292 a :NutrientBalanceCrop  ;
     schema:identifier "CROP_WKORN" ;
@@ -3535,7 +3535,7 @@ naebi:77 a :NutrientBalanceCrop  ;
     :P2O5 0.0 ;
     :cultivationCategory cultivationtype:1 ;
     :cultivationSubCategory cultivationtype:462 ;
-    :cultivationType cultivationtype:1265 .
+    :cultivationType cultivationtype:559 .
 
 naebi:78 a :NutrientBalanceCrop  ;
     schema:identifier "CROP_FLLND" ;

@@ -714,7 +714,7 @@ cultivationtype:1099 a owl:Class ;
     rdfs:label "Rucola, 1 Schnitt (geschützter Anbau)"@de,
         "Roquette (culture protégée)"@fr,
         "Rucola (coltura protetta)"@it ;
-    rdfs:subClassOf cultivationtype:1113 .
+    rdfs:subClassOf cultivationtype:278 .
 
 cultivationtype:110 a owl:Class ;
     rdfs:label "Artischocken"@de,
@@ -726,7 +726,7 @@ cultivationtype:1100 a owl:Class ;
     rdfs:label "Rucola, 2 Schnitte (geschützter Anbau)"@de,
         "Roquette, 2 coupes (culture protégée)"@fr,
         "Rucola, 2 tagli (coltura protetta)"@it ;
-    rdfs:subClassOf cultivationtype:1113 .
+    rdfs:subClassOf cultivationtype:1099 .
 
 cultivationtype:1101 a owl:Class ;
     rdfs:label "Nicht aufgeführte Ackerkulturen, Leguminosen"@de,
@@ -798,7 +798,7 @@ cultivationtype:1111 a owl:Class ;
     rdfs:label "Winterraps in 62a Nitrat-Projekt"@de,
         "Colza d'automne en projet nitrate 62a"@fr,
         "Colza autunnale in progetto nitrati 62a"@it ;
-    rdfs:subClassOf cultivationtype:1129 .
+    rdfs:subClassOf cultivationtype:190 .
 
 cultivationtype:1112 a owl:Class ;
     rdfs:label "Tabak Burley"@de,
@@ -2178,8 +2178,8 @@ cultivationtype:205 a owl:Class ;
 cultivationtype:206 a owl:Class ;
     rdfs:label "Spitzwegerich"@de,
         "Ribwort plantain"@en,
-        "plantain lancéolé"@fr,
-        "piantaggine lanciuola"@it ;
+        "Plantain lancéolé"@fr,
+        "Piantaggine lanciuola"@it ;
     rdfs:subClassOf cultivationtype:706 .
 
 cultivationtype:207 a owl:Class ;
@@ -2393,6 +2393,7 @@ cultivationtype:25 a owl:Class ;
     rdfs:label "Kohlarten"@de,
         "choux"@fr,
         "Specie di cavoli"@it ;
+    schema:alternateName "Kohlgemüse"@de ;
     rdfs:subClassOf cultivationtype:48 .
 
 cultivationtype:250 a owl:Class ;
@@ -2509,8 +2510,12 @@ cultivationtype:269 a owl:Class ;
 
 cultivationtype:270 a owl:Class ;
     rdfs:label "Peperoni"@de,
-        "poivron"@fr,
-        "Peperone"@it ;
+        "Hot Pepper"@en,
+        "Piment"@fr,
+        "Peperoncino"@it ;
+    schema:alternateName "Chili"@de,
+        "Peperoncini"@de,
+        "Poivron"@fr ;
     rdfs:subClassOf cultivationtype:335 .
 
 cultivationtype:271 a owl:Class ;
@@ -2591,8 +2596,17 @@ cultivationtype:284 a owl:Class ;
 
 cultivationtype:287 a owl:Class ;
     rdfs:label "Melisse"@de,
-        "mélisse"@fr,
+        "Lemon balm"@en,
+        "Mélisse"@fr,
         "Melissa"@it ;
+    schema:alternateName "Zitronenmelisse"@de,
+        "Balm mint"@en,
+        "Common balm"@en,
+        "Mélisse citronnelle"@fr,
+        "Mélisse officinale"@fr,
+        "Cedronella"@it,
+        "Erba limona"@it,
+        "Melissa vera"@it ;
     rdfs:subClassOf cultivationtype:706 .
 
 cultivationtype:288 a owl:Class ;
@@ -2856,9 +2870,18 @@ cultivationtype:331 a owl:Class ;
 cultivationtype:334 a owl:Class ;
     rdfs:label "Oregano"@de,
         "Oregano"@en,
-        "origan"@fr,
-        "origano"@it ;
-    rdfs:subClassOf cultivationtype:67 .
+        "Origan"@fr,
+        "Origano"@it ;
+    schema:alternateName "Echter Dost"@de,
+        "Gemeiner Dost"@de,
+        "Wilder Majoran"@de,
+        "Wild marjoram"@en,
+        "Marjolaine sauvage"@fr,
+        "Origan commun"@fr,
+        "Maggiorana selvatica"@it,
+        "Origano comune"@it ;
+    rdfs:subClassOf cultivationtype:67,
+        cultivationtype:706 .
 
 cultivationtype:335 a owl:Class ;
     rdfs:label "Paprika"@de,
@@ -3397,7 +3420,7 @@ cultivationtype:527 a owl:Class ;
     rdfs:label "Winterraps zur Speiseölgewinnung"@de,
         "Colza d’automne destiné à la fabrication d’huile comestible"@fr,
         "Colza autunnale per l’estrazione di olio commestibile"@it ;
-    rdfs:subClassOf cultivationtype:1129 .
+    rdfs:subClassOf cultivationtype:190 .
 
 cultivationtype:528 a owl:Class ;
     rdfs:label "Soja"@de,
@@ -3459,8 +3482,17 @@ cultivationtype:538 a owl:Class ;
 
 cultivationtype:539 a owl:Class ;
     rdfs:label "Ölkürbisse"@de,
+        "Oil pumpkins"@en,
         "Courges à huile"@fr,
         "Zucche per l’estrazione di olio"@it ;
+    schema:alternateName "Ölkürbis"@de,
+        "Oilseed pumpkin"@en,
+        "Courge à graines"@fr,
+        "Courge à huile"@fr,
+        "courges oléagineuses"@fr,
+        "Zucca da olio"@it,
+        "Zucca da seme"@it ;
+    schema:image <https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/Steirischer_%C3%96lk%C3%BCrbis_Feld_Allhaming_20200911b.jpg/1280px-Steirischer_%C3%96lk%C3%BCrbis_Feld_Allhaming_20200911b.jpg> ;
     rdfs:subClassOf cultivationtype:1093 .
 
 cultivationtype:540 a owl:Class ;
@@ -3587,8 +3619,10 @@ cultivationtype:557 a owl:Class ;
 
 cultivationtype:559 a owl:Class ;
     rdfs:label "Saum auf Ackerflächen"@de,
+        "Margin on arable land"@en,
         "Ourlet sur terres assolées"@fr,
         "Striscia su superficie coltiva"@it ;
+    schema:alternateName "Bande sur surface assolée"@fr ;
     rdfs:subClassOf cultivationtype:1 .
 
 cultivationtype:56 a owl:Class ;
@@ -3723,7 +3757,7 @@ cultivationtype:591 a owl:Class ;
     rdfs:label "Winterraps als nachwachsender Rohstoff"@de,
         "Colza d’automne comme matière première renouvelable"@fr,
         "Colza autunnale quale materia prima rinnovabile"@it ;
-    rdfs:subClassOf cultivationtype:1129 .
+    rdfs:subClassOf cultivationtype:190 .
 
 cultivationtype:592 a owl:Class ;
     rdfs:label "Sonnenblumen als nachwachsender Rohstoff"@de,
@@ -4018,15 +4052,21 @@ cultivationtype:708 a owl:Class ;
 
 cultivationtype:709 a owl:Class ;
     rdfs:label "Rhabarber"@de,
+        "Rhubarb"@en,
         "Rhubarbe"@fr,
         "Rabarbaro"@it ;
-    rdfs:subClassOf cultivationtype:750 .
+    schema:alternateName "Garden rhubarb"@en,
+        "Pieplant"@en ;
+    rdfs:subClassOf cultivationtype:120,
+        cultivationtype:750 .
 
 cultivationtype:710 a owl:Class ;
     rdfs:label "Spargel"@de,
         "Asperges"@fr,
         "Asparagi"@it ;
-    rdfs:subClassOf cultivationtype:750 .
+    rdfs:subClassOf cultivationtype:26,
+        cultivationtype:465,
+        cultivationtype:750 .
 
 cultivationtype:711 a owl:Class ;
     rdfs:label "Pilze (Freiland)"@de,
@@ -4036,9 +4076,15 @@ cultivationtype:711 a owl:Class ;
 
 cultivationtype:712 a owl:Class ;
     rdfs:label "Christbäume"@de,
+        "Christmas trees"@en,
         "Sapins de Noël"@fr,
         "Alberelli di Natale"@it ;
-    rdfs:subClassOf cultivationtype:750 .
+    schema:alternateName "Weihnachtsbäume"@de,
+        "Arbres de Noël"@fr,
+        "Alberi di Natale"@it ;
+    rdfs:subClassOf cultivationtype:118,
+        cultivationtype:72,
+        cultivationtype:750 .
 
 cultivationtype:713 a owl:Class ;
     rdfs:label "Baumschule von Forstpflanzen ausserhalb der Forstzone"@de,
@@ -4340,7 +4386,7 @@ cultivationtype:852 a owl:Class ;
 
 cultivationtype:857 a owl:Class ;
     rdfs:label "Hecken-, Feld- und Ufergehölze (mit Pufferstreifen)"@de,
-        "Haies, bosquets champêtres et berges boisées (avec la bande herbeuse)"@fr,
+        "Haies, bosquets champêtres et berges boisées (avec la bande tampon)"@fr,
         "Siepi, boschetti campestri e rivieraschi (con fascia tampone)"@it ;
     rdfs:subClassOf cultivationtype:9 .
 
@@ -4638,8 +4684,7 @@ cultivationtype:999 a owl:Class ;
 
 cultivationtype:517 a owl:DeprecatedClass ;
     rdfs:label "Getreide für die Saatgutproduktion"@de,
-        "Semences de céréales"@fr,
-        "Mais da semina (coltivazione contrattuale)"@it ;
+        "Semences de céréales"@fr ;
     rdfs:subClassOf cultivationtype:14 .
 
 cultivationtype:532 a owl:DeprecatedClass ;

@@ -218,6 +218,7 @@ cultivationtype:25 a :CultivationType ;
     schema:name "Kohlarten"@de,
         "choux"@fr,
         "Specie di cavoli"@it ;
+    schema:alternateName "Kohlgemüse"@de ;
     rdfs:subClassOf cultivationtype:48 .
 
 cultivationtype:26 a :CultivationType ;
@@ -341,12 +342,6 @@ cultivationtype:48 a :CultivationType ;
         "crucifères (Brassicaceae)"@fr,
         "Crocifere (Brassicacee)"@it ;
     rdfs:subClassOf cultivationtype:22 .
-
-cultivationtype:51 a :CultivationType ;
-    schema:name "Spargel"@de,
-        "asperge"@fr,
-        "Asparagi"@it ;
-    rdfs:subClassOf cultivationtype:26 .
 
 cultivationtype:53 a :CultivationType ;
     schema:name "Barbarakraut"@de,
@@ -828,13 +823,6 @@ cultivationtype:152 a :CultivationType ;
         "Crescione"@it ;
     rdfs:subClassOf cultivationtype:48 .
 
-cultivationtype:153 a :CultivationType ;
-    schema:name "Weihnachtsbäume"@de,
-        "arbres de Noël"@fr,
-        "Alberi di Natale"@it ;
-    rdfs:subClassOf cultivationtype:118,
-        cultivationtype:72 .
-
 cultivationtype:154 a :CultivationType ;
     schema:name "Broccoli"@de,
         "brocoli"@fr,
@@ -1075,8 +1063,8 @@ cultivationtype:205 a :CultivationType ;
 cultivationtype:206 a :CultivationType ;
     schema:name "Spitzwegerich"@de,
         "Ribwort plantain"@en,
-        "plantain lancéolé"@fr,
-        "piantaggine lanciuola"@it ;
+        "Plantain lancéolé"@fr,
+        "Piantaggine lanciuola"@it ;
     rdfs:subClassOf cultivationtype:706 .
 
 cultivationtype:207 a :CultivationType ;
@@ -1097,12 +1085,6 @@ cultivationtype:209 a :CultivationType ;
         "valérianacées"@fr,
         "Valerianacee"@it ;
     rdfs:subClassOf cultivationtype:22 .
-
-cultivationtype:211 a :CultivationType ;
-    schema:name "Rhabarber"@de,
-        "rhubarbe"@fr,
-        "Rabarbaro"@it ;
-    rdfs:subClassOf cultivationtype:120 .
 
 cultivationtype:213 a :CultivationType ;
     schema:name "Ertragsreben"@de,
@@ -1175,12 +1157,6 @@ cultivationtype:225 a :CultivationType ;
         "courgette"@fr,
         "Zucchine"@it ;
     rdfs:subClassOf cultivationtype:40 .
-
-cultivationtype:228 a :CultivationType ;
-    schema:name "Ölkürbisse"@de,
-        "courges oléagineuses"@fr,
-        "Zucca da olio"@it ;
-    rdfs:subClassOf cultivationtype:1093 .
 
 cultivationtype:229 a :CultivationType ;
     schema:name "Schnittmangold"@de,
@@ -1385,8 +1361,12 @@ cultivationtype:269 a :CultivationType ;
 
 cultivationtype:270 a :CultivationType ;
     schema:name "Peperoni"@de,
-        "poivron"@fr,
-        "Peperone"@it ;
+        "Hot Pepper"@en,
+        "Piment"@fr,
+        "Peperoncino"@it ;
+    schema:alternateName "Poivron"@fr,
+        "Peperoncini"@de,
+        "Chili"@de ;
     rdfs:subClassOf cultivationtype:335 .
 
 cultivationtype:271 a :CultivationType ;
@@ -1461,8 +1441,17 @@ cultivationtype:284 a :CultivationType ;
 
 cultivationtype:287 a :CultivationType ;
     schema:name "Melisse"@de,
-        "mélisse"@fr,
-        "Melissa"@it ;
+        "Mélisse"@fr,
+        "Melissa"@it,
+        "Lemon balm"@en ;
+    schema:alternateName "Zitronenmelisse"@de,
+        "Mélisse citronnelle"@fr,
+        "Mélisse officinale"@fr,
+        "Melissa vera"@it,
+        "Cedronella"@it,
+        "Erba limona"@it,
+        "Balm mint"@en,
+        "Common balm"@en ;
     rdfs:subClassOf cultivationtype:706 .
 
 cultivationtype:288 a :CultivationType ;
@@ -1476,12 +1465,6 @@ cultivationtype:289 a :CultivationType ;
         "rondini"@fr,
         "Rondini"@it ;
     rdfs:subClassOf cultivationtype:40 .
-
-cultivationtype:290 a :CultivationType ;
-    schema:name "Kohlgemüse"@de,
-        "choux"@fr,
-        "Cavoli"@it ;
-    rdfs:subClassOf cultivationtype:22 .
 
 cultivationtype:294 a :CultivationType ;
     schema:name "Kerbelrübe"@de,
@@ -1695,9 +1678,18 @@ cultivationtype:331 a :CultivationType ;
 cultivationtype:334 a :CultivationType ;
     schema:name "Oregano"@de,
         "Oregano"@en,
-        "origan"@fr,
-        "origano"@it ;
-    rdfs:subClassOf cultivationtype:67 .
+        "Origan"@fr,
+        "Origano"@it ;
+    schema:alternateName "Wilder Majoran"@de,
+        "Echter Dost"@de,
+        "Gemeiner Dost"@de,
+        "Wild marjoram"@en,
+        "Origan commun"@fr,
+        "Marjolaine sauvage"@fr,
+        "Origano comune"@it,
+        "Maggiorana selvatica"@it ;
+    rdfs:subClassOf cultivationtype:67,
+        cultivationtype:706 .
 
 cultivationtype:335 a :CultivationType ;
     schema:name "Paprika"@de,
@@ -2101,8 +2093,7 @@ cultivationtype:516 a :CultivationType ;
 
 cultivationtype:517 a :DeprecatedCultivationType ;
     schema:name "Getreide für die Saatgutproduktion"@de,
-        "Semences de céréales"@fr,
-        "Mais da semina (coltivazione contrattuale)"@it ;
+        "Semences de céréales"@fr ;
     rdfs:subClassOf cultivationtype:14 .
 
 cultivationtype:519 a :CultivationType ;
@@ -2159,7 +2150,7 @@ cultivationtype:527 a :CultivationType ;
     schema:name "Winterraps zur Speiseölgewinnung"@de,
         "Colza d’automne destiné à la fabrication d’huile comestible"@fr,
         "Colza autunnale per l’estrazione di olio commestibile"@it ;
-    rdfs:subClassOf cultivationtype:1129 .
+    rdfs:subClassOf cultivationtype:190 .
 
 cultivationtype:528 a :CultivationType ;
     schema:name "Soja"@de,
@@ -2228,7 +2219,16 @@ cultivationtype:538 a :CultivationType ;
 cultivationtype:539 a :CultivationType ;
     schema:name "Ölkürbisse"@de,
         "Courges à huile"@fr,
-        "Zucche per l’estrazione di olio"@it ;
+        "Zucche per l’estrazione di olio"@it,
+        "Oil pumpkins"@en ;
+    schema:alternateName "Ölkürbis"@de,
+        "courges oléagineuses"@fr,
+        "Courge à huile"@fr,
+        "Courge à graines"@fr,
+        "Zucca da olio"@it,
+        "Zucca da seme"@it,
+        "Oilseed pumpkin"@en ;
+    schema:image <https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/Steirischer_%C3%96lk%C3%BCrbis_Feld_Allhaming_20200911b.jpg/1280px-Steirischer_%C3%96lk%C3%BCrbis_Feld_Allhaming_20200911b.jpg> ;
     rdfs:subClassOf cultivationtype:1093 .
 
 cultivationtype:540 a :CultivationType ;
@@ -2353,8 +2353,10 @@ cultivationtype:558 a :DeprecatedCultivationType ;
 
 cultivationtype:559 a :CultivationType ;
     schema:name "Saum auf Ackerflächen"@de,
+        "Margin on arable land"@en,
         "Ourlet sur terres assolées"@fr,
         "Striscia su superficie coltiva"@it ;
+    schema:alternateName "Bande sur surface assolée"@fr ;
     rdfs:subClassOf cultivationtype:1 .
 
 cultivationtype:561 a :DeprecatedCultivationType ;
@@ -2515,7 +2517,7 @@ cultivationtype:591 a :CultivationType ;
     schema:name "Winterraps als nachwachsender Rohstoff"@de,
         "Colza d’automne comme matière première renouvelable"@fr,
         "Colza autunnale quale materia prima rinnovabile"@it ;
-    rdfs:subClassOf cultivationtype:1129 .
+    rdfs:subClassOf cultivationtype:190 .
 
 cultivationtype:592 a :CultivationType ;
     schema:name "Sonnenblumen als nachwachsender Rohstoff"@de,
@@ -2534,9 +2536,9 @@ cultivationtype:594 a :CultivationType ;
     :managementIntensity intensity:Extensive .
 
 cultivationtype:595 a :CultivationType ;
-    schema:name "Nicht beitragsberechtigte übrige offene Ackerfläche"@de,
-        "Autres terres ouvertes ne donnant pas droit aux contributions"@fr,
-        "Altra superficie coltiva aperta, non avente diritto ai contributi"@it ;
+    schema:name "Nicht beitragsberechtigte übrige offene Ackerfläche (BFF)"@de,
+        "Autres terres ouvertes ne donnant pas droit aux contributions (SPB)"@fr,
+        "Altra superficie coltiva aperta, non avente diritto ai contributi (SPB)"@it ;
     schema:description "Nicht beitragsberechtigte übrige offene Ackerfläche (regionsspezifische Biodiversitätsförderfläche)"@de,
         "Autres terres ouvertes ne donnant pas droit aux contributions (surfaces de promotion de la biodiversité spécifiques à la région)"@fr,
         "Altra superficie coltiva aperta, non avente diritto ai contributi (superfici per la promozione della biodiversità specifiche di una regione)"@it ;
@@ -2610,9 +2612,9 @@ cultivationtype:617 a :CultivationType ;
     :managementIntensity intensity:Extensive .
 
 cultivationtype:618 a :CultivationType ;
-    schema:name "Waldweiden (ohne bewaldete Fläche)"@de,
-        "Pâturages boisés (sauf surfaces boisées)"@fr,
-        "Pascoli boschivi (senza i boschi)"@it ;
+    schema:name "Waldweiden (ohne bewaldete Fläche, BFF)"@de,
+        "Pâturages boisés (sauf surfaces boisées, SPB)"@fr,
+        "Pascoli boschivi (senza i boschi, SPB)"@it ;
     rdfs:subClassOf cultivationtype:3 .
 
 cultivationtype:619 a :DeprecatedCultivationType ;
@@ -2766,14 +2768,20 @@ cultivationtype:708 a :CultivationType ;
 cultivationtype:709 a :CultivationType ;
     schema:name "Rhabarber"@de,
         "Rhubarbe"@fr,
-        "Rabarbaro"@it ;
-    rdfs:subClassOf cultivationtype:750 .
+        "Rabarbaro"@it,
+        "Rhubarb"@en ;
+    schema:alternateName "Garden rhubarb"@en,
+        "Pieplant"@en ;
+    rdfs:subClassOf cultivationtype:120,
+        cultivationtype:750 .
 
 cultivationtype:710 a :CultivationType ;
     schema:name "Spargel"@de,
         "Asperges"@fr,
         "Asparagi"@it ;
-    rdfs:subClassOf cultivationtype:750 .
+    rdfs:subClassOf cultivationtype:26,
+        cultivationtype:465,
+        cultivationtype:750 .
 
 cultivationtype:711 a :CultivationType ;
     schema:name "Pilze (Freiland)"@de,
@@ -2784,8 +2792,14 @@ cultivationtype:711 a :CultivationType ;
 cultivationtype:712 a :CultivationType ;
     schema:name "Christbäume"@de,
         "Sapins de Noël"@fr,
-        "Alberelli di Natale"@it ;
-    rdfs:subClassOf cultivationtype:750 .
+        "Alberelli di Natale"@it,
+        "Christmas trees"@en ;
+    schema:alternateName "Weihnachtsbäume"@de,
+        "Arbres de Noël"@fr,
+        "Alberi di Natale"@it ;
+    rdfs:subClassOf cultivationtype:750,
+        cultivationtype:118,
+        cultivationtype:72 .
 
 cultivationtype:713 a :CultivationType ;
     schema:name "Baumschule von Forstpflanzen ausserhalb der Forstzone"@de,
@@ -3019,7 +3033,7 @@ cultivationtype:852 a :CultivationType ;
 
 cultivationtype:857 a :CultivationType ;
     schema:name "Hecken-, Feld- und Ufergehölze (mit Pufferstreifen)"@de,
-        "Haies, bosquets champêtres et berges boisées (avec la bande herbeuse)"@fr,
+        "Haies, bosquets champêtres et berges boisées (avec la bande tampon)"@fr,
         "Siepi, boschetti campestri e rivieraschi (con fascia tampone)"@it ;
     rdfs:subClassOf cultivationtype:9 .
 
@@ -3486,10 +3500,6 @@ cultivationtype:1053 a :CultivationType ;
     rdfs:subClassOf cultivationtype:15,
         cultivationtype:24 .
 
-cultivationtype:1054 a :CultivationType ;
-    schema:name "Zitronenmelisse"@de, "Mélisse citronnelle"@fr, "Melissa"@it ;
-    rdfs:subClassOf cultivationtype:706 .
-
 cultivationtype:1055 a :CultivationType ;
     schema:name "Indianernessel"@de, "Monarde"@fr, "Monarda"@it ;
     schema:alternateName "Rosenmelisse"@de ;
@@ -3510,10 +3520,6 @@ cultivationtype:1058 a :CultivationType ;
 cultivationtype:1059 a :CultivationType ;
     schema:name "Andorn"@de, "Marrube blanc"@fr, "Marrubio"@it ;
     rdfs:subClassOf cultivationtype:706 .
-
-cultivationtype:1060 a :CultivationType ;
-    schema:name "Majoran"@de, "Marjolaine"@fr, "Maggiorana"@it ;
-    rdfs:subClassOf cultivationtype:705 .
 
 cultivationtype:1061 a :CultivationType ;
     schema:name "Eibisch"@de, "Guimauve"@fr, "Altea"@it ;
@@ -3551,10 +3557,6 @@ cultivationtype:1067 a :CultivationType ;
 cultivationtype:1068 a :CultivationType ;
     schema:name "Orangenminze"@de, "Menthe orange"@fr, "Menta arancio"@it ;
     schema:alternateName "Bergamottminze"@de ;
-    rdfs:subClassOf cultivationtype:706 .
-
-cultivationtype:1069 a :CultivationType ;
-    schema:name "Oregano"@de, "Origan"@fr, "Origano"@it ;
     rdfs:subClassOf cultivationtype:706 .
 
 cultivationtype:1070 a :CultivationType ;
@@ -3655,12 +3657,6 @@ cultivationtype:1083 a :CultivationType ;
         "Prugneto/Susineto (senza specifica di resa)"@it ;
     rdfs:subClassOf cultivationtype:113 .
 
-cultivationtype:1084 a :CultivationType ;
-    schema:name "Spitzwegerich"@de,
-        "Plantain lancéolé"@fr,
-        "Piantaggine lanciuola"@it ;
-    rdfs:subClassOf cultivationtype:35 .
-
 cultivationtype:1085 a :CultivationType ;
     schema:name "Mittelintensive Weiden und Mähweiden"@de,
         "Pâturages et pâturages de fauche moyennement intensifs"@fr,
@@ -3758,13 +3754,13 @@ cultivationtype:1099 a :CultivationType ;
     schema:name "Rucola, 1 Schnitt (geschützter Anbau)"@de,
         "Roquette (culture protégée)"@fr,
         "Rucola (coltura protetta)"@it ;
-    rdfs:subClassOf cultivationtype:1113 .
+    rdfs:subClassOf cultivationtype:278 .
 
 cultivationtype:1100 a :CultivationType ;
     schema:name "Rucola, 2 Schnitte (geschützter Anbau)"@de,
         "Roquette, 2 coupes (culture protégée)"@fr,
         "Rucola, 2 tagli (coltura protetta)"@it ;
-    rdfs:subClassOf cultivationtype:1113 .
+    rdfs:subClassOf cultivationtype:1099 .
 
 cultivationtype:1101 a :CultivationType ;
     schema:name "Nicht aufgeführte Ackerkulturen, Leguminosen"@de,
@@ -3830,19 +3826,13 @@ cultivationtype:1111 a :CultivationType ;
     schema:name "Winterraps in 62a Nitrat-Projekt"@de,
         "Colza d'automne en projet nitrate 62a"@fr,
         "Colza autunnale in progetto nitrati 62a"@it ;
-    rdfs:subClassOf cultivationtype:1129 .
+    rdfs:subClassOf cultivationtype:190 .
 
 cultivationtype:1112 a :CultivationType ;
     schema:name "Tabak Burley"@de,
         "Tabac Burley"@fr,
         "Tabacco Burley"@it ;
     rdfs:subClassOf cultivationtype:541 .
-
-cultivationtype:1113 a :CultivationType ;
-    schema:name "Rucola (geschützter Anbau)"@de,
-        "Roquette (culture protégée)"@fr,
-        "Rucola (coltura protetta)"@it ;
-    rdfs:subClassOf cultivationtype:278 .
 
 cultivationtype:1114 a :CultivationType ;
     schema:name "Spinat, 1 Schnitt, nach Mitte April gesät"@de,
@@ -3937,12 +3927,6 @@ cultivationtype:1128 a :CultivationType ;
         "Fraises pluriannuelles"@fr,
         "Fragole pluriennali"@it ;
     rdfs:subClassOf cultivationtype:223 .
-
-cultivationtype:1129 a :CultivationType ;
-    schema:name "Winterraps"@de,
-        "Colza d'automne"@fr,
-        "Colza autunnale"@it ;
-    rdfs:subClassOf cultivationtype:494 .
 
 cultivationtype:1130 a :CultivationType ;
     schema:name "Erdbeeren-Jungpflanzen (Tray-Pflanzen)"@de,
@@ -4062,12 +4046,6 @@ cultivationtype:1147 a :CultivationType ;
     schema:alternateName "Rüben Herbst-, Mai-"@de ;
     rdfs:subClassOf cultivationtype:56 .
 
-cultivationtype:1148 a :CultivationType ;
-    schema:name "Cima di Rapa"@de,
-        "Cima di rapa"@fr,
-        "Cima di rapa"@it ;
-    rdfs:subClassOf cultivationtype:48 .
-
 cultivationtype:1149 a :CultivationType ;
     schema:name "Bibernelle"@de,
         "Pimprenelle"@fr,
@@ -4113,12 +4091,6 @@ cultivationtype:1155 a :CultivationType ;
         "Prato naturale intensivo"@it ;
     rdfs:subClassOf cultivationtype:2 ;
     :managementIntensity intensity:Intensive .
-
-cultivationtype:1156 a :CultivationType ;
-    schema:name "Winterspinat, 1 Schnitt"@de,
-        "Épinard d'hiver, 1 coupe"@fr,
-        "Spinaci invernali, 1 taglio"@it ;
-    rdfs:subClassOf cultivationtype:1207 .
 
 cultivationtype:1157 a :CultivationType ;
     schema:name "Winterspinat, 2 Schnitte"@de,
@@ -4275,13 +4247,6 @@ cultivationtype:1195 a :CultivationType ;
         "Herbes, vivaces, petites"@fr,
         "Erbe aromatiche, perenni, piccole"@it ;
     rdfs:subClassOf cultivationtype:1287 .
-
-cultivationtype:1200 a :CultivationType ;
-    schema:name "Verarbeitungs-Kohlrabi"@de,
-        "Kohlrabi, processing"@en,
-        "Chou-rave de transformation"@fr,
-        "Cavolo rapa da trasformazione"@it ;
-    rdfs:subClassOf cultivationtype:86 .
 
 cultivationtype:1204 a :CultivationType ;
     schema:name "Nussbäume, 0.01 ha/Baum"@de,
@@ -4609,13 +4574,6 @@ cultivationtype:1264 a :CultivationType ;
         "Lino da fibra"@it ;
     rdfs:subClassOf cultivationtype:534 .
 
-cultivationtype:1265 a :CultivationType ;
-    schema:name "Saum auf Ackerfläche"@de,
-        "Margin on arable land"@en,
-        "Bande sur surface assolée"@fr,
-        "Striscia su superficie coltiva"@it ;
-    rdfs:subClassOf cultivationtype:1 .
-
 cultivationtype:1266 a :CultivationType ;
     schema:name "Fenchel"@de,
         "Fennel"@en,
@@ -4811,7 +4769,7 @@ cultivationtype:1292 a :CultivationType ;
         cultivationtype:590
     ) .
 
-# Disjoint AGIS subclasses of cultivationtype:1129
+# Disjoint AGIS subclasses of cultivationtype:190
 [] a owl:AllDisjointClasses ;
     owl:members (
         cultivationtype:527
