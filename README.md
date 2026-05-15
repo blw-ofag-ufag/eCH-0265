@@ -106,7 +106,9 @@ More examples are available in [`src/sparql/queries`](src/sparql/queries). Note 
 In order to automatically retrieve data from LINDAS, you can send a POST request to the LINDAS endpoint, passing the SPARQL query as a parameter.
 
 ``` sh
+# define any query you want...
+query="SELECT * FROM <https://lindas.admin.ch/foag/crops> WHERE { ?s ?p ?o }"
 curl -G "https://lindas.admin.ch/query" \
-     --data-urlencode "query=SELECT * FROM <https://lindas.admin.ch/foag/crops> WHERE { ?s ?p ?o }" \
-     -H "Accept: text/csv"
+     --data-urlencode "query=$query" \
+     -H "Accept: application/json"
 ```
