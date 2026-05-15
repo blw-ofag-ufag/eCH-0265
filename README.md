@@ -112,3 +112,5 @@ curl -G "https://lindas.admin.ch/query" \
      --data-urlencode "query=$query" \
      -H "Accept: application/json"
 ```
+
+Depending on your integration needs, you can adjust the accept header to retrieve the data in several possible formats, including JSON (`application/json`), XML (`application/sparql-results+xml`) or CSV (`text/csv`).
