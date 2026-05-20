@@ -53,7 +53,6 @@ The data integration pipeline uses all the R and python scripts in the `/scripts
     ``` sh
     python -m venv venv
     source venv/bin/activate  # On Windows use: venv\Scripts\activate
-    pip upgrade pip
     pip install --upgrade pip
     pip install -r src/python/requirements.txt
     ```
