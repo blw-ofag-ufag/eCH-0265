@@ -5,6 +5,8 @@ import pytest
 from owlready2 import get_ontology, sync_reasoner, OwlReadyInconsistentOntologyError, Nothing
 from pathlib import Path
 from rdflib import Graph
+from rdflib.graph import ReadOnlyGraphAggregate
+from rdflib.namespace import RDFS, OWL, RDF
 
 @pytest.fixture
 def translated_ontology_path(cultivation_graph, core_graph):
@@ -60,14 +62,9 @@ def test_no_empty_end_nodes(cultivation_graph, agis_graph, srppp_graph, naebi_gr
     crop instance in the connected data systems (AGIS, SRPPP, NAEBI).
     Issues a warning if unused leaf nodes are found.
     """
-    combined_graph = Graph()
-    combined_graph += cultivation_graph
-    combined_graph += agis_graph
-    combined_graph += srppp_graph
-    combined_graph += naebi_graph
+    # FIX: Use ReadOnlyGraphAggregate to prevent O(N) graph duplication overhead
+    combined_graph = ReadOnlyGraphAggregate([cultivation_graph, agis_graph, srppp_graph, naebi_graph])
 
-    # SPARQL query to find classes that have NO subclasses (leaf nodes) 
-    # AND have NO instances linking to them via :cultivationType
     query = """
     PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
     PREFIX owl: <http://www.w3.org/2002/07/owl#>
@@ -75,16 +72,13 @@ def test_no_empty_end_nodes(cultivation_graph, agis_graph, srppp_graph, naebi_gr
 
     SELECT ?leaf
     WHERE {
-        # Get all cultivation types
         ?leaf a owl:Class .
         FILTER (STRSTARTS(STR(?leaf), "https://agriculture.ld.admin.ch/crops/cultivationtype/"))
 
-        # Must be a leaf node (nothing subclasses it)
         FILTER NOT EXISTS {
             ?subclass rdfs:subClassOf ?leaf .
         }
 
-        # Must be empty (nothing uses it as its cultivationType)
         FILTER NOT EXISTS {
             ?crop :cultivationType ?leaf .
         }
@@ -106,50 +100,45 @@ def test_no_empty_end_nodes(cultivation_graph, agis_graph, srppp_graph, naebi_gr
             
         warnings.warn(warning_msg.strip(), UserWarning)
 
+
 def test_no_unsatisfiable_classes_via_disjointness(cultivation_graph):
     """
     Searches for classes that become empty sets (unsatisfiable) because they are 
     directly or indirectly subclasses of two disjoint classes.
     """
-    # This SPARQL query finds logical contradictions without requiring
-    # an external reasoner or an XML export.
-    query = """
-    PREFIX owl: <http://www.w3.org/2002/07/owl#>
-    PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
-    PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+    # FIX: Replaced exponentially complex SPARQL property paths with native Python graph traversal
+    disjoint_pairs = set()
 
-    SELECT DISTINCT ?brokenClass ?parent1 ?parent2
-    WHERE {
-        # 1. Find all pairs of classes that are mutually exclusive (disjoint)
-        {
-            ?parent1 owl:disjointWith ?parent2 .
-        } UNION {
-            ?parent2 owl:disjointWith ?parent1 .
-        } UNION {
-            # Also handle the owl:AllDisjointClasses lists used in the code
-            ?adc a owl:AllDisjointClasses ;
-                 owl:members ?list .
-            ?list rdf:rest*/rdf:first ?parent1 .
-            ?list rdf:rest*/rdf:first ?parent2 .
-            FILTER (?parent1 != ?parent2)
-        }
+    # 1. Extract explicit disjointWith pairs
+    for s, o in cultivation_graph.subject_objects(OWL.disjointWith):
+        disjoint_pairs.add((s, o))
 
-        # 2. Find a class that is (directly or indirectly) a subclass of BOTH
-        ?brokenClass rdfs:subClassOf+ ?parent1 .
-        ?brokenClass rdfs:subClassOf+ ?parent2 .
-    }
-    """
+    # 2. Extract pairs from AllDisjointClasses lists
+    for adc in cultivation_graph.subjects(RDF.type, OWL.AllDisjointClasses):
+        members_list = cultivation_graph.value(adc, OWL.members)
+        if members_list:
+            members = list(cultivation_graph.items(members_list))
+            for i in range(len(members)):
+                for j in range(i + 1, len(members)):
+                    disjoint_pairs.add((members[i], members[j]))
+                    disjoint_pairs.add((members[j], members[i]))
+
+    errors = []
     
-    results = list(cultivation_graph.query(query))
-    
-    if results:
-        error_msg = f"Ontology Error: Found {len(results)} unsatisfiable classes (empty sets)!\n"
-        error_msg += "These classes are subclasses of disjoint (mutually exclusive) concepts:\n"
+    # 3. Assess contradictory inheritance
+    for cls in cultivation_graph.subjects(RDF.type, OWL.Class):
+        # transitive_objects traverses the graph natively and executes in milliseconds
+        superclasses = set(cultivation_graph.transitive_objects(cls, RDFS.subClassOf))
         
-        for row in results:
-            b_class = str(row.brokenClass).split('/')[-1]
-            p1 = str(row.parent1).split('/')[-1]
-            p2 = str(row.parent2).split('/')[-1]
-            error_msg += f"  -> Class <{b_class}> contradictorily inherits from <{p1}> AND <{p2}>\n"
-            
+        for parent1, parent2 in disjoint_pairs:
+            if parent1 in superclasses and parent2 in superclasses:
+                b_class = str(cls).split('/')[-1]
+                p1_name = str(parent1).split('/')[-1]
+                p2_name = str(parent2).split('/')[-1]
+                errors.append(f"  -> Class <{b_class}> contradictorily inherits from <{p1_name}> AND <{p2_name}>")
+
+    if errors:
+        error_msg = f"Ontology Error: Found {len(errors)} unsatisfiable classes (empty sets)!\n"
+        error_msg += "These classes are subclasses of disjoint (mutually exclusive) concepts:\n"
+        error_msg += "\n".join(errors)
         pytest.fail(error_msg.strip())
