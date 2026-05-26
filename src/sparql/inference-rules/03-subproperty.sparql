@@ -6,6 +6,4 @@ INSERT {
 WHERE {
   ?subject ?childProperty ?object .
   ?childProperty rdfs:subPropertyOf+ ?parentProperty .
-  FILTER (!isBlank(?subject))
-  FILTER (!isBlank(?object))
 }

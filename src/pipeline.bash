@@ -11,12 +11,12 @@ echo "Create a dedicated OWL file for subsequent WebVOWL visualization of the cr
 python src/python/rdf-processing.py \
   --input rdf/ontology/cultivationtypes.ttl \
   --output rdf/processed/crop-taxonomy.ttl \
-  --rules src/sparql/processing-rules/*.sparql
+  --rules src/sparql/processing-rules/01-WebVOWL-processing.sparql
 
 
 echo "Merge all data into one graph for subsequent LINDAS upload"
 python src/python/rdf-processing.py \
-  --input rdf/ontology/*.ttl rdf/data/*.ttl \
+  --input rdf/ontology/*.ttl rdf/data/*.ttl rdf/shape/*.ttl \
   --output rdf/processed/graph.ttl \
   --rules src/sparql/inference-rules/*.sparql
 
