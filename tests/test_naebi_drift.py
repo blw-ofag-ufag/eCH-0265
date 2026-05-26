@@ -1,15 +1,10 @@
-import sys
-import os
 import requests
-from rdflib import Graph
+import pytest
 
 API_URL = "https://rf-vp.agate.ch/digiflux/naebi/2-0/naebiservice-backend/agronomiccropcategories"
-LOCAL_TTL_PATH = "rdf/data/naebi.ttl"
 
-def get_local_data():
-    g = Graph()
-    g.parse(LOCAL_TTL_PATH, format="turtle")
-    
+def get_local_data(g):
+    """Extracts local crop data utilizing the injected naebi_graph fixture."""
     query = """
     PREFIX schema: <http://schema.org/>
     PREFIX : <https://agriculture.ld.admin.ch/crops/>
@@ -59,45 +54,14 @@ def get_api_data():
         }
     return api_data
 
-def trigger_github_issue(report_md):
-    token = os.environ.get("GITHUB_TOKEN")
-    repo = os.environ.get("GITHUB_REPOSITORY")
+@pytest.mark.drift
+def test_naebi_drift(naebi_graph):
+    local_data = get_local_data(naebi_graph)
     
-    if not token or not repo:
-        print("Notice: GITHUB_TOKEN or GITHUB_REPOSITORY not set. Skipping issue creation.")
-        return
-
-    headers = {
-        "Authorization": f"Bearer {token}",
-        "Accept": "application/vnd.github.v3+json"
-    }
-    
-    # Check if an issue is already open to prevent spam
-    search_url = f"https://api.github.com/repos/{repo}/issues?state=open&labels=naebi-data-drift"
-    search_resp = requests.get(search_url, headers=headers)
-    search_resp.raise_for_status()
-    
-    if len(search_resp.json()) > 0:
-        print("Notice: An open data drift issue already exists. Skipping creation.")
-        return
-
-    # Create the issue
-    post_url = f"https://api.github.com/repos/{repo}/issues"
-    payload = {
-        "title": "🚨 NAEBI Data Drift Detected",
-        "body": report_md,
-        "labels": ["naebi-data-drift", "automated-monitoring"]
-    }
-
-    print("Submitting issue to GitHub...")
-    post_resp = requests.post(post_url, headers=headers, json=payload)
-    post_resp.raise_for_status()
-    print(f"Issue created successfully: {post_resp.json().get('html_url')}")
-
-def main():
-    print("Fetching local and remote data...")
-    local_data = get_local_data()
-    api_data = get_api_data()
+    try:
+        api_data = get_api_data()
+    except requests.exceptions.RequestException as e:
+        pytest.skip(f"Network dependency unreachable. Skipping test. Error: {e}")
 
     local_keys = set(local_data.keys())
     api_keys = set(api_data.keys())
@@ -126,8 +90,7 @@ def main():
     has_drift = new_in_api or missing_in_api or discrepancies
 
     if not has_drift:
-        print("✅ Data is perfectly synchronized.")
-        sys.exit(0)
+        return # Test passes silently
 
     # Build Markdown Report
     md_lines = [
@@ -156,17 +119,8 @@ def main():
 
     report_md = "\n".join(md_lines)
     
-    # Output to console
-    print("\n" + "="*40)
-    print("NAEBI DATA DRIFT REPORT")
-    print("="*40)
-    print(report_md)
-    
-    # Trigger GitHub Issue
-    trigger_github_issue(report_md)
-    
-    # Exit 1 to flag workflow as failed
-    sys.exit(1)
+    # write drift report
+    with open("drift_report.md", "w", encoding="utf-8") as f:
+        f.write(report_md)
 
-if __name__ == "__main__":
-    main()
+    pytest.fail(f"NAEBI Data Drift Detected:\n\n{report_md}")
