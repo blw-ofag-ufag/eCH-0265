@@ -2,9 +2,10 @@ import pytest
 import requests
 import csv
 import io
+import gzip
 from rdflib.graph import ReadOnlyGraphAggregate
 
-CSV_URL = "https://raw.githubusercontent.com/BLV-OSAV-USAV/PSMV-RDF/refs/heads/main/data/raw/Code.csv"
+CSV_URL = "https://raw.githubusercontent.com/BLV-OSAV-USAV/PSMV-RDF/refs/heads/main/data/raw/Code.csv.gz"
 
 @pytest.mark.drift
 def test_psmv_drift(srppp_graph, core_graph):
@@ -15,12 +16,19 @@ def test_psmv_drift(srppp_graph, core_graph):
     try:
         response = requests.get(CSV_URL, timeout=15)
         response.raise_for_status()
+        
+        csv_text = gzip.decompress(response.content).decode('utf-8')
+        
     except requests.exceptions.RequestException as e:
         pytest.skip(f"Network dependency unreachable. Skipping test. Error: {e}")
+    except gzip.BadGzipFile:
+        pytest.fail("Failed to decompress the remote file. The payload is not a valid GZIP archive.")
 
     csv_hierarchy = set()
     csv_names = set()
-    reader = csv.DictReader(io.StringIO(response.text))
+    
+    # Pass the decompressed string into the CSV reader
+    reader = csv.DictReader(io.StringIO(csv_text))
     
     for row in reader:
         if row.get("TEXT_KEY") == "Culture":
