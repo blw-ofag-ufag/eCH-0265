@@ -119,8 +119,7 @@ def test_naebi_drift(naebi_graph):
 
     report_md = "\n".join(md_lines)
     
-    # write drift report
-    with open("drift_report.md", "w", encoding="utf-8") as f:
+    with open("naebi_drift_report.md", "w", encoding="utf-8") as f:
         f.write(report_md)
 
     pytest.fail(f"NAEBI Data Drift Detected:\n\n{report_md}")
