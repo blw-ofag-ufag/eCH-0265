@@ -1,4 +1,5 @@
 @prefix : <https://agriculture.ld.admin.ch/crops/> .
+@prefix shape: <https://agriculture.ld.admin.ch/crops/shape/> .
 @prefix blw: <https://register.ld.admin.ch/opendataswiss/org/bundesamt-fur-landwirtschaft-blw> .
 @prefix cube: <https://cube.link/> .
 @prefix cultivationtype: <https://agriculture.ld.admin.ch/crops/cultivationtype/> .
@@ -40,12 +41,12 @@ naebi: a void:Dataset,
     dcat:contactPoint
         [
             a vcard:Organization ;
-            vcard:fn "Bundesamt für Landwirtschaft"^^xsd:string ;
-            vcard:hasEmail "info@blw.admin.ch"^^xsd:string
+            vcard:fn "Bundesamt für Landwirtschaft" ;
+            vcard:hasEmail "info@blw.admin.ch"
         ] ;
     dcat:theme theme:administration,
         theme:agriculture ;
-    cube:observationConstraint naebi:ObservationConstraint ;
+    cube:observationConstraint shape:NutrientBalanceCrop ;
     cube:observationSet naebi:ObservationSet .
 
 
@@ -53,8 +54,9 @@ naebi: a void:Dataset,
 # OBSERVATION SET
 # ==============================================================================
 
-naebi:ObservationSet a :NutrientBalanceCropSet ;
-    cube:observation naebi:1,
+naebi:ObservationSet a cube:ObservationSet ;
+    cube:observation
+        naebi:1,
         naebi:10,
         naebi:100,
         naebi:101,
@@ -369,7 +371,7 @@ naebi:ObservationSet a :NutrientBalanceCropSet ;
         naebi:99 .
 
 naebi:1 a :NutrientBalanceCrop  ;
-    schema:identifier "CROP_ABRGS"^^xsd:string ;
+    schema:identifier "CROP_ABRGS" ;
     schema:name "Aubergine, Erdkultur (geschützter Anbau)"@de ;
     :K2O 350.0 ;
     :Mg 50.0 ;
@@ -380,7 +382,7 @@ naebi:1 a :NutrientBalanceCrop  ;
     :cultivationType cultivationtype:1036 .
 
 naebi:10 a :NutrientBalanceCrop  ;
-    schema:identifier "CROP_ASPBW"^^xsd:string ;
+    schema:identifier "CROP_ASPBW" ;
     schema:name "Spargel Bleich-"@de ;
     :K2O 130.0 ;
     :Mg 20.0 ;
@@ -391,7 +393,7 @@ naebi:10 a :NutrientBalanceCrop  ;
     :cultivationType cultivationtype:1037 .
 
 naebi:100 a :NutrientBalanceCrop  ;
-    schema:identifier "CROP_HOPS"^^xsd:string ;
+    schema:identifier "CROP_HOPS" ;
     schema:name "Hopfen"@de ;
     :K2O 200.0 ;
     :Mg 50.0 ;
@@ -402,7 +404,7 @@ naebi:100 a :NutrientBalanceCrop  ;
     :cultivationType cultivationtype:708 .
 
 naebi:101 a :NutrientBalanceCrop  ;
-    schema:identifier "CROP_HRB1L"^^xsd:string ;
+    schema:identifier "CROP_HRB1L" ;
     schema:name "Kräuter,1-jährig, gross"@de ;
     :K2O 250.0 ;
     :Mg 25.0 ;
@@ -413,7 +415,7 @@ naebi:101 a :NutrientBalanceCrop  ;
     :cultivationType cultivationtype:1188 .
 
 naebi:102 a :NutrientBalanceCrop  ;
-    schema:identifier "CROP_HRB1M"^^xsd:string ;
+    schema:identifier "CROP_HRB1M" ;
     schema:name "Kräuter,1-jährig, mittel"@de ;
     :K2O 160.0 ;
     :Mg 15.0 ;
@@ -424,7 +426,7 @@ naebi:102 a :NutrientBalanceCrop  ;
     :cultivationType cultivationtype:1189 .
 
 naebi:103 a :NutrientBalanceCrop  ;
-    schema:identifier "CROP_HRB1MB"^^xsd:string ;
+    schema:identifier "CROP_HRB1MB" ;
     schema:name "Kräuter,1-jährig, mittel-gross"@de ;
     :K2O 200.0 ;
     :Mg 20.0 ;
@@ -435,7 +437,7 @@ naebi:103 a :NutrientBalanceCrop  ;
     :cultivationType cultivationtype:1190 .
 
 naebi:104 a :NutrientBalanceCrop  ;
-    schema:identifier "CROP_HRB1S"^^xsd:string ;
+    schema:identifier "CROP_HRB1S" ;
     schema:name "Kräuter,1-jährig, klein"@de ;
     :K2O 60.0 ;
     :Mg 10.0 ;
@@ -446,7 +448,7 @@ naebi:104 a :NutrientBalanceCrop  ;
     :cultivationType cultivationtype:1191 .
 
 naebi:105 a :NutrientBalanceCrop  ;
-    schema:identifier "CROP_HRBPRB"^^xsd:string ;
+    schema:identifier "CROP_HRBPRB" ;
     schema:name "Kräuter,mehrjährig, mittel-gross"@de ;
     :K2O 200.0 ;
     :Mg 20.0 ;
@@ -457,7 +459,7 @@ naebi:105 a :NutrientBalanceCrop  ;
     :cultivationType cultivationtype:1192 .
 
 naebi:106 a :NutrientBalanceCrop  ;
-    schema:identifier "CROP_HRBPRL"^^xsd:string ;
+    schema:identifier "CROP_HRBPRL" ;
     schema:name "Kräuter,mehrjährig, gross"@de ;
     :K2O 250.0 ;
     :Mg 25.0 ;
@@ -468,7 +470,7 @@ naebi:106 a :NutrientBalanceCrop  ;
     :cultivationType cultivationtype:1193 .
 
 naebi:107 a :NutrientBalanceCrop  ;
-    schema:identifier "CROP_HRBPRM"^^xsd:string ;
+    schema:identifier "CROP_HRBPRM" ;
     schema:name "Kräuter,mehrjährig, mittel"@de ;
     :K2O 160.0 ;
     :Mg 15.0 ;
@@ -479,7 +481,7 @@ naebi:107 a :NutrientBalanceCrop  ;
     :cultivationType cultivationtype:1194 .
 
 naebi:108 a :NutrientBalanceCrop  ;
-    schema:identifier "CROP_HRBPRS"^^xsd:string ;
+    schema:identifier "CROP_HRBPRS" ;
     schema:name "Kräuter,mehrjährig, klein"@de ;
     :K2O 60.0 ;
     :Mg 10.0 ;
@@ -490,7 +492,7 @@ naebi:108 a :NutrientBalanceCrop  ;
     :cultivationType cultivationtype:1195 .
 
 naebi:109 a :NutrientBalanceCrop  ;
-    schema:identifier "CROP_HYSSP"^^xsd:string ;
+    schema:identifier "CROP_HYSSP" ;
     schema:name "Ysop"@de ;
     :K2O 130.0 ;
     :Mg 15.0 ;
@@ -501,7 +503,7 @@ naebi:109 a :NutrientBalanceCrop  ;
     :cultivationType cultivationtype:67 .
 
 naebi:11 a :NutrientBalanceCrop  ;
-    schema:identifier "CROP_ASPGR"^^xsd:string ;
+    schema:identifier "CROP_ASPGR" ;
     schema:name "Spargel Grün-"@de ;
     :K2O 110.0 ;
     :Mg 20.0 ;
@@ -512,7 +514,7 @@ naebi:11 a :NutrientBalanceCrop  ;
     :cultivationType cultivationtype:1038 .
 
 naebi:110 a :NutrientBalanceCrop  ;
-    schema:identifier "CROP_IFEED"^^xsd:string ;
+    schema:identifier "CROP_IFEED" ;
     schema:name "Zwischenfutter (herbstgesäte KW), ha"@de ;
     :K2O 2.7 ;
     :Mg 0.25 ;
@@ -523,7 +525,7 @@ naebi:110 a :NutrientBalanceCrop  ;
     :cultivationType cultivationtype:1289 .
 
 naebi:111 a :NutrientBalanceCrop  ;
-    schema:identifier "CROP_IFWOC"^^xsd:string ;
+    schema:identifier "CROP_IFWOC" ;
     schema:name "Zwischenfutter (ohne KW), ha"@de ;
     :K2O 2.88 ;
     :Mg 0.29 ;
@@ -534,7 +536,7 @@ naebi:111 a :NutrientBalanceCrop  ;
     :cultivationType cultivationtype:1290 .
 
 naebi:112 a :NutrientBalanceCrop  ;
-    schema:identifier "CROP_KALE"^^xsd:string ;
+    schema:identifier "CROP_KALE" ;
     schema:name "Federkohl"@de ;
     :K2O 160.0 ;
     :Mg 10.0 ;
@@ -545,7 +547,7 @@ naebi:112 a :NutrientBalanceCrop  ;
     :cultivationType cultivationtype:87 .
 
 naebi:113 a :NutrientBalanceCrop  ;
-    schema:identifier "CROP_KARPA"^^xsd:string ;
+    schema:identifier "CROP_KARPA" ;
     schema:name "Sonnenblumen"@de ;
     :K2O 0.83 ;
     :Mg 0.3 ;
@@ -556,7 +558,7 @@ naebi:113 a :NutrientBalanceCrop  ;
     :cultivationType cultivationtype:493 .
 
 naebi:114 a :NutrientBalanceCrop  ;
-    schema:identifier "CROP_KARPB"^^xsd:string ;
+    schema:identifier "CROP_KARPB" ;
     schema:name "Sommerraps"@de ;
     :K2O 0.84 ;
     :Mg 0.28 ;
@@ -567,7 +569,7 @@ naebi:114 a :NutrientBalanceCrop  ;
     :cultivationType cultivationtype:1039 .
 
 naebi:115 a :NutrientBalanceCrop  ;
-    schema:identifier "CROP_KARPFC"^^xsd:string ;
+    schema:identifier "CROP_KARPFC" ;
     schema:name "Vom Betrieb weggeführtes Rübenblatt, ha"@de ;
     :K2O 0.4 ;
     :Mg 0.09 ;
@@ -578,7 +580,7 @@ naebi:115 a :NutrientBalanceCrop  ;
     :cultivationType cube:Undefined .
 
 naebi:116 a :NutrientBalanceCrop  ;
-    schema:identifier "CROP_KARPFE_N"^^xsd:string ;
+    schema:identifier "CROP_KARPFE_N" ;
     schema:name "Eiweisserbsen"@de ;
     :K2O 1.84 ;
     :Mg 0.13 ;
@@ -589,7 +591,7 @@ naebi:116 a :NutrientBalanceCrop  ;
     :cultivationType cultivationtype:1027 .
 
 naebi:117 a :NutrientBalanceCrop  ;
-    schema:identifier "CROP_KENAF"^^xsd:string ;
+    schema:identifier "CROP_KENAF" ;
     schema:name "Faserhanf"@de ;
     :K2O 0.9 ;
     :Mg 0.05 ;
@@ -600,7 +602,7 @@ naebi:117 a :NutrientBalanceCrop  ;
     :cultivationType cultivationtype:576 .
 
 naebi:118 a :NutrientBalanceCrop  ;
-    schema:identifier "CROP_KIDK"^^xsd:string ;
+    schema:identifier "CROP_KIDK" ;
     schema:name "Kleine Anlagen (<20 a) mit versch. Dauerkulturen"@de ;
     :K2O 75.0 ;
     :Mg 20.0 ;
@@ -611,7 +613,7 @@ naebi:118 a :NutrientBalanceCrop  ;
     :cultivationType cultivationtype:1288 .
 
 naebi:119 a :NutrientBalanceCrop  ;
-    schema:identifier "CROP_KIWEY"^^xsd:string ;
+    schema:identifier "CROP_KIWEY" ;
     schema:name "Kiwianlage, hoher Ertrag"@de ;
     :K2O 90.0 ;
     :Mg 20.0 ;
@@ -622,7 +624,7 @@ naebi:119 a :NutrientBalanceCrop  ;
     :cultivationType cultivationtype:1041 .
 
 naebi:12 a :NutrientBalanceCrop  ;
-    schema:identifier "CROP_AWMI"^^xsd:string ;
+    schema:identifier "CROP_AWMI" ;
     schema:name "Kunstwiese intensiv"@de ;
     :K2O 2.7 ;
     :Mg 0.25 ;
@@ -633,7 +635,7 @@ naebi:12 a :NutrientBalanceCrop  ;
     :cultivationType cultivationtype:1042 .
 
 naebi:120 a :NutrientBalanceCrop  ;
-    schema:identifier "CROP_KIWPL"^^xsd:string ;
+    schema:identifier "CROP_KIWPL" ;
     schema:name "Kiwianlage"@de ;
     :K2O 75.0 ;
     :Mg 15.0 ;
@@ -644,7 +646,7 @@ naebi:120 a :NutrientBalanceCrop  ;
     :cultivationType cultivationtype:1040 .
 
 naebi:121 a :NutrientBalanceCrop  ;
-    schema:identifier "CROP_KOCRN"^^xsd:string ;
+    schema:identifier "CROP_KOCRN" ;
     schema:name "Futterrüben"@de ;
     :K2O 1.12 ;
     :Mg 0.13 ;
@@ -655,7 +657,7 @@ naebi:121 a :NutrientBalanceCrop  ;
     :cultivationType cultivationtype:523 .
 
 naebi:122 a :NutrientBalanceCrop  ;
-    schema:identifier "CROP_KOHLC"^^xsd:string ;
+    schema:identifier "CROP_KOHLC" ;
     schema:name "Kohlrabi (geschützter Anbau)"@de ;
     :K2O 200.0 ;
     :Mg 30.0 ;
@@ -666,7 +668,7 @@ naebi:122 a :NutrientBalanceCrop  ;
     :cultivationType cultivationtype:1043 .
 
 naebi:123 a :NutrientBalanceCrop  ;
-    schema:identifier "CROP_KOHLR"^^xsd:string ;
+    schema:identifier "CROP_KOHLR" ;
     schema:name "Kohlrabi"@de ;
     :K2O 120.0 ;
     :Mg 20.0 ;
@@ -677,7 +679,7 @@ naebi:123 a :NutrientBalanceCrop  ;
     :cultivationType cultivationtype:86 .
 
 naebi:124 a :NutrientBalanceCrop  ;
-    schema:identifier "CROP_KOHP"^^xsd:string ;
+    schema:identifier "CROP_KOHP" ;
     schema:name "Kohlrabi Verarbeitungs-"@de ;
     :K2O 150.0 ;
     :Mg 30.0 ;
@@ -685,10 +687,10 @@ naebi:124 a :NutrientBalanceCrop  ;
     :P2O5 50.0 ;
     :cultivationCategory cultivationtype:465 ;
     :cultivationSubCategory cultivationtype:24 ;
-    :cultivationType cultivationtype:1200 .
+    :cultivationType cultivationtype:1044 .
 
 naebi:125 a :NutrientBalanceCrop  ;
-    schema:identifier "CROP_KOHRA"^^xsd:string ;
+    schema:identifier "CROP_KOHRA" ;
     schema:name "Bodenkohlrabi"@de ;
     :K2O 120.0 ;
     :Mg 20.0 ;
@@ -699,7 +701,7 @@ naebi:125 a :NutrientBalanceCrop  ;
     :cultivationType cultivationtype:84 .
 
 naebi:126 a :NutrientBalanceCrop  ;
-    schema:identifier "CROP_LAMBSS"^^xsd:string ;
+    schema:identifier "CROP_LAMBSS" ;
     schema:name "Nüsslisalat, Feldsalat"@de ;
     :K2O 60.0 ;
     :Mg 10.0 ;
@@ -710,7 +712,7 @@ naebi:126 a :NutrientBalanceCrop  ;
     :cultivationType cultivationtype:260 .
 
 naebi:127 a :NutrientBalanceCrop  ;
-    schema:identifier "CROP_LCROP"^^xsd:string ;
+    schema:identifier "CROP_LCROP" ;
     schema:name "Ölhanf"@de ;
     :K2O 1.08 ;
     :Mg 0.54 ;
@@ -721,7 +723,7 @@ naebi:127 a :NutrientBalanceCrop  ;
     :cultivationType cultivationtype:1045 .
 
 naebi:128 a :NutrientBalanceCrop  ;
-    schema:identifier "CROP_LDYSM"^^xsd:string ;
+    schema:identifier "CROP_LDYSM" ;
     schema:name "Frauenmantel"@de ;
     :K2O 125.0 ;
     :Mg 15.0 ;
@@ -732,7 +734,7 @@ naebi:128 a :NutrientBalanceCrop  ;
     :cultivationType cultivationtype:1046 .
 
 naebi:129 a :NutrientBalanceCrop  ;
-    schema:identifier "CROP_LEEKE"^^xsd:string ;
+    schema:identifier "CROP_LEEKE" ;
     schema:name "Lauch, früh gepflanzt"@de ;
     :K2O 0.0 ;
     :Mg 0.0 ;
@@ -743,7 +745,7 @@ naebi:129 a :NutrientBalanceCrop  ;
     :cultivationType cultivationtype:1047 .
 
 naebi:13 a :NutrientBalanceCrop  ;
-    schema:identifier "CROP_BBREY"^^xsd:string ;
+    schema:identifier "CROP_BBREY" ;
     schema:name "Brombeeren, 3.0 kg/m2"@de ;
     :K2O 102.0 ;
     :Mg 20.0 ;
@@ -754,7 +756,7 @@ naebi:13 a :NutrientBalanceCrop  ;
     :cultivationType cultivationtype:1186 .
 
 naebi:130 a :NutrientBalanceCrop  ;
-    schema:identifier "CROP_LEEKL"^^xsd:string ;
+    schema:identifier "CROP_LEEKL" ;
     schema:name "Lauch, spät gepflanzt"@de ;
     :K2O 0.0 ;
     :Mg 0.0 ;
@@ -765,7 +767,7 @@ naebi:130 a :NutrientBalanceCrop  ;
     :cultivationType cultivationtype:1048 .
 
 naebi:131 a :NutrientBalanceCrop  ;
-    schema:identifier "CROP_LEEKP"^^xsd:string ;
+    schema:identifier "CROP_LEEKP" ;
     schema:name "Lauch (geschützter Anbau)"@de ;
     :K2O 220.0 ;
     :Mg 30.0 ;
@@ -776,7 +778,7 @@ naebi:131 a :NutrientBalanceCrop  ;
     :cultivationType cultivationtype:1049 .
 
 naebi:132 a :NutrientBalanceCrop  ;
-    schema:identifier "CROP_LEEKS"^^xsd:string ;
+    schema:identifier "CROP_LEEKS" ;
     schema:name "Lauch"@de ;
     :K2O 180.0 ;
     :Mg 20.0 ;
@@ -787,7 +789,7 @@ naebi:132 a :NutrientBalanceCrop  ;
     :cultivationType cultivationtype:323 .
 
 naebi:133 a :NutrientBalanceCrop  ;
-    schema:identifier "CROP_LEEKSE"^^xsd:string ;
+    schema:identifier "CROP_LEEKSE" ;
     schema:name "Lauch, gesät"@de ;
     :K2O 0.0 ;
     :Mg 0.0 ;
@@ -798,7 +800,7 @@ naebi:133 a :NutrientBalanceCrop  ;
     :cultivationType cultivationtype:1050 .
 
 naebi:134 a :NutrientBalanceCrop  ;
-    schema:identifier "CROP_LEEKW"^^xsd:string ;
+    schema:identifier "CROP_LEEKW" ;
     schema:name "Lauch, gepflanzt, Überwinterung"@de ;
     :K2O 0.0 ;
     :Mg 0.0 ;
@@ -809,7 +811,7 @@ naebi:134 a :NutrientBalanceCrop  ;
     :cultivationType cultivationtype:1051 .
 
 naebi:135 a :NutrientBalanceCrop  ;
-    schema:identifier "CROP_LGMPR"^^xsd:string ;
+    schema:identifier "CROP_LGMPR" ;
     schema:name "Kleesamenproduktion"@de ;
     :K2O 0.0 ;
     :Mg 0.0 ;
@@ -820,7 +822,7 @@ naebi:135 a :NutrientBalanceCrop  ;
     :cultivationType cultivationtype:1052 .
 
 naebi:136 a :NutrientBalanceCrop  ;
-    schema:identifier "CROP_LGVGM"^^xsd:string ;
+    schema:identifier "CROP_LGVGM" ;
     schema:name "Gründüngung Leguminosen (Freilandgemüse)"@de ;
     :K2O 0.0 ;
     :Mg 0.0 ;
@@ -831,7 +833,7 @@ naebi:136 a :NutrientBalanceCrop  ;
     :cultivationType cultivationtype:1053 .
 
 naebi:137 a :NutrientBalanceCrop  ;
-    schema:identifier "CROP_LINSD"^^xsd:string ;
+    schema:identifier "CROP_LINSD" ;
     schema:name "Buntbrache"@de ;
     :K2O 0.0 ;
     :Mg 0.0 ;
@@ -842,7 +844,7 @@ naebi:137 a :NutrientBalanceCrop  ;
     :cultivationType cultivationtype:556 .
 
 naebi:138 a :NutrientBalanceCrop  ;
-    schema:identifier "CROP_LMBLM"^^xsd:string ;
+    schema:identifier "CROP_LMBLM" ;
     schema:name "Zitronenmelisse"@de ;
     :K2O 160.0 ;
     :Mg 30.0 ;
@@ -850,10 +852,10 @@ naebi:138 a :NutrientBalanceCrop  ;
     :P2O5 50.0 ;
     :cultivationCategory cultivationtype:465 ;
     :cultivationSubCategory cultivationtype:467 ;
-    :cultivationType cultivationtype:1054 .
+    :cultivationType cultivationtype:287 .
 
 naebi:139 a :NutrientBalanceCrop  ;
-    schema:identifier "CROP_LMNRM"^^xsd:string ;
+    schema:identifier "CROP_LMNRM" ;
     schema:name "Indianernessel, Rosenmelisse"@de ;
     :K2O 120.0 ;
     :Mg 15.0 ;
@@ -864,7 +866,7 @@ naebi:139 a :NutrientBalanceCrop  ;
     :cultivationType cultivationtype:1055 .
 
 naebi:14 a :NutrientBalanceCrop  ;
-    schema:identifier "CROP_BEANP"^^xsd:string ;
+    schema:identifier "CROP_BEANP" ;
     schema:name "Bohnen, Verarbeitung-"@de ;
     :K2O 30.0 ;
     :Mg 5.0 ;
@@ -875,7 +877,7 @@ naebi:14 a :NutrientBalanceCrop  ;
     :cultivationType cultivationtype:1056 .
 
 naebi:140 a :NutrientBalanceCrop  ;
-    schema:identifier "CROP_LTTLG"^^xsd:string ;
+    schema:identifier "CROP_LTTLG" ;
     schema:name "Salate Kopf-, Eisberg, Lollo (geschützter Anbau)"@de ;
     :K2O 140.0 ;
     :Mg 20.0 ;
@@ -886,7 +888,7 @@ naebi:140 a :NutrientBalanceCrop  ;
     :cultivationType cultivationtype:1058 .
 
 naebi:141 a :NutrientBalanceCrop  ;
-    schema:identifier "CROP_LVGGK"^^xsd:string ;
+    schema:identifier "CROP_LVGGK" ;
     schema:name "Liebstöckel / Maggikraut"@de ;
     :K2O 230.0 ;
     :Mg 25.0 ;
@@ -897,7 +899,7 @@ naebi:141 a :NutrientBalanceCrop  ;
     :cultivationType cultivationtype:479 .
 
 naebi:142 a :NutrientBalanceCrop  ;
-    schema:identifier "CROP_MELON"^^xsd:string ;
+    schema:identifier "CROP_MELON" ;
     schema:name "Melone"@de ;
     :K2O 170.0 ;
     :Mg 40.0 ;
@@ -908,7 +910,7 @@ naebi:142 a :NutrientBalanceCrop  ;
     :cultivationType cultivationtype:297 .
 
 naebi:143 a :NutrientBalanceCrop  ;
-    schema:identifier "CROP_MILLE"^^xsd:string ;
+    schema:identifier "CROP_MILLE" ;
     schema:name "Getreide-Silage mit Leguminosen"@de ;
     :K2O 1.1321 ;
     :Mg 0.0943 ;
@@ -919,7 +921,7 @@ naebi:143 a :NutrientBalanceCrop  ;
     :cultivationType cultivationtype:1031 .
 
 naebi:144 a :NutrientBalanceCrop  ;
-    schema:identifier "CROP_MLKTL"^^xsd:string ;
+    schema:identifier "CROP_MLKTL" ;
     schema:name "Andorn"@de ;
     :K2O 200.0 ;
     :Mg 20.0 ;
@@ -930,7 +932,7 @@ naebi:144 a :NutrientBalanceCrop  ;
     :cultivationType cultivationtype:1059 .
 
 naebi:145 a :NutrientBalanceCrop  ;
-    schema:identifier "CROP_MRJRM"^^xsd:string ;
+    schema:identifier "CROP_MRJRM" ;
     schema:name "Majoran"@de ;
     :K2O 110.0 ;
     :Mg 10.0 ;
@@ -938,10 +940,10 @@ naebi:145 a :NutrientBalanceCrop  ;
     :P2O5 30.0 ;
     :cultivationCategory cultivationtype:465 ;
     :cultivationSubCategory cultivationtype:24 ;
-    :cultivationType cultivationtype:1060 .
+    :cultivationType cultivationtype:295 .
 
 naebi:146 a :NutrientBalanceCrop  ;
-    schema:identifier "CROP_MRSHW"^^xsd:string ;
+    schema:identifier "CROP_MRSHW" ;
     schema:name "Eibisch"@de ;
     :K2O 170.0 ;
     :Mg 20.0 ;
@@ -952,7 +954,7 @@ naebi:146 a :NutrientBalanceCrop  ;
     :cultivationType cultivationtype:1061 .
 
 naebi:147 a :NutrientBalanceCrop  ;
-    schema:identifier "CROP_MSELV"^^xsd:string ;
+    schema:identifier "CROP_MSELV" ;
     schema:name "Selve gepflegt"@de ;
     :K2O 0.0 ;
     :Mg 0.0 ;
@@ -963,7 +965,7 @@ naebi:147 a :NutrientBalanceCrop  ;
     :cultivationType cultivationtype:716 .
 
 naebi:148 a :NutrientBalanceCrop  ;
-    schema:identifier "CROP_MSHML"^^xsd:string ;
+    schema:identifier "CROP_MSHML" ;
     schema:name "Eisenkraut"@de ;
     :K2O 120.0 ;
     :Mg 15.0 ;
@@ -974,7 +976,7 @@ naebi:148 a :NutrientBalanceCrop  ;
     :cultivationType cultivationtype:1062 .
 
 naebi:149 a :NutrientBalanceCrop  ;
-    schema:identifier "CROP_MULBER"^^xsd:string ;
+    schema:identifier "CROP_MULBER" ;
     schema:name "Maulbeerbaumanlagen (Fütterung Seidenraupen)"@de ;
     :K2O 0.0 ;
     :Mg 0.0 ;
@@ -985,7 +987,7 @@ naebi:149 a :NutrientBalanceCrop  ;
     :cultivationType cultivationtype:719 .
 
 naebi:15 a :NutrientBalanceCrop  ;
-    schema:identifier "CROP_BEETS"^^xsd:string ;
+    schema:identifier "CROP_BEETS" ;
     schema:name "Randen"@de ;
     :K2O 160.0 ;
     :Mg 20.0 ;
@@ -996,7 +998,7 @@ naebi:15 a :NutrientBalanceCrop  ;
     :cultivationType cultivationtype:151 .
 
 naebi:150 a :NutrientBalanceCrop  ;
-    schema:identifier "CROP_NCROP"^^xsd:string ;
+    schema:identifier "CROP_NCROP" ;
     schema:name "Kenaf"@de ;
     :K2O 1.6 ;
     :Mg 0.2 ;
@@ -1007,7 +1009,7 @@ naebi:150 a :NutrientBalanceCrop  ;
     :cultivationType cultivationtype:1063 .
 
 naebi:151 a :NutrientBalanceCrop  ;
-    schema:identifier "CROP_NLGMV"^^xsd:string ;
+    schema:identifier "CROP_NLGMV" ;
     schema:name "Gründüngung Nichtleguminosen (Freilandgemüse)"@de ;
     :K2O 0.0 ;
     :Mg 0.0 ;
@@ -1018,7 +1020,7 @@ naebi:151 a :NutrientBalanceCrop  ;
     :cultivationType cultivationtype:1064 .
 
 naebi:152 a :NutrientBalanceCrop  ;
-    schema:identifier "CROP_NTT01"^^xsd:string ;
+    schema:identifier "CROP_NTT01" ;
     schema:name "Nussbäume, 0.01 ha/Baum"@de ;
     :K2O 56.0 ;
     :Mg 8.0 ;
@@ -1029,7 +1031,7 @@ naebi:152 a :NutrientBalanceCrop  ;
     :cultivationType cultivationtype:1204 .
 
 naebi:153 a :NutrientBalanceCrop  ;
-    schema:identifier "CROP_NURFRU"^^xsd:string ;
+    schema:identifier "CROP_NURFRU" ;
     schema:name "Baumschulen für den Erwerbsobstbau (hohe Pflanzendichte)"@de ;
     :K2O 95.0 ;
     :Mg 13.0 ;
@@ -1040,7 +1042,7 @@ naebi:153 a :NutrientBalanceCrop  ;
     :cultivationType cultivationtype:1066 .
 
 naebi:154 a :NutrientBalanceCrop  ;
-    schema:identifier "CROP_NURSRY"^^xsd:string ;
+    schema:identifier "CROP_NURSRY" ;
     schema:name "Baumschulen"@de ;
     :K2O 37.0 ;
     :Mg 5.0 ;
@@ -1051,7 +1053,7 @@ naebi:154 a :NutrientBalanceCrop  ;
     :cultivationType cultivationtype:1067 .
 
 naebi:155 a :NutrientBalanceCrop  ;
-    schema:identifier "CROP_OAFNLN"^^xsd:string ;
+    schema:identifier "CROP_OAFNLN" ;
     schema:name "Naturwiese wenig intensiv"@de ;
     :K2O 1.7 ;
     :Mg 0.15 ;
@@ -1062,7 +1064,7 @@ naebi:155 a :NutrientBalanceCrop  ;
     :cultivationType cultivationtype:612 .
 
 naebi:156 a :NutrientBalanceCrop  ;
-    schema:identifier "CROP_OAFNT"^^xsd:string ;
+    schema:identifier "CROP_OAFNT" ;
     schema:name "Nützlingsstreifen (DK)"@de ;
     :K2O 0.0 ;
     :Mg 0.0 ;
@@ -1073,7 +1075,7 @@ naebi:156 a :NutrientBalanceCrop  ;
     :cultivationType cultivationtype:1023 .
 
 naebi:157 a :NutrientBalanceCrop  ;
-    schema:identifier "CROP_OAFNTN"^^xsd:string ;
+    schema:identifier "CROP_OAFNTN" ;
     schema:name "Naturwiese extensiv"@de ;
     :K2O 0.0 ;
     :Mg 0.0 ;
@@ -1084,7 +1086,7 @@ naebi:157 a :NutrientBalanceCrop  ;
     :cultivationType cultivationtype:611 .
 
 naebi:158 a :NutrientBalanceCrop  ;
-    schema:identifier "CROP_ONION"^^xsd:string ;
+    schema:identifier "CROP_ONION" ;
     schema:name "Zwiebeln"@de ;
     :K2O 160.0 ;
     :Mg 20.0 ;
@@ -1095,7 +1097,7 @@ naebi:158 a :NutrientBalanceCrop  ;
     :cultivationType cultivationtype:277 .
 
 naebi:159 a :NutrientBalanceCrop  ;
-    schema:identifier "CROP_ORGMN"^^xsd:string ;
+    schema:identifier "CROP_ORGMN" ;
     schema:name "Orangenminze"@de ;
     :K2O 180.0 ;
     :Mg 15.0 ;
@@ -1106,7 +1108,7 @@ naebi:159 a :NutrientBalanceCrop  ;
     :cultivationType cultivationtype:1068 .
 
 naebi:16 a :NutrientBalanceCrop  ;
-    schema:identifier "CROP_BERBL"^^xsd:string ;
+    schema:identifier "CROP_BERBL" ;
     schema:name "betriebseigenes verfütt. Rübenblatt, ha"@de ;
     :K2O 2.62 ;
     :Mg 0.6 ;
@@ -1117,7 +1119,7 @@ naebi:16 a :NutrientBalanceCrop  ;
     :cultivationType cube:Undefined .
 
 naebi:160 a :NutrientBalanceCrop  ;
-    schema:identifier "CROP_ORGNO"^^xsd:string ;
+    schema:identifier "CROP_ORGNO" ;
     schema:name "Oregano"@de ;
     :K2O 120.0 ;
     :Mg 15.0 ;
@@ -1125,10 +1127,10 @@ naebi:160 a :NutrientBalanceCrop  ;
     :P2O5 30.0 ;
     :cultivationCategory cultivationtype:465 ;
     :cultivationSubCategory cultivationtype:467 ;
-    :cultivationType cultivationtype:1069 .
+    :cultivationType cultivationtype:334 .
 
 naebi:161 a :NutrientBalanceCrop  ;
-    schema:identifier "CROP_ORNSTB"^^xsd:string ;
+    schema:identifier "CROP_ORNSTB" ;
     schema:name "Ziersträucher, -gehölze, -stauden"@de ;
     :K2O 37.0 ;
     :Mg 5.0 ;
@@ -1139,7 +1141,7 @@ naebi:161 a :NutrientBalanceCrop  ;
     :cultivationType cultivationtype:714 .
 
 naebi:162 a :NutrientBalanceCrop  ;
-    schema:identifier "CROP_PAKCH"^^xsd:string ;
+    schema:identifier "CROP_PAKCH" ;
     schema:name "Pak Choi"@de ;
     :K2O 200.0 ;
     :Mg 15.0 ;
@@ -1150,7 +1152,7 @@ naebi:162 a :NutrientBalanceCrop  ;
     :cultivationType cultivationtype:325 .
 
 naebi:163 a :NutrientBalanceCrop  ;
-    schema:identifier "CROP_PANSY"^^xsd:string ;
+    schema:identifier "CROP_PANSY" ;
     schema:name "Viola (Stiefmütterchen)"@de ;
     :K2O 60.0 ;
     :Mg 10.0 ;
@@ -1161,7 +1163,7 @@ naebi:163 a :NutrientBalanceCrop  ;
     :cultivationType cultivationtype:1070 .
 
 naebi:164 a :NutrientBalanceCrop  ;
-    schema:identifier "CROP_PAPSC"^^xsd:string ;
+    schema:identifier "CROP_PAPSC" ;
     schema:name "Paprika, Bodenkulturen (geschützter Anbau)"@de ;
     :K2O 250.0 ;
     :Mg 30.0 ;
@@ -1172,7 +1174,7 @@ naebi:164 a :NutrientBalanceCrop  ;
     :cultivationType cultivationtype:1071 .
 
 naebi:165 a :NutrientBalanceCrop  ;
-    schema:identifier "CROP_PARSC"^^xsd:string ;
+    schema:identifier "CROP_PARSC" ;
     schema:name "Petersilie, je weiterem Schnitt"@de ;
     :K2O 0.0 ;
     :Mg 0.0 ;
@@ -1183,7 +1185,7 @@ naebi:165 a :NutrientBalanceCrop  ;
     :cultivationType cultivationtype:1072 .
 
 naebi:166 a :NutrientBalanceCrop  ;
-    schema:identifier "CROP_PARSR"^^xsd:string ;
+    schema:identifier "CROP_PARSR" ;
     schema:name "Petersilienwurzeln"@de ;
     :K2O 0.0 ;
     :Mg 0.0 ;
@@ -1194,7 +1196,7 @@ naebi:166 a :NutrientBalanceCrop  ;
     :cultivationType cultivationtype:306 .
 
 naebi:167 a :NutrientBalanceCrop  ;
-    schema:identifier "CROP_PARSY"^^xsd:string ;
+    schema:identifier "CROP_PARSY" ;
     schema:name "Petersilie, bis zum ersten Schnitt"@de ;
     :K2O 150.0 ;
     :Mg 15.0 ;
@@ -1205,7 +1207,7 @@ naebi:167 a :NutrientBalanceCrop  ;
     :cultivationType cultivationtype:1073 .
 
 naebi:168 a :NutrientBalanceCrop  ;
-    schema:identifier "CROP_PEAKE"^^xsd:string ;
+    schema:identifier "CROP_PEAKE" ;
     schema:name "Erbsen, Kefen"@de ;
     :K2O 110.0 ;
     :Mg 10.0 ;
@@ -1216,7 +1218,7 @@ naebi:168 a :NutrientBalanceCrop  ;
     :cultivationType cultivationtype:1075 .
 
 naebi:169 a :NutrientBalanceCrop  ;
-    schema:identifier "CROP_PEAP"^^xsd:string ;
+    schema:identifier "CROP_PEAP" ;
     schema:name "Erbsen, Verarbeitung-"@de ;
     :K2O 60.0 ;
     :Mg 5.0 ;
@@ -1227,7 +1229,7 @@ naebi:169 a :NutrientBalanceCrop  ;
     :cultivationType cultivationtype:1076 .
 
 naebi:17 a :NutrientBalanceCrop  ;
-    schema:identifier "CROP_BLACK4"^^xsd:string ;
+    schema:identifier "CROP_BLACK4" ;
     schema:name "Brombeeren, 4.0 kg/m2"@de ;
     :K2O 145.0 ;
     :Mg 25.0 ;
@@ -1238,7 +1240,7 @@ naebi:17 a :NutrientBalanceCrop  ;
     :cultivationType cultivationtype:1187 .
 
 naebi:170 a :NutrientBalanceCrop  ;
-    schema:identifier "CROP_PEXT"^^xsd:string ;
+    schema:identifier "CROP_PEXT" ;
     schema:name "Weide extensiv"@de ;
     :K2O 1.2 ;
     :Mg 0.2 ;
@@ -1249,7 +1251,7 @@ naebi:170 a :NutrientBalanceCrop  ;
     :cultivationType cultivationtype:617 .
 
 naebi:171 a :NutrientBalanceCrop  ;
-    schema:identifier "CROP_PFREY"^^xsd:string ;
+    schema:identifier "CROP_PFREY" ;
     schema:name "Pfirsichanlage, hoher Ertrag"@de ;
     :K2O 70.0 ;
     :Mg 30.0 ;
@@ -1260,7 +1262,7 @@ naebi:171 a :NutrientBalanceCrop  ;
     :cultivationType cultivationtype:1077 .
 
 naebi:172 a :NutrientBalanceCrop  ;
-    schema:identifier "CROP_PFRPL"^^xsd:string ;
+    schema:identifier "CROP_PFRPL" ;
     schema:name "Pfirsichanlage"@de ;
     :K2O 55.0 ;
     :Mg 20.0 ;
@@ -1271,7 +1273,7 @@ naebi:172 a :NutrientBalanceCrop  ;
     :cultivationType cultivationtype:1078 .
 
 naebi:173 a :NutrientBalanceCrop  ;
-    schema:identifier "CROP_PICKL"^^xsd:string ;
+    schema:identifier "CROP_PICKL" ;
     schema:name "Gurken, Essiggurken"@de ;
     :K2O 170.0 ;
     :Mg 20.0 ;
@@ -1282,7 +1284,7 @@ naebi:173 a :NutrientBalanceCrop  ;
     :cultivationType cultivationtype:1079 .
 
 naebi:174 a :NutrientBalanceCrop  ;
-    schema:identifier "CROP_PINTE"^^xsd:string ;
+    schema:identifier "CROP_PINTE" ;
     schema:name "Weide (Mäh-) intensiv"@de ;
     :K2O 2.7 ;
     :Mg 0.25 ;
@@ -1293,7 +1295,7 @@ naebi:174 a :NutrientBalanceCrop  ;
     :cultivationType cultivationtype:1080 .
 
 naebi:175 a :NutrientBalanceCrop  ;
-    schema:identifier "CROP_PLBNP"^^xsd:string ;
+    schema:identifier "CROP_PLBNP" ;
     schema:name "Bohnen Stangen- (geschützter Anbau)"@de ;
     :K2O 180.0 ;
     :Mg 30.0 ;
@@ -1304,7 +1306,7 @@ naebi:175 a :NutrientBalanceCrop  ;
     :cultivationType cultivationtype:1081 .
 
 naebi:176 a :NutrientBalanceCrop  ;
-    schema:identifier "CROP_PLMEY"^^xsd:string ;
+    schema:identifier "CROP_PLMEY" ;
     schema:name "Zwetschgenanlage, hoher Ertrag"@de ;
     :K2O 65.0 ;
     :Mg 20.0 ;
@@ -1315,7 +1317,7 @@ naebi:176 a :NutrientBalanceCrop  ;
     :cultivationType cultivationtype:1082 .
 
 naebi:177 a :NutrientBalanceCrop  ;
-    schema:identifier "CROP_PLMPL"^^xsd:string ;
+    schema:identifier "CROP_PLMPL" ;
     schema:name "Zwetschgenanlage"@de ;
     :K2O 50.0 ;
     :Mg 15.0 ;
@@ -1326,7 +1328,7 @@ naebi:177 a :NutrientBalanceCrop  ;
     :cultivationType cultivationtype:1083 .
 
 naebi:178 a :NutrientBalanceCrop  ;
-    schema:identifier "CROP_PLTNL"^^xsd:string ;
+    schema:identifier "CROP_PLTNL" ;
     schema:name "Spitzwegerich"@de ;
     :K2O 230.0 ;
     :Mg 20.0 ;
@@ -1334,10 +1336,10 @@ naebi:178 a :NutrientBalanceCrop  ;
     :P2O5 40.0 ;
     :cultivationCategory cultivationtype:465 ;
     :cultivationSubCategory cultivationtype:24 ;
-    :cultivationType cultivationtype:1084 .
+    :cultivationType cultivationtype:206 .
 
 naebi:179 a :NutrientBalanceCrop  ;
-    schema:identifier "CROP_PMEDI"^^xsd:string ;
+    schema:identifier "CROP_PMEDI" ;
     schema:name "Weide (Mäh-) mittelintensiv"@de ;
     :K2O 2.3 ;
     :Mg 0.2 ;
@@ -1348,7 +1350,7 @@ naebi:179 a :NutrientBalanceCrop  ;
     :cultivationType cultivationtype:1085 .
 
 naebi:18 a :NutrientBalanceCrop  ;
-    schema:identifier "CROP_BLKBRY"^^xsd:string ;
+    schema:identifier "CROP_BLKBRY" ;
     schema:name "Brombeeren, 2.0 kg/m2"@de ;
     :K2O 60.0 ;
     :Mg 15.0 ;
@@ -1359,7 +1361,7 @@ naebi:18 a :NutrientBalanceCrop  ;
     :cultivationType cultivationtype:1185 .
 
 naebi:180 a :NutrientBalanceCrop  ;
-    schema:identifier "CROP_PMLAW"^^xsd:string ;
+    schema:identifier "CROP_PMLAW" ;
     schema:name "Schlüsselblume (ganze Pflanze)"@de ;
     :K2O 50.0 ;
     :Mg 10.0 ;
@@ -1370,7 +1372,7 @@ naebi:180 a :NutrientBalanceCrop  ;
     :cultivationType cultivationtype:1086 .
 
 naebi:181 a :NutrientBalanceCrop  ;
-    schema:identifier "CROP_POPEY"^^xsd:string ;
+    schema:identifier "CROP_POPEY" ;
     schema:name "Kernobstanlage, hoher Ertrag"@de ;
     :K2O 110.0 ;
     :Mg 40.0 ;
@@ -1381,7 +1383,7 @@ naebi:181 a :NutrientBalanceCrop  ;
     :cultivationType cultivationtype:1087 .
 
 naebi:182 a :NutrientBalanceCrop  ;
-    schema:identifier "CROP_POPFR"^^xsd:string ;
+    schema:identifier "CROP_POPFR" ;
     schema:name "Kernobstanlage"@de ;
     :K2O 75.0 ;
     :Mg 20.0 ;
@@ -1392,7 +1394,7 @@ naebi:182 a :NutrientBalanceCrop  ;
     :cultivationType cultivationtype:1088 .
 
 naebi:183 a :NutrientBalanceCrop  ;
-    schema:identifier "CROP_POTEA"^^xsd:string ;
+    schema:identifier "CROP_POTEA" ;
     schema:name "Kartoffeln (b), Früh-"@de ;
     :K2O 0.69 ;
     :Mg 0.03 ;
@@ -1403,7 +1405,7 @@ naebi:183 a :NutrientBalanceCrop  ;
     :cultivationType cultivationtype:1089 .
 
 naebi:184 a :NutrientBalanceCrop  ;
-    schema:identifier "CROP_POTPC"^^xsd:string ;
+    schema:identifier "CROP_POTPC" ;
     schema:name "Kartoffeln (a), Speise-, Verarbeitungs-"@de ;
     :K2O 0.71 ;
     :Mg 0.03 ;
@@ -1414,7 +1416,7 @@ naebi:184 a :NutrientBalanceCrop  ;
     :cultivationType cultivationtype:1090 .
 
 naebi:185 a :NutrientBalanceCrop  ;
-    schema:identifier "CROP_POTPE"^^xsd:string ;
+    schema:identifier "CROP_POTPE" ;
     schema:name "Kartoffeln (b), Pflanz-"@de ;
     :K2O 0.71 ;
     :Mg 0.03 ;
@@ -1425,7 +1427,7 @@ naebi:185 a :NutrientBalanceCrop  ;
     :cultivationType cultivationtype:525 .
 
 naebi:186 a :NutrientBalanceCrop  ;
-    schema:identifier "CROP_POTPFA"^^xsd:string ;
+    schema:identifier "CROP_POTPFA" ;
     schema:name "Kartoffeln (c), Speise-, Verarbeitungs-"@de ;
     :K2O 0.71 ;
     :Mg 0.03 ;
@@ -1436,7 +1438,7 @@ naebi:186 a :NutrientBalanceCrop  ;
     :cultivationType cultivationtype:1090 .
 
 naebi:187 a :NutrientBalanceCrop  ;
-    schema:identifier "CROP_POTPFB"^^xsd:string ;
+    schema:identifier "CROP_POTPFB" ;
     schema:name "Kartoffeln (c), Pflanz-"@de ;
     :K2O 0.71 ;
     :Mg 0.03 ;
@@ -1447,7 +1449,7 @@ naebi:187 a :NutrientBalanceCrop  ;
     :cultivationType cultivationtype:525 .
 
 naebi:188 a :NutrientBalanceCrop  ;
-    schema:identifier "CROP_POTPFC"^^xsd:string ;
+    schema:identifier "CROP_POTPFC" ;
     schema:name "Kartoffeln (a), Pflanz-"@de ;
     :K2O 0.71 ;
     :Mg 0.03 ;
@@ -1458,7 +1460,7 @@ naebi:188 a :NutrientBalanceCrop  ;
     :cultivationType cultivationtype:525 .
 
 naebi:189 a :NutrientBalanceCrop  ;
-    schema:identifier "CROP_POTPFD"^^xsd:string ;
+    schema:identifier "CROP_POTPFD" ;
     schema:name "Kartoffeln (a), Früh-"@de ;
     :K2O 0.69 ;
     :Mg 0.03 ;
@@ -1469,7 +1471,7 @@ naebi:189 a :NutrientBalanceCrop  ;
     :cultivationType cultivationtype:1089 .
 
 naebi:19 a :NutrientBalanceCrop  ;
-    schema:identifier "CROP_BLKEL"^^xsd:string ;
+    schema:identifier "CROP_BLKEL" ;
     schema:name "Schwarzer Holunder"@de ;
     :K2O 60.0 ;
     :Mg 10.0 ;
@@ -1480,7 +1482,7 @@ naebi:19 a :NutrientBalanceCrop  ;
     :cultivationType cultivationtype:161 .
 
 naebi:190 a :NutrientBalanceCrop  ;
-    schema:identifier "CROP_POTPFE"^^xsd:string ;
+    schema:identifier "CROP_POTPFE" ;
     schema:name "Kartoffeln (c), Früh-"@de ;
     :K2O 0.69 ;
     :Mg 0.03 ;
@@ -1491,7 +1493,7 @@ naebi:190 a :NutrientBalanceCrop  ;
     :cultivationType cultivationtype:1089 .
 
 naebi:191 a :NutrientBalanceCrop  ;
-    schema:identifier "CROP_POTPP"^^xsd:string ;
+    schema:identifier "CROP_POTPP" ;
     schema:name "Kartoffeln (b), Speise-, Verarbeitungs-"@de ;
     :K2O 0.71 ;
     :Mg 0.03 ;
@@ -1502,7 +1504,7 @@ naebi:191 a :NutrientBalanceCrop  ;
     :cultivationType cultivationtype:1090 .
 
 naebi:192 a :NutrientBalanceCrop  ;
-    schema:identifier "CROP_PPMNT"^^xsd:string ;
+    schema:identifier "CROP_PPMNT" ;
     schema:name "Pfefferminze"@de ;
     :K2O 240.0 ;
     :Mg 15.0 ;
@@ -1513,7 +1515,7 @@ naebi:192 a :NutrientBalanceCrop  ;
     :cultivationType cultivationtype:1091 .
 
 naebi:193 a :NutrientBalanceCrop  ;
-    schema:identifier "CROP_PRLYP"^^xsd:string ;
+    schema:identifier "CROP_PRLYP" ;
     schema:name "Petersilie (geschützter Anbau)"@de ;
     :K2O 180.0 ;
     :Mg 20.0 ;
@@ -1524,7 +1526,7 @@ naebi:193 a :NutrientBalanceCrop  ;
     :cultivationType cultivationtype:1092 .
 
 naebi:194 a :NutrientBalanceCrop  ;
-    schema:identifier "CROP_PROBE"^^xsd:string ;
+    schema:identifier "CROP_PROBE" ;
     schema:name "Ackerbohnen"@de ;
     :K2O 2.13 ;
     :Mg 0.25 ;
@@ -1535,7 +1537,7 @@ naebi:194 a :NutrientBalanceCrop  ;
     :cultivationType cultivationtype:468 .
 
 naebi:195 a :NutrientBalanceCrop  ;
-    schema:identifier "CROP_PRSNP"^^xsd:string ;
+    schema:identifier "CROP_PRSNP" ;
     schema:name "Pastinake"@de ;
     :K2O 290.0 ;
     :Mg 25.0 ;
@@ -1546,7 +1548,7 @@ naebi:195 a :NutrientBalanceCrop  ;
     :cultivationType cultivationtype:129 .
 
 naebi:196 a :NutrientBalanceCrop  ;
-    schema:identifier "CROP_PUMPK"^^xsd:string ;
+    schema:identifier "CROP_PUMPK" ;
     schema:name "Kürbis"@de ;
     :K2O 220.0 ;
     :Mg 30.0 ;
@@ -1557,7 +1559,7 @@ naebi:196 a :NutrientBalanceCrop  ;
     :cultivationType cultivationtype:1093 .
 
 naebi:197 a :NutrientBalanceCrop  ;
-    schema:identifier "CROP_PURSLA"^^xsd:string ;
+    schema:identifier "CROP_PURSLA" ;
     schema:name "Portulak (geschützter Anbau)"@de ;
     :K2O 90.0 ;
     :Mg 20.0 ;
@@ -1568,7 +1570,7 @@ naebi:197 a :NutrientBalanceCrop  ;
     :cultivationType cultivationtype:1094 .
 
 naebi:198 a :NutrientBalanceCrop  ;
-    schema:identifier "CROP_PWINT"^^xsd:string ;
+    schema:identifier "CROP_PWINT" ;
     schema:name "Weide wenig intensiv"@de ;
     :K2O 1.7 ;
     :Mg 0.15 ;
@@ -1579,7 +1581,7 @@ naebi:198 a :NutrientBalanceCrop  ;
     :cultivationType cultivationtype:1126 .
 
 naebi:199 a :NutrientBalanceCrop  ;
-    schema:identifier "CROP_QUINO"^^xsd:string ;
+    schema:identifier "CROP_QUINO" ;
     schema:name "Quinoa"@de ;
     :K2O 1.4 ;
     :Mg 0.47 ;
@@ -1590,7 +1592,7 @@ naebi:199 a :NutrientBalanceCrop  ;
     :cultivationType cultivationtype:574 .
 
 naebi:2 a :NutrientBalanceCrop  ;
-    schema:identifier "CROP_ACBOE"^^xsd:string ;
+    schema:identifier "CROP_ACBOE" ;
     schema:name "Süsslupinen"@de ;
     :K2O 2.04 ;
     :Mg 0.2 ;
@@ -1601,7 +1603,7 @@ naebi:2 a :NutrientBalanceCrop  ;
     :cultivationType cultivationtype:1095 .
 
 naebi:20 a :NutrientBalanceCrop  ;
-    schema:identifier "CROP_BLKSAL"^^xsd:string ;
+    schema:identifier "CROP_BLKSAL" ;
     schema:name "Schwarzwurzel"@de ;
     :K2O 100.0 ;
     :Mg 10.0 ;
@@ -1612,7 +1614,7 @@ naebi:20 a :NutrientBalanceCrop  ;
     :cultivationType cultivationtype:92 .
 
 naebi:200 a :NutrientBalanceCrop  ;
-    schema:identifier "CROP_RAD10B"^^xsd:string ;
+    schema:identifier "CROP_RAD10B" ;
     schema:name "Radies 10 Bund/m2"@de ;
     :K2O 80.0 ;
     :Mg 10.0 ;
@@ -1623,7 +1625,7 @@ naebi:200 a :NutrientBalanceCrop  ;
     :cultivationType cultivationtype:1208 .
 
 naebi:201 a :NutrientBalanceCrop  ;
-    schema:identifier "CROP_RAD18"^^xsd:string ;
+    schema:identifier "CROP_RAD18" ;
     schema:name "Rettich 18 Stk/m2 (geschützter Anbau)"@de ;
     :K2O 200.0 ;
     :Mg 30.0 ;
@@ -1634,7 +1636,7 @@ naebi:201 a :NutrientBalanceCrop  ;
     :cultivationType cultivationtype:1209 .
 
 naebi:202 a :NutrientBalanceCrop  ;
-    schema:identifier "CROP_RAD20"^^xsd:string ;
+    schema:identifier "CROP_RAD20" ;
     schema:name "Radies 20 Bund/m2 (geschützter Anbau)"@de ;
     :K2O 100.0 ;
     :Mg 20.0 ;
@@ -1645,7 +1647,7 @@ naebi:202 a :NutrientBalanceCrop  ;
     :cultivationType cultivationtype:1210 .
 
 naebi:203 a :NutrientBalanceCrop  ;
-    schema:identifier "CROP_RAD89S"^^xsd:string ;
+    schema:identifier "CROP_RAD89S" ;
     schema:name "Rettich 8-9 Stk/m2"@de ;
     :K2O 150.0 ;
     :Mg 10.0 ;
@@ -1656,7 +1658,7 @@ naebi:203 a :NutrientBalanceCrop  ;
     :cultivationType cultivationtype:1211 .
 
 naebi:204 a :NutrientBalanceCrop  ;
-    schema:identifier "CROP_RADCH"^^xsd:string ;
+    schema:identifier "CROP_RADCH" ;
     schema:name "Cicorino rosso, Radicchio"@de ;
     :K2O 90.0 ;
     :Mg 10.0 ;
@@ -1667,7 +1669,7 @@ naebi:204 a :NutrientBalanceCrop  ;
     :cultivationType cultivationtype:133 .
 
 naebi:205 a :NutrientBalanceCrop  ;
-    schema:identifier "CROP_RADCHP"^^xsd:string ;
+    schema:identifier "CROP_RADCHP" ;
     schema:name "Cicorino rosso, Radicchio, Verarbeitung"@de ;
     :K2O 140.0 ;
     :Mg 15.0 ;
@@ -1678,7 +1680,7 @@ naebi:205 a :NutrientBalanceCrop  ;
     :cultivationType cultivationtype:1096 .
 
 naebi:206 a :NutrientBalanceCrop  ;
-    schema:identifier "CROP_RASJLC"^^xsd:string ;
+    schema:identifier "CROP_RASJLC" ;
     schema:name "Himbeer-Jungpflanzen (Long-Cane)"@de ;
     :K2O 169.0 ;
     :Mg 15.0 ;
@@ -1689,7 +1691,7 @@ naebi:206 a :NutrientBalanceCrop  ;
     :cultivationType cultivationtype:1097 .
 
 naebi:207 a :NutrientBalanceCrop  ;
-    schema:identifier "CROP_RASPB"^^xsd:string ;
+    schema:identifier "CROP_RASPB" ;
     schema:name "Himbeeren,  1.5 kg/m2"@de ;
     :K2O 60.0 ;
     :Mg 15.0 ;
@@ -1700,7 +1702,7 @@ naebi:207 a :NutrientBalanceCrop  ;
     :cultivationType cultivationtype:1212 .
 
 naebi:208 a :NutrientBalanceCrop  ;
-    schema:identifier "CROP_RASPB3"^^xsd:string ;
+    schema:identifier "CROP_RASPB3" ;
     schema:name "Himbeeren, 3.5 kg/m2"@de ;
     :K2O 133.0 ;
     :Mg 30.0 ;
@@ -1711,7 +1713,7 @@ naebi:208 a :NutrientBalanceCrop  ;
     :cultivationType cultivationtype:1213 .
 
 naebi:209 a :NutrientBalanceCrop  ;
-    schema:identifier "CROP_RBEYH"^^xsd:string ;
+    schema:identifier "CROP_RBEYH" ;
     schema:name "Himbeeren, 2.5 kg/m2"@de ;
     :K2O 96.0 ;
     :Mg 20.0 ;
@@ -1722,7 +1724,7 @@ naebi:209 a :NutrientBalanceCrop  ;
     :cultivationType cultivationtype:1214 .
 
 naebi:21 a :NutrientBalanceCrop  ;
-    schema:identifier "CROP_BLMLW"^^xsd:string ;
+    schema:identifier "CROP_BLMLW" ;
     schema:name "Blaue Malve"@de ;
     :K2O 240.0 ;
     :Mg 25.0 ;
@@ -1733,7 +1735,7 @@ naebi:21 a :NutrientBalanceCrop  ;
     :cultivationType cultivationtype:1098 .
 
 naebi:210 a :NutrientBalanceCrop  ;
-    schema:identifier "CROP_REDCUR"^^xsd:string ;
+    schema:identifier "CROP_REDCUR" ;
     schema:name "Rote Johannisbeeren, 2.0 kg/m2"@de ;
     :K2O 121.0 ;
     :Mg 15.0 ;
@@ -1744,7 +1746,7 @@ naebi:210 a :NutrientBalanceCrop  ;
     :cultivationType cultivationtype:1215 .
 
 naebi:211 a :NutrientBalanceCrop  ;
-    schema:identifier "CROP_REDCUR3"^^xsd:string ;
+    schema:identifier "CROP_REDCUR3" ;
     schema:name "Rote Johannisbeeren, 3.5 kg/m2"@de ;
     :K2O 253.0 ;
     :Mg 25.0 ;
@@ -1755,7 +1757,7 @@ naebi:211 a :NutrientBalanceCrop  ;
     :cultivationType cultivationtype:1216 .
 
 naebi:212 a :NutrientBalanceCrop  ;
-    schema:identifier "CROP_RHUBB"^^xsd:string ;
+    schema:identifier "CROP_RHUBB" ;
     schema:name "Rhabarber"@de ;
     :K2O 120.0 ;
     :Mg 10.0 ;
@@ -1763,10 +1765,10 @@ naebi:212 a :NutrientBalanceCrop  ;
     :P2O5 30.0 ;
     :cultivationCategory cultivationtype:465 ;
     :cultivationSubCategory cultivationtype:467 ;
-    :cultivationType cultivationtype:211 .
+    :cultivationType cultivationtype:709 .
 
 naebi:213 a :NutrientBalanceCrop  ;
-    schema:identifier "CROP_RICE"^^xsd:string ;
+    schema:identifier "CROP_RICE" ;
     schema:name "Nicht aufgeführte Ackerkulturen, Leguminosen"@de ;
     :K2O 120.0 ;
     :Mg 10.0 ;
@@ -1777,7 +1779,7 @@ naebi:213 a :NutrientBalanceCrop  ;
     :cultivationType cultivationtype:1101 .
 
 naebi:214 a :NutrientBalanceCrop  ;
-    schema:identifier "CROP_RIVER"^^xsd:string ;
+    schema:identifier "CROP_RIVER" ;
     schema:name "Uferwiese entlang von Fliessgewässer"@de ;
     :K2O 0.0 ;
     :Mg 0.0 ;
@@ -1788,7 +1790,7 @@ naebi:214 a :NutrientBalanceCrop  ;
     :cultivationType cultivationtype:634 .
 
 naebi:215 a :NutrientBalanceCrop  ;
-    schema:identifier "CROP_RJEYH"^^xsd:string ;
+    schema:identifier "CROP_RJEYH" ;
     schema:name "Rote Johannisbeeren, 2.5 kg/m2"@de ;
     :K2O 151.0 ;
     :Mg 20.0 ;
@@ -1799,7 +1801,7 @@ naebi:215 a :NutrientBalanceCrop  ;
     :cultivationType cultivationtype:1217 .
 
 naebi:216 a :NutrientBalanceCrop  ;
-    schema:identifier "CROP_RKTC1"^^xsd:string ;
+    schema:identifier "CROP_RKTC1" ;
     schema:name "Rucola, 1 Schnitt (geschützter Anbau)"@de ;
     :K2O 150.0 ;
     :Mg 10.0 ;
@@ -1810,7 +1812,7 @@ naebi:216 a :NutrientBalanceCrop  ;
     :cultivationType cultivationtype:1099 .
 
 naebi:217 a :NutrientBalanceCrop  ;
-    schema:identifier "CROP_RKTC2"^^xsd:string ;
+    schema:identifier "CROP_RKTC2" ;
     schema:name "Rucola, 2 Schnitte (geschützter Anbau)"@de ;
     :K2O 180.0 ;
     :Mg 20.0 ;
@@ -1821,7 +1823,7 @@ naebi:217 a :NutrientBalanceCrop  ;
     :cultivationType cultivationtype:1100 .
 
 naebi:218 a :NutrientBalanceCrop  ;
-    schema:identifier "CROP_RMEAD"^^xsd:string ;
+    schema:identifier "CROP_RMEAD" ;
     schema:name "Uebr. Wiesen mit Düngeverbot"@de ;
     :K2O 0.0 ;
     :Mg 0.0 ;
@@ -1829,10 +1831,10 @@ naebi:218 a :NutrientBalanceCrop  ;
     :P2O5 0.0 ;
     :cultivationCategory cultivationtype:464 ;
     :cultivationSubCategory cultivationtype:463 ;
-    :cultivationType cultivationtype:308 .
+    :cultivationType cube:Undefined .
 
 naebi:219 a :NutrientBalanceCrop  ;
-    schema:identifier "CROP_RSMRY"^^xsd:string ;
+    schema:identifier "CROP_RSMRY" ;
     schema:name "Rosmarin"@de ;
     :K2O 110.0 ;
     :Mg 15.0 ;
@@ -1843,7 +1845,7 @@ naebi:219 a :NutrientBalanceCrop  ;
     :cultivationType cultivationtype:308 .
 
 naebi:22 a :NutrientBalanceCrop  ;
-    schema:identifier "CROP_BLUBRY"^^xsd:string ;
+    schema:identifier "CROP_BLUBRY" ;
     schema:name "Heidelbeeren, 1.5 kg/m2"@de ;
     :K2O 72.0 ;
     :Mg 20.0 ;
@@ -1854,7 +1856,7 @@ naebi:22 a :NutrientBalanceCrop  ;
     :cultivationType cultivationtype:1218 .
 
 naebi:220 a :NutrientBalanceCrop  ;
-    schema:identifier "CROP_RUEHR"^^xsd:string ;
+    schema:identifier "CROP_RUEHR" ;
     schema:name "Edelraute"@de ;
     :K2O 40.0 ;
     :Mg 5.0 ;
@@ -1865,7 +1867,7 @@ naebi:220 a :NutrientBalanceCrop  ;
     :cultivationType cultivationtype:1102 .
 
 naebi:221 a :NutrientBalanceCrop  ;
-    schema:identifier "CROP_SALHY"^^xsd:string ;
+    schema:identifier "CROP_SALHY" ;
     schema:name "Salate, diverse, hoher Ertrag"@de ;
     :K2O 120.0 ;
     :Mg 10.0 ;
@@ -1876,7 +1878,7 @@ naebi:221 a :NutrientBalanceCrop  ;
     :cultivationType cultivationtype:1103 .
 
 naebi:222 a :NutrientBalanceCrop  ;
-    schema:identifier "CROP_SALMY"^^xsd:string ;
+    schema:identifier "CROP_SALMY" ;
     schema:name "Salate, diverse, mittlerer Ertrag"@de ;
     :K2O 70.0 ;
     :Mg 10.0 ;
@@ -1887,7 +1889,7 @@ naebi:222 a :NutrientBalanceCrop  ;
     :cultivationType cultivationtype:1104 .
 
 naebi:223 a :NutrientBalanceCrop  ;
-    schema:identifier "CROP_SAVOYL"^^xsd:string ;
+    schema:identifier "CROP_SAVOYL" ;
     schema:name "Wirz leicht"@de ;
     :K2O 140.0 ;
     :Mg 10.0 ;
@@ -1898,7 +1900,7 @@ naebi:223 a :NutrientBalanceCrop  ;
     :cultivationType cultivationtype:1105 .
 
 naebi:224 a :NutrientBalanceCrop  ;
-    schema:identifier "CROP_SAVOYS"^^xsd:string ;
+    schema:identifier "CROP_SAVOYS" ;
     schema:name "Wirz schwer"@de ;
     :K2O 160.0 ;
     :Mg 10.0 ;
@@ -1909,7 +1911,7 @@ naebi:224 a :NutrientBalanceCrop  ;
     :cultivationType cultivationtype:1106 .
 
 naebi:225 a :NutrientBalanceCrop  ;
-    schema:identifier "CROP_SCRUB"^^xsd:string ;
+    schema:identifier "CROP_SCRUB" ;
     schema:name "Streue-, Torfland"@de ;
     :K2O 0.0 ;
     :Mg 0.0 ;
@@ -1920,7 +1922,7 @@ naebi:225 a :NutrientBalanceCrop  ;
     :cultivationType cultivationtype:1107 .
 
 naebi:226 a :NutrientBalanceCrop  ;
-    schema:identifier "CROP_SCT01"^^xsd:string ;
+    schema:identifier "CROP_SCT01" ;
     schema:name "Edelkastanien"@de ;
     :K2O 56.0 ;
     :Mg 8.0 ;
@@ -1931,7 +1933,7 @@ naebi:226 a :NutrientBalanceCrop  ;
     :cultivationType cultivationtype:923 .
 
 naebi:227 a :NutrientBalanceCrop  ;
-    schema:identifier "CROP_SFVGV"^^xsd:string ;
+    schema:identifier "CROP_SFVGV" ;
     schema:name "Kleine Freilandpflanzungen mit versch. Gemüsen"@de ;
     :K2O 120.0 ;
     :Mg 15.0 ;
@@ -1942,7 +1944,7 @@ naebi:227 a :NutrientBalanceCrop  ;
     :cultivationType cultivationtype:1108 .
 
 naebi:228 a :NutrientBalanceCrop  ;
-    schema:identifier "CROP_SGESG"^^xsd:string ;
+    schema:identifier "CROP_SGESG" ;
     schema:name "Salbei"@de ;
     :K2O 180.0 ;
     :Mg 15.0 ;
@@ -1953,7 +1955,7 @@ naebi:228 a :NutrientBalanceCrop  ;
     :cultivationType cultivationtype:478 .
 
 naebi:229 a :NutrientBalanceCrop  ;
-    schema:identifier "CROP_SGPVV"^^xsd:string ;
+    schema:identifier "CROP_SGPVV" ;
     schema:name "Kleine Gewächshauspflanzungen mit versch. Gemüsen"@de ;
     :K2O 220.0 ;
     :Mg 35.0 ;
@@ -1964,7 +1966,7 @@ naebi:229 a :NutrientBalanceCrop  ;
     :cultivationType cultivationtype:1109 .
 
 naebi:23 a :NutrientBalanceCrop  ;
-    schema:identifier "CROP_BONIONF"^^xsd:string ;
+    schema:identifier "CROP_BONIONF" ;
     schema:name "Bundzwiebeln, Frühjahr"@de ;
     :K2O 120.0 ;
     :Mg 10.0 ;
@@ -1975,7 +1977,7 @@ naebi:23 a :NutrientBalanceCrop  ;
     :cultivationType cultivationtype:1110 .
 
 naebi:230 a :NutrientBalanceCrop  ;
-    schema:identifier "CROP_SGRST"^^xsd:string ;
+    schema:identifier "CROP_SGRST" ;
     schema:name "Sommergerste"@de ;
     :K2O 0.55 ;
     :Mg 0.11 ;
@@ -1986,7 +1988,7 @@ naebi:230 a :NutrientBalanceCrop  ;
     :cultivationType cultivationtype:501 .
 
 naebi:231 a :NutrientBalanceCrop  ;
-    schema:identifier "CROP_SILCRN"^^xsd:string ;
+    schema:identifier "CROP_SILCRN" ;
     schema:name "Körnermais"@de ;
     :K2O 0.4 ;
     :Mg 0.09 ;
@@ -1997,7 +1999,7 @@ naebi:231 a :NutrientBalanceCrop  ;
     :cultivationType cultivationtype:508 .
 
 naebi:232 a :NutrientBalanceCrop  ;
-    schema:identifier "CROP_SOGST"^^xsd:string ;
+    schema:identifier "CROP_SOGST" ;
     schema:name "Sommerhafer"@de ;
     :K2O 0.51 ;
     :Mg 0.11 ;
@@ -2008,7 +2010,7 @@ naebi:232 a :NutrientBalanceCrop  ;
     :cultivationType cultivationtype:1011 .
 
 naebi:233 a :NutrientBalanceCrop  ;
-    schema:identifier "CROP_SOMRA"^^xsd:string ;
+    schema:identifier "CROP_SOMRA" ;
     schema:name "Winterraps in 62a Nitrat-Projekt"@de ;
     :K2O 0.86 ;
     :Mg 0.23 ;
@@ -2019,7 +2021,7 @@ naebi:233 a :NutrientBalanceCrop  ;
     :cultivationType cultivationtype:1111 .
 
 naebi:234 a :NutrientBalanceCrop  ;
-    schema:identifier "CROP_SOR2ND"^^xsd:string ;
+    schema:identifier "CROP_SOR2ND" ;
     schema:name "Ganzpflanzen-Sorghum (Zweitkultur), ha"@de ;
     :K2O 2.7 ;
     :Mg 0.1 ;
@@ -2030,7 +2032,7 @@ naebi:234 a :NutrientBalanceCrop  ;
     :cultivationType cultivationtype:1029 .
 
 naebi:235 a :NutrientBalanceCrop  ;
-    schema:identifier "CROP_SOYBN"^^xsd:string ;
+    schema:identifier "CROP_SOYBN" ;
     schema:name "Tabak Burley"@de ;
     :K2O 5.0 ;
     :Mg 0.28 ;
@@ -2041,7 +2043,7 @@ naebi:235 a :NutrientBalanceCrop  ;
     :cultivationType cultivationtype:1112 .
 
 naebi:236 a :NutrientBalanceCrop  ;
-    schema:identifier "CROP_SPIN1C"^^xsd:string ;
+    schema:identifier "CROP_SPIN1C" ;
     schema:name "Spinat, 1 Schnitt, nach Mitte April gesät"@de ;
     :K2O 150.0 ;
     :Mg 20.0 ;
@@ -2052,7 +2054,7 @@ naebi:236 a :NutrientBalanceCrop  ;
     :cultivationType cultivationtype:1114 .
 
 naebi:237 a :NutrientBalanceCrop  ;
-    schema:identifier "CROP_SPIN2A"^^xsd:string ;
+    schema:identifier "CROP_SPIN2A" ;
     schema:name "Spinat, 2 Schnitte, nach Mitte April gesät"@de ;
     :K2O 180.0 ;
     :Mg 25.0 ;
@@ -2063,7 +2065,7 @@ naebi:237 a :NutrientBalanceCrop  ;
     :cultivationType cultivationtype:1115 .
 
 naebi:238 a :NutrientBalanceCrop  ;
-    schema:identifier "CROP_SPIN2C"^^xsd:string ;
+    schema:identifier "CROP_SPIN2C" ;
     schema:name "Spinat, 2 Schnitte, vor Mitte April gesät"@de ;
     :K2O 180.0 ;
     :Mg 25.0 ;
@@ -2074,7 +2076,7 @@ naebi:238 a :NutrientBalanceCrop  ;
     :cultivationType cultivationtype:1116 .
 
 naebi:239 a :NutrientBalanceCrop  ;
-    schema:identifier "CROP_SPINI1"^^xsd:string ;
+    schema:identifier "CROP_SPINI1" ;
     schema:name "Spinat, Industrie, 1 Schnitt, vor Mitte April gesät"@de ;
     :K2O 190.0 ;
     :Mg 25.0 ;
@@ -2085,7 +2087,7 @@ naebi:239 a :NutrientBalanceCrop  ;
     :cultivationType cultivationtype:1117 .
 
 naebi:24 a :NutrientBalanceCrop  ;
-    schema:identifier "CROP_BONIONS"^^xsd:string ;
+    schema:identifier "CROP_BONIONS" ;
     schema:name "Bundzwiebeln, Sommer"@de ;
     :K2O 120.0 ;
     :Mg 10.0 ;
@@ -2096,7 +2098,7 @@ naebi:24 a :NutrientBalanceCrop  ;
     :cultivationType cultivationtype:1118 .
 
 naebi:240 a :NutrientBalanceCrop  ;
-    schema:identifier "CROP_SPINI1A"^^xsd:string ;
+    schema:identifier "CROP_SPINI1A" ;
     schema:name "Spinat, Industrie, 1 Schnitt, nach Mitte April gesät"@de ;
     :K2O 190.0 ;
     :Mg 25.0 ;
@@ -2107,7 +2109,7 @@ naebi:240 a :NutrientBalanceCrop  ;
     :cultivationType cultivationtype:1119 .
 
 naebi:241 a :NutrientBalanceCrop  ;
-    schema:identifier "CROP_SPINI2"^^xsd:string ;
+    schema:identifier "CROP_SPINI2" ;
     schema:name "Spinat, Industrie, 2 Schnitte, vor Mitte April gesät"@de ;
     :K2O 200.0 ;
     :Mg 25.0 ;
@@ -2118,7 +2120,7 @@ naebi:241 a :NutrientBalanceCrop  ;
     :cultivationType cultivationtype:1120 .
 
 naebi:242 a :NutrientBalanceCrop  ;
-    schema:identifier "CROP_SPINI2A"^^xsd:string ;
+    schema:identifier "CROP_SPINI2A" ;
     schema:name "Spinat, Industrie, 2 Schnitte, nach Mitte April gesät"@de ;
     :K2O 200.0 ;
     :Mg 25.0 ;
@@ -2129,7 +2131,7 @@ naebi:242 a :NutrientBalanceCrop  ;
     :cultivationType cultivationtype:1121 .
 
 naebi:243 a :NutrientBalanceCrop  ;
-    schema:identifier "CROP_SPINP1"^^xsd:string ;
+    schema:identifier "CROP_SPINP1" ;
     schema:name "Spinat, 1 Schnitt, vor Mitte April gesät"@de ;
     :K2O 150.0 ;
     :Mg 20.0 ;
@@ -2140,7 +2142,7 @@ naebi:243 a :NutrientBalanceCrop  ;
     :cultivationType cultivationtype:1122 .
 
 naebi:244 a :NutrientBalanceCrop  ;
-    schema:identifier "CROP_SPNCH"^^xsd:string ;
+    schema:identifier "CROP_SPNCH" ;
     schema:name "Spinat (geschützter Anbau)"@de ;
     :K2O 140.0 ;
     :Mg 20.0 ;
@@ -2151,7 +2153,7 @@ naebi:244 a :NutrientBalanceCrop  ;
     :cultivationType cultivationtype:1123 .
 
 naebi:245 a :NutrientBalanceCrop  ;
-    schema:identifier "CROP_SPRCP"^^xsd:string ;
+    schema:identifier "CROP_SPRCP" ;
     schema:name "Frühjahrsschnitt vor Wiesenumbruch, ha"@de ;
     :K2O 2.7 ;
     :Mg 0.25 ;
@@ -2162,7 +2164,7 @@ naebi:245 a :NutrientBalanceCrop  ;
     :cultivationType cultivationtype:1124 .
 
 naebi:246 a :NutrientBalanceCrop  ;
-    schema:identifier "CROP_ST1EY"^^xsd:string ;
+    schema:identifier "CROP_ST1EY" ;
     schema:name "Erdbeeren 1-jährig, 3.0 kg/m2"@de ;
     :K2O 157.0 ;
     :Mg 25.0 ;
@@ -2173,7 +2175,7 @@ naebi:246 a :NutrientBalanceCrop  ;
     :cultivationType cultivationtype:1219 .
 
 naebi:247 a :NutrientBalanceCrop  ;
-    schema:identifier "CROP_STJHW"^^xsd:string ;
+    schema:identifier "CROP_STJHW" ;
     schema:name "Johanniskraut"@de ;
     :K2O 110.0 ;
     :Mg 10.0 ;
@@ -2184,7 +2186,7 @@ naebi:247 a :NutrientBalanceCrop  ;
     :cultivationType cultivationtype:137 .
 
 naebi:248 a :NutrientBalanceCrop  ;
-    schema:identifier "CROP_STORC"^^xsd:string ;
+    schema:identifier "CROP_STORC" ;
     schema:name "Kabis Lager"@de ;
     :K2O 200.0 ;
     :Mg 20.0 ;
@@ -2195,7 +2197,7 @@ naebi:248 a :NutrientBalanceCrop  ;
     :cultivationType cultivationtype:1125 .
 
 naebi:249 a :NutrientBalanceCrop  ;
-    schema:identifier "CROP_STRAW"^^xsd:string ;
+    schema:identifier "CROP_STRAW" ;
     schema:name "Vom Betrieb weggeführtes Stroh, ha"@de ;
     :K2O 0.79 ;
     :Mg 0.11 ;
@@ -2206,7 +2208,7 @@ naebi:249 a :NutrientBalanceCrop  ;
     :cultivationType cube:Undefined .
 
 naebi:25 a :NutrientBalanceCrop  ;
-    schema:identifier "CROP_BONIONW"^^xsd:string ;
+    schema:identifier "CROP_BONIONW" ;
     schema:name "Bundzwiebeln, Überwinterung"@de ;
     :K2O 70.0 ;
     :Mg 5.0 ;
@@ -2217,7 +2219,7 @@ naebi:25 a :NutrientBalanceCrop  ;
     :cultivationType cultivationtype:1127 .
 
 naebi:250 a :NutrientBalanceCrop  ;
-    schema:identifier "CROP_STRAW1"^^xsd:string ;
+    schema:identifier "CROP_STRAW1" ;
     schema:name "Erdbeeren 1-jährig, 2.0 kg/m2"@de ;
     :K2O 121.0 ;
     :Mg 20.0 ;
@@ -2228,7 +2230,7 @@ naebi:250 a :NutrientBalanceCrop  ;
     :cultivationType cultivationtype:1221 .
 
 naebi:251 a :NutrientBalanceCrop  ;
-    schema:identifier "CROP_STRAW4"^^xsd:string ;
+    schema:identifier "CROP_STRAW4" ;
     schema:name "Erdbeeren 1-jährig, 4.0 kg/m2"@de ;
     :K2O 247.0 ;
     :Mg 40.0 ;
@@ -2239,7 +2241,7 @@ naebi:251 a :NutrientBalanceCrop  ;
     :cultivationType cultivationtype:1222 .
 
 naebi:252 a :NutrientBalanceCrop  ;
-    schema:identifier "CROP_STRAWL"^^xsd:string ;
+    schema:identifier "CROP_STRAWL" ;
     schema:name "Getreide-Silage"@de ;
     :K2O 0.9623 ;
     :Mg 0.1038 ;
@@ -2250,7 +2252,7 @@ naebi:252 a :NutrientBalanceCrop  ;
     :cultivationType cultivationtype:1030 .
 
 naebi:253 a :NutrientBalanceCrop  ;
-    schema:identifier "CROP_STRAWP"^^xsd:string ;
+    schema:identifier "CROP_STRAWP" ;
     schema:name "Erdbeeren mehrjährig"@de ;
     :K2O 121.0 ;
     :Mg 20.0 ;
@@ -2261,7 +2263,7 @@ naebi:253 a :NutrientBalanceCrop  ;
     :cultivationType cultivationtype:1128 .
 
 naebi:254 a :NutrientBalanceCrop  ;
-    schema:identifier "CROP_STRBRR"^^xsd:string ;
+    schema:identifier "CROP_STRBRR" ;
     schema:name "Nützlingsstreifen (oAF)"@de ;
     :K2O 0.0 ;
     :Mg 0.0 ;
@@ -2272,7 +2274,7 @@ naebi:254 a :NutrientBalanceCrop  ;
     :cultivationType cultivationtype:572 .
 
 naebi:255 a :NutrientBalanceCrop  ;
-    schema:identifier "CROP_STRIT"^^xsd:string ;
+    schema:identifier "CROP_STRIT" ;
     schema:name "Sommertriticale"@de ;
     :K2O 0.49 ;
     :Mg 0.09 ;
@@ -2283,7 +2285,7 @@ naebi:255 a :NutrientBalanceCrop  ;
     :cultivationType cultivationtype:1018 .
 
 naebi:256 a :NutrientBalanceCrop  ;
-    schema:identifier "CROP_STRJPL"^^xsd:string ;
+    schema:identifier "CROP_STRJPL" ;
     schema:name "Erdbeeren-Jungpflanzen (Tray-Pflanzen)"@de ;
     :K2O 114.0 ;
     :Mg 20.0 ;
@@ -2294,7 +2296,7 @@ naebi:256 a :NutrientBalanceCrop  ;
     :cultivationType cultivationtype:1130 .
 
 naebi:257 a :NutrientBalanceCrop  ;
-    schema:identifier "CROP_SUCORN"^^xsd:string ;
+    schema:identifier "CROP_SUCORN" ;
     schema:name "Zuckermais"@de ;
     :K2O 100.0 ;
     :Mg 20.0 ;
@@ -2305,7 +2307,7 @@ naebi:257 a :NutrientBalanceCrop  ;
     :cultivationType cultivationtype:1027 .
 
 naebi:258 a :NutrientBalanceCrop  ;
-    schema:identifier "CROP_SUGRCC"^^xsd:string ;
+    schema:identifier "CROP_SUGRCC" ;
     schema:name "Zuckerhut (Convenience)"@de ;
     :K2O 90.0 ;
     :Mg 10.0 ;
@@ -2316,7 +2318,7 @@ naebi:258 a :NutrientBalanceCrop  ;
     :cultivationType cultivationtype:1131 .
 
 naebi:259 a :NutrientBalanceCrop  ;
-    schema:identifier "CROP_SUGRCH"^^xsd:string ;
+    schema:identifier "CROP_SUGRCH" ;
     schema:name "Zuckerhut"@de ;
     :K2O 90.0 ;
     :Mg 10.0 ;
@@ -2327,7 +2329,7 @@ naebi:259 a :NutrientBalanceCrop  ;
     :cultivationType cultivationtype:142 .
 
 naebi:26 a :NutrientBalanceCrop  ;
-    schema:identifier "CROP_BRGEG"^^xsd:string ;
+    schema:identifier "CROP_BRGEG" ;
     schema:name "Bohnenkraut"@de ;
     :K2O 200.0 ;
     :Mg 20.0 ;
@@ -2338,28 +2340,28 @@ naebi:26 a :NutrientBalanceCrop  ;
     :cultivationType cultivationtype:157 .
 
 naebi:260 a :NutrientBalanceCrop  ;
-    schema:identifier "CROP_SUMEXT"^^xsd:string ;
+    schema:identifier "CROP_SUMEXT" ;
     schema:name "Heuwiesen Sömmerungsg., extensive"@de ;
     :cultivationCategory cultivationtype:464 ;
     :cultivationSubCategory cultivationtype:463 ;
     :cultivationType cultivationtype:1132 .
 
 naebi:261 a :NutrientBalanceCrop  ;
-    schema:identifier "CROP_SUMLNT"^^xsd:string ;
+    schema:identifier "CROP_SUMLNT" ;
     schema:name "Heuwiesen Sömmerungsg., wenig intensiv"@de ;
     :cultivationCategory cultivationtype:464 ;
     :cultivationSubCategory cultivationtype:463 ;
     :cultivationType cultivationtype:1133 .
 
 naebi:262 a :NutrientBalanceCrop  ;
-    schema:identifier "CROP_SUMOTH"^^xsd:string ;
+    schema:identifier "CROP_SUMOTH" ;
     schema:name "Heuwiesen im Sömmerungsg., übrige"@de ;
     :cultivationCategory cultivationtype:464 ;
     :cultivationSubCategory cultivationtype:463 ;
     :cultivationType cultivationtype:1134 .
 
 naebi:263 a :NutrientBalanceCrop  ;
-    schema:identifier "CROP_SWCHD"^^xsd:string ;
+    schema:identifier "CROP_SWCHD" ;
     schema:name "Krautstiel (geschützter Anbau)"@de ;
     :K2O 400.0 ;
     :Mg 50.0 ;
@@ -2370,7 +2372,7 @@ naebi:263 a :NutrientBalanceCrop  ;
     :cultivationType cultivationtype:1135 .
 
 naebi:264 a :NutrientBalanceCrop  ;
-    schema:identifier "CROP_SWEET"^^xsd:string ;
+    schema:identifier "CROP_SWEET" ;
     schema:name "Tabak Virgine"@de ;
     :K2O 4.76 ;
     :Mg 0.2 ;
@@ -2381,7 +2383,7 @@ naebi:264 a :NutrientBalanceCrop  ;
     :cultivationType cultivationtype:1136 .
 
 naebi:265 a :NutrientBalanceCrop  ;
-    schema:identifier "CROP_SWEPO"^^xsd:string ;
+    schema:identifier "CROP_SWEPO" ;
     schema:name "Süsskartoffeln"@de ;
     :K2O 150.0 ;
     :Mg 15.0 ;
@@ -2392,7 +2394,7 @@ naebi:265 a :NutrientBalanceCrop  ;
     :cultivationType cultivationtype:1137 .
 
 naebi:266 a :NutrientBalanceCrop  ;
-    schema:identifier "CROP_SWHT"^^xsd:string ;
+    schema:identifier "CROP_SWHT" ;
     schema:name "Sommerweizen"@de ;
     :K2O 0.44 ;
     :Mg 0.12 ;
@@ -2403,7 +2405,7 @@ naebi:266 a :NutrientBalanceCrop  ;
     :cultivationType cultivationtype:999 .
 
 naebi:267 a :NutrientBalanceCrop  ;
-    schema:identifier "CROP_TABAC"^^xsd:string ;
+    schema:identifier "CROP_TABAC" ;
     schema:name "Reis"@de ;
     :K2O 0.53 ;
     :Mg 0.08 ;
@@ -2414,7 +2416,7 @@ naebi:267 a :NutrientBalanceCrop  ;
     :cultivationType cultivationtype:509 .
 
 naebi:268 a :NutrientBalanceCrop  ;
-    schema:identifier "CROP_TABAV"^^xsd:string ;
+    schema:identifier "CROP_TABAV" ;
     schema:name "Nicht aufgef. Ackerkult., Nicht-Leg.,Mischungen Leg.+Nicht-Leg"@de ;
     :K2O 120.0 ;
     :Mg 10.0 ;
@@ -2425,7 +2427,7 @@ naebi:268 a :NutrientBalanceCrop  ;
     :cultivationType cube:Undefined .
 
 naebi:269 a :NutrientBalanceCrop  ;
-    schema:identifier "CROP_TGEYH"^^xsd:string ;
+    schema:identifier "CROP_TGEYH" ;
     schema:name "Tafeltrauben, hoher Ertrag"@de ;
     :K2O 102.0 ;
     :Mg 25.0 ;
@@ -2436,7 +2438,7 @@ naebi:269 a :NutrientBalanceCrop  ;
     :cultivationType cultivationtype:1138 .
 
 naebi:27 a :NutrientBalanceCrop  ;
-    schema:identifier "CROP_BRNTL"^^xsd:string ;
+    schema:identifier "CROP_BRNTL" ;
     schema:name "Brennessel"@de ;
     :K2O 250.0 ;
     :Mg 30.0 ;
@@ -2447,7 +2449,7 @@ naebi:27 a :NutrientBalanceCrop  ;
     :cultivationType cultivationtype:1139 .
 
 naebi:270 a :NutrientBalanceCrop  ;
-    schema:identifier "CROP_TGRAPE"^^xsd:string ;
+    schema:identifier "CROP_TGRAPE" ;
     schema:name "Tafeltrauben"@de ;
     :K2O 78.0 ;
     :Mg 25.0 ;
@@ -2458,7 +2460,7 @@ naebi:270 a :NutrientBalanceCrop  ;
     :cultivationType cultivationtype:1140 .
 
 naebi:271 a :NutrientBalanceCrop  ;
-    schema:identifier "CROP_THYME"^^xsd:string ;
+    schema:identifier "CROP_THYME" ;
     schema:name "Thymian"@de ;
     :K2O 100.0 ;
     :Mg 10.0 ;
@@ -2469,7 +2471,7 @@ naebi:271 a :NutrientBalanceCrop  ;
     :cultivationType cultivationtype:268 .
 
 naebi:272 a :NutrientBalanceCrop  ;
-    schema:identifier "CROP_TOMAT"^^xsd:string ;
+    schema:identifier "CROP_TOMAT" ;
     schema:name "Tomaten"@de ;
     :K2O 260.0 ;
     :Mg 30.0 ;
@@ -2480,7 +2482,7 @@ naebi:272 a :NutrientBalanceCrop  ;
     :cultivationType cultivationtype:85 .
 
 naebi:273 a :NutrientBalanceCrop  ;
-    schema:identifier "CROP_TOMTH"^^xsd:string ;
+    schema:identifier "CROP_TOMTH" ;
     schema:name "Tomaten, Bodenkultur, hoher Ertrag (geschützter Anbau)"@de ;
     :K2O 680.0 ;
     :Mg 120.0 ;
@@ -2491,7 +2493,7 @@ naebi:273 a :NutrientBalanceCrop  ;
     :cultivationType cultivationtype:1142 .
 
 naebi:274 a :NutrientBalanceCrop  ;
-    schema:identifier "CROP_TOMTL"^^xsd:string ;
+    schema:identifier "CROP_TOMTL" ;
     schema:name "Tomaten, Bodenkulturen, tiefer Ertrag (geschützter Anbau)"@de ;
     :K2O 340.0 ;
     :Mg 60.0 ;
@@ -2502,7 +2504,7 @@ naebi:274 a :NutrientBalanceCrop  ;
     :cultivationType cultivationtype:1143 .
 
 naebi:275 a :NutrientBalanceCrop  ;
-    schema:identifier "CROP_TOMTM"^^xsd:string ;
+    schema:identifier "CROP_TOMTM" ;
     schema:name "Tomaten, Bodenkulturen, mittlerer Ertrag (geschützter Anbau)"@de ;
     :K2O 500.0 ;
     :Mg 80.0 ;
@@ -2513,7 +2515,7 @@ naebi:275 a :NutrientBalanceCrop  ;
     :cultivationType cultivationtype:1144 .
 
 naebi:276 a :NutrientBalanceCrop  ;
-    schema:identifier "CROP_TOMTV"^^xsd:string ;
+    schema:identifier "CROP_TOMTV" ;
     schema:name "Tomaten, Bodenkultur, sehr hoher Ertrag (geschützter Anbau)"@de ;
     :K2O 850.0 ;
     :Mg 150.0 ;
@@ -2524,7 +2526,7 @@ naebi:276 a :NutrientBalanceCrop  ;
     :cultivationType cultivationtype:1145 .
 
 naebi:277 a :NutrientBalanceCrop  ;
-    schema:identifier "CROP_TPAST"^^xsd:string ;
+    schema:identifier "CROP_TPAST" ;
     schema:name "Äugstlen, ha"@de ;
     :K2O 2.7 ;
     :Mg 0.25 ;
@@ -2535,7 +2537,7 @@ naebi:277 a :NutrientBalanceCrop  ;
     :cultivationType cultivationtype:1146 .
 
 naebi:278 a :NutrientBalanceCrop  ;
-    schema:identifier "CROP_TRNPM"^^xsd:string ;
+    schema:identifier "CROP_TRNPM" ;
     schema:name "Rüben Herbst-, Mai-"@de ;
     :K2O 150.0 ;
     :Mg 20.0 ;
@@ -2546,7 +2548,7 @@ naebi:278 a :NutrientBalanceCrop  ;
     :cultivationType cultivationtype:1147 .
 
 naebi:279 a :NutrientBalanceCrop  ;
-    schema:identifier "CROP_TRNTP"^^xsd:string ;
+    schema:identifier "CROP_TRNTP" ;
     schema:name "Cima di rapa"@de ;
     :K2O 160.0 ;
     :Mg 10.0 ;
@@ -2554,10 +2556,10 @@ naebi:279 a :NutrientBalanceCrop  ;
     :P2O5 40.0 ;
     :cultivationCategory cultivationtype:465 ;
     :cultivationSubCategory cultivationtype:24 ;
-    :cultivationType cultivationtype:1148 .
+    :cultivationType cultivationtype:132 .
 
 naebi:28 a :NutrientBalanceCrop  ;
-    schema:identifier "CROP_BRNTT"^^xsd:string ;
+    schema:identifier "CROP_BRNTT" ;
     schema:name "Bibernelle"@de ;
     :K2O 210.0 ;
     :Mg 20.0 ;
@@ -2568,7 +2570,7 @@ naebi:28 a :NutrientBalanceCrop  ;
     :cultivationType cultivationtype:1149 .
 
 naebi:280 a :NutrientBalanceCrop  ;
-    schema:identifier "CROP_VBDIV"^^xsd:string ;
+    schema:identifier "CROP_VBDIV" ;
     schema:name "Rebflächen mit hoher Artenvielfalt"@de ;
     :K2O 78.0 ;
     :Mg 25.0 ;
@@ -2579,7 +2581,7 @@ naebi:280 a :NutrientBalanceCrop  ;
     :cultivationType cultivationtype:717 .
 
 naebi:281 a :NutrientBalanceCrop  ;
-    schema:identifier "CROP_VINES"^^xsd:string ;
+    schema:identifier "CROP_VINES" ;
     schema:name "Reben"@de ;
     :K2O 78.0 ;
     :Mg 25.0 ;
@@ -2590,7 +2592,7 @@ naebi:281 a :NutrientBalanceCrop  ;
     :cultivationType cultivationtype:4 .
 
 naebi:282 a :NutrientBalanceCrop  ;
-    schema:identifier "CROP_VRVNN"^^xsd:string ;
+    schema:identifier "CROP_VRVNN" ;
     schema:name "Ehrenpreis"@de ;
     :K2O 70.0 ;
     :Mg 10.0 ;
@@ -2601,7 +2603,7 @@ naebi:282 a :NutrientBalanceCrop  ;
     :cultivationType cultivationtype:1150 .
 
 naebi:283 a :NutrientBalanceCrop  ;
-    schema:identifier "CROP_WALN1"^^xsd:string ;
+    schema:identifier "CROP_WALN1" ;
     schema:name "Walnüsse < 185 Bäume/ha"@de ;
     :K2O 100.0 ;
     :Mg 30.0 ;
@@ -2612,7 +2614,7 @@ naebi:283 a :NutrientBalanceCrop  ;
     :cultivationType cultivationtype:1151 .
 
 naebi:284 a :NutrientBalanceCrop  ;
-    schema:identifier "CROP_WALN2"^^xsd:string ;
+    schema:identifier "CROP_WALN2" ;
     schema:name "Walnüsse ≥ 185 Bäume/ha"@de ;
     :K2O 140.0 ;
     :Mg 50.0 ;
@@ -2623,7 +2625,7 @@ naebi:284 a :NutrientBalanceCrop  ;
     :cultivationType cultivationtype:1152 .
 
 naebi:285 a :NutrientBalanceCrop  ;
-    schema:identifier "CROP_WGRIN"^^xsd:string ;
+    schema:identifier "CROP_WGRIN" ;
     schema:name "Naturwiese mittelintensiv"@de ;
     :K2O 2.3 ;
     :Mg 0.2 ;
@@ -2634,7 +2636,7 @@ naebi:285 a :NutrientBalanceCrop  ;
     :cultivationType cultivationtype:2 .
 
 naebi:286 a :NutrientBalanceCrop  ;
-    schema:identifier "CROP_WGRNM"^^xsd:string ;
+    schema:identifier "CROP_WGRNM" ;
     schema:name "Kunstwiese mittelintensiv"@de ;
     :K2O 2.3 ;
     :Mg 0.2 ;
@@ -2645,7 +2647,7 @@ naebi:286 a :NutrientBalanceCrop  ;
     :cultivationType cultivationtype:1154 .
 
 naebi:287 a :NutrientBalanceCrop  ;
-    schema:identifier "CROP_WGRNN"^^xsd:string ;
+    schema:identifier "CROP_WGRNN" ;
     schema:name "Naturwiese intensiv"@de ;
     :K2O 2.7 ;
     :Mg 0.25 ;
@@ -2656,7 +2658,7 @@ naebi:287 a :NutrientBalanceCrop  ;
     :cultivationType cultivationtype:1155 .
 
 naebi:288 a :NutrientBalanceCrop  ;
-    schema:identifier "CROP_WGRST"^^xsd:string ;
+    schema:identifier "CROP_WGRST" ;
     schema:name "Wintergerste"@de ;
     :K2O 0.11 ;
     :Mg 0.12 ;
@@ -2667,7 +2669,7 @@ naebi:288 a :NutrientBalanceCrop  ;
     :cultivationType cultivationtype:1008 .
 
 naebi:289 a :NutrientBalanceCrop  ;
-    schema:identifier "CROP_WGRSTN"^^xsd:string ;
+    schema:identifier "CROP_WGRSTN" ;
     schema:name "Wintergerste in 62a Nitrat-Projekt"@de ;
     :K2O 0.11 ;
     :Mg 0.12 ;
@@ -2678,7 +2680,7 @@ naebi:289 a :NutrientBalanceCrop  ;
     :cultivationType cultivationtype:1009 .
 
 naebi:29 a :NutrientBalanceCrop  ;
-    schema:identifier "CROP_BROCC"^^xsd:string ;
+    schema:identifier "CROP_BROCC" ;
     schema:name "Broccoli"@de ;
     :K2O 90.0 ;
     :Mg 10.0 ;
@@ -2689,7 +2691,7 @@ naebi:29 a :NutrientBalanceCrop  ;
     :cultivationType cultivationtype:154 .
 
 naebi:290 a :NutrientBalanceCrop  ;
-    schema:identifier "CROP_WINRA"^^xsd:string ;
+    schema:identifier "CROP_WINRA" ;
     schema:name "Ganzpflanzen-Sorghum"@de ;
     :K2O 1.3 ;
     :Mg 0.13 ;
@@ -2700,7 +2702,7 @@ naebi:290 a :NutrientBalanceCrop  ;
     :cultivationType cultivationtype:1028 .
 
 naebi:291 a :NutrientBalanceCrop  ;
-    schema:identifier "CROP_WINRAN"^^xsd:string ;
+    schema:identifier "CROP_WINRAN" ;
     schema:name "Winterraps"@de ;
     :K2O 0.86 ;
     :Mg 0.23 ;
@@ -2708,10 +2710,10 @@ naebi:291 a :NutrientBalanceCrop  ;
     :P2O5 1.43 ;
     :cultivationCategory cultivationtype:1 ;
     :cultivationSubCategory cultivationtype:17 ;
-    :cultivationType cultivationtype:1129 .
+    :cultivationType cultivationtype:190 .
 
 naebi:292 a :NutrientBalanceCrop  ;
-    schema:identifier "CROP_WKORN"^^xsd:string ;
+    schema:identifier "CROP_WKORN" ;
     schema:name "Winterkorn, Dinkel"@de ;
     :K2O 0.04 ;
     :Mg 0.11 ;
@@ -2722,7 +2724,7 @@ naebi:292 a :NutrientBalanceCrop  ;
     :cultivationType cultivationtype:1021 .
 
 naebi:293 a :NutrientBalanceCrop  ;
-    schema:identifier "CROP_WOGST"^^xsd:string ;
+    schema:identifier "CROP_WOGST" ;
     schema:name "Winterhafer"@de ;
     :K2O 0.0 ;
     :Mg 0.11 ;
@@ -2733,7 +2735,7 @@ naebi:293 a :NutrientBalanceCrop  ;
     :cultivationType cultivationtype:1010 .
 
 naebi:294 a :NutrientBalanceCrop  ;
-    schema:identifier "CROP_WRHGH"^^xsd:string ;
+    schema:identifier "CROP_WRHGH" ;
     schema:name "Winterroggen (Hybridsorten)"@de ;
     :K2O 0.13 ;
     :Mg 0.11 ;
@@ -2744,7 +2746,7 @@ naebi:294 a :NutrientBalanceCrop  ;
     :cultivationType cultivationtype:1034 .
 
 naebi:295 a :NutrientBalanceCrop  ;
-    schema:identifier "CROP_WRHGH_N"^^xsd:string ;
+    schema:identifier "CROP_WRHGH_N" ;
     schema:name "Winterroggen (Populationssorten) in 62a Nitrat-Projekt"@de ;
     :K2O 0.1 ;
     :Mg 0.11 ;
@@ -2755,7 +2757,7 @@ naebi:295 a :NutrientBalanceCrop  ;
     :cultivationType cultivationtype:1015 .
 
 naebi:296 a :NutrientBalanceCrop  ;
-    schema:identifier "CROP_WRHGP"^^xsd:string ;
+    schema:identifier "CROP_WRHGP" ;
     schema:name "Winterroggen (Populationssorten)"@de ;
     :K2O 0.1 ;
     :Mg 0.11 ;
@@ -2766,7 +2768,7 @@ naebi:296 a :NutrientBalanceCrop  ;
     :cultivationType cultivationtype:1035 .
 
 naebi:297 a :NutrientBalanceCrop  ;
-    schema:identifier "CROP_WRHGP_N"^^xsd:string ;
+    schema:identifier "CROP_WRHGP_N" ;
     schema:name "Winterroggen (Hybridsorten) in 62a Nitrat-Projekt"@de ;
     :K2O 0.13 ;
     :Mg 0.11 ;
@@ -2777,7 +2779,7 @@ naebi:297 a :NutrientBalanceCrop  ;
     :cultivationType cultivationtype:1016 .
 
 naebi:298 a :NutrientBalanceCrop  ;
-    schema:identifier "CROP_WSPIN1"^^xsd:string ;
+    schema:identifier "CROP_WSPIN1" ;
     schema:name "Winterspinat, 1 Schnitt"@de ;
     :K2O 170.0 ;
     :Mg 15.0 ;
@@ -2788,7 +2790,7 @@ naebi:298 a :NutrientBalanceCrop  ;
     :cultivationType cultivationtype:1224 .
 
 naebi:299 a :NutrientBalanceCrop  ;
-    schema:identifier "CROP_WSPIN2"^^xsd:string ;
+    schema:identifier "CROP_WSPIN2" ;
     schema:name "Winterspinat, 2 Schnitte"@de ;
     :K2O 180.0 ;
     :Mg 20.0 ;
@@ -2799,7 +2801,7 @@ naebi:299 a :NutrientBalanceCrop  ;
     :cultivationType cultivationtype:1157 .
 
 naebi:3 a :NutrientBalanceCrop  ;
-    schema:identifier "CROP_ALTBRY"^^xsd:string ;
+    schema:identifier "CROP_ALTBRY" ;
     schema:name "Alternative Strauchbeeren (Aronia, Holunder, Goji,…)"@de ;
     :K2O 121.0 ;
     :Mg 15.0 ;
@@ -2810,7 +2812,7 @@ naebi:3 a :NutrientBalanceCrop  ;
     :cultivationType cultivationtype:1158 .
 
 naebi:30 a :NutrientBalanceCrop  ;
-    schema:identifier "CROP_BROCCP"^^xsd:string ;
+    schema:identifier "CROP_BROCCP" ;
     schema:name "Broccoli, Verarbeitung"@de ;
     :K2O 100.0 ;
     :Mg 10.0 ;
@@ -2821,7 +2823,7 @@ naebi:30 a :NutrientBalanceCrop  ;
     :cultivationType cultivationtype:1159 .
 
 naebi:300 a :NutrientBalanceCrop  ;
-    schema:identifier "CROP_WSPINI1"^^xsd:string ;
+    schema:identifier "CROP_WSPINI1" ;
     schema:name "Winterspinat, Industrie, 1 Schnitt"@de ;
     :K2O 190.0 ;
     :Mg 25.0 ;
@@ -2832,7 +2834,7 @@ naebi:300 a :NutrientBalanceCrop  ;
     :cultivationType cultivationtype:1160 .
 
 naebi:301 a :NutrientBalanceCrop  ;
-    schema:identifier "CROP_WSPINI2"^^xsd:string ;
+    schema:identifier "CROP_WSPINI2" ;
     schema:name "Winterspinat, Industrie, 2 Schnitte"@de ;
     :K2O 200.0 ;
     :Mg 25.0 ;
@@ -2843,7 +2845,7 @@ naebi:301 a :NutrientBalanceCrop  ;
     :cultivationType cultivationtype:1161 .
 
 naebi:302 a :NutrientBalanceCrop  ;
-    schema:identifier "CROP_WTRIT"^^xsd:string ;
+    schema:identifier "CROP_WTRIT" ;
     schema:name "Wintertriticale"@de ;
     :K2O 0.0 ;
     :Mg 0.08 ;
@@ -2854,7 +2856,7 @@ naebi:302 a :NutrientBalanceCrop  ;
     :cultivationType cultivationtype:1019 .
 
 naebi:303 a :NutrientBalanceCrop  ;
-    schema:identifier "CROP_WTRITN"^^xsd:string ;
+    schema:identifier "CROP_WTRITN" ;
     schema:name "Wintertriticale in 62a Nitrat-Projekt"@de ;
     :K2O 0.0 ;
     :Mg 0.08 ;
@@ -2865,7 +2867,7 @@ naebi:303 a :NutrientBalanceCrop  ;
     :cultivationType cultivationtype:1020 .
 
 naebi:304 a :NutrientBalanceCrop  ;
-    schema:identifier "CROP_WWHT"^^xsd:string ;
+    schema:identifier "CROP_WWHT" ;
     schema:name "Winterweizen"@de ;
     :K2O 0.1 ;
     :Mg 0.12 ;
@@ -2876,7 +2878,7 @@ naebi:304 a :NutrientBalanceCrop  ;
     :cultivationType cultivationtype:1001 .
 
 naebi:305 a :NutrientBalanceCrop  ;
-    schema:identifier "CROP_WWHTN"^^xsd:string ;
+    schema:identifier "CROP_WWHTN" ;
     schema:name "Winterweizen in 62a Nitrat-Projekt"@de ;
     :K2O 0.1 ;
     :Mg 0.12 ;
@@ -2887,7 +2889,7 @@ naebi:305 a :NutrientBalanceCrop  ;
     :cultivationType cultivationtype:1002 .
 
 naebi:306 a :NutrientBalanceCrop  ;
-    schema:identifier "CROP_XMASTR"^^xsd:string ;
+    schema:identifier "CROP_XMASTR" ;
     schema:name "Christbäume"@de ;
     :K2O 95.0 ;
     :Mg 20.0 ;
@@ -2898,7 +2900,7 @@ naebi:306 a :NutrientBalanceCrop  ;
     :cultivationType cultivationtype:712 .
 
 naebi:307 a :NutrientBalanceCrop  ;
-    schema:identifier "CROP_YRRW"^^xsd:string ;
+    schema:identifier "CROP_YRRW" ;
     schema:name "Schafgarbe"@de ;
     :K2O 220.0 ;
     :Mg 20.0 ;
@@ -2909,7 +2911,7 @@ naebi:307 a :NutrientBalanceCrop  ;
     :cultivationType cultivationtype:1162 .
 
 naebi:308 a :NutrientBalanceCrop  ;
-    schema:identifier "CROP_ZUCCHF"^^xsd:string ;
+    schema:identifier "CROP_ZUCCHF" ;
     schema:name "Zucchetti, gepflanzt, frühe Kurzkultur"@de ;
     :K2O 135.0 ;
     :Mg 20.0 ;
@@ -2920,7 +2922,7 @@ naebi:308 a :NutrientBalanceCrop  ;
     :cultivationType cultivationtype:1163 .
 
 naebi:309 a :NutrientBalanceCrop  ;
-    schema:identifier "CROP_ZUCCHP"^^xsd:string ;
+    schema:identifier "CROP_ZUCCHP" ;
     schema:name "Pattison, Kürbis (geschützter Anbau)"@de ;
     :K2O 220.0 ;
     :Mg 30.0 ;
@@ -2931,7 +2933,7 @@ naebi:309 a :NutrientBalanceCrop  ;
     :cultivationType cultivationtype:1164 .
 
 naebi:31 a :NutrientBalanceCrop  ;
-    schema:identifier "CROP_BRSPR"^^xsd:string ;
+    schema:identifier "CROP_BRSPR" ;
     schema:name "Rosenkohl, Strünke abgeführt"@de ;
     :K2O 170.0 ;
     :Mg 5.0 ;
@@ -2942,7 +2944,7 @@ naebi:31 a :NutrientBalanceCrop  ;
     :cultivationType cultivationtype:473 .
 
 naebi:310 a :NutrientBalanceCrop  ;
-    schema:identifier "CROP_ZUCCHS"^^xsd:string ;
+    schema:identifier "CROP_ZUCCHS" ;
     schema:name "Zucchetti, gepflanzt, Sommer und Herbst"@de ;
     :K2O 140.0 ;
     :Mg 20.0 ;
@@ -2953,7 +2955,7 @@ naebi:310 a :NutrientBalanceCrop  ;
     :cultivationType cultivationtype:1165 .
 
 naebi:311 a :NutrientBalanceCrop  ;
-    schema:identifier "CROP_ZUCHP"^^xsd:string ;
+    schema:identifier "CROP_ZUCHP" ;
     schema:name "Zucchetti (geschützter Anbau)"@de ;
     :K2O 150.0 ;
     :Mg 15.0 ;
@@ -2964,7 +2966,7 @@ naebi:311 a :NutrientBalanceCrop  ;
     :cultivationType cultivationtype:1166 .
 
 naebi:312 a :NutrientBalanceCrop  ;
-    schema:identifier "CROP_ZUCPAT"^^xsd:string ;
+    schema:identifier "CROP_ZUCPAT" ;
     schema:name "Patisson, Kürbis"@de ;
     :K2O 220.0 ;
     :Mg 30.0 ;
@@ -2975,7 +2977,7 @@ naebi:312 a :NutrientBalanceCrop  ;
     :cultivationType cultivationtype:1167 .
 
 naebi:313 a :NutrientBalanceCrop  ;
-    schema:identifier "CROP_ZUCSHS"^^xsd:string ;
+    schema:identifier "CROP_ZUCSHS" ;
     schema:name "Zucchetti, gesät, Sommer und Herbst"@de ;
     :K2O 110.0 ;
     :Mg 15.0 ;
@@ -2986,7 +2988,7 @@ naebi:313 a :NutrientBalanceCrop  ;
     :cultivationType cultivationtype:1168 .
 
 naebi:32 a :NutrientBalanceCrop  ;
-    schema:identifier "CROP_BSLKM"^^xsd:string ;
+    schema:identifier "CROP_BSLKM" ;
     schema:name "Basilikum"@de ;
     :K2O 120.0 ;
     :Mg 15.0 ;
@@ -2997,7 +2999,7 @@ naebi:32 a :NutrientBalanceCrop  ;
     :cultivationType cultivationtype:106 .
 
 naebi:33 a :NutrientBalanceCrop  ;
-    schema:identifier "CROP_BUSHB"^^xsd:string ;
+    schema:identifier "CROP_BUSHB" ;
     schema:name "Bohnen, Busch- Handpflück-"@de ;
     :K2O 70.0 ;
     :Mg 5.0 ;
@@ -3008,7 +3010,7 @@ naebi:33 a :NutrientBalanceCrop  ;
     :cultivationType cultivationtype:1225 .
 
 naebi:34 a :NutrientBalanceCrop  ;
-    schema:identifier "CROP_CARHY"^^xsd:string ;
+    schema:identifier "CROP_CARHY" ;
     schema:name "Karotten Verarbeitung-, Lager-, hoher Ertrag"@de ;
     :K2O 300.0 ;
     :Mg 20.0 ;
@@ -3019,7 +3021,7 @@ naebi:34 a :NutrientBalanceCrop  ;
     :cultivationType cultivationtype:1226 .
 
 naebi:35 a :NutrientBalanceCrop  ;
-    schema:identifier "CROP_CARMY"^^xsd:string ;
+    schema:identifier "CROP_CARMY" ;
     schema:name "Karotten Verarbeitung-, Lager-, mittlerer Ertrag"@de ;
     :K2O 250.0 ;
     :Mg 20.0 ;
@@ -3030,7 +3032,7 @@ naebi:35 a :NutrientBalanceCrop  ;
     :cultivationType cultivationtype:1227 .
 
 naebi:36 a :NutrientBalanceCrop  ;
-    schema:identifier "CROP_CARPP"^^xsd:string ;
+    schema:identifier "CROP_CARPP" ;
     schema:name "Karotten Pariser"@de ;
     :K2O 100.0 ;
     :Mg 10.0 ;
@@ -3041,7 +3043,7 @@ naebi:36 a :NutrientBalanceCrop  ;
     :cultivationType cultivationtype:1228 .
 
 naebi:37 a :NutrientBalanceCrop  ;
-    schema:identifier "CROP_CAULI"^^xsd:string ;
+    schema:identifier "CROP_CAULI" ;
     schema:name "Blumenkohl, Standard"@de ;
     :K2O 150.0 ;
     :Mg 15.0 ;
@@ -3052,7 +3054,7 @@ naebi:37 a :NutrientBalanceCrop  ;
     :cultivationType cultivationtype:1181 .
 
 naebi:38 a :NutrientBalanceCrop  ;
-    schema:identifier "CROP_CAULIE"^^xsd:string ;
+    schema:identifier "CROP_CAULIE" ;
     schema:name "Blumenkohl, früh"@de ;
     :K2O 0.0 ;
     :Mg 0.0 ;
@@ -3063,7 +3065,7 @@ naebi:38 a :NutrientBalanceCrop  ;
     :cultivationType cultivationtype:1182 .
 
 naebi:39 a :NutrientBalanceCrop  ;
-    schema:identifier "CROP_CAULIP"^^xsd:string ;
+    schema:identifier "CROP_CAULIP" ;
     schema:name "Blumenkohl, Verarbeitung"@de ;
     :K2O 0.0 ;
     :Mg 0.0 ;
@@ -3074,7 +3076,7 @@ naebi:39 a :NutrientBalanceCrop  ;
     :cultivationType cultivationtype:1183 .
 
 naebi:4 a :NutrientBalanceCrop  ;
-    schema:identifier "CROP_APEYH"^^xsd:string ;
+    schema:identifier "CROP_APEYH" ;
     schema:name "Aprikosenanlage, hoher Ertrag"@de ;
     :K2O 90.0 ;
     :Mg 30.0 ;
@@ -3085,7 +3087,7 @@ naebi:4 a :NutrientBalanceCrop  ;
     :cultivationType cultivationtype:1180 .
 
 naebi:40 a :NutrientBalanceCrop  ;
-    schema:identifier "CROP_CBEFE"^^xsd:string ;
+    schema:identifier "CROP_CBEFE" ;
     schema:name "Karotten Bund-, Früh-"@de ;
     :K2O 140.0 ;
     :Mg 20.0 ;
@@ -3096,7 +3098,7 @@ naebi:40 a :NutrientBalanceCrop  ;
     :cultivationType cultivationtype:1229 .
 
 naebi:41 a :NutrientBalanceCrop  ;
-    schema:identifier "CROP_CCMCRN"^^xsd:string ;
+    schema:identifier "CROP_CCMCRN" ;
     schema:name "Silomais"@de ;
     :K2O 1.3 ;
     :Mg 0.13 ;
@@ -3107,7 +3109,7 @@ naebi:41 a :NutrientBalanceCrop  ;
     :cultivationType cultivationtype:1026 .
 
 naebi:42 a :NutrientBalanceCrop  ;
-    schema:identifier "CROP_CEL40"^^xsd:string ;
+    schema:identifier "CROP_CEL40" ;
     schema:name "Sellerie Suppen- 40 Stk/m2 (geschützter Anbau)"@de ;
     :K2O 220.0 ;
     :Mg 30.0 ;
@@ -3118,7 +3120,7 @@ naebi:42 a :NutrientBalanceCrop  ;
     :cultivationType cultivationtype:1230 .
 
 naebi:43 a :NutrientBalanceCrop  ;
-    schema:identifier "CROP_CELERK"^^xsd:string ;
+    schema:identifier "CROP_CELERK" ;
     schema:name "Sellerie Knollen-"@de ;
     :K2O 300.0 ;
     :Mg 20.0 ;
@@ -3129,7 +3131,7 @@ naebi:43 a :NutrientBalanceCrop  ;
     :cultivationType cultivationtype:158 .
 
 naebi:44 a :NutrientBalanceCrop  ;
-    schema:identifier "CROP_CELERS"^^xsd:string ;
+    schema:identifier "CROP_CELERS" ;
     schema:name "Sellerie Stangen-"@de ;
     :K2O 300.0 ;
     :Mg 20.0 ;
@@ -3140,7 +3142,7 @@ naebi:44 a :NutrientBalanceCrop  ;
     :cultivationType cultivationtype:271 .
 
 naebi:45 a :NutrientBalanceCrop  ;
-    schema:identifier "CROP_CEYH"^^xsd:string ;
+    schema:identifier "CROP_CEYH" ;
     schema:name "Cassis, 3.5 kg/m2"@de ;
     :K2O 229.0 ;
     :Mg 25.0 ;
@@ -3151,7 +3153,7 @@ naebi:45 a :NutrientBalanceCrop  ;
     :cultivationType cultivationtype:1249 .
 
 naebi:46 a :NutrientBalanceCrop  ;
-    schema:identifier "CROP_CHARD"^^xsd:string ;
+    schema:identifier "CROP_CHARD" ;
     schema:name "Krautstiel"@de ;
     :K2O 220.0 ;
     :Mg 30.0 ;
@@ -3162,7 +3164,7 @@ naebi:46 a :NutrientBalanceCrop  ;
     :cultivationType cultivationtype:76 .
 
 naebi:47 a :NutrientBalanceCrop  ;
-    schema:identifier "CROP_CHEYH"^^xsd:string ;
+    schema:identifier "CROP_CHEYH" ;
     schema:name "Kirschenanlage, hoher Ertrag"@de ;
     :K2O 85.0 ;
     :Mg 40.0 ;
@@ -3173,7 +3175,7 @@ naebi:47 a :NutrientBalanceCrop  ;
     :cultivationType cultivationtype:1235 .
 
 naebi:48 a :NutrientBalanceCrop  ;
-    schema:identifier "CROP_CHINK"^^xsd:string ;
+    schema:identifier "CROP_CHINK" ;
     schema:name "Chinakohl"@de ;
     :K2O 200.0 ;
     :Mg 10.0 ;
@@ -3184,7 +3186,7 @@ naebi:48 a :NutrientBalanceCrop  ;
     :cultivationType cultivationtype:58 .
 
 naebi:49 a :NutrientBalanceCrop  ;
-    schema:identifier "CROP_CHISLF"^^xsd:string ;
+    schema:identifier "CROP_CHISLF" ;
     schema:name "Chinaschilf"@de ;
     :K2O 112.0 ;
     :Mg 6.0 ;
@@ -3195,7 +3197,7 @@ naebi:49 a :NutrientBalanceCrop  ;
     :cultivationType cultivationtype:169 .
 
 naebi:5 a :NutrientBalanceCrop  ;
-    schema:identifier "CROP_APPLT"^^xsd:string ;
+    schema:identifier "CROP_APPLT" ;
     schema:name "Aprikosenanlage"@de ;
     :K2O 75.0 ;
     :Mg 20.0 ;
@@ -3206,7 +3208,7 @@ naebi:5 a :NutrientBalanceCrop  ;
     :cultivationType cultivationtype:472 .
 
 naebi:50 a :NutrientBalanceCrop  ;
-    schema:identifier "CROP_CHIVES"^^xsd:string ;
+    schema:identifier "CROP_CHIVES" ;
     schema:name "Schnittlauch"@de ;
     :K2O 120.0 ;
     :Mg 20.0 ;
@@ -3217,7 +3219,7 @@ naebi:50 a :NutrientBalanceCrop  ;
     :cultivationType cultivationtype:219 .
 
 naebi:51 a :NutrientBalanceCrop  ;
-    schema:identifier "CROP_CHIWR"^^xsd:string ;
+    schema:identifier "CROP_CHIWR" ;
     schema:name "Chicorée, Wurzelanbau"@de ;
     :K2O 150.0 ;
     :Mg 30.0 ;
@@ -3228,7 +3230,7 @@ naebi:51 a :NutrientBalanceCrop  ;
     :cultivationType cultivationtype:1239 .
 
 naebi:52 a :NutrientBalanceCrop  ;
-    schema:identifier "CROP_CHMML"^^xsd:string ;
+    schema:identifier "CROP_CHMML" ;
     schema:name "Kamille"@de ;
     :K2O 80.0 ;
     :Mg 5.0 ;
@@ -3239,7 +3241,7 @@ naebi:52 a :NutrientBalanceCrop  ;
     :cultivationType cultivationtype:1240 .
 
 naebi:53 a :NutrientBalanceCrop  ;
-    schema:identifier "CROP_CHRPL"^^xsd:string ;
+    schema:identifier "CROP_CHRPL" ;
     schema:name "Kirschenanlage"@de ;
     :K2O 50.0 ;
     :Mg 20.0 ;
@@ -3250,7 +3252,7 @@ naebi:53 a :NutrientBalanceCrop  ;
     :cultivationType cultivationtype:283 .
 
 naebi:54 a :NutrientBalanceCrop  ;
-    schema:identifier "CROP_CHVSP"^^xsd:string ;
+    schema:identifier "CROP_CHVSP" ;
     schema:name "Schnittlauch Kultur (geschützter Anbau)"@de ;
     :K2O 180.0 ;
     :Mg 30.0 ;
@@ -3261,7 +3263,7 @@ naebi:54 a :NutrientBalanceCrop  ;
     :cultivationType cultivationtype:1242 .
 
 naebi:55 a :NutrientBalanceCrop  ;
-    schema:identifier "CROP_CRSSE"^^xsd:string ;
+    schema:identifier "CROP_CRSSE" ;
     schema:name "Kresse (geschützter Anbau)"@de ;
     :K2O 30.0 ;
     :Mg 10.0 ;
@@ -3272,7 +3274,7 @@ naebi:55 a :NutrientBalanceCrop  ;
     :cultivationType cultivationtype:1243 .
 
 naebi:56 a :NutrientBalanceCrop  ;
-    schema:identifier "CROP_CSLLC"^^xsd:string ;
+    schema:identifier "CROP_CSLLC" ;
     schema:name "Nüsslisalat, Feldsalat (geschützter Anbau)"@de ;
     :K2O 60.0 ;
     :Mg 10.0 ;
@@ -3283,7 +3285,7 @@ naebi:56 a :NutrientBalanceCrop  ;
     :cultivationType cultivationtype:1244 .
 
 naebi:57 a :NutrientBalanceCrop  ;
-    schema:identifier "CROP_CTLSP"^^xsd:string ;
+    schema:identifier "CROP_CTLSP" ;
     schema:name "Schnittsalat (geschützter Anbau)"@de ;
     :K2O 50.0 ;
     :Mg 10.0 ;
@@ -3294,7 +3296,7 @@ naebi:57 a :NutrientBalanceCrop  ;
     :cultivationType cultivationtype:1245 .
 
 naebi:58 a :NutrientBalanceCrop  ;
-    schema:identifier "CROP_CUC30"^^xsd:string ;
+    schema:identifier "CROP_CUC30" ;
     schema:name "Gurken 30 Stk/m2, Erdkultur (geschützter Anbau)"@de ;
     :K2O 300.0 ;
     :Mg 60.0 ;
@@ -3305,7 +3307,7 @@ naebi:58 a :NutrientBalanceCrop  ;
     :cultivationType cultivationtype:1246 .
 
 naebi:59 a :NutrientBalanceCrop  ;
-    schema:identifier "CROP_CUC50"^^xsd:string ;
+    schema:identifier "CROP_CUC50" ;
     schema:name "Gurken 50 Stk/m2, Erdkultur (geschützter Anbau)"@de ;
     :K2O 400.0 ;
     :Mg 80.0 ;
@@ -3316,7 +3318,7 @@ naebi:59 a :NutrientBalanceCrop  ;
     :cultivationType cultivationtype:1247 .
 
 naebi:6 a :NutrientBalanceCrop  ;
-    schema:identifier "CROP_ARNCA"^^xsd:string ;
+    schema:identifier "CROP_ARNCA" ;
     schema:name "Arnika"@de ;
     :K2O 50.0 ;
     :Mg 5.0 ;
@@ -3327,7 +3329,7 @@ naebi:6 a :NutrientBalanceCrop  ;
     :cultivationType cultivationtype:1248 .
 
 naebi:60 a :NutrientBalanceCrop  ;
-    schema:identifier "CROP_CURRNT"^^xsd:string ;
+    schema:identifier "CROP_CURRNT" ;
     schema:name "Cassis, 2.5 kg/m2"@de ;
     :K2O 157.0 ;
     :Mg 20.0 ;
@@ -3338,7 +3340,7 @@ naebi:60 a :NutrientBalanceCrop  ;
     :cultivationType cultivationtype:1249 .
 
 naebi:61 a :NutrientBalanceCrop  ;
-    schema:identifier "CROP_CUSALA"^^xsd:string ;
+    schema:identifier "CROP_CUSALA" ;
     schema:name "Schnittsalat"@de ;
     :K2O 60.0 ;
     :Mg 20.0 ;
@@ -3349,7 +3351,7 @@ naebi:61 a :NutrientBalanceCrop  ;
     :cultivationType cultivationtype:328 .
 
 naebi:62 a :NutrientBalanceCrop  ;
-    schema:identifier "CROP_CUTCN"^^xsd:string ;
+    schema:identifier "CROP_CUTCN" ;
     schema:name "Kabis Einschneide-"@de ;
     :K2O 250.0 ;
     :Mg 20.0 ;
@@ -3360,7 +3362,7 @@ naebi:62 a :NutrientBalanceCrop  ;
     :cultivationType cultivationtype:1251 .
 
 naebi:63 a :NutrientBalanceCrop  ;
-    schema:identifier "CROP_CUTFLG"^^xsd:string ;
+    schema:identifier "CROP_CUTFLG" ;
     schema:name "Schnittblumen, gross"@de ;
     :K2O 350.0 ;
     :Mg 60.0 ;
@@ -3371,7 +3373,7 @@ naebi:63 a :NutrientBalanceCrop  ;
     :cultivationType cultivationtype:1252 .
 
 naebi:64 a :NutrientBalanceCrop  ;
-    schema:identifier "CROP_CUTFLM"^^xsd:string ;
+    schema:identifier "CROP_CUTFLM" ;
     schema:name "Schnittblumen, mittel"@de ;
     :K2O 250.0 ;
     :Mg 40.0 ;
@@ -3382,7 +3384,7 @@ naebi:64 a :NutrientBalanceCrop  ;
     :cultivationType cultivationtype:1253 .
 
 naebi:65 a :NutrientBalanceCrop  ;
-    schema:identifier "CROP_CUTFLS"^^xsd:string ;
+    schema:identifier "CROP_CUTFLS" ;
     schema:name "Schnittblumen, klein"@de ;
     :K2O 150.0 ;
     :Mg 30.0 ;
@@ -3393,7 +3395,7 @@ naebi:65 a :NutrientBalanceCrop  ;
     :cultivationType cultivationtype:1254 .
 
 naebi:66 a :NutrientBalanceCrop  ;
-    schema:identifier "CROP_DLLLD"^^xsd:string ;
+    schema:identifier "CROP_DLLLD" ;
     schema:name "Dill"@de ;
     :K2O 190.0 ;
     :Mg 10.0 ;
@@ -3404,7 +3406,7 @@ naebi:66 a :NutrientBalanceCrop  ;
     :cultivationType cultivationtype:231 .
 
 naebi:67 a :NutrientBalanceCrop  ;
-    schema:identifier "CROP_EDLWS"^^xsd:string ;
+    schema:identifier "CROP_EDLWS" ;
     schema:name "Edelweiss"@de ;
     :K2O 90.0 ;
     :Mg 5.0 ;
@@ -3415,7 +3417,7 @@ naebi:67 a :NutrientBalanceCrop  ;
     :cultivationType cultivationtype:1256 .
 
 naebi:68 a :NutrientBalanceCrop  ;
-    schema:identifier "CROP_EGGPL"^^xsd:string ;
+    schema:identifier "CROP_EGGPL" ;
     schema:name "Aubergine"@de ;
     :K2O 130.0 ;
     :Mg 10.0 ;
@@ -3426,7 +3428,7 @@ naebi:68 a :NutrientBalanceCrop  ;
     :cultivationType cultivationtype:474 .
 
 naebi:69 a :NutrientBalanceCrop  ;
-    schema:identifier "CROP_EMMEK"^^xsd:string ;
+    schema:identifier "CROP_EMMEK" ;
     schema:name "Emmer / Einkorn"@de ;
     :K2O 0.06 ;
     :Mg 0.16 ;
@@ -3437,7 +3439,7 @@ naebi:69 a :NutrientBalanceCrop  ;
     :cultivationType cultivationtype:511 .
 
 naebi:7 a :NutrientBalanceCrop  ;
-    schema:identifier "CROP_ARUCL1"^^xsd:string ;
+    schema:identifier "CROP_ARUCL1" ;
     schema:name "Rucola, 1 Schnitt"@de ;
     :K2O 150.0 ;
     :Mg 10.0 ;
@@ -3448,7 +3450,7 @@ naebi:7 a :NutrientBalanceCrop  ;
     :cultivationType cultivationtype:1257 .
 
 naebi:70 a :NutrientBalanceCrop  ;
-    schema:identifier "CROP_ENDAU"^^xsd:string ;
+    schema:identifier "CROP_ENDAU" ;
     schema:name "Endivie Herbst- (geschützter Anbau)"@de ;
     :K2O 180.0 ;
     :Mg 30.0 ;
@@ -3459,7 +3461,7 @@ naebi:70 a :NutrientBalanceCrop  ;
     :cultivationType cultivationtype:1258 .
 
 naebi:71 a :NutrientBalanceCrop  ;
-    schema:identifier "CROP_ENDEY"^^xsd:string ;
+    schema:identifier "CROP_ENDEY" ;
     schema:name "Endivie, hoher Ertrag"@de ;
     :K2O 200.0 ;
     :Mg 20.0 ;
@@ -3470,7 +3472,7 @@ naebi:71 a :NutrientBalanceCrop  ;
     :cultivationType cultivationtype:1259 .
 
 naebi:72 a :NutrientBalanceCrop  ;
-    schema:identifier "CROP_ENDMY"^^xsd:string ;
+    schema:identifier "CROP_ENDMY" ;
     schema:name "Endivie, mittlerer Ertrag"@de ;
     :K2O 160.0 ;
     :Mg 20.0 ;
@@ -3481,7 +3483,7 @@ naebi:72 a :NutrientBalanceCrop  ;
     :cultivationType cultivationtype:1260 .
 
 naebi:73 a :NutrientBalanceCrop  ;
-    schema:identifier "CROP_EWSPE"^^xsd:string ;
+    schema:identifier "CROP_EWSPE" ;
     schema:name "Soja"@de ;
     :K2O 2.75 ;
     :Mg 0.2 ;
@@ -3492,7 +3494,7 @@ naebi:73 a :NutrientBalanceCrop  ;
     :cultivationType cultivationtype:528 .
 
 naebi:74 a :NutrientBalanceCrop  ;
-    schema:identifier "CROP_FCRMN"^^xsd:string ;
+    schema:identifier "CROP_FCRMN" ;
     schema:name "CCM"@de ;
     :K2O 0.4 ;
     :Mg 0.09 ;
@@ -3503,7 +3505,7 @@ naebi:74 a :NutrientBalanceCrop  ;
     :cultivationType cultivationtype:1262 .
 
 naebi:75 a :NutrientBalanceCrop  ;
-    schema:identifier "CROP_FENNL"^^xsd:string ;
+    schema:identifier "CROP_FENNL" ;
     schema:name "Fenchel, Knollen"@de ;
     :K2O 180.0 ;
     :Mg 20.0 ;
@@ -3514,7 +3516,7 @@ naebi:75 a :NutrientBalanceCrop  ;
     :cultivationType cultivationtype:273 .
 
 naebi:76 a :NutrientBalanceCrop  ;
-    schema:identifier "CROP_FIBHE"^^xsd:string ;
+    schema:identifier "CROP_FIBHE" ;
     schema:name "Faserlein"@de ;
     :K2O 2.0 ;
     :Mg 0.2 ;
@@ -3525,7 +3527,7 @@ naebi:76 a :NutrientBalanceCrop  ;
     :cultivationType cultivationtype:1264 .
 
 naebi:77 a :NutrientBalanceCrop  ;
-    schema:identifier "CROP_FLAXD"^^xsd:string ;
+    schema:identifier "CROP_FLAXD" ;
     schema:name "Saum auf Ackerfläche"@de ;
     :K2O 0.0 ;
     :Mg 0.0 ;
@@ -3533,10 +3535,10 @@ naebi:77 a :NutrientBalanceCrop  ;
     :P2O5 0.0 ;
     :cultivationCategory cultivationtype:1 ;
     :cultivationSubCategory cultivationtype:462 ;
-    :cultivationType cultivationtype:1265 .
+    :cultivationType cultivationtype:559 .
 
 naebi:78 a :NutrientBalanceCrop  ;
-    schema:identifier "CROP_FLLND"^^xsd:string ;
+    schema:identifier "CROP_FLLND" ;
     schema:name "Rotationsbrache"@de ;
     :K2O 0.0 ;
     :Mg 0.0 ;
@@ -3547,7 +3549,7 @@ naebi:78 a :NutrientBalanceCrop  ;
     :cultivationType cultivationtype:557 .
 
 naebi:79 a :NutrientBalanceCrop  ;
-    schema:identifier "CROP_FNSD1"^^xsd:string ;
+    schema:identifier "CROP_FNSD1" ;
     schema:name "Fenchelsamen 1-jährig"@de ;
     :K2O 160.0 ;
     :Mg 20.0 ;
@@ -3558,7 +3560,7 @@ naebi:79 a :NutrientBalanceCrop  ;
     :cultivationType cultivationtype:1267 .
 
 naebi:8 a :NutrientBalanceCrop  ;
-    schema:identifier "CROP_ARUCL2"^^xsd:string ;
+    schema:identifier "CROP_ARUCL2" ;
     schema:name "Rucola, 2 Schnitte"@de ;
     :K2O 180.0 ;
     :Mg 20.0 ;
@@ -3569,7 +3571,7 @@ naebi:8 a :NutrientBalanceCrop  ;
     :cultivationType cultivationtype:1268 .
 
 naebi:80 a :NutrientBalanceCrop  ;
-    schema:identifier "CROP_FNSDP"^^xsd:string ;
+    schema:identifier "CROP_FNSDP" ;
     schema:name "Fenchelsamen mehrjährig"@de ;
     :K2O 160.0 ;
     :Mg 20.0 ;
@@ -3580,7 +3582,7 @@ naebi:80 a :NutrientBalanceCrop  ;
     :cultivationType cultivationtype:1269 .
 
 naebi:81 a :NutrientBalanceCrop  ;
-    schema:identifier "CROP_FOILC"^^xsd:string ;
+    schema:identifier "CROP_FOILC" ;
     schema:name "Kabis Früh-, Folie"@de ;
     :K2O 150.0 ;
     :Mg 10.0 ;
@@ -3591,7 +3593,7 @@ naebi:81 a :NutrientBalanceCrop  ;
     :cultivationType cultivationtype:1270 .
 
 naebi:82 a :NutrientBalanceCrop  ;
-    schema:identifier "CROP_FOSTR"^^xsd:string ;
+    schema:identifier "CROP_FOSTR" ;
     schema:name "betriebseigenes verfütt. Stroh, ha"@de ;
     :K2O 0.92 ;
     :Mg 0.13 ;
@@ -3602,7 +3604,7 @@ naebi:82 a :NutrientBalanceCrop  ;
     :cultivationType cube:Undefined .
 
 naebi:83 a :NutrientBalanceCrop  ;
-    schema:identifier "CROP_FRUB"^^xsd:string ;
+    schema:identifier "CROP_FRUB" ;
     schema:name "Zuckerrüben"@de ;
     :K2O 0.09 ;
     :Mg 0.03 ;
@@ -3613,7 +3615,7 @@ naebi:83 a :NutrientBalanceCrop  ;
     :cultivationType cultivationtype:522 .
 
 naebi:84 a :NutrientBalanceCrop  ;
-    schema:identifier "CROP_FWHT"^^xsd:string ;
+    schema:identifier "CROP_FWHT" ;
     schema:name "Futterweizen"@de ;
     :K2O 0.14 ;
     :Mg 0.12 ;
@@ -3624,7 +3626,7 @@ naebi:84 a :NutrientBalanceCrop  ;
     :cultivationType cultivationtype:1004 .
 
 naebi:85 a :NutrientBalanceCrop  ;
-    schema:identifier "CROP_FWHTN"^^xsd:string ;
+    schema:identifier "CROP_FWHTN" ;
     schema:name "Futterweizen in 62a Nitrat-Projekt"@de ;
     :K2O 0.14 ;
     :Mg 0.12 ;
@@ -3635,7 +3637,7 @@ naebi:85 a :NutrientBalanceCrop  ;
     :cultivationType cultivationtype:1005 .
 
 naebi:86 a :NutrientBalanceCrop  ;
-    schema:identifier "CROP_GANSO"^^xsd:string ;
+    schema:identifier "CROP_GANSO" ;
     schema:name "Hirse"@de ;
     :K2O 0.29 ;
     :Mg 0.11 ;
@@ -3646,7 +3648,7 @@ naebi:86 a :NutrientBalanceCrop  ;
     :cultivationType cultivationtype:542 .
 
 naebi:87 a :NutrientBalanceCrop  ;
-    schema:identifier "CROP_GBEYH"^^xsd:string ;
+    schema:identifier "CROP_GBEYH" ;
     schema:name "Stachelbeeren, 2.5 kg/m2"@de ;
     :K2O 127.0 ;
     :Mg 20.0 ;
@@ -3657,7 +3659,7 @@ naebi:87 a :NutrientBalanceCrop  ;
     :cultivationType cultivationtype:1273 .
 
 naebi:88 a :NutrientBalanceCrop  ;
-    schema:identifier "CROP_GCORN"^^xsd:string ;
+    schema:identifier "CROP_GCORN" ;
     schema:name "Grünmais, ha"@de ;
     :K2O 2.7 ;
     :Mg 0.1 ;
@@ -3668,7 +3670,7 @@ naebi:88 a :NutrientBalanceCrop  ;
     :cultivationType cultivationtype:1025 .
 
 naebi:89 a :NutrientBalanceCrop  ;
-    schema:identifier "CROP_GMLG"^^xsd:string ;
+    schema:identifier "CROP_GMLG" ;
     schema:name "Gründüngung (Leguminosen), ha"@de ;
     :K2O 0.0 ;
     :Mg 0.0 ;
@@ -3679,7 +3681,7 @@ naebi:89 a :NutrientBalanceCrop  ;
     :cultivationType cultivationtype:1275 .
 
 naebi:9 a :NutrientBalanceCrop  ;
-    schema:identifier "CROP_ASISAL"^^xsd:string ;
+    schema:identifier "CROP_ASISAL" ;
     schema:name "Asia-Salate (Brassicaceae)"@de ;
     :K2O 135.0 ;
     :Mg 10.0 ;
@@ -3690,7 +3692,7 @@ naebi:9 a :NutrientBalanceCrop  ;
     :cultivationType cultivationtype:139 .
 
 naebi:90 a :NutrientBalanceCrop  ;
-    schema:identifier "CROP_GMNLE"^^xsd:string ;
+    schema:identifier "CROP_GMNLE" ;
     schema:name "Gründüngung (Nichtleguminosen), ha"@de ;
     :K2O 0.0 ;
     :Mg 0.0 ;
@@ -3701,7 +3703,7 @@ naebi:90 a :NutrientBalanceCrop  ;
     :cultivationType cultivationtype:1277 .
 
 naebi:91 a :NutrientBalanceCrop  ;
-    schema:identifier "CROP_GOOSEB"^^xsd:string ;
+    schema:identifier "CROP_GOOSEB" ;
     schema:name "Stachelbeeren, 1.7 kg/m2"@de ;
     :K2O 78.0 ;
     :Mg 15.0 ;
@@ -3712,7 +3714,7 @@ naebi:91 a :NutrientBalanceCrop  ;
     :cultivationType cultivationtype:1278 .
 
 naebi:92 a :NutrientBalanceCrop  ;
-    schema:identifier "CROP_GRLIC"^^xsd:string ;
+    schema:identifier "CROP_GRLIC" ;
     schema:name "Knoblauch"@de ;
     :K2O 120.0 ;
     :Mg 10.0 ;
@@ -3723,7 +3725,7 @@ naebi:92 a :NutrientBalanceCrop  ;
     :cultivationType cultivationtype:39 .
 
 naebi:93 a :NutrientBalanceCrop  ;
-    schema:identifier "CROP_GSEED"^^xsd:string ;
+    schema:identifier "CROP_GSEED" ;
     schema:name "Grassamen-Produktion"@de ;
     :K2O 2.3 ;
     :Mg 0.25 ;
@@ -3734,7 +3736,7 @@ naebi:93 a :NutrientBalanceCrop  ;
     :cultivationType cultivationtype:79 .
 
 naebi:94 a :NutrientBalanceCrop  ;
-    schema:identifier "CROP_HAZLN"^^xsd:string ;
+    schema:identifier "CROP_HAZLN" ;
     schema:name "Haselnüsse"@de ;
     :K2O 50.0 ;
     :Mg 15.0 ;
@@ -3745,7 +3747,7 @@ naebi:94 a :NutrientBalanceCrop  ;
     :cultivationType cultivationtype:1281 .
 
 naebi:95 a :NutrientBalanceCrop  ;
-    schema:identifier "CROP_HBEYH"^^xsd:string ;
+    schema:identifier "CROP_HBEYH" ;
     schema:name "Heidelbeeren, 2.5 kg/m2"@de ;
     :K2O 84.0 ;
     :Mg 30.0 ;
@@ -3756,7 +3758,7 @@ naebi:95 a :NutrientBalanceCrop  ;
     :cultivationType cultivationtype:1282 .
 
 naebi:96 a :NutrientBalanceCrop  ;
-    schema:identifier "CROP_HEMP"^^xsd:string ;
+    schema:identifier "CROP_HEMP" ;
     schema:name "Öllein"@de ;
     :K2O 0.95 ;
     :Mg 0.05 ;
@@ -3767,7 +3769,7 @@ naebi:96 a :NutrientBalanceCrop  ;
     :cultivationType cultivationtype:1283 .
 
 naebi:97 a :NutrientBalanceCrop  ;
-    schema:identifier "CROP_HFBUFF"^^xsd:string ;
+    schema:identifier "CROP_HFBUFF" ;
     schema:name "Hecken u. Feldgehölze mit Pufferstreifen (keine BFF)"@de ;
     :K2O 0.0 ;
     :Mg 0.0 ;
@@ -3778,7 +3780,7 @@ naebi:97 a :NutrientBalanceCrop  ;
     :cultivationType cultivationtype:1024 .
 
 naebi:98 a :NutrientBalanceCrop  ;
-    schema:identifier "CROP_HFT01"^^xsd:string ;
+    schema:identifier "CROP_HFT01" ;
     schema:name "Hochstamm-Obstbäume, 0.01ha/Baum"@de ;
     :K2O 56.0 ;
     :Mg 8.0 ;
@@ -3789,7 +3791,7 @@ naebi:98 a :NutrientBalanceCrop  ;
     :cultivationType cultivationtype:1284 .
 
 naebi:99 a :NutrientBalanceCrop  ;
-    schema:identifier "CROP_HFTWB"^^xsd:string ;
+    schema:identifier "CROP_HFTWB" ;
     schema:name "Hecken und Feldgehölz mit Krautsaum"@de ;
     :K2O 0.0 ;
     :Mg 0.0 ;

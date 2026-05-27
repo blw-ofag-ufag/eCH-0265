@@ -83,3 +83,6 @@ results/
 **/__pycache__
 test.*
 tests/warnings_report.json
+
+# Exclude input data files
+data/

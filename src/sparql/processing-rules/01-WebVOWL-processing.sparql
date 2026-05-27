@@ -1,0 +1,26 @@
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX schema: <http://schema.org/>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX : <https://agriculture.ld.admin.ch/crops/>
+
+DELETE {
+  ?subject a ?class .
+  ?subject schema:name ?name .
+  ?subject schema:description ?description .
+  ?subject schema:alternateName ?alternateName .
+}
+INSERT {
+  ?subject a ?newClass .
+  ?subject rdfs:label ?name .
+  ?subject rdfs:comment ?description .
+}
+WHERE {
+  VALUES (?class ?newClass) {
+    (:CultivationType owl:Class)
+    (:DeprecatedCultivationType owl:DeprecatedClass)
+  }
+  ?subject a ?class .
+  OPTIONAL { ?subject schema:name ?name . }
+  OPTIONAL { ?subject schema:description ?description . }
+  OPTIONAL { ?subject schema:alternateName ?alternateName . }
+}
