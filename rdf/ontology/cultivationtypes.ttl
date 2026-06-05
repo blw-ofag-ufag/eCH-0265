@@ -196,6 +196,7 @@ cultivationtype:22 a :CultivationType ;
 
 cultivationtype:23 a :CultivationType ;
     schema:name "Gemüsekulturen in geschütztem Anbau"@de ;
+    rdfs:subClassOf cultivationtype:22 ;
     owl:unionOf (
         cultivationtype:801
         cultivationtype:806
@@ -203,6 +204,7 @@ cultivationtype:23 a :CultivationType ;
 
 cultivationtype:24 a :CultivationType ;
     schema:name "Freilandgemüse"@de ;
+    rdfs:subClassOf cultivationtype:22 ;
     owl:disjointWith cultivationtype:23 .
 
 # Declare that all specific vegetable cultivation types are mutually exclusive
@@ -1026,7 +1028,8 @@ cultivationtype:195 a :CultivationType ;
 cultivationtype:198 a :CultivationType ;
     schema:name "Zwetschge"@de,
         "prunier (pruneau)"@fr,
-        "Prugno"@it .
+        "Prugno"@it ;
+    rdfs:subClassOf cultivationtype:113 .
 
 cultivationtype:199 a :CultivationType ;
     schema:name "Zier- und Sportrasen"@de,
@@ -1298,7 +1301,8 @@ cultivationtype:258 a :CultivationType ;
 cultivationtype:259 a :CultivationType ;
     schema:name "Pflaume"@de,
         "prunier (prune)"@fr,
-        "Prugnolo"@it .
+        "Prugnolo"@it ;
+    rdfs:subClassOf cultivationtype:113 .
 
 cultivationtype:260 a :CultivationType ;
     schema:name "Nüsslisalat"@de,
@@ -1845,6 +1849,7 @@ cultivationtype:468 a :CultivationType ;
 
 cultivationtype:469 a :CultivationType ;
     schema:name "Freiland-Beeren"@de ;
+    rdfs:subClassOf cultivationtype:471 ;
     owl:unionOf ( cultivationtype:551 cultivationtype:705 ).
 
 cultivationtype:470 a :CultivationType ;
@@ -2123,21 +2128,25 @@ cultivationtype:521 a :CultivationType ;
 cultivationtype:522 a :CultivationType ;
     schema:name "Zuckerrüben"@de,
         "Betteraves sucrières"@fr,
-        "Barbabietole da zucchero"@it .
+        "Barbabietole da zucchero"@it ;
+    rdfs:subClassOf cultivationtype:17 .
 
 cultivationtype:523 a :CultivationType ;
     schema:name "Futterrüben"@de,
         "Betteraves fourragères"@fr,
-        "Barbabietole da foraggio"@it .
+        "Barbabietole da foraggio"@it ;
+    rdfs:subClassOf cultivationtype:17 .
 
 cultivationtype:524 a :CultivationType ;
     schema:name "Kartoffeln (ohne Vertragsanbau)"@de ;
+    rdfs:subClassOf cultivationtype:410 ;
     owl:disjointWith cultivationtype:525 .
 
 cultivationtype:525 a :CultivationType ;
     schema:name "Pflanzkartoffeln (Vertragsanbau)"@de,
         "Plants de pommes de terre (contrat de culture)"@fr,
-        "Tuberi-seme di patate (coltivazione contrattuale)"@it .
+        "Tuberi-seme di patate (coltivazione contrattuale)"@it ;
+        rdfs:subClassOf cultivationtype:410 .
 
 cultivationtype:526 a :CultivationType ;
     schema:name "Sommerraps zur Speiseölgewinnung"@de,
@@ -2626,17 +2635,20 @@ cultivationtype:619 a :DeprecatedCultivationType ;
 cultivationtype:621 a :CultivationType ;
     schema:name "Heuwiesen im Sömmerungsgebiet, Übrige Wiesen (keine BFF)"@de,
         "Prairies de fauche en région d'estivage, autres (pas de SPB)"@fr,
-        "Prati da sfalcio nella regione d'estivazione, altri prati (nessuna SPB)"@it .
+        "Prati da sfalcio nella regione d'estivazione, altri prati (nessuna SPB)"@it ;
+        rdfs:subClassOf cultivationtype:480 .
 
 cultivationtype:622 a :CultivationType ;
     schema:name "Heuwiesen im Sömmerungsgebiet, Typ extensiv genutzte Wiese"@de,
         "Prairies de fauche en région d'estivage, type prairie extensive"@fr,
-        "Prati da sfalcio nella regione d'estivazione, tipo prati sfruttati in modo estensivo"@it .
+        "Prati da sfalcio nella regione d'estivazione, tipo prati sfruttati in modo estensivo"@it ;
+        rdfs:subClassOf cultivationtype:480 .
 
 cultivationtype:623 a :CultivationType ;
     schema:name "Heuwiesen im Sömmerungsgebiet, Typ wenig intensiv genutzte Wiese"@de,
         "Prairies de fauche en région d'estivage, type prairie peu intensive"@fr,
-        "Prati da sfalcio nella regione d'estivazione, tipo prati sfruttati in modo poco intensivo"@it .
+        "Prati da sfalcio nella regione d'estivazione, tipo prati sfruttati in modo poco intensivo"@it ;
+        rdfs:subClassOf cultivationtype:480 .
 
 cultivationtype:625 a :CultivationType ;
     schema:name "Waldweiden (ohne bewaldete Fläche)"@de,

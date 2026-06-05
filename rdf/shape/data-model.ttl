@@ -155,6 +155,20 @@ shape:DirectPaymentCrop a sh:NodeShape ;
     sh:closed true ;
     sh:ignoredProperties ( rdf:type ) ;
     sh:targetClass :DirectPaymentCrop ;
+    sh:sparql [
+        a sh:SPARQLConstraint ;
+        sh:message "schema:validFrom must be less than or equal to schema:validTo" ;
+        sh:select """
+            PREFIX schema: <http://schema.org/>
+            PREFIX cube: <https://cube.link/>
+            SELECT $this ?validFrom ?validTo
+            WHERE {
+                $this schema:validFrom ?validFrom .
+                $this schema:validTo ?validTo .
+                FILTER (?validTo != cube:Undefined && ?validFrom > ?validTo)
+            }
+        """ ;
+    ] ;
     sh:property
         [
             sh:order 1 ;
@@ -252,6 +266,7 @@ shape:NutrientBalanceCrop a sh:NodeShape ;
             sh:nodeKind sh:IRI ;
             sh:node shape:CultivationType ;
             sh:path :cultivationCategory ;
+            sh:node shape:CultivationCategory ;
         ],
         [
             sh:order 4 ;
@@ -261,6 +276,7 @@ shape:NutrientBalanceCrop a sh:NodeShape ;
             sh:nodeKind sh:IRI ;
             sh:node shape:CultivationType ;
             sh:path :cultivationSubCategory ;
+            sh:node shape:CultivationSubCategory ;
         ],
         [
             sh:order 5 ;
@@ -271,7 +287,10 @@ shape:NutrientBalanceCrop a sh:NodeShape ;
             sh:minCount 1 ;
             sh:nodeKind sh:IRI ;
             sh:path :cultivationType ;
-            sh:node shape:CultivationType ;
+            sh:or (
+                [ sh:node shape:CultivationType ]
+                [ sh:hasValue cube:Undefined ]
+            ) ;
         ],
         [
             a cube:MeasureDimension ;
@@ -382,5 +401,5 @@ shape:PlantProtectionCrop a sh:NodeShape ;
             sh:minCount 0 ;
             sh:maxCount 2 ;
             sh:nodeKind sh:IRI ;
-            sh:node shape:PlantProtectionCrop ;
+            sh:class :PlantProtectionCrop ;
         ] .
