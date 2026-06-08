@@ -1,4 +1,4 @@
-name: NAEBI Data Drift Monitor
+name: External Data Drift Monitor
 
 on:
   schedule:
@@ -22,10 +22,37 @@ jobs:
           python-version: '3.12'
 
       - name: Install dependencies
-        run: pip install requests rdflib
+        run: pip install requests rdflib pytest
 
-      - name: Run drift detection
+      - name: Run ALL drift detection tests
+        run: pytest tests/ -m drift -v
+
+      - name: Create NAEBI Drift Issue
+        if: failure()
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          GITHUB_REPOSITORY: ${{ github.repository }}
-        run: python src/python/monitor_naebi_drift.py
+        run: |
+          if [ -f naebi_drift_report.md ]; then
+            open_issues=$(gh issue list --state open --label "naebi-data-drift" --json number -q 'length')
+            if [ "$open_issues" -eq "0" ]; then
+              gh issue create \
+                --title "🚨 NAEBI Data Drift Detected" \
+                --body-file naebi_drift_report.md \
+                --label "naebi-data-drift,automated-monitoring"
+            fi
+          fi
+
+      - name: Create PSMV Drift Issue
+        if: failure()
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          if [ -f psmv_drift_report.md ]; then
+            open_issues=$(gh issue list --state open --label "psmv-data-drift" --json number -q 'length')
+            if [ "$open_issues" -eq "0" ]; then
+              gh issue create \
+                --title "🚨 PSMV Data Drift Detected" \
+                --body-file psmv_drift_report.md \
+                --label "psmv-data-drift,automated-monitoring"
+            fi
+          fi
