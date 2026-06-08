@@ -8,15 +8,13 @@ from rdflib import Graph
 from rdflib.graph import ReadOnlyGraphAggregate
 from rdflib.namespace import RDFS, OWL, RDF
 
-@pytest.fixture
+@pytest.fixture(scope="session")
 def translated_ontology_path(cultivation_graph, core_graph):
     """
-    Translates the combined in-memory rdflib graphs (core + cultivation) to RDF/XML
+    Translates the combined rdflib graphs (core + cultivation) to RDF/XML
     and provides the temporary file path for Owlready2.
     """
-    combined_graph = Graph()
-    combined_graph += core_graph
-    combined_graph += cultivation_graph
+    combined_graph = ReadOnlyGraphAggregate([core_graph, cultivation_graph])
 
     fd, temp_path = tempfile.mkstemp(suffix=".xml")
     os.close(fd)
@@ -60,7 +58,6 @@ def test_no_empty_end_nodes(cultivation_graph, agis_graph, srppp_graph, naebi_gr
     """
     Ensure all leaf nodes in the hierarchy are utilized by at least one 
     crop instance in the connected data systems (AGIS, SRPPP, NAEBI).
-    Issues a warning if unused leaf nodes are found.
     """
     # FIX: Use ReadOnlyGraphAggregate to prevent O(N) graph duplication overhead
     combined_graph = ReadOnlyGraphAggregate([cultivation_graph, agis_graph, srppp_graph, naebi_graph])
@@ -90,13 +87,13 @@ def test_no_empty_end_nodes(cultivation_graph, agis_graph, srppp_graph, naebi_gr
         empty_leaves = [str(r.leaf) for r in results]
         
         warning_msg = (
-            f"Found {len(empty_leaves)} empty leaf nodes in the cultivation hierarchy.\n"
+            f"Found {len(empty_leaves_list)} empty leaf nodes in the cultivation hierarchy.\n"
             f"These nodes have no subclasses and are not used by any crops in AGIS, SRPPP, or NAEBI:\n"
         )
-        for leaf in empty_leaves[:15]:
-            warning_msg += f"  - {leaf}\n"
-        if len(empty_leaves) > 15:
-            warning_msg += f"  ... and {len(empty_leaves) - 15} more.\n"
+        for leaf in empty_leaves_list[:15]:
+            warning_msg += f"  - {str(leaf)}\n"
+        if len(empty_leaves_list) > 15:
+            warning_msg += f"  ... and {len(empty_leaves_list) - 15} more.\n"
             
         warnings.warn(warning_msg.strip(), UserWarning)
 
