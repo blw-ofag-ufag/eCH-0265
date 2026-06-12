@@ -79,10 +79,12 @@ venv/
 # Any results written by analyses etc.
 results/
 
-# Test cache
-**/__pycache__
+# Test cache and reports
+tests/**
+!tests/*.py
+
+# Any test files
 test.*
-tests/warnings_report.json
 
 # Exclude input data files
 data/

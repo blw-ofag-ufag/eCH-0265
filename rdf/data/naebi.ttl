@@ -813,10 +813,10 @@ naebi:134 a :NutrientBalanceCrop  ;
 naebi:135 a :NutrientBalanceCrop  ;
     schema:identifier "CROP_LGMPR" ;
     schema:name "Kleesamenproduktion"@de ;
-    :K2O 0.0 ;
-    :Mg 0.0 ;
+    :K2O 2.3 ;
+    :Mg 0.25 ;
     :N2 0.0 ;
-    :P2O5 0.0 ;
+    :P2O5 0.71 ;
     :cultivationCategory cultivationtype:464 ;
     :cultivationSubCategory cultivationtype:463 ;
     :cultivationType cultivationtype:1052 .

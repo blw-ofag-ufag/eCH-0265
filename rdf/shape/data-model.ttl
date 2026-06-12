@@ -382,7 +382,11 @@ shape:PlantProtectionCrop a sh:NodeShape ;
             sh:minCount 1 ;
             sh:nodeKind sh:IRI ;
             sh:path :cultivationType ;
-            sh:node shape:CultivationType ;
+            sh:or (
+                [ sh:node shape:CultivationType ]
+                [ sh:hasValue cube:Undefined ]
+                [ sh:hasValue :Cultivation ]
+            ) ;
         ],
         [
             sh:order 4 ;
