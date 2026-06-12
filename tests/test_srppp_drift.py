@@ -122,7 +122,7 @@ def test_psmv_drift(srppp_graph, core_graph):
 
     report_md = "\n".join(md_lines)
     
-    with open("psmv_drift_report.md", "w", encoding="utf-8") as f:
+    with open("tests/psmv_drift_report.md", "w", encoding="utf-8") as f:
         f.write(report_md)
     
     pytest.fail(f"PSMV Data Drift Detected:\n\n{report_md}")
