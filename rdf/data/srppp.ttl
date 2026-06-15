@@ -1350,10 +1350,10 @@ psm:193 a :PlantProtectionCrop  ;
     :cultivationType cultivationtype:490 .
 
 psm:194 a :PlantProtectionCrop  ;
-    schema:identifier "811C79DC-9182-4302-8AEC-AB12D5F69188" ;
-    schema:name "allg. Ökologische Ausgleichsflächen (gemäss DZV)"@de,
-        "domaine surfaces de compensation écologique (selon OPD)"@fr,
-        "Superfici di compensazione ecologica in generale (conformemente OPD)"@it ;
+    schema:identifier "E798A7B8-F618-42EE-88F4-289B1283C7B3" ;
+    schema:name "Biodiversitätforderflächen allg."@de,
+        "Surfaces de promotion de la biodiversité en général"@fr,
+        "Superfici per la promozione della biodiversità in generale"@it ;
     schema:version 0 ;
     :cultivationType cultivationtype:414 .
 
