@@ -128,7 +128,6 @@ psm:ObservationSet a cube:ObservationSet ;
         psm:158,
         psm:159,
         psm:16,
-        psm:160,
         psm:161,
         psm:162,
         psm:163,
@@ -154,11 +153,9 @@ psm:ObservationSet a cube:ObservationSet ;
         psm:181,
         psm:182,
         psm:183,
-        psm:184,
         psm:185,
         psm:186,
         psm:187,
-        psm:188,
         psm:189,
         psm:19,
         psm:190,
@@ -245,7 +242,6 @@ psm:ObservationSet a cube:ObservationSet ;
         psm:263,
         psm:264,
         psm:265,
-        psm:266,
         psm:267,
         psm:268,
         psm:269,
@@ -298,10 +294,8 @@ psm:ObservationSet a cube:ObservationSet ;
         psm:310,
         psm:311,
         psm:312,
-        psm:313,
         psm:314,
         psm:315,
-        psm:316,
         psm:317,
         psm:318,
         psm:319,
@@ -354,8 +348,6 @@ psm:ObservationSet a cube:ObservationSet ;
         psm:59,
         psm:6,
         psm:60,
-        psm:61,
-        psm:62,
         psm:63,
         psm:64,
         psm:65,
@@ -423,8 +415,7 @@ psm:10 a :PlantProtectionCrop  ;
 
 psm:100 a :PlantProtectionCrop  ;
     schema:identifier "99379C08-8682-4628-BD67-6E566F5130FA" ;
-    schema:isPartOf psm:27,
-        psm:316 ;
+    schema:isPartOf psm:27 ;
     schema:name "Trockenreis"@de,
         "Riz semis sur terrain sec"@fr,
         "Riso seminato su terreno asciutto"@it ;
@@ -443,8 +434,7 @@ psm:101 a :PlantProtectionCrop  ;
 
 psm:102 a :PlantProtectionCrop  ;
     schema:identifier "9F6AE17C-0BE1-457A-B780-D408BCD333BF" ;
-    schema:isPartOf psm:316,
-        psm:27 ;
+    schema:isPartOf psm:27 ;
     schema:name "Sojabohne"@de,
         "Soja"@fr,
         "Soia"@it ;
@@ -516,8 +506,7 @@ psm:109 a :PlantProtectionCrop  ;
 
 psm:11 a :PlantProtectionCrop  ;
     schema:identifier "9BA6BDE9-AD45-4F91-A190-708D39AD5B63" ;
-    schema:isPartOf psm:316,
-        psm:27 ;
+    schema:isPartOf psm:27 ;
     schema:name "Lein"@de,
         "Lin"@fr,
         "Lino"@it ;
@@ -580,8 +569,7 @@ psm:115 a :PlantProtectionCrop  ;
 
 psm:116 a :PlantProtectionCrop  ;
     schema:identifier "E77825CE-5021-479E-B6C1-8F55766E497B" ;
-    schema:isPartOf psm:316,
-        psm:27 ;
+    schema:isPartOf psm:27 ;
     schema:name "Wiesen und Weiden"@de,
         "Prairies et pâturages"@fr,
         "Prati e pascoli"@it ;
@@ -626,8 +614,7 @@ psm:12 a :PlantProtectionCrop  ;
 
 psm:120 a :PlantProtectionCrop  ;
     schema:identifier "0A3519B1-A42F-43EE-AF82-6DCF17EA8DA6" ;
-    schema:isPartOf psm:62,
-        psm:134 ;
+    schema:isPartOf psm:134 ;
     schema:name "Knöterichgewächse (Polygonaceae)"@de,
         "polygonacées"@fr,
         "Poligonacee"@it ;
@@ -636,8 +623,7 @@ psm:120 a :PlantProtectionCrop  ;
 
 psm:121 a :PlantProtectionCrop  ;
     schema:identifier "095E9650-A880-4BD2-A1BB-39297582BCE6" ;
-    schema:isPartOf psm:316,
-        psm:27 ;
+    schema:isPartOf psm:27 ;
     schema:name "Sonnenblume"@de,
         "Tournesol"@fr,
         "Girasole"@it ;
@@ -739,8 +725,7 @@ psm:130 a :PlantProtectionCrop  ;
 
 psm:131 a :PlantProtectionCrop  ;
     schema:identifier "BE3C6915-B28E-4CC8-980E-7F243F14F519" ;
-    schema:isPartOf psm:160,
-        psm:13 ;
+    schema:isPartOf psm:13 ;
     schema:name "Ribes Arten"@de,
         "espèces de Ribes"@fr,
         "Specie di ribes"@it ;
@@ -1023,8 +1008,7 @@ psm:16 a :PlantProtectionCrop  ;
 
 psm:161 a :PlantProtectionCrop  ;
     schema:identifier "42D50BC4-0019-4B55-9CB5-6C3E86C9D112" ;
-    schema:isPartOf psm:160,
-        psm:13 ;
+    schema:isPartOf psm:13 ;
     schema:name "Schwarzer Holunder"@de,
         "Elder berry"@en,
         "grand sureau"@fr,
@@ -1088,8 +1072,7 @@ psm:167 a :PlantProtectionCrop  ;
 
 psm:168 a :PlantProtectionCrop  ;
     schema:identifier "49F7DA15-E241-4080-9D42-1523ECA834B5" ;
-    schema:isPartOf psm:316,
-        psm:27 ;
+    schema:isPartOf psm:27 ;
     schema:name "Färberdistel (Saflor)"@de,
         "Safflower"@en,
         "Carthame"@fr,
@@ -1099,8 +1082,7 @@ psm:168 a :PlantProtectionCrop  ;
 
 psm:169 a :PlantProtectionCrop  ;
     schema:identifier "4A386AE2-A36F-4A55-8668-7B896A1E8092" ;
-    schema:isPartOf psm:316,
-        psm:27 ;
+    schema:isPartOf psm:27 ;
     schema:name "Chinaschilf"@de,
         "Roseau de Chine"@fr,
         "Miscanto"@it ;
@@ -1163,8 +1145,7 @@ psm:174 a :PlantProtectionCrop  ;
 
 psm:175 a :PlantProtectionCrop  ;
     schema:identifier "46901564-D096-4323-AE81-C93831AFEC64" ;
-    schema:isPartOf psm:62,
-        psm:134 ;
+    schema:isPartOf psm:134 ;
     schema:name "Nachtschattengewächse (Solanaceae)"@de,
         "solanacées"@fr,
         "Solanacee"@it ;
@@ -1209,8 +1190,7 @@ psm:18 a :PlantProtectionCrop  ;
 
 psm:180 a :PlantProtectionCrop  ;
     schema:identifier "6388D9E7-CD0D-4823-80DD-E6FA472AF12C" ;
-    schema:isPartOf psm:316,
-        psm:27 ;
+    schema:isPartOf psm:27 ;
     schema:name "Klee zur Saatgutproduktion"@de,
         "Trèfles pour la production de semences"@fr,
         "Trifoglio per la produzione di sementi"@it ;
@@ -1255,8 +1235,7 @@ psm:185 a :PlantProtectionCrop  ;
 
 psm:186 a :PlantProtectionCrop  ;
     schema:identifier "6EDA1989-51C8-490E-90FD-974CE3E8FF03" ;
-    schema:isPartOf psm:61,
-        psm:285 ;
+    schema:isPartOf psm:285 ;
     schema:name "Hartschalenobst"@de,
         "noix en général"@fr,
         "Frutta con guscio"@it ;
@@ -1283,8 +1262,7 @@ psm:189 a :PlantProtectionCrop  ;
 
 psm:19 a :PlantProtectionCrop  ;
     schema:identifier "7D52C099-7C6F-453C-8513-4BBFB94EE66A" ;
-    schema:isPartOf psm:316,
-        psm:27 ;
+    schema:isPartOf psm:27 ;
     schema:name "Eiweisserbse"@de,
         "pois protéagineux"@fr,
         "Pisello proteico"@it ;
@@ -1349,8 +1327,7 @@ psm:195 a :PlantProtectionCrop  ;
 
 psm:196 a :PlantProtectionCrop  ;
     schema:identifier "6D06A7F9-DF91-4BB5-84B8-FB877C211E66" ;
-    schema:isPartOf psm:316,
-        psm:27 ;
+    schema:isPartOf psm:27 ;
     schema:name "Kenaf"@de,
         "Kenaf"@fr,
         "Kenaf"@it ;
@@ -1478,8 +1455,7 @@ psm:208 a :PlantProtectionCrop  ;
 
 psm:209 a :PlantProtectionCrop  ;
     schema:identifier "2FAEBED2-193A-460C-A538-9B5C78024D98" ;
-    schema:isPartOf psm:62,
-        psm:134 ;
+    schema:isPartOf psm:134 ;
     schema:name "Baldriangewächse (Valerianaceae)"@de,
         "valérianacées"@fr,
         "Valerianacee"@it ;
@@ -1515,8 +1491,7 @@ psm:211 a :PlantProtectionCrop  ;
 
 psm:212 a :PlantProtectionCrop  ;
     schema:identifier "27FBFA25-5091-4D7E-9C96-3C0BC05B6474" ;
-    schema:isPartOf psm:316,
-        psm:27 ;
+    schema:isPartOf psm:27 ;
     schema:name "Sorghum"@de,
         "Sorgho commun"@fr,
         "Sorgo"@it ;
@@ -1570,8 +1545,7 @@ psm:217 a :PlantProtectionCrop  ;
 
 psm:218 a :PlantProtectionCrop  ;
     schema:identifier "F718EA3C-F363-4DB2-BDF6-2D6236706822" ;
-    schema:isPartOf psm:188,
-        psm:337 ;
+    schema:isPartOf psm:337 ;
     schema:name "Schalotten"@de,
         "échalote"@fr,
         "Scalogni"@it ;
@@ -1589,8 +1563,7 @@ psm:219 a :PlantProtectionCrop  ;
 
 psm:22 a :PlantProtectionCrop  ;
     schema:identifier "657E4B0A-50BD-424B-9DB4-1B84582AD3D7" ;
-    schema:isPartOf psm:316,
-        psm:27 ;
+    schema:isPartOf psm:27 ;
     schema:name "Ackerbohne"@de,
         "féverole"@fr,
         "Fava"@it ;
@@ -1599,8 +1572,7 @@ psm:22 a :PlantProtectionCrop  ;
 
 psm:220 a :PlantProtectionCrop  ;
     schema:identifier "BC86A080-EDBD-4BBC-A36A-BE41037227C4" ;
-    schema:isPartOf psm:27,
-        psm:316 ;
+    schema:isPartOf psm:27 ;
     schema:name "Mais"@de,
         "maïs"@fr,
         "Mais"@it ;
@@ -1627,8 +1599,7 @@ psm:222 a :PlantProtectionCrop  ;
 
 psm:223 a :PlantProtectionCrop  ;
     schema:identifier "9230C798-B1D0-4342-947C-C7A0988F416E" ;
-    schema:isPartOf psm:160,
-        psm:13 ;
+    schema:isPartOf psm:13 ;
     schema:name "Erdbeere"@de,
         "fraise"@fr,
         "Fragola"@it ;
@@ -1738,7 +1709,6 @@ psm:233 a :PlantProtectionCrop  ;
 
 psm:234 a :PlantProtectionCrop  ;
     schema:identifier "8774F019-8BB4-409D-ADA9-B565ECA1A6A9" ;
-    schema:isPartOf psm:184 ;
     schema:name "Allgemein Vorratsschutz"@de,
         "protection des récoltes"@fr,
         "Protezione delle scorte (in generale)"@it ;
@@ -1747,8 +1717,7 @@ psm:234 a :PlantProtectionCrop  ;
 
 psm:235 a :PlantProtectionCrop  ;
     schema:identifier "8303C191-3315-4942-91DF-668C019850D7" ;
-    schema:isPartOf psm:62,
-        psm:134 ;
+    schema:isPartOf psm:134 ;
     schema:name "Kürbisgewächse (Cucurbitaceae)"@de,
         "cucurbitacées"@fr,
         "Cucurbitacee"@it ;
@@ -1757,8 +1726,7 @@ psm:235 a :PlantProtectionCrop  ;
 
 psm:236 a :PlantProtectionCrop  ;
     schema:identifier "8262D735-4D45-4499-AE0B-497FF4C0C4AA" ;
-    schema:isPartOf psm:316,
-        psm:27 ;
+    schema:isPartOf psm:27 ;
     schema:name "Tabak"@de,
         "Tabac"@fr,
         "Tabacco"@it ;
@@ -1957,8 +1925,7 @@ psm:255 a :PlantProtectionCrop  ;
 
 psm:256 a :PlantProtectionCrop  ;
     schema:identifier "A9F01BDE-468A-477A-8ED5-704359B663F6" ;
-    schema:isPartOf psm:160,
-        psm:13 ;
+    schema:isPartOf psm:13 ;
     schema:name "Heidelbeere"@de,
         "myrtille"@fr,
         "Mirtillo"@it ;
@@ -1967,8 +1934,7 @@ psm:256 a :PlantProtectionCrop  ;
 
 psm:257 a :PlantProtectionCrop  ;
     schema:identifier "9BCEB85B-1578-4001-839D-68BFB9CE4CD8" ;
-    schema:isPartOf psm:61,
-        psm:285 ;
+    schema:isPartOf psm:285 ;
     schema:name "Olive"@de,
         "Olive"@en,
         "olivier"@fr,
@@ -1996,8 +1962,7 @@ psm:259 a :PlantProtectionCrop  ;
 
 psm:26 a :PlantProtectionCrop  ;
     schema:identifier "2D7D1AE2-E685-4C6B-B8EE-DC5C6391EC76" ;
-    schema:isPartOf psm:62,
-        psm:134 ;
+    schema:isPartOf psm:134 ;
     schema:name "Spargelgewächse (Asparagaceae)"@de,
         "asparagacées (Asparagaceae)"@fr,
         "Asparagacee (Asparagaceae)"@it ;
@@ -2033,8 +1998,7 @@ psm:262 a :PlantProtectionCrop  ;
 
 psm:263 a :PlantProtectionCrop  ;
     schema:identifier "BA6FCA8F-68B8-4408-A267-2546B1FA5764" ;
-    schema:isPartOf psm:62,
-        psm:134 ;
+    schema:isPartOf psm:134 ;
     schema:name "Lippenblütler (Labiatae)"@de,
         "lamiacées (Labiatae)"@fr,
         "Lamiacee (Labiatae)"@it ;
@@ -2133,8 +2097,7 @@ psm:273 a :PlantProtectionCrop  ;
 
 psm:274 a :PlantProtectionCrop  ;
     schema:identifier "404C1D02-5666-4AA3-8487-65A9EEE0B53D" ;
-    schema:isPartOf psm:316,
-        psm:27 ;
+    schema:isPartOf psm:27 ;
     schema:name "Lupinen"@de,
         "Lupin"@fr,
         "Lupini"@it ;
@@ -2162,8 +2125,7 @@ psm:276 a :PlantProtectionCrop  ;
 
 psm:277 a :PlantProtectionCrop  ;
     schema:identifier "DB98FC8E-5AFA-4434-9478-960124F960CA" ;
-    schema:isPartOf psm:188,
-        psm:337 ;
+    schema:isPartOf psm:337 ;
     schema:name "Zwiebeln"@de,
         "oignon"@fr,
         "Cipolle"@it ;
@@ -2192,8 +2154,7 @@ psm:279 a :PlantProtectionCrop  ;
 
 psm:28 a :PlantProtectionCrop  ;
     schema:identifier "36D9AFE2-7506-48CE-BA39-EFD54535294A" ;
-    schema:isPartOf psm:160,
-        psm:13 ;
+    schema:isPartOf psm:13 ;
     schema:name "Schwarze Apfelbeere"@de,
         "aronie noire"@fr,
         "Aronia nera"@it ;
@@ -2246,8 +2207,7 @@ psm:285 a :PlantProtectionCrop  ;
 
 psm:286 a :PlantProtectionCrop  ;
     schema:identifier "BD424265-B4C9-4410-AB7E-982930129FAE" ;
-    schema:isPartOf psm:316,
-        psm:27 ;
+    schema:isPartOf psm:27 ;
     schema:name "Raps"@de,
         "Colza"@fr,
         "colza"@it ;
@@ -2292,8 +2252,7 @@ psm:29 a :PlantProtectionCrop  ;
 
 psm:290 a :PlantProtectionCrop  ;
     schema:identifier "EB0C465C-50B7-4DC0-914B-ABE4C284A907" ;
-    schema:isPartOf psm:62,
-        psm:134 ;
+    schema:isPartOf psm:134 ;
     schema:name "Kohlgemüse"@de,
         "choux"@fr,
         "Cavoli"@it ;
@@ -2402,8 +2361,7 @@ psm:30 a :PlantProtectionCrop  ;
 
 psm:300 a :PlantProtectionCrop  ;
     schema:identifier "39D599AA-B93E-4AC2-970E-5A99A3113572" ;
-    schema:isPartOf psm:62,
-        psm:134 ;
+    schema:isPartOf psm:134 ;
     schema:name "Gänsefussgewächse (Chenopodiaceae)"@de,
         "chénopodiacées"@fr,
         "Chenopodiacee"@it ;
@@ -2448,8 +2406,7 @@ psm:304 a :PlantProtectionCrop  ;
 
 psm:305 a :PlantProtectionCrop  ;
     schema:identifier "086E34F3-82E5-4F92-9224-41C9F7529E70" ;
-    schema:isPartOf psm:316,
-        psm:27 ;
+    schema:isPartOf psm:27 ;
     schema:name "Futter- und Zuckerrüben"@de,
         "betteraves à sucre et fourragère"@fr,
         "Barbabietole da foraggio e da zucchero"@it ;
@@ -2488,8 +2445,7 @@ psm:308 a :PlantProtectionCrop  ;
 
 psm:309 a :PlantProtectionCrop  ;
     schema:identifier "0F5F1FEE-084C-4961-A76F-82F9B17B2635" ;
-    schema:isPartOf psm:61,
-        psm:285 ;
+    schema:isPartOf psm:285 ;
     schema:name "Kernobst"@de,
         "fruits à pépins"@fr,
         "Frutta a granelli"@it ;
@@ -2553,8 +2509,7 @@ psm:315 a :PlantProtectionCrop  ;
 
 psm:317 a :PlantProtectionCrop  ;
     schema:identifier "17CE2494-D0C9-484B-A91E-15B7B04733FD" ;
-    schema:isPartOf psm:62,
-        psm:134 ;
+    schema:isPartOf psm:134 ;
     schema:name "Portulakgewächse (Portulacaceae)"@de,
         "portulacacées (Portulacaceae)"@fr,
         "Portulacee (Portulacaceae)"@it ;
@@ -2572,8 +2527,7 @@ psm:318 a :PlantProtectionCrop  ;
 
 psm:319 a :PlantProtectionCrop  ;
     schema:identifier "01AFF6EB-9C8D-4D0D-B225-0BA07B59A72F" ;
-    schema:isPartOf psm:316,
-        psm:27 ;
+    schema:isPartOf psm:27 ;
     schema:name "Hopfen"@de,
         "Houblon"@fr,
         "Luppolo"@it ;
@@ -2618,8 +2572,7 @@ psm:322 a :PlantProtectionCrop  ;
 
 psm:323 a :PlantProtectionCrop  ;
     schema:identifier "8DFDE2D1-C004-4C25-BF54-21CF7C815232" ;
-    schema:isPartOf psm:188,
-        psm:337 ;
+    schema:isPartOf psm:337 ;
     schema:name "Lauch"@de,
         "poireau"@fr,
         "Porro"@it ;
@@ -2647,8 +2600,7 @@ psm:325 a :PlantProtectionCrop  ;
 
 psm:326 a :PlantProtectionCrop  ;
     schema:identifier "43F8091A-A333-40F5-8845-FF83398B9AC3" ;
-    schema:isPartOf psm:160,
-        psm:13 ;
+    schema:isPartOf psm:13 ;
     schema:name "Rubus Arten"@de,
         "espèces de Rubus"@fr,
         "Specie di rubus"@it ;
@@ -2657,8 +2609,7 @@ psm:326 a :PlantProtectionCrop  ;
 
 psm:327 a :PlantProtectionCrop  ;
     schema:identifier "5276BCA7-CEA5-4B6D-90E3-52F3A0532490" ;
-    schema:isPartOf psm:62,
-        psm:134 ;
+    schema:isPartOf psm:134 ;
     schema:name "Doldenblütler (Apiaceae)"@de,
         "ombellifères (Apiaceae)"@fr,
         "Ombrellifere (Apiacee)"@it ;
@@ -2684,8 +2635,7 @@ psm:329 a :PlantProtectionCrop  ;
 
 psm:33 a :PlantProtectionCrop  ;
     schema:identifier "6C44D265-956D-457C-B395-71C81B327416" ;
-    schema:isPartOf psm:62,
-        psm:83 ;
+    schema:isPartOf psm:83 ;
     schema:name "Baldrian"@de,
         "Valerian"@en,
         "valériane"@fr,
@@ -2799,8 +2749,7 @@ psm:34 a :PlantProtectionCrop  ;
 
 psm:35 a :PlantProtectionCrop  ;
     schema:identifier "31A0539F-1D4C-4BCF-876F-215CEBC4C864" ;
-    schema:isPartOf psm:62,
-        psm:134 ;
+    schema:isPartOf psm:134 ;
     schema:name "Gewürz- und Medizinalkräuter"@de,
         "herbes aromatiques et médicinales"@fr,
         "Erbe aromatiche e medicinali"@it ;
@@ -2827,8 +2776,7 @@ psm:37 a :PlantProtectionCrop  ;
 
 psm:38 a :PlantProtectionCrop  ;
     schema:identifier "13BB4B9E-6CEE-4729-AE29-8A4380EB33B0" ;
-    schema:isPartOf psm:313,
-        psm:296 ;
+    schema:isPartOf psm:296 ;
     schema:name "Liegendes Rundholz im Wald und auf Lagerplätzen"@de,
         "grumes en forêt et sur les places de stockage"@fr,
         "Tronchi abbattuti nella foresta e presso piazzali di deposito"@it ;
@@ -2837,8 +2785,7 @@ psm:38 a :PlantProtectionCrop  ;
 
 psm:39 a :PlantProtectionCrop  ;
     schema:identifier "037E11B2-128A-4194-9A5B-A3E980AE4113" ;
-    schema:isPartOf psm:188,
-        psm:337 ;
+    schema:isPartOf psm:337 ;
     schema:name "Knoblauch"@de,
         "ail"@fr,
         "Aglio"@it ;
@@ -2884,8 +2831,7 @@ psm:42 a :PlantProtectionCrop  ;
 
 psm:43 a :PlantProtectionCrop  ;
     schema:identifier "FFDDDA7D-B340-473C-94F4-841272B602FA" ;
-    schema:isPartOf psm:131,
-        psm:266 ;
+    schema:isPartOf psm:131 ;
     schema:name "Jostabeere"@de,
         "josta"@fr,
         "Josta"@it ;
@@ -2920,8 +2866,7 @@ psm:46 a :PlantProtectionCrop  ;
 
 psm:47 a :PlantProtectionCrop  ;
     schema:identifier "DB4E4C8B-016C-4C31-8DC5-587A9F1F8FFD" ;
-    schema:isPartOf psm:62,
-        psm:134 ;
+    schema:isPartOf psm:134 ;
     schema:name "Hülsenfrüchtler (Fabaceae)"@de,
         "fabacées (légumineuses)"@fr,
         "Fabacee (Leguminose)"@it ;
@@ -2930,8 +2875,7 @@ psm:47 a :PlantProtectionCrop  ;
 
 psm:48 a :PlantProtectionCrop  ;
     schema:identifier "E55D75D3-B805-4BFD-B2B0-D02368BD32AC" ;
-    schema:isPartOf psm:62,
-        psm:134 ;
+    schema:isPartOf psm:134 ;
     schema:name "Kreuzblütler (Brassicaceae)"@de,
         "crucifères (Brassicaceae)"@fr,
         "Crocifere (Brassicacee)"@it ;
@@ -2958,8 +2902,7 @@ psm:5 a :PlantProtectionCrop  ;
 
 psm:50 a :PlantProtectionCrop  ;
     schema:identifier "01D7815D-B309-4ECF-B172-DA38B80C8732" ;
-    schema:isPartOf psm:61,
-        psm:285 ;
+    schema:isPartOf psm:285 ;
     schema:name "Steinobst"@de,
         "fruits à noyaux"@fr,
         "Frutta a nocciolo"@it ;
@@ -3005,8 +2948,7 @@ psm:54 a :PlantProtectionCrop  ;
 
 psm:55 a :PlantProtectionCrop  ;
     schema:identifier "C3F940E4-D07C-4F4D-851C-D1024F8A6A62" ;
-    schema:isPartOf psm:62,
-        psm:134 ;
+    schema:isPartOf psm:134 ;
     schema:name "Kräuter"@de,
         "herbes"@fr,
         "Erbe"@it ;
@@ -3024,8 +2966,7 @@ psm:56 a :PlantProtectionCrop  ;
 
 psm:57 a :PlantProtectionCrop  ;
     schema:identifier "BF77A7F8-C4C5-43AF-9BCD-B7F904506E7A" ;
-    schema:isPartOf psm:62,
-        psm:134 ;
+    schema:isPartOf psm:134 ;
     schema:name "Süssgräser (Poaceae)"@de,
         "poacées (Gramineae)"@fr,
         "Poacee (Graminaceae)"@it ;
@@ -3082,8 +3023,7 @@ psm:63 a :PlantProtectionCrop  ;
 
 psm:64 a :PlantProtectionCrop  ;
     schema:identifier "E107FECF-24B6-43D7-B3E6-05C5C239EFBB" ;
-    schema:isPartOf psm:316,
-        psm:27 ;
+    schema:isPartOf psm:27 ;
     schema:name "Anbautechnik"@de,
         "techniques culturales"@fr,
         "Tecnica di coltivazione"@it ;
@@ -3111,8 +3051,7 @@ psm:66 a :PlantProtectionCrop  ;
 
 psm:67 a :PlantProtectionCrop  ;
     schema:identifier "D541F2F5-8BA6-4E26-AA66-9CF469648AFF" ;
-    schema:isPartOf psm:62,
-        psm:134 ;
+    schema:isPartOf psm:134 ;
     schema:name "Küchenkräuter"@de,
         "fines herbes"@fr,
         "Erbette da cucina"@it ;
@@ -3121,8 +3060,7 @@ psm:67 a :PlantProtectionCrop  ;
 
 psm:68 a :PlantProtectionCrop  ;
     schema:identifier "D3CD23DC-4C49-4EE5-8BF8-6B074E74352A" ;
-    schema:isPartOf psm:316,
-        psm:27 ;
+    schema:isPartOf psm:27 ;
     schema:name "Luzerne"@de,
         "Luzerne"@fr,
         "Erba medica"@it ;
@@ -3131,8 +3069,7 @@ psm:68 a :PlantProtectionCrop  ;
 
 psm:69 a :PlantProtectionCrop  ;
     schema:identifier "DDAE7B47-8561-44B4-BA3A-F9855E30BB54" ;
-    schema:isPartOf psm:160,
-        psm:13 ;
+    schema:isPartOf psm:13 ;
     schema:name "Mini-Kiwi"@de,
         "mini-Kiwi (Kiwaï)"@fr,
         "Mini-Kiwi"@it ;
@@ -3178,8 +3115,7 @@ psm:72 a :PlantProtectionCrop  ;
 
 psm:73 a :PlantProtectionCrop  ;
     schema:identifier "8B5A3E2B-2534-4FC0-84C5-685915165A77" ;
-    schema:isPartOf psm:27,
-        psm:316 ;
+    schema:isPartOf psm:27 ;
     schema:name "Getreide"@de,
         "Céréales"@fr,
         "Cereali"@it ;
@@ -3225,8 +3161,7 @@ psm:78 a :PlantProtectionCrop  ;
 
 psm:79 a :PlantProtectionCrop  ;
     schema:identifier "CDF1E5BC-0740-4214-8912-870CC2BB37F4" ;
-    schema:isPartOf psm:316,
-        psm:27 ;
+    schema:isPartOf psm:27 ;
     schema:name "Grasbestände zur Saatgutproduktion"@de,
         "Graminées pour la production de semences"@fr,
         "Graminacee per la produzione di sementi"@it ;
@@ -3335,7 +3270,6 @@ psm:89 a :PlantProtectionCrop  ;
 
 psm:9 a :PlantProtectionCrop  ;
     schema:identifier "B03E1EE3-18EE-4DC9-A98F-D528894885EB" ;
-    schema:isPartOf psm:62 ;
     schema:name "Speisepilze"@de,
         "champignons comestibles"@fr,
         "Funghi commestibili"@it ;
@@ -3389,8 +3323,7 @@ psm:94 a :PlantProtectionCrop  ;
 
 psm:95 a :PlantProtectionCrop  ;
     schema:identifier "B05127D4-FF0A-4F36-AFDD-0D487043122A" ;
-    schema:isPartOf psm:62,
-        psm:134 ;
+    schema:isPartOf psm:134 ;
     schema:name "Korbblütler (Asteraceae)"@de,
         "composées (Asteracea)"@fr,
         "Composite (Asteracee)"@it ;
@@ -3399,8 +3332,7 @@ psm:95 a :PlantProtectionCrop  ;
 
 psm:96 a :PlantProtectionCrop  ;
     schema:identifier "575A1469-EF59-4B4E-96C3-38FC0CAEF637" ;
-    schema:isPartOf psm:27,
-        psm:316 ;
+    schema:isPartOf psm:27 ;
     schema:name "Kartoffeln"@de,
         "pommes de terre"@fr,
         "Patate"@it ;
