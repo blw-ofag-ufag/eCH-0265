@@ -1625,7 +1625,7 @@ psm:220 a :PlantProtectionCrop  ;
     schema:isPartOf psm:27,
         psm:316 ;
     schema:name "Mais"@de,
-        "Maïs"@fr,
+        "maïs"@fr,
         "Mais"@it ;
     schema:version 0 ;
     :cultivationType cultivationtype:497 .
@@ -2775,6 +2775,33 @@ psm:336 a :PlantProtectionCrop  ;
     schema:name "Tabak produzierende Betriebe"@de,
         "Les exploitations tabacoles"@fr,
         "Aziende produttrici di tabacco"@it ;
+    schema:version 0 ;
+    :cultivationType cube:Undefined .
+
+psm:337 a :PlantProtectionCrop ;
+    schema:identifier "0FEBE55E-236F-483E-AE05-88A35B181A55" ;
+    schema:name "Amaryllidaceae"@de,
+        "amaryllidaceae"@fr,
+        "Amaryllidaceae"@en,
+        "Amaryllidaceae"@it ;
+    schema:version 0 ;
+    :cultivationType cube:Undefined .
+
+psm:338 a :PlantProtectionCrop ;
+    schema:identifier "C27B142E-1F10-46E0-A1CA-2ACCDA029027" ;
+    schema:name "Rispenhirse"@de,
+        "millet"@fr,
+        "Common millet"@en,
+        "Miglio"@it ;
+    schema:version 0 ;
+    :cultivationType cube:Undefined .
+
+psm:339 a :PlantProtectionCrop ;
+    schema:identifier "855980B6-D3CA-46B5-86C5-12E9847344B5" ;
+    schema:name "Windengewächse (Convolvulaceae)"@de,
+        "convolvulacées (Convolvulaceae)"@fr,
+        "Convolvulaceae"@en,
+        "Convolvulaceae"@it ;
     schema:version 0 ;
     :cultivationType cube:Undefined .
 
