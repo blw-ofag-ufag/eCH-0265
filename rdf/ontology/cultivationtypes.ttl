@@ -3751,7 +3751,8 @@ cultivationtype:1096 a :CultivationType ;
     schema:name "Radicchio und Cicorino für Verarbeitung"@de,
         "Radicchio et cicorino d'industrie"@fr,
         "Radicchio e cicorino da industria"@it ;
-    rdfs:subClassOf cultivationtype:133 .
+    rdfs:subClassOf cultivationtype:141 ;
+    owl:disjointWith cultivationtype:133 .
 
 cultivationtype:1097 a :CultivationType ;
     schema:name "Himbeer-Jungpflanzen (Long-Cane)"@de,
