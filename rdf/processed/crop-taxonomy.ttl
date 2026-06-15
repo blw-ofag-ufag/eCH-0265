@@ -2786,6 +2786,15 @@ cultivationtype:335 a owl:Class ;
         "Peperone"@it ;
     rdfs:subClassOf cultivationtype:175 .
 
+cultivationtype:337 a owl:Class ;
+    rdfs:label "Amaryllisgewächse"@de ;
+    rdfs:subClassOf cultivationtype:22 .
+
+cultivationtype:339 a owl:Class ;
+    rdfs:label "Windengewächse"@de,
+        "convolvulacées"@fr ;
+    rdfs:subClassOf cultivationtype:35 .
+
 cultivationtype:34 a owl:Class ;
     rdfs:label "Begonia"@de,
         "bégonia"@fr,

@@ -2715,7 +2715,7 @@ psm:337 a :PlantProtectionCrop ;
         "Amaryllidaceae"@en,
         "Amaryllidaceae"@it ;
     schema:version 0 ;
-    :cultivationType cube:Undefined .
+    :cultivationType cultivationtype:337 .
 
 psm:338 a :PlantProtectionCrop ;
     schema:identifier "C27B142E-1F10-46E0-A1CA-2ACCDA029027" ;
@@ -2725,7 +2725,7 @@ psm:338 a :PlantProtectionCrop ;
         "Common millet"@en,
         "Miglio"@it ;
     schema:version 0 ;
-    :cultivationType cube:Undefined .
+    :cultivationType cultivationtype:542 .
 
 psm:339 a :PlantProtectionCrop ;
     schema:identifier "855980B6-D3CA-46B5-86C5-12E9847344B5" ;
@@ -2735,7 +2735,7 @@ psm:339 a :PlantProtectionCrop ;
         "Convolvulaceae"@en,
         "Convolvulaceae"@it ;
     schema:version 0 ;
-    :cultivationType cube:Undefined .
+    :cultivationType cultivationtype:339 .
 
 psm:34 a :PlantProtectionCrop  ;
     schema:identifier "2E38C972-4160-4D2B-8ED2-3B48FC781EF0" ;
