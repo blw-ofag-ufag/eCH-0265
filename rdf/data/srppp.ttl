@@ -1765,7 +1765,6 @@ psm:239 a :PlantProtectionCrop  ;
 
 psm:24 a :PlantProtectionCrop  ;
     schema:identifier "465E7118-95AB-46A2-9A85-7A0B9070E63A" ;
-    schema:isPartOf psm:234 ;
     schema:name "Einrichtungen und Geräte"@de,
         "installations et outils"@fr,
         "Installazioni e apparecchi"@it ;
@@ -2172,7 +2171,6 @@ psm:280 a :PlantProtectionCrop  ;
 
 psm:282 a :PlantProtectionCrop  ;
     schema:identifier "DA5835F6-C295-4A4F-829D-007B1FA50A6D" ;
-    schema:isPartOf psm:48 ;
     schema:name "Stielmus"@de,
         "navet à tondre"@fr,
         "Cavoli / rape da taglio"@it ;
