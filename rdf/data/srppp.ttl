@@ -621,7 +621,8 @@ psm:12 a :PlantProtectionCrop  ;
 
 psm:120 a :PlantProtectionCrop  ;
     schema:identifier "0A3519B1-A42F-43EE-AF82-6DCF17EA8DA6" ;
-    schema:isPartOf psm:62 ;
+    schema:isPartOf psm:62,
+        psm:134 ;
     schema:name "Knöterichgewächse (Polygonaceae)"@de,
         "polygonacées"@fr,
         "Poligonacee"@it ;
@@ -650,6 +651,7 @@ psm:122 a :PlantProtectionCrop  ;
 
 psm:123 a :PlantProtectionCrop  ;
     schema:identifier "EC349B29-6A2B-4E43-990F-C553D278DC0E" ;
+    schema:isPartOf psm:13 ;
     schema:name "Hagebutten"@de,
         "rose hip"@en,
         "cynorhodon"@fr,
@@ -731,7 +733,8 @@ psm:130 a :PlantProtectionCrop  ;
 
 psm:131 a :PlantProtectionCrop  ;
     schema:identifier "BE3C6915-B28E-4CC8-980E-7F243F14F519" ;
-    schema:isPartOf psm:160 ;
+    schema:isPartOf psm:160,
+        psm:13 ;
     schema:name "Ribes Arten"@de,
         "espèces de Ribes"@fr,
         "Specie di ribes"@it ;
@@ -821,6 +824,7 @@ psm:14 a :PlantProtectionCrop  ;
 
 psm:140 a :PlantProtectionCrop  ;
     schema:identifier "B92BA12C-EA9D-4EA8-ADEE-A4547872DD58" ;
+    schema:isPartOf psm:13 ;
     schema:name "Blaue Heckenkirsche"@de,
         "camérisier bleu"@fr,
         "Caprifoglio turchino"@it ;
@@ -1012,7 +1016,8 @@ psm:16 a :PlantProtectionCrop  ;
 
 psm:161 a :PlantProtectionCrop  ;
     schema:identifier "42D50BC4-0019-4B55-9CB5-6C3E86C9D112" ;
-    schema:isPartOf psm:160 ;
+    schema:isPartOf psm:160,
+        psm:13 ;
     schema:name "Schwarzer Holunder"@de,
         "Elder berry"@en,
         "grand sureau"@fr,
@@ -1140,6 +1145,7 @@ psm:173 a :PlantProtectionCrop  ;
 
 psm:174 a :PlantProtectionCrop  ;
     schema:identifier "122B909A-CE9C-47BC-B5CA-DCF523646D38" ;
+    schema:isPartOf psm:13 ;
     schema:name "Eberesche"@de,
         "sorbier des oiseleurs"@fr,
         "Sorbo degli ucellatori"@it ;
@@ -1148,7 +1154,8 @@ psm:174 a :PlantProtectionCrop  ;
 
 psm:175 a :PlantProtectionCrop  ;
     schema:identifier "46901564-D096-4323-AE81-C93831AFEC64" ;
-    schema:isPartOf psm:62 ;
+    schema:isPartOf psm:62,
+        psm:134 ;
     schema:name "Nachtschattengewächse (Solanaceae)"@de,
         "solanacées"@fr,
         "Solanacee"@it ;
@@ -1229,6 +1236,7 @@ psm:183 a :PlantProtectionCrop  ;
 
 psm:185 a :PlantProtectionCrop  ;
     schema:identifier "28ECDBFE-F44F-44C6-BF06-9B7E6EBFC1F6" ;
+    schema:isPartOf psm:176 ;
     schema:name "Leere Produktionsräume"@de,
         "Locaux de production vides"@fr,
         "Locali di produzione vuoti"@it ;
@@ -1237,7 +1245,8 @@ psm:185 a :PlantProtectionCrop  ;
 
 psm:186 a :PlantProtectionCrop  ;
     schema:identifier "6EDA1989-51C8-490E-90FD-974CE3E8FF03" ;
-    schema:isPartOf psm:61 ;
+    schema:isPartOf psm:61,
+        psm:285 ;
     schema:name "Hartschalenobst"@de,
         "noix en général"@fr,
         "Frutta con guscio"@it ;
@@ -1365,6 +1374,7 @@ psm:199 a :PlantProtectionCrop  ;
 
 psm:2 a :PlantProtectionCrop  ;
     schema:identifier "0106A8DF-6CDF-4E18-8F46-3D9E1D52D0E5" ;
+    schema:partOf psm:134 ;
     schema:name "Baby-Leaf"@de,
         "Baby-Leaf"@fr,
         "Baby-Leaf"@it ;
@@ -1456,7 +1466,8 @@ psm:208 a :PlantProtectionCrop  ;
 
 psm:209 a :PlantProtectionCrop  ;
     schema:identifier "2FAEBED2-193A-460C-A538-9B5C78024D98" ;
-    schema:isPartOf psm:62 ;
+    schema:isPartOf psm:62,
+        psm:134 ;
     schema:name "Baldriangewächse (Valerianaceae)"@de,
         "valérianacées"@fr,
         "Valerianacee"@it ;
@@ -1601,7 +1612,8 @@ psm:222 a :PlantProtectionCrop  ;
 
 psm:223 a :PlantProtectionCrop  ;
     schema:identifier "9230C798-B1D0-4342-947C-C7A0988F416E" ;
-    schema:isPartOf psm:160 ;
+    schema:isPartOf psm:160,
+        psm:13 ;
     schema:name "Erdbeere"@de,
         "fraise"@fr,
         "Fragola"@it ;
@@ -1719,7 +1731,8 @@ psm:234 a :PlantProtectionCrop  ;
 
 psm:235 a :PlantProtectionCrop  ;
     schema:identifier "8303C191-3315-4942-91DF-668C019850D7" ;
-    schema:isPartOf psm:62 ;
+    schema:isPartOf psm:62,
+        psm:134 ;
     schema:name "Kürbisgewächse (Cucurbitaceae)"@de,
         "cucurbitacées"@fr,
         "Cucurbitacee"@it ;
@@ -1925,7 +1938,8 @@ psm:255 a :PlantProtectionCrop  ;
 
 psm:256 a :PlantProtectionCrop  ;
     schema:identifier "A9F01BDE-468A-477A-8ED5-704359B663F6" ;
-    schema:isPartOf psm:160 ;
+    schema:isPartOf psm:160,
+        psm:13 ;
     schema:name "Heidelbeere"@de,
         "myrtille"@fr,
         "Mirtillo"@it ;
@@ -1934,7 +1948,8 @@ psm:256 a :PlantProtectionCrop  ;
 
 psm:257 a :PlantProtectionCrop  ;
     schema:identifier "9BCEB85B-1578-4001-839D-68BFB9CE4CD8" ;
-    schema:isPartOf psm:61 ;
+    schema:isPartOf psm:61,
+        psm:285 ;
     schema:name "Olive"@de,
         "Olive"@en,
         "olivier"@fr,
@@ -1962,7 +1977,8 @@ psm:259 a :PlantProtectionCrop  ;
 
 psm:26 a :PlantProtectionCrop  ;
     schema:identifier "2D7D1AE2-E685-4C6B-B8EE-DC5C6391EC76" ;
-    schema:isPartOf psm:62 ;
+    schema:isPartOf psm:62,
+        psm:134 ;
     schema:name "Spargelgewächse (Asparagaceae)"@de,
         "asparagacées (Asparagaceae)"@fr,
         "Asparagacee (Asparagaceae)"@it ;
@@ -1998,7 +2014,8 @@ psm:262 a :PlantProtectionCrop  ;
 
 psm:263 a :PlantProtectionCrop  ;
     schema:identifier "BA6FCA8F-68B8-4408-A267-2546B1FA5764" ;
-    schema:isPartOf psm:62 ;
+    schema:isPartOf psm:62,
+        psm:134 ;
     schema:name "Lippenblütler (Labiatae)"@de,
         "lamiacées (Labiatae)"@fr,
         "Lamiacee (Labiatae)"@it ;
@@ -2025,6 +2042,7 @@ psm:265 a :PlantProtectionCrop  ;
 
 psm:267 a :PlantProtectionCrop  ;
     schema:identifier "A3E943A5-C6D8-4CB0-A069-85BFC48E8B8A" ;
+    schema:isPartOf psm:13 ;
     schema:name "Gojibeere"@de,
         "Goji berry, wolfberry"@en,
         "Baies de Goji"@fr,
@@ -2153,7 +2171,8 @@ psm:279 a :PlantProtectionCrop  ;
 
 psm:28 a :PlantProtectionCrop  ;
     schema:identifier "36D9AFE2-7506-48CE-BA39-EFD54535294A" ;
-    schema:isPartOf psm:160 ;
+    schema:isPartOf psm:160,
+        psm:13 ;
     schema:name "Schwarze Apfelbeere"@de,
         "aronie noire"@fr,
         "Aronia nera"@it ;
@@ -2240,6 +2259,7 @@ psm:289 a :PlantProtectionCrop  ;
 
 psm:29 a :PlantProtectionCrop  ;
     schema:identifier "36EC3084-D6AE-494D-A5B2-EC39DCC4F412" ;
+    schema:isPartOf psm:145 ;
     schema:name "Anemone"@de,
         "anémone"@fr,
         "Anemone"@it ;
@@ -2248,7 +2268,8 @@ psm:29 a :PlantProtectionCrop  ;
 
 psm:290 a :PlantProtectionCrop  ;
     schema:identifier "EB0C465C-50B7-4DC0-914B-ABE4C284A907" ;
-    schema:isPartOf psm:62 ;
+    schema:isPartOf psm:62,
+        psm:134 ;
     schema:name "Kohlgemüse"@de,
         "choux"@fr,
         "Cavoli"@it ;
@@ -2267,6 +2288,7 @@ psm:291 a :PlantProtectionCrop  ;
 
 psm:292 a :PlantProtectionCrop  ;
     schema:identifier "75047A9C-12E2-4BAC-89D8-B14BC4C6B100" ;
+    schema:isPartOf psm:176 ;
     schema:name "Holzpaletten, Packholz, Stammholz"@de,
         "Palette en bois, bois d'emballage, bois en général"@fr,
         "Palette in legno, legno da imballaggio, legno non lavorato"@it ;
@@ -2355,7 +2377,8 @@ psm:30 a :PlantProtectionCrop  ;
 
 psm:300 a :PlantProtectionCrop  ;
     schema:identifier "39D599AA-B93E-4AC2-970E-5A99A3113572" ;
-    schema:isPartOf psm:62 ;
+    schema:isPartOf psm:62,
+        psm:134 ;
     schema:name "Gänsefussgewächse (Chenopodiaceae)"@de,
         "chénopodiacées"@fr,
         "Chenopodiacee"@it ;
@@ -2502,7 +2525,8 @@ psm:315 a :PlantProtectionCrop  ;
 
 psm:317 a :PlantProtectionCrop  ;
     schema:identifier "17CE2494-D0C9-484B-A91E-15B7B04733FD" ;
-    schema:isPartOf psm:62 ;
+    schema:isPartOf psm:62,
+        psm:134 ;
     schema:name "Portulakgewächse (Portulacaceae)"@de,
         "portulacacées (Portulacaceae)"@fr,
         "Portulacee (Portulacaceae)"@it ;
@@ -2511,6 +2535,7 @@ psm:317 a :PlantProtectionCrop  ;
 
 psm:318 a :PlantProtectionCrop  ;
     schema:identifier "230F7417-5500-4124-B273-95AA1FFB940B" ;
+    schema:isPartOf psm:145 ;
     schema:name "Ranunkel"@de,
         "ranunculus"@fr,
         "ranuncolo"@it ;
@@ -2591,7 +2616,8 @@ psm:325 a :PlantProtectionCrop  ;
 
 psm:326 a :PlantProtectionCrop  ;
     schema:identifier "43F8091A-A333-40F5-8845-FF83398B9AC3" ;
-    schema:isPartOf psm:160 ;
+    schema:isPartOf psm:160,
+        psm:13 ;
     schema:name "Rubus Arten"@de,
         "espèces de Rubus"@fr,
         "Specie di rubus"@it ;
@@ -2600,7 +2626,8 @@ psm:326 a :PlantProtectionCrop  ;
 
 psm:327 a :PlantProtectionCrop  ;
     schema:identifier "5276BCA7-CEA5-4B6D-90E3-52F3A0532490" ;
-    schema:isPartOf psm:62 ;
+    schema:isPartOf psm:62,
+        psm:134 ;
     schema:name "Doldenblütler (Apiaceae)"@de,
         "ombellifères (Apiaceae)"@fr,
         "Ombrellifere (Apiacee)"@it ;
@@ -2697,6 +2724,7 @@ psm:336 a :PlantProtectionCrop  ;
 
 psm:337 a :PlantProtectionCrop ;
     schema:identifier "0FEBE55E-236F-483E-AE05-88A35B181A55" ;
+    schema:partOf psm:134 ;
     schema:name "Amaryllidaceae"@de,
         "amaryllidaceae"@fr,
         "Amaryllidaceae"@en,
@@ -2715,6 +2743,7 @@ psm:338 a :PlantProtectionCrop ;
 
 psm:339 a :PlantProtectionCrop ;
     schema:identifier "855980B6-D3CA-46B5-86C5-12E9847344B5" ;
+    schema:partOf psm:134 ;
     schema:name "Windengewächse (Convolvulaceae)"@de,
         "convolvulacées (Convolvulaceae)"@fr,
         "Convolvulaceae"@en,
@@ -2734,7 +2763,8 @@ psm:34 a :PlantProtectionCrop  ;
 
 psm:35 a :PlantProtectionCrop  ;
     schema:identifier "31A0539F-1D4C-4BCF-876F-215CEBC4C864" ;
-    schema:isPartOf psm:62 ;
+    schema:isPartOf psm:62,
+        psm:134 ;
     schema:name "Gewürz- und Medizinalkräuter"@de,
         "herbes aromatiques et médicinales"@fr,
         "Erbe aromatiche e medicinali"@it ;
@@ -2851,7 +2881,8 @@ psm:46 a :PlantProtectionCrop  ;
 
 psm:47 a :PlantProtectionCrop  ;
     schema:identifier "DB4E4C8B-016C-4C31-8DC5-587A9F1F8FFD" ;
-    schema:isPartOf psm:62 ;
+    schema:isPartOf psm:62,
+        psm:134 ;
     schema:name "Hülsenfrüchtler (Fabaceae)"@de,
         "fabacées (légumineuses)"@fr,
         "Fabacee (Leguminose)"@it ;
@@ -2860,7 +2891,8 @@ psm:47 a :PlantProtectionCrop  ;
 
 psm:48 a :PlantProtectionCrop  ;
     schema:identifier "E55D75D3-B805-4BFD-B2B0-D02368BD32AC" ;
-    schema:isPartOf psm:62 ;
+    schema:isPartOf psm:62,
+        psm:134 ;
     schema:name "Kreuzblütler (Brassicaceae)"@de,
         "crucifères (Brassicaceae)"@fr,
         "Crocifere (Brassicacee)"@it ;
@@ -2886,7 +2918,8 @@ psm:5 a :PlantProtectionCrop  ;
 
 psm:50 a :PlantProtectionCrop  ;
     schema:identifier "01D7815D-B309-4ECF-B172-DA38B80C8732" ;
-    schema:isPartOf psm:61 ;
+    schema:isPartOf psm:61,
+        psm:285 ;
     schema:name "Steinobst"@de,
         "fruits à noyaux"@fr,
         "Frutta a nocciolo"@it ;
@@ -2932,7 +2965,8 @@ psm:54 a :PlantProtectionCrop  ;
 
 psm:55 a :PlantProtectionCrop  ;
     schema:identifier "C3F940E4-D07C-4F4D-851C-D1024F8A6A62" ;
-    schema:isPartOf psm:62 ;
+    schema:isPartOf psm:62,
+        psm:134 ;
     schema:name "Kräuter"@de,
         "herbes"@fr,
         "Erbe"@it ;
@@ -2950,7 +2984,8 @@ psm:56 a :PlantProtectionCrop  ;
 
 psm:57 a :PlantProtectionCrop  ;
     schema:identifier "BF77A7F8-C4C5-43AF-9BCD-B7F904506E7A" ;
-    schema:isPartOf psm:62 ;
+    schema:isPartOf psm:62,
+        psm:134 ;
     schema:name "Süssgräser (Poaceae)"@de,
         "poacées (Gramineae)"@fr,
         "Poacee (Graminaceae)"@it ;
@@ -3035,7 +3070,8 @@ psm:66 a :PlantProtectionCrop  ;
 
 psm:67 a :PlantProtectionCrop  ;
     schema:identifier "D541F2F5-8BA6-4E26-AA66-9CF469648AFF" ;
-    schema:isPartOf psm:62 ;
+    schema:isPartOf psm:62,
+        psm:134 ;
     schema:name "Küchenkräuter"@de,
         "fines herbes"@fr,
         "Erbette da cucina"@it ;
@@ -3053,7 +3089,8 @@ psm:68 a :PlantProtectionCrop  ;
 
 psm:69 a :PlantProtectionCrop  ;
     schema:identifier "DDAE7B47-8561-44B4-BA3A-F9855E30BB54" ;
-    schema:isPartOf psm:160 ;
+    schema:isPartOf psm:160,
+        psm:13 ;
     schema:name "Mini-Kiwi"@de,
         "mini-Kiwi (Kiwaï)"@fr,
         "Mini-Kiwi"@it ;
@@ -3163,6 +3200,7 @@ psm:8 a :PlantProtectionCrop  ;
 
 psm:80 a :PlantProtectionCrop  ;
     schema:identifier "D18572C7-A270-4AA7-B766-48D62C5E9AB7" ;
+    schema:isPartOf psm:13 ;
     schema:name "Schwarze Maulbeere"@de,
         "mûrier noir"@fr,
         "Moro nero"@it ;
@@ -3270,6 +3308,7 @@ psm:90 a :PlantProtectionCrop  ;
 
 psm:91 a :PlantProtectionCrop  ;
     schema:identifier "D605CAA5-9199-4739-8C9C-343C74DABAEB" ;
+    schema:isPartOf psm:13 ;
     schema:name "Gemeine Felsenbirne"@de,
         "amélavier commun"@fr,
         "Pero corvino"@it ;
@@ -3287,6 +3326,7 @@ psm:92 a :PlantProtectionCrop  ;
 
 psm:93 a :PlantProtectionCrop  ;
     schema:identifier "D1E8D0D6-BD3C-4C47-9017-DBEADC9215A9" ;
+    schema:isPartOf psm:13 ;
     schema:name "Sanddorn"@de,
         "argousier"@fr,
         "Olivello spinoso"@it ;
@@ -3304,7 +3344,8 @@ psm:94 a :PlantProtectionCrop  ;
 
 psm:95 a :PlantProtectionCrop  ;
     schema:identifier "B05127D4-FF0A-4F36-AFDD-0D487043122A" ;
-    schema:isPartOf psm:62 ;
+    schema:isPartOf psm:62,
+        psm:134 ;
     schema:name "Korbblütler (Asteraceae)"@de,
         "composées (Asteracea)"@fr,
         "Composite (Asteracee)"@it ;
