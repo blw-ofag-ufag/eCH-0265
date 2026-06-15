@@ -502,7 +502,9 @@ cultivationtype:86 a :CultivationType ;
     schema:name "Kohlrabi"@de,
         "colrave"@fr,
         "Cavolo rapa"@it ;
-    rdfs:subClassOf cultivationtype:25 .
+    rdfs:subClassOf cultivationtype:25 ;
+    owl:disjointWith cultivationtype:1043,
+        cultivationtype:1044 .
 
 cultivationtype:87 a :CultivationType ;
     schema:name "Federkohl"@de,
@@ -3465,11 +3467,17 @@ cultivationtype:1042 a :CultivationType ;
 
 cultivationtype:1043 a :CultivationType ;
     schema:name "Kohlrabi (geschützter Anbau)"@de, "Chou-rave (culture protégée)"@fr, "Cavolo rapa (coltura protetta)"@it ;
-    owl:intersectionOf ( cultivationtype:86 cultivationtype:23 ) .
+    rdfs:subClassOf cultivationtype:25,
+        cultivationtype:23 ;
+    owl:disjointWith cultivationtype:86,
+        cultivationtype:1044 .
 
 cultivationtype:1044 a :CultivationType ;
     schema:name "Verarbeitungskohlrabi"@de, "Chou-rave d'industrie"@fr, "Cavolo rapa da industria"@it ;
-    owl:intersectionOf ( cultivationtype:86 cultivationtype:546 ) .
+    rdfs:subClassOf cultivationtype:25,
+        cultivationtype:546 ;
+    owl:disjointWith cultivationtype:86,
+        cultivationtype:1043 .
 
 cultivationtype:1045 a :CultivationType ;
     schema:name "Ölhanf"@de, "Chanvre oléagineux"@fr, "Canapa da olio"@it ;
