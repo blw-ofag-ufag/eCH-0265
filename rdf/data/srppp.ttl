@@ -562,6 +562,7 @@ psm:113 a :PlantProtectionCrop  ;
 
 psm:114 a :PlantProtectionCrop  ;
     schema:identifier "24EA0CC6-D1D5-4BB4-981C-A836E3D7125D" ;
+    schema:isPartOf psm:194 ;
     schema:name "Grünfläche"@de,
         "surfaces herbagères"@fr,
         "Superficie inerbita"@it ;
@@ -884,6 +885,7 @@ psm:146 a :PlantProtectionCrop  ;
 
 psm:147 a :PlantProtectionCrop  ;
     schema:identifier "7D23702C-980B-4B90-A86B-70013806D3EA" ;
+    schema:isPartOf psm:176 ;
     schema:name "leere Lagerräume"@de,
         "Êntrepôts vides"@fr,
         "Locali di stoccaggio vuoti"@it ;
@@ -1663,6 +1665,7 @@ psm:226 a :PlantProtectionCrop  ;
 
 psm:227 a :PlantProtectionCrop  ;
     schema:identifier "BAE217C2-8C72-4706-8A0E-911FB18FC723" ;
+    schema:isPartOf psm:293 ;
     schema:name "Humusdeponie"@de,
         "dépôt de terre végétale"@fr,
         "Deposito di terreno vegetale"@it ;
@@ -1792,6 +1795,7 @@ psm:239 a :PlantProtectionCrop  ;
 
 psm:24 a :PlantProtectionCrop  ;
     schema:identifier "465E7118-95AB-46A2-9A85-7A0B9070E63A" ;
+    schema:isPartOf psm:176 ;
     schema:name "Einrichtungen und Geräte"@de,
         "installations et outils"@fr,
         "Installazioni e apparecchi"@it ;
@@ -1836,6 +1840,7 @@ psm:243 a :PlantProtectionCrop  ;
 
 psm:244 a :PlantProtectionCrop  ;
     schema:identifier "4B6DC713-3B11-42C5-92A8-E504D594E978" ;
+    schema:isPartOf psm:176 ;
     schema:name "leere Verarbeitungsräume"@de,
         "Locaux de transformation vides"@fr,
         "Locali per la lavorazione vuoti"@it ;
@@ -2206,6 +2211,7 @@ psm:280 a :PlantProtectionCrop  ;
 
 psm:282 a :PlantProtectionCrop  ;
     schema:identifier "DA5835F6-C295-4A4F-829D-007B1FA50A6D" ;
+    schema:isPartOf psm:20 ;
     schema:name "Stielmus"@de,
         "navet à tondre"@fr,
         "Cavoli / rape da taglio"@it ;
@@ -2462,6 +2468,7 @@ psm:306 a :PlantProtectionCrop  ;
 
 psm:307 a :PlantProtectionCrop  ;
     schema:identifier "2260B6A9-FC51-4F50-8E8F-D39BC6D5DA3A" ;
+    schema:isPartOf psm:47 ;
     schema:name "Kichererbse"@de,
         "chickpea"@en,
         "pois chiche"@fr,
@@ -2602,6 +2609,7 @@ psm:321 a :PlantProtectionCrop  ;
 
 psm:322 a :PlantProtectionCrop  ;
     schema:identifier "AE465EA2-A950-4661-B631-D5A267B2F076" ;
+    schema:isPartOf psm:293 ;
     schema:name "Brachland"@de,
         "friche"@fr,
         "Terreno incolto"@it ;
@@ -2676,7 +2684,8 @@ psm:329 a :PlantProtectionCrop  ;
 
 psm:33 a :PlantProtectionCrop  ;
     schema:identifier "6C44D265-956D-457C-B395-71C81B327416" ;
-    schema:isPartOf psm:62 ;
+    schema:isPartOf psm:62,
+        psm:83 ;
     schema:name "Baldrian"@de,
         "Valerian"@en,
         "valériane"@fr,
@@ -2741,6 +2750,7 @@ psm:335 a :PlantProtectionCrop  ;
 
 psm:336 a :PlantProtectionCrop  ;
     schema:identifier "17B69B05-E650-4A6F-815A-D6DA55A92CDB" ;
+    schema:isPartOf psm:176 ;
     schema:name "Tabak produzierende Betriebe"@de,
         "Les exploitations tabacoles"@fr,
         "Aziende produttrici di tabacco"@it ;
@@ -2817,7 +2827,8 @@ psm:37 a :PlantProtectionCrop  ;
 
 psm:38 a :PlantProtectionCrop  ;
     schema:identifier "13BB4B9E-6CEE-4729-AE29-8A4380EB33B0" ;
-    schema:isPartOf psm:313 ;
+    schema:isPartOf psm:313,
+        psm:296 ;
     schema:name "Liegendes Rundholz im Wald und auf Lagerplätzen"@de,
         "grumes en forêt et sur les places de stockage"@fr,
         "Tronchi abbattuti nella foresta e presso piazzali di deposito"@it ;
@@ -2863,6 +2874,7 @@ psm:41 a :PlantProtectionCrop  ;
 
 psm:42 a :PlantProtectionCrop  ;
     schema:identifier "EF29B430-95C5-45D4-A812-DCCE046E1B8E" ;
+    schema:isPartOf psm:339 ;
     schema:name "Süsskartoffel"@de,
         "Sweet potato"@en,
         "Patate douce"@fr,
@@ -2928,6 +2940,7 @@ psm:48 a :PlantProtectionCrop  ;
 
 psm:49 a :PlantProtectionCrop  ;
     schema:identifier "CC08E1E6-655D-4FAA-B0E8-AD968A68A536" ;
+    schema:isPartOf psm:176 ;
     schema:name "Erntegut"@de,
         "denrée stockée"@fr,
         "Raccolto stoccato"@it ;
@@ -3128,6 +3141,7 @@ psm:69 a :PlantProtectionCrop  ;
 
 psm:7 a :PlantProtectionCrop  ;
     schema:identifier "A0012475-8478-4CA9-A18A-DC1CB96D788B" ;
+    schema:isPartOf psm:329 ;
     schema:name "Blumenzwiebeln und Blumenknollen"@de,
         "bulbes ornementaux"@fr,
         "Bulbi ornamentali"@it ;
