@@ -4719,6 +4719,14 @@ cultivationtype:1293 a :CultivationType ;
     rdfs:subClassOf cultivationtype:142 ;
     owl:disjointWith cultivationtype:1131 .
 
+cultivationtype:1294 a :CultivationType ;
+    schema:name "Tomaten (Freiland)"@de,
+        "Tomates (pleine terre)"@fr,
+        "Pomodori (pieno campo)"@it ;
+    rdfs:subClassOf cultivationtype:85,
+        cultivationtype:24 ;
+    owl:disjointWith cultivationtype:1141 .
+
 # ==============================================================================
 # DISJOINTNESS OF CULTIVATION TYPES
 # ==============================================================================
