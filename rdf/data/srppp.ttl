@@ -836,15 +836,6 @@ psm:141 a :PlantProtectionCrop  ;
     schema:version 0 ;
     :cultivationType cultivationtype:141 .
 
-psm:142 a :PlantProtectionCrop  ;
-    schema:identifier "94589F70-1F3A-4AEF-A26A-2267EB5BDA4B" ;
-    schema:isPartOf psm:141 ;
-    schema:name "Zuckerhut"@de,
-        "chicorée pain de sucre"@fr,
-        "Cicoria pan di zucchero"@it ;
-    schema:version 0 ;
-    :cultivationType cultivationtype:142 .
-
 psm:143 a :PlantProtectionCrop  ;
     schema:identifier "77267F83-907F-4537-98A8-7B9C1E4714F0" ;
     schema:isPartOf psm:75 ;
@@ -1019,13 +1010,6 @@ psm:16 a :PlantProtectionCrop  ;
     schema:version 0 ;
     :cultivationType cultivationtype:402 .
 
-psm:160 a :PlantProtectionCrop  ;
-    schema:identifier "3EAC5420-E234-4AA5-8B46-6F9E8542C7AF" ;
-    schema:name "allg. Beerenbau"@de,
-        "domaine app. baies"@fr ;
-    schema:version 0 ;
-    :cultivationType cultivationtype:471 .
-
 psm:161 a :PlantProtectionCrop  ;
     schema:identifier "42D50BC4-0019-4B55-9CB5-6C3E86C9D112" ;
     schema:isPartOf psm:160 ;
@@ -1189,14 +1173,6 @@ psm:177 a :PlantProtectionCrop  ;
     schema:version 0 ;
     :cultivationType cultivationtype:4 .
 
-psm:178 a :PlantProtectionCrop  ;
-    schema:identifier "6569FC94-60C5-4608-8926-D76D2009B284" ;
-    schema:name "allg."@de,
-        "toutes les cultures"@fr,
-        "In generale"@it ;
-    schema:version 0 ;
-    :cultivationType :Cultivation .
-
 psm:179 a :PlantProtectionCrop  ;
     schema:identifier "62BF86AE-FD69-4F95-A72C-1D57AF1DCD99" ;
     schema:isPartOf psm:141 ;
@@ -1251,13 +1227,6 @@ psm:183 a :PlantProtectionCrop  ;
     schema:version 0 ;
     :cultivationType cultivationtype:183 .
 
-psm:184 a :PlantProtectionCrop  ;
-    schema:identifier "4D6B9837-FA9A-4E8D-BAAB-A7249BD01F2D" ;
-    schema:name "allg. Nichtkulturland"@de,
-        "domaine app. non agricole"@fr ;
-    schema:version 0 ;
-    :cultivationType cube:Undefined .
-
 psm:185 a :PlantProtectionCrop  ;
     schema:identifier "28ECDBFE-F44F-44C6-BF06-9B7E6EBFC1F6" ;
     schema:name "Leere Produktionsräume"@de,
@@ -1283,15 +1252,6 @@ psm:187 a :PlantProtectionCrop  ;
         "Baby-Leaf (Brassicaceae)"@it ;
     schema:version 0 ;
     :cultivationType cultivationtype:187 .
-
-psm:188 a :PlantProtectionCrop  ;
-    schema:identifier "5AC11C43-B41E-4823-8515-E991D4EA1B3C" ;
-    schema:isPartOf psm:62 ;
-    schema:name "Liliengewächse (Liliaceae)"@de,
-        "liliacées"@fr,
-        "Liliacee"@it ;
-    schema:version 0 ;
-    :cultivationType cultivationtype:188 .
 
 psm:189 a :PlantProtectionCrop  ;
     schema:identifier "5433C814-C0CD-4815-B236-2D02E1C66F3D" ;
@@ -1447,15 +1407,6 @@ psm:202 a :PlantProtectionCrop  ;
         "Cardo"@it ;
     schema:version 0 ;
     :cultivationType cultivationtype:202 .
-
-psm:203 a :PlantProtectionCrop  ;
-    schema:identifier "35A8338D-9B59-4842-A50C-1B8BF93CDABA" ;
-    schema:isPartOf psm:281 ;
-    schema:name "TiKul"@de,
-        "TyCul"@fr,
-        "Tikuli"@it ;
-    schema:version 0 ;
-    :cultivationType cube:Undefined .
 
 psm:204 a :PlantProtectionCrop  ;
     schema:identifier "33097BFE-2487-46DB-85A0-A8A4E06030AF" ;
@@ -2073,16 +2024,6 @@ psm:265 a :PlantProtectionCrop  ;
     schema:version 0 ;
     :cultivationType cultivationtype:265 .
 
-psm:266 a :PlantProtectionCrop  ;
-    schema:identifier "AB1C4E54-EE4E-4414-8282-A3431F321DCD" ;
-    schema:isPartOf psm:178 ;
-    schema:name "TestKultur 12"@de,
-        "TestKultur 12"@en,
-        "TestKultur 12"@fr,
-        "TestKultur 12"@it ;
-    schema:version 0 ;
-    :cultivationType cube:Undefined .
-
 psm:267 a :PlantProtectionCrop  ;
     schema:identifier "A3E943A5-C6D8-4CB0-A069-85BFC48E8B8A" ;
     schema:name "Gojibeere"@de,
@@ -2228,14 +2169,6 @@ psm:280 a :PlantProtectionCrop  ;
         "Barbabietola da foraggio"@it ;
     schema:version 0 ;
     :cultivationType cultivationtype:523 .
-
-psm:281 a :PlantProtectionCrop  ;
-    schema:identifier "C83340F9-9BA9-4C7A-B414-A691C4853D31" ;
-    schema:name "--"@de,
-        "---"@fr,
-        "---"@it ;
-    schema:version 0 ;
-    :cultivationType cube:Undefined .
 
 psm:282 a :PlantProtectionCrop  ;
     schema:identifier "DA5835F6-C295-4A4F-829D-007B1FA50A6D" ;
@@ -2550,13 +2483,6 @@ psm:312 a :PlantProtectionCrop  ;
     schema:version 0 ;
     :cultivationType cultivationtype:312 .
 
-psm:313 a :PlantProtectionCrop  ;
-    schema:identifier "1575BC21-D089-4248-99A6-676F14E1309F" ;
-    schema:name "allg. Forstwirtschaft"@de,
-        "domaine app. sylviculture"@fr ;
-    schema:version 0 ;
-    :cultivationType cultivationtype:901 .
-
 psm:314 a :PlantProtectionCrop  ;
     schema:identifier "3447F4C9-2E90-437F-A240-0462AFEDF2B5" ;
     schema:isPartOf psm:40 ;
@@ -2575,13 +2501,6 @@ psm:315 a :PlantProtectionCrop  ;
         "Crisantemo"@it ;
     schema:version 0 ;
     :cultivationType cultivationtype:315 .
-
-psm:316 a :PlantProtectionCrop  ;
-    schema:identifier "1DD3F253-4B23-4B69-BFB1-1C24CE7D5508" ;
-    schema:name "allg. Feldbau"@de,
-        "domaine app. grande culture"@fr ;
-    schema:version 0 ;
-    :cultivationType cultivationtype:1 .
 
 psm:317 a :PlantProtectionCrop  ;
     schema:identifier "17CE2494-D0C9-484B-A91E-15B7B04733FD" ;
@@ -3078,20 +2997,6 @@ psm:60 a :PlantProtectionCrop  ;
     schema:version 0 ;
     :cultivationType cultivationtype:60 .
 
-psm:61 a :PlantProtectionCrop  ;
-    schema:identifier "C6EBB3D7-3050-4C36-BBC2-CBD20D6B9E56" ;
-    schema:name "allg. Obstbau"@de,
-        "domaine app. arboriculture"@fr ;
-    schema:version 0 ;
-    :cultivationType cultivationtype:5 .
-
-psm:62 a :PlantProtectionCrop  ;
-    schema:identifier "E59545AD-3331-4E3D-B58D-9F67833C060B" ;
-    schema:name "allg. Gemüsebau"@de,
-        "domaine app. maraîchère"@fr ;
-    schema:version 0 ;
-    :cultivationType cultivationtype:22 .
-
 psm:63 a :PlantProtectionCrop  ;
     schema:identifier "DF455946-B2AB-45D2-9780-4A45A98D72D6" ;
     schema:isPartOf psm:16,
@@ -3202,15 +3107,6 @@ psm:73 a :PlantProtectionCrop  ;
         "Cereali"@it ;
     schema:version 0 ;
     :cultivationType cultivationtype:1033 .
-
-psm:74 a :PlantProtectionCrop  ;
-    schema:identifier "C3A65223-4A74-461D-AE47-0E8F7223E0C2" ;
-    schema:isPartOf psm:203 ;
-    schema:name "Alfalfa"@de,
-        "alfalfa"@fr,
-        "Alfalfa"@it ;
-    schema:version 0 ;
-    :cultivationType cultivationtype:68 .
 
 psm:75 a :PlantProtectionCrop  ;
     schema:identifier "8A00630A-32FC-4B5A-8171-EC0F41D39F48" ;
