@@ -4703,6 +4703,13 @@ cultivationtype:1292 a :CultivationType ;
     schema:name "Hecken und Feldgehölz mit Krautsaum"@de ;
     rdfs:subClassOf cultivationtype:852 .
 
+cultivationtype:1293 a :CultivationType ;
+    schema:name "Zuckerhut (Nicht-Convenience)"@de,
+        "Chicorée pain de sucre (non-convenience)"@fr,
+        "Cicoria pan di zucchero (non-convenience)"@it ;
+    rdfs:subClassOf cultivationtype:142 ;
+    owl:disjointWith cultivationtype:1131 .
+
 # ==============================================================================
 # DISJOINTNESS OF CULTIVATION TYPES
 # ==============================================================================
