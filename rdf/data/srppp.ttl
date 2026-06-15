@@ -575,7 +575,7 @@ psm:115 a :PlantProtectionCrop  ;
     :cultivationType cultivationtype:115 .
 
 psm:116 a :PlantProtectionCrop  ;
-    schema:identifier "1F03DDC0-19CF-48F1-BAB8-61CA4CEF24CF" ;
+    schema:identifier "E77825CE-5021-479E-B6C1-8F55766E497B" ;
     schema:isPartOf psm:316 ;
     schema:name "Wiesen und Weiden"@de,
         "Prairies et pâturages"@fr,
@@ -611,7 +611,7 @@ psm:119 a :PlantProtectionCrop  ;
     :cultivationType cultivationtype:119 .
 
 psm:12 a :PlantProtectionCrop  ;
-    schema:identifier "9BB00FC5-181F-4F3F-94C8-E4141143F44A" ;
+    schema:identifier "EEC471CB-C715-489D-B3E5-2A0D37DC2A90" ;
     schema:isPartOf psm:50 ;
     schema:name "Aprikose"@de,
         "abricotier"@fr,
@@ -802,7 +802,7 @@ psm:138 a :PlantProtectionCrop  ;
     :cultivationType cultivationtype:138 .
 
 psm:139 a :PlantProtectionCrop  ;
-    schema:identifier "B5FFA375-D9A5-4FD1-9DCF-76F230FEA725" ;
+    schema:identifier "BFDDCB65-6E46-47E1-90B1-A998D5BD0546" ;
     schema:isPartOf psm:48 ;
     schema:name "Asia-Salate (Brassicaceae)"@de,
         "salades Asia (Brassicaceae)"@fr,
@@ -811,7 +811,7 @@ psm:139 a :PlantProtectionCrop  ;
     :cultivationType cultivationtype:139 .
 
 psm:14 a :PlantProtectionCrop  ;
-    schema:identifier "A519A894-B754-44D1-A032-155F57B0CBFE" ;
+    schema:identifier "068FF636-982B-4F95-A1C1-93E3DC0B7162" ;
     schema:isPartOf psm:67 ;
     schema:name "Liebstöckel"@de,
         "livèche"@fr,
@@ -1137,7 +1137,7 @@ psm:171 a :PlantProtectionCrop  ;
     :cultivationType cultivationtype:171 .
 
 psm:172 a :PlantProtectionCrop  ;
-    schema:identifier "4C8B56DD-9606-453C-9B14-C9C6309E87FA" ;
+    schema:identifier "AB4A906B-73C5-4D7D-AA74-EC42983BE679" ;
     schema:name "Lorbeer"@de,
         "LURNO"@en,
         "Laurier"@fr,
@@ -1172,7 +1172,7 @@ psm:175 a :PlantProtectionCrop  ;
     :cultivationType cultivationtype:175 .
 
 psm:176 a :PlantProtectionCrop  ;
-    schema:identifier "4D5AF334-29F4-4854-A14F-4457A8A87D97" ;
+    schema:identifier "0FC26BDD-5CD1-4321-93D0-6AB24FA678B5" ;
     schema:name "Lager- und Produktionsräume allg."@de,
         "Lager- und Produktionsräume allg."@en,
         "Lager- und Produktionsräume allg."@fr,
@@ -1377,7 +1377,7 @@ psm:196 a :PlantProtectionCrop  ;
     :cultivationType cultivationtype:1063 .
 
 psm:197 a :PlantProtectionCrop  ;
-    schema:identifier "625EA905-7C3D-4BCC-8551-BC1CB14FF647" ;
+    schema:identifier "F4273CE5-EC2B-42A3-89FC-C5F63EF425D2" ;
     schema:isPartOf psm:73 ;
     schema:name "Gerste"@de,
         "Orge"@fr,
@@ -1477,7 +1477,7 @@ psm:205 a :PlantProtectionCrop  ;
     :cultivationType cultivationtype:205 .
 
 psm:206 a :PlantProtectionCrop  ;
-    schema:identifier "269900C0-F407-4AFA-B3F2-D857EDACB733" ;
+    schema:identifier "A707FD99-918E-49B2-ACA2-0393372D8C7C" ;
     schema:name "Spitzwegerich"@de,
         "plantago lanceolata"@en,
         "plantain lancéolé"@fr,
@@ -1621,7 +1621,7 @@ psm:22 a :PlantProtectionCrop  ;
     :cultivationType cultivationtype:468 .
 
 psm:220 a :PlantProtectionCrop  ;
-    schema:identifier "F9426E5C-7D4D-45E5-80DA-64BB12336CA4" ;
+    schema:identifier "BC86A080-EDBD-4BBC-A36A-BE41037227C4" ;
     schema:isPartOf psm:27,
         psm:316 ;
     schema:name "Mais"@de,
@@ -1649,7 +1649,7 @@ psm:222 a :PlantProtectionCrop  ;
     :cultivationType cultivationtype:222 .
 
 psm:223 a :PlantProtectionCrop  ;
-    schema:identifier "CCCD6417-ED96-4A46-82EF-2EC848F719A7" ;
+    schema:identifier "9230C798-B1D0-4342-947C-C7A0988F416E" ;
     schema:isPartOf psm:160 ;
     schema:name "Erdbeere"@de,
         "fraise"@fr,
@@ -1929,7 +1929,7 @@ psm:250 a :PlantProtectionCrop  ;
     :cultivationType cultivationtype:250 .
 
 psm:251 a :PlantProtectionCrop  ;
-    schema:identifier "689F7BE7-DA1E-49B6-95D5-E002E210E7B9" ;
+    schema:identifier "B9DC95B4-DD22-49F9-9048-4B37F8DD8F8F" ;
     schema:isPartOf psm:96 ;
     schema:name "Kartoffeln zur Pflanzgutproduktion"@de,
         "pommes de terre pour la production de plants"@fr,
@@ -2020,7 +2020,7 @@ psm:26 a :PlantProtectionCrop  ;
     :cultivationType cultivationtype:26 .
 
 psm:260 a :PlantProtectionCrop  ;
-    schema:identifier "9AA59D6B-D6AA-49BE-8BF8-A7A53BE54759" ;
+    schema:identifier "707A99EF-0290-4CA9-9D90-8ADFDAA43330" ;
     schema:isPartOf psm:209 ;
     schema:name "Nüsslisalat"@de,
         "mâche, rampon"@fr,
@@ -2029,7 +2029,7 @@ psm:260 a :PlantProtectionCrop  ;
     :cultivationType cultivationtype:260 .
 
 psm:261 a :PlantProtectionCrop  ;
-    schema:identifier "A1B43C0A-8077-47D4-9171-8E6B2C9A95C4" ;
+    schema:identifier "38A60506-8FFA-4E1C-92AD-70A25987C64C" ;
     schema:name "Rosenwurz"@de,
         "Rhodiola rosea"@en,
         "Orpin rose"@fr,
@@ -2038,7 +2038,7 @@ psm:261 a :PlantProtectionCrop  ;
     :cultivationType cultivationtype:261 .
 
 psm:262 a :PlantProtectionCrop  ;
-    schema:identifier "9650E36A-38F4-4375-9594-25785BACE1DC" ;
+    schema:identifier "D1C8A572-3D39-46F7-BEAC-10B485FE4FC3" ;
     schema:name "Traubensilberkerze"@de,
         "actaea racemosa"@en,
         "actée à grappe"@fr,
@@ -2247,7 +2247,7 @@ psm:282 a :PlantProtectionCrop  ;
     :cultivationType cultivationtype:282 .
 
 psm:283 a :PlantProtectionCrop  ;
-    schema:identifier "CF9B4B3C-DCDC-4E2E-A613-D784936842D2" ;
+    schema:identifier "ABA3C163-EFDF-4B91-9F61-8380B6DDE0A6" ;
     schema:isPartOf psm:50 ;
     schema:name "Kirsche"@de,
         "cerisier"@fr,
@@ -2256,7 +2256,7 @@ psm:283 a :PlantProtectionCrop  ;
     :cultivationType cultivationtype:704 .
 
 psm:284 a :PlantProtectionCrop  ;
-    schema:identifier "E36FADB4-A022-42A0-81CF-F041CABB93A4" ;
+    schema:identifier "5C0E6310-52CD-4368-9057-135822C019E6" ;
     schema:isPartOf psm:64 ;
     schema:name "Frässaaten"@de,
         "semis après travail superficiel"@fr,
@@ -2273,11 +2273,11 @@ psm:285 a :PlantProtectionCrop  ;
     :cultivationType cultivationtype:5 .
 
 psm:286 a :PlantProtectionCrop  ;
-    schema:identifier "E58E502E-BECD-44CB-96A2-3A6771D8A7B7" ;
+    schema:identifier "BD424265-B4C9-4410-AB7E-982930129FAE" ;
     schema:isPartOf psm:316 ;
     schema:name "Raps"@de,
         "Colza"@fr,
-        "Colza"@it ;
+        "colza"@it ;
     schema:version 0 ;
     :cultivationType cultivationtype:494 .
 
@@ -2351,7 +2351,7 @@ psm:293 a :PlantProtectionCrop  ;
     :cultivationType cube:Undefined .
 
 psm:294 a :PlantProtectionCrop  ;
-    schema:identifier "71D9FB13-5AE4-42C3-9F84-956B16C379C1" ;
+    schema:identifier "B4368C0E-9129-4C6C-A752-747D00073ADF" ;
     schema:name "Kerbelrübe"@de,
         "Cerfeuil tubéreux"@fr,
         "Cerfoglio bulboso"@it ;
@@ -2691,7 +2691,7 @@ psm:327 a :PlantProtectionCrop  ;
     :cultivationType cultivationtype:327 .
 
 psm:328 a :PlantProtectionCrop  ;
-    schema:identifier "A4BC1F92-959A-4449-A039-B98E3ABCD9B1" ;
+    schema:identifier "BC3BA289-5090-487A-A2FE-3B0A0FDE4A1B" ;
     schema:isPartOf psm:103 ;
     schema:name "Schnittsalat"@de,
         "laitue à tondre"@fr,
@@ -2708,7 +2708,7 @@ psm:329 a :PlantProtectionCrop  ;
     :cultivationType cultivationtype:329 .
 
 psm:33 a :PlantProtectionCrop  ;
-    schema:identifier "309E5D09-3084-40C6-88F2-D4A14345136C" ;
+    schema:identifier "6C44D265-956D-457C-B395-71C81B327416" ;
     schema:isPartOf psm:62 ;
     schema:name "Baldrian"@de,
         "Valerian"@en,
@@ -2852,7 +2852,7 @@ psm:40 a :PlantProtectionCrop  ;
     :cultivationType cultivationtype:40 .
 
 psm:41 a :PlantProtectionCrop  ;
-    schema:identifier "FA0F7C48-BF78-49B0-9046-FBB5ABB4BF75" ;
+    schema:identifier "9CBD7DB6-38F5-4C41-952D-72F253C88809" ;
     schema:isPartOf psm:309 ;
     schema:name "Birne / Nashi"@de,
         "poirier / nashi"@fr,
@@ -2941,7 +2941,7 @@ psm:5 a :PlantProtectionCrop  ;
     :cultivationType cultivationtype:522 .
 
 psm:50 a :PlantProtectionCrop  ;
-    schema:identifier "CA722B7E-8F16-4502-8139-C33F749545D4" ;
+    schema:identifier "01D7815D-B309-4ECF-B172-DA38B80C8732" ;
     schema:isPartOf psm:61 ;
     schema:name "Steinobst"@de,
         "fruits à noyaux"@fr,
@@ -3122,7 +3122,7 @@ psm:68 a :PlantProtectionCrop  ;
     :cultivationType cultivationtype:68 .
 
 psm:69 a :PlantProtectionCrop  ;
-    schema:identifier "CA9B7EDC-8626-4E01-B979-4856CFA9893E" ;
+    schema:identifier "DDAE7B47-8561-44B4-BA3A-F9855E30BB54" ;
     schema:isPartOf psm:160 ;
     schema:name "Mini-Kiwi"@de,
         "mini-Kiwi (Kiwaï)"@fr,
@@ -3158,7 +3158,7 @@ psm:71 a :PlantProtectionCrop  ;
     :cultivationType cultivationtype:491 .
 
 psm:72 a :PlantProtectionCrop  ;
-    schema:identifier "D40E1405-757C-4E3D-B26F-07D5F2251565" ;
+    schema:identifier "4D46051A-2DE7-42B1-8FB9-5DC0B007A26E" ;
     schema:isPartOf psm:329 ;
     schema:name "Bäume und Sträucher (ausserhalb Forst)"@de,
         "arbres et arbustes (hors fôret)"@fr,
@@ -3268,7 +3268,7 @@ psm:82 a :PlantProtectionCrop  ;
     :cultivationType cultivationtype:535 .
 
 psm:83 a :PlantProtectionCrop  ;
-    schema:identifier "E981BFA6-288D-4EA6-B81B-4F610611EB36" ;
+    schema:identifier "79A5CFAD-0AB3-41EB-8C69-E260DCD2DEE6" ;
     schema:name "Medizinalkräuter"@de,
         "plantes médicinales"@fr,
         "erbe medicinali"@it ;
@@ -3312,7 +3312,7 @@ psm:87 a :PlantProtectionCrop  ;
     :cultivationType cultivationtype:87 .
 
 psm:88 a :PlantProtectionCrop  ;
-    schema:identifier "92CAB39E-ACC3-44DC-9EF3-0D27B8600E83" ;
+    schema:identifier "4FC4A2B5-73DC-4C30-940C-813BBB4DFD10" ;
     schema:isPartOf psm:96 ;
     schema:name "Speise- und Futterkartoffeln"@de,
         "pommes de terre de consommation et fourragère"@fr,
@@ -3330,7 +3330,7 @@ psm:89 a :PlantProtectionCrop  ;
     :cultivationType cultivationtype:89 .
 
 psm:9 a :PlantProtectionCrop  ;
-    schema:identifier "A2D0B83F-9BB5-477C-AD44-24B31F2EF276" ;
+    schema:identifier "B03E1EE3-18EE-4DC9-A98F-D528894885EB" ;
     schema:isPartOf psm:62 ;
     schema:name "Speisepilze"@de,
         "champignons comestibles"@fr,
@@ -3391,7 +3391,7 @@ psm:95 a :PlantProtectionCrop  ;
     :cultivationType cultivationtype:95 .
 
 psm:96 a :PlantProtectionCrop  ;
-    schema:identifier "B4D50F5E-6028-493D-9B95-85CAE5DADF06" ;
+    schema:identifier "575A1469-EF59-4B4E-96C3-38FC0CAEF637" ;
     schema:isPartOf psm:27,
         psm:316 ;
     schema:name "Kartoffeln"@de,
