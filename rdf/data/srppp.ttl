@@ -1386,7 +1386,7 @@ psm:199 a :PlantProtectionCrop  ;
 
 psm:2 a :PlantProtectionCrop  ;
     schema:identifier "0106A8DF-6CDF-4E18-8F46-3D9E1D52D0E5" ;
-    schema:partOf psm:134 ;
+    schema:isPartOf psm:134 ;
     schema:name "Baby-Leaf"@de,
         "Baby-Leaf"@fr,
         "Baby-Leaf"@it ;
@@ -2759,7 +2759,7 @@ psm:336 a :PlantProtectionCrop  ;
 
 psm:337 a :PlantProtectionCrop ;
     schema:identifier "0FEBE55E-236F-483E-AE05-88A35B181A55" ;
-    schema:partOf psm:134 ;
+    schema:isPartOf psm:134 ;
     schema:name "Amaryllidaceae"@de,
         "amaryllidaceae"@fr,
         "Amaryllidaceae"@en,
@@ -2779,7 +2779,7 @@ psm:338 a :PlantProtectionCrop ;
 
 psm:339 a :PlantProtectionCrop ;
     schema:identifier "855980B6-D3CA-46B5-86C5-12E9847344B5" ;
-    schema:partOf psm:134 ;
+    schema:isPartOf psm:134 ;
     schema:name "Windengewächse (Convolvulaceae)"@de,
         "convolvulacées (Convolvulaceae)"@fr,
         "Convolvulaceae"@en,
