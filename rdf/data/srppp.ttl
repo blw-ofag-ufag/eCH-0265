@@ -511,7 +511,7 @@ psm:11 a :PlantProtectionCrop  ;
         "Lin"@fr,
         "Lino"@it ;
     schema:version 0 ;
-    :cultivationType cultivationtype:534.
+    :cultivationType cultivationtype:534 .
 
 psm:110 a :PlantProtectionCrop  ;
     schema:identifier "1BFC9694-C7DC-4D74-84B2-1418AB94A8BA" ;
