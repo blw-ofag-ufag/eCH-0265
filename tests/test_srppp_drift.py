@@ -91,33 +91,29 @@ def test_psmv_drift(srppp_graph, core_graph):
     if missing_hierarchy:
         md_lines.append(f"### ⚠️ Missing Hierarchy in RDF ({len(missing_hierarchy)})")
         md_lines.append("Found in CSV, not in RDF:")
-        for m_id, m_parent in list(missing_hierarchy)[:10]:
+        for m_id, m_parent in list(missing_hierarchy):
             md_lines.append(f"- **ID:** `{m_id}` | **Parent ID:** `{m_parent}`")
-        if len(missing_hierarchy) > 10: md_lines.append(f"- *...and {len(missing_hierarchy) - 10} more.*")
         md_lines.append("")
 
     if extra_hierarchy:
         md_lines.append(f"### 🗑️ Extra Hierarchy in RDF ({len(extra_hierarchy)})")
         md_lines.append("Found in RDF, not in CSV:")
-        for e_id, e_parent in list(extra_hierarchy)[:10]:
+        for e_id, e_parent in list(extra_hierarchy):
             md_lines.append(f"- **ID:** `{e_id}` | **Parent ID:** `{e_parent}`")
-        if len(extra_hierarchy) > 10: md_lines.append(f"- *...and {len(extra_hierarchy) - 10} more.*")
         md_lines.append("")
 
     if missing_names:
         md_lines.append(f"### 📝 Missing Names in RDF ({len(missing_names)})")
         md_lines.append("Found in CSV, not in RDF:")
-        for m_id, m_lang, m_val in list(missing_names)[:10]:
+        for m_id, m_lang, m_val in list(missing_names):
             md_lines.append(f"- **ID:** `{m_id}` | **Lang:** `{m_lang}` | **Value:** `{m_val}`")
-        if len(missing_names) > 10: md_lines.append(f"- *...and {len(missing_names) - 10} more.*")
         md_lines.append("")
 
     if extra_names:
         md_lines.append(f"### 🗑️ Extra Names in RDF ({len(extra_names)})")
         md_lines.append("Found in RDF, not in CSV:")
-        for e_id, e_lang, e_val in list(extra_names)[:10]:
+        for e_id, e_lang, e_val in list(extra_names):
             md_lines.append(f"- **ID:** `{e_id}` | **Lang:** `{e_lang}` | **Value:** `{e_val}`")
-        if len(extra_names) > 10: md_lines.append(f"- *...and {len(extra_names) - 10} more.*")
         md_lines.append("")
 
     report_md = "\n".join(md_lines)
