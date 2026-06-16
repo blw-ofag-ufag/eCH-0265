@@ -987,9 +987,9 @@ cultivationtype:187 a :CultivationType ;
     rdfs:subClassOf cultivationtype:400 .
 
 cultivationtype:188 a :CultivationType ;
-    schema:name "Liliengewächse (Liliaceae)"@de,
-        "liliacées"@fr,
-        "Liliacee"@it ;
+    schema:name "Amaryllisgewächse (Amaryllidaceae)"@de,
+        "Amaryllidacées (Amaryllidaceae)"@fr,
+        "Amarillidacee (Amaryllidaceae)"@it ;
     rdfs:subClassOf cultivationtype:22 .
 
 cultivationtype:189 a :CultivationType ;
