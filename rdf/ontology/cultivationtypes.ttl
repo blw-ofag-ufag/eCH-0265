@@ -1704,6 +1704,15 @@ cultivationtype:335 a :CultivationType ;
         "Peperone"@it ;
     rdfs:subClassOf cultivationtype:175 .
 
+cultivationtype:337 a :CultivationType ;
+    schema:name "Amaryllisgewächse"@de ;
+    rdfs:subClassOf cultivationtype:22 .
+
+cultivationtype:339 a :CultivationType ;
+    schema:name "Windengewächse"@de,
+        "convolvulacées"@fr ;
+    rdfs:subClassOf cultivationtype:35 .
+
 cultivationtype:400 a :CultivationType ;
     schema:name "Baby-Leaf"@de,
         "Baby-Leaf"@fr,
@@ -2260,6 +2269,10 @@ cultivationtype:542 a :CultivationType ;
         "millet"@en,
         "Millet"@fr,
         "Miglio"@it ;
+    schema:alternateName "Rispenhirse"@de,
+        "Echte Hirse"@de,
+        "Prosohirse"@de,
+        "Baraga"@de ;
     rdfs:subClassOf cultivationtype:1033 .
 
 cultivationtype:543 a :CultivationType ;

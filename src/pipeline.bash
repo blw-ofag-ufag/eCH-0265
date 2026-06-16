@@ -15,6 +15,7 @@ python src/python/rdf-processing.py \
 
 
 echo "Merge all data into one graph for subsequent LINDAS upload"
+rm -f rdf/processed/graph.ttl
 python src/python/rdf-processing.py \
   --input rdf/ontology/*.ttl rdf/data/*.ttl rdf/shape/*.ttl \
   --output rdf/processed/graph.ttl \
