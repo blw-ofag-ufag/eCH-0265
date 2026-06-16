@@ -257,12 +257,6 @@ cultivationtype:32 a :CultivationType ;
         "Cetrioli"@it ;
     rdfs:subClassOf cultivationtype:235 .
 
-cultivationtype:37 a :CultivationType ;
-    schema:name "Ysop"@de,
-        "Hysope"@fr,
-        "Issopo"@it ;
-    rdfs:subClassOf cultivationtype:67 .
-
 cultivationtype:33 a :CultivationType ;
     schema:name "Baldrian"@de,
         "Valerian"@en,
