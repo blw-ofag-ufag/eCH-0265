@@ -86,7 +86,8 @@ cultivationtype:4 a :CultivationType ;
         "Vignobles"@fr,
         "Vigna"@it,
         "Vines"@en ;
-    schema:alternateName "Weinbau"@de ;
+    schema:alternateName "Weinbau"@de ,
+        "Weinreben"@de;
     rdfs:subClassOf cultivationtype:465 ;
     owl:unionOf ( cultivationtype:701 cultivationtype:735 ) .
 
@@ -96,13 +97,14 @@ cultivationtype:5 a :CultivationType ;
         "Frutteti"@it ;
     schema:alternateName "Obstbau"@de,
         "Allgemeiner Obstbau"@de ;
-    rdfs:subClassOf cultivationtype:465 .
+    rdfs:subClassOf cultivationtype:465,
+        cultivationtype:467 .
 
 cultivationtype:6 a :CultivationType ;
     schema:name "Übrige Dauerkulturen"@de,
         "Autres cultures pérennes"@fr,
         "Altre colture perenni"@it ;
-    rdfs:subClassOf :Cultivation .
+    rdfs:subClassOf cultivationtype:467 .
 
 cultivationtype:7 a :CultivationType ;
     schema:name "Geschützter Anbau"@de,
@@ -1846,8 +1848,7 @@ cultivationtype:466 a :CultivationType ;
 
 cultivationtype:467 a :CultivationType ;
     schema:name "Dauerkulturen"@de ;
-    rdfs:subClassOf :Cultivation ;
-    owl:unionOf ( cultivationtype:797 cultivationtype:798 ) .
+    rdfs:subClassOf :Cultivation .
 
 cultivationtype:468 a :CultivationType ;
     schema:name "Ackerbohne"@de,
