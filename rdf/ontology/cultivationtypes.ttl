@@ -86,7 +86,8 @@ cultivationtype:4 a :CultivationType ;
         "Vignobles"@fr,
         "Vigna"@it,
         "Vines"@en ;
-    schema:alternateName "Weinbau"@de ;
+    schema:alternateName "Weinbau"@de ,
+        "Weinreben"@de;
     rdfs:subClassOf cultivationtype:465 ;
     owl:unionOf ( cultivationtype:701 cultivationtype:735 ) .
 
@@ -96,13 +97,14 @@ cultivationtype:5 a :CultivationType ;
         "Frutteti"@it ;
     schema:alternateName "Obstbau"@de,
         "Allgemeiner Obstbau"@de ;
-    rdfs:subClassOf cultivationtype:465 .
+    rdfs:subClassOf cultivationtype:465,
+        cultivationtype:467 .
 
 cultivationtype:6 a :CultivationType ;
     schema:name "Übrige Dauerkulturen"@de,
         "Autres cultures pérennes"@fr,
         "Altre colture perenni"@it ;
-    rdfs:subClassOf :Cultivation .
+    rdfs:subClassOf cultivationtype:467 .
 
 cultivationtype:7 a :CultivationType ;
     schema:name "Geschützter Anbau"@de,
@@ -256,12 +258,6 @@ cultivationtype:32 a :CultivationType ;
         "concombre"@fr,
         "Cetrioli"@it ;
     rdfs:subClassOf cultivationtype:235 .
-
-cultivationtype:37 a :CultivationType ;
-    schema:name "Ysop"@de,
-        "Hysope"@fr,
-        "Issopo"@it ;
-    rdfs:subClassOf cultivationtype:67 .
 
 cultivationtype:33 a :CultivationType ;
     schema:name "Baldrian"@de,
@@ -991,9 +987,9 @@ cultivationtype:187 a :CultivationType ;
     rdfs:subClassOf cultivationtype:400 .
 
 cultivationtype:188 a :CultivationType ;
-    schema:name "Liliengewächse (Liliaceae)"@de,
-        "liliacées"@fr,
-        "Liliacee"@it ;
+    schema:name "Amaryllisgewächse (Amaryllidaceae)"@de,
+        "Amaryllidacées (Amaryllidaceae)"@fr,
+        "Amarillidacee (Amaryllidaceae)"@it ;
     rdfs:subClassOf cultivationtype:22 .
 
 cultivationtype:189 a :CultivationType ;
@@ -1850,8 +1846,7 @@ cultivationtype:466 a :CultivationType ;
 
 cultivationtype:467 a :CultivationType ;
     schema:name "Dauerkulturen"@de ;
-    rdfs:subClassOf :Cultivation ;
-    owl:unionOf ( cultivationtype:797 cultivationtype:798 ) .
+    rdfs:subClassOf :Cultivation .
 
 cultivationtype:468 a :CultivationType ;
     schema:name "Ackerbohne"@de,
@@ -3478,11 +3473,15 @@ cultivationtype:1042 a :CultivationType ;
 
 cultivationtype:1043 a :CultivationType ;
     schema:name "Kohlrabi (geschützter Anbau)"@de, "Chou-rave (culture protégée)"@fr, "Cavolo rapa (coltura protetta)"@it ;
-    owl:intersectionOf ( cultivationtype:86 cultivationtype:23 ) .
+    rdfs:subClassOf cultivationtype:86,
+        cultivationtype:23 ;
+    owl:disjointWith cultivationtype:1296 .
 
 cultivationtype:1044 a :CultivationType ;
     schema:name "Verarbeitungskohlrabi"@de, "Chou-rave d'industrie"@fr, "Cavolo rapa da industria"@it ;
-    owl:intersectionOf ( cultivationtype:86 cultivationtype:546 ) .
+    rdfs:subClassOf cultivationtype:1296,
+        cultivationtype:546 ;
+    owl:disjointWith cultivationtype:1297 .
 
 cultivationtype:1045 a :CultivationType ;
     schema:name "Ölhanf"@de, "Chanvre oléagineux"@fr, "Canapa da olio"@it ;
@@ -3764,7 +3763,9 @@ cultivationtype:1096 a :CultivationType ;
     schema:name "Radicchio und Cicorino für Verarbeitung"@de,
         "Radicchio et cicorino d'industrie"@fr,
         "Radicchio e cicorino da industria"@it ;
-    rdfs:subClassOf cultivationtype:133 .
+    rdfs:subClassOf cultivationtype:133,
+        cultivationtype:546 ; 
+    owl:disjointWith cultivationtype:1298 .
 
 cultivationtype:1097 a :CultivationType ;
     schema:name "Himbeer-Jungpflanzen (Long-Cane)"@de,
@@ -4715,6 +4716,53 @@ cultivationtype:1291 a :CultivationType ;
 cultivationtype:1292 a :CultivationType ;
     schema:name "Hecken und Feldgehölz mit Krautsaum"@de ;
     rdfs:subClassOf cultivationtype:852 .
+
+cultivationtype:1293 a :CultivationType ;
+    schema:name "Zuckerhut (Nicht-Convenience)"@de,
+        "Chicorée pain de sucre (non-convenience)"@fr,
+        "Cicoria pan di zucchero (non-convenience)"@it ;
+    rdfs:subClassOf cultivationtype:142 ;
+    owl:disjointWith cultivationtype:1131 .
+
+cultivationtype:1294 a :CultivationType ;
+    schema:name "Tomaten (Freiland)"@de,
+        "Tomates (pleine terre)"@fr,
+        "Pomodori (pieno campo)"@it ;
+    rdfs:subClassOf cultivationtype:85,
+        cultivationtype:24 ;
+    owl:disjointWith cultivationtype:1141 .
+
+cultivationtype:1295 a :CultivationType ;
+    schema:name "Krautstiel (Freiland)"@de,
+        "Bette à côte (pleine terre)"@fr,
+        "Costa (pieno campo)"@it ;
+    rdfs:subClassOf cultivationtype:76,
+        cultivationtype:24 ;
+    owl:disjointWith cultivationtype:1135 .
+
+cultivationtype:1296 a :CultivationType ;
+    schema:name "Kohlrabi Freiland"@de,
+        "Chou-rave de plein champ"@fr,
+        "Cavolo rapa di pieno campo"@it ;
+    rdfs:subClassOf cultivationtype:86, 
+        cultivationtype:24 ;
+    owl:disjointWith cultivationtype:1043 .
+
+cultivationtype:1297 a :CultivationType ;
+    schema:name "Kohlrabi (nicht für die Verarbeitung)"@de,
+        "Chou-rave (pas pour l'industrie)"@fr,
+        "Cavolo rapa (non da industria)"@it ;
+    rdfs:subClassOf cultivationtype:1296, 
+        cultivationtype:545 ;
+    owl:disjointWith cultivationtype:1044 .
+
+cultivationtype:1298 a :CultivationType ;
+    schema:name "Radicchio und Cicorino (nicht für die Verarbeitung)"@de,
+        "Radicchio et cicorino (pas pour l'industrie)"@fr,
+        "Radicchio e cicorino (non da industria)"@it ;
+    rdfs:subClassOf cultivationtype:133,
+        cultivationtype:24 ; 
+    owl:disjointWith cultivationtype:1096 .
 
 # ==============================================================================
 # DISJOINTNESS OF CULTIVATION TYPES
