@@ -7,7 +7,6 @@ In this project, we propose a unified master data system for crops and crop-rela
 The repository implements a sustainable solution by using a dedicated RDF ontology (crops ontology) and a graph database on LINDAS.
 This approach first connects (or "maps") the various crop terms from the different systems, creating a unified, machine-readable master data system that can be queried centrally.
 This graph not only allows for complex queries across formerly siloed data but also provides the stable, versioned foundation for the long-term, step-by-step harmonization of crop data across the Swiss agricultural sector.
-[Click here to search for crops in the graph.](https://blw-ofag-ufag.github.io/crops/?lang=de&query=Reis)
 
 > [!WARNING]
 > This project is still work in progress.
