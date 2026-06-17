@@ -2742,15 +2742,15 @@ cultivationtype:701 a :CultivationType ;
     owl:disjointWith cultivationtype:735 .
 
 cultivationtype:702 a :CultivationType ;
-    schema:name "Obstanlagen (Äpfel)"@de,
-        "Cultures fruitières (pommes)"@fr,
-        "Frutteto (mele)"@it ;
+    schema:name "Äpfel"@de,
+        "Pommes"@fr,
+        "Mele"@it ;
     rdfs:subClassOf cultivationtype:309 .
 
 cultivationtype:703 a :CultivationType ;
-    schema:name "Obstanlagen (Birnen)"@de,
-        "Cultures fruitières (poires)"@fr,
-        "Frutteto (pere)"@it ;
+    schema:name "Birnen"@de,
+        "Poires"@fr,
+        "Pere"@it ;
     rdfs:subClassOf cultivationtype:41 .
 
 cultivationtype:704 a :CultivationType ;
