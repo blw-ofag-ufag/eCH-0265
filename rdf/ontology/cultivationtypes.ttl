@@ -62,6 +62,7 @@ cultivationtype:1 a :CultivationType ;
         "Superficie coltiva"@it ;
     schema:alternateName "Allg. Feldbau"@de ,
         "Ackerkulturen"@de,
+        "Ackerbau"@de,
         "Domaine app. grande culture"@fr,
         "Grande culture en général"@fr ;
     schema:description "Umfasst Flächen, die im Rahmen der Fruchtfolge für den Anbau von einjährigen oder temporären Kulturen genutzt werden."@de ;
@@ -2573,6 +2574,7 @@ cultivationtype:601 a :CultivationType ;
     schema:name "Kunstwiesen (ohne Weiden)"@de,
         "Prairies artificielles (sans les pâturages)"@fr,
         "Prati artificiali (senza pascoli)"@it ;
+    schema:description "Als Kunstwiese gilt die als Wiese angesäte Fläche, die innerhalb einer Fruchtfolge während mindestens einer Vegetationsperiode bewirtschaftet wird."@de ;
     rdfs:subClassOf cultivationtype:1, cultivationtype:114 .
 
 cultivationtype:602 a :CultivationType ;
@@ -3916,7 +3918,7 @@ cultivationtype:1124 a :CultivationType ;
     schema:name "Frühjahrsschnitt vor Wiesenumbruch"@de,
         "Coupe de printemps avant retournement de la prairie"@fr,
         "Taglio primaverile prima della lavorazione del prato"@it ;
-    rdfs:subClassOf cultivationtype:601 .
+    rdfs:subClassOf cultivationtype:1 .
 
 cultivationtype:1125 a :CultivationType ;
     schema:name "Kabis Lager"@de,
@@ -4049,10 +4051,8 @@ cultivationtype:1146 a :CultivationType ;
     schema:name "Äugstlen"@de,
         "Äugstlen (utilisation automnale)"@fr,
         "Äugstlen (utilizzazione autunnale)"@it ;
-    schema:description "Äugstlen: Entspricht der Herbstnutzung von Kunstwiesen, welche nach einer Hauptkultur angesät wurden."@de,
-        "Äugstlen : Correspond à l'utilisation automnale des prairies artificielles semées après une culture principale."@fr,
-        "Äugstlen: Corrisponde all'utilizzazione autunnale dei prati artificiali seminati dopo una coltura principale."@it ;
-    rdfs:subClassOf cultivationtype:601 .
+    schema:description "Äugstlen ist die Herbstnutzung einer Wiese, welche nach einer Hauptkultur angesät wurden. Weil die Wiese nicht eine ganze Vegetationsperiode lang bewirtschftet wird, zählen Äugstlen nicht zu Kunstwiesen nach Art. 3 Abs. 3 LBV."@de ;
+    rdfs:subClassOf cultivationtype:1 .
 
 cultivationtype:1147 a :CultivationType ;
     schema:name "Herbst- und Mairüben"@de,
