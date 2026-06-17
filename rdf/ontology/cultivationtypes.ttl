@@ -3020,7 +3020,7 @@ cultivationtype:840 a :CultivationType ;
     rdfs:subClassOf cultivationtype:7 .
 
 cultivationtype:847 a :CultivationType ;
-    schema:name "Dauergrünfläche übrige Kulturen in geschütztem Anbau ohne festes Fundament"@de,
+    schema:name "Übrige beitragsberechtigte Kulturen in geschütztem Anbau ohne festes Fundament"@de,
         "Autres cultures sous abri sans fondations permanentes, avec contributions"@fr,
         "Altre colture coltivate al coperto senza fondamenta fisse, con contributi"@it ;
     rdfs:subClassOf cultivationtype:830 .
