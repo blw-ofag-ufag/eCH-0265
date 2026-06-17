@@ -427,7 +427,8 @@ cultivationtype:69 a :CultivationType ;
     schema:name "Mini-Kiwi"@de,
         "mini-Kiwi (Kiwaï)"@fr,
         "Mini-Kiwi"@it ;
-    rdfs:subClassOf cultivationtype:731 .
+    schema:description "Weil der Anbau von Mini-Kiwi agronomisch dem Beerenbau gleicht, wird er dazu gezählt und nicht (wie sonstiger Kiwi) zum Obstbau."@de ;
+    rdfs:subClassOf cultivationtype:705 .
 
 cultivationtype:72 a :CultivationType ;
     schema:name "Bäume und Sträucher (ausserhalb Forst)"@de,
