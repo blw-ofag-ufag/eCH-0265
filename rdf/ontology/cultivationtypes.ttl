@@ -128,9 +128,9 @@ cultivationtype:9 a :CultivationType ;
     rdfs:subClassOf :Cultivation .
 
 cultivationtype:10 a :CultivationType ;
-    schema:name "Übrige Flächen innerhalb der landwirtschaftlichen Nutzfläche"@de,
-        "Autre surface au sein de la surface agricole utile"@fr,
-        "Altre superfici all’interno della superficie agricola utilizzata"@it ;
+    schema:name "Weitere Flächen innerhalb der landwirtschaftlichen Nutzfläche"@de,
+        "Autres surfaces comprises dans la surface agricole utile"@fr,
+        "Altre superfici all’interno della superficie agricola utile"@it ;
     rdfs:subClassOf :Cultivation .
 
 cultivationtype:12 a :CultivationType ;
