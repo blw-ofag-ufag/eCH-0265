@@ -3763,8 +3763,9 @@ cultivationtype:1096 a :CultivationType ;
     schema:name "Radicchio und Cicorino für Verarbeitung"@de,
         "Radicchio et cicorino d'industrie"@fr,
         "Radicchio e cicorino da industria"@it ;
-    rdfs:subClassOf cultivationtype:141 ;
-    owl:disjointWith cultivationtype:133 .
+    rdfs:subClassOf cultivationtype:133,
+        cultivationtype:546 ; 
+    owl:disjointWith cultivationtype:1298 .
 
 cultivationtype:1097 a :CultivationType ;
     schema:name "Himbeer-Jungpflanzen (Long-Cane)"@de,
@@ -4754,6 +4755,14 @@ cultivationtype:1297 a :CultivationType ;
     rdfs:subClassOf cultivationtype:1296, 
         cultivationtype:545 ;
     owl:disjointWith cultivationtype:1044 .
+
+cultivationtype:1298 a :CultivationType ;
+    schema:name "Radicchio und Cicorino (nicht für die Verarbeitung)"@de,
+        "Radicchio et cicorino (pas pour l'industrie)"@fr,
+        "Radicchio e cicorino (non da industria)"@it ;
+    rdfs:subClassOf cultivationtype:133,
+        cultivationtype:24 ; 
+    owl:disjointWith cultivationtype:1096 .
 
 # ==============================================================================
 # DISJOINTNESS OF CULTIVATION TYPES
