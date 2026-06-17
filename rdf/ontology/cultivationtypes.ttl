@@ -498,9 +498,7 @@ cultivationtype:86 a :CultivationType ;
     schema:name "Kohlrabi"@de,
         "colrave"@fr,
         "Cavolo rapa"@it ;
-    rdfs:subClassOf cultivationtype:25 ;
-    owl:disjointWith cultivationtype:1043,
-        cultivationtype:1044 .
+    rdfs:subClassOf cultivationtype:25 .
 
 cultivationtype:87 a :CultivationType ;
     schema:name "Federkohl"@de,
@@ -3475,17 +3473,15 @@ cultivationtype:1042 a :CultivationType ;
 
 cultivationtype:1043 a :CultivationType ;
     schema:name "Kohlrabi (geschützter Anbau)"@de, "Chou-rave (culture protégée)"@fr, "Cavolo rapa (coltura protetta)"@it ;
-    rdfs:subClassOf cultivationtype:25,
+    rdfs:subClassOf cultivationtype:86,
         cultivationtype:23 ;
-    owl:disjointWith cultivationtype:86,
-        cultivationtype:1044 .
+    owl:disjointWith cultivationtype:1296 .
 
 cultivationtype:1044 a :CultivationType ;
     schema:name "Verarbeitungskohlrabi"@de, "Chou-rave d'industrie"@fr, "Cavolo rapa da industria"@it ;
-    rdfs:subClassOf cultivationtype:25,
+    rdfs:subClassOf cultivationtype:1296,
         cultivationtype:546 ;
-    owl:disjointWith cultivationtype:86,
-        cultivationtype:1043 .
+    owl:disjointWith cultivationtype:1297 .
 
 cultivationtype:1045 a :CultivationType ;
     schema:name "Ölhanf"@de, "Chanvre oléagineux"@fr, "Canapa da olio"@it ;
@@ -4742,6 +4738,22 @@ cultivationtype:1295 a :CultivationType ;
     rdfs:subClassOf cultivationtype:76,
         cultivationtype:24 ;
     owl:disjointWith cultivationtype:1135 .
+
+cultivationtype:1296 a :CultivationType ;
+    schema:name "Kohlrabi Freiland"@de,
+        "Chou-rave de plein champ"@fr,
+        "Cavolo rapa di pieno campo"@it ;
+    rdfs:subClassOf cultivationtype:86, 
+        cultivationtype:24 ;
+    owl:disjointWith cultivationtype:1043 .
+
+cultivationtype:1297 a :CultivationType ;
+    schema:name "Kohlrabi (nicht für die Verarbeitung)"@de,
+        "Chou-rave (pas pour l'industrie)"@fr,
+        "Cavolo rapa (non da industria)"@it ;
+    rdfs:subClassOf cultivationtype:1296, 
+        cultivationtype:545 ;
+    owl:disjointWith cultivationtype:1044 .
 
 # ==============================================================================
 # DISJOINTNESS OF CULTIVATION TYPES
