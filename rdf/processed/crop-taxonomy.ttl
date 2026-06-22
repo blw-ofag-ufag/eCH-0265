@@ -1415,7 +1415,7 @@ cultivationtype:123 a owl:Class ;
         "rose hip"@en,
         "cynorhodon"@fr,
         "rosa canina"@it ;
-    rdfs:subClassOf cultivationtype:705 .
+    rdfs:subClassOf cultivationtype:797 .
 
 cultivationtype:1230 a owl:Class ;
     rdfs:label "Sellerie Suppen- 40 Stk/m2 (geschützter Anbau)"@de,
