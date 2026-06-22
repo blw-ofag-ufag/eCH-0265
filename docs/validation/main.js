@@ -349,6 +349,60 @@ async function renderInterface(bindings, container, rawOntologyText, nodeSystems
                 </div>`;
         }
 
+        if (ct.disjointNames.size > 0) {
+            textHTML += `
+                <div class="owl-info disjoint">
+                    <strong>Disjunkt mit:</strong> 
+                    ${Array.from(ct.disjointNames).join(', ')}
+                </div>`;
+        }
+
+        const cultivationUri = 'https://agriculture.ld.admin.ch/crops/Cultivation';
+        const filteredEdges = new Set();
+        if (ct.edges.size > 0) {
+            ct.edges.forEach(edge => {
+                const [source, target] = edge.split('|');
+                if (source !== cultivationUri && target !== cultivationUri) {
+                    filteredEdges.add(edge);
+                }
+            });
+        }
+
+        const focusNodeUri = ct.baseUri;
+        const coreNodes = new Set([focusNodeUri]);
+        let changed = true;
+        while(changed) {
+            changed = false;
+            filteredEdges.forEach(edge => {
+                const [child, parent] = edge.split('|');
+                if (coreNodes.has(child) && !coreNodes.has(parent)) {
+                    coreNodes.add(parent);
+                    changed = true;
+                }
+            });
+        }
+
+        const parentToChildren = {};
+        filteredEdges.forEach(e => {
+            const [child, parent] = e.split('|');
+            if(!parentToChildren[parent]) parentToChildren[parent] = [];
+            parentToChildren[parent].push(child);
+        });
+
+        const MAX_CHILDREN = 6;
+        const childrenOfFocus = parentToChildren[focusNodeUri] || [];
+        const coreChildrenOfFocus = childrenOfFocus.filter(c => coreNodes.has(c));
+        const nonCoreChildrenOfFocus = childrenOfFocus.filter(c => !coreNodes.has(c));
+
+        if (coreChildrenOfFocus.length + nonCoreChildrenOfFocus.length > MAX_CHILDREN) {
+            const childrenNames = childrenOfFocus.map(c => nodeNames[c] || c).sort((a, b) => a.localeCompare(b));
+            textHTML += `
+                <div class="owl-info subclasses">
+                    <strong>Untergruppen:</strong> 
+                    ${childrenNames.join(', ')}
+                </div>`;
+        }
+
         let attrsContainerHTML = `<div class="attributes-container">`;
         
         ct.observations.forEach(obs => {
