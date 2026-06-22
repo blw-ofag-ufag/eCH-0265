@@ -1817,6 +1817,22 @@ cultivationtype:414 a :CultivationType ;
     schema:alternateName "Ökologischen Ausgleichsflächen"@de ;
     rdfs:subClassOf :Cultivation .
 
+cultivationtype:460 a :CultivationType ;
+    schema:name "Saatmais"@de,
+        "Semences de maïs"@fr,
+        "Mais da semina"@it ;
+    schema:description "Anbau von Mais (Zea mays) mit dem Ziel der Saatgutproduktion."@de ;
+    rdfs:subClassOf cultivationtype:461 ;
+    :botanicalPlant taxon:ZEAMX .
+
+cultivationtype:461 a :CultivationType ;
+    schema:name "Körnermais"@de,
+        "Maïs grain"@fr,
+        "Mais da granella"@it ;
+    schema:description "Anbau von Mais, bei dem das Hauptziel die Gewinnung der reifen, trockenen Körner ist. Im Gegensatz zum Silo- oder Grünmais wird hier nur der Kolben geerntet und gedroschen. Die Körner werden typischerweise als Futter- oder Lebensmittel sowie für industrielle Zwecke verwendet."@de ;
+    rdfs:subClassOf cultivationtype:497 ;
+    :botanicalPlant taxon:ZEAMX .
+
 cultivationtype:462 a :CultivationType ;
     schema:name "Diverse Kulturen"@de ;
     rdfs:subClassOf cultivationtype:1 .
@@ -2034,11 +2050,8 @@ cultivationtype:507 a :CultivationType ;
     rdfs:subClassOf cultivationtype:1003 .
 
 cultivationtype:508 a :CultivationType ;
-    schema:name "Körnermais"@de,
-        "Maïs grain"@fr,
-        "Mais da granella"@it ;
-    schema:description "Anbau von Mais, bei dem das Hauptziel die Gewinnung der reifen, trockenen Körner ist. Im Gegensatz zum Silo- oder Grünmais wird hier nur der Kolben geerntet und gedroschen. Die Körner werden typischerweise als Futter- oder Lebensmittel sowie für industrielle Zwecke verwendet."@de ;
-    rdfs:subClassOf cultivationtype:497 ;
+    schema:name "Körnermais (ohne Saatmais im Vertragsanbau)"@de ;
+    rdfs:subClassOf cultivationtype:461 ;
     :botanicalPlant taxon:ZEAMX .
 
 cultivationtype:509 a :CultivationType ;
@@ -2110,8 +2123,8 @@ cultivationtype:519 a :CultivationType ;
     schema:name "Saatmais (Vertragsanbau)"@de,
         "Semences de maïs (contrat de culture)"@fr,
         "Mais da semina (coltivazione contrattuale)"@it ;
-    schema:description "Anbau von Mais (Zea mays) mit dem spezifischen Ziel der Saatgutproduktion. Diese Art des Anbaus findet typischerweise auf Basis einer vertraglichen Vereinbarung zwischen Landwirt und Saatgutanbieter statt."@de ;
-    rdfs:subClassOf cultivationtype:497 ;
+    schema:description "Anbau von Mais (Zea mays) mit dem Ziel der Saatgutproduktion. Um Saatmais im Vertragsanbau als solche deklarieren zu können, muss der Bewirtschafter einen Vertrag mit einer Saatzuchtorganisation vorweisen können."@de ;
+    rdfs:subClassOf cultivationtype:460 ;
     :botanicalPlant taxon:ZEAMX .
 
 cultivationtype:520 a :CultivationType ;
