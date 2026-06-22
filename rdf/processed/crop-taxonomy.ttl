@@ -296,7 +296,7 @@ cultivationtype:1035 a owl:Class ;
 
 cultivationtype:1036 a owl:Class ;
     rdfs:label "Aubergine, Erdkultur (geschützter Anbau)"@de ;
-    owl:intersectionOf ( cultivationtype:474 cultivationtype:811 ) .
+    owl:intersectionOf ( cultivationtype:474 cultivationtype:23 ) .
 
 cultivationtype:1037 a owl:Class ;
     rdfs:label "Spargel Bleich"@de,
@@ -514,7 +514,7 @@ cultivationtype:1071 a owl:Class ;
     rdfs:label "Paprika, Bodenkulturen (geschützter Anbau)"@de,
         "Poivron, culture au sol (culture protégée)"@fr,
         "Peperone, coltura su suolo (coltura protetta)"@it ;
-    owl:intersectionOf ( cultivationtype:811 cultivationtype:335 ) .
+    owl:intersectionOf ( cultivationtype:23 cultivationtype:335 ) .
 
 cultivationtype:1072 a owl:Class ;
     rdfs:label "Petersilie, je weiterem Schnitt"@de,
@@ -964,7 +964,7 @@ cultivationtype:1141 a owl:Class ;
     rdfs:label "Tomaten, Bodenkultur (geschützter Anbau)"@de,
         "Tomates, culture au sol (culture protégée)"@fr,
         "Pomodori, coltura su suolo (coltura protetta)"@it ;
-    owl:intersectionOf ( cultivationtype:811 cultivationtype:85 ) .
+    owl:intersectionOf ( cultivationtype:23 cultivationtype:85 ) .
 
 cultivationtype:1142 a owl:Class ;
     rdfs:label "Tomaten, Bodenkultur, hoher Ertrag (geschützter Anbau)"@de,
