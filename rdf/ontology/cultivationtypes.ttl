@@ -3710,18 +3710,6 @@ cultivationtype:1088 a :CultivationType ;
         "Frutteto a granelli (senza specifica di resa)"@it ;
     rdfs:subClassOf cultivationtype:309 .
 
-cultivationtype:1089 a :CultivationType ;
-    schema:name "Frühkartoffeln"@de,
-        "Pommes de terre hâtives"@fr,
-        "Patate novelle"@it ;
-    rdfs:subClassOf cultivationtype:524 .
-
-cultivationtype:1090 a :CultivationType ;
-    schema:name "Speise- und Verarbeitungskartoffeln"@de,
-        "Pommes de terre de consommation et d'industrie"@fr,
-        "Patate da consumo e da industria"@it ;
-    rdfs:subClassOf cultivationtype:524 .
-
 cultivationtype:1091 a :CultivationType ;
     schema:name "Pfefferminze"@de,
         "Menthe poivrée"@fr,
@@ -4763,6 +4751,77 @@ cultivationtype:1298 a :CultivationType ;
     rdfs:subClassOf cultivationtype:133,
         cultivationtype:24 ; 
     owl:disjointWith cultivationtype:1096 .
+
+cultivationtype:1304 a :CultivationType ;
+    schema:name "Speise- und Verarbeitungskartoffeln (Gruppe a)"@de ,
+        "Pommes de terre de consommation et d'industrie (groupe a)"@fr ,
+        "Patate da consumo e da industria (gruppo a)"@it ;
+    rdfs:subClassOf cultivationtype:410 .
+
+cultivationtype:1305 a :CultivationType ;
+    schema:name "Speise- und Verarbeitungskartoffeln (Gruppe b)"@de ,
+        "Pommes de terre de consommation et d'industrie (groupe b)"@fr ,
+        "Patate da consumo e da industria (gruppo b)"@it ;
+    rdfs:subClassOf cultivationtype:410 .
+
+cultivationtype:1306 a :CultivationType ;
+    schema:name "Speise- und Verarbeitungskartoffeln (Gruppe c)"@de ,
+        "Pommes de terre de consommation et d'industrie (groupe c)"@fr ,
+        "Patate da consumo e da industria (gruppo c)"@it ;
+    rdfs:subClassOf cultivationtype:410 .
+
+cultivationtype:1307 a :CultivationType ;
+    schema:name "Frühkartoffeln (Gruppe a)"@de ,
+        "Pommes de terre hâtives (groupe a)"@fr ,
+        "Patate novelle (gruppo a)"@it ;
+    rdfs:subClassOf cultivationtype:410 .
+
+cultivationtype:1308 a :CultivationType ;
+    schema:name "Frühkartoffeln (Gruppe b)"@de ,
+        "Pommes de terre hâtives (groupe b)"@fr ,
+        "Patate novelle (gruppo b)"@it ;
+    rdfs:subClassOf cultivationtype:410 .
+
+cultivationtype:1309 a :CultivationType ;
+    schema:name "Frühkartoffeln (Gruppe c)"@de ,
+        "Pommes de terre hâtives (groupe c)"@fr ,
+        "Patate novelle (gruppo c)"@it ;
+    rdfs:subClassOf cultivationtype:410 .
+
+cultivationtype:1310 a :CultivationType ;
+    schema:name "Pflanzkartoffeln (Gruppe a)"@de ,
+        "Plants de pommes de terre (groupe a)"@fr ,
+        "Tuberi-seme di patate (gruppo a)"@it ;
+    rdfs:subClassOf cultivationtype:410 .
+
+cultivationtype:1311 a :CultivationType ;
+    schema:name "Pflanzkartoffeln (Gruppe b)"@de ,
+        "Plants de pommes de terre (groupe b)"@fr ,
+        "Tuberi-seme di patate (gruppo b)"@it ;
+    rdfs:subClassOf cultivationtype:410 .
+
+cultivationtype:1312 a :CultivationType ;
+    schema:name "Pflanzkartoffeln (Gruppe c)"@de ,
+        "Plants de pommes de terre (groupe c)"@fr ,
+        "Tuberi-seme di patate (gruppo c)"@it ;
+    rdfs:subClassOf cultivationtype:410 .
+
+
+# ==============================================================================
+# DISJOINTNESS OF POTATO TYPES
+# ==============================================================================
+[] a owl:AllDisjointClasses ;
+    owl:members (
+        cultivationtype:1304
+        cultivationtype:1305
+        cultivationtype:1306
+        cultivationtype:1307
+        cultivationtype:1308
+        cultivationtype:1309
+        cultivationtype:1310
+        cultivationtype:1311
+        cultivationtype:1312
+    ) .
 
 # ==============================================================================
 # DISJOINTNESS OF CULTIVATION TYPES
