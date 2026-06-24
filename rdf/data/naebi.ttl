@@ -295,6 +295,7 @@ naebi:ObservationSet a cube:ObservationSet ;
         naebi:311,
         naebi:312,
         naebi:313,
+        naebi:314,
         naebi:32,
         naebi:33,
         naebi:34,
@@ -3800,3 +3801,14 @@ naebi:99 a :NutrientBalanceCrop  ;
     :cultivationCategory cultivationtype:1 ;
     :cultivationSubCategory cultivationtype:414 ;
     :cultivationType cultivationtype:1292 .
+
+naebi:314 a :NutrientBalanceCrop ;
+    schema:identifier "CROP_CHINKV" ;
+    schema:name "Chinakohl, Verarbeitung"@de ;
+    :K2O 200.0 ;
+    :Mg 10.0 ;
+    :N2 160.0 ;
+    :P2O5 60.0 ;
+    :cultivationCategory cultivationtype:465 ;
+    :cultivationSubCategory cultivationtype:24 ;
+    :cultivationType cultivationtype:1313 .

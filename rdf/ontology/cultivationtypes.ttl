@@ -4814,7 +4814,12 @@ cultivationtype:1312 a :CultivationType ;
         "Tuberi-seme di patate (gruppo c)"@it ;
     rdfs:subClassOf cultivationtype:411 .
 
-
+cultivationtype:1313 a :CultivationType ;
+    schema:name "Chinakohl, Verarbeitung"@de,
+        "Chou de Chine d'industrie"@fr,
+        "Cavolo cinese da industria"@it ;
+    rdfs:subClassOf cultivationtype:475,
+        cultivationtype:546 .
 # ==============================================================================
 # DISJOINTNESS OF POTATO TYPES
 # ==============================================================================
