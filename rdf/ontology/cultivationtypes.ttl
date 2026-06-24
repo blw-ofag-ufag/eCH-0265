@@ -3540,7 +3540,7 @@ cultivationtype:1053 a :CultivationType ;
         "Engrais vert légumineuses (légumes de plein champ)"@fr,
             "Sovescio leguminose (ortaggi di pieno campo)"@it ;
     schema:description "Bezeichnet eine Zwischenkultur zur Gründüngung mit Leguminosen auf Feldern, die im Rahmen der Fruchtfolge für den Freilandgemüsebau genutzt werden."@de ;
-    rdfs:subClassOf cultivationtype:15,
+    rdfs:subClassOf cultivationtype:47,
         cultivationtype:24 .
 
 cultivationtype:1055 a :CultivationType ;
@@ -3636,11 +3636,7 @@ cultivationtype:1075 a :CultivationType ;
     schema:name "Erbsen, Kefen"@de,
         "Pois, mange-tout"@fr,
         "Piselli, taccole"@it ;
-    rdfs:subClassOf cultivationtype:15 ;
-    owl:unionOf (
-        cultivationtype:191
-        cultivationtype:1074
-    ) .
+    rdfs:subClassOf cultivationtype:47, cultivationtype:24 .
 
 cultivationtype:1076 a :CultivationType ;
     schema:name "Verarbeitungserbsen"@de,
@@ -4654,7 +4650,7 @@ cultivationtype:1273 a :CultivationType ;
 
 cultivationtype:1275 a :CultivationType ;
     schema:name "Gründüngung (Leguminosen)"@de ;
-    rdfs:subClassOf cultivationtype:15 .
+    rdfs:subClassOf cultivationtype:47, cultivationtype:24 .
 
 cultivationtype:1277 a :CultivationType ;
     schema:name "Gründüngung (Nichtleguminosen)"@de ;

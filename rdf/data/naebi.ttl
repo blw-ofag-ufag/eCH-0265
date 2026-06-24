@@ -3678,7 +3678,7 @@ naebi:89 a :NutrientBalanceCrop  ;
     :P2O5 0.0 ;
     :cultivationCategory cultivationtype:1 ;
     :cultivationSubCategory cultivationtype:462 ;
-    :cultivationType cultivationtype:1275 .
+    :cultivationType cultivationtype:1053 .
 
 naebi:9 a :NutrientBalanceCrop  ;
     schema:identifier "CROP_ASISAL" ;
