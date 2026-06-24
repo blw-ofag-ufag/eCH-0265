@@ -1252,13 +1252,6 @@ cultivationtype:120 a owl:Class ;
         "Poligonacee"@it ;
     rdfs:subClassOf cultivationtype:22 .
 
-cultivationtype:1204 a owl:Class ;
-    rdfs:label "Nussbäume, 0.01 ha/Baum"@de,
-        "Walnut trees, 0.01 ha/tree"@en,
-        "Noyers, 0.01 ha/arbre"@fr,
-        "Noci, 0.01 ha/albero"@it ;
-    rdfs:subClassOf cultivationtype:922 .
-
 cultivationtype:1206 a owl:Class ;
     rdfs:label "Einjährige Erdbeeren"@de ;
     owl:intersectionOf ( cultivationtype:551 cultivationtype:223 ) .

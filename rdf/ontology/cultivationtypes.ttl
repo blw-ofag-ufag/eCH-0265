@@ -4291,13 +4291,6 @@ cultivationtype:1195 a :CultivationType ;
         "Erbe aromatiche, perenni, piccole"@it ;
     rdfs:subClassOf cultivationtype:1287 .
 
-cultivationtype:1204 a :CultivationType ;
-    schema:name "Nussbäume, 0.01 ha/Baum"@de,
-        "Walnut trees, 0.01 ha/tree"@en,
-        "Noyers, 0.01 ha/arbre"@fr,
-        "Noci, 0.01 ha/albero"@it ;
-    rdfs:subClassOf cultivationtype:922 .
-
 cultivationtype:1206 a :CultivationType ;
     schema:name "Einjährige Erdbeeren"@de ;
     owl:intersectionOf ( cultivationtype:551 cultivationtype:223 ) .

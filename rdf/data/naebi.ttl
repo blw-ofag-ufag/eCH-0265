@@ -1028,7 +1028,7 @@ naebi:152 a :NutrientBalanceCrop  ;
     :P2O5 15.0 ;
     :cultivationCategory cultivationtype:465 ;
     :cultivationSubCategory cultivationtype:414 ;
-    :cultivationType cultivationtype:1204 .
+    :cultivationType cultivationtype:922 .
 
 naebi:153 a :NutrientBalanceCrop  ;
     schema:identifier "CROP_NURFRU" ;
