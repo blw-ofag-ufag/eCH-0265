@@ -488,7 +488,7 @@ cultivationtype:84 a :CultivationType ;
     schema:name "Bodenkohlrabi"@de,
         "rutabaga"@fr,
         "Cavolo navone"@it ;
-    rdfs:subClassOf cultivationtype:115 .
+    rdfs:subClassOf cultivationtype:48 .
 
 cultivationtype:85 a :CultivationType ;
     schema:name "Tomaten"@de,
@@ -500,7 +500,7 @@ cultivationtype:86 a :CultivationType ;
     schema:name "Kohlrabi"@de,
         "colrave"@fr,
         "Cavolo rapa"@it ;
-    rdfs:subClassOf cultivationtype:25 .
+    rdfs:subClassOf cultivationtype:48 .
 
 cultivationtype:87 a :CultivationType ;
     schema:name "Federkohl"@de,
@@ -3489,14 +3489,14 @@ cultivationtype:1042 a :CultivationType ;
 
 cultivationtype:1043 a :CultivationType ;
     schema:name "Kohlrabi (geschützter Anbau)"@de, "Chou-rave (culture protégée)"@fr, "Cavolo rapa (coltura protetta)"@it ;
-    rdfs:subClassOf cultivationtype:86,
+    rdfs:subClassOf cultivationtype:48,
         cultivationtype:23 ;
     owl:disjointWith cultivationtype:1296 .
 
 cultivationtype:1044 a :CultivationType ;
     schema:name "Verarbeitungskohlrabi"@de, "Chou-rave d'industrie"@fr, "Cavolo rapa da industria"@it ;
     rdfs:subClassOf cultivationtype:1296,
-        cultivationtype:546 ;
+        cultivationtype:546;
     owl:disjointWith cultivationtype:1297 .
 
 cultivationtype:1045 a :CultivationType ;
@@ -4744,7 +4744,7 @@ cultivationtype:1296 a :CultivationType ;
     schema:name "Kohlrabi Freiland"@de,
         "Chou-rave de plein champ"@fr,
         "Cavolo rapa di pieno campo"@it ;
-    rdfs:subClassOf cultivationtype:86, 
+    rdfs:subClassOf cultivationtype:48, 
         cultivationtype:24 ;
     owl:disjointWith cultivationtype:1043 .
 
