@@ -3509,19 +3509,19 @@ cultivationtype:1046 a :CultivationType ;
 
 cultivationtype:1047 a :CultivationType ;
     schema:name "Lauch, früh gepflanzt"@de, "Poireau, plantation précoce"@fr, "Porro, piantagione precoce"@it ;
-    rdfs:subClassOf cultivationtype:323 .
+    rdfs:subClassOf cultivationtype:188 .
 
 cultivationtype:1048 a :CultivationType ;
     schema:name "Lauch, spät gepflanzt"@de, "Poireau, plantation tardive"@fr, "Porro, piantagione tardiva"@it ;
-    rdfs:subClassOf cultivationtype:323 .
+    rdfs:subClassOf cultivationtype:188 .
 
 cultivationtype:1049 a :CultivationType ;
     schema:name "Lauch (geschützter Anbau)"@de, "Poireau (culture protégée)"@fr, "Porro (coltura protetta)"@it ;
-    owl:intersectionOf ( cultivationtype:323 cultivationtype:7 ) .
+    owl:intersectionOf ( cultivationtype:188 cultivationtype:7 ) .
 
 cultivationtype:1050 a :CultivationType ;
     schema:name "Lauch, gesät"@de, "Poireau, semé"@fr, "Porro, seminato"@it ;
-    rdfs:subClassOf cultivationtype:323 .
+    rdfs:subClassOf cultivationtype:188 .
 
 cultivationtype:1051 a :CultivationType ;
     schema:name "Lauch, gepflanzt, Überwinterung"@de,
