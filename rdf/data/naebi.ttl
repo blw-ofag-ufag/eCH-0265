@@ -3788,7 +3788,7 @@ naebi:98 a :NutrientBalanceCrop  ;
     :P2O5 15.0 ;
     :cultivationCategory cultivationtype:465 ;
     :cultivationSubCategory cultivationtype:414 ;
-    :cultivationType cultivationtype:1284 .
+    :cultivationType cultivationtype:921 .
 
 naebi:99 a :NutrientBalanceCrop  ;
     schema:identifier "CROP_HFTWB" ;

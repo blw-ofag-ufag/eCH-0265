@@ -9,9 +9,6 @@
 @prefix taxon: <https://agriculture.ld.admin.ch/crops/taxon/> .
 
 [] a owl:AllDisjointClasses ;
-    owl:members ( cultivationtype:1 cultivationtype:4 cultivationtype:5 cultivationtype:6 cultivationtype:7 cultivationtype:8 cultivationtype:9 cultivationtype:10 cultivationtype:12 cultivationtype:13 cultivationtype:20 cultivationtype:21 ) .
-
-[] a owl:AllDisjointClasses ;
     owl:members ( cultivationtype:504 cultivationtype:505 cultivationtype:509 cultivationtype:514 cultivationtype:515 cultivationtype:542 cultivationtype:543 cultivationtype:549 ) .
 
 [] a owl:AllDisjointClasses ;
@@ -97,6 +94,9 @@
 
 [] a owl:AllDisjointClasses ;
     owl:members ( cultivationtype:545 cultivationtype:546 cultivationtype:801 cultivationtype:806 ) .
+
+[] a owl:AllDisjointClasses ;
+    owl:members ( cultivationtype:1 cultivationtype:4 cultivationtype:5 cultivationtype:6 cultivationtype:7 cultivationtype:8 cultivationtype:9 cultivationtype:10 cultivationtype:12 cultivationtype:13 cultivationtype:20 cultivationtype:21 ) .
 
 cultivationtype:1 a owl:Class ;
     rdfs:label "Ackerfläche"@de,
@@ -339,13 +339,17 @@ cultivationtype:1043 a owl:Class ;
     rdfs:label "Kohlrabi (geschützter Anbau)"@de,
         "Chou-rave (culture protégée)"@fr,
         "Cavolo rapa (coltura protetta)"@it ;
-    owl:intersectionOf ( cultivationtype:86 cultivationtype:23 ) .
+    rdfs:subClassOf cultivationtype:23,
+        cultivationtype:86 ;
+    owl:disjointWith cultivationtype:1296 .
 
 cultivationtype:1044 a owl:Class ;
     rdfs:label "Verarbeitungskohlrabi"@de,
         "Chou-rave d'industrie"@fr,
         "Cavolo rapa da industria"@it ;
-    owl:intersectionOf ( cultivationtype:86 cultivationtype:546 ) .
+    rdfs:subClassOf cultivationtype:1296,
+        cultivationtype:546 ;
+    owl:disjointWith cultivationtype:1297 .
 
 cultivationtype:1045 a owl:Class ;
     rdfs:label "Ölhanf"@de,
@@ -672,7 +676,9 @@ cultivationtype:1096 a owl:Class ;
     rdfs:label "Radicchio und Cicorino für Verarbeitung"@de,
         "Radicchio et cicorino d'industrie"@fr,
         "Radicchio e cicorino da industria"@it ;
-    rdfs:subClassOf cultivationtype:133 .
+    rdfs:subClassOf cultivationtype:133,
+        cultivationtype:546 ;
+    owl:disjointWith cultivationtype:1298 .
 
 cultivationtype:1097 a owl:Class ;
     rdfs:label "Himbeer-Jungpflanzen (Long-Cane)"@de,
@@ -1676,13 +1682,6 @@ cultivationtype:1283 a owl:Class ;
         "Lino da olio"@it ;
     rdfs:subClassOf cultivationtype:534 .
 
-cultivationtype:1284 a owl:Class ;
-    rdfs:label "Hochstamm-Obstbäume, 0.01ha/Baum"@de,
-        "Standard fruit trees, 0.01ha/tree"@en,
-        "Arbres fruitiers à haute tige, 0.01ha/arbre"@fr,
-        "Alberi da frutto ad alto fusto, 0.01ha/albero"@it ;
-    rdfs:subClassOf cultivationtype:921 .
-
 cultivationtype:1286 a owl:Class ;
     rdfs:label "Einjährige Kräuter"@de ;
     rdfs:subClassOf cultivationtype:55 .
@@ -1717,6 +1716,53 @@ cultivationtype:1291 a owl:Class ;
 cultivationtype:1292 a owl:Class ;
     rdfs:label "Hecken und Feldgehölz mit Krautsaum"@de ;
     rdfs:subClassOf cultivationtype:852 .
+
+cultivationtype:1293 a owl:Class ;
+    rdfs:label "Zuckerhut (Nicht-Convenience)"@de,
+        "Chicorée pain de sucre (non-convenience)"@fr,
+        "Cicoria pan di zucchero (non-convenience)"@it ;
+    rdfs:subClassOf cultivationtype:142 ;
+    owl:disjointWith cultivationtype:1131 .
+
+cultivationtype:1294 a owl:Class ;
+    rdfs:label "Tomaten (Freiland)"@de,
+        "Tomates (pleine terre)"@fr,
+        "Pomodori (pieno campo)"@it ;
+    rdfs:subClassOf cultivationtype:24,
+        cultivationtype:85 ;
+    owl:disjointWith cultivationtype:1141 .
+
+cultivationtype:1295 a owl:Class ;
+    rdfs:label "Krautstiel (Freiland)"@de,
+        "Bette à côte (pleine terre)"@fr,
+        "Costa (pieno campo)"@it ;
+    rdfs:subClassOf cultivationtype:24,
+        cultivationtype:76 ;
+    owl:disjointWith cultivationtype:1135 .
+
+cultivationtype:1296 a owl:Class ;
+    rdfs:label "Kohlrabi Freiland"@de,
+        "Chou-rave de plein champ"@fr,
+        "Cavolo rapa di pieno campo"@it ;
+    rdfs:subClassOf cultivationtype:24,
+        cultivationtype:86 ;
+    owl:disjointWith cultivationtype:1043 .
+
+cultivationtype:1297 a owl:Class ;
+    rdfs:label "Kohlrabi (nicht für die Verarbeitung)"@de,
+        "Chou-rave (pas pour l'industrie)"@fr,
+        "Cavolo rapa (non da industria)"@it ;
+    rdfs:subClassOf cultivationtype:1296,
+        cultivationtype:545 ;
+    owl:disjointWith cultivationtype:1044 .
+
+cultivationtype:1298 a owl:Class ;
+    rdfs:label "Radicchio und Cicorino (nicht für die Verarbeitung)"@de,
+        "Radicchio et cicorino (pas pour l'industrie)"@fr,
+        "Radicchio e cicorino (non da industria)"@it ;
+    rdfs:subClassOf cultivationtype:133,
+        cultivationtype:24 ;
+    owl:disjointWith cultivationtype:1096 .
 
 cultivationtype:13 a owl:Class ;
     rdfs:label "Sömmerungsfläche"@de,
@@ -2012,9 +2058,9 @@ cultivationtype:187 a owl:Class ;
     rdfs:subClassOf cultivationtype:400 .
 
 cultivationtype:188 a owl:Class ;
-    rdfs:label "Liliengewächse (Liliaceae)"@de,
-        "liliacées"@fr,
-        "Liliacee"@it ;
+    rdfs:label "Amaryllisgewächse (Amaryllidaceae)"@de,
+        "Amaryllidacées (Amaryllidaceae)"@fr,
+        "Amarillidacee (Amaryllidaceae)"@it ;
     rdfs:subClassOf cultivationtype:22 .
 
 cultivationtype:189 a owl:Class ;
@@ -3009,8 +3055,7 @@ cultivationtype:466 a owl:Class ;
 
 cultivationtype:467 a owl:Class ;
     rdfs:label "Dauerkulturen"@de ;
-    rdfs:subClassOf :Cultivation ;
-    owl:unionOf ( cultivationtype:797 cultivationtype:798 ) .
+    rdfs:subClassOf :Cultivation .
 
 cultivationtype:468 a owl:Class ;
     rdfs:label "Ackerbohne"@de,
@@ -3160,7 +3205,8 @@ cultivationtype:5 a owl:Class ;
     rdfs:label "Obstanlagen"@de,
         "Cultures fruitières"@fr,
         "Frutteti"@it ;
-    rdfs:subClassOf cultivationtype:465 .
+    rdfs:subClassOf cultivationtype:465,
+        cultivationtype:467 .
 
 cultivationtype:500 a owl:Class ;
     rdfs:label "Emmer"@de,
@@ -3709,7 +3755,7 @@ cultivationtype:6 a owl:Class ;
     rdfs:label "Übrige Dauerkulturen"@de,
         "Autres cultures pérennes"@fr,
         "Altre colture perenni"@it ;
-    rdfs:subClassOf :Cultivation .
+    rdfs:subClassOf cultivationtype:467 .
 
 cultivationtype:60 a owl:Class ;
     rdfs:label "Sommerflor"@de,

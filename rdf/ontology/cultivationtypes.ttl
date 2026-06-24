@@ -4695,13 +4695,6 @@ cultivationtype:1283 a :CultivationType ;
         "Lino da olio"@it ;
     rdfs:subClassOf cultivationtype:534 .
 
-cultivationtype:1284 a :CultivationType ;
-    schema:name "Hochstamm-Obstbäume, 0.01ha/Baum"@de,
-        "Standard fruit trees, 0.01ha/tree"@en,
-        "Arbres fruitiers à haute tige, 0.01ha/arbre"@fr,
-        "Alberi da frutto ad alto fusto, 0.01ha/albero"@it ;
-    rdfs:subClassOf cultivationtype:921 .
-
 cultivationtype:1286 a :CultivationType ;
     schema:name "Einjährige Kräuter"@de ;
     rdfs:subClassOf cultivationtype:55 .
