@@ -3460,7 +3460,7 @@ cultivationtype:1035 a :CultivationType ;
 
 cultivationtype:1036 a :CultivationType ;
     schema:name "Aubergine, Erdkultur (geschützter Anbau)"@de ;
-    owl:intersectionOf ( cultivationtype:474 cultivationtype:23 ) .
+    owl:intersectionOf ( cultivationtype:175 cultivationtype:23 ) .
 
 cultivationtype:1037 a :CultivationType ;
     schema:name "Spargel Bleich"@de, "Asperge blanche"@fr, "Asparago bianco"@it ;
