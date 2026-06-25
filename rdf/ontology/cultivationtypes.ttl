@@ -3801,7 +3801,7 @@ cultivationtype:1100 a :CultivationType ;
     schema:name "Rucola, 2 Schnitte (geschützter Anbau)"@de,
         "Roquette, 2 coupes (culture protégée)"@fr,
         "Rucola, 2 tagli (coltura protetta)"@it ;
-    rdfs:subClassOf cultivationtype:1099 .
+    rdfs:subClassOf cultivationtype:278 .
 
 cultivationtype:1101 a :CultivationType ;
     schema:name "Nicht aufgeführte Ackerkulturen, Leguminosen"@de,
