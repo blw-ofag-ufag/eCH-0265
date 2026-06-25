@@ -952,6 +952,13 @@ cultivationtype:175 a :CultivationType ;
         "Solanacee"@it ;
     rdfs:subClassOf cultivationtype:22 .
 
+cultivationtype:176 a :CultivationType ;
+    schema:name "Aubergine (Freiland)"@de,
+        "Aubergine (pleine terre)"@fr,
+        "Melanzana (pieno campo)"@it ;
+    rdfs:subClassOf cultivationtype:474, cultivationtype:24 ; 
+    owl:disjointWith cultivationtype:1036 .
+
 cultivationtype:179 a :CultivationType ;
     schema:name "Endivien"@de,
         "chicorée scarole, chicorée frisée"@fr,
