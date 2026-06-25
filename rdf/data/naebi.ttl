@@ -3217,7 +3217,7 @@ naebi:50 a :NutrientBalanceCrop  ;
     :P2O5 30.0 ;
     :cultivationCategory cultivationtype:465 ;
     :cultivationSubCategory cultivationtype:24 ;
-    :cultivationType cultivationtype:219 .
+    :cultivationType cultivationtype:220 .
 
 naebi:51 a :NutrientBalanceCrop  ;
     schema:identifier "CROP_CHIWR" ;

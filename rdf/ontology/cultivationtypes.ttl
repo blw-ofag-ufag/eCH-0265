@@ -1133,6 +1133,14 @@ cultivationtype:219 a :CultivationType ;
         "Erba cipollina"@it ;
     rdfs:subClassOf cultivationtype:67 .
 
+cultivationtype:220 a :CultivationType ;
+    schema:name "Schnittlauch (Freiland)"@de,
+        "Ciboulette (pleine terre)"@fr,
+        "Erba cipollina (pieno campo)"@it ;
+    rdfs:subClassOf cultivationtype:219, 
+        cultivationtype:24 ;
+    owl:disjointWith cultivationtype:1242 .
+
 cultivationtype:221 a :CultivationType ;
     schema:name "Erbsen ohne Hülsen"@de,
         "pois écossés"@fr,
