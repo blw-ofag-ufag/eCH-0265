@@ -488,19 +488,20 @@ cultivationtype:84 a :CultivationType ;
     schema:name "Bodenkohlrabi"@de,
         "rutabaga"@fr,
         "Cavolo navone"@it ;
-    rdfs:subClassOf cultivationtype:115 .
+    rdfs:subClassOf cultivationtype:48 .
 
 cultivationtype:85 a :CultivationType ;
     schema:name "Tomaten"@de,
         "tomate"@fr,
         "Pomodori"@it ;
-    rdfs:subClassOf cultivationtype:175 .
+    rdfs:subClassOf cultivationtype:175 ;
+    :botanicalPlant taxon:SOLYC .
 
 cultivationtype:86 a :CultivationType ;
     schema:name "Kohlrabi"@de,
         "colrave"@fr,
         "Cavolo rapa"@it ;
-    rdfs:subClassOf cultivationtype:25 .
+    rdfs:subClassOf cultivationtype:48 .
 
 cultivationtype:87 a :CultivationType ;
     schema:name "Federkohl"@de,
@@ -951,6 +952,13 @@ cultivationtype:175 a :CultivationType ;
         "Solanacee"@it ;
     rdfs:subClassOf cultivationtype:22 .
 
+cultivationtype:176 a :CultivationType ;
+    schema:name "Aubergine (Freiland)"@de,
+        "Aubergine (pleine terre)"@fr,
+        "Melanzana (pieno campo)"@it ;
+    rdfs:subClassOf cultivationtype:474, cultivationtype:24 ; 
+    owl:disjointWith cultivationtype:1036 .
+
 cultivationtype:179 a :CultivationType ;
     schema:name "Endivien"@de,
         "chicorée scarole, chicorée frisée"@fr,
@@ -1131,6 +1139,14 @@ cultivationtype:219 a :CultivationType ;
         "ciboulette"@fr,
         "Erba cipollina"@it ;
     rdfs:subClassOf cultivationtype:67 .
+
+cultivationtype:220 a :CultivationType ;
+    schema:name "Schnittlauch (Freiland)"@de,
+        "Ciboulette (pleine terre)"@fr,
+        "Erba cipollina (pieno campo)"@it ;
+    rdfs:subClassOf cultivationtype:219, 
+        cultivationtype:24 ;
+    owl:disjointWith cultivationtype:1242 .
 
 cultivationtype:221 a :CultivationType ;
     schema:name "Erbsen ohne Hülsen"@de,
@@ -1344,6 +1360,15 @@ cultivationtype:265 a :CultivationType ;
         "laitue pommée"@fr,
         "Lattuga cappuccio"@it ;
     rdfs:subClassOf cultivationtype:173 .
+
+cultivationtype:266 a :CultivationType ;
+    schema:name "Nüsslisalat (Freiland)"@de,
+        "Mâche (pleine terre)"@fr,
+        "Valerianella (pieno campo)"@it ;
+    schema:alternateName "Feldsalat (Freiland)"@de ;
+    rdfs:subClassOf cultivationtype:260, 
+        cultivationtype:24 ;
+    owl:disjointWith cultivationtype:1244 .
 
 cultivationtype:267 a :CultivationType ;
     schema:name "Gojibeere"@de,
@@ -1680,6 +1705,14 @@ cultivationtype:331 a :CultivationType ;
         "Romanesco"@it ;
     rdfs:subClassOf cultivationtype:324 .
 
+cultivationtype:332 a :CultivationType ;
+    schema:name "Schnittsalat (Freiland)"@de,
+        "Laitue à tondre (pleine terre)"@fr,
+        "Lattuga da taglio (pieno campo)"@it ;
+    rdfs:subClassOf cultivationtype:328, 
+        cultivationtype:24 ;
+    owl:disjointWith cultivationtype:1245 .
+
 cultivationtype:334 a :CultivationType ;
     schema:name "Oregano"@de,
         "Oregano"@en,
@@ -1705,6 +1738,12 @@ cultivationtype:335 a :CultivationType ;
 cultivationtype:337 a :CultivationType ;
     schema:name "Amaryllisgewächse"@de ;
     rdfs:subClassOf cultivationtype:22 .
+
+cultivationtype:338 a :CultivationType ;
+    schema:name "Aprikosenanlage"@de,
+        "Verger d'abricotiers"@fr,
+        "Albicoccheto"@it ;
+    rdfs:subClassOf cultivationtype:472 .
 
 cultivationtype:339 a :CultivationType ;
     schema:name "Windengewächse"@de,
@@ -1890,7 +1929,6 @@ cultivationtype:472 a :CultivationType ;
     schema:name "Aprikose"@de,
         "abricotier"@fr,
         "Albicocco"@it ;
-    schema:alternateName "Aprikosenanlage"@de ;
     rdfs:subClassOf cultivationtype:704 .
 
 cultivationtype:473 a :CultivationType ;
@@ -2979,6 +3017,12 @@ cultivationtype:804 a :CultivationType ;
         "Colture bacche in serra con fondamenta fisse"@it ;
     rdfs:subClassOf cultivationtype:470 .
 
+cultivationtype:805 a :CultivationType ;
+    schema:name "Winterraps (ohne 62a Nitrat-Projekt)"@de,
+        "Colza d'automne (sans projet nitrate 62a)"@fr,
+        "Colza autunnale (senza progetto nitrati 62a)"@it ;
+    rdfs:subClassOf cultivationtype:190 .
+
 cultivationtype:806 a :CultivationType ;
     schema:name "Gemüsekulturen in geschütztem Anbau ohne festes Fundament"@de,
         "Cultures maraîchères sous abri sans fondations permanentes"@fr,
@@ -3460,7 +3504,7 @@ cultivationtype:1035 a :CultivationType ;
 
 cultivationtype:1036 a :CultivationType ;
     schema:name "Aubergine, Erdkultur (geschützter Anbau)"@de ;
-    owl:intersectionOf ( cultivationtype:474 cultivationtype:23 ) .
+    owl:intersectionOf ( cultivationtype:175 cultivationtype:23 ) .
 
 cultivationtype:1037 a :CultivationType ;
     schema:name "Spargel Bleich"@de, "Asperge blanche"@fr, "Asparago bianco"@it ;
@@ -3489,14 +3533,14 @@ cultivationtype:1042 a :CultivationType ;
 
 cultivationtype:1043 a :CultivationType ;
     schema:name "Kohlrabi (geschützter Anbau)"@de, "Chou-rave (culture protégée)"@fr, "Cavolo rapa (coltura protetta)"@it ;
-    rdfs:subClassOf cultivationtype:86,
+    rdfs:subClassOf cultivationtype:48,
         cultivationtype:23 ;
     owl:disjointWith cultivationtype:1296 .
 
 cultivationtype:1044 a :CultivationType ;
     schema:name "Verarbeitungskohlrabi"@de, "Chou-rave d'industrie"@fr, "Cavolo rapa da industria"@it ;
     rdfs:subClassOf cultivationtype:1296,
-        cultivationtype:546 ;
+        cultivationtype:546;
     owl:disjointWith cultivationtype:1297 .
 
 cultivationtype:1045 a :CultivationType ;
@@ -3509,19 +3553,19 @@ cultivationtype:1046 a :CultivationType ;
 
 cultivationtype:1047 a :CultivationType ;
     schema:name "Lauch, früh gepflanzt"@de, "Poireau, plantation précoce"@fr, "Porro, piantagione precoce"@it ;
-    rdfs:subClassOf cultivationtype:323 .
+    rdfs:subClassOf cultivationtype:188 .
 
 cultivationtype:1048 a :CultivationType ;
     schema:name "Lauch, spät gepflanzt"@de, "Poireau, plantation tardive"@fr, "Porro, piantagione tardiva"@it ;
-    rdfs:subClassOf cultivationtype:323 .
+    rdfs:subClassOf cultivationtype:188 .
 
 cultivationtype:1049 a :CultivationType ;
     schema:name "Lauch (geschützter Anbau)"@de, "Poireau (culture protégée)"@fr, "Porro (coltura protetta)"@it ;
-    owl:intersectionOf ( cultivationtype:323 cultivationtype:7 ) .
+    owl:intersectionOf ( cultivationtype:188 cultivationtype:7 ) .
 
 cultivationtype:1050 a :CultivationType ;
     schema:name "Lauch, gesät"@de, "Poireau, semé"@fr, "Porro, seminato"@it ;
-    rdfs:subClassOf cultivationtype:323 .
+    rdfs:subClassOf cultivationtype:188 .
 
 cultivationtype:1051 a :CultivationType ;
     schema:name "Lauch, gepflanzt, Überwinterung"@de,
@@ -3540,7 +3584,7 @@ cultivationtype:1053 a :CultivationType ;
         "Engrais vert légumineuses (légumes de plein champ)"@fr,
             "Sovescio leguminose (ortaggi di pieno campo)"@it ;
     schema:description "Bezeichnet eine Zwischenkultur zur Gründüngung mit Leguminosen auf Feldern, die im Rahmen der Fruchtfolge für den Freilandgemüsebau genutzt werden."@de ;
-    rdfs:subClassOf cultivationtype:15,
+    rdfs:subClassOf cultivationtype:47,
         cultivationtype:24 .
 
 cultivationtype:1055 a :CultivationType ;
@@ -3636,11 +3680,7 @@ cultivationtype:1075 a :CultivationType ;
     schema:name "Erbsen, Kefen"@de,
         "Pois, mange-tout"@fr,
         "Piselli, taccole"@it ;
-    rdfs:subClassOf cultivationtype:15 ;
-    owl:unionOf (
-        cultivationtype:191
-        cultivationtype:1074
-    ) .
+    rdfs:subClassOf cultivationtype:47, cultivationtype:24 .
 
 cultivationtype:1076 a :CultivationType ;
     schema:name "Verarbeitungserbsen"@de,
@@ -3805,7 +3845,7 @@ cultivationtype:1100 a :CultivationType ;
     schema:name "Rucola, 2 Schnitte (geschützter Anbau)"@de,
         "Roquette, 2 coupes (culture protégée)"@fr,
         "Rucola, 2 tagli (coltura protetta)"@it ;
-    rdfs:subClassOf cultivationtype:1099 .
+    rdfs:subClassOf cultivationtype:278 .
 
 cultivationtype:1101 a :CultivationType ;
     schema:name "Nicht aufgeführte Ackerkulturen, Leguminosen"@de,
@@ -3983,7 +4023,8 @@ cultivationtype:1131 a :CultivationType ;
     schema:name "Zuckerhut (Convenience)"@de,
         "Chicorée pain de sucre (convenience)"@fr,
         "Cicoria pan di zucchero (convenience)"@it ;
-    rdfs:subClassOf cultivationtype:142 .
+    rdfs:subClassOf cultivationtype:141 ;
+    owl:disjointWith cultivationtype:142.
 
 cultivationtype:1132 a :CultivationType ;
     schema:name "Heuwiesen Sömmerungsg., extensive"@de,
@@ -4010,7 +4051,7 @@ cultivationtype:1135 a :CultivationType ;
         "Bette à côte (culture protégée)"@fr,
         "Costa (coltura protetta)"@it ;
     owl:intersectionOf ( 
-        cultivationtype:76 
+        cultivationtype:321 
         cultivationtype:7 
     ) .
 
@@ -4151,7 +4192,7 @@ cultivationtype:1159 a :CultivationType ;
     schema:name "Broccoli, Verarbeitung"@de,
         "Brocoli d'industrie"@fr,
         "Broccoli da industria"@it ;
-    rdfs:subClassOf cultivationtype:154 .
+    rdfs:subClassOf cultivationtype:324 .
 
 cultivationtype:1160 a :CultivationType ;
     schema:name "Winterspinat, Industrie, 1 Schnitt"@de,
@@ -4175,37 +4216,37 @@ cultivationtype:1163 a :CultivationType ;
     schema:name "Zucchetti, gepflanzt, frühe Kurzkultur"@de,
         "Courgette, plantée, culture courte précoce"@fr,
         "Zucchine, piantate, coltura breve precoce"@it ;
-    rdfs:subClassOf cultivationtype:225 .
+    rdfs:subClassOf cultivationtype:235 .
 
 cultivationtype:1164 a :CultivationType ;
     schema:name "Patisson, Kürbis (geschützter Anbau)"@de,
         "Pâtisson, courge (culture protégée)"@fr,
         "Patisson, zucca (coltura protetta)"@it ;
-    owl:intersectionOf ( cultivationtype:1093 cultivationtype:7 ) .
+    owl:intersectionOf ( cultivationtype:235 cultivationtype:7 ) .
 
 cultivationtype:1165 a :CultivationType ;
     schema:name "Zucchetti, gepflanzt, Sommer und Herbst"@de,
         "Courgette, plantée, été et automne"@fr,
         "Zucchine, piantate, estate e autunno"@it ;
-    rdfs:subClassOf cultivationtype:225 .
+    rdfs:subClassOf cultivationtype:235 .
 
 cultivationtype:1166 a :CultivationType ;
     schema:name "Zucchetti (geschützter Anbau)"@de,
         "Courgette (culture protégée)"@fr,
         "Zucchine (coltura protetta)"@it ;
-    owl:intersectionOf ( cultivationtype:225 cultivationtype:7 ) .
+    owl:intersectionOf ( cultivationtype:235 cultivationtype:7 ) .
 
 cultivationtype:1167 a :CultivationType ;
     schema:name "Patisson, Kürbis"@de,
         "Pâtisson, courge"@fr,
         "Patisson, zucca"@it ;
-    rdfs:subClassOf cultivationtype:1093 .
+    rdfs:subClassOf cultivationtype:235 .
 
 cultivationtype:1168 a :CultivationType ;
     schema:name "Zucchetti, gesät, Sommer und Herbst"@de,
         "Courgette, semée, été et automne"@fr,
         "Zucchine, seminate, estate e autunno"@it ;
-    rdfs:subClassOf cultivationtype:225 .
+    rdfs:subClassOf cultivationtype:235 .
 
 cultivationtype:1180 a :CultivationType ;
     schema:name "Aprikosenanlage, hoher Ertrag"@de ;
@@ -4459,7 +4500,7 @@ cultivationtype:1235 a :CultivationType ;
         "Cherry orchard, high yield"@en,
         "Verger de cerisiers, à haut rendement"@fr,
         "Ceraseto, ad alta resa"@it ;
-    rdfs:subClassOf cultivationtype:283 .
+    rdfs:subClassOf cultivationtype:704 .
 
 cultivationtype:1239 a :CultivationType ;
     schema:name "Chicorée, Wurzelanbau"@de,
@@ -4509,14 +4550,15 @@ cultivationtype:1246 a :CultivationType ;
         "Cucumbers 30 pcs/m2, soil culture (protected cultivation)"@en,
         "Concombres 30 pces/m2, culture en terre (culture protégée)"@fr,
         "Cetrioli 30 pz/m2, coltura in terra (coltura protetta)"@it ;
-    rdfs:subClassOf cultivationtype:276 .
+    owl:intersectionOf ( cultivationtype:32 cultivationtype:23 ) .
 
 cultivationtype:1247 a :CultivationType ;
     schema:name "Gurken 50 Stk/m2, Erdkultur (geschützter Anbau)"@de,
         "Cucumbers 50 pcs/m2, soil culture (protected cultivation)"@en,
         "Concombres 50 pces/m2, culture en terre (culture protégée)"@fr,
         "Cetrioli 50 pz/m2, coltura in terra (coltura protetta)"@it ;
-    rdfs:subClassOf cultivationtype:276 .
+    owl:intersectionOf ( cultivationtype:32 cultivationtype:23 ) ;
+    owl:disjointWith cultivationtype:1246 .
 
 cultivationtype:1248 a :CultivationType ;
     schema:name "Arnika"@de,
@@ -4654,7 +4696,7 @@ cultivationtype:1273 a :CultivationType ;
 
 cultivationtype:1275 a :CultivationType ;
     schema:name "Gründüngung (Leguminosen)"@de ;
-    rdfs:subClassOf cultivationtype:15 .
+    rdfs:subClassOf cultivationtype:47, cultivationtype:24 .
 
 cultivationtype:1277 a :CultivationType ;
     schema:name "Gründüngung (Nichtleguminosen)"@de ;
@@ -4730,7 +4772,8 @@ cultivationtype:1294 a :CultivationType ;
         "Pomodori (pieno campo)"@it ;
     rdfs:subClassOf cultivationtype:85,
         cultivationtype:24 ;
-    owl:disjointWith cultivationtype:1141 .
+    owl:disjointWith cultivationtype:1141 ;
+    :botanicalPlant taxon:SOLYC .
 
 cultivationtype:1295 a :CultivationType ;
     schema:name "Krautstiel (Freiland)"@de,
@@ -4744,7 +4787,7 @@ cultivationtype:1296 a :CultivationType ;
     schema:name "Kohlrabi Freiland"@de,
         "Chou-rave de plein champ"@fr,
         "Cavolo rapa di pieno campo"@it ;
-    rdfs:subClassOf cultivationtype:86, 
+    rdfs:subClassOf cultivationtype:48, 
         cultivationtype:24 ;
     owl:disjointWith cultivationtype:1043 .
 
@@ -4818,7 +4861,12 @@ cultivationtype:1312 a :CultivationType ;
         "Tuberi-seme di patate (gruppo c)"@it ;
     rdfs:subClassOf cultivationtype:411 .
 
-
+cultivationtype:1313 a :CultivationType ;
+    schema:name "Chinakohl, Verarbeitung"@de,
+        "Chou de Chine d'industrie"@fr,
+        "Cavolo cinese da industria"@it ;
+    rdfs:subClassOf cultivationtype:475,
+        cultivationtype:546 .
 # ==============================================================================
 # DISJOINTNESS OF POTATO TYPES
 # ==============================================================================

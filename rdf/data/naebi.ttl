@@ -295,6 +295,7 @@ naebi:ObservationSet a cube:ObservationSet ;
         naebi:311,
         naebi:312,
         naebi:313,
+        naebi:314,
         naebi:32,
         naebi:33,
         naebi:34,
@@ -709,7 +710,7 @@ naebi:126 a :NutrientBalanceCrop  ;
     :P2O5 20.0 ;
     :cultivationCategory cultivationtype:465 ;
     :cultivationSubCategory cultivationtype:24 ;
-    :cultivationType cultivationtype:260 .
+    :cultivationType cultivationtype:266 .
 
 naebi:127 a :NutrientBalanceCrop  ;
     schema:identifier "CROP_LCROP" ;
@@ -1666,7 +1667,7 @@ naebi:204 a :NutrientBalanceCrop  ;
     :P2O5 20.0 ;
     :cultivationCategory cultivationtype:465 ;
     :cultivationSubCategory cultivationtype:24 ;
-    :cultivationType cultivationtype:133 .
+    :cultivationType cultivationtype:1298 .
 
 naebi:205 a :NutrientBalanceCrop  ;
     schema:identifier "CROP_RADCHP" ;
@@ -2479,7 +2480,7 @@ naebi:272 a :NutrientBalanceCrop  ;
     :P2O5 50.0 ;
     :cultivationCategory cultivationtype:465 ;
     :cultivationSubCategory cultivationtype:24 ;
-    :cultivationType cultivationtype:85 .
+    :cultivationType cultivationtype:1294 .
 
 naebi:273 a :NutrientBalanceCrop  ;
     schema:identifier "CROP_TOMTH" ;
@@ -2710,7 +2711,7 @@ naebi:291 a :NutrientBalanceCrop  ;
     :P2O5 1.43 ;
     :cultivationCategory cultivationtype:1 ;
     :cultivationSubCategory cultivationtype:17 ;
-    :cultivationType cultivationtype:190 .
+    :cultivationType cultivationtype:805 .
 
 naebi:292 a :NutrientBalanceCrop  ;
     schema:identifier "CROP_WKORN" ;
@@ -3205,7 +3206,7 @@ naebi:5 a :NutrientBalanceCrop  ;
     :P2O5 25.0 ;
     :cultivationCategory cultivationtype:465 ;
     :cultivationSubCategory cultivationtype:467 ;
-    :cultivationType cultivationtype:472 .
+    :cultivationType cultivationtype:338 .
 
 naebi:50 a :NutrientBalanceCrop  ;
     schema:identifier "CROP_CHIVES" ;
@@ -3216,7 +3217,7 @@ naebi:50 a :NutrientBalanceCrop  ;
     :P2O5 30.0 ;
     :cultivationCategory cultivationtype:465 ;
     :cultivationSubCategory cultivationtype:24 ;
-    :cultivationType cultivationtype:219 .
+    :cultivationType cultivationtype:220 .
 
 naebi:51 a :NutrientBalanceCrop  ;
     schema:identifier "CROP_CHIWR" ;
@@ -3348,7 +3349,7 @@ naebi:61 a :NutrientBalanceCrop  ;
     :P2O5 20.0 ;
     :cultivationCategory cultivationtype:465 ;
     :cultivationSubCategory cultivationtype:24 ;
-    :cultivationType cultivationtype:328 .
+    :cultivationType cultivationtype:332 .
 
 naebi:62 a :NutrientBalanceCrop  ;
     schema:identifier "CROP_CUTCN" ;
@@ -3425,7 +3426,7 @@ naebi:68 a :NutrientBalanceCrop  ;
     :P2O5 20.0 ;
     :cultivationCategory cultivationtype:465 ;
     :cultivationSubCategory cultivationtype:24 ;
-    :cultivationType cultivationtype:474 .
+    :cultivationType cultivationtype:176 .
 
 naebi:69 a :NutrientBalanceCrop  ;
     schema:identifier "CROP_EMMEK" ;
@@ -3678,7 +3679,7 @@ naebi:89 a :NutrientBalanceCrop  ;
     :P2O5 0.0 ;
     :cultivationCategory cultivationtype:1 ;
     :cultivationSubCategory cultivationtype:462 ;
-    :cultivationType cultivationtype:1275 .
+    :cultivationType cultivationtype:1053 .
 
 naebi:9 a :NutrientBalanceCrop  ;
     schema:identifier "CROP_ASISAL" ;
@@ -3800,3 +3801,14 @@ naebi:99 a :NutrientBalanceCrop  ;
     :cultivationCategory cultivationtype:1 ;
     :cultivationSubCategory cultivationtype:414 ;
     :cultivationType cultivationtype:1292 .
+
+naebi:314 a :NutrientBalanceCrop ;
+    schema:identifier "CROP_CHINKV" ;
+    schema:name "Chinakohl, Verarbeitung"@de ;
+    :K2O 200.0 ;
+    :Mg 10.0 ;
+    :N2 160.0 ;
+    :P2O5 60.0 ;
+    :cultivationCategory cultivationtype:465 ;
+    :cultivationSubCategory cultivationtype:24 ;
+    :cultivationType cultivationtype:1313 .
