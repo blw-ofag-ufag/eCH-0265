@@ -3206,7 +3206,7 @@ naebi:5 a :NutrientBalanceCrop  ;
     :P2O5 25.0 ;
     :cultivationCategory cultivationtype:465 ;
     :cultivationSubCategory cultivationtype:467 ;
-    :cultivationType cultivationtype:472 .
+    :cultivationType cultivationtype:338 .
 
 naebi:50 a :NutrientBalanceCrop  ;
     schema:identifier "CROP_CHIVES" ;

@@ -1707,6 +1707,12 @@ cultivationtype:337 a :CultivationType ;
     schema:name "Amaryllisgewächse"@de ;
     rdfs:subClassOf cultivationtype:22 .
 
+cultivationtype:338 a :CultivationType ;
+    schema:name "Aprikosenanlage"@de,
+        "Verger d'abricotiers"@fr,
+        "Albicoccheto"@it ;
+    rdfs:subClassOf cultivationtype:472 .
+
 cultivationtype:339 a :CultivationType ;
     schema:name "Windengewächse"@de,
         "convolvulacées"@fr ;
@@ -1891,7 +1897,6 @@ cultivationtype:472 a :CultivationType ;
     schema:name "Aprikose"@de,
         "abricotier"@fr,
         "Albicocco"@it ;
-    schema:alternateName "Aprikosenanlage"@de ;
     rdfs:subClassOf cultivationtype:704 .
 
 cultivationtype:473 a :CultivationType ;
