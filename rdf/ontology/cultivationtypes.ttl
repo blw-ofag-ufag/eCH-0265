@@ -4155,7 +4155,7 @@ cultivationtype:1159 a :CultivationType ;
     schema:name "Broccoli, Verarbeitung"@de,
         "Brocoli d'industrie"@fr,
         "Broccoli da industria"@it ;
-    rdfs:subClassOf cultivationtype:154 .
+    rdfs:subClassOf cultivationtype:324 .
 
 cultivationtype:1160 a :CultivationType ;
     schema:name "Winterspinat, Industrie, 1 Schnitt"@de,
