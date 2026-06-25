@@ -4543,14 +4543,15 @@ cultivationtype:1246 a :CultivationType ;
         "Cucumbers 30 pcs/m2, soil culture (protected cultivation)"@en,
         "Concombres 30 pces/m2, culture en terre (culture protégée)"@fr,
         "Cetrioli 30 pz/m2, coltura in terra (coltura protetta)"@it ;
-    rdfs:subClassOf cultivationtype:276 .
+    owl:intersectionOf ( cultivationtype:32 cultivationtype:23 ) .
 
 cultivationtype:1247 a :CultivationType ;
     schema:name "Gurken 50 Stk/m2, Erdkultur (geschützter Anbau)"@de,
         "Cucumbers 50 pcs/m2, soil culture (protected cultivation)"@en,
         "Concombres 50 pces/m2, culture en terre (culture protégée)"@fr,
         "Cetrioli 50 pz/m2, coltura in terra (coltura protetta)"@it ;
-    rdfs:subClassOf cultivationtype:276 .
+    owl:intersectionOf ( cultivationtype:32 cultivationtype:23 ) ;
+    owl:disjointWith cultivationtype:1246 .
 
 cultivationtype:1248 a :CultivationType ;
     schema:name "Arnika"@de,
