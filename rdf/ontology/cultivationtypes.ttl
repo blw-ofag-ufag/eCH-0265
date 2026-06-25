@@ -4179,7 +4179,7 @@ cultivationtype:1163 a :CultivationType ;
     schema:name "Zucchetti, gepflanzt, frühe Kurzkultur"@de,
         "Courgette, plantée, culture courte précoce"@fr,
         "Zucchine, piantate, coltura breve precoce"@it ;
-    rdfs:subClassOf cultivationtype:225 .
+    rdfs:subClassOf cultivationtype:235 .
 
 cultivationtype:1164 a :CultivationType ;
     schema:name "Patisson, Kürbis (geschützter Anbau)"@de,
@@ -4191,13 +4191,13 @@ cultivationtype:1165 a :CultivationType ;
     schema:name "Zucchetti, gepflanzt, Sommer und Herbst"@de,
         "Courgette, plantée, été et automne"@fr,
         "Zucchine, piantate, estate e autunno"@it ;
-    rdfs:subClassOf cultivationtype:225 .
+    rdfs:subClassOf cultivationtype:235 .
 
 cultivationtype:1166 a :CultivationType ;
     schema:name "Zucchetti (geschützter Anbau)"@de,
         "Courgette (culture protégée)"@fr,
         "Zucchine (coltura protetta)"@it ;
-    owl:intersectionOf ( cultivationtype:225 cultivationtype:7 ) .
+    owl:intersectionOf ( cultivationtype:235 cultivationtype:7 ) .
 
 cultivationtype:1167 a :CultivationType ;
     schema:name "Patisson, Kürbis"@de,
@@ -4209,7 +4209,7 @@ cultivationtype:1168 a :CultivationType ;
     schema:name "Zucchetti, gesät, Sommer und Herbst"@de,
         "Courgette, semée, été et automne"@fr,
         "Zucchine, seminate, estate e autunno"@it ;
-    rdfs:subClassOf cultivationtype:225 .
+    rdfs:subClassOf cultivationtype:235 .
 
 cultivationtype:1180 a :CultivationType ;
     schema:name "Aprikosenanlage, hoher Ertrag"@de ;
