@@ -494,7 +494,8 @@ cultivationtype:85 a :CultivationType ;
     schema:name "Tomaten"@de,
         "tomate"@fr,
         "Pomodori"@it ;
-    rdfs:subClassOf cultivationtype:175 .
+    rdfs:subClassOf cultivationtype:175 ;
+    :botanicalPlant taxon:SOLYC .
 
 cultivationtype:86 a :CultivationType ;
     schema:name "Kohlrabi"@de,
@@ -4733,7 +4734,8 @@ cultivationtype:1294 a :CultivationType ;
         "Pomodori (pieno campo)"@it ;
     rdfs:subClassOf cultivationtype:85,
         cultivationtype:24 ;
-    owl:disjointWith cultivationtype:1141 .
+    owl:disjointWith cultivationtype:1141 ;
+    :botanicalPlant taxon:SOLYC .
 
 cultivationtype:1295 a :CultivationType ;
     schema:name "Krautstiel (Freiland)"@de,

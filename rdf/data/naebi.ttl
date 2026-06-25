@@ -2480,7 +2480,7 @@ naebi:272 a :NutrientBalanceCrop  ;
     :P2O5 50.0 ;
     :cultivationCategory cultivationtype:465 ;
     :cultivationSubCategory cultivationtype:24 ;
-    :cultivationType cultivationtype:85 .
+    :cultivationType cultivationtype:1294 .
 
 naebi:273 a :NutrientBalanceCrop  ;
     schema:identifier "CROP_TOMTH" ;
