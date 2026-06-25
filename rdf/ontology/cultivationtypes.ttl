@@ -1354,6 +1354,15 @@ cultivationtype:265 a :CultivationType ;
         "Lattuga cappuccio"@it ;
     rdfs:subClassOf cultivationtype:173 .
 
+cultivationtype:266 a :CultivationType ;
+    schema:name "Nüsslisalat (Freiland)"@de,
+        "Mâche (pleine terre)"@fr,
+        "Valerianella (pieno campo)"@it ;
+    schema:alternateName "Feldsalat (Freiland)"@de ;
+    rdfs:subClassOf cultivationtype:260, 
+        cultivationtype:24 ;
+    owl:disjointWith cultivationtype:1244 .
+
 cultivationtype:267 a :CultivationType ;
     schema:name "Gojibeere"@de,
         "Goji berry, wolfberry"@en,
