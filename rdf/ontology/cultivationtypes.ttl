@@ -4468,7 +4468,7 @@ cultivationtype:1235 a :CultivationType ;
         "Cherry orchard, high yield"@en,
         "Verger de cerisiers, à haut rendement"@fr,
         "Ceraseto, ad alta resa"@it ;
-    rdfs:subClassOf cultivationtype:283 .
+    rdfs:subClassOf cultivationtype:704 .
 
 cultivationtype:1239 a :CultivationType ;
     schema:name "Chicorée, Wurzelanbau"@de,
