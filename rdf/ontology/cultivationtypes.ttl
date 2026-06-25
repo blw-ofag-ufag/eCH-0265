@@ -4185,7 +4185,7 @@ cultivationtype:1164 a :CultivationType ;
     schema:name "Patisson, Kürbis (geschützter Anbau)"@de,
         "Pâtisson, courge (culture protégée)"@fr,
         "Patisson, zucca (coltura protetta)"@it ;
-    owl:intersectionOf ( cultivationtype:1093 cultivationtype:7 ) .
+    owl:intersectionOf ( cultivationtype:235 cultivationtype:7 ) .
 
 cultivationtype:1165 a :CultivationType ;
     schema:name "Zucchetti, gepflanzt, Sommer und Herbst"@de,
