@@ -2711,7 +2711,7 @@ naebi:291 a :NutrientBalanceCrop  ;
     :P2O5 1.43 ;
     :cultivationCategory cultivationtype:1 ;
     :cultivationSubCategory cultivationtype:17 ;
-    :cultivationType cultivationtype:190 .
+    :cultivationType cultivationtype:805 .
 
 naebi:292 a :NutrientBalanceCrop  ;
     schema:identifier "CROP_WKORN" ;

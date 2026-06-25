@@ -2979,6 +2979,12 @@ cultivationtype:804 a :CultivationType ;
         "Colture bacche in serra con fondamenta fisse"@it ;
     rdfs:subClassOf cultivationtype:470 .
 
+cultivationtype:805 a :CultivationType ;
+    schema:name "Winterraps (ohne 62a Nitrat-Projekt)"@de,
+        "Colza d'automne (sans projet nitrate 62a)"@fr,
+        "Colza autunnale (senza progetto nitrati 62a)"@it ;
+    rdfs:subClassOf cultivationtype:190 .
+
 cultivationtype:806 a :CultivationType ;
     schema:name "Gemüsekulturen in geschütztem Anbau ohne festes Fundament"@de,
         "Cultures maraîchères sous abri sans fondations permanentes"@fr,
@@ -3979,7 +3985,8 @@ cultivationtype:1131 a :CultivationType ;
     schema:name "Zuckerhut (Convenience)"@de,
         "Chicorée pain de sucre (convenience)"@fr,
         "Cicoria pan di zucchero (convenience)"@it ;
-    rdfs:subClassOf cultivationtype:142 .
+    rdfs:subClassOf cultivationtype:141 ;
+    owl:disjointWith cultivationtype:142 .
 
 cultivationtype:1132 a :CultivationType ;
     schema:name "Heuwiesen Sömmerungsg., extensive"@de,
