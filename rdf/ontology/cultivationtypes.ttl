@@ -3986,7 +3986,7 @@ cultivationtype:1131 a :CultivationType ;
         "Chicorée pain de sucre (convenience)"@fr,
         "Cicoria pan di zucchero (convenience)"@it ;
     rdfs:subClassOf cultivationtype:141 ;
-    owl:disjointWith cultivationtype:142 .
+    owl:disjointWith cultivationtype:142.
 
 cultivationtype:1132 a :CultivationType ;
     schema:name "Heuwiesen Sömmerungsg., extensive"@de,
@@ -4013,7 +4013,7 @@ cultivationtype:1135 a :CultivationType ;
         "Bette à côte (culture protégée)"@fr,
         "Costa (coltura protetta)"@it ;
     owl:intersectionOf ( 
-        cultivationtype:76 
+        cultivationtype:321 
         cultivationtype:7 
     ) .
 
