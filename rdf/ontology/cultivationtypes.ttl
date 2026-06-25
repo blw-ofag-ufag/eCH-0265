@@ -1698,6 +1698,14 @@ cultivationtype:331 a :CultivationType ;
         "Romanesco"@it ;
     rdfs:subClassOf cultivationtype:324 .
 
+cultivationtype:332 a :CultivationType ;
+    schema:name "Schnittsalat (Freiland)"@de,
+        "Laitue à tondre (pleine terre)"@fr,
+        "Lattuga da taglio (pieno campo)"@it ;
+    rdfs:subClassOf cultivationtype:328, 
+        cultivationtype:24 ;
+    owl:disjointWith cultivationtype:1245 .
+
 cultivationtype:334 a :CultivationType ;
     schema:name "Oregano"@de,
         "Oregano"@en,
