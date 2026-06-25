@@ -340,14 +340,6 @@ async function renderInterface(bindings, container, rawOntologyText, nodeSystems
                     ${Array.from(ct.intersectionNames).join(', ')}
                 </div>`;
         }
-        
-        if (ct.disjointNames.size > 0) {
-            textHTML += `
-                <div class="owl-info disjoint">
-                    <strong>Disjunkt mit:</strong> 
-                    ${Array.from(ct.disjointNames).join(', ')}
-                </div>`;
-        }
 
         if (ct.disjointNames.size > 0) {
             textHTML += `
