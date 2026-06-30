@@ -118,11 +118,6 @@ schema:isPartOf a owl:ObjectProperty ;
     rdfs:domain :CultivationType ;
     rdfs:range [ owl:oneOf ( intensity:Extensive intensity:Low intensity:Medium intensity:Intensive ) ] .
 
-:eligibleForFunding a owl:DatatypeProperty ;
-    schema:name "Beitragsberechtigt"@de, "Eligible for funding"@en ;
-    schema:description "Gibt an, ob die Kultur oder Fläche gemäss Direktzahlungsverordnung beitragsberechtigt ist."@de ;
-    rdfs:range xsd:boolean .
-
 :parentTaxon a owl:ObjectProperty ;
     schema:name "Parent taxon"@en ;
     rdfs:domain :Taxon ;
