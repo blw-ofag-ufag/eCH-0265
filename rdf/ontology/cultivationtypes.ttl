@@ -80,7 +80,8 @@ cultivationtype:3 a :CultivationType ;
         "Pâturages permanents"@fr,
         "Pascoli perenni"@it ;
     schema:description "Als Dauerweide gilt die Fläche mit ausschliesslicher Weidenutzung. Verbuschte oder unproduktive Teile einer Weide sind nicht anrechenbar. Anrechenbar sind hingegen die Weideflächen von Waldweiden ausserhalb der Sömmerungsfläche (Art. 19 LBV)."@de ;
-    rdfs:subClassOf cultivationtype:21 .
+    rdfs:subClassOf cultivationtype:21 ;
+    owl:disjointWith cultivationtype:2 .
 
 cultivationtype:4 a :CultivationType ;
     schema:name "Reben"@de,
@@ -145,7 +146,8 @@ cultivationtype:13 a :CultivationType ;
     schema:name "Sömmerungsfläche"@de,
         "Surface d’estivage"@fr,
         "Superfici d’estivazione"@it ;
-    rdfs:subClassOf :Cultivation .
+    rdfs:subClassOf :Cultivation ;
+    owl:disjointWith cultivationtype:21 , cultivationtype:601 .
 
 cultivationtype:14 a :CultivationType ;
     schema:name "Getreide"@de,
@@ -1976,8 +1978,7 @@ cultivationtype:479 a :CultivationType ;
 
 cultivationtype:480 a :CultivationType ;
     schema:name "Heuwiesen im Sömmerungsgebiet"@de ;
-    rdfs:subClassOf cultivationtype:2 ;
-    owl:unionOf ( cultivationtype:621 cultivationtype:622 cultivationtype:623 ) .
+    rdfs:subClassOf cultivationtype:13 .
 
 cultivationtype:490 a :CultivationType ;
     schema:name "Winterweichweizen"@de,
@@ -2635,7 +2636,8 @@ cultivationtype:601 a :CultivationType ;
         "Prairies artificielles (sans les pâturages)"@fr,
         "Prati artificiali (senza pascoli)"@it ;
     schema:description "Als Kunstwiese gilt die als Wiese angesäte Fläche, die innerhalb einer Fruchtfolge während mindestens einer Vegetationsperiode bewirtschaftet wird."@de ;
-    rdfs:subClassOf cultivationtype:1, cultivationtype:114 .
+    rdfs:subClassOf cultivationtype:1, cultivationtype:114 ;
+    owl:disjointWith cultivationtype:21 .
 
 cultivationtype:602 a :CultivationType ;
     schema:name "Beitragsberechtigte übrige Kunstwiese"@de,
@@ -3277,7 +3279,8 @@ cultivationtype:930 a :CultivationType ;
     schema:name "Sömmerungsweiden"@de,
         "Pâturages d’estivage"@fr,
         "Pascoli d’estivazione"@it ;
-    rdfs:subClassOf cultivationtype:13 .
+    rdfs:subClassOf cultivationtype:13 ;
+    owl:disjointWith cultivationtype:480 .
 
 cultivationtype:931 a :CultivationType ;
     schema:name "Artenreiche Grün- und Streueflächen im Sömmerungsgebiet"@de,
@@ -3716,7 +3719,7 @@ cultivationtype:1079 a :CultivationType ;
 cultivationtype:1080 a :CultivationType ;
     schema:name "Intensive Weiden und Mähweiden"@de ;
     schema:alternateName "Weide (Mäh-) intensiv"@de ;
-    rdfs:subClassOf cultivationtype:616 ;
+    rdfs:subClassOf cultivationtype:3 ;
     :managementIntensity intensity:Intensive .
 
 cultivationtype:1081 a :CultivationType ;
