@@ -146,8 +146,9 @@ cultivationtype:13 a :CultivationType ;
     schema:name "Sömmerungsfläche"@de,
         "Surface d’estivage"@fr,
         "Superfici d’estivazione"@it ;
+    schema:description "Als Sömmerungsfläche gelten die Gemeinschaftsweiden, Sömmerungsweiden und Heuwiesen, deren Ertrag für die Zufütterung während der Sömmerung verwendet wird (Art. 24 LBV)."@de ;
     rdfs:subClassOf :Cultivation ;
-    owl:disjointWith cultivationtype:21 , cultivationtype:601 .
+    owl:disjointWith cultivationtype:21 , cultivationtype:601, cultivationtype:464 .
 
 cultivationtype:14 a :CultivationType ;
     schema:name "Getreide"@de,
@@ -978,7 +979,7 @@ cultivationtype:182 a :CultivationType ;
     schema:name "Kleegrasmischung (Kunstwiese)"@de,
         "mélange trèfles-graminées (prairie arificielle)"@fr,
         "Miscela trifoglio-graminacee (prati artificiali)"@it ;
-    rdfs:subClassOf cultivationtype:116 .
+    rdfs:subClassOf cultivationtype:601 .
 
 cultivationtype:183 a :CultivationType ;
     schema:name "Linse"@de,
@@ -1891,7 +1892,8 @@ cultivationtype:463 a :CultivationType ;
 cultivationtype:464 a :CultivationType ;
     schema:name "Landwirtschaftliche Nutzfläche"@de ;
     schema:description "Als landwirtschaftliche Nutzfläche (LN) gilt die einem Betrieb zugeordnete, für den Pflanzenbau genutzte Fläche ohne die Sömmerungsfläche, die dem Bewirtschafter oder der Bewirtschafterin ganzjährig zur Verfügung steht und die ausschliesslich vom Betrieb aus bewirtschaftet wird."@de ;
-    rdfs:subClassOf :Cultivation .
+    rdfs:subClassOf :Cultivation ;
+    owl:disjointWith cultivationtype:12 .
 
 cultivationtype:465 a :CultivationType ;
     schema:name "Spezialkulturen"@de ;
@@ -2721,7 +2723,7 @@ cultivationtype:625 a :CultivationType ;
     schema:name "Waldweiden (ohne bewaldete Fläche)"@de,
         "Pâturages boisés (sauf surfaces boisées)"@fr,
         "Pascoli boschivi (senza i boschi)"@it ;
-    rdfs:subClassOf cultivationtype:21 .
+    rdfs:subClassOf cultivationtype:3 .
 
 cultivationtype:631 a :CultivationType ;
     schema:name "Futterleguminosen für die Samenproduktion (Vertragsanbau)"@de,
@@ -2790,7 +2792,7 @@ cultivationtype:697 a :CultivationType ;
     schema:name "Beitragsberechtigte übrige Dauergrünfläche"@de,
         "Autres surfaces herbagères (surface herbagère permanente) avec contributions"@fr,
         "Altre superfici (permanentemente) inerbite, con contributi"@it ;
-    rdfs:subClassOf cultivationtype:2 .
+    rdfs:subClassOf cultivationtype:21 .
 
 cultivationtype:698 a :CultivationType ;
     schema:name "Nicht beitragsberechtigte übrige Dauergrünflächen"@de,
@@ -3136,7 +3138,7 @@ cultivationtype:895 a :CultivationType ;
     schema:name "Dauergrünfläche übrige Flächen innerhalb der LN"@de,
         "Autres surfaces dans la SAU donnant droit aux contributions"@fr,
         "Altre superfici all'interno della SAU, aventi diritto ai contributi"@it ;
-    rdfs:subClassOf cultivationtype:10 .
+    rdfs:subClassOf cultivationtype:21 .
 
 cultivationtype:897 a :CultivationType ;
     schema:name "Übrige beitragsberechtigte Flächen innerhalb der landwirtschaftlichen Nutzfläche"@de,
@@ -3748,7 +3750,7 @@ cultivationtype:1085 a :CultivationType ;
         "Pâturages et pâturages de fauche moyennement intensifs"@fr,
         "Pascoli e pascoli da sfalcio medio-intensivi"@it ;
     schema:alternateName "Weide (Mäh-) mittelintensiv"@de ;
-    rdfs:subClassOf cultivationtype:616 ;
+    rdfs:subClassOf cultivationtype:3 ;
     :managementIntensity intensity:Medium .
 
 cultivationtype:1086 a :CultivationType ;
@@ -4001,7 +4003,7 @@ cultivationtype:1126 a :CultivationType ;
     schema:name "Wenig intensiv genutzte Weiden"@de,
         "Pâturages peu intensifs"@fr,
         "Pascoli poco intensivi"@it ;
-    rdfs:subClassOf cultivationtype:616 ;
+    rdfs:subClassOf cultivationtype:3 ;
     :managementIntensity intensity:Low .
 
 cultivationtype:1127 a :CultivationType ;
