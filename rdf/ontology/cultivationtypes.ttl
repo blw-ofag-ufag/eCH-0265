@@ -1748,7 +1748,7 @@ cultivationtype:338 a :CultivationType ;
 cultivationtype:339 a :CultivationType ;
     schema:name "Windengewächse"@de,
         "convolvulacées"@fr ;
-    rdfs:subClassOf cultivationtype:35 .
+    rdfs:subClassOf cultivationtype:22 .
 
 cultivationtype:400 a :CultivationType ;
     schema:name "Baby-Leaf"@de,
@@ -4065,7 +4065,7 @@ cultivationtype:1137 a :CultivationType ;
     schema:name "Süsskartoffeln"@de,
         "Patates douces"@fr,
         "Patate dolci"@it ;
-    rdfs:subClassOf cultivationtype:24 .
+    rdfs:subClassOf cultivationtype:24, cultivationtype:339 .
 
 cultivationtype:1138 a :CultivationType ;
     schema:name "Tafeltrauben, hoher Ertrag"@de,
