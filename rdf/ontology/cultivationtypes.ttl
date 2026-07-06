@@ -1569,13 +1569,6 @@ cultivationtype:306 a :CultivationType ;
     schema:alternateName "Petersilienwurzel"@de ;
     rdfs:subClassOf cultivationtype:327 .
 
-cultivationtype:307 a :CultivationType ;
-    schema:name "Kichererbse"@de,
-        "chickpea"@en,
-        "pois chiche"@fr,
-        "cece"@it ;
-    rdfs:subClassOf cultivationtype:15 .
-
 cultivationtype:308 a :CultivationType ;
     schema:name "Rosmarin"@de,
         "Rosemary"@en,
@@ -2304,7 +2297,7 @@ cultivationtype:540 a :CultivationType ;
     schema:name "Kichererbsen"@de,
         "Pois chiches"@fr,
         "Ceci"@it ;
-    rdfs:subClassOf cultivationtype:15 .
+    rdfs:subClassOf cultivationtype:15, cultivationtype:47 .
 
 cultivationtype:541 a :CultivationType ;
     schema:name "Tabak"@de,

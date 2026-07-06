@@ -2429,7 +2429,7 @@ psm:307 a :PlantProtectionCrop  ;
         "pois chiche"@fr,
         "cece"@it ;
     schema:version 0 ;
-    :cultivationType cultivationtype:307 .
+    :cultivationType cultivationtype:540 .
 
 psm:308 a :PlantProtectionCrop  ;
     schema:identifier "14B19DFD-331F-4C30-8724-8EDDF8E2D0D4" ;
