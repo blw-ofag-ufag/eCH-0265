@@ -2713,7 +2713,7 @@ psm:337 a :PlantProtectionCrop ;
         "Amaryllidaceae"@en,
         "Amaryllidaceae"@it ;
     schema:version 0 ;
-    :cultivationType cultivationtype:337 .
+    :cultivationType cultivationtype:188 .
 
 psm:338 a :PlantProtectionCrop ;
     schema:identifier "C27B142E-1F10-46E0-A1CA-2ACCDA029027" ;

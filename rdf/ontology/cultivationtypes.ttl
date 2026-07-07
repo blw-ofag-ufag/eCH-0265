@@ -1728,10 +1728,6 @@ cultivationtype:335 a :CultivationType ;
         "Peperone"@it ;
     rdfs:subClassOf cultivationtype:175 .
 
-cultivationtype:337 a :CultivationType ;
-    schema:name "Amaryllisgewächse"@de ;
-    rdfs:subClassOf cultivationtype:22 .
-
 cultivationtype:338 a :CultivationType ;
     schema:name "Aprikosenanlage"@de,
         "Verger d'abricotiers"@fr,
