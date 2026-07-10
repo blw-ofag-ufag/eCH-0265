@@ -265,7 +265,7 @@ cultivationtype:33 a :CultivationType ;
         "Valerian"@en,
         "valériane"@fr,
         "Valeriana"@it ;
-    rdfs:subClassOf cultivationtype:22 .
+    rdfs:subClassOf cultivationtype:209 .
 
 cultivationtype:34 a :CultivationType ;
     schema:name "Begonia"@de,
@@ -355,7 +355,7 @@ cultivationtype:55 a :CultivationType ;
     schema:name "Kräuter"@de,
         "herbes"@fr,
         "Erbe"@it ;
-    rdfs:subClassOf cultivationtype:22 .
+    rdfs:subClassOf cultivationtype:35 .
 
 cultivationtype:56 a :CultivationType ;
     schema:name "Brassica rapa-Rüben"@de,
