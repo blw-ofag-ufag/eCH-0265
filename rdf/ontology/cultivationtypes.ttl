@@ -408,7 +408,7 @@ cultivationtype:67 a :CultivationType ;
     schema:name "Küchenkräuter"@de,
         "fines herbes"@fr,
         "Erbette da cucina"@it ;
-    rdfs:subClassOf cultivationtype:22 .
+    rdfs:subClassOf cultivationtype:35 .
 
 cultivationtype:68 a :CultivationType ;
     schema:name "Luzerne"@de,
