@@ -756,7 +756,7 @@ cultivationtype:137 a :CultivationType ;
         "Saint-John's-wort"@en,
         "millepertuis"@fr,
         "Iperico"@it ;
-    rdfs:subClassOf cultivationtype:35 .
+    rdfs:subClassOf cultivationtype:83 .
 
 cultivationtype:138 a :CultivationType ;
     schema:name "Nostranogurken"@de,
