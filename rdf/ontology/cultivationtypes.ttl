@@ -1454,7 +1454,7 @@ cultivationtype:282 a :CultivationType ;
     schema:name "Stielmus"@de,
         "navet à tondre"@fr,
         "Cavoli / rape da taglio"@it ;
-    rdfs:subClassOf cultivationtype:48 .
+    rdfs:subClassOf cultivationtype:475 .
 
 cultivationtype:283 a :CultivationType ;
     schema:name "Kirsche"@de,
