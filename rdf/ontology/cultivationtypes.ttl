@@ -470,7 +470,7 @@ cultivationtype:80 a :CultivationType ;
         "Black mulberry"@en,
         "mûrier noir"@fr,
         "Moro nero"@it ;
-    rdfs:subClassOf cultivationtype:719 .
+    rdfs:subClassOf cultivationtype:471 .
 
 cultivationtype:81 a :CultivationType ;
     schema:name "Kopfkohle"@de,
