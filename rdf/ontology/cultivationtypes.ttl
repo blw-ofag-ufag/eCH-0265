@@ -488,7 +488,7 @@ cultivationtype:84 a :CultivationType ;
     schema:name "Bodenkohlrabi"@de,
         "rutabaga"@fr,
         "Cavolo navone"@it ;
-    rdfs:subClassOf cultivationtype:48 .
+    rdfs:subClassOf cultivationtype:115 .
 
 cultivationtype:85 a :CultivationType ;
     schema:name "Tomaten"@de,
