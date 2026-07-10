@@ -501,7 +501,7 @@ cultivationtype:86 a :CultivationType ;
     schema:name "Kohlrabi"@de,
         "colrave"@fr,
         "Cavolo rapa"@it ;
-    rdfs:subClassOf cultivationtype:48 .
+    rdfs:subClassOf cultivationtype:25 .
 
 cultivationtype:87 a :CultivationType ;
     schema:name "Federkohl"@de,
