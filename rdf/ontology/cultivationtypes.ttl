@@ -695,7 +695,7 @@ cultivationtype:123 a :CultivationType ;
         "rose hip"@en,
         "cynorhodon"@fr,
         "rosa canina"@it ;
-    rdfs:subClassOf cultivationtype:797 .
+    rdfs:subClassOf cultivationtype:797, cultivationtype:471 .
 
 cultivationtype:124 a :CultivationType ;
     schema:name "Bohnen mit Hülsen"@de,
