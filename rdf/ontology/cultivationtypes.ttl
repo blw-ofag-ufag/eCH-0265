@@ -701,7 +701,7 @@ cultivationtype:124 a :CultivationType ;
     schema:name "Bohnen mit Hülsen"@de,
         "haricots non écossés"@fr,
         "Fagioli con baccello"@it ;
-    rdfs:subClassOf cultivationtype:22 .
+    rdfs:subClassOf cultivationtype:476 .
 
 cultivationtype:125 a :CultivationType ;
     schema:name "Quitte"@de,
