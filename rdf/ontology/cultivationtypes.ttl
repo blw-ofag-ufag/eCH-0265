@@ -2293,7 +2293,7 @@ cultivationtype:540 a :CultivationType ;
     schema:name "Kichererbsen"@de,
         "Pois chiches"@fr,
         "Ceci"@it ;
-    rdfs:subClassOf cultivationtype:15, cultivationtype:47 .
+    rdfs:subClassOf cultivationtype:15 .
 
 cultivationtype:541 a :CultivationType ;
     schema:name "Tabak"@de,
