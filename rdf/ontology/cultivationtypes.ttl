@@ -4002,6 +4002,13 @@ cultivationtype:1128 a :CultivationType ;
         "Fragole pluriennali"@it ;
     rdfs:subClassOf cultivationtype:223 .
 
+cultivationtype:1129 a :CultivationType ;
+    schema:name "Süsskartoffeln (Freiland)"@de,
+        "Patates douces (pleine terre)"@fr,
+        "Patate dolci (pieno campo)"@it ;
+    rdfs:subClassOf cultivationtype:1137, 
+        cultivationtype:24 .
+
 cultivationtype:1130 a :CultivationType ;
     schema:name "Erdbeeren-Jungpflanzen (Tray-Pflanzen)"@de,
         "Jeunes plants de fraisiers (plants en mottes/tray)"@fr,
