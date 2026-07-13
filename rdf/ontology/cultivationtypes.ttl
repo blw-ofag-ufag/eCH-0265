@@ -2471,7 +2471,7 @@ cultivationtype:568 a :CultivationType ;
     schema:name "Linsen"@de,
         "Lentilles"@fr,
         "Lenticchie"@it ;
-    rdfs:subClassOf cultivationtype:15, cultivationtype:47 .
+    rdfs:subClassOf cultivationtype:15 .
 
 cultivationtype:569 a :CultivationType ;
 schema:name "Mischungen von Bohnen, Wicken, Erbsen, Kichererbsen und Lupinen mit Getreide oder Leindotter"@de,
