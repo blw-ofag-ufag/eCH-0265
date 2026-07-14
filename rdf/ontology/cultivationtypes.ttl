@@ -2798,7 +2798,7 @@ cultivationtype:698 a :CultivationType ;
     schema:name "Nicht beitragsberechtigte übrige Dauergrünflächen"@de,
         "Autres surfaces herbagères (surface herbagère permanente) sans contributions"@fr,
         "Altre superfici (permanentemente) inerbite, senza contributi"@it ;
-    rdfs:subClassOf cultivationtype:2 .
+    rdfs:subClassOf cultivationtype:21 .
 
 cultivationtype:701 a :CultivationType ;
     schema:name "Reben (ohne regionsspezifische Biodiversitätsförderflächen)"@de ;
