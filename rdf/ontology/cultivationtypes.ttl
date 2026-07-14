@@ -265,7 +265,7 @@ cultivationtype:33 a :CultivationType ;
         "Valerian"@en,
         "valériane"@fr,
         "Valeriana"@it ;
-    rdfs:subClassOf cultivationtype:22 .
+    rdfs:subClassOf cultivationtype:209 .
 
 cultivationtype:34 a :CultivationType ;
     schema:name "Begonia"@de,
@@ -355,7 +355,7 @@ cultivationtype:55 a :CultivationType ;
     schema:name "Kräuter"@de,
         "herbes"@fr,
         "Erbe"@it ;
-    rdfs:subClassOf cultivationtype:22 .
+    rdfs:subClassOf cultivationtype:35 .
 
 cultivationtype:56 a :CultivationType ;
     schema:name "Brassica rapa-Rüben"@de,
@@ -408,7 +408,7 @@ cultivationtype:67 a :CultivationType ;
     schema:name "Küchenkräuter"@de,
         "fines herbes"@fr,
         "Erbette da cucina"@it ;
-    rdfs:subClassOf cultivationtype:22 .
+    rdfs:subClassOf cultivationtype:35 .
 
 cultivationtype:68 a :CultivationType ;
     schema:name "Luzerne"@de,
@@ -470,7 +470,7 @@ cultivationtype:80 a :CultivationType ;
         "Black mulberry"@en,
         "mûrier noir"@fr,
         "Moro nero"@it ;
-    rdfs:subClassOf cultivationtype:719 .
+    rdfs:subClassOf cultivationtype:471 .
 
 cultivationtype:81 a :CultivationType ;
     schema:name "Kopfkohle"@de,
@@ -488,7 +488,7 @@ cultivationtype:84 a :CultivationType ;
     schema:name "Bodenkohlrabi"@de,
         "rutabaga"@fr,
         "Cavolo navone"@it ;
-    rdfs:subClassOf cultivationtype:48 .
+    rdfs:subClassOf cultivationtype:115 .
 
 cultivationtype:85 a :CultivationType ;
     schema:name "Tomaten"@de,
@@ -501,7 +501,7 @@ cultivationtype:86 a :CultivationType ;
     schema:name "Kohlrabi"@de,
         "colrave"@fr,
         "Cavolo rapa"@it ;
-    rdfs:subClassOf cultivationtype:48 .
+    rdfs:subClassOf cultivationtype:25 .
 
 cultivationtype:87 a :CultivationType ;
     schema:name "Federkohl"@de,
@@ -701,7 +701,7 @@ cultivationtype:124 a :CultivationType ;
     schema:name "Bohnen mit Hülsen"@de,
         "haricots non écossés"@fr,
         "Fagioli con baccello"@it ;
-    rdfs:subClassOf cultivationtype:22 .
+    rdfs:subClassOf cultivationtype:476 .
 
 cultivationtype:125 a :CultivationType ;
     schema:name "Quitte"@de,
@@ -756,7 +756,7 @@ cultivationtype:137 a :CultivationType ;
         "Saint-John's-wort"@en,
         "millepertuis"@fr,
         "Iperico"@it ;
-    rdfs:subClassOf cultivationtype:35 .
+    rdfs:subClassOf cultivationtype:83 .
 
 cultivationtype:138 a :CultivationType ;
     schema:name "Nostranogurken"@de,
@@ -1454,7 +1454,7 @@ cultivationtype:282 a :CultivationType ;
     schema:name "Stielmus"@de,
         "navet à tondre"@fr,
         "Cavoli / rape da taglio"@it ;
-    rdfs:subClassOf cultivationtype:48 .
+    rdfs:subClassOf cultivationtype:475 .
 
 cultivationtype:283 a :CultivationType ;
     schema:name "Kirsche"@de,
@@ -1568,13 +1568,6 @@ cultivationtype:306 a :CultivationType ;
         "Prezzemolo tuberoso"@it ;
     schema:alternateName "Petersilienwurzel"@de ;
     rdfs:subClassOf cultivationtype:327 .
-
-cultivationtype:307 a :CultivationType ;
-    schema:name "Kichererbse"@de,
-        "chickpea"@en,
-        "pois chiche"@fr,
-        "cece"@it ;
-    rdfs:subClassOf cultivationtype:15 .
 
 cultivationtype:308 a :CultivationType ;
     schema:name "Rosmarin"@de,
@@ -1735,10 +1728,6 @@ cultivationtype:335 a :CultivationType ;
         "Peperone"@it ;
     rdfs:subClassOf cultivationtype:175 .
 
-cultivationtype:337 a :CultivationType ;
-    schema:name "Amaryllisgewächse"@de ;
-    rdfs:subClassOf cultivationtype:22 .
-
 cultivationtype:338 a :CultivationType ;
     schema:name "Aprikosenanlage"@de,
         "Verger d'abricotiers"@fr,
@@ -1748,7 +1737,7 @@ cultivationtype:338 a :CultivationType ;
 cultivationtype:339 a :CultivationType ;
     schema:name "Windengewächse"@de,
         "convolvulacées"@fr ;
-    rdfs:subClassOf cultivationtype:35 .
+    rdfs:subClassOf cultivationtype:22 .
 
 cultivationtype:400 a :CultivationType ;
     schema:name "Baby-Leaf"@de,
@@ -4013,6 +4002,13 @@ cultivationtype:1128 a :CultivationType ;
         "Fragole pluriennali"@it ;
     rdfs:subClassOf cultivationtype:223 .
 
+cultivationtype:1129 a :CultivationType ;
+    schema:name "Süsskartoffeln (Freiland)"@de,
+        "Patates douces (pleine terre)"@fr,
+        "Patate dolci (pieno campo)"@it ;
+    rdfs:subClassOf cultivationtype:1137, 
+        cultivationtype:24 .
+
 cultivationtype:1130 a :CultivationType ;
     schema:name "Erdbeeren-Jungpflanzen (Tray-Pflanzen)"@de,
         "Jeunes plants de fraisiers (plants en mottes/tray)"@fr,
@@ -4065,7 +4061,7 @@ cultivationtype:1137 a :CultivationType ;
     schema:name "Süsskartoffeln"@de,
         "Patates douces"@fr,
         "Patate dolci"@it ;
-    rdfs:subClassOf cultivationtype:24 .
+    rdfs:subClassOf cultivationtype:24, cultivationtype:339 .
 
 cultivationtype:1138 a :CultivationType ;
     schema:name "Tafeltrauben, hoher Ertrag"@de,

@@ -2392,7 +2392,7 @@ naebi:265 a :NutrientBalanceCrop  ;
     :P2O5 60.0 ;
     :cultivationCategory cultivationtype:465 ;
     :cultivationSubCategory cultivationtype:24 ;
-    :cultivationType cultivationtype:1137 .
+    :cultivationType cultivationtype:1129 .
 
 naebi:266 a :NutrientBalanceCrop  ;
     schema:identifier "CROP_SWHT" ;
