@@ -2648,7 +2648,7 @@ cultivationtype:602 a :CultivationType ;
     schema:description "Übrige Kunstwiese, beitragsberechtigt (z.B. Schweineweide, Geflügelweide)"@de,
         "Autres prairies artificielles donnant droit aux contributions (p.ex. pâturages pour porcs et volaille)"@fr,
         "Altri prati artificiali avente diritto ai contributi (p.es. pascoli riservati ai suini e al pollame)"@it ;
-    rdfs:subClassOf cultivationtype:1, cultivationtype:114 .
+    rdfs:subClassOf cultivationtype:1, cultivationtype:601 .
 
 cultivationtype:611 a :CultivationType ;
     schema:name "Extensiv genutzte Wiesen (ohne Weiden)"@de,
