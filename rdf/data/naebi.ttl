@@ -1788,7 +1788,7 @@ naebi:214 a :NutrientBalanceCrop  ;
     :P2O5 0.0 ;
     :cultivationCategory cultivationtype:464 ;
     :cultivationSubCategory cultivationtype:463 ;
-    :cultivationType cultivationtype:634 .
+    :cultivationType cultivationtype:635 .
 
 naebi:215 a :NutrientBalanceCrop  ;
     schema:identifier "CROP_RJEYH" ;
