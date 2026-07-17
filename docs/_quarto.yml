@@ -1,0 +1,43 @@
+project:
+  output-dir: ../build/docs/
+  type: website
+  render:
+    - de/index.qmd
+    - fr/index.qmd
+    - en/index.qmd
+
+website:
+  repo-url: https://github.com/blw-ofag-ufag/eCH-0265
+  repo-subdir: docs
+  repo-actions: [source, issue]
+  favicon: assets/favicon.svg
+  navbar:
+    right:
+      - text: Language
+        icon: globe
+        menu:
+          - text: English
+            href: /en/index.html
+          - text: Deutsch
+            href: /de/index.html
+          - text: Français
+            href: /fr/index.html
+      - icon: github
+        href: https://github.com/blw-ofag-ufag/eCH-0265
+      - icon: envelope
+        href: mailto:agridata.ch@blw.admin.ch
+
+bibliography: references.bib
+
+format:
+  html:
+    toc: true
+    number-sections: true
+  gfm: 
+    toc: true
+    number-sections: true
+  docx:
+    toc: true
+    reference-doc: https://s.zazuko.com/MHXTkQ
+    link-citations: true
+  typst: default

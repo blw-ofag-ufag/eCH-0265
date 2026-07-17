@@ -1,0 +1,5 @@
+*.ttl linguist-detectable=true
+*.rq linguist-detectable=true
+*.yml linguist-detectable=true
+*.md linguist-detectable=true
+*.qmd linguist-detectable=true linguist-documentation=false

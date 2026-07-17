@@ -1,0 +1,44 @@
+# ==============================================================================
+# PREFIXES USED FOR THIS PROJECT
+# (Try to keep all the QNames used in this project in this file)
+# ==============================================================================
+
+# Project-specific namespaces/qnames
+@prefix :                <http://example.org/> .
+@prefix address:         <http://example.org/address/> .
+@prefix album:           <http://example.org/album/> .
+@prefix artist:          <http://example.org/artist/> .
+@prefix customer:        <http://example.org/customer/> .
+@prefix employee:        <http://example.org/employee/> .
+@prefix genre:           <http://example.org/genre/> .
+@prefix invline:         <http://example.org/invoiceline/> .
+@prefix invoice:         <http://example.org/invoice/> .
+@prefix media:           <http://example.org/mediatype/> .
+@prefix playlist:        <http://example.org/playlist/> .
+@prefix track:           <http://example.org/tracks/> .
+@prefix person:          <http://example.org/person/> .
+
+# LINDAS-specific namespaces/qnames
+@prefix org:             <https://register.ld.admin.ch/opendataswiss/org/> .
+@prefix cube:            <https://cube.link/> .
+@prefix meta:            <https://cube.link/meta/> .
+@prefix status:          <https://ld.admin.ch/vocabulary/CreativeWorkStatus/> .
+@prefix theme:           <https://register.ld.admin.ch/opendataswiss/category/> .
+
+# Globally used namespaces/qnames
+@prefix adms:            <https://www.w3.org/ns/adms#> .
+@prefix dcat:            <http://www.w3.org/ns/dcat#> .
+@prefix dcterms:         <http://purl.org/dc/terms/> .
+@prefix doap:            <http://usefulinc.com/ns/doap#> .
+@prefix frequency:       <https://publications.europa.eu/resource/authority/frequency/> .
+@prefix owl:             <http://www.w3.org/2002/07/owl#> .
+@prefix qudt:            <http://qudt.org/schema/qudt/> .
+@prefix rdf:             <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:            <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema:          <http://schema.org/> .
+@prefix sh:              <http://www.w3.org/ns/shacl#> .
+@prefix unit:            <http://qudt.org/vocab/unit/> .
+@prefix vcard:           <http://www.w3.org/2006/vcard/ns#> .
+@prefix void:            <http://rdfs.org/ns/void#> .
+@prefix wikidata:        <http://www.wikidata.org/entity/> .
+@prefix xsd:             <http://www.w3.org/2001/XMLSchema#> .

@@ -1,0 +1,75 @@
+---
+title: eCH-1234 Quarto-Dokument als Vorlage
+abstract: Kurze Zusammenfassung des Zwecks dieses Dokuments
+date: today
+date-format: long
+lang: de
+---
+
+# Hinweis {.unnumbered}
+
+Im vorliegenden Dokument wird bei der Bezeichnung von Personen eine geschlechtsneutrale Formulierung verwendet. Basis bildet der Leitfaden der Bundeskanzlei. Je nach Situation kommen Paarformen (Bürgerinnen und Bürger), geschlechtsabstrakte Formen (versicherte Person), geschlechtsneutrale Formen (Versicherte) oder Umschreibungen ohne Personenbezug zum Einsatz. Das generische Maskulin (Bürger) ist nicht zulässig. Vollformen werden in fortlaufenden Texten verwendet, also in Texten, die aus ausformulierten Sätzen bestehen. In verknappten Textpassagen, namentlich in Tabellen, können Kurzformen verwendet werden. Dabei wird die Kurzform mit Schrägstrich, aber ohne Auslassungsstrich verwendet (Referent/in). Genderstern und ähnliche Schreibweisen werden nicht verwendet.
+
+# Einleitung
+
+## Status
+
+TODO
+
+## Geltungsbereich
+
+TODO
+
+# Einführung
+
+Das vorliegende Dokument ist ein Hilfsmittel zur harmonisierten, systemübergreifenden Nutzung von landwirtschaftlichen Kulturdaten in der Schweiz. Gegenüber der Version 1.1.0 (eCH-0265 Datenstandard Agrardaten – Flächen und Kulturen) wurde das Dokument von einem unverbindlichen Standard zu einem Hilfsmittel umgewandelt. Gleichzeitig wurde der inhaltliche Fokus geschärft: Die Übertragung von Geometrien/Flächen[^1], Sorten sowie Direktzahlungsprogrammen ist nicht mehr Teil dieses Dokuments[^2]. Neu enthalten sind dafür die Kulturen aus dem Pflanzenschutzmittelverzeichnis.
+
+[^1]: Die Erhebung von landwirtschaftlichen Nutzflächen wird mit dem […] spezifiziert.
+
+[^2]: Eine spätere Wiederaufnahme von Sorten und Programmen bleibt vorbehalten.
+
+Im Zentrum der Version 2.0.0 stehen die Repräsentationen von Kultur-Kategorien aus drei verschiedenen Bereichen (Direktzahlungen, Nährstoffbilanz und Pflanzenschutz) im Zentrum. Das Hilfsmittel soll dabei dienen, die Kulturen aus einem Bereich fachlich korrekt auf diejenigen in einem anderen Bereich übersetzen zu können.
+
+Dies wird über eine zentrale Ontologie erreicht, mit welcher die landwirtschaftlichen Kulturen aus den verschiedenen Bereichen verbunden sind. Damit schafft dieses Hilfsmittel eine zentrale Datenquelle, welche in verschiedenen maschinenlesbaren Formaten über die LINDAS-Plattform in Form von Linked Data bezogen werden kann.
+
+# Datenmodell
+
+{{< include entities.md >}}
+
+# Sicherheitsaspekte
+
+Informationen zu den ausdrücklich massgeblichen rechtlichen Grundlagen oder ein Hinweis darauf, dass bei der Umsetzung die entsprechenden rechtlichen Grundlagen zu beachten sind.
+
+# Haftungsausschluss
+
+eCH-Standards, die der Verein eCH dem Anwender kostenlos zur Verfügung stellt oder die auf eCH verweisen, haben nur den Status von Empfehlungen. Der Verein eCH haftet in keinem Fall für Entscheidungen oder Massnahmen, die der Anwender auf der Grundlage dieser Dokumente trifft bzw. ergreift. Der Anwender ist dafür verantwortlich, die Dokumente vor ihrer Verwendung selbst zu überprüfen und gegebenenfalls fachlichen Rat einzuholen. eCH-Standards können und sollen die technische, organisatorische oder rechtliche Beratung im Einzelfall nicht ersetzen.
+
+Dokumente, Verfahren, Methoden, Produkte und Standards, auf die in eCH-Standards verwiesen wird, sind möglicherweise durch Marken-, Urheber- oder Patentrechte geschützt. Es liegt in der ausschliesslichen Verantwortung des Anwenders, die erforderlichen Lizenzen von den berechtigten Personen und/oder Organisationen einzuholen.
+
+Obwohl der Verein eCH bei der Erstellung der eCH-Standards mit angemessener Sorgfalt vorgegangen ist, kann er keine Gewährleistung oder Garantie dafür übernehmen, dass die bereitgestellten Informationen und Dokumente aktuell, vollständig, richtig oder fehlerfrei sind. eCH behält sich das Recht vor, die Inhalte der eCH-Standards jederzeit und ohne vorherige Ankündigung zu ändern.
+
+Jede Haftung für Schäden, die durch die Nutzung der eCH-Standards durch den Anwender entstehen, wird im gesetzlich zulässigen Rahmen ausgeschlossen.
+
+# Urheberrechte
+
+Personen, die eCH-Standards erarbeiten, bleiben Inhaber ihrer geistigen Eigentumsrechte. Diese Personen verpflichten sich jedoch, ihre geistigen Eigentumsrechte oder andere Rechte an geistigen Eigentumsrechten Dritter, soweit möglich, den jeweiligen Fachgruppen und dem Verein eCH kostenlos und zur uneingeschränkten Nutzung und Weiterentwicklung im Rahmen des Vereinszwecks zur Verfügung zu stellen.
+
+Die von den Fachgruppen erarbeiteten Standards dürfen unter Nennung des jeweiligen Autors von eCH kostenlos und in uneingeschränktem Umfang genutzt, verbreitet und weiterentwickelt werden.
+
+eCH-Standards sind vollständig dokumentiert und frei von lizenz- und/oder patentrechtlichen Einschränkungen. Die dazugehörige Dokumentation kann kostenlos angefordert werden.
+Diese Bestimmungen gelten jedoch nur für die von eCH erarbeiteten Standards, nicht aber für Standards oder Produkte Dritter, die auf eCH-Standards verweisen. Die Standards enthalten die entsprechenden Hinweise auf Rechte Dritter.
+
+# Anhang A - Referenzen {.appendix}
+
+::: {#refs}
+:::
+
+# Anhang B - Mitwirkung & Prüfung {.appendix}
+
+# Anhang C - Abkürzungen und Glossar {.appendix}
+
+# Anhang D - Änderungen gegenüber der Vorversion {.appendix}
+
+# Anhang E - Abbildungsverzeichnis {.appendix}
+
+# Anhang F - Tabellenverzeichnis {.appendix}
