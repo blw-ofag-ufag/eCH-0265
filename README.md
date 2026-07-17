@@ -2,9 +2,11 @@
 [![GitHub last commit](https://img.shields.io/github/last-commit/blw-ofag-ufag/semantic-web-template.svg)](https://github.com/blw-ofag-ufag/eCH-0265/commits)
 [![GitHub issues](https://img.shields.io/github/issues/blw-ofag-ufag/semantic-web-template.svg)](https://github.com/blw-ofag-ufag/eCH-0265/issues)
 
-# Semantic web project template
+# eCH-0265 Agricultural Crops
 
-For demonstrative purposes, this template repository includes a full semantic web pipeline, including
+This resource contains a data model for agricultural crops in Switzerland as well as associated reference objects, which can be retrieved in a machine-readable format as Linked Data. This aims to enable the domain-validated exchange and reuse of data between the fields of direct payments, nutrient balancing, and plant protection.
+
+This template repository includes a full semantic web pipeline, including
  
 1. manual data curation (data files in `src/rdf/data`),
 2. data integration from a relational database (using python, specifically `src/python/pipeline/...`),
@@ -14,11 +16,6 @@ For demonstrative purposes, this template repository includes a full semantic we
 6. a even more customizable Pytest test suite,
 7. uploading of the final graph to LINDAS
 8. a documentation building pipeline using Quarto
-
-Specifically, this demo project creates a graph of around 120k triples from the Chinook database, makes some inferences, processes and validates the graph.
-
-> [!IMPORTANT]
-> After using this template repository for a project, you probably want to delete/overwrite any of the aforementioned turtle/sparql/python files.
 
 ## Development Tools
 
