@@ -1,0 +1,2040 @@
+@prefix : <https://agriculture.ld.admin.ch/crops/> .
+@prefix agis: <https://agriculture.ld.admin.ch/crops/agis/1/> .
+@prefix shape: <https://agriculture.ld.admin.ch/crops/shape/> .
+@prefix cultivationtype: <https://agriculture.ld.admin.ch/crops/cultivationtype/> .
+
+@prefix cube: <https://cube.link/> .
+@prefix meta: <https://cube.link/meta/> .
+
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix qudt: <http://qudt.org/schema/qudt/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix schema: <http://schema.org/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix void: <http://rdfs.org/ns/void#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix theme: <https://register.ld.admin.ch/opendataswiss/category/> .
+@prefix blw: <https://register.ld.admin.ch/opendataswiss/org/bundesamt-fur-landwirtschaft-blw> .
+@prefix frequency: <http://publications.europe.eu/resource/authority/frequency> .
+@prefix status: <https://ld.admin.ch/vocabulary/CreativeWorkStatus/> .
+
+# ==============================================================================
+# DATASET METADATA
+# ==============================================================================
+
+agis: a void:Dataset,
+        schema:Dataset,
+        dcat:Dataset,
+        cube:Cube ;
+    dcterms:accrualPeriodicity frequency:ANNUAL ;
+    dcterms:creator blw: ;
+    schema:contributor blw: ;
+    schema:creativeWorkStatus status:Draft ;
+    schema:creator blw: ;
+    schema:dateCreated "2026-03-02"^^xsd:date ;
+    schema:datePublished "2026-03-02"^^xsd:date ;
+    schema:description "Direktzahlungkulturen, ihre Codes und deren zeitliche Gültigkeit."@de,
+        "Direct payment crops, their codes and their temporal validity."@en ;
+    schema:name "Direktzahlungskulturen"@de,
+        "Direct payment crops"@en ;
+    schema:publisher blw: ;
+    schema:version "1.7" ;
+    schema:workExample <https://ld.admin.ch/application/visualize> ;
+    dcat:contactPoint
+        [
+            a vcard:Organization ;
+            vcard:fn "Bundesamt für Landwirtschaft"^^xsd:string ;
+            vcard:hasEmail "info@blw.admin.ch"^^xsd:string
+        ] ;
+    dcat:theme theme:administration,
+        theme:agriculture ;
+    cube:observationConstraint shape:DirectPaymentCrop ;
+    cube:observationSet agis:ObservationSet .
+
+
+# ==============================================================================
+# OBSERVATION SET
+# ==============================================================================
+
+agis:ObservationSet a cube:ObservationSet ;
+    cube:observation
+        agis:501,
+        agis:502,
+        agis:504,
+        agis:505,
+        agis:506,
+        agis:507,
+        agis:508,
+        agis:509,
+        agis:510,
+        agis:511,
+        agis:512,
+        agis:513,
+        agis:514,
+        agis:515,
+        agis:516,
+        agis:517,
+        agis:519,
+        agis:520,
+        agis:521,
+        agis:522,
+        agis:523,
+        agis:524,
+        agis:525,
+        agis:526,
+        agis:527,
+        agis:528,
+        agis:529,
+        agis:531,
+        agis:532,
+        agis:533,
+        agis:534,
+        agis:535,
+        agis:536,
+        agis:537,
+        agis:538,
+        agis:539,
+        agis:540,
+        agis:541,
+        agis:542,
+        agis:543,
+        agis:544,
+        agis:545,
+        agis:546,
+        agis:547,
+        agis:548,
+        agis:549,
+        agis:551,
+        agis:552,
+        agis:553,
+        agis:554,
+        agis:555,
+        agis:556,
+        agis:557,
+        agis:558,
+        agis:559,
+        agis:561,
+        agis:562,
+        agis:563,
+        agis:564,
+        agis:565,
+        agis:566,
+        agis:567,
+        agis:568,
+        agis:569,
+        agis:570,
+        agis:571,
+        agis:572,
+        agis:573,
+        agis:574,
+        agis:575,
+        agis:576,
+        agis:577,
+        agis:578,
+        agis:579,
+        agis:580,
+        agis:581,
+        agis:590,
+        agis:591,
+        agis:592,
+        agis:594,
+        agis:595,
+        agis:597,
+        agis:598,
+        agis:601,
+        agis:602,
+        agis:611,
+        agis:612,
+        agis:613,
+        agis:616,
+        agis:617,
+        agis:618,
+        agis:619,
+        agis:621,
+        agis:622,
+        agis:623,
+        agis:625,
+        agis:631,
+        agis:632,
+        agis:633,
+        agis:634,
+        agis:635,
+        agis:693,
+        agis:694,
+        agis:695,
+        agis:697,
+        agis:698,
+        agis:701,
+        agis:702,
+        agis:703,
+        agis:704,
+        agis:705,
+        agis:706,
+        agis:707,
+        agis:708,
+        agis:709,
+        agis:710,
+        agis:711,
+        agis:712,
+        agis:713,
+        agis:714,
+        agis:715,
+        agis:716,
+        agis:717,
+        agis:718,
+        agis:719,
+        agis:720,
+        agis:721,
+        agis:722,
+        agis:723,
+        agis:724,
+        agis:725,
+        agis:731,
+        agis:735,
+        agis:797,
+        agis:798,
+        agis:801,
+        agis:802,
+        agis:803,
+        agis:804,
+        agis:806,
+        agis:807,
+        agis:808,
+        agis:810,
+        agis:811,
+        agis:812,
+        agis:813,
+        agis:814,
+        agis:847,
+        agis:848,
+        agis:849,
+        agis:851,
+        agis:852,
+        agis:857,
+        agis:858,
+        agis:895,
+        agis:897,
+        agis:898,
+        agis:901,
+        agis:902,
+        agis:903,
+        agis:904,
+        agis:905,
+        agis:906,
+        agis:907,
+        agis:908,
+        agis:909,
+        agis:911,
+        agis:921,
+        agis:922,
+        agis:923,
+        agis:924,
+        agis:925,
+        agis:926,
+        agis:927,
+        agis:928,
+        agis:929,
+        agis:930,
+        agis:931,
+        agis:933,
+        agis:935,
+        agis:936,
+        agis:998 .
+
+# ==============================================================================
+# OBSERVATIONS
+# ==============================================================================
+
+agis:501 a :DirectPaymentCrop ;
+    schema:identifier "501" ;
+    schema:name "Sommergerste"@de,
+        "Orge de printemps"@fr,
+        "Orzo primaverile"@it ;
+    schema:validFrom 1999 ;
+    schema:validTo cube:Undefined ;
+    :cultivationGroup cultivationtype:1 ;
+    :cultivationType cultivationtype:501 .
+
+agis:502 a :DirectPaymentCrop ;
+    schema:identifier "502" ;
+    schema:name "Wintergerste"@de,
+        "Orge d'automne"@fr,
+        "Orzo autunnale"@it ;
+    schema:validFrom 1999 ;
+    schema:validTo cube:Undefined ;
+    :cultivationGroup cultivationtype:1 ;
+    :cultivationType cultivationtype:502 .
+
+agis:504 a :DirectPaymentCrop ;
+    schema:identifier "504" ;
+    schema:name "Hafer"@de,
+        "Avoine"@fr,
+        "Avena"@it ;
+    schema:validFrom 1999 ;
+    schema:validTo cube:Undefined ;
+    :cultivationGroup cultivationtype:1 ;
+    :cultivationType cultivationtype:504 .
+
+agis:505 a :DirectPaymentCrop ;
+    schema:identifier "505" ;
+    schema:name "Triticale"@de,
+        "Triticale"@fr,
+        "Triticale"@it ;
+    schema:validFrom 1999 ;
+    schema:validTo cube:Undefined ;
+    :cultivationGroup cultivationtype:1 ;
+    :cultivationType cultivationtype:505 .
+
+agis:506 a :DirectPaymentCrop ;
+    schema:identifier "506" ;
+    schema:name "Mischel Futtergetreide"@de,
+        "Méteil de céréales fourragères"@fr,
+        "Miscela di cereali da foraggio"@it ;
+    schema:validFrom 1999 ;
+    schema:validTo cube:Undefined ;
+    :cultivationGroup cultivationtype:1 ;
+    :cultivationType cultivationtype:506 .
+
+agis:507 a :DirectPaymentCrop ;
+    schema:identifier "507" ;
+    schema:name "Futterweizen gemäss Sortenliste swiss granum"@de,
+        "Blé fourrager selon la liste swiss granum"@fr,
+        "Frumento da foraggio giusta la lista delle varietà di swiss granum"@it ;
+    schema:validFrom 2004 ;
+    schema:validTo cube:Undefined ;
+    :cultivationGroup cultivationtype:1 ;
+    :cultivationType cultivationtype:507 .
+
+agis:508 a :DirectPaymentCrop ;
+    schema:identifier "508" ;
+    schema:name "Körnermais"@de,
+        "Maïs grain"@fr,
+        "Mais da granella"@it ;
+    schema:validFrom 1999 ;
+    schema:validTo cube:Undefined ;
+    :cultivationGroup cultivationtype:1 ;
+    :cultivationType cultivationtype:508 .
+
+agis:509 a :DirectPaymentCrop ;
+    schema:identifier "509" ;
+    schema:name "Reis"@de,
+        "Riz"@fr,
+        "Riso"@it ;
+    schema:validFrom 2014 ;
+    schema:validTo 2022 ;
+    :cultivationGroup cultivationtype:1 ;
+    :cultivationType cultivationtype:509 .
+
+agis:510 a :DirectPaymentCrop ;
+    schema:identifier "510" ;
+    schema:name "Hartweizen"@de,
+        "Blé dur"@fr,
+        "Grano duro"@it ;
+    schema:validFrom 2023 ;
+    schema:validTo cube:Undefined ;
+    :cultivationGroup cultivationtype:1 ;
+    :cultivationType cultivationtype:510 .
+
+agis:511 a :DirectPaymentCrop ;
+    schema:identifier "511" ;
+    schema:name "Emmer, Einkorn"@de,
+        "Amidonnier, engrain"@fr,
+        "Farro, piccola spelta"@it ;
+    schema:validFrom 1999 ;
+    schema:validTo cube:Undefined ;
+    :cultivationGroup cultivationtype:1 ;
+    :cultivationType cultivationtype:511 .
+
+agis:512 a :DirectPaymentCrop ;
+    schema:identifier "512" ;
+    schema:name "Sommerweizen (ohne Futterweizen der Sortenliste swiss granum)"@de,
+        "Blé de printemps (sans le blé fourrager de la liste swiss granum)"@fr,
+        "Frumento primaverile (escl. il frumento da foraggio di swiss granum)"@it ;
+    schema:validFrom 1999 ;
+    schema:validTo cube:Undefined ;
+    :cultivationGroup cultivationtype:1 ;
+    :cultivationType cultivationtype:512 .
+
+agis:513 a :DirectPaymentCrop ;
+    schema:identifier "513" ;
+    schema:name "Winterweizen (ohne Futterweizen der Sortenliste swiss granum)"@de,
+        "Blé d'automne (sans le blé fourrager de la liste swiss granum)"@fr,
+        "Frumento autunnale (escl. il frumento da foraggio di swiss granum)"@it ;
+    schema:validFrom 1999 ;
+    schema:validTo cube:Undefined ;
+    :cultivationGroup cultivationtype:1 ;
+    :cultivationType cultivationtype:513 .
+
+agis:514 a :DirectPaymentCrop ;
+    schema:identifier "514" ;
+    schema:name "Roggen"@de,
+        "Seigle"@fr,
+        "Segale"@it ;
+    schema:validFrom 1999 ;
+    schema:validTo cube:Undefined ;
+    :cultivationGroup cultivationtype:1 ;
+    :cultivationType cultivationtype:514 .
+
+agis:515 a :DirectPaymentCrop ;
+    schema:identifier "515" ;
+    schema:name "Mischel Brotgetreide"@de,
+        "Méteil de céréales panifiables"@fr,
+        "Miscela di cereali panificabili"@it ;
+    schema:validFrom 1999 ;
+    schema:validTo cube:Undefined ;
+    :cultivationGroup cultivationtype:1 ;
+    :cultivationType cultivationtype:515 .
+
+agis:516 a :DirectPaymentCrop ;
+    schema:identifier "516" ;
+    schema:name "Dinkel"@de,
+        "Epeautre"@fr,
+        "Spelta"@it ;
+    schema:validFrom 1999 ;
+    schema:validTo cube:Undefined ;
+    :cultivationGroup cultivationtype:1 ;
+    :cultivationType cultivationtype:516 .
+
+agis:517 a :DirectPaymentCrop ;
+    schema:identifier "517" ;
+    schema:name "Getreide für die Saatgutproduktion"@de,
+        "Semences de céréales"@fr,
+        "Mais da semina (coltivazione contrattuale)"@it ;
+    schema:validFrom 2014 ;
+    schema:validTo 2015 ;
+    :cultivationGroup cultivationtype:1 ;
+    :cultivationType cultivationtype:517 .
+
+agis:519 a :DirectPaymentCrop ;
+    schema:identifier "519" ;
+    schema:name "Saatmais (Vertragsanbau)"@de,
+        "Semences de maïs (contrat de culture)"@fr,
+        "Mais da semina (coltivazione contrattuale)"@it ;
+    schema:validFrom 2009 ;
+    schema:validTo cube:Undefined ;
+    :cultivationGroup cultivationtype:1 ;
+    :cultivationType cultivationtype:519 .
+
+agis:520 a :DirectPaymentCrop ;
+    schema:identifier "520" ;
+    schema:name "Trockenreis"@de,
+        "Riz en culture sèche"@fr,
+        "Riso seminato su terreno asciutto"@it ;
+    schema:validFrom 2023 ;
+    schema:validTo cube:Undefined ;
+    :cultivationGroup cultivationtype:1 ;
+    :cultivationType cultivationtype:520 .
+
+agis:521 a :DirectPaymentCrop ;
+    schema:identifier "521" ;
+    schema:name "Silo- und Grünmais"@de,
+        "Maïs d'ensilage et maïs vert"@fr,
+        "Mais da insilamento e verde"@it ;
+    schema:validFrom 1999 ;
+    schema:validTo cube:Undefined ;
+    :cultivationGroup cultivationtype:1 ;
+    :cultivationType cultivationtype:521 .
+
+agis:522 a :DirectPaymentCrop ;
+    schema:identifier "522" ;
+    schema:name "Zuckerrüben"@de,
+        "Betteraves sucrières"@fr,
+        "Barbabietole da zucchero"@it ;
+    schema:validFrom 1999 ;
+    schema:validTo cube:Undefined ;
+    :cultivationGroup cultivationtype:1 ;
+    :cultivationType cultivationtype:522 .
+
+agis:523 a :DirectPaymentCrop ;
+    schema:identifier "523" ;
+    schema:name "Futterrüben"@de,
+        "Betteraves fourragères"@fr,
+        "Barbabietole da foraggio"@it ;
+    schema:validFrom 1999 ;
+    schema:validTo cube:Undefined ;
+    :cultivationGroup cultivationtype:1 ;
+    :cultivationType cultivationtype:523 .
+
+agis:524 a :DirectPaymentCrop ;
+    schema:identifier "524" ;
+    schema:name "Kartoffeln"@de,
+        "Pommes de terre"@fr,
+        "Patate"@it ;
+    schema:validFrom 1999 ;
+    schema:validTo cube:Undefined ;
+    :cultivationGroup cultivationtype:1 ;
+    :cultivationType cultivationtype:524 .
+
+agis:525 a :DirectPaymentCrop ;
+    schema:identifier "525" ;
+    schema:name "Pflanzkartoffeln (Vertragsanbau)"@de,
+        "Plants de pommes de terre (contrat de culture)"@fr,
+        "Tuberi-seme di patate (coltivazione contrattuale)"@it ;
+    schema:validFrom 2009 ;
+    schema:validTo cube:Undefined ;
+    :cultivationGroup cultivationtype:1 ;
+    :cultivationType cultivationtype:525 .
+
+agis:526 a :DirectPaymentCrop ;
+    schema:identifier "526" ;
+    schema:name "Sommerraps zur Speiseölgewinnung"@de,
+        "Colza de printemps destiné à la fabrication d'huile comestible"@fr,
+        "Colza primaverile per l'estrazione di olio commestibile"@it ;
+    schema:validFrom 1999 ;
+    schema:validTo cube:Undefined ;
+    :cultivationGroup cultivationtype:1 ;
+    :cultivationType cultivationtype:526 .
+
+agis:527 a :DirectPaymentCrop ;
+    schema:identifier "527" ;
+    schema:name "Winterraps zur Speiseölgewinnung"@de,
+        "Colza d'automne destiné à la fabrication d'huile comestible"@fr,
+        "Colza autunnale per l'estrazione di olio commestibile"@it ;
+    schema:validFrom 1999 ;
+    schema:validTo cube:Undefined ;
+    :cultivationGroup cultivationtype:1 ;
+    :cultivationType cultivationtype:527 .
+
+agis:528 a :DirectPaymentCrop ;
+    schema:identifier "528" ;
+    schema:name "Soja"@de,
+        "Soja"@fr,
+        "Soia"@it ;
+    schema:validFrom 1999 ;
+    schema:validTo cube:Undefined ;
+    :cultivationGroup cultivationtype:1 ;
+    :cultivationType cultivationtype:528 .
+
+agis:529 a :DirectPaymentCrop ;
+    schema:identifier "529" ;
+    schema:name "Nassreis"@de,
+        "Riz en culture humide"@fr,
+        "Riso seminato su terreno bagnato"@it ;
+    schema:validFrom 2023 ;
+    schema:validTo cube:Undefined ;
+    :cultivationGroup cultivationtype:1 ;
+    :cultivationType cultivationtype:529 .
+
+agis:531 a :DirectPaymentCrop ;
+    schema:identifier "531" ;
+    schema:name "Sonnenblumen zur Speiseölgewinnung"@de,
+        "Tournesol destiné à la fabrication d'huile comestible"@fr,
+        "Girasole per l'estrazione di olio commestibile"@it ;
+    schema:validFrom 1999 ;
+    schema:validTo cube:Undefined ;
+    :cultivationGroup cultivationtype:1 ;
+    :cultivationType cultivationtype:531 .
+
+agis:532 a :DirectPaymentCrop ;
+    schema:identifier "532" ;
+    schema:name "Hanf (THC-arme Sorten nach BLW-Sortenliste)"@de,
+        "Chanvre (sorte pauvre en THC selon liste OFAG)"@fr,
+        "Canapa (varietà a basso tenore in THC cfr. elenco delle varietà UFAG)"@it ;
+    schema:validFrom 1999 ;
+    schema:validTo 2007 ;
+    :cultivationGroup cultivationtype:1 ;
+    :cultivationType cultivationtype:532 .
+
+agis:533 a :DirectPaymentCrop ;
+    schema:identifier "533" ;
+    schema:name "Hanf (andere Sorten)"@de,
+        "Chanvre (autres variétés)"@fr,
+        "Canapa (altre varietà)"@it ;
+    schema:validFrom 1999 ;
+    schema:validTo 2007 ;
+    :cultivationGroup cultivationtype:1 ;
+    :cultivationType cultivationtype:533 .
+
+agis:534 a :DirectPaymentCrop ;
+    schema:identifier "534" ;
+    schema:name "Lein"@de,
+        "Lin"@fr,
+        "Lino"@it ;
+    schema:validFrom 1999 ;
+    schema:validTo cube:Undefined ;
+    :cultivationGroup cultivationtype:1 ;
+    :cultivationType cultivationtype:534 .
+
+agis:535 a :DirectPaymentCrop ;
+    schema:identifier "535" ;
+    schema:name "Hanf (nur Sorten nach BLW- und EU-Sortenkatalog)"@de,
+        "Chanvre (uniquement variétés selon catalogue OFAG et UE)"@fr,
+        "Canapa (unicamente le varietà nel catalogo UFAG e UE)"@it ;
+    schema:validFrom 2008 ;
+    schema:validTo 2021 ;
+    :cultivationGroup cultivationtype:1 ;
+    :cultivationType cultivationtype:535 .
+
+agis:536 a :DirectPaymentCrop ;
+    schema:identifier "536" ;
+    schema:name "Bohnen und Wicken zur Körnergewinnung (z.B. Ackerbohnen)"@de,
+        "Haricots et vesces en grains (p.ex. féveroles)"@fr,
+        "Fagioli e vecce per l'estrazione di granelli (p.es. favette)"@it ;
+    schema:validFrom 1999 ;
+    schema:validTo cube:Undefined ;
+    :cultivationGroup cultivationtype:1 ;
+    :cultivationType cultivationtype:536 .
+
+agis:537 a :DirectPaymentCrop ;
+    schema:identifier "537" ;
+    schema:name "Erbsen zur Körnergewinnung (z.B. Eiweisserbsen)"@de,
+        "Pois en grains (p.ex. pois protéagineux)"@fr,
+        "Piselli per l'estrazione di granelli (p.es. piselli proteici)"@it ;
+    schema:validFrom 1999 ;
+    schema:validTo cube:Undefined ;
+    :cultivationGroup cultivationtype:1 ;
+    :cultivationType cultivationtype:537 .
+
+agis:538 a :DirectPaymentCrop ;
+    schema:identifier "538" ;
+    schema:name "Lupinen"@de,
+        "Lupin"@fr,
+        "Lupini"@it ;
+    schema:validFrom 1999 ;
+    schema:validTo cube:Undefined ;
+    :cultivationGroup cultivationtype:1 ;
+    :cultivationType cultivationtype:538 .
+
+agis:539 a :DirectPaymentCrop ;
+    schema:identifier "539" ;
+    schema:name "Oelkürbisse"@de,
+        "Courges à huile"@fr,
+        "Zucche per l'estrazione di olio"@it ;
+    schema:validFrom 2001 ;
+    schema:validTo cube:Undefined ;
+    :cultivationGroup cultivationtype:1 ;
+    :cultivationType cultivationtype:539 .
+
+agis:540 a :DirectPaymentCrop ;
+    schema:identifier "540" ;
+    schema:name "Kichererbsen"@de,
+        "Pois chiches"@fr,
+        "Ceci"@it ;
+    schema:validFrom 2023 ;
+    schema:validTo cube:Undefined ;
+    :cultivationGroup cultivationtype:1 ;
+    :cultivationType cultivationtype:540 .
+
+agis:541 a :DirectPaymentCrop ;
+    schema:identifier "541" ;
+    schema:name "Tabak"@de,
+        "Tabac"@fr,
+        "Tabacco"@it ;
+    schema:validFrom 1999 ;
+    schema:validTo cube:Undefined ;
+    :cultivationGroup cultivationtype:1 ;
+    :cultivationType cultivationtype:541 .
+
+agis:542 a :DirectPaymentCrop ;
+    schema:identifier "542" ;
+    schema:name "Hirse"@de,
+        "Millet"@fr,
+        "Miglio"@it ;
+    schema:validFrom 2008 ;
+    schema:validTo 2022 ;
+    :cultivationGroup cultivationtype:1 ;
+    :cultivationType cultivationtype:542 .
+
+agis:543 a :DirectPaymentCrop ;
+    schema:identifier "543" ;
+    schema:name "Getreide siliert"@de,
+        "Céréales ensilées"@fr,
+        "Cereali insilati"@it ;
+    schema:validFrom 2016 ;
+    schema:validTo cube:Undefined ;
+    :cultivationGroup cultivationtype:1 ;
+    :cultivationType cultivationtype:543 .
+
+agis:544 a :DirectPaymentCrop ;
+    schema:identifier "544" ;
+    schema:name "Leindotter"@de,
+        "Cameline"@fr,
+        "Dorella"@it ;
+    schema:validFrom 2016 ;
+    schema:validTo cube:Undefined ;
+    :cultivationGroup cultivationtype:1 ;
+    :cultivationType cultivationtype:544 .
+
+agis:545 a :DirectPaymentCrop ;
+    schema:identifier "545" ;
+    schema:name "Einjährige Freilandgemüse (ohne Konservengemüse)"@de,
+        "Cultures maraîchères de plein champ annuelles (sans les légumes de conserve)"@fr,
+        "Ortaggi annuali di pieno campo (esclusi quelli destinati alla conservazione)"@it ;
+    schema:validFrom 1999 ;
+    schema:validTo cube:Undefined ;
+    :cultivationGroup cultivationtype:1 ;
+    :cultivationType cultivationtype:545 .
+
+agis:546 a :DirectPaymentCrop ;
+    schema:identifier "546" ;
+    schema:name "Freiland-Konservengemüse"@de,
+        "Légumes de conserve cultivés en plein champ"@fr,
+        "Ortaggi di pieno campo per la conservazione"@it ;
+    schema:validFrom 1999 ;
+    schema:validTo cube:Undefined ;
+    :cultivationGroup cultivationtype:1 ;
+    :cultivationType cultivationtype:546 .
+
+agis:547 a :DirectPaymentCrop ;
+    schema:identifier "547" ;
+    schema:name "Wurzeln der Treibzichorie"@de,
+        "Racines de chicorée"@fr,
+        "Radici di cicoria di coltura forzata"@it ;
+    schema:validFrom 2001 ;
+    schema:validTo cube:Undefined ;
+    :cultivationGroup cultivationtype:1 ;
+    :cultivationType cultivationtype:547 .
+
+agis:548 a :DirectPaymentCrop ;
+    schema:identifier "548" ;
+    schema:name "Buchweizen"@de,
+        "Sarrasin"@fr,
+        "Grano saraceno"@it ;
+    schema:validFrom 2016 ;
+    schema:validTo cube:Undefined ;
+    :cultivationGroup cultivationtype:1 ;
+    :cultivationType cultivationtype:548 .
+
+agis:549 a :DirectPaymentCrop ;
+    schema:identifier "549" ;
+    schema:name "Sorghum"@de,
+        "Sorgho"@fr,
+        "Sorgo"@it ;
+    schema:validFrom 2016 ;
+    schema:validTo 2022 ;
+    :cultivationGroup cultivationtype:1 ;
+    :cultivationType cultivationtype:549 .
+
+agis:551 a :DirectPaymentCrop ;
+    schema:identifier "551" ;
+    schema:name "Einjährige Beeren (z.B. Erdbeeren)"@de,
+        "Baies annuelles (p.ex. fraises)"@fr,
+        "Bacche annuali (p.es. fragole)"@it ;
+    schema:validFrom 1999 ;
+    schema:validTo cube:Undefined ;
+    :cultivationGroup cultivationtype:1 ;
+    :cultivationType cultivationtype:551 .
+
+agis:552 a :DirectPaymentCrop ;
+    schema:identifier "552" ;
+    schema:name "Einjährige nachwachsende Rohstoffe (Kenaf, usw.)"@de,
+        "Matières premières renouvelables annuelles (kénaf, etc.)"@fr,
+        "Materie prime rinnovabili annuali (kenaf, ecc.)"@it ;
+    schema:validFrom 1999 ;
+    schema:validTo cube:Undefined ;
+    :cultivationGroup cultivationtype:1 ;
+    :cultivationType cultivationtype:552 .
+
+agis:553 a :DirectPaymentCrop ;
+    schema:identifier "553" ;
+    schema:name "Einjährige Gewürz- und Medizinalpflanzen"@de,
+        "Plantes aromatiques et plantes médicinales annuelles"@fr,
+        "Piante aromatiche e medicinali annuali"@it ;
+    schema:validFrom 1999 ;
+    schema:validTo cube:Undefined ;
+    :cultivationGroup cultivationtype:1 ;
+    :cultivationType cultivationtype:553 .
+
+agis:554 a :DirectPaymentCrop ;
+    schema:identifier "554" ;
+    schema:name "Einjährige gärtnerische Freilandkulturen (Blumen, Rollrasen, usw.)"@de,
+        "Cultures horticoles de plein champ annuelles (p.ex. fleurs, gazon en rouleaux)"@fr,
+        "Floricoltura di pieno campo annuale (fiori, manto erboso in rotoli, ecc.)"@it ;
+    schema:validFrom 1999 ;
+    schema:validTo cube:Undefined ;
+    :cultivationGroup cultivationtype:1 ;
+    :cultivationType cultivationtype:554 .
+
+agis:555 a :DirectPaymentCrop ;
+    schema:identifier "555" ;
+    schema:name "Ackerschonstreifen"@de,
+        "Bande culturale extensive"@fr,
+        "Fasce di colture estensive in campicoltura"@it ;
+    schema:validFrom 2016 ;
+    schema:validTo 2022 ;
+    :cultivationGroup cultivationtype:1 ;
+    :cultivationType cultivationtype:555 .
+
+agis:556 a :DirectPaymentCrop ;
+    schema:identifier "556" ;
+    schema:name "Buntbrache"@de,
+        "Jachère florale"@fr,
+        "Maggese fioriti"@it ;
+    schema:validFrom 1999 ;
+    schema:validTo cube:Undefined ;
+    :cultivationGroup cultivationtype:1 ;
+    :cultivationType cultivationtype:556 .
+
+agis:557 a :DirectPaymentCrop ;
+    schema:identifier "557" ;
+    schema:name "Rotationsbrache"@de,
+        "Jachère tournante"@fr,
+        "Maggese da rotazione"@it ;
+    schema:validFrom 1999 ;
+    schema:validTo cube:Undefined ;
+    :cultivationGroup cultivationtype:1 ;
+    :cultivationType cultivationtype:557 .
+
+agis:558 a :DirectPaymentCrop ;
+    schema:identifier "558" ;
+    schema:name "Grünbrache (nur 1999)"@de,
+        "Jachères vertes (uniquement en 1999)"@fr,
+        "Maggesi verdi (1999)"@it ;
+    schema:validFrom 1999 ;
+    schema:validTo 1999 ;
+    :cultivationGroup cultivationtype:1 ;
+    :cultivationType cultivationtype:558 .
+
+agis:559 a :DirectPaymentCrop ;
+    schema:identifier "559" ;
+    schema:name "Saum auf Ackerfläche"@de,
+        "Ourlet sur terres assolées"@fr,
+        "Striscia su superficie coltiva"@it ;
+    schema:validFrom 2008 ;
+    schema:validTo cube:Undefined ;
+    :cultivationGroup cultivationtype:1 ;
+    :cultivationType cultivationtype:559 .
+
+agis:561 a :DirectPaymentCrop ;
+    schema:identifier "561" ;
+    schema:name "Rübsen für die Samenproduktion (Vertragsanbau)"@de,
+        "Navets destinés à la production de semences (contrat de culture)"@fr,
+        "Ravizzone per la produzione di sementi"@it ;
+    schema:validFrom 2011 ;
+    schema:validTo 2013 ;
+    :cultivationGroup cultivationtype:1 ;
+    :cultivationType cultivationtype:561 .
+
+agis:562 a :DirectPaymentCrop ;
+    schema:identifier "562" ;
+    schema:name "Phacelia für die Samenproduktion (Vertragsanbau)"@de,
+        "Phacelia destinée à la production de semences (contrat de culture)"@fr,
+        "Facelia per la produzione di sementi"@it ;
+    schema:validFrom 2011 ;
+    schema:validTo 2013 ;
+    :cultivationGroup cultivationtype:1 ;
+    :cultivationType cultivationtype:562 .
+
+agis:563 a :DirectPaymentCrop ;
+    schema:identifier "563" ;
+    schema:name "Übrige Kulturen für die Samenproduktion (Vertragsanbau)"@de,
+        "Autres cultures destinées à la production de semences (contrat de culture)"@fr,
+        "Altre colture per la produzione di sementi"@it ;
+    schema:validFrom 2011 ;
+    schema:validTo 2013 ;
+    :cultivationGroup cultivationtype:1 ;
+    :cultivationType cultivationtype:563 .
+
+agis:564 a :DirectPaymentCrop ;
+    schema:identifier "564" ;
+    schema:name "Ackerschonstreifen Ölsaaten (Raps, Sonnenblumen, Lein)"@de,
+        "Bande culturale extensive Oléagineux (colza, tournesols, lin)"@fr,
+        "Fasce di colture estensive in campicoltura - semi oleosi (colza, girasole, lino)"@it ;
+    schema:validFrom 1999 ;
+    schema:validTo 2015 ;
+    :cultivationGroup cultivationtype:1 ;
+    :cultivationType cultivationtype:564 .
+
+agis:565 a :DirectPaymentCrop ;
+    schema:identifier "565" ;
+    schema:name "Ackerschonstreifen Getreide"@de,
+        "Bande culturale extensive céréales"@fr,
+        "Fasce di colture estensive in campicoltura - cereali"@it ;
+    schema:validFrom 1999 ;
+    schema:validTo 2015 ;
+    :cultivationGroup cultivationtype:1 ;
+    :cultivationType cultivationtype:565 .
+
+agis:566 a :DirectPaymentCrop ;
+    schema:identifier "566" ;
+    schema:name "Mohn"@de,
+        "Pavot"@fr,
+        "Papavero"@it ;
+    schema:validFrom 2014 ;
+    schema:validTo cube:Undefined ;
+    :cultivationGroup cultivationtype:1 ;
+    :cultivationType cultivationtype:566 .
+
+agis:567 a :DirectPaymentCrop ;
+    schema:identifier "567" ;
+    schema:name "Saflor"@de,
+        "Carthame"@fr,
+        "Cartamo"@it ;
+    schema:validFrom 2014 ;
+    schema:validTo cube:Undefined ;
+    :cultivationGroup cultivationtype:1 ;
+    :cultivationType cultivationtype:567 .
+
+agis:568 a :DirectPaymentCrop ;
+    schema:identifier "568" ;
+    schema:name "Linsen"@de,
+        "Lentilles"@fr,
+        "Lenticchie"@it ;
+    schema:validFrom 2014 ;
+    schema:validTo cube:Undefined ;
+    :cultivationGroup cultivationtype:1 ;
+    :cultivationType cultivationtype:568 .
+
+agis:569 a :DirectPaymentCrop ;
+    schema:identifier "569" ;
+    schema:name "Mischungen von Bohnen, Wicken, Erbsen, Kichererbsen und Lupinen mit Getreide oder Leindotter, mindestens 30 % Anteil Leguminosen bei der Ernte (zur Körnergewinnung)"@de,
+        "Méteil de haricots, de vesces, de pois, de pois chiches et de lupins avec des céréales ou de la caméline, au moins 30 % de légumineuses lors de la récolte (pour la production de grains)"@fr,
+        "Miscele di fagioli, vecce, piselli, ceci e lupini con cereali o camelina sativa, almeno il 30% di quota di leguminose nel raccolto (per l'estrazione di granelli)"@it ;
+    schema:validFrom 2014 ;
+    schema:validTo cube:Undefined ;
+    :cultivationGroup cultivationtype:1 ;
+    :cultivationType cultivationtype:569 .
+
+agis:570 a :DirectPaymentCrop ;
+    schema:identifier "570" ;
+    schema:name "Mischungen von Linsen mit Getreide oder Leindotter, mindestens 30 % Anteil Linsen bei der Ernte (zur Körnergewinnung)"@de,
+        "Méteil de lentilles avec des céréales ou de la caméline, au moins 30 % de lentilles lors de la récolte (pour la production de grains)"@fr,
+        "Miscele di lenticchie con cereali o camelina sativa, almeno il 30% di quota di lenticchie nel raccolto (per l'estrazione di granelli)"@it ;
+    schema:validFrom 2023 ;
+    schema:validTo cube:Undefined ;
+    :cultivationGroup cultivationtype:1 ;
+    :cultivationType cultivationtype:570 .
+
+agis:571 a :DirectPaymentCrop ;
+    schema:identifier "571" ;
+    schema:name "Ackerschonstreifen Körnerleguminosen (Ackerbohnen, Eiweisserbsen, Lupinen und Mischungen mit Code 569)"@de,
+        "Bande culturale extensive Légumineuses (féveroles, pois protéagineux, lupins et méteils du code 569)"@fr,
+        "Fasce di colture estensive in campicoltura - leguminose a granelli (favette, piselli proteici, lupini e miscele con codice 569)"@it ;
+    schema:validFrom 1999 ;
+    schema:validTo 2015 ;
+    :cultivationGroup cultivationtype:1 ;
+    :cultivationType cultivationtype:571 .
+
+agis:572 a :DirectPaymentCrop ;
+    schema:identifier "572" ;
+    schema:name "Nützlingsstreifen auf offener Ackerfläche"@de,
+        "Bandes semées pour organismes utiles dans les terres ouvertes"@fr,
+        "Strisce per organismi utili sulla superficie coltiva aperta"@it ;
+    schema:validFrom 2015 ;
+    schema:validTo cube:Undefined ;
+    :cultivationGroup cultivationtype:1 ;
+    :cultivationType cultivationtype:572 .
+
+agis:573 a :DirectPaymentCrop ;
+    schema:identifier "573" ;
+    schema:name "Senf"@de,
+        "Moutarde"@fr,
+        "Senape"@it ;
+    schema:validFrom 2018 ;
+    schema:validTo cube:Undefined ;
+    :cultivationGroup cultivationtype:1 ;
+    :cultivationType cultivationtype:573 .
+
+agis:574 a :DirectPaymentCrop ;
+    schema:identifier "574" ;
+    schema:name "Quinoa"@de,
+        "Quinoa"@fr,
+        "Quinoa"@it ;
+    schema:validFrom 2019 ;
+    schema:validTo cube:Undefined ;
+    :cultivationGroup cultivationtype:1 ;
+    :cultivationType cultivationtype:574 .
+
+agis:575 a :DirectPaymentCrop ;
+    schema:identifier "575" ;
+    schema:name "Hanf zur Nutzung der Samen"@de,
+        "Chanvre pour l'utilisation des graines"@fr,
+        "Canapa per l'uso dei semi"@it ;
+    schema:validFrom 2022 ;
+    schema:validTo cube:Undefined ;
+    :cultivationGroup cultivationtype:1 ;
+    :cultivationType cultivationtype:575 .
+
+agis:576 a :DirectPaymentCrop ;
+    schema:identifier "576" ;
+    schema:name "Hanf zur Fasernutzung"@de,
+        "Chanvre pour l'utilisation des fibres"@fr,
+        "Canapa per l'uso delle fibre"@it ;
+    schema:validFrom 2022 ;
+    schema:validTo cube:Undefined ;
+    :cultivationGroup cultivationtype:1 ;
+    :cultivationType cultivationtype:576 .
+
+agis:577 a :DirectPaymentCrop ;
+    schema:identifier "577" ;
+    schema:name "Anderer Hanf"@de,
+        "Autre chanvre"@fr,
+        "Restante canapa"@it ;
+    schema:validFrom 2022 ;
+    schema:validTo cube:Undefined ;
+    :cultivationGroup cultivationtype:1 ;
+    :cultivationType cultivationtype:577 .
+
+agis:578 a :DirectPaymentCrop ;
+    schema:identifier "578" ;
+    schema:name "Hirse zur Körnergewinnung"@de,
+        "Millet grains"@fr,
+        "Miglio per l'estrazione di granelli"@it ;
+    schema:validFrom 2023 ;
+    schema:validTo cube:Undefined ;
+    :cultivationGroup cultivationtype:1 ;
+    :cultivationType cultivationtype:578 .
+
+agis:579 a :DirectPaymentCrop ;
+    schema:identifier "579" ;
+    schema:name "Hirse zur Nutzung ganze Pflanze"@de,
+        "Millet plante entière"@fr,
+        "Miglio per la raccolta della pianta intera"@it ;
+    schema:validFrom 2023 ;
+    schema:validTo cube:Undefined ;
+    :cultivationGroup cultivationtype:1 ;
+    :cultivationType cultivationtype:579 .
+
+agis:580 a :DirectPaymentCrop ;
+    schema:identifier "580" ;
+    schema:name "Sorghum zur Körnergewinnung"@de,
+        "Sorgho grains"@fr,
+        "Sorgo per l'estrazione di granelli"@it ;
+    schema:validFrom 2023 ;
+    schema:validTo cube:Undefined ;
+    :cultivationGroup cultivationtype:1 ;
+    :cultivationType cultivationtype:580 .
+
+agis:581 a :DirectPaymentCrop ;
+    schema:identifier "581" ;
+    schema:name "Sorghum zur Nutzung ganze Pflanze"@de,
+        "Sorgho plante entière"@fr,
+        "Sorgo per la raccolta della pianta intera"@it ;
+    schema:validFrom 2023 ;
+    schema:validTo cube:Undefined ;
+    :cultivationGroup cultivationtype:1 ;
+    :cultivationType cultivationtype:581 .
+
+agis:590 a :DirectPaymentCrop ;
+    schema:identifier "590" ;
+    schema:name "Sommerraps als nachwachsender Rohstoff"@de,
+        "Colza de printemps comme matière première renouvelable"@fr,
+        "Colza primaverile quale materia prima rinnovabile"@it ;
+    schema:validFrom 1999 ;
+    schema:validTo cube:Undefined ;
+    :cultivationGroup cultivationtype:1 ;
+    :cultivationType cultivationtype:590 .
+
+agis:591 a :DirectPaymentCrop ;
+    schema:identifier "591" ;
+    schema:name "Winterraps als nachwachsender Rohstoff"@de,
+        "Colza d'automne comme matière première renouvelable"@fr,
+        "Colza autunnale quale materia prima rinnovabile"@it ;
+    schema:validFrom 1999 ;
+    schema:validTo cube:Undefined ;
+    :cultivationGroup cultivationtype:1 ;
+    :cultivationType cultivationtype:591 .
+
+agis:592 a :DirectPaymentCrop ;
+    schema:identifier "592" ;
+    schema:name "Sonnenblumen als nachwachsender Rohstoff"@de,
+        "Tournesol comme matière première renouvelable"@fr,
+        "Girasole quale materia prima rinnovabile"@it ;
+    schema:validFrom 1999 ;
+    schema:validTo cube:Undefined ;
+    :cultivationGroup cultivationtype:1 ;
+    :cultivationType cultivationtype:592 .
+
+agis:594 a :DirectPaymentCrop ;
+    schema:identifier "594" ;
+    schema:name "Offene Ackerfläche, beitragsberechtigt (regionsspezifische Biodiversitätsförderfläche)"@de,
+        "Terres ouvertes donnant droit aux contributions (surfaces de promotion de la biodiversité spécifiques à la région)"@fr,
+        "Superficie coltiva aperta, avente diritto ai contributi (superfici per la promozione della biodiversità specifiche di una regione)"@it ;
+    schema:validFrom 2016 ;
+    schema:validTo cube:Undefined ;
+    :cultivationGroup cultivationtype:1 ;
+    :cultivationType cultivationtype:594 .
+
+agis:595 a :DirectPaymentCrop ;
+    schema:identifier "595" ;
+    schema:name "Übrige offene Ackerfläche, nicht beitragsberechtigt (regionsspezifische Biodiversitätsförderfläche)"@de,
+        "Autres terres ouvertes ne donnant pas droit aux contributions (surfaces de promotion de la biodiversité spécifiques à la région)"@fr,
+        "Altra superficie coltiva aperta, non avente diritto ai contributi (superfici per la promozione della biodiversità specifiche di una regione)"@it ;
+    schema:validFrom 2016 ;
+    schema:validTo cube:Undefined ;
+    :cultivationGroup cultivationtype:1 ;
+    :cultivationType cultivationtype:595 .
+
+agis:597 a :DirectPaymentCrop ;
+    schema:identifier "597" ;
+    schema:name "Übrige offene Ackerfläche, beitragsberechtigt"@de,
+        "Autres terres ouvertes donnant droit aux contributions"@fr,
+        "Altra superficie coltiva aperta, avente diritto ai contributi"@it ;
+    schema:validFrom 1999 ;
+    schema:validTo cube:Undefined ;
+    :cultivationGroup cultivationtype:1 ;
+    :cultivationType cultivationtype:597 .
+
+agis:598 a :DirectPaymentCrop ;
+    schema:identifier "598" ;
+    schema:name "Übrige offene Ackerfläche, nicht beitragsberechtigt"@de,
+        "Autres terres ouvertes ne donnant pas droit aux contributions"@fr,
+        "Altra superficie coltiva aperta, non avente diritto ai contributi"@it ;
+    schema:validFrom 1999 ;
+    schema:validTo cube:Undefined ;
+    :cultivationGroup cultivationtype:1 ;
+    :cultivationType cultivationtype:598 .
+
+agis:601 a :DirectPaymentCrop ;
+    schema:identifier "601" ;
+    schema:name "Kunstwiesen (ohne Weiden)"@de,
+        "Prairies artificielles (sans les pâturages)"@fr,
+        "Prati artificiali (senza pascoli)"@it ;
+    schema:validFrom 1999 ;
+    schema:validTo cube:Undefined ;
+    :cultivationGroup cultivationtype:1 ;
+    :cultivationType cultivationtype:601 .
+
+agis:602 a :DirectPaymentCrop ;
+    schema:identifier "602" ;
+    schema:name "Übrige Kunstwiesen, beitragsberechtigt (z.B. Schweineweide, Geflügelweide)"@de,
+        "Autres prairies artificielles donnant droit aux contributions (p.ex. pâturages pour porcs et volaille)"@fr,
+        "Altri prati artificiali avente diritto ai contributi (p.es. pascoli riservati ai suini e al pollame)"@it ;
+    schema:validFrom 2014 ;
+    schema:validTo cube:Undefined ;
+    :cultivationGroup cultivationtype:1 ;
+    :cultivationType cultivationtype:602 .
+
+agis:611 a :DirectPaymentCrop ;
+    schema:identifier "611" ;
+    schema:name "Extensiv genutzte Wiesen (ohne Weiden)"@de,
+        "Prairies extensives (sans les pâturages)"@fr,
+        "Prati estensivi (senza pascoli)"@it ;
+    schema:validFrom 1999 ;
+    schema:validTo cube:Undefined ;
+    :cultivationGroup cultivationtype:21 ;
+    :cultivationType cultivationtype:611 .
+
+agis:612 a :DirectPaymentCrop ;
+    schema:identifier "612" ;
+    schema:name "Wenig intensiv genutzte Wiesen (ohne Weiden)"@de,
+        "Prairies peu intensives (sans les pâturages)"@fr,
+        "Prati poco intensivi (senza pascoli)"@it ;
+    schema:validFrom 1999 ;
+    schema:validTo cube:Undefined ;
+    :cultivationGroup cultivationtype:21 ;
+    :cultivationType cultivationtype:612 .
+
+agis:613 a :DirectPaymentCrop ;
+    schema:identifier "613" ;
+    schema:name "Übrige Dauerwiesen (ohne Weiden)"@de,
+        "Autres prairies permanentes (sans les pâturages)"@fr,
+        "Altri prati permanenti (senza pascoli)"@it ;
+    schema:validFrom 1999 ;
+    schema:validTo cube:Undefined ;
+    :cultivationGroup cultivationtype:21 ;
+    :cultivationType cultivationtype:613 .
+
+agis:616 a :DirectPaymentCrop ;
+    schema:identifier "616" ;
+    schema:name "Weiden (Heimweiden, übrige Weiden ohne Sömmerungsweiden)"@de,
+        "Pâturages (pâturages attenants à la ferme, autres pâturages, sauf les pâturages d'estivage)"@fr,
+        "Pascoli (pascoli propri, altri pascoli senza pascoli d'estivazione)"@it ;
+    schema:validFrom 1999 ;
+    schema:validTo cube:Undefined ;
+    :cultivationGroup cultivationtype:21 ;
+    :cultivationType cultivationtype:616 .
+
+agis:617 a :DirectPaymentCrop ;
+    schema:identifier "617" ;
+    schema:name "Extensiv genutzte Weiden"@de,
+        "Pâturages extensifs"@fr,
+        "Pascoli estensivi"@it ;
+    schema:validFrom 1999 ;
+    schema:validTo cube:Undefined ;
+    :cultivationGroup cultivationtype:21 ;
+    :cultivationType cultivationtype:617 .
+
+agis:618 a :DirectPaymentCrop ;
+    schema:identifier "618" ;
+    schema:name "Waldweiden (ohne bewaldete Fläche)"@de,
+        "Pâturages boisés (sauf surfaces boisées)"@fr,
+        "Pascoli boschivi (senza i boschi)"@it ;
+    schema:validFrom 1999 ;
+    schema:validTo cube:Undefined ;
+    :cultivationGroup cultivationtype:21 ;
+    :cultivationType cultivationtype:618 .
+
+agis:619 a :DirectPaymentCrop ;
+    schema:identifier "619" ;
+    schema:name "Weiden für Schweine, nicht anrechenbar für die Berechnung der RGVE"@de,
+        "Pâturages pour porcs, non imputables pour le calcul des UGBFG"@fr,
+        "Pascoli riservati ai suini e a pollame non computabili per il calcolo delle UBGFG"@it ;
+    schema:validFrom 1999 ;
+    schema:validTo 2013 ;
+    :cultivationGroup cultivationtype:21 ;
+    :cultivationType cultivationtype:619 .
+
+agis:621 a :DirectPaymentCrop ;
+    schema:identifier "621" ;
+    schema:name "Heuwiesen im Sömmerungsgebiet, Übrige Wiesen (keine BFF)"@de,
+        "Prairies de fauche en région d'estivage, autres (pas de SPB)"@fr,
+        "Prati da sfalcio nella regione d'estivazione, altri prati (nessuna SPB)"@it ;
+    schema:validFrom 1999 ;
+    schema:validTo cube:Undefined ;
+    :cultivationGroup cultivationtype:21 ;
+    :cultivationType cultivationtype:621 .
+
+agis:622 a :DirectPaymentCrop ;
+    schema:identifier "622" ;
+    schema:name "Heuwiesen im Sömmerungsgebiet, Typ extensiv genutzte Wiese"@de,
+        "Prairies de fauche en région d'estivage, type prairie extensive"@fr,
+        "Prati da sfalcio nella regione d'estivazione, tipo prati sfruttati in modo estensivo"@it ;
+    schema:validFrom 2000 ;
+    schema:validTo cube:Undefined ;
+    :cultivationGroup cultivationtype:21 ;
+    :cultivationType cultivationtype:622 .
+
+agis:623 a :DirectPaymentCrop ;
+    schema:identifier "623" ;
+    schema:name "Heuwiesen im Sömmerungsgebiet, Typ wenig intensiv genutzte Wiese"@de,
+        "Prairies de fauche en région d'estivage, type prairie peu intensive"@fr,
+        "Prati da sfalcio nella regione d'estivazione, tipo prati sfruttati in modo poco intensivo"@it ;
+    schema:validFrom 2000 ;
+    schema:validTo cube:Undefined ;
+    :cultivationGroup cultivationtype:21 ;
+    :cultivationType cultivationtype:623 .
+
+agis:625 a :DirectPaymentCrop ;
+    schema:identifier "625" ;
+    schema:name "Waldweiden (ohne bewaldete Fläche)"@de,
+        "Pâturages boisés (sauf surfaces boisées)"@fr,
+        "Pascoli boschivi (senza i boschi)"@it ;
+    schema:validFrom 2009 ;
+    schema:validTo cube:Undefined ;
+    :cultivationGroup cultivationtype:21 ;
+    :cultivationType cultivationtype:625 .
+
+agis:631 a :DirectPaymentCrop ;
+    schema:identifier "631" ;
+    schema:name "Futterleguminosen für die Samenproduktion (Vertragsanbau)"@de,
+        "Légumineuses fourragères destinées à la production de semences (contrat de culture)"@fr,
+        "Leguminose da foraggio per la produzione di sementi (coltivazione contrattuale)"@it ;
+    schema:validFrom 2009 ;
+    schema:validTo cube:Undefined ;
+    :cultivationGroup cultivationtype:1 ;
+    :cultivationType cultivationtype:631 .
+
+agis:632 a :DirectPaymentCrop ;
+    schema:identifier "632" ;
+    schema:name "Futtergräser für die Samenproduktion (Vertragsanbau)"@de,
+        "Graminées fourragères destinées à la production de semences (contrat de culture)"@fr,
+        "Graminacee da foraggio per la produzione di sementi (coltivazione contrattuale)"@it ;
+    schema:validFrom 2009 ;
+    schema:validTo cube:Undefined ;
+    :cultivationGroup cultivationtype:1 ;
+    :cultivationType cultivationtype:632 .
+
+agis:633 a :DirectPaymentCrop ;
+    schema:identifier "633" ;
+    schema:name "Übrige Futterpflanzen für die Samenproduktion (Vertragsanbau)"@de,
+        "Autres plantes fourragères destinées à la production de semences (contrat de culture)"@fr,
+        "Altre piante foraggiere per la produzione di sementi (coltivazione contrattuale)"@it ;
+    schema:validFrom 2009 ;
+    schema:validTo 2013 ;
+    :cultivationGroup cultivationtype:1 ;
+    :cultivationType cultivationtype:633 .
+
+agis:634 a :DirectPaymentCrop ;
+    schema:identifier "634" ;
+    schema:name "Uferwiese (ohne Weiden) entlang von Fliessgewässern"@de,
+        "prairies riveraines d'un cours d'eau (sauf les pâturages)"@fr,
+        "Prati rivieraschi lungo i corsi d'acqua (senza pascoli)"@it ;
+    schema:validFrom 2014 ;
+    schema:validTo 2022 ;
+    :cultivationGroup cultivationtype:21 ;
+    :cultivationType cultivationtype:634 .
+
+agis:635 a :DirectPaymentCrop ;
+    schema:identifier "635" ;
+    schema:name "Uferwiesen (ohne Weiden)"@de,
+        "Prairies riveraines (sauf les pâturages)"@fr,
+        "Prati rivieraschi (senza pascoli)"@it ;
+    schema:validFrom 2023 ;
+    schema:validTo cube:Undefined ;
+    :cultivationGroup cultivationtype:21 ;
+    :cultivationType cultivationtype:635 .
+
+agis:693 a :DirectPaymentCrop ;
+    schema:identifier "693" ;
+    schema:name "Weiden (regionsspezifische Biodiversitätsförderfläche)"@de,
+        "Pâturages (surfaces de promotion de la biodiversité spécifiques à la région)"@fr,
+        "Pascoli (superfici per la promozione della biodiversità specifiche di una regione)"@it ;
+    schema:validFrom 2015 ;
+    schema:validTo cube:Undefined ;
+    :cultivationGroup cultivationtype:21 ;
+    :cultivationType cultivationtype:693 .
+
+agis:694 a :DirectPaymentCrop ;
+    schema:identifier "694" ;
+    schema:name "Grünfläche ohne Weiden (regionsspezifische Biodiversitätsförderfläche)"@de,
+        "Surfaces herbagère sans les pâturages (surfaces de promotion de la biodiversité spécifiques à la région)"@fr,
+        "Superfici inerbite, senza pascoli (superfici per la promozione della biodiversità specifiche di una regione)"@it ;
+    schema:validFrom 2015 ;
+    schema:validTo cube:Undefined ;
+    :cultivationGroup cultivationtype:21 ;
+    :cultivationType cultivationtype:694 .
+
+agis:695 a :DirectPaymentCrop ;
+    schema:identifier "695" ;
+    schema:name "Regionsspezifische Biodiversitätsförderfläche (Grünfläche)"@de,
+        "Surfaces de promotion de la biodiversité spécifiques à la région (Surface herbagère)"@fr,
+        "Superfici per la promozione della biodiversità specifiche di una regione (superfici inerbite)"@it ;
+    schema:validFrom 2005 ;
+    schema:validTo 2014 ;
+    :cultivationGroup cultivationtype:21 ;
+    :cultivationType cultivationtype:695 .
+
+agis:697 a :DirectPaymentCrop ;
+    schema:identifier "697" ;
+    schema:name "Übrige Grünfläche (Dauergrünfläche), beitragsberechtigt"@de,
+        "Autres surfaces herbagères (surface herbagère permanente) donnant droit aux contributions"@fr,
+        "Altre superfici (permanentemente) inerbite, aventi diritto ai contributi"@it ;
+    schema:validFrom 1999 ;
+    schema:validTo cube:Undefined ;
+    :cultivationGroup cultivationtype:21 ;
+    :cultivationType cultivationtype:697 .
+
+agis:698 a :DirectPaymentCrop ;
+    schema:identifier "698" ;
+    schema:name "Übrige Grünfläche (Dauergrünfläche), nicht beitragsberechtigt"@de,
+        "Autres surfaces herbagères (surface herbagère permanente) ne donnant pas droit aux contributions"@fr,
+        "Altre superfici (permanentemente) inerbite, non aventi diritto ai contributi"@it ;
+    schema:validFrom 1999 ;
+    schema:validTo cube:Undefined ;
+    :cultivationGroup cultivationtype:21 ;
+    :cultivationType cultivationtype:698 .
+
+agis:701 a :DirectPaymentCrop ;
+    schema:identifier "701" ;
+    schema:name "Reben"@de,
+        "Vignes"@fr,
+        "Vigna"@it ;
+    schema:validFrom 1999 ;
+    schema:validTo cube:Undefined ;
+    :cultivationType cultivationtype:701 .
+
+agis:702 a :DirectPaymentCrop ;
+    schema:identifier "702" ;
+    schema:name "Obstanlagen (Äpfel)"@de,
+        "Cultures fruitières (pommes)"@fr,
+        "Frutteto (mele)"@it ;
+    schema:validFrom 1999 ;
+    schema:validTo cube:Undefined ;
+    :cultivationType cultivationtype:702 .
+
+agis:703 a :DirectPaymentCrop ;
+    schema:identifier "703" ;
+    schema:name "Obstanlagen (Birnen)"@de,
+        "Cultures fruitières (poires)"@fr,
+        "Frutteto (pere)"@it ;
+    schema:validFrom 1999 ;
+    schema:validTo cube:Undefined ;
+    :cultivationType cultivationtype:703 .
+
+agis:704 a :DirectPaymentCrop ;
+    schema:identifier "704" ;
+    schema:name "Obstanlagen (Steinobst)"@de,
+        "Cultures fruitières (fruits à noyau)"@fr,
+        "Frutteto (frutta a nocciolo)"@it ;
+    schema:validFrom 1999 ;
+    schema:validTo cube:Undefined ;
+    :cultivationType cultivationtype:704 .
+
+agis:705 a :DirectPaymentCrop ;
+    schema:identifier "705" ;
+    schema:name "Mehrjährige Beeren"@de,
+        "Baies pluriannuelles"@fr,
+        "Bacche pluriennali"@it ;
+    schema:validFrom 1999 ;
+    schema:validTo cube:Undefined ;
+    :cultivationType cultivationtype:705 .
+
+agis:706 a :DirectPaymentCrop ;
+    schema:identifier "706" ;
+    schema:name "Mehrjährige Gewürz- und Medizinalpflanzen"@de,
+        "Plantes aromatiques et plantes médicinales pluriannuelles"@fr,
+        "Piante aromatiche e medicinali pluriennali"@it ;
+    schema:validFrom 1999 ;
+    schema:validTo cube:Undefined ;
+    :cultivationType cultivationtype:706 .
+
+agis:707 a :DirectPaymentCrop ;
+    schema:identifier "707" ;
+    schema:name "Mehrjährige nachwachsende Rohstoffe (Chinaschilf, usw.)"@de,
+        "Matières premières renouvelables pluriannuelles (roseau de chine etc.)"@fr,
+        "Materie prime rinnovabili pluriennali (Miscanthus sin. ecc.)"@it ;
+    schema:validFrom 1999 ;
+    schema:validTo cube:Undefined ;
+    :cultivationType cultivationtype:707 .
+
+agis:708 a :DirectPaymentCrop ;
+    schema:identifier "708" ;
+    schema:name "Hopfen"@de,
+        "Houblon"@fr,
+        "Luppolo"@it ;
+    schema:validFrom 1999 ;
+    schema:validTo cube:Undefined ;
+    :cultivationType cultivationtype:708 .
+
+agis:709 a :DirectPaymentCrop ;
+    schema:identifier "709" ;
+    schema:name "Rhabarber"@de,
+        "Rhubarbe"@fr,
+        "Rabarbaro"@it ;
+    schema:validFrom 1999 ;
+    schema:validTo cube:Undefined ;
+    :cultivationType cultivationtype:709 .
+
+agis:710 a :DirectPaymentCrop ;
+    schema:identifier "710" ;
+    schema:name "Spargel"@de,
+        "Asperges"@fr,
+        "Asparagi"@it ;
+    schema:validFrom 1999 ;
+    schema:validTo cube:Undefined ;
+    :cultivationType cultivationtype:710 .
+
+agis:711 a :DirectPaymentCrop ;
+    schema:identifier "711" ;
+    schema:name "Pilze (Freiland)"@de,
+        "Champignons en pleine terre"@fr,
+        "Funghi (in pieno campo)"@it ;
+    schema:validFrom 1999 ;
+    schema:validTo cube:Undefined ;
+    :cultivationType cultivationtype:711 .
+
+agis:712 a :DirectPaymentCrop ;
+    schema:identifier "712" ;
+    schema:name "Christbäume"@de,
+        "Sapins de Noël"@fr,
+        "Alberelli di Natale"@it ;
+    schema:validFrom 1999 ;
+    schema:validTo cube:Undefined ;
+    :cultivationType cultivationtype:712 .
+
+agis:713 a :DirectPaymentCrop ;
+    schema:identifier "713" ;
+    schema:name "Baumschule von Forstpflanzen ausserhalb der Forstzone"@de,
+        "Pépinières de plantes forestières hors zone forestière"@fr,
+        "Vivai forestali fuori delle zone forestali"@it ;
+    schema:validFrom 1999 ;
+    schema:validTo cube:Undefined ;
+    :cultivationType cultivationtype:713 .
+
+agis:714 a :DirectPaymentCrop ;
+    schema:identifier "714" ;
+    schema:name "Ziersträucher, Ziergehölze und Zierstauden"@de,
+        "Buissons, arbrisseaux et arbustes ornementaux"@fr,
+        "Arbusti, arboscelli e cespugli ornamentali"@it ;
+    schema:validFrom 1999 ;
+    schema:validTo cube:Undefined ;
+    :cultivationType cultivationtype:714 .
+
+agis:715 a :DirectPaymentCrop ;
+    schema:identifier "715" ;
+    schema:name "Übrige Baumschulen (Rosen, Früchte, usw.)"@de,
+        "Autres pépinières (roses, fruits, etc.)"@fr,
+        "Altri vivai (rose, frutta, ecc.)"@it ;
+    schema:validFrom 1999 ;
+    schema:validTo 2022 ;
+    :cultivationType cultivationtype:715 .
+
+agis:716 a :DirectPaymentCrop ;
+    schema:identifier "716" ;
+    schema:name "Gepflegte Selven (Kastanien-/Nussbäume)"@de,
+        "Châtaigneraies / noiseraies entretenues"@fr,
+        "Selve curate di castagni e noci"@it ;
+    schema:validFrom 2011 ;
+    schema:validTo 2013 ;
+    :cultivationType cultivationtype:716 .
+
+agis:717 a :DirectPaymentCrop ;
+    schema:identifier "717" ;
+    schema:name "Rebflächen mit natürlicher Artenvielfalt"@de,
+        "Surfaces viticoles présentant une biodiversité naturelle"@fr,
+        "Vigneti con biodiversità naturale"@it ;
+    schema:validFrom 1999 ;
+    schema:validTo cube:Undefined ;
+    :cultivationType cultivationtype:717 .
+
+agis:718 a :DirectPaymentCrop ;
+    schema:identifier "718" ;
+    schema:name "Trüffelanlagen"@de,
+        "Truffières"@fr,
+        "Tartufaie"@it ;
+    schema:validFrom 2014 ;
+    schema:validTo cube:Undefined ;
+    :cultivationType cultivationtype:718 .
+
+agis:719 a :DirectPaymentCrop ;
+    schema:identifier "719" ;
+    schema:name "Maulbeerbaumanlagen (Fütterung Seidenraupen)"@de,
+        "Cultures de mûriers (alimentation des vers à soie)"@fr,
+        "Coltivazioni di gelsi (foraggiamento dei bachi da seta)"@it ;
+    schema:validFrom 2014 ;
+    schema:validTo cube:Undefined ;
+    :cultivationType cultivationtype:719 .
+
+agis:720 a :DirectPaymentCrop ;
+    schema:identifier "720" ;
+    schema:name "Gepflegte Selven (Edelkastanienbäume)"@de,
+        "Châtaigneraies entretenues (surface)"@fr,
+        "Selve curate (castagni)"@it ;
+    schema:validFrom 2014 ;
+    schema:validTo cube:Undefined ;
+    :cultivationType cultivationtype:720 .
+
+agis:721 a :DirectPaymentCrop ;
+    schema:identifier "721" ;
+    schema:name "Mehrjährige gärtnerische Freilandkulturen (nicht im Gewächshaus)"@de,
+        "Cultures horticoles pluriannuelles de plein air (pas en serres)"@fr,
+        "Floricoltura di pieno campo pluriennale (non in serra)"@it ;
+    schema:validFrom 2015 ;
+    schema:validTo cube:Undefined ;
+    :cultivationType cultivationtype:721 .
+
+agis:722 a :DirectPaymentCrop ;
+    schema:identifier "722" ;
+    schema:name "Baumschule von Reben"@de,
+        "Pépinière viticoles"@fr,
+        "Vivai viticoli"@it ;
+    schema:validFrom 2016 ;
+    schema:validTo cube:Undefined ;
+    :cultivationType cultivationtype:722 .
+
+agis:723 a :DirectPaymentCrop ;
+    schema:identifier "723" ;
+    schema:name "Baumschule von Obst und Beeren"@de,
+        "Pépinière de fruits et de baies"@fr,
+        "Vivaio di alberi da frutto e bacche"@it ;
+    schema:validFrom 2023 ;
+    schema:validTo cube:Undefined ;
+    :cultivationType cultivationtype:723 .
+
+agis:724 a :DirectPaymentCrop ;
+    schema:identifier "724" ;
+    schema:name "Übrige Baumschulen (Rosen, Zierstauden, usw.)"@de,
+        "Autres pépinières (rosiers, plantes ornementales, etc.)"@fr,
+        "Altri vivai (rose, arbusti ornamentali, ecc.)"@it ;
+    schema:validFrom 2023 ;
+    schema:validTo cube:Undefined ;
+    :cultivationType cultivationtype:724 .
+
+agis:725 a :DirectPaymentCrop ;
+    schema:identifier "725" ;
+    schema:name "Permakultur (kleinräumige Mischung verschiedener Kulturen mit mehr als 50% Spezialkulturen)"@de,
+        "Permaculture (mélange à petite échelle de différentes cultures avec plus de 50 % de cultures spéciales)"@fr,
+        "Permacultura (miscelazione su piccola scala di diverse colture con più del 50 % di colture speciali)"@it ;
+    schema:validFrom 2020 ;
+    schema:validTo cube:Undefined ;
+    :cultivationType cultivationtype:725 .
+
+agis:731 a :DirectPaymentCrop ;
+    schema:identifier "731" ;
+    schema:name "Andere Obstanlagen (Kiwi, Holunder, usw.)"@de,
+        "Autres cultures fruitières (kiwi, sureau, etc.)"@fr,
+        "Altri frutteti (kiwi, sambuco, ecc.)"@it ;
+    schema:validFrom 2009 ;
+    schema:validTo cube:Undefined ;
+    :cultivationType cultivationtype:731 .
+
+agis:735 a :DirectPaymentCrop ;
+    schema:identifier "735" ;
+    schema:name "Reben (regionsspezifische Biodiversitätsförderfläche)"@de,
+        "Vignes (surfaces de promotion de la biodiversité spécifiques à la région)"@fr,
+        "Vigna (superfici per la promozione della biodiversità specifiche di una regione)"@it ;
+    schema:validFrom 2016 ;
+    schema:validTo cube:Undefined ;
+    :cultivationType cultivationtype:735 .
+
+agis:797 a :DirectPaymentCrop ;
+    schema:identifier "797" ;
+    schema:name "Übrige Flächen mit Dauerkulturen, beitragsberechtigt"@de,
+        "Autres surfaces de cultures pérennes donnant droit aux contributions"@fr,
+        "Altre superfici con colture perenni, aventi diritto ai contributi"@it ;
+    schema:validFrom 1999 ;
+    schema:validTo cube:Undefined ;
+    :cultivationType cultivationtype:797 .
+
+agis:798 a :DirectPaymentCrop ;
+    schema:identifier "798" ;
+    schema:name "Übrige Flächen mit Dauerkulturen, nicht beitragsberechtigt"@de,
+        "Autres surfaces de cultures pérennes ne donnant pas droit aux contributions"@fr,
+        "Altre superfici con colture perenni, non aventi diritto ai contributi"@it ;
+    schema:validFrom 1999 ;
+    schema:validTo cube:Undefined ;
+    :cultivationType cultivationtype:798 .
+
+agis:801 a :DirectPaymentCrop ;
+    schema:identifier "801" ;
+    schema:name "Gemüsekulturen in Gewächshäusern mit festem Fundament"@de,
+        "Cultures maraîchères sous serres avec fondations permanentes"@fr,
+        "Colture orticole in serre con fondamenta fisse"@it ;
+    schema:validFrom 1999 ;
+    schema:validTo cube:Undefined ;
+    :cultivationGroup cultivationtype:7 ;
+    :cultivationType cultivationtype:801 .
+
+agis:802 a :DirectPaymentCrop ;
+    schema:identifier "802" ;
+    schema:name "Übrige Spezialkulturen in Gewächshäusern mit festem Fundament"@de,
+        "Autres cultures spéciales sous serres avec fondations permanentes"@fr,
+        "Altre colture speciali in serre con fondamenta fisse"@it ;
+    schema:validFrom 1999 ;
+    schema:validTo cube:Undefined ;
+    :cultivationGroup cultivationtype:7 ;
+    :cultivationType cultivationtype:802 .
+
+agis:803 a :DirectPaymentCrop ;
+    schema:identifier "803" ;
+    schema:name "Gärtnerische Kulturen in Gewächshäusern mit festem Fundament"@de,
+        "Cultures horticoles sous serres avec fondations permanentes"@fr,
+        "Floricoltura in serre con fondamenta fisse"@it ;
+    schema:validFrom 1999 ;
+    schema:validTo cube:Undefined ;
+    :cultivationGroup cultivationtype:7 ;
+    :cultivationType cultivationtype:803 .
+
+agis:804 a :DirectPaymentCrop ;
+    schema:identifier "804" ;
+    schema:name "Beerenkulturen in Gewächshäusern mit festem Fundament"@de,
+        "Cultures de petits fruits sous serres avec fondations permanentes"@fr,
+        "Colture di bacche in serre con fondamenta fisse"@it ;
+    schema:validFrom 2023 ;
+    schema:validTo cube:Undefined ;
+    :cultivationGroup cultivationtype:7 ;
+    :cultivationType cultivationtype:804 .
+
+agis:806 a :DirectPaymentCrop ;
+    schema:identifier "806" ;
+    schema:name "Gemüsekulturen in geschütztem Anbau ohne festes Fundament"@de,
+        "Cultures maraîchères sous abri sans fondations permanentes"@fr,
+        "Colture orticole in serre senza fondamenta fisse"@it ;
+    schema:validFrom 1999 ;
+    schema:validTo 2022 ;
+    :cultivationGroup cultivationtype:7 ;
+    :cultivationType cultivationtype:806 .
+
+agis:807 a :DirectPaymentCrop ;
+    schema:identifier "807" ;
+    schema:name "Übrige Spezialkulturen in geschütztem Anbau ohne festes Fundament"@de,
+        "Autres cultures spéciales sous abri sans fondations permanentes"@fr,
+        "Altre colture speciali coltivate al coperto senza fondamenta fisse"@it ;
+    schema:validFrom 1999 ;
+    schema:validTo cube:Undefined ;
+    :cultivationGroup cultivationtype:7 ;
+    :cultivationType cultivationtype:807 .
+
+agis:808 a :DirectPaymentCrop ;
+    schema:identifier "808" ;
+    schema:name "Gärtnerische Kulturen in geschütztem Anbau ohne festes Fundament"@de,
+        "Cultures horticoles sous abri sans fondations permanentes"@fr,
+        "Floricoltura al coperto senza fondamenta fisse"@it ;
+    schema:validFrom 1999 ;
+    schema:validTo cube:Undefined ;
+    :cultivationGroup cultivationtype:7 ;
+    :cultivationType cultivationtype:808 .
+
+agis:810 a :DirectPaymentCrop ;
+    schema:identifier "810" ;
+    schema:name "Pilze in geschütztem Anbau mit festem Fundament"@de,
+        "Champignons sous abri avec fondations permanentes"@fr,
+        "Funghi coltivati al coperto con fondamenta fisse"@it ;
+    schema:validFrom 2014 ;
+    schema:validTo cube:Undefined ;
+    :cultivationGroup cultivationtype:7 ;
+    :cultivationType cultivationtype:810 .
+
+agis:811 a :DirectPaymentCrop ;
+    schema:identifier "811" ;
+    schema:name "Gemüsekulturen in geschütztem Anbau ohne festes Fundament, im gewachsenen Boden"@de,
+        "Cultures maraîchères sous abri sans fondations permanentes, sur sol naturel"@fr,
+        "Colture orticole coltivate al coperto senza fondamenta fisse, nel terreno naturale"@it ;
+    schema:validFrom 2023 ;
+    schema:validTo cube:Undefined ;
+    :cultivationGroup cultivationtype:7 ;
+    :cultivationType cultivationtype:811 .
+
+agis:812 a :DirectPaymentCrop ;
+    schema:identifier "812" ;
+    schema:name "Gemüsekulturen in geschütztem Anbau ohne festes Fundament, auf Pflanztischen oder -gestellen"@de,
+        "Cultures maraîchères sous abri sans fondations permanentes, sur des tables de plantation ou des étagères"@fr,
+        "Colture orticole coltivate al coperto senza fondamenta fisse, su tavole di piantagione o rastrelliere"@it ;
+    schema:validFrom 2023 ;
+    schema:validTo cube:Undefined ;
+    :cultivationGroup cultivationtype:7 ;
+    :cultivationType cultivationtype:812 .
+
+agis:813 a :DirectPaymentCrop ;
+    schema:identifier "813" ;
+    schema:name "Beerenkulturen in geschütztem Anbau ohne festes Fundament, im gewachsenen Boden"@de,
+        "Cultures de petits fruits sous abri sans fondations permanentes, sur sol naturel"@fr,
+        "Colture di bacche coltivate al coperto senza fondamenta fisse, nel terreno naturale"@it ;
+    schema:validFrom 2023 ;
+    schema:validTo cube:Undefined ;
+    :cultivationGroup cultivationtype:7 ;
+    :cultivationType cultivationtype:813 .
+
+agis:814 a :DirectPaymentCrop ;
+    schema:identifier "814" ;
+    schema:name "Beerenkulturen in geschütztem Anbau ohne festes Fundament, auf Pflanztischen oder -gestellen"@de,
+        "Cultures de petits fruits sous abri sans fondations permanentes, sur des tables de plantation ou des étagères"@fr,
+        "Colture di bacche coltivate al coperto senza fondamenta fisse, su tavole di piantagione o rastrelliere"@it ;
+    schema:validFrom 2023 ;
+    schema:validTo cube:Undefined ;
+    :cultivationGroup cultivationtype:7 ;
+    :cultivationType cultivationtype:814 .
+
+agis:847 a :DirectPaymentCrop ;
+    schema:identifier "847" ;
+    schema:name "Übrige Kulturen in geschütztem Anbau ohne festes Fundament, beitragsberechtigt"@de,
+        "Autres cultures sous abri sans fondations permanentes donnant droit aux contributions"@fr,
+        "Altre colture coltivate al coperto senza fondamenta fisse, aventi diritto ai contributi"@it ;
+    schema:validFrom 1999 ;
+    schema:validTo cube:Undefined ;
+    :cultivationGroup cultivationtype:7 ;
+    :cultivationType cultivationtype:847 .
+
+agis:848 a :DirectPaymentCrop ;
+    schema:identifier "848" ;
+    schema:name "Übrige Kulturen in geschütztem Anbau mit festem Fundament"@de,
+        "Autres cultures sous abri avec fondations permanentes"@fr,
+        "Altre colture coltivate al coperto con fondamenta fisse"@it ;
+    schema:validFrom 1999 ;
+    schema:validTo cube:Undefined ;
+    :cultivationGroup cultivationtype:7 ;
+    :cultivationType cultivationtype:848 .
+
+agis:849 a :DirectPaymentCrop ;
+    schema:identifier "849" ;
+    schema:name "Übrige Kulturen in geschütztem Anbau ohne festes Fundament, nicht beitragsberechtigt"@de,
+        "Autres cultures sous abri sans fondations permanentes ne donnant pas droit aux contributions"@fr,
+        "Altre colture coltivate al coperto senza fondamenta fisse, non aventi diritto ai contributi"@it ;
+    schema:validFrom 2014 ;
+    schema:validTo cube:Undefined ;
+    :cultivationGroup cultivationtype:7 ;
+    :cultivationType cultivationtype:849 .
+
+agis:851 a :DirectPaymentCrop ;
+    schema:identifier "851" ;
+    schema:name "Streueflächen innerhalb der landwirtschaftlichen Nutzfläche"@de,
+        "Surfaces à litière dans la surface agricole utile"@fr,
+        "Terreni da strame all’interno della superficie agricola utile"@it ;
+    schema:validFrom 1999 ;
+    schema:validTo cube:Undefined ;
+    :cultivationGroup cultivationtype:10 ;
+    :cultivationType cultivationtype:851 .
+
+agis:852 a :DirectPaymentCrop ;
+    schema:identifier "852" ;
+    schema:name "Hecken-, Feld- und Ufergehölze (mit Krautsaum)"@de,
+        "Haies, bosquets champêtres et berges boisées (avec la bande herbeuse)"@fr,
+        "Siepi, boschetti campestri e rivieraschi (con bordo inerbito)"@it ;
+    schema:validFrom 1999 ;
+    schema:validTo cube:Undefined ;
+    :cultivationGroup cultivationtype:10 ;
+    :cultivationType cultivationtype:852 .
+
+agis:857 a :DirectPaymentCrop ;
+    schema:identifier "857" ;
+    schema:name "Hecken-, Feld- und Ufergehölze (mit Pufferstreifen)"@de,
+        "Haies, bosquets champêtres et berges boisées (avec la bande tampon)"@fr,
+        "Siepi, boschetti campestri e rivieraschi (con fascia tampone)"@it ;
+    schema:validFrom 2008 ;
+    schema:validTo cube:Undefined ;
+    :cultivationGroup cultivationtype:10 ;
+    :cultivationType cultivationtype:857 .
+
+agis:858 a :DirectPaymentCrop ;
+    schema:identifier "858" ;
+    schema:name "Hecken-, Feld- und Ufergehölze (mit Pufferstreifen) (regionsspezifische Biodiversitätsförderfläche)"@de,
+        "Haies, bosquets champêtres et berges boisées (avec la bande tampon) (Surfaces de promotion de la biodiversité spécifiques à la région)"@fr,
+        "Siepi, boschetti campestri e rivieraschi (con fascia tampone) (Superfici per la promozione della biodiversità specifiche di una regione)"@it ;
+    schema:validFrom 2016 ;
+    schema:validTo cube:Undefined ;
+    :cultivationGroup cultivationtype:10 ;
+    :cultivationType cultivationtype:858 .
+
+agis:895 a :DirectPaymentCrop ;
+    schema:identifier "895" ;
+    schema:name "Übrige Flächen innerhalb der LN, beitragsberechtigt"@de,
+        "Autres surfaces dans la SAU donnant droit aux contributions"@fr,
+        "Altre superfici all'interno della SAU, aventi diritto ai contributi"@it ;
+    schema:validFrom 2005 ;
+    schema:validTo 2013 ;
+    :cultivationGroup cultivationtype:10 ;
+    :cultivationType cultivationtype:895 .
+
+agis:897 a :DirectPaymentCrop ;
+    schema:identifier "897" ;
+    schema:name "Übrige Flächen innerhalb der landwirtschaftlichen Nutzfläche, beitragsberechtigt"@de,
+        "Autres surfaces dans la surface agricole utile donnant droit aux contributions"@fr,
+        "Altre superfici all’interno della superficie agricola utile, aventi diritto ai contributi"@it ;
+    schema:validFrom 1999 ;
+    schema:validTo cube:Undefined ;
+    :cultivationGroup cultivationtype:10 ;
+    :cultivationType cultivationtype:897 .
+
+agis:898 a :DirectPaymentCrop ;
+    schema:identifier "898" ;
+    schema:name "Übrige Flächen innerhalb der landwirtschaftlichen Nutzfläche, nicht beitragsberechtigt"@de,
+        "Autres surfaces dans la surface agricole utile ne donnant pas droit aux contributions"@fr,
+        "Altre superfici all’interno della superficie agricola utile, non aventi diritto ai contributi"@it ;
+    schema:validFrom 1999 ;
+    schema:validTo cube:Undefined ;
+    :cultivationGroup cultivationtype:10 ;
+    :cultivationType cultivationtype:898 .
+
+agis:901 a :DirectPaymentCrop ;
+    schema:identifier "901" ;
+    schema:name "Wald"@de,
+        "Forêt"@fr,
+        "Bosco"@it ;
+    schema:validFrom 1999 ;
+    schema:validTo cube:Undefined ;
+    :cultivationGroup cultivationtype:12 ;
+    :cultivationType cultivationtype:901 .
+
+agis:902 a :DirectPaymentCrop ;
+    schema:identifier "902" ;
+    schema:name "Übrige unproduktive Flächen (z.B. gemulchte Flächen, stark verunkrautete Flächen, Hecke ohne Pufferstreifen)"@de,
+        "Surfaces improductives (p.ex. haies sans les bandes tampons, surfaces broyées, surfaces avec un degré élevé de mauvaises herbes)"@fr,
+        "Altre superfici improduttive (p.es. siepi senza fascia tampone, superfici pacciamate, superfici con elevata presenza di malerbe)"@it ;
+    schema:validFrom 1999 ;
+    schema:validTo cube:Undefined ;
+    :cultivationGroup cultivationtype:12 ;
+    :cultivationType cultivationtype:902 .
+
+
+agis:903 a :DirectPaymentCrop ;
+    schema:identifier "903" ;
+    schema:name "Flächen ohne landwirtschaftliche Hauptzweckbestimmung (erschlossenes Bauland, Spiel-, Reit-, Camping-, Golf-, Flug- und Militärplätze oder ausgemarchte Bereiche von Eisenbahnen, öffentlichen Strassen und Gewässern)"@de,
+        "Surfaces dont l'affectation principale n'est pas l'exploitation agricole (terrains à bâtir équipés et surfaces comprises dans les terrains de golf et de camping, aérodromes et terrains d'entraînement militaire, surfaces délimitées des bas-côtés des lignes de chemins de fer, de routes publiques, de cours et de plans d'eau)"@fr,
+        "Superfici la cui destinazione principale non è l'utilizzazione agricola (quelle inserite in terreni edificabili urbanizzati, da golf, da equitazione, da campeggio, di aerodromi e d'esercitazione militare o che rientrano nella zona delimitata di ferrovie, strade pubbliche e corsi d'acqua)"@it ;
+    schema:validFrom 1999 ;
+    schema:validTo cube:Undefined ;
+    :cultivationGroup cultivationtype:12 ;
+    :cultivationType cultivationtype:903 .
+
+agis:904 a :DirectPaymentCrop ;
+    schema:identifier "904" ;
+    schema:name "Wassergräben, Tümpel, Teiche"@de,
+        "Fossés humides, mares, étangs"@fr,
+        "Fossati umidi, stagni, pozze"@it ;
+    schema:validFrom 1999 ;
+    schema:validTo cube:Undefined ;
+    :cultivationGroup cultivationtype:12 ;
+    :cultivationType cultivationtype:904 .
+
+agis:905 a :DirectPaymentCrop ;
+    schema:identifier "905" ;
+    schema:name "Ruderalflächen, Steinhaufen und -wälle"@de,
+        "Surfaces rudérales, tas d'épierrage et affleurements rocheux"@fr,
+        "Superfici ruderali, cumuli di pietra, affioramenti rocciosi"@it ;
+    schema:validFrom 1999 ;
+    schema:validTo cube:Undefined ;
+    :cultivationGroup cultivationtype:12 ;
+    :cultivationType cultivationtype:905 .
+
+agis:906 a :DirectPaymentCrop ;
+    schema:identifier "906" ;
+    schema:name "Trockenmauern"@de,
+        "Murs de pierres sèches"@fr,
+        "Muri a secco"@it ;
+    schema:validFrom 1999 ;
+    schema:validTo cube:Undefined ;
+    :cultivationGroup cultivationtype:12 ;
+    :cultivationType cultivationtype:906 .
+
+agis:907 a :DirectPaymentCrop ;
+    schema:identifier "907" ;
+    schema:name "Unbefestigte, natürliche Wege"@de,
+        "Chemins naturels non stabilisés"@fr,
+        "Sentieri e accessi naturali non consolidati"@it ;
+    schema:validFrom 1999 ;
+    schema:validTo cube:Undefined ;
+    :cultivationGroup cultivationtype:12 ;
+    :cultivationType cultivationtype:907 .
+
+agis:908 a :DirectPaymentCrop ;
+    schema:identifier "908" ;
+    schema:name "Regionsspezifische Biodiversitätsförderfläche"@de,
+        "Surfaces de promotion de la biodiversité spécifiques à la région"@fr,
+        "Superfici per la promozione della biodiversità specifiche di una regione"@it ;
+    schema:validFrom 1999 ;
+    schema:validTo cube:Undefined ;
+    :cultivationGroup cultivationtype:12 ;
+    :cultivationType cultivationtype:908 .
+
+agis:909 a :DirectPaymentCrop ;
+    schema:identifier "909" ;
+    schema:name "Hausgärten"@de,
+        "Jardins potager"@fr,
+        "Giardini e orti domestici"@it ;
+    schema:validFrom 1999 ;
+    schema:validTo cube:Undefined ;
+    :cultivationGroup cultivationtype:12 ;
+    :cultivationType cultivationtype:909 .
+
+agis:911 a :DirectPaymentCrop ;
+    schema:identifier "911" ;
+    schema:name "Landwirtschaftliche Produktion in Gebäuden (z.B. Pilze, Brüsseler)"@de,
+        "Production agricole dans des bâtiments (p.ex. champignons, chicorée witloof)"@fr,
+        "Produzione agricola in edifici (p.es. funghi, cicoria belga)"@it ;
+    schema:validFrom 2015 ;
+    schema:validTo cube:Undefined ;
+    :cultivationGroup cultivationtype:12 ;
+    :cultivationType cultivationtype:911 .
+
+agis:921 a :DirectPaymentCrop ;
+    schema:identifier "921" ;
+    schema:name "Hochstammfeldobstbäume"@de,
+        "Arbres fruitiers haute-tige"@fr,
+        "Alberi da frutto ad alto fusto nei campi"@it ;
+    schema:validFrom 1999 ;
+    schema:validTo cube:Undefined ;
+    :cultivationGroup cultivationtype:20 ;
+    :cultivationType cultivationtype:921 .
+
+agis:922 a :DirectPaymentCrop ;
+    schema:identifier "922" ;
+    schema:name "Nussbäume"@de,
+        "Noyers"@fr,
+        "Noci"@it ;
+    schema:validFrom 2014 ;
+    schema:validTo cube:Undefined ;
+    :cultivationGroup cultivationtype:20 ;
+    :cultivationType cultivationtype:922 .
+
+agis:923 a :DirectPaymentCrop ;
+    schema:identifier "923" ;
+    schema:name "Edelkastanienbäume"@de,
+        "Châtaigniers"@fr,
+        "Castagni"@it ;
+    schema:validFrom 2014 ;
+    schema:validTo cube:Undefined ;
+    :cultivationGroup cultivationtype:20 ;
+    :cultivationType cultivationtype:923 .
+
+agis:924 a :DirectPaymentCrop ;
+    schema:identifier "924" ;
+    schema:name "Einheimische standortgerechte Einzelbäume und Alleen"@de,
+        "Arbres isolés indigènes adaptés au site et allées d'arbres"@fr,
+        "Alberi indigeni isolati adatti al luogo e viali alberati"@it ;
+    schema:validFrom 1999 ;
+    schema:validTo cube:Undefined ;
+    :cultivationGroup cultivationtype:20 ;
+    :cultivationType cultivationtype:924 .
+
+agis:925 a :DirectPaymentCrop ;
+    schema:identifier "925" ;
+    schema:name "Markante Einzelbäume"@de,
+        "Arbres isolés remarquables"@fr,
+        "Alberi isolati importanti"@it ;
+    schema:validFrom 2014 ;
+    schema:validTo cube:Undefined ;
+    :cultivationGroup cultivationtype:20 ;
+    :cultivationType cultivationtype:925 .
+
+agis:926 a :DirectPaymentCrop ;
+    schema:identifier "926" ;
+    schema:name "Andere Bäume"@de,
+        "Autres arbres"@fr,
+        "Altri alberi"@it ;
+    schema:validFrom 2014 ;
+    schema:validTo cube:Undefined ;
+    :cultivationGroup cultivationtype:20 ;
+    :cultivationType cultivationtype:926 .
+
+agis:927 a :DirectPaymentCrop ;
+    schema:identifier "927" ;
+    schema:name "Andere Bäume (regionsspezifische Biodiversitätsförderfläche)"@de,
+        "Autres arbres (surfaces de promotion de la biodiversité spécifiques à la région)"@fr,
+        "Altri alberi (superfici per la promozione della biodiversità specifiche di una regione)"@it ;
+    schema:validFrom 2016 ;
+    schema:validTo cube:Undefined ;
+    :cultivationGroup cultivationtype:20 ;
+    :cultivationType cultivationtype:927 .
+
+agis:928 a :DirectPaymentCrop ;
+    schema:identifier "928" ;
+    schema:name "Andere Elemente (regionsspezifische Biodiversitätsförderfläche)"@de,
+        "Autres éléments (surfaces de promotion de la biodiversité spécifiques à la région)"@fr,
+        "Altri elementi (superficie per la promozione della biodiversità specifica di una regione)"@it ;
+    schema:validFrom 2016 ;
+    schema:validTo cube:Undefined ;
+    :cultivationGroup cultivationtype:20 ;
+    :cultivationType cultivationtype:928 .
+
+agis:929 a :DirectPaymentCrop ;
+    schema:identifier "929" ;
+    schema:name "Andere Elemente (Landschaftsqualität)"@de,
+        "Autres éléments (qualité du paysage)"@fr,
+        "Altri elementi (qualità del paesaggio)"@it ;
+    schema:validFrom 2016 ;
+    schema:validTo cube:Undefined ;
+    :cultivationGroup cultivationtype:20 ;
+    :cultivationType cultivationtype:929 .
+
+agis:930 a :DirectPaymentCrop ;
+    schema:identifier "930" ;
+    schema:name "Sömmerungsweiden"@de,
+        "Pâturages d'estivage"@fr,
+        "Pascoli d'estivazione"@it ;
+    schema:validFrom 1999 ;
+    schema:validTo cube:Undefined ;
+    :cultivationGroup cultivationtype:13 ;
+    :cultivationType cultivationtype:930 .
+
+agis:931 a :DirectPaymentCrop ;
+    schema:identifier "931" ;
+    schema:name "Artenreiche Grün- und Streueflächen im Sömmerungsgebiet"@de,
+        "Surfaces herbagères et surfaces à litière riches en espèces dans la région d'estivage"@fr,
+        "Superfici inerbite e terreni da strame ricchi di specie nella regione d'estivazione"@it ;
+    schema:validFrom 2014 ;
+    schema:validTo cube:Undefined ;
+    :cultivationGroup cultivationtype:13 ;
+    :cultivationType cultivationtype:931 .
+
+agis:933 a :DirectPaymentCrop ;
+    schema:identifier "933" ;
+    schema:name "Gemeinschaftsweiden"@de,
+        "Pâturages communautaires"@fr,
+        "Pascoli comunitari"@it ;
+    schema:validFrom 2014 ;
+    schema:validTo cube:Undefined ;
+    :cultivationGroup cultivationtype:13 ;
+    :cultivationType cultivationtype:933 .
+
+agis:935 a :DirectPaymentCrop ;
+    schema:identifier "935" ;
+    schema:name "Heuwiesen für Zufütterung während der Sömmerung"@de,
+        "Prairies de fauche en région d'estivage, pour l'affouragement pendant l'estivage"@fr,
+        "Prati da sfalcio nella regione d'estivazione, per l'alimentazione durante l'estivazione"@it ;
+    schema:validFrom 2014 ;
+    schema:validTo cube:Undefined ;
+    :cultivationGroup cultivationtype:13 ;
+    :cultivationType cultivationtype:935 .
+
+agis:936 a :DirectPaymentCrop ;
+    schema:identifier "936" ;
+    schema:name "Streueflächen im Sömmerungsgebiet"@de,
+        "Surfaces à litière, région d'estivage"@fr,
+        "Terreni da strame nella regione d'estivazione"@it ;
+    schema:validFrom 2014 ;
+    schema:validTo cube:Undefined ;
+    :cultivationGroup cultivationtype:13 ;
+    :cultivationType cultivationtype:936 .
+
+agis:998 a :DirectPaymentCrop ;
+    schema:identifier "998" ;
+    schema:name "Übrige Flächen ausserhalb der landwirtschaftlichen Nutzfläche"@de,
+        "Autres surfaces hors de la surface agricole utile"@fr,
+        "Altre superfici fuori della superficie agricola utile"@it ;
+    schema:validFrom 1999 ;
+    schema:validTo cube:Undefined ;
+    :cultivationGroup cultivationtype:12 ;
+    :cultivationType cultivationtype:998 .
