@@ -2,7 +2,7 @@
 [![GitHub last commit](https://img.shields.io/github/last-commit/blw-ofag-ufag/semantic-web-template.svg)](https://github.com/blw-ofag-ufag/eCH-0265/commits)
 [![GitHub issues](https://img.shields.io/github/issues/blw-ofag-ufag/semantic-web-template.svg)](https://github.com/blw-ofag-ufag/eCH-0265/issues)
 
-# eCH-0265 Agricultural Crops
+# eCH-0265 Agricultural Crops (Working Draft v2.0)
 
 This resource contains a data model for agricultural crops in Switzerland as well as associated reference objects, which can be retrieved in a machine-readable format as Linked Data. This aims to enable the domain-validated exchange and reuse of data between the fields of direct payments, nutrient balancing, and plant protection.
 

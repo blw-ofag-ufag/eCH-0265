@@ -127,7 +127,7 @@ $(INFERRED_DATA): $(MERGED_DATA) $(PREFIXES) src/python/utils/turtle_serializer.
 	@$(ROBOT) reason \
 		--input $(MERGED_DATA) \
 		--reasoner HermiT \
-		--axiom-generators "SubClass ClassAssertion PropertyAssertion" \
+		--axiom-generators "SubClass" \
 		--include-indirect true \
 		--output $(INFERRED_DATA) > $(INFER_LOG) 2>&1 || (cat $(INFER_LOG) && exit 1)
 	@$(VENV_PYTHON) src/python/utils/turtle_serializer.py -i $(INFERRED_DATA) -p $(PREFIXES) -o $(INFERRED_DATA)
