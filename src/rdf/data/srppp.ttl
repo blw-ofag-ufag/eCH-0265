@@ -1,24 +1,28 @@
-@prefix : <https://agriculture.ld.admin.ch/crops/> .
-@prefix psm: <https://agriculture.ld.admin.ch/crops/psm/1/> .
-@prefix shape: <https://agriculture.ld.admin.ch/crops/shape/> .
+# ==============================================================================
+# PREFIXES USED FOR THIS PROJECT
+# (Try to keep all the QNames used in this project in this file)
+# ==============================================================================
+
+# Project-specific namespaces/qnames
+@prefix :                <https://agriculture.ld.admin.ch/crops/> .
+@prefix psm:             <https://agriculture.ld.admin.ch/crops/psm/1/> .
 @prefix cultivationtype: <https://agriculture.ld.admin.ch/crops/cultivationtype/> .
+@prefix shape:           <https://agriculture.ld.admin.ch/crops/shape/> .
 
-@prefix cube: <https://cube.link/> .
-@prefix meta: <https://cube.link/meta/> .
+# LINDAS-specific namespaces/qnames
+@prefix cube:            <https://cube.link/> .
+@prefix org:             <https://register.ld.admin.ch/opendataswiss/org/> .
+@prefix status:          <https://ld.admin.ch/vocabulary/CreativeWorkStatus/> .
+@prefix theme:           <https://register.ld.admin.ch/opendataswiss/category/> .
 
-@prefix dcat: <http://www.w3.org/ns/dcat#> .
-@prefix dcterms: <http://purl.org/dc/terms/> .
-@prefix qudt: <http://qudt.org/schema/qudt/> .
-@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
-@prefix schema: <http://schema.org/> .
-@prefix sh: <http://www.w3.org/ns/shacl#> .
-@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
-@prefix void: <http://rdfs.org/ns/void#> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix theme: <https://register.ld.admin.ch/opendataswiss/category/> .
-@prefix blw: <https://register.ld.admin.ch/opendataswiss/org/bundesamt-fur-landwirtschaft-blw> .
-@prefix frequency: <http://publications.europe.eu/resource/authority/frequency> .
-@prefix status: <https://ld.admin.ch/vocabulary/CreativeWorkStatus/> .
+# Globally used namespaces/qnames
+@prefix dcat:            <http://www.w3.org/ns/dcat#> .
+@prefix dcterms:         <http://purl.org/dc/terms/> .
+@prefix frequency:       <https://publications.europa.eu/resource/authority/frequency/> .
+@prefix schema:          <http://schema.org/> .
+@prefix vcard:           <http://www.w3.org/2006/vcard/ns#> .
+@prefix void:            <http://rdfs.org/ns/void#> .
+@prefix xsd:             <http://www.w3.org/2001/XMLSchema#> .
 
 # ==============================================================================
 # DATASET METADATA
@@ -29,17 +33,17 @@ psm: a void:Dataset,
         dcat:Dataset,
         cube:Cube ;
     dcterms:accrualPeriodicity frequency:ANNUAL ;
-    dcterms:creator blw: ;
-    schema:contributor blw: ;
+    dcterms:creator org:bundesamt-fur-landwirtschaft-blw ;
+    schema:contributor org:bundesamt-fur-landwirtschaft-blw ;
     schema:creativeWorkStatus status:Draft ;
-    schema:creator blw: ;
+    schema:creator org:bundesamt-fur-landwirtschaft-blw ;
     schema:dateCreated "2026-04-16"^^xsd:date ;
     schema:datePublished "2026-04-16"^^xsd:date ;
     schema:description "Kulturen aus dem Pflanzenschutzmittelverzeichnis (PSM) und ihre Identifikatoren."@de,
         "Crops from the Plant Protection Products (PSM) registry and their identifiers."@en ;
     schema:name "PSM-Kulturen"@de,
         "PSM crops"@en ;
-    schema:publisher blw: ;
+    schema:publisher org:bundesamt-fur-landwirtschaft-blw ;
     schema:version "1.0" ;
     schema:workExample <https://ld.admin.ch/application/visualize> ;
     dcat:contactPoint

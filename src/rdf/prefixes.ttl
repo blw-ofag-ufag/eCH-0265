@@ -11,11 +11,12 @@
 @prefix cultivationtype: <https://agriculture.ld.admin.ch/crops/cultivationtype/> .
 @prefix taxon:           <https://agriculture.ld.admin.ch/crops/taxon/> .
 @prefix intensity:       <https://agriculture.ld.admin.ch/crops/intensity/> .
+@prefix shape:           <https://agriculture.ld.admin.ch/crops/shape/> .
 
 # LINDAS-specific namespaces/qnames
-@prefix org:             <https://register.ld.admin.ch/opendataswiss/org/> .
 @prefix cube:            <https://cube.link/> .
 @prefix meta:            <https://cube.link/meta/> .
+@prefix org:             <https://register.ld.admin.ch/opendataswiss/org/> .
 @prefix status:          <https://ld.admin.ch/vocabulary/CreativeWorkStatus/> .
 @prefix theme:           <https://register.ld.admin.ch/opendataswiss/category/> .
 

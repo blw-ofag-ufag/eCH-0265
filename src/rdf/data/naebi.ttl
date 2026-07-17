@@ -1,22 +1,27 @@
-@prefix : <https://agriculture.ld.admin.ch/crops/> .
-@prefix shape: <https://agriculture.ld.admin.ch/crops/shape/> .
-@prefix blw: <https://register.ld.admin.ch/opendataswiss/org/bundesamt-fur-landwirtschaft-blw> .
-@prefix cube: <https://cube.link/> .
+# ==============================================================================
+# PREFIXES USED FOR THIS PROJECT
+# ==============================================================================
+
+# Project-specific namespaces/qnames
+@prefix :                <https://agriculture.ld.admin.ch/crops/> .
+@prefix naebi:           <https://agriculture.ld.admin.ch/crops/naebi/1/> .
 @prefix cultivationtype: <https://agriculture.ld.admin.ch/crops/cultivationtype/> .
-@prefix dcat: <http://www.w3.org/ns/dcat#> .
-@prefix dcterms: <http://purl.org/dc/terms/> .
-@prefix frequency: <http://publications.europe.eu/resource/authority/frequency> .
-@prefix naebi: <https://agriculture.ld.admin.ch/crops/naebi/1/> .
-@prefix qudt: <http://qudt.org/schema/qudt/> .
-@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
-@prefix sh: <http://www.w3.org/ns/shacl#> .
-@prefix schema: <http://schema.org/> .
-@prefix status: <https://ld.admin.ch/vocabulary/CreativeWorkStatus/> .
-@prefix unit: <http://qudt.org/vocab/unit/> .
-@prefix theme: <https://register.ld.admin.ch/opendataswiss/category/> .
-@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
-@prefix void: <http://rdfs.org/ns/void#> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix shape:           <https://agriculture.ld.admin.ch/crops/shape/> .
+
+# LINDAS-specific namespaces/qnames
+@prefix cube:            <https://cube.link/> .
+@prefix org:             <https://register.ld.admin.ch/opendataswiss/org/> .
+@prefix status:          <https://ld.admin.ch/vocabulary/CreativeWorkStatus/> .
+@prefix theme:           <https://register.ld.admin.ch/opendataswiss/category/> .
+
+# Globally used namespaces/qnames
+@prefix dcat:            <http://www.w3.org/ns/dcat#> .
+@prefix dcterms:         <http://purl.org/dc/terms/> .
+@prefix frequency:       <https://publications.europa.eu/resource/authority/frequency/> .
+@prefix schema:          <http://schema.org/> .
+@prefix vcard:           <http://www.w3.org/2006/vcard/ns#> .
+@prefix void:            <http://rdfs.org/ns/void#> .
+@prefix xsd:             <http://www.w3.org/2001/XMLSchema#> .
 
 # ==============================================================================
 # DATASET METADATA
@@ -27,15 +32,15 @@ naebi: a void:Dataset,
         dcat:Dataset,
         cube:Cube ;
     dcterms:accrualPeriodicity frequency:ANNUAL ;
-    dcterms:creator blw: ;
-    schema:contributor blw: ;
+    dcterms:creator org:bundesamt-fur-landwirtschaft-blw ;
+    schema:contributor org:bundesamt-fur-landwirtschaft-blw ;
     schema:creativeWorkStatus status:Draft ;
-    schema:creator blw: ;
+    schema:creator org:bundesamt-fur-landwirtschaft-blw ;
     schema:dateCreated "2026-04-17"^^xsd:date ;
     schema:datePublished "2026-04-17"^^xsd:date ;
     schema:description "Kulturen der Suisse-Bilanz und ihre Codes gemäss Wegleitung."@de ;
     schema:name "Suisse-Bilanz Kulturentabelle"@de ;
-    schema:publisher blw: ;
+    schema:publisher org:bundesamt-fur-landwirtschaft-blw ;
     schema:version "1.20" ;
     schema:workExample <https://ld.admin.ch/application/visualize> ;
     dcat:contactPoint
