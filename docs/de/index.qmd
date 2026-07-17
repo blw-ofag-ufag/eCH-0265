@@ -1,6 +1,8 @@
 ---
-title: eCH-1234 Quarto-Dokument als Vorlage
-abstract: Kurze Zusammenfassung des Zwecks dieses Dokuments
+title: eCH-0265 Landwirtschaftliche Kulturen
+abstract: |
+  Dieses Hilfsmittel beinhaltet ein Datenmodell zu landwirtschaftlichen Kulturen der Schweiz sowie dazugehörende Referenzobjekte, welche als Linked Data maschinenlesbar bezogen werden können.
+  Damit soll der fachlich validierte Datenaustausch und die Mehrfachnutzung von Daten zwischen den Bereichen der Direktzahlungen, der Nährstoffbilanz sowie des Pflanzenschutzes ermöglicht werden.
 date: today
 date-format: long
 lang: de
