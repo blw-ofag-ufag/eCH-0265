@@ -19,7 +19,7 @@ PYTEST           := $(VENV_BIN)/pytest -p no:cacheprovider # suppress cache
 ROBOT            := java -jar $(VENV_BIN)/robot.jar
 
 # Inputs
-ONTO             := src/rdf/ontology/model.owl.ttl
+ONTO             := $(wildcard src/rdf/ontology/*.owl.ttl)
 DATA             := $(wildcard src/rdf/data/*.ttl)
 SHAPES           := src/rdf/shapes/model.shacl.ttl
 PREFIXES         := src/rdf/prefixes.ttl
@@ -114,7 +114,7 @@ $(LOG_DIR)/syntax-check.stamp: $(DATA) $(ONTO) $(SHAPES) $(PREFIXES) $(FETCHED_D
 $(MERGED_DATA): $(ONTO) $(DATA) $(FETCHED_DATA) $(PREFIXES) $(LOG_DIR)/syntax-check.stamp src/python/utils/turtle_serializer.py | $(LOG_DIR) $(VENV_BIN)/robot.jar $(VENV)/.requirements-installed.stamp
 	@echo "Merging ontology and data..."
 	@$(ROBOT) merge \
-		--input $(ONTO) \
+		$(foreach o,$(ONTO),--input $(o)) \
 		$(foreach d,$(DATA),--input $(d)) \
 		--input $(FETCHED_DATA) \
 		--input $(PREFIXES) \

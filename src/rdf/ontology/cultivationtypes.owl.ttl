@@ -2618,7 +2618,7 @@ cultivationtype:602 a :CultivationType ;
     schema:description "Übrige Kunstwiese, beitragsberechtigt (z.B. Schweineweide, Geflügelweide)"@de,
         "Autres prairies artificielles donnant droit aux contributions (p.ex. pâturages pour porcs et volaille)"@fr,
         "Altri prati artificiali avente diritto ai contributi (p.es. pascoli riservati ai suini e al pollame)"@it ;
-    rdfs:subClassOf cultivationtype:601 .
+    rdfs:subClassOf cultivationtype:1 .
 
 cultivationtype:611 a :CultivationType ;
     schema:name "Extensiv genutzte Wiesen (ohne Weiden)"@de,
@@ -4532,14 +4532,18 @@ cultivationtype:1246 a :CultivationType ;
         "Cucumbers 30 pcs/m2, soil culture (protected cultivation)"@en,
         "Concombres 30 pces/m2, culture en terre (culture protégée)"@fr,
         "Cetrioli 30 pz/m2, coltura in terra (coltura protetta)"@it ;
-    owl:intersectionOf ( cultivationtype:32 cultivationtype:23 ) .
+    rdfs:subClassOf [
+        owl:intersectionOf ( cultivationtype:32 cultivationtype:23 ) ;
+    ] .
 
 cultivationtype:1247 a :CultivationType ;
     schema:name "Gurken 50 Stk/m2, Erdkultur (geschützter Anbau)"@de,
         "Cucumbers 50 pcs/m2, soil culture (protected cultivation)"@en,
         "Concombres 50 pces/m2, culture en terre (culture protégée)"@fr,
         "Cetrioli 50 pz/m2, coltura in terra (coltura protetta)"@it ;
-    owl:intersectionOf ( cultivationtype:32 cultivationtype:23 ) ;
+    rdfs:subClassOf [
+        owl:intersectionOf ( cultivationtype:32 cultivationtype:23 ) ;
+    ] ;
     owl:disjointWith cultivationtype:1246 .
 
 cultivationtype:1248 a :CultivationType ;
