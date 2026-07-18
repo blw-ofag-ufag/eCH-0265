@@ -1,6 +1,6 @@
 [![CI](https://github.com/blw-ofag-ufag/eCH-0265/actions/workflows/ci.yml/badge.svg)](https://github.com/blw-ofag-ufag/eCH-0265/actions/workflows/ci.yml)
-[![GitHub last commit](https://img.shields.io/github/last-commit/blw-ofag-ufag/semantic-web-template.svg)](https://github.com/blw-ofag-ufag/eCH-0265/commits)
-[![GitHub issues](https://img.shields.io/github/issues/blw-ofag-ufag/semantic-web-template.svg)](https://github.com/blw-ofag-ufag/eCH-0265/issues)
+[![GitHub last commit](https://img.shields.io/github/last-commit/blw-ofag-ufag/eCH-0265.svg)](https://github.com/blw-ofag-ufag/eCH-0265/commits)
+[![GitHub issues](https://img.shields.io/github/issues/blw-ofag-ufag/eCH-0265.svg)](https://github.com/blw-ofag-ufag/eCH-0265/issues)
 
 # eCH-0265 Agricultural Crops (Working Draft v2.0)
 
