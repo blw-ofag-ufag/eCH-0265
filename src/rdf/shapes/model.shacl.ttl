@@ -38,7 +38,7 @@ shape: a owl:Ontology ;
     dcterms:title "RDF master and reference data about crops"@en ;
     dcterms:created "2026-03-05"^^xsd:date ;
     dcterms:modified "2026-05-04"^^xsd:date ;
-    dcterms:description
+    dcterms:abstract
 """
 This project addresses the challenge of fragmented agricultural crop data within the Swiss federal administration, where essential systems all use separate, non-harmonized crop terminologies.
 This lack of a "single source of truth" creates significant integration hurdles for digital tools.
@@ -125,7 +125,7 @@ shape:CultivationType a sh:NodeShape ;
         sh:order 8 ;
         sh:path owl:disjointWith ;
         sh:nodeKind sh:IRI ;
-        sh:node shape:CultivationType ;
+        sh:class :CultivationType ;
     ],
     [
         sh:order 9 ;
@@ -195,17 +195,9 @@ shape:DirectPaymentCrop a sh:NodeShape ;
             sh:maxCount 1 ;
             sh:nodeKind sh:IRI ;
             sh:path :cultivationGroup ;
-            sh:node shape:CultivationType ;
+            sh:class :CultivationType ;
         ],
-        [
-            sh:order 4 ;
-            sh:name "Kultur"@de ;
-            sh:maxCount 1 ;
-            sh:minCount 1 ;
-            sh:nodeKind sh:IRI ;
-            sh:path :cultivationType ;
-            sh:node shape:CultivationType
-        ],
+        shape:cultivationType,
         [
             sh:order 5 ;
             sh:name "Gültig von"@de ;
@@ -238,16 +230,7 @@ shape:NutrientBalanceCrop a sh:NodeShape ;
     sh:ignoredProperties ( rdf:type ) ;
     sh:targetClass :NutrientBalanceCrop ;
     sh:property
-        [
-            sh:order 1 ;
-            sh:name "Identifikator"@de,
-                "Identifier"@en ;
-            sh:maxCount 1 ;
-            sh:minCount 1 ;
-            sh:path schema:identifier ;
-            sh:nodeKind sh:Literal ;
-            sh:datatype xsd:string ;
-        ],
+        shape:identifier,
         [
             sh:order 2 ;
             sh:name "Bezeichnung"@de,
@@ -264,9 +247,8 @@ shape:NutrientBalanceCrop a sh:NodeShape ;
             sh:maxCount 1 ;
             sh:minCount 1 ;
             sh:nodeKind sh:IRI ;
-            sh:node shape:CultivationType ;
+            sh:class :CultivationType ;
             sh:path :cultivationCategory ;
-            sh:node shape:CultivationCategory ;
         ],
         [
             sh:order 4 ;
@@ -274,24 +256,10 @@ shape:NutrientBalanceCrop a sh:NodeShape ;
             sh:maxCount 1 ;
             sh:minCount 1 ;
             sh:nodeKind sh:IRI ;
-            sh:node shape:CultivationType ;
+            sh:class :CultivationType ;
             sh:path :cultivationSubCategory ;
-            sh:node shape:CultivationSubCategory ;
         ],
-        [
-            sh:order 5 ;
-            sh:name "Kultur"@de,
-                "Crop"@en ;
-            a cube:KeyDimension ;
-            sh:maxCount 1 ;
-            sh:minCount 1 ;
-            sh:nodeKind sh:IRI ;
-            sh:path :cultivationType ;
-            sh:or (
-                [ sh:node shape:CultivationType ]
-                [ sh:hasValue cube:Undefined ]
-            ) ;
-        ],
+        shape:cultivationType,
         [
             a cube:MeasureDimension ;
             sh:order 6 ;
@@ -352,18 +320,7 @@ shape:PlantProtectionCrop a sh:NodeShape ;
     sh:ignoredProperties ( rdf:type ) ;
     sh:targetClass :PlantProtectionCrop ;
     sh:property
-        [
-            sh:order 1 ;
-            a cube:KeyDimension ;
-            sh:name "Identifikator"@de ;
-            sh:description "Der Identifikator aus Infofito. Neu ist das eine UUID."@de ;
-            sh:maxCount 1 ;
-            sh:minCount 1 ;
-            sh:path schema:identifier ;
-            sh:nodeKind sh:Literal ;
-            sh:datatype xsd:string ;
-            sh:pattern "^[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}$" ;
-        ],
+        shape:identifier,
         [
             sh:order 2 ;
             sh:name "Name"@de ;
@@ -375,19 +332,7 @@ shape:PlantProtectionCrop a sh:NodeShape ;
             sh:nodeKind sh:Literal ;
             sh:path schema:name ;
         ],
-        [
-            sh:order 3 ;
-            sh:name "Kultur"@de ;
-            sh:maxCount 1 ;
-            sh:minCount 1 ;
-            sh:nodeKind sh:IRI ;
-            sh:path :cultivationType ;
-            sh:or (
-                [ sh:node shape:CultivationType ]
-                [ sh:hasValue cube:Undefined ]
-                [ sh:hasValue :Cultivation ]
-            ) ;
-        ],
+        shape:cultivationType,
         [
             sh:order 4 ;
             sh:name "Version"@de ;
@@ -406,4 +351,40 @@ shape:PlantProtectionCrop a sh:NodeShape ;
             sh:maxCount 2 ;
             sh:nodeKind sh:IRI ;
             sh:class :PlantProtectionCrop ;
+        ],
+        [
+            sh:order 7 ;
+            sh:name "Child crop"@en,
+                "Unterkultur"@de ;
+            sh:path schema:hasPart ;
+            sh:minCount 0 ;
+            sh:nodeKind sh:IRI ;
+            sh:class :PlantProtectionCrop ;
         ] .
+
+# ==============================================================================
+# GENERIC PROPERTIES TO BE RE-USED
+# ==============================================================================
+
+shape:identifier a sh:PropertyShape ;
+    sh:name "Identifier"@en,
+        "Identifikator"@de ;
+    sh:order 1 ;
+    sh:path schema:identifier ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+    sh:nodeKind sh:Literal ;
+    sh:datatype xsd:string .
+
+shape:cultivationType a sh:PropertyShape ;
+    sh:order 0 ;
+    sh:name "Kultivierungstyp"@de, "Cultivation type"@en ;
+    sh:description "The corresponding cultivation type in the crops ontology that semantically describes this crop."@en ;
+    sh:path :cultivationType ;
+    sh:class :CultivationType ;
+    sh:minCount 0 ;
+    sh:maxCount 1 ;
+    sh:or (
+        [ sh:class :CultivationType ]
+        [ sh:hasValue cube:Undefined ]
+    ) .
