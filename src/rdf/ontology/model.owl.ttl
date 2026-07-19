@@ -41,7 +41,8 @@
     rdfs:subClassOf owl:Class .
 
 :DeprecatedCultivationType a owl:Class ;
-    rdfs:subClassOf owl:DeprecatedClass .
+    rdfs:subClassOf owl:DeprecatedClass,
+        :CultivationType .
 
 :DirectPaymentCrop a owl:Class ;
     rdfs:subClassOf cube:Observation .
