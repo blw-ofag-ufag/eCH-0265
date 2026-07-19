@@ -381,7 +381,6 @@ shape:cultivationType a sh:PropertyShape ;
     sh:name "Kultivierungstyp"@de, "Cultivation type"@en ;
     sh:description "The corresponding cultivation type in the crops ontology that semantically describes this crop."@en ;
     sh:path :cultivationType ;
-    sh:class :CultivationType ;
     sh:minCount 0 ;
     sh:maxCount 1 ;
     sh:or (
