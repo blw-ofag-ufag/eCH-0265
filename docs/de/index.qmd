@@ -2,6 +2,8 @@
 title: eCH-0265 Landwirtschaftliche Kulturen
 abstract: |
   Dieses Hilfsmittel beinhaltet ein Datenmodell zu landwirtschaftlichen Kulturen der Schweiz sowie dazugehörende Referenzobjekte, welche als Linked Data maschinenlesbar bezogen werden können.
+  In dieser Version bildet das Hilfsmittel die Beziehungen zwischen landwirtschaftlichen Kulturen aus den Bereichen Direktzahlungen, Nährstoffbilanz und dem Pflanzenschutzmittelverzeichnis ab.
+  Dabei wird nicht nur ein Datenmodell zu Verfügung gestellt, sondern auch die dazugehörigen Daten -- inklusive Mapping-Tabellen, um den Bezug zwischen Kulturen unterschiedlicher Bereiche herzustellen.
   Damit soll der fachlich validierte Datenaustausch und die Mehrfachnutzung von Daten zwischen den Bereichen der Direktzahlungen, der Nährstoffbilanz sowie des Pflanzenschutzes ermöglicht werden.
 date: today
 date-format: long
