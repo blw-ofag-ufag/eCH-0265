@@ -152,6 +152,7 @@ Die Standards enthalten die entsprechenden Hinweise auf Rechte Dritter.
 |:-------------------|:----------------------------------------------|
 | AGIS               | Agrarpolitisches Informationssystem           |
 | KAIS               | Kantonales Agrarinformationssystem            |
+| NBBS               | Nährstoffbilanz-Berechnungsservice            |
 
 : Abkürzungsverzeichnis {#tbl-abbreviations}
 
