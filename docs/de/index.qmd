@@ -58,9 +58,19 @@ Dieses System umfasst 321 Kulturen, welche im Gegensatz zu GRUD eine flexible Po
 
 Beispiel: Das Herbizid "Ariane C" ist gegen ein- und mehrjährige Dicotyledonen in Getreiden einsetzbar. Damit ist es automatisch bei allen Kulturen einsetzbar, welche vom Pflanzenschutzmittelverzeichnis als Getreide gesehen werden. Zum Beispiel gehört Mais explizit nicht dazu.
 
+## Nutzung von Semantic-Web-Technologien
+
+Im Gegensatz zum Pflanzenschutzmittelverzeichnis wird beim Nährstoffbilanzrechner Mais als Getreide gezählt – es existieren also verschiedene Definitionen von Getreide. Um diese eindeutig kennzeichnen zu können, setzen wir auf Linked Data. Jede Definition bekommt eine URI (in unserem Fall als URL dereferenzierbar). Die hier beschriebene Datensammlung beschreibt die Beziehungen der Klassen.
+
+TODO: Warum Linked Data → Zur eindeutigen Identifizierung von gleichen aber auch verschiedenen Objekten.
+
+## Was ist eine Kultur?
+
+TODO.
+
 # Datenmodell
 
-
+Das konsolidierte Datenmodell wird durch eine RDF-Ontologie abgebildet und mittels SHACL-Shapes validiert [@rdf;@owl2;@shacl].
 
 # Sicherheitsaspekte
 
