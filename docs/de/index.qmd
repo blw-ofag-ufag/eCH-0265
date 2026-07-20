@@ -118,6 +118,10 @@ Jede Definition bekommt eine URI (in unserem Fall als URL dereferenzierbar). Die
 
 TODO: Warum Linked Data → Zur eindeutigen Identifizierung von gleichen aber auch verschiedenen Objekten.
 
+# Klassen
+
+{{< include entities.md >}}
+
 # Sicherheitsaspekte
 
 Informationen zu den ausdrücklich massgeblichen rechtlichen Grundlagen oder ein Hinweis darauf, dass bei der Umsetzung die entsprechenden rechtlichen Grundlagen zu beachten sind.
