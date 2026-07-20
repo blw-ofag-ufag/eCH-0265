@@ -6,7 +6,7 @@
 
 This resource contains a data model for agricultural crops in Switzerland as well as associated reference objects, which can be retrieved in a machine-readable format as Linked Data. This aims to enable the domain-validated exchange and reuse of data between the fields of direct payments, nutrient balancing, and plant protection.
 
-This template repository includes a full semantic web pipeline, including
+This repository includes a full semantic web pipeline, including
  
 1. manual data curation (data files in `src/rdf/data`),
 2. data integration from a relational database (using python, specifically `src/python/pipeline/...`),
@@ -19,7 +19,7 @@ This template repository includes a full semantic web pipeline, including
 
 ## Development Tools
 
-This template uses a variety of tools to ensure robust data integration, reasoning, validation, and documentation.
+This repository uses a variety of tools to ensure robust data integration, reasoning, validation, and documentation.
 
 - [HermiT](http://www.hermit-reasoner.com/): An OWL reasoner used for logical reasoning and inferring new knowledge from the ontology and data.
 - [Pytest](https://docs.pytest.org/): A testing framework used to run syntax checks and evaluate SHACL validation reports.
