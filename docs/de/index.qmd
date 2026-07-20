@@ -65,9 +65,13 @@ Der NBBS ordnet die Kulturen in einer strikten, dreistufigen Hierarchie:
 
 [^3]: Die «agronomischen Kulturkategorien» für den Nährstoffbilanzrechner sind beispielsweise über den Endpoint <https://rf-vp.agate.ch/digiflux/naebi/2-0/naebiservice-backend/agronomiccropcategories> abrufbar. Mittels der Slugs `cultivationcategories` und `cultivationsubcategories` lassen sich zudem die jeweiligen Übergruppen abfragen.
 
-- **3 Kultivierungskategorien** (Ackerkulturen, Grundfutterproduktion, Spezialkulturen) bilden die oberste Ebene. Darunter fassen
-- **8 Kultivierungsunterkategorien** (Getreide, Dauerkulturen, Hackfrüchte, Freilandgemüse, geschützte Kulturen, Grundfutter, übriger Ökoausgleich sowie diverse Kulturen) die Kulturen weiter zusammen. Auf der detailliertesten Ebene befinden sich
-- **314 agronomische Kulturkategorien** (z. B. «Schafgarbe» oder «Aubergine, Erdkultur (geschützter Anbau)»).
+| N | Name     | Beschreibung                                         | Beispiele                      |
+|:--|:---------|:-----------------------------------------------------|:-------------------------------|
+| 3      | Kultivierungskategorien (`cultivationcategories`) | Oberste Hierarchieebene, dient nur der Strukturierung. | Ackerkulturen, Grundfutterproduktion, Spezialkulturen |
+| 8      | Kultivierungsunterkategorien (`cultivationsubcategories`) | Mittlere Ebene, dient ebenfalls nur der Strukturierung. | Getreide, Dauerkulturen, Hackfrüchte, Freilandgemüse, geschützte Kulturen, Grundfutter, übriger Ökoausgleich, diverse Kulturen |
+| 314    | Agronomische Kulturkategorien (`agronomiccropcategories`) | Unterste Ebene, welche die eigentlichen Kulturen beinhaltet. Hier sind die spezifischen agronomischen und regulatorische Eigenschaften hinterlegt. | «Winterweizen», «Zuckerrüben», «Naturwiese extensiv», «Aubergine, Erdkultur (geschützter Anbau)», «Walnüsse ≥ 185 Bäume/ha» |
+
+: Hierarchische Struktur der Kulturen im NBBS {#tbl-nbbs-hierarchie}
 
 Während die beiden obersten Ebenen rein der Strukturierung und Gruppierung dienen, weisen die agronomischen Kulturkategorien auf der untersten Ebene spezifische agronomische und regulatorische Eigenschaften auf.
 Dazu gehören beispielsweise der Ertrag, die Zulässigkeit für bestimmte Direktzahlungsprogramme oder die Teilnahme an spezifischen Vorhaben wie dem «62a Nitrat-Projekt».
