@@ -1,0 +1,13 @@
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix schema: <http://schema.org/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix ex: <http://example.org/ns#> .
+
+ex:GlobalNameLengthShape
+    a sh:NodeShape ;
+    sh:targetSubjectsOf schema:name ;
+    sh:property [
+        sh:path schema:name ;
+        sh:maxLength 125 ;
+        sh:message "The schema:name property must not exceed a length of 100 characters."@en ;
+    ] .

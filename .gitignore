@@ -1,16 +1,26 @@
-/**/target
-/**/bin
-/**/.jsdtscope
-/**/.DS_Store
-/**/*.rar
-/**/*.ear
-/**/*.war
-/*.zip
-/*.zip.*
+# Virtual environment
+/venv/
 
-*.iml
-.idea/
+# Built files
+/build/
 
-.project
-.classpath
-.settings/
+# Environment variables
+.env
+
+# Pytest artifacts
+**/__pycache__/**
+.pytest_cache
+
+# Quarto execution artifacts
+*_files/
+*_cache/
+**/.quarto/
+**/*.quarto_ipynb
+entities.md
+
+# Small tests and notes
+/test.*
+/notes.*
+
+# Varia
+.DS_Store

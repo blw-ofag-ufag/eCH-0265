@@ -1,0 +1,118 @@
+# ==============================================================================
+# CORE ONTOLOGICAL DEFINITIONS
+# ------------------------------------------------------------------------------
+# The purpose of this document is mainly to
+# a) Enable OWL-based reasoning, i.e. automated data completion before
+#    publishing the data on LINDAS, and
+# b) (optionally) giving classes and properties names/descriptions, which makes
+#    it easier to discover the graph structure for visitors on LINDAS.
+# ==============================================================================
+
+# Project-specific namespaces/qnames
+@prefix :                <https://agriculture.ld.admin.ch/crops/> .
+@prefix intensity:       <https://agriculture.ld.admin.ch/crops/intensity/> .
+
+# LINDAS-specific namespaces/qnames
+@prefix cube:            <https://cube.link/> .
+
+# Globally used namespaces/qnames
+@prefix dcterms:         <http://purl.org/dc/terms/> .
+@prefix owl:             <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs:            <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema:          <http://schema.org/> .
+@prefix sh:              <http://www.w3.org/ns/shacl#> .
+@prefix wikidata:        <http://www.wikidata.org/entity/> .
+
+
+# ==============================================================================
+# ONTOLOGY METADATA
+# ==============================================================================
+
+: a owl:Ontology ; dcterms:title "Kulturen-Ontologie"@de .
+
+
+# ==============================================================================
+# CLASSES
+# ==============================================================================
+
+:Cultivation a owl:Class .
+
+:CultivationType a owl:Class ;
+    rdfs:subClassOf owl:Class .
+
+:DeprecatedCultivationType a owl:Class ;
+    rdfs:subClassOf owl:DeprecatedClass,
+        :CultivationType .
+
+:DirectPaymentCrop a owl:Class ;
+    rdfs:subClassOf cube:Observation .
+
+:NutrientBalanceCrop a owl:Class ;
+    rdfs:subClassOf cube:Observation .
+
+:PlantProtectionCrop a owl:Class ;
+    rdfs:subClassOf cube:Observation .
+
+:Taxon a owl:Class ;
+    rdfs:subClassOf wikidata:Q16521 .
+
+
+# ==============================================================================
+# DATATYPE PROPERTIES
+# ==============================================================================
+
+schema:name a owl:DatatypeProperty .
+
+schema:alternateName a owl:DatatypeProperty .
+
+schema:description a owl:DatatypeProperty .
+
+schema:identifier a owl:DatatypeProperty .
+
+sh:name a owl:DatatypeProperty ;
+    rdfs:subPropertyOf schema:name .
+
+sh:description a owl:DatatypeProperty ;
+    rdfs:subPropertyOf schema:description .
+
+rdfs:label a owl:DatatypeProperty ;
+    rdfs:subPropertyOf schema:name .
+
+rdfs:comment a owl:DatatypeProperty ;
+    rdfs:subPropertyOf schema:description .
+
+dcterms:title a owl:DatatypeProperty ;
+    rdfs:subPropertyOf schema:name .
+
+# ==============================================================================
+# OBJECT PROPERTIES
+# ==============================================================================
+
+schema:hasPart a owl:ObjectProperty ;
+    owl:inverseOf schema:isPartOf .
+
+schema:isPartOf a owl:ObjectProperty ;
+    owl:inverseOf schema:hasPart .
+
+:botanicalPlant a owl:ObjectProperty ;
+    rdfs:domain :CultivationType ;
+    rdfs:range :Taxon .
+
+:managementIntensity a owl:ObjectProperty ;
+    schema:name "Cultivation intensity"@en ;
+    rdfs:domain :CultivationType ;
+    rdfs:range [ owl:oneOf ( intensity:Extensive intensity:Low intensity:Medium intensity:Intensive ) ] .
+
+:parentTaxon a owl:ObjectProperty ;
+    schema:name "Parent taxon"@en ;
+    rdfs:domain :Taxon ;
+    rdfs:range :Taxon .
+
+:taxonRank a owl:ObjectProperty ;
+    schema:name "Taxon rank"@en ;
+    rdfs:domain :Taxon ;
+    rdfs:range [ owl:oneOf ( :Variety :Subspecies :Species :Genus :Family :Order :Class :Phylum :Kingdom ) ] .
+
+:cultivationType a owl:ObjectProperty ;
+    rdfs:domain cube:Observation ;
+    rdfs:range :CultivationType .

@@ -1,130 +1,94 @@
-# eCH-0265: Agrardaten -- Flächen und Kulturen
+[![CI](https://github.com/blw-ofag-ufag/eCH-0265/actions/workflows/ci.yml/badge.svg)](https://github.com/blw-ofag-ufag/eCH-0265/actions/workflows/ci.yml)
+[![GitHub last commit](https://img.shields.io/github/last-commit/blw-ofag-ufag/eCH-0265.svg)](https://github.com/blw-ofag-ufag/eCH-0265/commits)
+[![GitHub issues](https://img.shields.io/github/issues/blw-ofag-ufag/eCH-0265.svg)](https://github.com/blw-ofag-ufag/eCH-0265/issues)
 
-This is the repository for technical artefacts related to the specification 0265. The currently valid version is published on the eCH-Website https://www.ech.ch/de/ech/ech-0265.
+# eCH-0265 Agricultural Crops (Working Draft v2.0)
 
-Primarily, this repo contains:
+This resource contains a data model for agricultural crops in Switzerland as well as associated reference objects, which can be retrieved in a machine-readable format as Linked Data. This aims to enable the domain-validated exchange and reuse of data between the fields of direct payments, nutrient balancing, and plant protection.
 
-* XSDs
-* UML diagrams
+This template repository includes a full semantic web pipeline, including
+ 
+1. manual data curation (data files in `src/rdf/data`),
+2. data integration from a relational database (using python, specifically `src/python/pipeline/...`),
+3. OWL-based inferencing (using the ontology in `src/rdf/model.owl.ttl`),
+4. SPARQL-based processing of the graph (using rules in `src/sparql/processing/...`)
+5. SHACL-based graph data validation (using `src/rdf/shapes/model.shacl.ttl`)
+6. a even more customizable Pytest test suite,
+7. uploading of the final graph to LINDAS
+8. a documentation building pipeline using Quarto
 
-The main branch contains the work in progress. Proposals are in version or feature branches. Published versions are in Releases. Released versions are published additionally on eCH and on BLW/OFAG/UFAG websites.
+## Development Tools
 
-# Repository management policy
-This section explains how this repository is governed.
+This template uses a variety of tools to ensure robust data integration, reasoning, validation, and documentation.
 
-## Membership and roles management
+- [HermiT](http://www.hermit-reasoner.com/): An OWL reasoner used for logical reasoning and inferring new knowledge from the ontology and data.
+- [Pytest](https://docs.pytest.org/): A testing framework used to run syntax checks and evaluate SHACL validation reports.
+- [PySHACL](https://github.com/RDFLib/pySHACL): A Python engine used to validate the generated RDF graphs against SHACL shape definitions.
+- [ROBOT](http://robot.obolibrary.org/): CLI tool used to merge, reason, and process RDF graphs.
+- [RDFLib](https://rdflib.readthedocs.io/): A Python library used to parse, serialize, and programmatically manipulate RDF data.
+- [Quarto](https://quarto.org/): An open-source publishing system used for rendering the documentation.
 
-- All members of the Expert group outside of the FOAG receive the **“Outside collaborator”** organization membership. They have the “Read” role for all the eCH repositories.
-Additionally, they may:
+## Semantic Web Standards
 
-  - Waive this role for selected eCH repos where they are not directly involved (not part of the Expert group) and do not plan to get involved with.
+The project relies on core W3C Semantic Web standards to model, link, and validate data effectively.
 
-  - Waive this role completely if they do not plan to contribute on GitHub at all and consider this pure spam.
+- [RDF (Resource Description Framework)](https://www.w3.org/RDF/): The foundational data model used to represent information as a directed graph of triples.
+- [OWL (Web Ontology Language)](https://www.w3.org/OWL/): Used to define the formal semantics, classes, and properties of the ontology.
+- [SHACL (Shapes Constraint Language)](https://www.w3.org/TR/shacl/): Used to declare structural constraints and validate the integrity of the RDF data.
+- [SPARQL](https://www.w3.org/TR/sparql11-overview/): The standard query language used to extract, transform, and post-process the RDF graphs.
+- [Turtle](https://www.w3.org/TR/turtle/): The primary, human-readable serialization format used for all RDF files in this repository.
 
-  - Ask for the **Write** role in the repo(s) associated with their own Arbeitsgruppe(n) if they plan to contribute directly with Pull Requests (PR).
+## Build and Deployment Orchestration
 
-- Regular external developers are integrated into the organization as **“Outside Collaborator”** and receive by default the **Write** role on all eCH repositories.
+To streamline the workflow, this project uses `make` as its primary orchestration tool, automating everything from setup to deployment. The `Makefile` defines a single entry point to sequentially execute data integration, logical reasoning, SPARQL updates, SHACL validation, testing, and documentation rendering.
 
-Membership and roles are managed by the FOAG's Competence Center for Digital Transformation (CCDT) members.
-Memberships and roles can be given or removed as soon as needed. CCDT makes a regular check of active users and adapts the accesses as needed.
+1. Add variables to `.env` (for local execution)
 
-## Issue management
+    ``` sh
+    USER=********
+    PASSWORD=********
+    GRAPH=********
+    ENDPOINT=********
+    ```
 
-Issues MUST be opened using the available template (see picture). This ensures smooth coordination with the internal FOAG task board.
+2. Set up dependencies
 
-![image](https://github.com/user-attachments/assets/e4a44cc8-0b9b-4e12-a9ea-f4c865a35f98)
+    ``` sh
+    make setup
+    ```
 
-Issues need a meaningful title and a description clearly stating what the problem is or what needs to be changed/fixed.
+3. Run the build process
 
-Issues are triaged by the CCDT team, who also priotizes them and selects an assignee. They still remain a way for an open and honest discussion so everyone is invited to participate. The use of people mentions using“@username” is encouraged where an opinion is demanded.
+    ``` sh
+    make
+    ```
 
-Issues are only closed by a member of the CCDT team (either in the issue itself or via the merge of a linked PR) or by the author of the issue itself.
+    Make sure you pass all tests with `pytest`.
 
-CCDT performs a review and triage of the issues, potentially closing stale ones, at least twice a year.
+4. Upload the final data to [LINDAS](https://lindas.admin.ch/), the linked data service by the federal archives:
 
-## Labels
+    **Automatic Deployment**
 
-The CCDT members manage the available labels for the issues in the eCH repositories.
+    The deployment is automatically triggered via GitHub Actions whenever changes are pushed or merged to the `main` branch. 
+    To enable this, configure the environment variables listed in step 1 as **repository secrets** in your GitHub project settings (`Settings > Secrets and variables > Actions > New repository secret`):
 
-The CCDT team is also responsible for issue labeling.
+    **Manual Deployment**
 
-Each issue MUST have the following 2 labels:
+    You can still upload the final data manually by running:
 
-- The ```JIRA``` label in order to ensure coordination with the FOAG internal task board
+    ``` sh
+    make publish
+    ```
 
-- One of ```PATCH```, ```MINOR``` or ```MAJOR```  in order to identify the change scope
+    By default, the publication process starts by deleting any pre-existing data in the provided named graph on LINDAS.
+    You can also *just* delete any published data by running:
 
-All issues MAY have
+    ``` sh
+    make delete
+    ```
 
-- A label identifying the type of change request (```DOCUMENTATION```, ```ENHANCEMENT``` or ```BUG```)
+5. *If* you want to clean all written files:
 
-- A label identifying the target release for issue resolution (e.g. ```1.3.0```)
-
-- Additional labels, for example showcasing the urgency of the issue.
-
-This labeling schema MAY be applied to Pull Requests (PR) too.
-
-## Branch and release management
-
-### Versioning
-
-Version numbering follows the [Semantic Versioning 2.0.0](https://semver.org/spec/v2.0.0.html) guidelines with the following adaptations:
-
-- Version numbering only considers Major, Minor, Patch and Pre-releases.
-
-- A Patch can be, for example, typo fixes in the medatada or in the descriptions, which should not trigger an eCH review process.
-
-- Pre-releases versions **MUST** be denoted by appending a hyphen (“-”) followed by an integer to the target main release number. E.g. **1.5.0-2** is the second pre-release for the 1.5.0 version.
-
-### Branching
-
-All of the eCH repositories adhere to the following general branch organization:
-
-- A **“main”** branch, acting as the master
-  - The **“main”** branch is to be considered productive, valid and binding within the eCH context. **For this reason, there is no merge into the main branch if not related to an official new release.**
-  - The only exception of that is the README.md content, which is not considered part of the eCH standard and can thus be merged outside of the standard management cycle. Changes to the README.md MAY be committed directly into the main branch by the GRKDT team.
-
-
-- **Release branches** named after the release version and prefixed with “Release-”(e.g. “Release-1.3.0”)
-  - Release branches coalesce all the changes needed for the future release of the new version.
-  - Release branches are opened by the CCDT team only.
-  - Release branches MAY be published on GitHub as pre-releases (see “Review and publishing process“ below).
-
-
-- **Development branches** named with a “Dev-” prefix followed by free text (e.g. “Dev-AFoletti_patch1_n”)
-  - The Development branches fix specific issues or implement specific enhancements and are usually linked to an Issue.
-
-### Review and publishing process
-
-The review and publishing process of the code in this repository has 4 main steps.
-
-1. Work is done in a Development branch. Once finished, the author opens a Pull Request (PR). Pull requests from **Development** branches into **Release** branches can be opened by every member with Write permissions.
-
-![image](https://github.com/user-attachments/assets/75367751-ebfd-4f23-b050-f0f6772cc4f0)
-
-
-2. Team CCDT reviews the PR and merges the code into the appropriate Release branch. **Only the CCDT Team can merge those PRs.**
-
-3. Once a release is considered complete, the CCDT Team MUST publish a pre-release from this branch. **Exception** to that is a patch version, which does not need an eCH review process. A patch release can thus be merged into main and published as a new version by the CCDT alone.
-
-    Pre-releases are tagged according to the versioning rules (see above) and given a meaningful name.
-    ![image](https://github.com/user-attachments/assets/8c030ce4-983a-4806-9942-62aa4873cb66)
-
-    They MUST be set as pre-release before publishing
-
-    ![image](https://github.com/user-attachments/assets/49caace2-2d72-4351-9330-644dcc85c542)
-
-    The pre-release then follow the eCH validation process according to the change scope (minor, major). The code and documentation of the pre-release is sent to the relevant stakeholders that have the opportunity to ask for modifications or accept the new release. 
-    See [eCH-0003 - Leitfaden zur Genehmigung von Anträgen](https://ech.ch/de/ech/ech-0003) and [eCH-0150 - Change und Release Management von eCH-Standards](https://ech.ch/de/ech/ech-0150).
-
-4. Once the eCH validation process is done and the release is accepted, the CCDT merges the release branch into main.
-
-    ![image](https://github.com/user-attachments/assets/3f5f0ead-a3a9-42bf-96cd-52b1872df2f9)
-
-5. The CCDT then publishes a new official release tagged with the appropriate release number.
-
-![image](https://github.com/user-attachments/assets/5a0e1a7f-f1fa-4bd6-850f-cf66707f0af3)
-
-## Contact
-
-For general questions and request write access to this repo, please send a mail to [agridata.ch@blw.admin.ch](mailto:agridata.ch@blw.admin.ch)
+    ``` sh
+    make clean
+    ```
