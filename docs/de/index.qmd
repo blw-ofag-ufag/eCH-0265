@@ -14,7 +14,7 @@ nocite: |
 
 Das vorliegende Dokument ist ein Hilfsmittel zur harmonisierten, systemübergreifenden Nutzung von landwirtschaftlichen Kulturdaten in der Schweiz. Gegenüber der Version 1.1.0 (eCH-0265 Datenstandard Agrardaten – Flächen und Kulturen) wurde das Dokument von einem unverbindlichen Standard zu einem Hilfsmittel umgewandelt. Gleichzeitig wurde der inhaltliche Fokus geschärft: Die Übertragung von Geometrien/Flächen[^1], Sorten sowie Direktzahlungsprogrammen ist nicht mehr Teil dieses Dokuments[^2]. Neu enthalten sind dafür die Kulturen aus dem Pflanzenschutzmittelverzeichnis.
 
-[^1]: Die Erhebung von landwirtschaftlichen Nutzflächen wird mit dem […] spezifiziert.
+[^1]: Die Erhebung von landwirtschaftlichen Nutzflächen wird bereits mit dem minimale Geodatenmodell "Landwirtschaftliche Kulturflächen" (Identifikator 153) spezifiziert: <https://www.blw.admin.ch/de/landwirtschaftliche-kulturflaechen>
 
 [^2]: Eine spätere Wiederaufnahme von Sorten und Programmen bleibt vorbehalten.
 
@@ -58,6 +58,19 @@ Die Zuweisung dieser Kulturen ist die Grundvoraussetzung, um eine Nährstoffbila
 
 Um die Suisse-Bilanz zu rechnen, ist die "Wegleitung Suisse-Bilanz" entscheidend, welche von Agridea und dem Bundesamt für Landwirtschaft herausgegeben wird [@suibi2025].
 In dem Dokument sind viele Referenztabellen enthalten, die entsprechend nach Kulturen aufgegliedert sind, abgeleitet von den detaillierteren Tabellen in @grud2017.
+
+Zur Standardisierung der Suisse-Bilanz-Berechnung stellt das Bundesamt für Landwirtschaft neu den Nährstoffbilanz-Berechnungsservice (NBBS) als RESTful API zur Verfügung.
+Über diese Schnittstelle lässt sich unter anderem ein Katalog der landwirtschaftlichen Kulturen abrufen.[^3]
+Der NBBS ordnet die Kulturen in einer strikten, dreistufigen Hierarchie:
+
+[^3]: Die «agronomischen Kulturkategorien» für den Nährstoffbilanzrechner sind beispielsweise über den Endpoint <https://rf-vp.agate.ch/digiflux/naebi/2-0/naebiservice-backend/agronomiccropcategories> abrufbar. Mittels der Slugs `cultivationcategories` und `cultivationsubcategories` lassen sich zudem die jeweiligen Übergruppen abfragen.
+
+- **3 Kultivierungskategorien** (Ackerkulturen, Grundfutterproduktion, Spezialkulturen) bilden die oberste Ebene. Darunter fassen
+- **8 Kultivierungsunterkategorien** (Getreide, Dauerkulturen, Hackfrüchte, Freilandgemüse, geschützte Kulturen, Grundfutter, übriger Ökoausgleich sowie diverse Kulturen) die Kulturen weiter zusammen. Auf der detailliertesten Ebene befinden sich
+- **314 agronomische Kulturkategorien** (z. B. «Schafgarbe» oder «Aubergine, Erdkultur (geschützter Anbau)»).
+
+Während die beiden obersten Ebenen rein der Strukturierung und Gruppierung dienen, weisen die agronomischen Kulturkategorien auf der untersten Ebene spezifische agronomische und regulatorische Eigenschaften auf.
+Dazu gehören beispielsweise der Ertrag, die Zulässigkeit für bestimmte Direktzahlungsprogramme oder die Teilnahme an spezifischen Vorhaben wie dem «62a Nitrat-Projekt».
 
 ## Kulturen im Pflanzenschutzmittelverzeichnis
 
