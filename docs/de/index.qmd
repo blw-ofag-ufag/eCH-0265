@@ -28,6 +28,10 @@ Dieses Hilfsmittel das Verständnis der Kulturbegriffe aus drei unterschiedliche
 
 Die folgenden Kapitel geben einen kurzen Einblick in diese drei Bereiche und erklären, wie die landwirtschaftlichen Kulturen jeweils modelliert sind.
 
+## Was ist eine Kultur?
+
+TODO.
+
 ## Kulturen im Direktzahlungssystem
 
 Im Rahmen des Direktzahlungssystems sind 159 Direktzahlungskulturen (Stand Juli 2026) definiert, welche im Rahmen der Strukturdatenerhebung von den Bewirtschaftenden in den kantonalen Agrarinformationssystemen (KAIS) eingetragen und an das agrarpolitische Informationssystem (AGIS) des Bundes übermittelt werden können.
@@ -68,11 +72,39 @@ Dazu gehören beispielsweise der Ertrag, die Zulässigkeit für bestimmte Direkt
 
 ## Kulturen im Pflanzenschutzmittelverzeichnis
 
-Dieses System umfasst 321 Kulturen, welche im Gegensatz zu GRUD eine flexible Polyhierarchie aufweisen. Eine Kultur kann zwei direkte Übergruppen besitzen (z. B. gehört Sommergerste sowohl zur Übergruppe "Gerste" als auch zu "Sommergetreide").
-Die genaue Abbildung dieser Hierarchie ist von Bedeutung, da eine bewilligte Pflanzenschutz-Anwendung auf einer Übergruppe automatisch auch auf all deren Untergruppen bewilligt ist.
+Das Pflanzenschutzmittelverzeichnis (PSMV) ist das offizielle Register des Bundes, das alle in der Schweiz zugelassenen Pflanzenschutzmittel auflistet und verbindlich regelt, für welche Kulturen und unter welchen Bedingungen diese rechtmässig eingesetzt werden dürfen.
+Es wird vom Bundesamt für Lebensmittelsicherheit und Veterinärwesen (BLV) gepflegt und umfasst 321 definierte Kulturen.
+Die Bezeichnungen dieser Kulturen liegen mehrsprachig auf Deutsch, Französisch und Italienisch sowie teilweise auf Englisch vor.
 
-Beispiel: Das Herbizid "Ariane C" ist gegen ein- und mehrjährige Dicotyledonen in Getreiden einsetzbar.
-Damit ist es automatisch bei allen Kulturen einsetzbar, welche vom Pflanzenschutzmittelverzeichnis als Getreide gesehen werden. Zum Beispiel gehört Mais explizit nicht dazu.
+Anders als die streng monohierarchische Klassifikationen (wie in AGIS und im NBBS) sind die Kulturen im PSMV als Objekte in einer flexiblen Polyhierarchie modelliert.
+Dies bedeutet, dass ein Element mehr als ein Überelement aufweisen kann, welches wiederum eigenen Überelementen untergeordnet ist. 
+
+Diese Struktur wurde ursprünglich von der *European Plant Protection Organization* (EPPO) abgeleitet, anschliessend aber für die spezifischen Schweizer Anforderungen weiter modifiziert.
+Die Organisation in Übergruppen erlaubt eine äusserst flexible Modellierung:
+Gewisse Äste der Hierarchie sind flach, während andere sehr tief verschachtelt sein können.
+Eine Kultur kann dabei bis zu zwei direkte Übergruppen besitzen. So ist beispielsweise die *Sommergerste* sowohl der Übergruppe «Gerste» als auch dem «Sommergetreide» untergeordnet.
+
+Die Hierarchietiefe kann bis zu fünf Übergruppen umfassen, wie folgendes Beispiel aus dem Gemüsebau verdeutlicht:
+
+1. **Schnittsalat**, gehört zu
+2. **Blattsalate (Asteraceae)**, gehört zu
+3. **Lactuca-Salate**, gehört zu
+4. **Salate (Asteraceae)**, gehört zu
+5. **Korbblütler (Asteraceae)**, gehört zu
+6. **Gemüsebau allg.**.
+
+Die präzise Abbildung dieser Hierarchie ist fachlich von grosser Bedeutung, da die Zulassungslogik direkt in die Struktur des PSMV eingebaut ist.
+Wenn eine Pflanzenschutzmittel-Anwendung für eine übergeordnete Kulturgruppe bewilligt ist, gilt diese Bewilligung automatisch auch für sämtliche untergeordneten Kulturen.
+
+Ein Beispiel hierfür:
+Das Herbizid [«Ariane C»](https://www.psm.admin.ch/de/produkte/7430) ist gegen ein- und mehrjährige Dicotyledonen in Getreiden einsetzbar.
+Damit ist es bei allen Kulturen anwendbar, welche vom PSMV als Getreide klassifiziert werden.
+Mais gehört in diesem System aber explizit nicht zu den Getreiden -- in der Systematik des NBBS aber schon.
+Die korrekte Nachbildung dieser Polyhierarchie ist in den Daten folglich essenziell, um Zulassungen maschinell korrekt zu verarbeiten.
+
+# Datenmodell
+
+Das konsolidierte Datenmodell wird durch eine RDF-Ontologie abgebildet und mittels SHACL-Shapes validiert [@rdf;@owl2;@shacl].
 
 ## Nutzung von Semantic-Web-Technologien
 
@@ -81,14 +113,6 @@ Um diese eindeutig kennzeichnen zu können, setzen wir auf Linked Data.
 Jede Definition bekommt eine URI (in unserem Fall als URL dereferenzierbar). Die hier beschriebene Datensammlung beschreibt die Beziehungen der Klassen.
 
 TODO: Warum Linked Data → Zur eindeutigen Identifizierung von gleichen aber auch verschiedenen Objekten.
-
-## Was ist eine Kultur?
-
-TODO.
-
-# Datenmodell
-
-Das konsolidierte Datenmodell wird durch eine RDF-Ontologie abgebildet und mittels SHACL-Shapes validiert [@rdf;@owl2;@shacl].
 
 # Sicherheitsaspekte
 
