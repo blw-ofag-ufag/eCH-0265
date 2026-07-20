@@ -8,8 +8,6 @@ abstract: |
 date: today
 date-format: long
 lang: de-CH
-nocite: |
-  @*
 ---
 
 # Hinweis {.unnumbered}
