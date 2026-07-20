@@ -28,7 +28,13 @@ Die folgenden Kapitel geben einen kurzen Einblick in diese drei Bereiche und erk
 
 ## Was ist eine Kultur?
 
-TODO.
+Der Begriff der landwirtschaftlichen Kultur stützt sich in diesem Hilfsmittel massgeblich auf das Konzept des `CultivationType` aus der Vorversion (eCH-0265, Version 1.0.0).
+Eine Kultur definiert sich demnach als Kategorie beziehungsweise als Teil eines Kategorisierungssystems, welches die Art der Nutzung und Kultivierung eines bestimmten Stücks Land über einen definierten Zeitraum beschreibt.
+
+Durch diese Definition ist die landwirtschaftliche Kultur strikt von der botanischen Pflanze abzugrenzen.
+Die botanische Systematik klassifiziert biologische Einzelindividuen.
+Die landwirtschaftliche Kultur hingegen typisiert keine Individuen, sondern spezifische Formen der Landnutzung.
+Es geht bei der Kultur folglich nicht um die biologische Pflanze an sich, sondern um die flächen- und zeitbezogene Bewirtschaftungsform, an welche die jeweiligen agronomischen, rechtlichen oder systemischen Eigenschaften geknüpft sind.
 
 ## Kulturen im Direktzahlungssystem
 
