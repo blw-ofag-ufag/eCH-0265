@@ -148,25 +148,17 @@ Die Standards enthalten die entsprechenden Hinweise auf Rechte Dritter.
 
 # Anhang D - Änderungen gegenüber der Vorversion {.appendix}
 
-## 2.0.0
-
-Das vorliegende Dokument ist ein Hilfsmittel zur harmonisierten, systemübergreifenden Nutzung von landwirtschaftlichen Kulturdaten in der Schweiz. Gegenüber der Version 1.1.0 (eCH-0265 Datenstandard Agrardaten – Flächen und Kulturen) wurde das Dokument von einem unverbindlichen Standard zu einem Hilfsmittel umgewandelt. Gleichzeitig wurde der inhaltliche Fokus geschärft: Die Übertragung von Geometrien/Flächen[^1], Sorten sowie Direktzahlungsprogrammen ist nicht mehr Teil dieses Dokuments[^2]. Neu enthalten sind dafür die Kulturen aus dem Pflanzenschutzmittelverzeichnis.
+Das vorliegende Dokument ist ein Hilfsmittel zur harmonisierten, systemübergreifenden Nutzung von landwirtschaftlichen Kulturdaten in der Schweiz. 
+Gegenüber der Version 1.1.0 (eCH-0265 Datenstandard Agrardaten – Flächen und Kulturen) wurde das Dokument von einem unverbindlichen Standard zu einem Hilfsmittel umgewandelt.
+Gleichzeitig wurde der inhaltliche Fokus geschärft:
+Klassen rund um Geometrien/Flächen[^1], Sorten sowie Direktzahlungsprogrammen sind nicht mehr Teil dieses Dokuments[^2].
+Neu enthalten sind dafür die Kulturen aus dem Pflanzenschutzmittelverzeichnis.
 
 [^1]: Die Erhebung von landwirtschaftlichen Nutzflächen wird bereits mit dem minimale Geodatenmodell "Landwirtschaftliche Kulturflächen" (Identifikator 153) spezifiziert: <https://www.blw.admin.ch/de/landwirtschaftliche-kulturflaechen>
 
 [^2]: Eine spätere Wiederaufnahme von Sorten und Programmen bleibt vorbehalten.
 
-Im Zentrum der Version 2.0.0 stehen die Repräsentationen von Kultur-Kategorien aus drei verschiedenen Bereichen (Direktzahlungen, Nährstoffbilanz und Pflanzenschutz) im Zentrum. Das Hilfsmittel soll dabei dienen, die Kulturen aus einem Bereich fachlich korrekt auf diejenigen in einem anderen Bereich übersetzen zu können.
-
-Dies wird über eine zentrale Ontologie erreicht, mit welcher die landwirtschaftlichen Kulturen aus den verschiedenen Bereichen verbunden sind. Damit schafft dieses Hilfsmittel eine zentrale Datenquelle, welche in verschiedenen maschinenlesbaren Formaten über die LINDAS-Plattform in Form von *Linked Data* bezogen werden kann.
-
-## 1.1.0
-
-Die Version 1.1.0 umfasst primär redaktionelle Anpassungen sowie die Aktualisierung von Referen-zen. Die wesentlichen Änderungen gegenüber der Version 1.0.0 sind:
-
--	Einführung des neuen, optionalen Datentyps agriculturalRegionType
--	Die Verweise auf externe Listen wurden aktualisiert und verweisen nun auf die Interoperabilitäts-plattform des Bundes (i14y.admin.ch) anstelle der allgemeinen BLW-Webseite.
--	Anpassung des Namens der Fachgruppe auf "AgriFood".
+Eine vollständige Übersicht der Veränderungen wird auf GitHub geführt: <https://github.com/blw-ofag-ufag/eCH-0265/releases>.
 
 # Anhang E - Abbildungsverzeichnis {.appendix}
 
