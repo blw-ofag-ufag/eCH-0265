@@ -1,71 +1,64 @@
 # DESCRIPTION:
-# This SPARQL query cross-references agricultural crop cultivation types 
-# across systems (AGIS, NAEBI, PSMV). It evaluates the class hierarchy 
-# using rdfs:subClassOf paths to infer structural mappings between systems. 
-# The outputs are labeled using SKOS terminology (exactMatch, broadMatch, narrowMatch) 
-# to describe the relationships, or "disjoint" if no hierarchical link exists.
+# This SPARQL update query cross-references agricultural crop observation sets
+# across different systems (AGIS, NAEBI, PSMV) and materializes their semantic 
+# relationships directly into the graph.
+# It evaluates the class hierarchy using rdfs:subClassOf paths to infer 
+# structural mappings and writes them using SKOS vocabulary (exactMatch, 
+# broadMatch, narrowMatch).
 
 PREFIX cube: <https://cube.link/>
 PREFIX : <https://agriculture.ld.admin.ch/crops/>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
-PREFIX schema: <http://schema.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
 
-SELECT ?sourceSystem ?sourceCrop ?relation ?targetSystem ?targetCrop
-FROM <https://lindas.admin.ch/foag/crops>
+# 1. EXACT MATCHES (Identical cultivation types)
+INSERT {
+  ?obsS skos:exactMatch ?obsT .
+}
 WHERE {
-  # 1. Iterate over all source crops and combine them with all target systems
   ?setS cube:observation ?obsS .
   ?setT a cube:ObservationSet .
   FILTER(?setS != ?setT)
+  
+  ?obsS :cultivationType ?typeS .
+  ?setT cube:observation ?obsT .
+  ?obsT :cultivationType ?typeT .
+  
+  FILTER(?typeS = ?typeT)
+};
 
-  ?obsS :cultivationType ?typeS ;
-        schema:name ?sourceName .
-  FILTER(LANG(?sourceName) = "de")
-
-  # Prepare metadata for the source system
-  BIND(REPLACE(STR(?setS), "^.*/crops/([^/]+)/.*$", "$1") AS ?sourceSystem)
-  BIND(REPLACE(STR(?setT), "^.*/crops/([^/]+)/.*$", "$1") AS ?targetSystem)
-  BIND(CONCAT(?sourceName, " (", REPLACE(STR(?typeS), "^.*/([^/]+)$", "$1"), ")") AS ?sourceCrop)
-
-  # 2. Branching: Match vs. No Match
-  {
-    # Branch A: A relation exists (Exact, Broad, Narrow)
-    ?setT cube:observation ?obsT .
-    ?obsT :cultivationType ?typeT ;
-          schema:name ?targetName .
-    FILTER(LANG(?targetName) = "de")
-
-    BIND(CONCAT(?targetName, " (", REPLACE(STR(?typeT), "^.*/([^/]+)$", "$1"), ")") AS ?targetCrop)
-
-    {
-      FILTER(?typeS = ?typeT)
-      BIND("exactMatch" AS ?relation)
-    }
-    UNION
-    {
-      ?typeS rdfs:subClassOf+ ?typeT .
-      FILTER NOT EXISTS { ?setT cube:observation [ :cultivationType ?typeS ] }
-      BIND("broadMatch" AS ?relation)
-    }
-    UNION
-    {
-      ?typeT rdfs:subClassOf+ ?typeS .
-      FILTER NOT EXISTS { ?setT cube:observation [ :cultivationType ?typeS ] }
-      BIND("narrowMatch" AS ?relation)
-    }
-  }
-  UNION
-  {
-    # Branch B: No relation exists (Orphan/Disjoint)
-    # Checks via rdfs:subClassOf* (covers identity and subClassOf+) in both directions
-    FILTER NOT EXISTS {
-      ?setT cube:observation [ :cultivationType ?checkTypeT ] .
-      { ?typeS rdfs:subClassOf* ?checkTypeT }
-      UNION
-      { ?checkTypeT rdfs:subClassOf+ ?typeS }
-    }
-    BIND("disjoint" AS ?relation)
-    BIND("-" AS ?targetCrop)
-  }
+# 2. BROAD MATCHES (Target system is more general)
+INSERT {
+  ?obsS skos:broadMatch ?obsT .
 }
-ORDER BY ?sourceSystem ?targetSystem ?relation ?sourceCrop
+WHERE {
+  ?setS cube:observation ?obsS .
+  ?setT a cube:ObservationSet .
+  FILTER(?setS != ?setT)
+  
+  ?obsS :cultivationType ?typeS .
+  ?setT cube:observation ?obsT .
+  ?obsT :cultivationType ?typeT .
+  
+  ?typeS rdfs:subClassOf+ ?typeT .
+  # Condition: Target system does not have an exact match for the source
+  FILTER NOT EXISTS { ?setT cube:observation [ :cultivationType ?typeS ] }
+};
+
+# 3. NARROW MATCHES (Target system is more specific)
+INSERT {
+  ?obsS skos:narrowMatch ?obsT .
+}
+WHERE {
+  ?setS cube:observation ?obsS .
+  ?setT a cube:ObservationSet .
+  FILTER(?setS != ?setT)
+  
+  ?obsS :cultivationType ?typeS .
+  ?setT cube:observation ?obsT .
+  ?obsT :cultivationType ?typeT .
+  
+  ?typeT rdfs:subClassOf+ ?typeS .
+  # Condition: Target system does not have an exact match for the source
+  FILTER NOT EXISTS { ?setT cube:observation [ :cultivationType ?typeS ] }
+};
