@@ -177,7 +177,7 @@ cultivationtype:21 a :CultivationType ;
 cultivationtype:22 a :CultivationType ;
     schema:name "Gemüsebau"@de,
         "Vegetable Production"@en ;
-    rdfs:subClassOf :Cultivation ;
+    rdfs:subClassOf cultivationtype:464 ;
     owl:unionOf (
         cultivationtype:23
         cultivationtype:24
