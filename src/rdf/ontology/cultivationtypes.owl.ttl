@@ -47,7 +47,7 @@ cultivationtype:1 a :CultivationType ;
         "Domaine app. grande culture"@fr,
         "Grande culture en général"@fr ;
     schema:description "Umfasst Flächen, die im Rahmen der Fruchtfolge für den Anbau von einjährigen oder temporären Kulturen genutzt werden."@de ;
-    rdfs:subClassOf :Cultivation .
+    rdfs:subClassOf cultivationtype:464 .
 
 cultivationtype:2 a :CultivationType ;
     schema:name "Dauerwiesen"@de,
@@ -173,7 +173,7 @@ cultivationtype:21 a :CultivationType ;
     schema:name "Dauergrünfläche"@de ;
     schema:alternateName "Dauergrünland"@de ;
     schema:description "Als Dauergrünfläche gilt die mit Gräsern und Kräutern bewachsene Fläche ausserhalb der Sömmerungsflächen. Sie besteht seit mehr als sechs Jahren als Dauerwiese oder als Dauerweide (Art. 19 LBV)."@de ;
-    rdfs:subClassOf cultivationtype:114 .
+    rdfs:subClassOf cultivationtype:114, cultivationtype:464 .
 
 cultivationtype:22 a :CultivationType ;
     schema:name "Gemüsebau"@de,
@@ -1877,7 +1877,7 @@ cultivationtype:466 a :CultivationType ;
 
 cultivationtype:467 a :CultivationType ;
     schema:name "Dauerkulturen"@de ;
-    rdfs:subClassOf :Cultivation .
+    rdfs:subClassOf cultivationtype:464 .
 
 cultivationtype:468 a :CultivationType ;
     schema:name "Ackerbohne"@de,
