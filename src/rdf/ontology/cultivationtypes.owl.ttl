@@ -2578,7 +2578,7 @@ cultivationtype:594 a :CultivationType ;
     schema:description "Beitragsberechtigte offene Ackerfläche (regionsspezifische Biodiversitätsförderfläche)"@de,
         "Terres ouvertes donnant droit aux contributions (surfaces de promotion de la biodiversité spécifiques à la région)"@fr,
         "Superficie coltiva aperta, avente diritto ai contributi (superfici per la promozione della biodiversità specifiche di una regione)"@it ;
-    rdfs:subClassOf cultivationtype:1 ;
+    rdfs:subClassOf cultivationtype:910 ;
     :managementIntensity intensity:Extensive .
 
 cultivationtype:595 a :CultivationType ;
@@ -2588,20 +2588,20 @@ cultivationtype:595 a :CultivationType ;
     schema:description "Nicht beitragsberechtigte übrige offene Ackerfläche (regionsspezifische Biodiversitätsförderfläche)"@de,
         "Autres terres ouvertes ne donnant pas droit aux contributions (surfaces de promotion de la biodiversité spécifiques à la région)"@fr,
         "Altra superficie coltiva aperta, non avente diritto ai contributi (superfici per la promozione della biodiversità specifiche di una regione)"@it ;
-    rdfs:subClassOf cultivationtype:1 ;
+    rdfs:subClassOf cultivationtype:910 ;
     :managementIntensity intensity:Extensive .
 
 cultivationtype:597 a :CultivationType ;
     schema:name "Beitragsberechtigte übrige offene Ackerfläche"@de,
         "Autres terres ouvertes avec contributions"@fr,
         "Altra superficie coltiva aperta, con contributi"@it ;
-    rdfs:subClassOf cultivationtype:1 .
+    rdfs:subClassOf cultivationtype:910 .
 
 cultivationtype:598 a :CultivationType ;
     schema:name "Nicht beitragsberechtigte übrige offene Ackerfläche"@de,
         "Autres terres ouvertes sans contributions"@fr,
         "Altra superficie coltiva aperta, senza contributi"@it ;
-    rdfs:subClassOf cultivationtype:1 .
+    rdfs:subClassOf cultivationtype:910 .
 
 cultivationtype:601 a :CultivationType ;
     schema:name "Kunstwiesen (ohne Weiden)"@de,
@@ -3184,6 +3184,12 @@ cultivationtype:909 a :CultivationType ;
         "Giardini e orti domestici"@it ;
     rdfs:subClassOf cultivationtype:12 .
 
+cultivationtype:910 a :CultivationType ;
+    schema:name "Offene Ackerfläche"@de,
+        "Terres ouvertes"@fr,
+        "Superficie coltiva aperta"@it ;
+    rdfs:subClassOf cultivationtype:1 .
+
 cultivationtype:911 a :CultivationType ;
     schema:name "Landwirtschaftliche Produktion in Gebäuden (z. B. Champignon, Brüsseler)"@de,
         "Production agricole sous abri (par ex. champignons de Paris, chicorée witloof)"@fr,
@@ -3421,6 +3427,12 @@ cultivationtype:1021 a :CultivationType ;
     schema:name "Winterkorn, Dinkel"@de ;
     rdfs:subClassOf cultivationtype:19,
         cultivationtype:516 .
+
+cultivationtype:1022 a :CultivationType ;
+    schema:name "Feldbau"@de,
+        "Grande culture"@fr,
+        "Campicoltura"@it ;
+    rdfs:subClassOf cultivationtype:910 .
 
 cultivationtype:1023 a :CultivationType ;
     schema:name "Nützlingsstreifen (DK)"@de ;
