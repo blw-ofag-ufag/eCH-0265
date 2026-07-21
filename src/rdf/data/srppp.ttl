@@ -2059,7 +2059,7 @@ psm:27 a :PlantProtectionCrop  ;
         "grande culture en général"@fr,
         "Campicoltura in generale"@it ;
     schema:version 0 ;
-    :cultivationType cultivationtype:1 .
+    :cultivationType cultivationtype:1022 .
 
 psm:270 a :PlantProtectionCrop  ;
     schema:identifier "46D3C073-CBD8-4B3A-A9AA-21785BA911CA" ;
