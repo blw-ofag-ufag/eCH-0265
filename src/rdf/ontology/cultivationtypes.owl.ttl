@@ -181,6 +181,7 @@ cultivationtype:22 a :CultivationType ;
     owl:unionOf (
         cultivationtype:23
         cultivationtype:24
+        cultivationtype:540
     ) .
 
 cultivationtype:23 a :CultivationType ;
