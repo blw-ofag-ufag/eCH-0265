@@ -41,8 +41,7 @@ cultivationtype:1 a :CultivationType ;
     schema:name "Ackerfläche"@de,
         "Terres cultivées"@fr,
         "Superficie coltiva"@it ;
-    schema:alternateName "Allg. Feldbau"@de ,
-        "Ackerkulturen"@de,
+    schema:alternateName "Ackerkulturen"@de,
         "Ackerbau"@de,
         "Domaine app. grande culture"@fr,
         "Grande culture en général"@fr ;
@@ -3432,6 +3431,7 @@ cultivationtype:1022 a :CultivationType ;
     schema:name "Feldbau"@de,
         "Grande culture"@fr,
         "Campicoltura"@it ;
+    schema:alternateName "Allg. Feldbau"@de ,
     rdfs:subClassOf cultivationtype:910 .
 
 cultivationtype:1023 a :CultivationType ;
