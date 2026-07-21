@@ -627,7 +627,7 @@ cultivationtype:114 a :CultivationType ;
     schema:name "Grünfläche"@de,
         "surfaces herbagères"@fr,
         "Superficie inerbita"@it ;
-    rdfs:subClassOf :Cultivation .
+    rdfs:subClassOf cultivationtype:464 .
 
 cultivationtype:115 a :CultivationType ;
     schema:name "Brassica napus-Rüben"@de,
@@ -2312,7 +2312,7 @@ cultivationtype:545 a :CultivationType ;
     schema:name "Einjährige Freilandgemüse, ohne Konservengemüse"@de,
         "Cultures maraîchères de plein champ annuelles (sauf les légumes de conserve)"@fr,
         "Ortaggi annuali di pieno campo (esclusi quelli destinati alla conservazione)"@it ;
-    rdfs:subClassOf cultivationtype:24, cultivationtype:465 .
+    rdfs:subClassOf cultivationtype:24, cultivationtype:465, cultivationtype:910 .
 
 cultivationtype:546 a :CultivationType ;
     schema:name "Freiland-Konservengemüse"@de,
@@ -3431,7 +3431,7 @@ cultivationtype:1022 a :CultivationType ;
     schema:name "Feldbau"@de,
         "Grande culture"@fr,
         "Campicoltura"@it ;
-    schema:alternateName "Allg. Feldbau"@de ,
+    schema:alternateName "Allg. Feldbau"@de ;
     rdfs:subClassOf cultivationtype:910 .
 
 cultivationtype:1023 a :CultivationType ;
