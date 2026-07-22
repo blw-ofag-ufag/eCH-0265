@@ -39,7 +39,7 @@ WHERE {
   
   ?typeS rdfs:subClassOf+ ?typeT .
   # Condition: Target system does not have an exact match for the source
-  FILTER NOT EXISTS { ?setT cube:observation [ :cultivationType ?typeS ] }
+  FILTER NOT EXISTS { ?setT cube:observation / :cultivationType ?typeS . }
 };
 
 # 3. NARROW MATCHES (Target system is more specific)
@@ -57,5 +57,5 @@ WHERE {
   
   ?typeT rdfs:subClassOf+ ?typeS .
   # Condition: Target system does not have an exact match for the source
-  FILTER NOT EXISTS { ?setT cube:observation [ :cultivationType ?typeS ] }
+  FILTER NOT EXISTS { ?setT cube:observation / :cultivationType ?typeS . }
 };
