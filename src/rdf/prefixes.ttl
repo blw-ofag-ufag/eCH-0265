@@ -32,6 +32,7 @@
 @prefix rdfs:            <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema:          <http://schema.org/> .
 @prefix sh:              <http://www.w3.org/ns/shacl#> .
+@prefix skos:            <http://www.w3.org/2004/02/skos/core#> .
 @prefix unit:            <http://qudt.org/vocab/unit/> .
 @prefix vcard:           <http://www.w3.org/2006/vcard/ns#> .
 @prefix void:            <http://rdfs.org/ns/void#> .
