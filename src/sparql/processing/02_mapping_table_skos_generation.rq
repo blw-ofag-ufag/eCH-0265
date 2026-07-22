@@ -1,10 +1,6 @@
 # DESCRIPTION:
 # This SPARQL update query cross-references agricultural crop observation sets
-# across different systems (AGIS, NAEBI, PSMV) and materializes their semantic 
-# relationships directly into the graph.
-# It evaluates the class hierarchy using rdfs:subClassOf paths to infer 
-# structural mappings and writes them using SKOS vocabulary (exactMatch, 
-# broadMatch, narrowMatch).
+# across different systems and materializes their relationships according to SKOS.
 
 PREFIX cube: <https://cube.link/>
 PREFIX : <https://agriculture.ld.admin.ch/crops/>
