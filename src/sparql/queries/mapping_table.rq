@@ -10,6 +10,6 @@ WHERE {
     VALUES ?p { skos:narrowMatch skos:exactMatch skos:broadMatch }
     ?s schema:name ?s_name .
     ?o schema:name ?o_name .
-    FILTER(LANG(?s_name)="de" && LANG(?s_name)="de")
+    FILTER(LANG(?s_name)="de" && LANG(?o_name)="de")
 }
 ORDER BY ?s ?o
