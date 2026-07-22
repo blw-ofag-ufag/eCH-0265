@@ -23,7 +23,7 @@ ONTO             := $(wildcard src/rdf/ontology/*.owl.ttl)
 DATA             := $(wildcard src/rdf/data/*.ttl)
 SHAPES           := src/rdf/shapes/model.shacl.ttl
 PREFIXES         := src/rdf/prefixes.ttl
-QUERIES          := $(wildcard src/sparql/processing/*.rq)
+QUERIES          := $(sort $(wildcard src/sparql/processing/*.rq))
 PIPELINE_SCRIPTS := $(sort $(wildcard src/python/pipeline/*.py))
 
 # Intermediate & Output Files
