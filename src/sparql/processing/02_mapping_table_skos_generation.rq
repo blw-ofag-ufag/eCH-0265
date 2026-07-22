@@ -17,14 +17,11 @@ INSERT {
 }
 WHERE {
   ?setS cube:observation ?obsS .
-  ?setT a cube:ObservationSet .
+  ?setT a cube:ObservationSet ;
+        cube:observation ?obsT .
   FILTER(?setS != ?setT)
   
-  ?obsS :cultivationType ?typeS .
-  ?setT cube:observation ?obsT .
-  ?obsT :cultivationType ?typeT .
-  
-  FILTER(?typeS = ?typeT)
+  ?obsS :cultivationType/^:cultivationType ?obsT .
 };
 
 # 2. BROAD MATCHES (Target system is more general)
@@ -33,11 +30,11 @@ INSERT {
 }
 WHERE {
   ?setS cube:observation ?obsS .
-  ?setT a cube:ObservationSet .
+  ?setT a cube:ObservationSet ;
+        cube:observation ?obsT .
   FILTER(?setS != ?setT)
   
   ?obsS :cultivationType ?typeS .
-  ?setT cube:observation ?obsT .
   ?obsT :cultivationType ?typeT .
   
   ?typeS rdfs:subClassOf+ ?typeT .
@@ -51,11 +48,11 @@ INSERT {
 }
 WHERE {
   ?setS cube:observation ?obsS .
-  ?setT a cube:ObservationSet .
+  ?setT a cube:ObservationSet ;
+        cube:observation ?obsT .
   FILTER(?setS != ?setT)
   
   ?obsS :cultivationType ?typeS .
-  ?setT cube:observation ?obsT .
   ?obsT :cultivationType ?typeT .
   
   ?typeT rdfs:subClassOf+ ?typeS .
