@@ -1,4 +1,3 @@
-# DESCRIPTION:
 # This SPARQL update query cross-references agricultural crop observation sets
 # across different systems and materializes their relationships according to SKOS.
 
@@ -7,51 +6,41 @@ PREFIX : <https://agriculture.ld.admin.ch/crops/>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
 
-# 1. EXACT MATCHES (Identical cultivation types)
+# 1. EXACT MATCH
 INSERT {
   ?obsS skos:exactMatch ?obsT .
 }
 WHERE {
   ?setS cube:observation ?obsS .
-  ?setT a cube:ObservationSet ;
-        cube:observation ?obsT .
+  ?setT cube:observation ?obsT .
   FILTER(?setS != ?setT)
-  
   ?obsS :cultivationType/^:cultivationType ?obsT .
 };
 
-# 2. BROAD MATCHES (Target system is more general)
+# 2. BROAD MATCH
 INSERT {
   ?obsS skos:broadMatch ?obsT .
 }
 WHERE {
   ?setS cube:observation ?obsS .
-  ?setT a cube:ObservationSet ;
-        cube:observation ?obsT .
+  ?setT cube:observation ?obsT .
   FILTER(?setS != ?setT)
-  
-  ?obsS :cultivationType ?typeS .
-  ?obsT :cultivationType ?typeT .
-  
-  ?typeS rdfs:subClassOf+ ?typeT .
-  # Condition: Target system does not have an exact match for the source
-  FILTER NOT EXISTS { ?setT cube:observation [ :cultivationType ?typeS ] }
+  ?obsS :cultivationType / rdfs:subClassOf+ / ^:cultivationType ?obsT .
+  FILTER NOT EXISTS { 
+    ?obsS skos:exactMatch / ^cube:observation ?setT . 
+  }
 };
 
-# 3. NARROW MATCHES (Target system is more specific)
+# 3. NARROW MATCH
 INSERT {
   ?obsS skos:narrowMatch ?obsT .
 }
 WHERE {
   ?setS cube:observation ?obsS .
-  ?setT a cube:ObservationSet ;
-        cube:observation ?obsT .
+  ?setT cube:observation ?obsT .
   FILTER(?setS != ?setT)
-  
-  ?obsS :cultivationType ?typeS .
-  ?obsT :cultivationType ?typeT .
-  
-  ?typeT rdfs:subClassOf+ ?typeS .
-  # Condition: Target system does not have an exact match for the source
-  FILTER NOT EXISTS { ?setT cube:observation [ :cultivationType ?typeS ] }
+  ?obsS :cultivationType / ^rdfs:subClassOf+ / ^:cultivationType ?obsT .
+  FILTER NOT EXISTS { 
+    ?obsS (skos:exactMatch|skos:broadMatch) / ^cube:observation ?setT .
+  }
 };
