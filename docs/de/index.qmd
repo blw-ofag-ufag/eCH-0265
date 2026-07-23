@@ -18,17 +18,9 @@ Im vorliegenden Dokument wird bei der Bezeichnung von Personen eine geschlechtsn
 
 Die Definitionen für landwirtschaftliche Kulturen wurden historisch unabhängig voneinander für spezifische gesetzliche Aufträge und Systeme entwickelt. Die fehlende systemübergreifende Harmonisierung (mit einer *Single Source of Truth*) erschwert jedoch die Informationsverarbeitung über jeweilige Systemgrenzen hinaus.
 
-Dieses Hilfsmittel das Verständnis der Kulturbegriffe aus drei unterschiedlichen Bereichen, in welchen Definitionen landwirtschaftlicher Kulturen unabhängig voneinander gemacht wurden:
-
-- Direktzahlungen
-- Nährstoffbilanz
-- Pflanzenschutz
-
-Die folgenden Kapitel geben einen kurzen Einblick in diese drei Bereiche und erklären, wie die landwirtschaftlichen Kulturen jeweils modelliert sind.
-
 ## Was ist eine Kultur?
 
-Der Begriff der landwirtschaftlichen Kultur stützt sich in diesem Hilfsmittel massgeblich auf das Konzept des `CultivationType` aus der Vorversion (eCH-0265, Version 1.0.0).
+Der Begriff der landwirtschaftlichen Kultur stützt sich in diesem Hilfsmittel massgeblich auf das Konzept `CultivationType` aus der Vorversion [@eCH-0265:1.0.0].
 Eine Kultur definiert sich demnach als Kategorie beziehungsweise als Teil eines Kategorisierungssystems, welches die Art der Nutzung und Kultivierung eines bestimmten Stücks Land über einen definierten Zeitraum beschreibt.
 
 Durch diese Definition ist die landwirtschaftliche Kultur strikt von der botanischen Pflanze abzugrenzen.
@@ -36,18 +28,42 @@ Die botanische Systematik klassifiziert biologische Einzelindividuen.
 Die landwirtschaftliche Kultur hingegen typisiert keine Individuen, sondern spezifische Formen der Landnutzung.
 Es geht bei der Kultur folglich nicht um die biologische Pflanze an sich, sondern um die flächen- und zeitbezogene Bewirtschaftungsform, an welche die jeweiligen agronomischen, rechtlichen oder systemischen Eigenschaften geknüpft sind.
 
-## Kulturen im Direktzahlungssystem
+Dieses Hilfsmittel dient dem Verständnis der Kulturbegriffe aus drei unterschiedlichen Bereichen, in welchen Definitionen landwirtschaftlicher Kulturen unabhängig voneinander gemacht wurden:
+
+- [Direktzahlungen](#sec-direct-payments)
+- [Nährstoffbilanz](#sec-nutrient-balance)
+- [Pflanzenschutz](#sec-plant-protection)
+
+In den folgenden Unterkapiteln werden die Kategorisierungssysteme landwirtschaftlicher Kulturen dieser drei bereiche im Detail beschrieben.
+
+## Direktzahlungen {#sec-direct-payments}
 
 Im Rahmen des Direktzahlungssystems sind 159 Direktzahlungskulturen (Stand Juli 2026) definiert, welche im Rahmen der Strukturdatenerhebung von den Bewirtschaftenden in den kantonalen Agrarinformationssystemen (KAIS) eingetragen und an das agrarpolitische Informationssystem (AGIS) des Bundes übermittelt werden können.
 
 Direktzahlungskulturen können für keine bis mehrere Beiträge berechtigt sein (Flächenkatalog und Beitragsberechtigung), grundsätzlich müssen sie für die Berechtigung zu Direktzahlungen aber jährlich an AGIS übermittelt werden.
-In AGIS stehen also alle aktuell gültigen und historisierten Direktzahlungskulturen und deren Beitragsberechtigungen (keine bis mehrere) für befugte Nutzende (Bund, Kantone) zur Verfügung. Momentan können diese Daten aber nicht in maschinenlesbarer Form vom AGIS-Webservice bezogen werden.
+In AGIS stehen also alle aktuell gültigen und historisierten Direktzahlungskulturen und deren Beitragsberechtigungen (keine bis mehrere) für befugte Nutzende (Bund, Kantone) zur Verfügung.
+Momentan können diese Daten aber nicht in maschinenlesbarer Form vom AGIS-Webservice bezogen werden.
 
 Die Direktzahlungskulturen kommen nicht nur im Rahmen der Strukturdatenerhebung zum Einsatz, sondern auch bei der gesamtschweizerischen räumlichen Erfassung von Nutzungsflächen.
 Die Kantone erfassen diese Geodaten gemäss dem minimalen Geodatenmodell 153.1 "Nutzungsflächen" und stellen die Daten via dem interkantonale Portal geodienste.ch zur Verfügung (Landwirtschaftliche Kulturflächen).
-Die im Rahmen der Geodaten verwendeten Kulturkategorien sind als XML-File auf <https://models.geo.admin.ch> publiziert, wobei es nicht zu 100% dieselben Kulturkategorien sind.
+Die im Rahmen der Geodaten verwendeten Kulturkategorien sind als XML-File auf <https://models.geo.admin.ch> publiziert, wobei weitere (aggregierende) Kulturkategorien definiert wurden und die Attribute nicht zu 100% deckungsgleich sind.
 
-## Kulturen der Nährstoffbilanz
+Die Direktzahlungskulturen sind selbst in acht Kulturkategorien eingeteilt (@tbl-directpaymentcrops-categories). Viele dieser Kategorien werden in der landwirtschaftliche Begriffsverordnung (LBV) definiert.
+
+| N  | Name   | Definition | Beispiele     |
+|:-  | :----- | :--------- | :------------ |
+| 72 | Ackerfläche | [Art. 18 LBV](https://www.fedlex.admin.ch/eli/cc/1999/13/de#art_18) | "Futterweizen gemäss Sortenliste swiss granum", "Winterraps zur Speiseölgewinnung", "Winterraps als nachwachsender Rohstoff" |
+| 15 | Dauergrünfläche | [Art. 19 LBV](https://www.fedlex.admin.ch/eli/cc/1999/13/de#art_19) | "Extensiv genutzte Wiesen (ohne Weiden)", "Übrige Grünfläche (Dauergrünfläche), beitragsberechtigt" |
+| 27 | Dauerkulturen | [Art. 22 LBV](https://www.fedlex.admin.ch/eli/cc/1999/13/de#art_22) | "Reben", "Obstanlagen (Äpfel)", "Reben (regionsspezifische Biodiversitätsförderfläche)" |
+| 14 | Kulturen in ganzjährig geschütztem Anbau | [Art. 14 LBV](https://www.fedlex.admin.ch/eli/cc/1999/13/de#art_14) | "Gemüsekulturen in Gewächshäusern mit festem Fundament", "Übrige Spezialkulturen in geschütztem Anbau ohne festes Fundament" |
+| 6  | Weitere Flächen innerhalb der landwirtschaftlichen Nutzfläche | | "Streueflächen innerhalb der landwirtschaftlichen Nutzfläche", "Hecken-, Feld- und Ufergehölze (mit Pufferstreifen) (regionsspezifische Biodiversitätsförderfläche)" |
+| 11 | Flächen ausserhalb der landwirtschaftlichen Nutzfläche | | "Wald", "Trockenmauern", "Hausgärten" |
+| 5  | Flächen im Sömmerungsgebiet | [Art. 24 LBV](https://www.fedlex.admin.ch/eli/cc/1999/13/de#art_24) | "Sömmerungsweiden", "Artenreiche Grün- und Streueflächen im Sömmerungsgebiet" |
+| 9  | Andere Elemente | | "Hochstammfeldobstbäume", "Nussbäume", "Einheimische standortgerechte Einzelbäume und Alleen" |
+
+: Kategorien der Direktzahlungskulturen mit Referenzen auf die landwirtschaftliche Begriffsverordnung (LBV), wo möglich. {#tbl-directpaymentcrops-categories}
+
+## Nährstoffbilanz {#sec-nutrient-balance}
 
 Um umweltbelastende Nährstoffverluste zu verhindern und die Ertragsfähigkeit der Böden nachhaltig zu sichern, müssen Schweizer Landwirtschaftsbetriebe eine ausgeglichene Nährstoffbilanz ausweisen [@grud2017].
 Das zentrale Berechnungsinstrument hierfür ist die Suisse-Bilanz, welche den Nährstoffanfall (etwa durch Hofdünger) und den Nährstoffbedarf auf Betriebsebene systematisch gegenüberstellt [@suibi2025].
@@ -59,7 +75,7 @@ In dem Dokument sind viele Referenztabellen enthalten, die entsprechend nach Kul
 
 Zur Standardisierung der Suisse-Bilanz-Berechnung stellt das Bundesamt für Landwirtschaft neu den Nährstoffbilanz-Berechnungsservice (NBBS) als RESTful API zur Verfügung.
 Über diese Schnittstelle lässt sich unter anderem ein Katalog der landwirtschaftlichen Kulturen abrufen.[^3]
-Der NBBS ordnet die Kulturen in einer strikten, dreistufigen Hierarchie:
+Der NBBS ordnet die Kulturen in einer strikten, dreistufigen Hierarchie (@tbl-nbbs-hierarchy).
 
 [^3]: Die «agronomischen Kulturkategorien» für den Nährstoffbilanzrechner sind beispielsweise über den Endpoint <https://rf-vp.agate.ch/digiflux/naebi/2-0/naebiservice-backend/agronomiccropcategories> abrufbar. Mittels der Slugs `cultivationcategories` und `cultivationsubcategories` lassen sich zudem die jeweiligen Übergruppen abfragen.
 
@@ -70,12 +86,12 @@ Der NBBS ordnet die Kulturen in einer strikten, dreistufigen Hierarchie:
 | 314    | Agronomische Kulturkategorien (`agronomiccropcategories`) | Unterste Ebene, welche die eigentlichen Kulturen beinhaltet. Hier sind die spezifischen agronomischen und regulatorische Eigenschaften hinterlegt. | «Winterweizen», «Zuckerrüben», «Naturwiese extensiv», «Aubergine, Erdkultur (geschützter Anbau)», «Walnüsse ≥ 185 Bäume/ha» |
 
 : Hierarchische Struktur der Kulturen im Nährstoffbilanz-Berechnungsservice.
-«N» ist die Anzahl Elemente je Klasse, Stand Juli 2026. {#tbl-nbbs-hierarchie}
+«N» ist die Anzahl Elemente je Klasse, Stand Juli 2026. {#tbl-nbbs-hierarchy}
 
 Während die beiden obersten Ebenen rein der Strukturierung und Gruppierung dienen, weisen die agronomischen Kulturkategorien auf der untersten Ebene spezifische agronomische und regulatorische Eigenschaften auf.
 Dazu gehören beispielsweise der Ertrag, die Zulässigkeit für bestimmte Direktzahlungsprogramme oder die Teilnahme an spezifischen Vorhaben wie dem «62a Nitrat-Projekt».
 
-## Kulturen im Pflanzenschutzmittelverzeichnis
+## Pflanzenschutz {#sec-plant-protection}
 
 Das Pflanzenschutzmittelverzeichnis (PSMV) ist das offizielle Register des Bundes, das alle in der Schweiz zugelassenen Pflanzenschutzmittel auflistet und verbindlich regelt, für welche Kulturen und unter welchen Bedingungen diese rechtmässig eingesetzt werden dürfen.
 Es wird vom Bundesamt für Lebensmittelsicherheit und Veterinärwesen (BLV) gepflegt und umfasst 321 definierte Kulturen.
@@ -109,19 +125,26 @@ Die korrekte Nachbildung dieser Polyhierarchie ist in den Daten folglich essenzi
 
 # Datenmodell
 
-Das konsolidierte Datenmodell wird durch eine RDF-Ontologie abgebildet und mittels SHACL-Shapes validiert [@rdf;@owl2;@shacl].
-
 ## Nutzung von Semantic-Web-Technologien
 
 Im Gegensatz zum Pflanzenschutzmittelverzeichnis wird beim Nährstoffbilanzrechner Mais als Getreide gezählt – es existieren also verschiedene Definitionen von Getreide.
 Um diese eindeutig kennzeichnen zu können, setzen wir auf Linked Data.
-Jede Definition bekommt eine URI (in unserem Fall als URL dereferenzierbar). Die hier beschriebene Datensammlung beschreibt die Beziehungen der Klassen.
+Für weiterführende Informationen zur Publikation, Nutzung und den Kernprozessen von vernetzten Daten verweisen wir auf @eCH-0205:1.0.0.
 
-TODO: Warum Linked Data → Zur eindeutigen Identifizierung von gleichen aber auch verschiedenen Objekten.
+Das konsolidierte Datenmodell wird durch eine RDFS-Ontologie abgebildet und mittels SHACL-Shapes validiert [@rdf;@owl2;@shacl].
+
+![UML-Diagramm des Datenmodells.](../assets/img/uml.png)
+
+TBC.
 
 # Klassen
 
 {{< include entities.md >}}
+
+# Nutzung der Daten
+
+- Sämtliche hier beschriebenen Daten können auf LINDAS bezogen werden.
+- Knappe Anleitung zum Beziehen der Daten.
 
 # Sicherheitsaspekte
 

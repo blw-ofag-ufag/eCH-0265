@@ -29,4 +29,5 @@ format:
     toc: true
     reference-doc: https://s.zazuko.com/MHXTkQ
     link-citations: true
-  typst: default
+  typst:
+    number-sections: true
