@@ -65,7 +65,7 @@ Die Direktzahlungskulturen sind selbst in acht Kulturkategorien eingeteilt (@tbl
 
 ## Nährstoffbilanz {#sec-nutrient-balance}
 
-Um umweltbelastende Nährstoffverluste zu verhindern und die Ertragsfähigkeit der Böden nachhaltig zu sichern, müssen Schweizer Landwirtschaftsbetriebe eine ausgeglichene Nährstoffbilanz ausweisen [@grud2017].
+Um umweltbelastende Nährstoffverluste zu reduzieren und die Ertragsfähigkeit der Böden nachhaltig zu sichern, müssen Schweizer Landwirtschaftsbetriebe eine ausgeglichene Nährstoffbilanz ausweisen [@grud2017].
 Das zentrale Berechnungsinstrument hierfür ist die Suisse-Bilanz, welche den Nährstoffanfall (etwa durch Hofdünger) und den Nährstoffbedarf auf Betriebsebene systematisch gegenüberstellt [@suibi2025].
 Für diese Bilanzierung wurden spezifische Kulturen definiert, weil jede landwirtschaftliche Kultur einen anderen, normierten Nährstoffbedarf (z.B. für Stickstoff oder Phosphor) aufweist [@grud2017].
 Die Zuweisung dieser Kulturen ist die Grundvoraussetzung, um eine Nährstoffbilanz für einen Betrieb berechnen zu können.
