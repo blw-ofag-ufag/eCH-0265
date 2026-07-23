@@ -22,6 +22,7 @@ format:
   html:
     toc: true
     number-sections: true
+    embed-resources: true
   gfm: 
     toc: false
     number-sections: false
