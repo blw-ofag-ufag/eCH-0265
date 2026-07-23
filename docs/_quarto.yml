@@ -23,8 +23,9 @@ format:
     toc: true
     number-sections: true
   gfm: 
-    toc: true
-    number-sections: true
+    toc: false
+    number-sections: false
+    wrap: none
   docx:
     toc: true
     reference-doc: https://s.zazuko.com/MHXTkQ
