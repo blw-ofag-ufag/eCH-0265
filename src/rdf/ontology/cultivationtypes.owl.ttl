@@ -3598,7 +3598,7 @@ cultivationtype:1059 a :CultivationType ;
 
 cultivationtype:1061 a :CultivationType ;
     schema:name "Eibisch"@de, "Guimauve"@fr, "Altea"@it ;
-    rdfs:subClassOf cultivationtype:705 .
+    rdfs:subClassOf cultivationtype:35 .
 
 cultivationtype:1062 a :CultivationType ;
     schema:name "Eisenkraut"@de, "Verveine"@fr, "Verbena"@it ;
