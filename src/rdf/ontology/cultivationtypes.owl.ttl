@@ -2147,7 +2147,7 @@ cultivationtype:520 a :CultivationType ;
         "Riz en culture sèche"@fr,
         "Riso seminato su terreno asciutto"@it ;
     schema:description "Der Anbau von Reis im Trockenverfahren. Im Gegensatz zum Nassreisbau werden die Felder bei dieser Methode nicht geflutet."@de ;
-    rdfs:subClassOf cultivationtype:509 ;
+    rdfs:subClassOf cultivationtype:509, cultivationtype:1022 ;
     :botanicalPlant taxon:ORYSA .
 
 cultivationtype:521 a :CultivationType ;
