@@ -880,7 +880,8 @@ cultivationtype:167 a :CultivationType ;
     rdfs:subClassOf cultivationtype:118,
         cultivationtype:72 .
 
-cultivationtype:169 a :CultivationType ;
+
+ a :CultivationType ;
     schema:name "Chinaschilf"@de,
         "Miscanthus"@fr,
         "Miscanto"@it,
