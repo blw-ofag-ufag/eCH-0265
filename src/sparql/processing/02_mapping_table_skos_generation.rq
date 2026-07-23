@@ -1,61 +1,46 @@
-# DESCRIPTION:
 # This SPARQL update query cross-references agricultural crop observation sets
-# across different systems (AGIS, NAEBI, PSMV) and materializes their semantic 
-# relationships directly into the graph.
-# It evaluates the class hierarchy using rdfs:subClassOf paths to infer 
-# structural mappings and writes them using SKOS vocabulary (exactMatch, 
-# broadMatch, narrowMatch).
+# across different systems and materializes their relationships according to SKOS.
 
 PREFIX cube: <https://cube.link/>
 PREFIX : <https://agriculture.ld.admin.ch/crops/>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
 
-# 1. EXACT MATCHES (Identical cultivation types)
+# 1. EXACT MATCH
 INSERT {
-  ?obsS skos:exactMatch ?obsT .
+  ?s skos:exactMatch ?t .
 }
 WHERE {
-  ?setS cube:observation ?obsS .
-  ?setT a cube:ObservationSet ;
-        cube:observation ?obsT .
-  FILTER(?setS != ?setT)
-  
-  ?obsS :cultivationType/^:cultivationType ?obsT .
+  ?s_set cube:observation ?s .
+  ?t_set cube:observation ?t .
+  FILTER(?s_set != ?t_set)
+  ?s :cultivationType/^:cultivationType ?t .
 };
 
-# 2. BROAD MATCHES (Target system is more general)
+# 2. BROAD MATCH
 INSERT {
-  ?obsS skos:broadMatch ?obsT .
+  ?s skos:broadMatch ?t .
 }
 WHERE {
-  ?setS cube:observation ?obsS .
-  ?setT a cube:ObservationSet ;
-        cube:observation ?obsT .
-  FILTER(?setS != ?setT)
-  
-  ?obsS :cultivationType ?typeS .
-  ?obsT :cultivationType ?typeT .
-  
-  ?typeS rdfs:subClassOf+ ?typeT .
-  # Condition: Target system does not have an exact match for the source
-  FILTER NOT EXISTS { ?setT cube:observation [ :cultivationType ?typeS ] }
+  ?s_set cube:observation ?s .
+  ?t_set cube:observation ?t .
+  FILTER(?s_set != ?t_set)
+  ?s :cultivationType / rdfs:subClassOf+ / ^:cultivationType ?t .
+  FILTER NOT EXISTS { 
+    ?s skos:exactMatch / ^cube:observation ?t_set . 
+  }
 };
 
-# 3. NARROW MATCHES (Target system is more specific)
+# 3. NARROW MATCH
 INSERT {
-  ?obsS skos:narrowMatch ?obsT .
+  ?s skos:narrowMatch ?t .
 }
 WHERE {
-  ?setS cube:observation ?obsS .
-  ?setT a cube:ObservationSet ;
-        cube:observation ?obsT .
-  FILTER(?setS != ?setT)
-  
-  ?obsS :cultivationType ?typeS .
-  ?obsT :cultivationType ?typeT .
-  
-  ?typeT rdfs:subClassOf+ ?typeS .
-  # Condition: Target system does not have an exact match for the source
-  FILTER NOT EXISTS { ?setT cube:observation [ :cultivationType ?typeS ] }
+  ?s_set cube:observation ?s .
+  ?t_set cube:observation ?t .
+  FILTER(?s_set != ?t_set)
+  ?s :cultivationType / ^rdfs:subClassOf+ / ^:cultivationType ?t .
+  FILTER NOT EXISTS { 
+    ?s (skos:exactMatch|skos:broadMatch) / ^cube:observation ?t_set .
+  }
 };

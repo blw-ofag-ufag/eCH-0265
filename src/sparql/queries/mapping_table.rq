@@ -1,0 +1,15 @@
+# Generate a mapping table that can be easily understood and used
+# by downstream data consumers.
+PREFIX : <https://agriculture.ld.admin.ch/crops/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX schema: <http://schema.org/>
+SELECT ?s ?s_name ?p ?o ?o_name
+FROM <https://lindas.admin.ch/foag/ech/0265/2>
+WHERE {
+    ?s ?p ?o .
+    VALUES ?p { skos:narrowMatch skos:exactMatch skos:broadMatch }
+    ?s schema:name ?s_name .
+    ?o schema:name ?o_name .
+    FILTER(LANG(?s_name)="de" && LANG(?o_name)="de")
+}
+ORDER BY ?s ?o
