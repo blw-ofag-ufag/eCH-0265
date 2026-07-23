@@ -447,7 +447,7 @@ cultivationtype:79 a :CultivationType ;
         "Graminées pour la production de semences"@fr,
         "Graminacee per la produzione di sementi"@it ;
     schema:alternateName "Grassamen-Produktion"@de ;
-    rdfs:subClassOf cultivationtype:1 .
+    rdfs:subClassOf cultivationtype:1022 .
 
 cultivationtype:80 a :CultivationType ;
     schema:name "Schwarze Maulbeere"@de,
