@@ -100,7 +100,7 @@ Die Bezeichnungen dieser Kulturen liegen mehrsprachig auf Deutsch, Französisch 
 Anders als die streng monohierarchische Klassifikationen (wie in AGIS und im NBBS) sind die Kulturen im PSMV als Objekte in einer flexiblen Polyhierarchie modelliert.
 Dies bedeutet, dass ein Element mehr als ein Überelement aufweisen kann, welches wiederum eigenen Überelementen untergeordnet ist. 
 
-Diese Struktur wurde ursprünglich von der *European Plant Protection Organization* (EPPO) abgeleitet, anschliessend aber für die spezifischen Schweizer Anforderungen weiter modifiziert.
+Diese Struktur wurde ursprünglich von der [*European Plant Protection Organization* (EPPO)](https://eppo.int/) abgeleitet, anschliessend aber für die spezifischen Schweizer Anforderungen weiter modifiziert.
 Die Organisation in Übergruppen erlaubt eine äusserst flexible Modellierung:
 Gewisse Äste der Hierarchie sind flach, während andere sehr tief verschachtelt sein können.
 Eine Kultur kann dabei bis zu zwei direkte Übergruppen besitzen.
