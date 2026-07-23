@@ -1997,7 +1997,7 @@ cultivationtype:496 a :CultivationType ;
 cultivationtype:497 a :CultivationType ;
     schema:name "Mais"@de ;
     schema:description "Der Anbau von Mais (Zea mays) für alle möglichen Zwecke."@de ;
-    rdfs:subClassOf cultivationtype:14 ;
+    rdfs:subClassOf cultivationtype:14, cultivationtype:1022 ;
     :botanicalPlant taxon:ZEAMX .
 
 cultivationtype:498 a :CultivationType ;
@@ -3425,8 +3425,7 @@ cultivationtype:1020 a :CultivationType ;
 
 cultivationtype:1021 a :CultivationType ;
     schema:name "Winterkorn, Dinkel"@de ;
-    rdfs:subClassOf cultivationtype:19,
-        cultivationtype:516 .
+    rdfs:subClassOf cultivationtype:1007 .
 
 cultivationtype:1022 a :CultivationType ;
     schema:name "Feldbau"@de,
@@ -3479,7 +3478,7 @@ cultivationtype:1033 a :CultivationType ;
     schema:name "Getreide ohne Mais"@de,
         "Céréales sans Maïs"@fr,
         "Cereali senza Mais"@it ;
-    rdfs:subClassOf cultivationtype:14 ;
+    rdfs:subClassOf cultivationtype:1022 ;
     owl:disjointWith cultivationtype:497 .
 
 cultivationtype:1034 a :CultivationType ;
