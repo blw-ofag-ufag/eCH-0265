@@ -1,0 +1,46 @@
+# This SPARQL update query cross-references agricultural crop observation sets
+# across different systems and materializes their relationships according to SKOS.
+
+PREFIX cube: <https://cube.link/>
+PREFIX : <https://agriculture.ld.admin.ch/crops/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+
+# 1. EXACT MATCH
+INSERT {
+  ?s skos:exactMatch ?t .
+}
+WHERE {
+  ?s_set cube:observation ?s .
+  ?t_set cube:observation ?t .
+  FILTER(?s_set != ?t_set)
+  ?s :cultivationType/^:cultivationType ?t .
+};
+
+# 2. BROAD MATCH
+INSERT {
+  ?s skos:broadMatch ?t .
+}
+WHERE {
+  ?s_set cube:observation ?s .
+  ?t_set cube:observation ?t .
+  FILTER(?s_set != ?t_set)
+  ?s :cultivationType / rdfs:subClassOf+ / ^:cultivationType ?t .
+  FILTER NOT EXISTS { 
+    ?s skos:exactMatch / ^cube:observation ?t_set . 
+  }
+};
+
+# 3. NARROW MATCH
+INSERT {
+  ?s skos:narrowMatch ?t .
+}
+WHERE {
+  ?s_set cube:observation ?s .
+  ?t_set cube:observation ?t .
+  FILTER(?s_set != ?t_set)
+  ?s :cultivationType / ^rdfs:subClassOf+ / ^:cultivationType ?t .
+  FILTER NOT EXISTS { 
+    ?s (skos:exactMatch|skos:broadMatch) / ^cube:observation ?t_set .
+  }
+};

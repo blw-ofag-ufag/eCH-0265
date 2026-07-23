@@ -54,8 +54,8 @@ shape:CultivationType a sh:NodeShape ;
         "Nutzungstyp"@de ;
     rdfs:comment "This is the core class for the classification of 'cultivations', i.e. for crops. (Partial) translation of other crop types is possible via the hierarchy modelled with this class. For the general hierachy modelling, we use the [RDF schema (RDFS)](https://www.w3.org/TR/rdf-schema/) as well as the [Web Ontology Language (OWL)](https://www.w3.org/TR/owl-guide/)."@en ;
     sh:closed true ;
-    sh:targetClass :CultivationType ;
-    sh:ignoredProperties ( rdf:type owl:intersectionOf owl:unionOf owl:equivalentClass ) ;
+    sh:targetClass :CultivationType, :DeprecatedCultivationType ;
+    sh:ignoredProperties ( rdf:type owl:intersectionOf owl:unionOf owl:equivalentClass skos:exactMatch skos:broadMatch skos:narrowMatch ) ;
     # Require AT LEAST ONE of the following relationships:
     # - a parent class (rdfs:subClassOf),
     # - an intersection definition (owl:intersectionOf),
@@ -159,7 +159,7 @@ shape:DirectPaymentCrop a sh:NodeShape ;
     rdfs:comment "A classification scheme built for the Swiss direct payment system"@en,
         "Beschreibt eine Liste der «Kulturen», die gemäss Direktzahlungsverordnung im Bereich Landwirtschaft relevant sind. Diese «Kulturen» werden für den Direktzahlungsvollzug verwendet. Sie entsprechen den Hauptkulturen."@de ;
     sh:closed true ;
-    sh:ignoredProperties ( rdf:type ) ;
+    sh:ignoredProperties ( rdf:type skos:exactMatch skos:broadMatch skos:narrowMatch ) ;
     sh:targetClass :DirectPaymentCrop ;
     sh:sparql [
         a sh:SPARQLConstraint ;
@@ -233,7 +233,7 @@ shape:DirectPaymentCrop a sh:NodeShape ;
 shape:NutrientBalanceCrop a sh:NodeShape ;
     rdfs:label "Nutrient Balance Crop"@en ;
     sh:closed true ;
-    sh:ignoredProperties ( rdf:type ) ;
+    sh:ignoredProperties ( rdf:type skos:exactMatch skos:broadMatch skos:narrowMatch ) ;
     sh:targetClass :NutrientBalanceCrop ;
     sh:property
         shape:identifier,
@@ -323,7 +323,7 @@ shape:PlantProtectionCrop a sh:NodeShape ;
     rdfs:label "Plant protection crop"@en ;
     rdfs:comment "Crop of the Swiss registry of plant protection products"@en ;
     sh:closed true ;
-    sh:ignoredProperties ( rdf:type ) ;
+    sh:ignoredProperties ( rdf:type skos:exactMatch skos:broadMatch skos:narrowMatch ) ;
     sh:targetClass :PlantProtectionCrop ;
     sh:property
         shape:identifier,
