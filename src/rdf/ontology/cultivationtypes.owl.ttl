@@ -151,7 +151,7 @@ cultivationtype:16 a :CultivationType ;
 cultivationtype:17 a :CultivationType ;
     schema:name "Hackfrüchte"@de,
         "Root crops"@en ;
-    rdfs:subClassOf cultivationtype:1 .
+    rdfs:subClassOf cultivationtype:1022 .
 
 cultivationtype:18 a :CultivationType ;
     schema:name "Mischkultur"@de ;
