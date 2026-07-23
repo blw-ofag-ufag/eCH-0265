@@ -879,9 +879,8 @@ cultivationtype:167 a :CultivationType ;
         "Abete del Colorado"@it ;
     rdfs:subClassOf cultivationtype:118,
         cultivationtype:72 .
-
-
- a :CultivationType ;
+  
+cultivationtype:169 a :CultivationType ;
     schema:name "Chinaschilf"@de,
         "Miscanthus"@fr,
         "Miscanto"@it,
