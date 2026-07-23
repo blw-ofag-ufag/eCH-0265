@@ -1980,7 +1980,7 @@ cultivationtype:493 a :CultivationType ;
     schema:name "Sonnenblumen"@de,
         "Tournesol"@fr,
         "Girasole"@it ;
-    rdfs:subClassOf cultivationtype:1 .
+    rdfs:subClassOf cultivationtype:493 .
 
 cultivationtype:494 a :CultivationType ;
     schema:name "Raps"@de ;
