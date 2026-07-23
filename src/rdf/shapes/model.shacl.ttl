@@ -54,7 +54,7 @@ shape:CultivationType a sh:NodeShape ;
         "Nutzungstyp"@de ;
     rdfs:comment "This is the core class for the classification of 'cultivations', i.e. for crops. (Partial) translation of other crop types is possible via the hierarchy modelled with this class. For the general hierachy modelling, we use the [RDF schema (RDFS)](https://www.w3.org/TR/rdf-schema/) as well as the [Web Ontology Language (OWL)](https://www.w3.org/TR/owl-guide/)."@en ;
     sh:closed true ;
-    sh:targetClass :CultivationType, :DeprecatedCultivationType ;
+    sh:targetClass :CultivationType ;
     sh:ignoredProperties ( rdf:type owl:intersectionOf owl:unionOf owl:equivalentClass skos:exactMatch skos:broadMatch skos:narrowMatch ) ;
     # Require AT LEAST ONE of the following relationships:
     # - a parent class (rdfs:subClassOf),
