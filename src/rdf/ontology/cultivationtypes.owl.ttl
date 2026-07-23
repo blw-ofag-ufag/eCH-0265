@@ -516,7 +516,7 @@ cultivationtype:91 a :CultivationType ;
     schema:name "Gemeine Felsenbirne"@de,
         "amélavier commun"@fr,
         "Pero corvino"@it ;
-    rdfs:subClassOf cultivationtype:402 .
+    rdfs:subClassOf cultivationtype:471 .
 
 cultivationtype:92 a :CultivationType ;
     schema:name "Schwarzwurzel"@de,
@@ -928,7 +928,7 @@ cultivationtype:174 a :CultivationType ;
         "sorbier des oiseleurs"@fr,
         "Sorbo degli ucellatori"@it ;
     schema:alternateName "Vogelbeere"@de ;
-    rdfs:subClassOf cultivationtype:402 .
+    rdfs:subClassOf cultivationtype:471 .
 
 cultivationtype:175 a :CultivationType ;
     schema:name "Nachtschattengewächse (Solanaceae)"@de,
