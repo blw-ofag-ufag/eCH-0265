@@ -401,7 +401,7 @@ cultivationtype:68 a :CultivationType ;
     schema:alternateName "Alfalfa"@de,
         "Schneckenklee"@de,
         "Ewiger Klee"@de ;
-    rdfs:subClassOf cultivationtype:1 .
+    rdfs:subClassOf cultivationtype:1022 .
 
 cultivationtype:69 a :CultivationType ;
     schema:name "Mini-Kiwi"@de,
