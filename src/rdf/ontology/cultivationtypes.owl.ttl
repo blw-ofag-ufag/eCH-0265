@@ -1984,7 +1984,7 @@ cultivationtype:493 a :CultivationType ;
 
 cultivationtype:494 a :CultivationType ;
     schema:name "Raps"@de ;
-    rdfs:subClassOf cultivationtype:1 .
+    rdfs:subClassOf cultivationtype:1022 .
 
 cultivationtype:495 a :CultivationType ;
     schema:name "Raps als nachwachsender Rohstoff"@de ;
