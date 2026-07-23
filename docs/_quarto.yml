@@ -3,8 +3,6 @@ project:
   type: website
   render:
     - de/index.qmd
-    - fr/index.qmd
-    - en/index.qmd
 
 website:
   repo-url: https://github.com/blw-ofag-ufag/eCH-0265
