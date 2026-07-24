@@ -52,7 +52,7 @@ In this project, we propose a unified master data system for crops and crop-rela
 shape:CultivationType a sh:NodeShape ;
     rdfs:label "Cultivation type"@en,
         "Nutzungstyp"@de ;
-    rdfs:comment "This is the core class for the classification of 'cultivations', i.e. for crops. (Partial) translation of other crop types is possible via the hierarchy modelled with this class. For the general hierachy modelling, we use the [RDF schema (RDFS)](https://www.w3.org/TR/rdf-schema/) as well as the [Web Ontology Language (OWL)](https://www.w3.org/TR/owl-guide/)."@en ;
+    rdfs:comment "Die Kernklasse für die Klassifikation von «Kulturen», bzw. Landnutzungen. Eine (teilweise) Übersetzung anderer Kulturarten ist über die mit dieser Klasse modellierte Hierarchie möglich. Für die allgemeine Hierarchiemodellierung wird das [*RDF-Schema* (RDFS)](https://www.w3.org/TR/rdf-schema/) sowie die [*Web Ontology Language* (OWL)](https://www.w3.org/TR/owl-guide/) verwendet."@de ;
     sh:closed true ;
     sh:targetClass :CultivationType ;
     sh:ignoredProperties ( rdf:type owl:intersectionOf owl:unionOf owl:equivalentClass skos:exactMatch skos:broadMatch skos:narrowMatch ) ;
@@ -88,6 +88,7 @@ shape:CultivationType a sh:NodeShape ;
     ],
     [
         sh:order 2 ;
+        sh:name "Alternate name"@en, "Alias"@de ;
         sh:path schema:alternateName ;
         sh:nodeKind sh:Literal ;
         sh:datatype rdf:langString ;
@@ -157,7 +158,7 @@ shape:DirectPaymentCrop a sh:NodeShape ;
     rdfs:label "Direct payment crop"@en,
         "Direktzahlungskultur"@de ;
     rdfs:comment "A classification scheme built for the Swiss direct payment system"@en,
-        "Beschreibt eine Liste der «Kulturen», die gemäss Direktzahlungsverordnung im Bereich Landwirtschaft relevant sind. Diese «Kulturen» werden für den Direktzahlungsvollzug verwendet. Sie entsprechen den Hauptkulturen."@de ;
+        "Beschreibt eine Liste der «Kulturen», die gemäss Direktzahlungsverordnung (DZV) im Bereich Landwirtschaft relevant sind. Diese «Kulturen» werden für den Direktzahlungsvollzug verwendet. Sie entsprechen den Hauptkulturen."@de ;
     sh:closed true ;
     sh:ignoredProperties ( rdf:type skos:exactMatch skos:broadMatch skos:narrowMatch ) ;
     sh:targetClass :DirectPaymentCrop ;
@@ -199,6 +200,7 @@ shape:DirectPaymentCrop a sh:NodeShape ;
         [
             sh:order 3 ;
             sh:name "Kulturgruppe"@de ;
+            sh:description "Eine Kategorie für die Kultur, oft definiert in der LBV."@de ;
             sh:maxCount 1 ;
             sh:nodeKind sh:IRI ;
             sh:path :cultivationGroup ;
@@ -232,7 +234,8 @@ shape:DirectPaymentCrop a sh:NodeShape ;
 # ==============================================================================
 
 shape:NutrientBalanceCrop a sh:NodeShape ;
-    rdfs:label "Nutrient Balance Crop"@en ;
+    rdfs:label "Kultur der Nährstoffbilanz"@de,
+        "Nutrient Balance Crop"@en ;
     sh:closed true ;
     sh:ignoredProperties ( rdf:type skos:exactMatch skos:broadMatch skos:narrowMatch ) ;
     sh:targetClass :NutrientBalanceCrop ;
@@ -321,8 +324,9 @@ shape:NutrientBalanceCrop a sh:NodeShape ;
 # ==============================================================================
 
 shape:PlantProtectionCrop a sh:NodeShape ;
-    rdfs:label "Plant protection crop"@en ;
-    rdfs:comment "Crop of the Swiss registry of plant protection products"@en ;
+    rdfs:label "Pflanzenschutzmittel-Kultur"@de,
+        "Plant protection crop"@en ;
+    rdfs:comment "Kultur, wie sie im [Pflanzenschutzmittelverzeichnis](https://psm.admin.ch/) modelliert ist. Diese Kulturen sind über die Attribute `schema:isPartOf` sowie `schema:hasPart` hierarchisch organisiert."@de ;
     sh:closed true ;
     sh:ignoredProperties ( rdf:type skos:exactMatch skos:broadMatch skos:narrowMatch ) ;
     sh:targetClass :PlantProtectionCrop ;
@@ -331,7 +335,7 @@ shape:PlantProtectionCrop a sh:NodeShape ;
         [
             sh:order 2 ;
             sh:name "Name"@de ;
-            sh:description "Der in Infofito eingetragene Name dieser Kultur"@de ;
+            sh:description "Der in Infofito eingetragene Name dieser Kultur."@de ;
             sh:maxCount 4 ;
             sh:minCount 2 ;
             sh:languageIn ( "de" "fr" "it" "en" ) ;
