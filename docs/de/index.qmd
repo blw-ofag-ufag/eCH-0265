@@ -7,7 +7,7 @@ abstract: |
   Sämtliche Daten können als maschinenlesbare _Linked Data_ bezogen werden.
   Damit soll ein fachlich validierter Datenaustausch sowie die Mehrfachnutzung von Daten ermöglicht werden.
 date: last-modified
-date-format: DD. MMMM YYYY, HH:mm:ss [Uhr]
+date-format: long
 lang: de-CH
 keywords:
   - Landwirtschaft
