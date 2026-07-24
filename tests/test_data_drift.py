@@ -1,15 +1,19 @@
 import io
 import csv
 import gzip
+import xml.etree.ElementTree as ET
 from pathlib import Path
 import pytest
 import requests
 
 NAEBI_API_URL = "https://rf-vp.agate.ch/digiflux/naebi/2-0/naebiservice-backend/agronomiccropcategories"
 PSMV_CSV_URL = "https://raw.githubusercontent.com/BLV-OSAV-USAV/PSMV-RDF/refs/heads/main/data/raw/Code.csv.gz"
+GIS_XML_URL = "https://models.geo.admin.ch/BLW/LWB_Nutzungsflaechen_Kataloge_V3_0.xml"
+
 LOG_DIR = Path("build/test")
 PSMV_LOG_FILENAME = "psmv_drift.log"
 NAEBI_LOG_FILENAME = "naebi_drift.log"
+GIS_LOG_FILENAME = "gis_drift.log"
 
 def write_drift_log(filename: str, lines: list):
     """Writes a formatted log file detailing the data drift."""
@@ -230,3 +234,129 @@ def test_psmv_drift(final_graph):
         write_drift_log(PSMV_LOG_FILENAME, log_lines)
 
     assert not has_drift, f"PSMV data drift detected. See {LOG_DIR}/{PSMV_LOG_FILENAME} for details."
+
+def get_local_agis_data(graph):
+    """Extracts local AGIS crop data from the combined processed graph."""
+    query = """
+    PREFIX schema: <http://schema.org/>
+    PREFIX : <https://agriculture.ld.admin.ch/crops/>
+    
+    SELECT ?id ?name ?lang
+    WHERE {
+        ?crop a :DirectPaymentCrop ;
+              schema:identifier ?id ;
+              schema:name ?name .
+        BIND(LANG(?name) AS ?lang)
+    }
+    """
+    results = graph.query(query)
+    
+    agis_data = {}
+    for row in results:
+        code = str(row.id)
+        name = str(row.name)
+        lang = str(row.lang).lower()
+        
+        if code not in agis_data:
+            agis_data[code] = {}
+        agis_data[code][lang] = name
+        
+    return agis_data
+
+def get_api_agis_data():
+    """Fetches AGIS crop data from the remote INTERLIS XML."""
+    response = requests.get(GIS_XML_URL, timeout=15)
+    response.raise_for_status()
+    root = ET.fromstring(response.content)    
+    ns = {'ili': 'http://www.interlis.ch/INTERLIS2.3'}
+    
+    api_data = {}
+    for nutzungsart in root.findall(".//ili:LWB_Nutzungsflaechen_V3_0.LNF_Kataloge.LNF_Katalog_Nutzungsart", ns):
+        code_elem = nutzungsart.find("ili:LNF_Code", ns)
+        if code_elem is not None and code_elem.text:
+            code = code_elem.text.strip()
+            
+            names = {}
+            nutzung = nutzungsart.find("ili:Nutzung", ns)
+            if nutzung is not None:
+                for loc_text in nutzung.findall(".//ili:LocalisationCH_V1.LocalisedText", ns):
+                    lang_elem = loc_text.find("ili:Language", ns)
+                    text_elem = loc_text.find("ili:Text", ns)
+                    if lang_elem is not None and text_elem is not None:
+                        lang = lang_elem.text.strip().lower()
+                        text = text_elem.text.strip() if text_elem.text else ""
+                        names[lang] = text
+                        
+            api_data[code] = names
+            
+    return api_data
+
+@pytest.mark.xfail(reason="Direct payments crops are currently not the same as GIS crops, although they should be!")
+def test_agis_drift(final_graph):
+    """Monitors discrepancies between local AGIS RDF representations and the live INTERLIS XML."""
+    local_data = get_local_agis_data(final_graph)
+    
+    try:
+        api_data = get_api_agis_data()
+    except requests.exceptions.RequestException as e:
+        pytest.skip(f"Network dependency unreachable. Skipping test. Error: {e}")
+    except ET.ParseError as e:
+        pytest.fail(f"Failed to parse XML from {GIS_XML_URL}. Error: {e}")
+
+    local_keys = set(local_data.keys())
+    api_keys = set(api_data.keys())
+
+    new_in_api = api_keys - local_keys
+    missing_in_api = local_keys - api_keys
+    common_keys = local_keys.intersection(api_keys)
+
+    discrepancies = {}
+
+    for key in common_keys:
+        local_names = local_data[key]
+        api_names = api_data[key]
+        
+        diffs = []
+        # Check specific language components
+        for lang in ['de', 'fr', 'it']:
+            local_name = local_names.get(lang, "")
+            api_name = api_names.get(lang, "")
+            if local_name != api_name:
+                if not local_name and api_name:
+                    diffs.append(f"Missing {lang.upper()} name in local: API has '{api_name}'")
+                elif local_name and not api_name:
+                    diffs.append(f"Extra {lang.upper()} name in local: API has no name, local has '{local_name}'")
+                else:
+                    diffs.append(f"{lang.upper()} Name: '{local_name}' -> '{api_name}'")
+                    
+        if diffs:
+            discrepancies[key] = diffs
+
+    has_drift = bool(new_in_api or missing_in_api or discrepancies)
+
+    if has_drift:
+        log_lines = ["AGIS DATA DRIFT REPORT", "=" * 22, ""]
+
+        if new_in_api:
+            log_lines.append(f"New Crops on API ({len(new_in_api)}):")
+            for key in sorted(new_in_api):
+                log_lines.append(f"  - {key}: {api_data[key].get('de', 'No DE name')}")
+            log_lines.append("")
+
+        if missing_in_api:
+            log_lines.append(f"Crops Removed From API ({len(missing_in_api)}):")
+            for key in sorted(missing_in_api):
+                log_lines.append(f"  - {key}: {local_data[key].get('de', 'No DE name')}")
+            log_lines.append("")
+
+        if discrepancies:
+            log_lines.append(f"Modified Data ({len(discrepancies)}):")
+            for key, diffs in discrepancies.items():
+                log_lines.append(f"  {key} ({local_data[key].get('de', 'No DE name')}):")
+                for diff in diffs:
+                    log_lines.append(f"    - {diff}")
+            log_lines.append("")
+
+        write_drift_log(GIS_LOG_FILENAME, log_lines)
+
+    assert not has_drift, f"AGIS data drift detected. See {LOG_DIR}/{GIS_LOG_FILENAME} for details."
