@@ -5,21 +5,29 @@ project:
     - de/index.qmd
 
 website:
+  title: eCH-0265 Version 2.0.0 (Working Draft)
   repo-url: https://github.com/blw-ofag-ufag/eCH-0265
   repo-subdir: docs
   repo-actions: [source, issue]
   favicon: assets/favicon.svg
   navbar:
+    background: dark
     right:
       - icon: github
         href: https://github.com/blw-ofag-ufag/eCH-0265
       - icon: envelope
         href: mailto:agridata.ch@blw.admin.ch
+  announcement:
+    icon: info-circle
+    dismissable: true
+    content: Diese Seite beinhaltet einen *Working Draft* und kann sich dadurch laufend verändern. Für eine aktuelle Version, besuchen Sie [ech.ch](https://ech.ch/de/ech/ech-0265/).
+    type: warning
 
 bibliography: references.bib
 
 format:
   html:
+    theme: cosmo
     toc: true
     number-sections: true
     embed-resources: true
