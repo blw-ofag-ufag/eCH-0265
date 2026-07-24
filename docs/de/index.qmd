@@ -50,7 +50,7 @@ Die im Rahmen der Geodaten verwendeten Kulturkategorien sind als XML-File auf <h
 
 Die Direktzahlungskulturen sind selbst in acht Kulturkategorien eingeteilt (@tbl-directpaymentcrops-categories). Eine mehrheit dieser Kategorien wird explizit in der landwirtschaftlichen Begriffsverordnung (LBV) definiert.
 
-| N  | Name   | Definition | Beispiele     |
+| N  | Kategorie | Definition | Beispiele     |
 |:-  | :----- | :--------- | :------------ |
 | 72 | Ackerfläche | [Art. 18 LBV](https://www.fedlex.admin.ch/eli/cc/1999/13/de#art_18) | «Futterweizen gemäss Sortenliste swiss granum», «Winterraps zur Speiseölgewinnung», «Winterraps als nachwachsender Rohstoff» |
 | 15 | Dauergrünfläche | [Art. 19 LBV](https://www.fedlex.admin.ch/eli/cc/1999/13/de#art_19) | «Extensiv genutzte Wiesen (ohne Weiden)», «Übrige Grünfläche (Dauergrünfläche), beitragsberechtigt» |
@@ -61,7 +61,7 @@ Die Direktzahlungskulturen sind selbst in acht Kulturkategorien eingeteilt (@tbl
 | 5  | Flächen im Sömmerungsgebiet | [Art. 24 LBV](https://www.fedlex.admin.ch/eli/cc/1999/13/de#art_24) | «Sömmerungsweiden», «Artenreiche Grün- und Streueflächen im Sömmerungsgebiet» |
 | 9  | Andere Elemente | | «Hochstammfeldobstbäume», «Nussbäume», «Einheimische standortgerechte Einzelbäume und Alleen» |
 
-: Kategorien der Direktzahlungskulturen mit Referenzen auf die landwirtschaftliche Begriffsverordnung (LBV), wo möglich. {#tbl-directpaymentcrops-categories}
+: Anzahl Direktzahlungskulturen (N) je Kulturkategorie (Kategorie) mit Referenzen auf die geltende Definition in der landwirtschaftlichen Begriffsverordnung (LBV), wo möglich. {#tbl-directpaymentcrops-categories}
 
 ## Nährstoffbilanz {#sec-nutrient-balance}
 
