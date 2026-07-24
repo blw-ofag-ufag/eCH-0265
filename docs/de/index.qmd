@@ -12,11 +12,19 @@ lang: de-CH
 
 # Hinweis {.unnumbered}
 
-Im vorliegenden Dokument wird bei der Bezeichnung von Personen eine geschlechtsneutrale Formulierung verwendet. Basis bildet der Leitfaden der Bundeskanzlei. Je nach Situation kommen Paarformen (Bürgerinnen und Bürger), geschlechtsabstrakte Formen (versicherte Person), geschlechtsneutrale Formen (Versicherte) oder Umschreibungen ohne Personenbezug zum Einsatz. Das generische Maskulin (Bürger) ist nicht zulässig. Vollformen werden in fortlaufenden Texten verwendet, also in Texten, die aus ausformulierten Sätzen bestehen. In verknappten Textpassagen, namentlich in Tabellen, können Kurzformen verwendet werden. Dabei wird die Kurzform mit Schrägstrich, aber ohne Auslassungsstrich verwendet (Referent/in). Genderstern und ähnliche Schreibweisen werden nicht verwendet.
+Im vorliegenden Dokument wird bei der Bezeichnung von Personen eine geschlechtsneutrale Formulierung verwendet.
+Basis bildet der Leitfaden der Bundeskanzlei.
+Je nach Situation kommen Paarformen (Bürgerinnen und Bürger), geschlechtsabstrakte Formen (versicherte Person), geschlechtsneutrale Formen (Versicherte) oder Umschreibungen ohne Personenbezug zum Einsatz.
+Das generische Maskulin (Bürger) ist nicht zulässig.
+Vollformen werden in fortlaufenden Texten verwendet, also in Texten, die aus ausformulierten Sätzen bestehen.
+In verknappten Textpassagen, namentlich in Tabellen, können Kurzformen verwendet werden.
+Dabei wird die Kurzform mit Schrägstrich, aber ohne Auslassungsstrich verwendet (Referent/in).
+Genderstern und ähnliche Schreibweisen werden nicht verwendet.
 
 # Einleitung
 
-Die Definitionen für landwirtschaftliche Kulturen wurden historisch unabhängig voneinander für spezifische gesetzliche Aufträge und Systeme entwickelt. Die fehlende systemübergreifende Harmonisierung (mit einer *Single Source of Truth*) erschwert jedoch die Informationsverarbeitung über jeweilige Systemgrenzen hinaus.
+Die Definitionen für landwirtschaftliche Kulturen wurden historisch unabhängig voneinander für spezifische gesetzliche Aufträge und Systeme entwickelt.
+Die fehlende systemübergreifende Harmonisierung (mit einer *Single Source of Truth*) erschwert jedoch die Informationsverarbeitung über jeweilige Systemgrenzen hinaus.
 
 ## Was ist eine Kultur?
 
@@ -78,7 +86,8 @@ Zur Standardisierung der Suisse-Bilanz-Berechnung stellt das Bundesamt für Land
 Über diese Schnittstelle lässt sich unter anderem ein Katalog der landwirtschaftlichen Kulturen abrufen.[^3]
 Der NBBS ordnet die Kulturen in einer strikten, dreistufigen Hierarchie (@tbl-nbbs-hierarchy).
 
-[^3]: Die «agronomischen Kulturkategorien» für den Nährstoffbilanzrechner sind beispielsweise über den Endpoint <https://rf-vp.agate.ch/digiflux/naebi/2-0/naebiservice-backend/agronomiccropcategories> abrufbar. Mittels der Slugs `cultivationcategories` und `cultivationsubcategories` lassen sich zudem die jeweiligen Übergruppen abfragen.
+[^3]: Die «agronomischen Kulturkategorien» für den Nährstoffbilanzrechner sind beispielsweise über den Endpoint <https://rf-vp.agate.ch/digiflux/naebi/2-0/naebiservice-backend/agronomiccropcategories> abrufbar.
+  Mittels der Slugs `cultivationcategories` und `cultivationsubcategories` lassen sich zudem die jeweiligen Übergruppen abfragen.
 
 | N | Name     | Beschreibung                                         | Beispiele                      |
 |:--|:---------|:-----------------------------------------------------|:-------------------------------|
@@ -93,13 +102,13 @@ Dazu gehören beispielsweise der Ertrag, die Zulässigkeit für bestimmte Direkt
 
 ## Pflanzenschutz {#sec-plant-protection}
 
-Das [Pflanzenschutzmittelverzeichnis (PSMV)](https://www.psm.admin.ch/) ist das offizielle Register des Bundes, das alle in der Schweiz zugelassenen Pflanzenschutzmittel auflistet. 
+Das [Pflanzenschutzmittelverzeichnis (PSMV)](https://www.psm.admin.ch/) ist das offizielle Register des Bundes, das alle in der Schweiz zugelassenen Pflanzenschutzmittel auflistet.
 Es regelt, für welche Kulturen und unter welchen Bedingungen diese rechtmässig eingesetzt werden dürfen.
 Es wird vom Bundesamt für Lebensmittelsicherheit und Veterinärwesen (BLV) gepflegt und umfasst 321 definierte Kulturen.
 Die Bezeichnungen dieser Kulturen liegen mehrsprachig auf Deutsch, Französisch und Italienisch sowie teilweise auf Englisch vor.
 
 Anders als die streng monohierarchische Klassifikationen (wie in AGIS und im NBBS) sind die Kulturen im PSMV als Objekte in einer flexiblen Polyhierarchie modelliert.
-Dies bedeutet, dass ein Element mehr als ein Überelement aufweisen kann, welches wiederum eigenen Überelementen untergeordnet ist. 
+Dies bedeutet, dass ein Element mehr als ein Überelement aufweisen kann, welches wiederum eigenen Überelementen untergeordnet ist.
 
 Diese Struktur wurde ursprünglich von der [*European Plant Protection Organization* (EPPO)](https://eppo.int/) abgeleitet, anschliessend aber für die spezifischen Schweizer Anforderungen weiter modifiziert.
 Die Organisation in Übergruppen erlaubt eine äusserst flexible Modellierung:
@@ -178,7 +187,8 @@ Diese Personen verpflichten sich jedoch, ihre geistigen Eigentumsrechte oder and
 
 Die von den Fachgruppen erarbeiteten Standards dürfen unter Nennung des jeweiligen Autors von eCH kostenlos und in uneingeschränktem Umfang genutzt, verbreitet und weiterentwickelt werden.
 
-eCH-Standards sind vollständig dokumentiert und frei von lizenz- und/oder patentrechtlichen Einschränkungen. Die dazugehörige Dokumentation kann kostenlos angefordert werden.
+eCH-Standards sind vollständig dokumentiert und frei von lizenz- und/oder patentrechtlichen Einschränkungen.
+Die dazugehörige Dokumentation kann kostenlos angefordert werden.
 Diese Bestimmungen gelten jedoch nur für die von eCH erarbeiteten Standards, nicht aber für Standards oder Produkte Dritter, die auf eCH-Standards verweisen.
 Die Standards enthalten die entsprechenden Hinweise auf Rechte Dritter.
 
@@ -210,7 +220,7 @@ Die Standards enthalten die entsprechenden Hinweise auf Rechte Dritter.
 
 # Anhang D - Änderungen gegenüber der Vorversion {.appendix}
 
-Das vorliegende Dokument ist ein Hilfsmittel zur harmonisierten, systemübergreifenden Nutzung von landwirtschaftlichen Kulturdaten in der Schweiz. 
+Das vorliegende Dokument ist ein Hilfsmittel zur harmonisierten, systemübergreifenden Nutzung von landwirtschaftlichen Kulturdaten in der Schweiz.
 Gegenüber der Version 1.1.0 (eCH-0265 Datenstandard Agrardaten – Flächen und Kulturen) wurde das Dokument von einem unverbindlichen Standard zu einem Hilfsmittel umgewandelt.
 Gleichzeitig wurde der inhaltliche Fokus geschärft:
 Klassen rund um Geometrien/Flächen[^1], Sorten sowie Direktzahlungsprogrammen sind nicht mehr Teil dieses Dokuments[^2].
