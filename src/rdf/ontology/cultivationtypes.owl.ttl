@@ -151,7 +151,7 @@ cultivationtype:16 a :CultivationType ;
 cultivationtype:17 a :CultivationType ;
     schema:name "Hackfrüchte"@de,
         "Root crops"@en ;
-    rdfs:subClassOf cultivationtype:1 .
+    rdfs:subClassOf cultivationtype:1022 .
 
 cultivationtype:18 a :CultivationType ;
     schema:name "Mischkultur"@de ;
@@ -401,7 +401,7 @@ cultivationtype:68 a :CultivationType ;
     schema:alternateName "Alfalfa"@de,
         "Schneckenklee"@de,
         "Ewiger Klee"@de ;
-    rdfs:subClassOf cultivationtype:1 .
+    rdfs:subClassOf cultivationtype:1022 .
 
 cultivationtype:69 a :CultivationType ;
     schema:name "Mini-Kiwi"@de,
@@ -447,7 +447,7 @@ cultivationtype:79 a :CultivationType ;
         "Graminées pour la production de semences"@fr,
         "Graminacee per la produzione di sementi"@it ;
     schema:alternateName "Grassamen-Produktion"@de ;
-    rdfs:subClassOf cultivationtype:1 .
+    rdfs:subClassOf cultivationtype:1022 .
 
 cultivationtype:80 a :CultivationType ;
     schema:name "Schwarze Maulbeere"@de,
@@ -879,7 +879,7 @@ cultivationtype:167 a :CultivationType ;
         "Abete del Colorado"@it ;
     rdfs:subClassOf cultivationtype:118,
         cultivationtype:72 .
-
+  
 cultivationtype:169 a :CultivationType ;
     schema:name "Chinaschilf"@de,
         "Miscanthus"@fr,
@@ -1980,11 +1980,11 @@ cultivationtype:493 a :CultivationType ;
     schema:name "Sonnenblumen"@de,
         "Tournesol"@fr,
         "Girasole"@it ;
-    rdfs:subClassOf cultivationtype:1 .
+    rdfs:subClassOf cultivationtype:493 .
 
 cultivationtype:494 a :CultivationType ;
     schema:name "Raps"@de ;
-    rdfs:subClassOf cultivationtype:1 .
+    rdfs:subClassOf cultivationtype:1022 .
 
 cultivationtype:495 a :CultivationType ;
     schema:name "Raps als nachwachsender Rohstoff"@de ;
@@ -1997,7 +1997,7 @@ cultivationtype:496 a :CultivationType ;
 cultivationtype:497 a :CultivationType ;
     schema:name "Mais"@de ;
     schema:description "Der Anbau von Mais (Zea mays) für alle möglichen Zwecke."@de ;
-    rdfs:subClassOf cultivationtype:14 ;
+    rdfs:subClassOf cultivationtype:14, cultivationtype:1022 ;
     :botanicalPlant taxon:ZEAMX .
 
 cultivationtype:498 a :CultivationType ;
@@ -2147,7 +2147,7 @@ cultivationtype:520 a :CultivationType ;
         "Riz en culture sèche"@fr,
         "Riso seminato su terreno asciutto"@it ;
     schema:description "Der Anbau von Reis im Trockenverfahren. Im Gegensatz zum Nassreisbau werden die Felder bei dieser Methode nicht geflutet."@de ;
-    rdfs:subClassOf cultivationtype:509 ;
+    rdfs:subClassOf cultivationtype:509, cultivationtype:1022 ;
     :botanicalPlant taxon:ORYSA .
 
 cultivationtype:521 a :CultivationType ;
@@ -3425,8 +3425,7 @@ cultivationtype:1020 a :CultivationType ;
 
 cultivationtype:1021 a :CultivationType ;
     schema:name "Winterkorn, Dinkel"@de ;
-    rdfs:subClassOf cultivationtype:19,
-        cultivationtype:516 .
+    rdfs:subClassOf cultivationtype:1007 .
 
 cultivationtype:1022 a :CultivationType ;
     schema:name "Feldbau"@de,
@@ -3479,7 +3478,7 @@ cultivationtype:1033 a :CultivationType ;
     schema:name "Getreide ohne Mais"@de,
         "Céréales sans Maïs"@fr,
         "Cereali senza Mais"@it ;
-    rdfs:subClassOf cultivationtype:14 ;
+    rdfs:subClassOf cultivationtype:1022 ;
     owl:disjointWith cultivationtype:497 .
 
 cultivationtype:1034 a :CultivationType ;
