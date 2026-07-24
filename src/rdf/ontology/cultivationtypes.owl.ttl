@@ -3728,9 +3728,9 @@ cultivationtype:1082 a :CultivationType ;
     rdfs:subClassOf cultivationtype:113 .
 
 cultivationtype:1083 a :CultivationType ;
-    schema:name "Zwetschgenanlage (ohne Ertragsspezifizierung)"@de,
-        "Verger de pruniers (sans spécification de rendement)"@fr,
-        "Prugneto/Susineto (senza specifica di resa)"@it ;
+    schema:name "Zwetschgenanlage (durchschnittlicher Ertrag)"@de,
+        "Verger de pruniers (rendement moyen)"@fr,
+        "Prugneto/Susineto (resa media)"@it ;
     rdfs:subClassOf cultivationtype:113 .
 
 cultivationtype:1085 a :CultivationType ;
