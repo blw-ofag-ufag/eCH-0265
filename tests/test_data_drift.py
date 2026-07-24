@@ -1,8 +1,6 @@
 import io
-import os
 import csv
 import gzip
-import warnings
 from pathlib import Path
 import pytest
 import requests
@@ -10,7 +8,8 @@ import requests
 NAEBI_API_URL = "https://rf-vp.agate.ch/digiflux/naebi/2-0/naebiservice-backend/agronomiccropcategories"
 PSMV_CSV_URL = "https://raw.githubusercontent.com/BLV-OSAV-USAV/PSMV-RDF/refs/heads/main/data/raw/Code.csv.gz"
 LOG_DIR = Path("build/test")
-LOG_FILENAME = "psmv_drift.log"
+PSMV_LOG_FILENAME = "psmv_drift.log"
+NAEBI_LOG_FILENAME = "naebi_drift.log"
 
 def write_drift_log(filename: str, lines: list):
     """Writes a formatted log file detailing the data drift."""
@@ -104,38 +103,34 @@ def test_naebi_drift(final_graph):
         if diffs:
             discrepancies[key] = diffs
 
-    has_drift = new_in_api or missing_in_api or discrepancies
+    has_drift = bool(new_in_api or missing_in_api or discrepancies)
 
-    if not has_drift:
-        return
+    if has_drift:
+        log_lines = ["NAEBI DATA DRIFT REPORT", "=" * 23, ""]
 
-    log_lines = ["NAEBI DATA DRIFT REPORT", "=" * 23, ""]
+        if new_in_api:
+            log_lines.append(f"New Crops on API ({len(new_in_api)}):")
+            for key in sorted(new_in_api):
+                log_lines.append(f"  - {key}: {api_data[key]['name']}")
+            log_lines.append("")
 
-    if new_in_api:
-        log_lines.append(f"New Crops on API ({len(new_in_api)}):")
-        for key in sorted(new_in_api):
-            log_lines.append(f"  - {key}: {api_data[key]['name']}")
-        log_lines.append("")
+        if missing_in_api:
+            log_lines.append(f"Crops Removed From API ({len(missing_in_api)}):")
+            for key in sorted(missing_in_api):
+                log_lines.append(f"  - {key}: {local_data[key]['name']}")
+            log_lines.append("")
 
-    if missing_in_api:
-        log_lines.append(f"Crops Removed From API ({len(missing_in_api)}):")
-        for key in sorted(missing_in_api):
-            log_lines.append(f"  - {key}: {local_data[key]['name']}")
-        log_lines.append("")
+        if discrepancies:
+            log_lines.append(f"Modified Data ({len(discrepancies)}):")
+            for key, diffs in discrepancies.items():
+                log_lines.append(f"  {key} ({local_data[key]['name']}):")
+                for diff in diffs:
+                    log_lines.append(f"    - {diff}")
+            log_lines.append("")
 
-    if discrepancies:
-        log_lines.append(f"Modified Data ({len(discrepancies)}):")
-        for key, diffs in discrepancies.items():
-            log_lines.append(f"  {key} ({local_data[key]['name']}):")
-            for diff in diffs:
-                log_lines.append(f"    - {diff}")
-        log_lines.append("")
+        write_drift_log(NAEBI_LOG_FILENAME, log_lines)
 
-    write_drift_log("naebi_drift.log", log_lines)
-    warnings.warn(
-        "NAEBI data drift detected. See build/test/naebi_drift.log for details.",
-        UserWarning
-    )
+    assert not has_drift, f"NAEBI data drift detected. See {LOG_DIR}/{NAEBI_LOG_FILENAME} for details."
 
 def test_psmv_drift(final_graph):
     """
@@ -203,39 +198,35 @@ def test_psmv_drift(final_graph):
     missing_names = csv_names - rdf_names
     extra_names = rdf_names - csv_names
     
-    has_drift = missing_hierarchy or extra_hierarchy or missing_names or extra_names
+    has_drift = bool(missing_hierarchy or extra_hierarchy or missing_names or extra_names)
 
-    if not has_drift:
-        return
+    if has_drift:
+        log_lines = ["PSMV DATA DRIFT REPORT", "=" * 22, ""]
 
-    log_lines = ["PSMV DATA DRIFT REPORT", "=" * 22, ""]
+        if missing_hierarchy:
+            log_lines.append(f"Missing Hierarchy in RDF ({len(missing_hierarchy)}):")
+            for m_id, m_parent in sorted(list(missing_hierarchy)):
+                log_lines.append(f"  - ID: {m_id} | Parent ID: {m_parent}")
+            log_lines.append("")
 
-    if missing_hierarchy:
-        log_lines.append(f"Missing Hierarchy in RDF ({len(missing_hierarchy)}):")
-        for m_id, m_parent in sorted(list(missing_hierarchy)):
-            log_lines.append(f"  - ID: {m_id} | Parent ID: {m_parent}")
-        log_lines.append("")
+        if extra_hierarchy:
+            log_lines.append(f"Extra Hierarchy in RDF ({len(extra_hierarchy)}):")
+            for e_id, e_parent in sorted(list(extra_hierarchy)):
+                log_lines.append(f"  - ID: {e_id} | Parent ID: {e_parent}")
+            log_lines.append("")
 
-    if extra_hierarchy:
-        log_lines.append(f"Extra Hierarchy in RDF ({len(extra_hierarchy)}):")
-        for e_id, e_parent in sorted(list(extra_hierarchy)):
-            log_lines.append(f"  - ID: {e_id} | Parent ID: {e_parent}")
-        log_lines.append("")
+        if missing_names:
+            log_lines.append(f"Missing Names in RDF ({len(missing_names)}):")
+            for m_id, m_lang, m_val in sorted(list(missing_names)):
+                log_lines.append(f"  - ID: {m_id} | Lang: {m_lang} | Value: {m_val}")
+            log_lines.append("")
 
-    if missing_names:
-        log_lines.append(f"Missing Names in RDF ({len(missing_names)}):")
-        for m_id, m_lang, m_val in sorted(list(missing_names)):
-            log_lines.append(f"  - ID: {m_id} | Lang: {m_lang} | Value: {m_val}")
-        log_lines.append("")
+        if extra_names:
+            log_lines.append(f"Extra Names in RDF ({len(extra_names)}):")
+            for e_id, e_lang, e_val in sorted(list(extra_names)):
+                log_lines.append(f"  - ID: {e_id} | Lang: {e_lang} | Value: {e_val}")
+            log_lines.append("")
 
-    if extra_names:
-        log_lines.append(f"Extra Names in RDF ({len(extra_names)}):")
-        for e_id, e_lang, e_val in sorted(list(extra_names)):
-            log_lines.append(f"  - ID: {e_id} | Lang: {e_lang} | Value: {e_val}")
-        log_lines.append("")
+        write_drift_log(PSMV_LOG_FILENAME, log_lines)
 
-    write_drift_log(LOG_FILENAME, log_lines)
-    warnings.warn(
-        f"PSMV data drift detected. See {LOG_DIR}/{LOG_FILENAME} for details.", 
-        UserWarning
-    )
+    assert not has_drift, f"PSMV data drift detected. See {LOG_DIR}/{PSMV_LOG_FILENAME} for details."
