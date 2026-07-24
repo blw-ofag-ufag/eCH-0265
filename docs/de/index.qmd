@@ -118,10 +118,14 @@ Die präzise Abbildung dieser Hierarchie ist fachlich von grosser Bedeutung, da 
 Wenn eine Pflanzenschutzmittel-Anwendung für eine übergeordnete Kulturgruppe bewilligt ist, gilt diese Bewilligung automatisch auch für sämtliche untergeordneten Kulturen.
 
 Ein Beispiel hierfür:
-Das Herbizid [«Ariane C»](https://www.psm.admin.ch/de/produkte/7430) ist gegen ein- und mehrjährige Dicotyledonen in Getreiden einsetzbar.
-Damit ist es bei allen Kulturen anwendbar, welche vom PSMV als Getreide klassifiziert werden.
-Mais gehört in diesem System aber explizit nicht zu den Getreiden – in der Systematik des NBBS aber schon.
+Das Herbizid [«Ariane C»](https://www.psm.admin.ch/de/produkte/7430) darf gegen «ein- und mehrjährige Dicotyledonen» in «Getreiden» eingesetzt werden.
+Damit darf es auf alle Kulturen angewendet, welche vom PSMV als Getreide klassifiziert sind.
+Mais, Buchweizen und Quinoa gehört in diesem System aber explizit nicht zu den Getreiden – in der Systematik des NBBS aber schon.[^4]
 Die korrekte Nachbildung dieser Polyhierarchie ist in den Daten folglich essenziell, um Zulassungen maschinell korrekt zu verarbeiten.
+
+[^4]: Botanisch gesehen ist Mais ein Getreide (Süssgras), unterscheidet sich in der ackerbaulichen Praxis als Hackfrucht jedoch merklich von klassischen Getreidearten.
+  Buchweizen und Quinoa sind botanisch nicht mit Getreide verwandt.
+  Ihr Erntegut und dessen Verwendung ähneln jedoch stark denen von echtem Getreide, daher werden sie manchmal als Pseudogetreide bezeichnet.
 
 # Datenmodell
 
