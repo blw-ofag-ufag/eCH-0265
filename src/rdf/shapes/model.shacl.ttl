@@ -179,8 +179,8 @@ shape:DirectPaymentCrop a sh:NodeShape ;
         [
             sh:order 1 ;
             a cube:KeyDimension ;
-            sh:name "Identifikator"@de ;
-            sh:description "Der LNF-Code, auch Kulturcode genannt, ist der allgemein gebräuchliche Identifikator für Direktzahlungskulturen in der Schweiz."@de ;
+            sh:name "LNF-Code"@de ;
+            sh:description "Auch Kulturcode genannt, ist der allgemein gebräuchliche Identifikator für Direktzahlungskulturen in der Schweiz."@de ;
             sh:maxCount 1 ;
             sh:minCount 1 ;
             sh:path schema:identifier ;
@@ -189,7 +189,8 @@ shape:DirectPaymentCrop a sh:NodeShape ;
         ],
         [
             sh:order 2 ;
-            sh:name "Bezeichnung"@de, "Name"@en ;
+            sh:name "Name"@de, "Name"@en ;
+            sh:description "Die offizielle Bezeichnung dieser Direktzahlungskultur, abgegelichen mit der Landwirtschaftlichen Begriffsverordnung (LBV)."@de ;
             sh:minCount 1 ;
             sh:path schema:name ;
             sh:nodeKind sh:Literal ;
