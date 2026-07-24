@@ -362,7 +362,7 @@ cultivationtype:59 a :CultivationType ;
     schema:name "Chinakohl (Freiland)"@de,
         "chou de Chine (pleine terre)"@fr,
         "Cavolo cinese (pieno campo)"@it ;
-    owl:intersectionOf (cultivationtype:58 cultivationtype:24) .
+    rdfs:subClassOf cultivationtype:58, cultivationtype:24 .
 
 cultivationtype:60 a :CultivationType ;
     schema:name "Sommerflor"@de,
@@ -3832,19 +3832,13 @@ cultivationtype:1099 a :CultivationType ;
     schema:name "Rucola, 1 Schnitt (geschützter Anbau)"@de,
         "Roquette (culture protégée)"@fr,
         "Rucola (coltura protetta)"@it ;
-    owl:intersectionOf (
-        cultivationtype:278 
-        cultivationtype:7
-    ) .
+    rdfs:subClassOf cultivationtype:278, cultivationtype:7 .
 
 cultivationtype:1100 a :CultivationType ;
     schema:name "Rucola, 2 Schnitte (geschützter Anbau)"@de,
         "Roquette, 2 coupes (culture protégée)"@fr,
         "Rucola, 2 tagli (coltura protetta)"@it ;
-    owl:intersectionOf ( 
-        cultivationtype:278 
-        cultivationtype:7 
-    ) .
+    rdfs:subClassOf cultivationtype:278, cultivationtype:7  .
 
 cultivationtype:1101 a :CultivationType ;
     schema:name "Nicht aufgeführte Ackerkulturen, Leguminosen"@de,
@@ -4358,15 +4352,14 @@ cultivationtype:1209 a :CultivationType ;
         "Radish 18 pcs/m2 (protected cultivation)"@en,
         "Radis blanc 18 pces/m2 (culture protégée)"@fr,
         "Ramolaccio 18 pz/m2 (coltura protetta)"@it ;
-    owl:intersectionOf ( cultivationtype:7
-        cultivationtype:264 ) .
+    rdfs:subClassOf cultivationtype:7, cultivationtype:264 .
 
 cultivationtype:1210 a :CultivationType ;
     schema:name "Radies 20 Bund/m2 (geschützter Anbau)"@de,
         "Radishes 20 bunches/m2 (protected cultivation)"@en,
         "Radis 20 bottes/m2 (culture protégée)"@fr,
         "Ravanelli 20 mazzi/m2 (coltura protetta)"@it ;
-    owl:intersectionOf ( cultivationtype:7 cultivationtype:243 ) .
+    rdfs:subClassOf cultivationtype:7, cultivationtype:243 .
 
 cultivationtype:1211 a :CultivationType ;
     schema:name "Rettich 8-9 Stk/m2"@de,
@@ -4878,7 +4871,7 @@ cultivationtype:1313 a :CultivationType ;
     schema:name "Chinakohl, Verarbeitung"@de,
         "Chou de Chine d'industrie"@fr,
         "Cavolo cinese da industria"@it ;
-    owl:intersectionOf (cultivationtype:58 cultivationtype:546) .
+    rdfs:subClassOf cultivationtype:58, cultivationtype:546 .
 # ==============================================================================
 # DISJOINTNESS OF POTATO TYPES
 # ==============================================================================
