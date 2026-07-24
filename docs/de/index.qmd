@@ -1,13 +1,20 @@
 ---
 title: eCH-0265 Landwirtschaftliche Kulturen
+author: eCH Fachgruppe AgriFood
 abstract: |
   Dieses Hilfsmittel beschreibt ein Datenmodell zu landwirtschaftlichen Kulturen der Schweiz in den Bereichen Direktzahlungen, Nährstoffbilanz und Pflanzenschutz.
   Es werden sowohl das Datenmodell, die effektiven Daten sowie Mapping-Tabellen bereitgestellt, um den Bezug zwischen den unterschiedlichen Bereichen herzustellen.
   Sämtliche Daten können als maschinenlesbare _Linked Data_ bezogen werden.
   Damit soll ein fachlich validierter Datenaustausch sowie die Mehrfachnutzung von Daten ermöglicht werden.
-date: today
-date-format: long
+date: last-modified
+date-format: DD. MMMM YYYY, HH:mm:ss [Uhr]
 lang: de-CH
+keywords:
+  - Landwirtschaft
+  - Informatik
+  - Behörden
+license: CC BY 4.0
+citation: true
 ---
 
 # Hinweis {.unnumbered}
