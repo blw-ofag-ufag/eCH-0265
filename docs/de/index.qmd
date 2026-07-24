@@ -40,7 +40,7 @@ In den folgenden Unterkapiteln werden die Kategorisierungssysteme landwirtschaft
 
 Im Rahmen des Direktzahlungssystems sind 159 Direktzahlungskulturen (Stand Juli 2026) definiert, welche im Rahmen der Strukturdatenerhebung von den Bewirtschaftenden in den kantonalen Agrarinformationssystemen (KAIS) eingetragen und an das agrarpolitische Informationssystem (AGIS) des Bundes übermittelt werden können.
 
-Direktzahlungskulturen können für keine bis mehrere Beiträge berechtigt sein (Flächenkatalog und Beitragsberechtigung), grundsätzlich müssen sie für die Berechtigung zu Direktzahlungen aber jährlich an AGIS übermittelt werden.
+Direktzahlungskulturen können für keine bis mehrere Beiträge berechtigt sein ([Flächenkatalog und Beitragsberechtigung](https://www.blw.admin.ch/dam/fr/sd-web/QYLa6wGfdK8G/2026%20Merkblatt%20Nr.%206.2%20Fl%C3%A4chenkatalog%20und%20Beitragsberechtigung.pdf)), grundsätzlich müssen sie für die Berechtigung zu Direktzahlungen aber jährlich an AGIS übermittelt werden.
 In AGIS stehen also alle aktuell gültigen und historisierten Direktzahlungskulturen und deren Beitragsberechtigungen (keine bis mehrere) für befugte Nutzende (Bund, Kantone) zur Verfügung.
 Momentan können diese Daten aber nicht in maschinenlesbarer Form vom AGIS-Webservice bezogen werden.
 
