@@ -3,8 +3,6 @@ project:
   type: website
   render:
     - de/index.qmd
-    - fr/index.qmd
-    - en/index.qmd
 
 website:
   repo-url: https://github.com/blw-ofag-ufag/eCH-0265
@@ -13,15 +11,6 @@ website:
   favicon: assets/favicon.svg
   navbar:
     right:
-      - text: Language
-        icon: globe
-        menu:
-          - text: English
-            href: /en/index.html
-          - text: Deutsch
-            href: /de/index.html
-          - text: Français
-            href: /fr/index.html
       - icon: github
         href: https://github.com/blw-ofag-ufag/eCH-0265
       - icon: envelope
@@ -33,11 +22,14 @@ format:
   html:
     toc: true
     number-sections: true
+    embed-resources: true
   gfm: 
-    toc: true
-    number-sections: true
+    toc: false
+    number-sections: false
+    wrap: none
   docx:
     toc: true
     reference-doc: https://s.zazuko.com/MHXTkQ
     link-citations: true
-  typst: default
+  typst:
+    number-sections: true
