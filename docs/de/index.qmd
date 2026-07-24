@@ -26,6 +26,10 @@ Genderstern und ähnliche Schreibweisen werden nicht verwendet.
 Die Definitionen für landwirtschaftliche Kulturen wurden historisch unabhängig voneinander für spezifische gesetzliche Aufträge und Systeme entwickelt.
 Die fehlende systemübergreifende Harmonisierung (mit einer *Single Source of Truth*) erschwert jedoch die Informationsverarbeitung über jeweilige Systemgrenzen hinaus.
 
+Das vorliegende Hilfsmittel formuliert keine Vorgaben, sondern unterstützt gezielt die reibungslose Datenintegration über verschiedene Fachbereiche und Organisationen hinweg.
+Zu diesem Zweck stehen fertige Kulturentabellen sowie die dazugehörigen Mapping-Tabellen zur Verfügung.
+Alle definierten Ressourcen sind als *Linked Data* modelliert und lassen sich vollständig automatisiert beziehen, was eine effiziente Überführung von Daten aus einem System in ein anderes ermöglicht.
+
 ## Was ist eine Kultur?
 
 Der Begriff der landwirtschaftlichen Kultur stützt sich in diesem Hilfsmittel massgeblich auf das Konzept `CultivationType` aus der Vorversion [@eCH-0265:1.0.0].
@@ -160,6 +164,8 @@ TBC.
 
 - Sämtliche hier beschriebenen Daten können auf LINDAS bezogen werden.
 - Knappe Anleitung zum Beziehen der Daten.
+
+## Bezug von Mapping-Tabellen {#sec-mapping-tables}
 
 # Sicherheitsaspekte
 
