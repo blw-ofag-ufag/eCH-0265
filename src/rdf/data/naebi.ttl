@@ -3189,7 +3189,7 @@ naebi:48 a :NutrientBalanceCrop  ;
     :P2O5 60.0 ;
     :cultivationCategory cultivationtype:465 ;
     :cultivationSubCategory cultivationtype:24 ;
-    :cultivationType cultivationtype:58 .
+    :cultivationType cultivationtype:59 .
 
 naebi:49 a :NutrientBalanceCrop  ;
     schema:identifier "CROP_CHISLF" ;
