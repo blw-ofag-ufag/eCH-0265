@@ -4,6 +4,7 @@
 
 # Local prefixes ---------------------------------------------------------------
 @prefix : <https://agriculture.ld.admin.ch/crops/> .
+@prefix agis: <https://agriculture.ld.admin.ch/crops/agis/1/> .
 @prefix shape: <https://agriculture.ld.admin.ch/crops/shape/> .
 @prefix cultivationtype: <https://agriculture.ld.admin.ch/crops/cultivationtype/> .
 @prefix intensity: <https://agriculture.ld.admin.ch/crops/intensity/> .
@@ -53,7 +54,7 @@ shape:CultivationType a sh:NodeShape ;
     rdfs:label "Cultivation type"@en ;
     rdfs:comment "This is the core class for the classification of 'cultivations', i.e. for crops. (Partial) translation of other crop types is possible via the hierarchy modelled with this class. For the general hierachy modelling, we use the [RDF schema (RDFS)](https://www.w3.org/TR/rdf-schema/) as well as the [Web Ontology Language (OWL)](https://www.w3.org/TR/owl-guide/)."@en ;
     sh:closed true ;
-    sh:targetClass :CultivationType, :DeprecatedCultivationType ;
+    sh:targetClass :CultivationType ;
     sh:ignoredProperties ( rdf:type owl:intersectionOf owl:unionOf owl:equivalentClass skos:exactMatch skos:broadMatch skos:narrowMatch ) ;
     # Require AT LEAST ONE of the following relationships:
     # - a parent class (rdfs:subClassOf),
@@ -149,12 +150,50 @@ shape:CultivationType a sh:NodeShape ;
 # Direct payment crop (AGIS)
 # ==============================================================================
 
+shape:DirectPaymentAreaCategory a sh:NodeShape ;
+    rdfs:label "Flächenkategorie Direktzahlung"@de,
+        "Direct payment area category"@en ;
+    rdfs:comment "Level 1 in the AGIS direct payment crops hierarchy."@en ;
+    sh:closed true ;
+    sh:ignoredProperties ( rdf:type skos:exactMatch skos:broadMatch skos:narrowMatch ) ;
+    sh:targetSubjectsOf skos:topConceptOf ;
+    sh:property
+        [
+            sh:order 1 ;
+            sh:path skos:topConceptOf ;
+            sh:hasValue agis:ConceptScheme ;
+            sh:minCount 1 ;
+            sh:maxCount 1 ;
+            sh:nodeKind sh:IRI ;
+        ],
+        [
+            sh:order 2 ;
+            sh:path skos:inScheme ;
+            sh:hasValue agis:ConceptScheme ;
+            sh:minCount 1 ;
+            sh:maxCount 1 ;
+            sh:nodeKind sh:IRI ;
+        ],
+        [
+            sh:order 3 ;
+            sh:name "Bezeichnung"@de,
+                "Name"@en ;
+            sh:minCount 1 ;
+            sh:path schema:name ;
+            sh:nodeKind sh:Literal ;
+            sh:datatype rdf:langString ;
+        ],
+        shape:cultivationType .
+
 shape:DirectPaymentCrop a sh:NodeShape ;
     rdfs:label "Direct payment crop"@en ;
     rdfs:comment "A classification scheme built for the Swiss direct payment system"@en ;
     sh:closed true ;
     sh:ignoredProperties ( rdf:type skos:exactMatch skos:broadMatch skos:narrowMatch ) ;
-    sh:targetClass :DirectPaymentCrop ;
+    
+    # Target all nodes that have a skos:broader property
+    sh:targetSubjectsOf skos:broader ; 
+    
     sh:sparql [
         a sh:SPARQLConstraint ;
         sh:message "schema:validFrom must be less than or equal to schema:validTo" ;
@@ -171,7 +210,24 @@ shape:DirectPaymentCrop a sh:NodeShape ;
     ] ;
     sh:property
         [
+            # Validate that the crop links up to a Level 1 Category
             sh:order 1 ;
+            sh:path skos:broader ;
+            sh:node shape:DirectPaymentAreaCategory ; 
+            sh:minCount 1 ;
+            sh:maxCount 1 ;
+            sh:nodeKind sh:IRI ;
+        ],
+        [
+            sh:order 2 ;
+            sh:path skos:inScheme ;
+            sh:hasValue agis:ConceptScheme ;
+            sh:minCount 1 ;
+            sh:maxCount 1 ;
+            sh:nodeKind sh:IRI ;
+        ],
+        [
+            sh:order 3 ;
             a cube:KeyDimension ;
             sh:name "Identifikator"@de ;
             sh:description "Der LNF-Code, auch Kulturcode genannt, ist der allgemein gebräuchliche Identifikator für Direktzahlungskulturen in der Schweiz."@de ;
@@ -182,7 +238,7 @@ shape:DirectPaymentCrop a sh:NodeShape ;
             sh:datatype xsd:string ;
         ],
         [
-            sh:order 2 ;
+            sh:order 4 ;
             sh:name "Bezeichnung"@de, "Name"@en ;
             sh:minCount 1 ;
             sh:path schema:name ;
@@ -190,7 +246,7 @@ shape:DirectPaymentCrop a sh:NodeShape ;
             sh:datatype rdf:langString ;
         ],
         [
-            sh:order 3 ;
+            sh:order 5 ;
             sh:name "Kulturgruppe"@de ;
             sh:maxCount 1 ;
             sh:nodeKind sh:IRI ;
@@ -199,7 +255,7 @@ shape:DirectPaymentCrop a sh:NodeShape ;
         ],
         shape:cultivationType,
         [
-            sh:order 5 ;
+            sh:order 7 ;
             sh:name "Gültig von"@de ;
             sh:description "Ab welchem Jahr wurde diese Direktzahlungskultur offiziell verwendet?"@de ;
             sh:maxCount 1 ;
@@ -209,15 +265,13 @@ shape:DirectPaymentCrop a sh:NodeShape ;
             sh:path schema:validFrom ;
         ],
         [
-            sh:order 6 ;
+            sh:order 8 ;
             sh:name "Gültig bis"@de ;
             sh:description "Bis in welchem Jahr wurde diese Direktzahlungskultur offiziell verwendet?"@de ;
             sh:maxCount 1 ;
             sh:path schema:validTo ;
-            sh:or (
-                [ sh:datatype xsd:integer ; sh:nodeKind sh:Literal ]
-                [ sh:hasValue cube:Undefined ]
-            ) ;
+            sh:nodeKind sh:Literal ;
+            sh:datatype xsd:integer ;
         ] .
 
 # ==============================================================================
