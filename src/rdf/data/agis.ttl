@@ -5,13 +5,11 @@
 # Project-specific namespaces/qnames
 @prefix :                <https://agriculture.ld.admin.ch/crops/> .
 @prefix agis:            <https://agriculture.ld.admin.ch/crops/agis/1/> .
-@prefix shape:           <https://agriculture.ld.admin.ch/crops/shape/> .
 @prefix cultivationtype: <https://agriculture.ld.admin.ch/crops/cultivationtype/> .
 
 # LINDAS-specific namespaces/qnames
 @prefix org:             <https://register.ld.admin.ch/opendataswiss/org/> .
 @prefix cube:            <https://cube.link/> .
-@prefix status:          <https://ld.admin.ch/vocabulary/CreativeWorkStatus/> .
 @prefix theme:           <https://register.ld.admin.ch/opendataswiss/category/> .
 
 # Globally used namespaces/qnames
@@ -21,14 +19,13 @@
 @prefix schema:          <http://schema.org/> .
 @prefix skos:            <http://www.w3.org/2004/02/skos/core#> .
 @prefix vcard:           <http://www.w3.org/2006/vcard/ns#> .
-@prefix void:            <http://rdfs.org/ns/void#> .
 @prefix xsd:             <http://www.w3.org/2001/XMLSchema#> .
 
 # ==============================================================================
 # DATASET METADATA
 # ==============================================================================
 
-agis: a skos:ConceptScheme ;
+agis:ConceptScheme a skos:ConceptScheme ;
     schema:name "Direktzahlungskulturen"@de,
         "Direct payment crops"@en ;
     schema:description "Direktzahlungkulturen, ihre Codes und deren zeitliche Gültigkeit."@de,
@@ -49,193 +46,44 @@ agis: a skos:ConceptScheme ;
         theme:agriculture .
 
 # ==============================================================================
-# OBSERVATION SET
+# Flächenkategorie Direktzahlung
 # ==============================================================================
 
-agis:ObservationSet a cube:ObservationSet ;
-    cube:observation
-        agis:501,
-        agis:502,
-        agis:504,
-        agis:505,
-        agis:506,
-        agis:507,
-        agis:508,
-        agis:509,
-        agis:510,
-        agis:511,
-        agis:512,
-        agis:513,
-        agis:514,
-        agis:515,
-        agis:516,
-        agis:517,
-        agis:519,
-        agis:520,
-        agis:521,
-        agis:522,
-        agis:523,
-        agis:524,
-        agis:525,
-        agis:526,
-        agis:527,
-        agis:528,
-        agis:529,
-        agis:531,
-        agis:532,
-        agis:533,
-        agis:534,
-        agis:535,
-        agis:536,
-        agis:537,
-        agis:538,
-        agis:539,
-        agis:540,
-        agis:541,
-        agis:542,
-        agis:543,
-        agis:544,
-        agis:545,
-        agis:546,
-        agis:547,
-        agis:548,
-        agis:549,
-        agis:551,
-        agis:552,
-        agis:553,
-        agis:554,
-        agis:555,
-        agis:556,
-        agis:557,
-        agis:558,
-        agis:559,
-        agis:561,
-        agis:562,
-        agis:563,
-        agis:564,
-        agis:565,
-        agis:566,
-        agis:567,
-        agis:568,
-        agis:569,
-        agis:570,
-        agis:571,
-        agis:572,
-        agis:573,
-        agis:574,
-        agis:575,
-        agis:576,
-        agis:577,
-        agis:578,
-        agis:579,
-        agis:580,
-        agis:581,
-        agis:590,
-        agis:591,
-        agis:592,
-        agis:594,
-        agis:595,
-        agis:597,
-        agis:598,
-        agis:601,
-        agis:602,
-        agis:611,
-        agis:612,
-        agis:613,
-        agis:616,
-        agis:617,
-        agis:618,
-        agis:619,
-        agis:621,
-        agis:622,
-        agis:623,
-        agis:625,
-        agis:631,
-        agis:632,
-        agis:633,
-        agis:634,
-        agis:635,
-        agis:693,
-        agis:694,
-        agis:695,
-        agis:697,
-        agis:698,
-        agis:701,
-        agis:702,
-        agis:703,
-        agis:704,
-        agis:705,
-        agis:706,
-        agis:707,
-        agis:708,
-        agis:709,
-        agis:710,
-        agis:711,
-        agis:712,
-        agis:713,
-        agis:714,
-        agis:715,
-        agis:716,
-        agis:717,
-        agis:718,
-        agis:719,
-        agis:720,
-        agis:721,
-        agis:722,
-        agis:723,
-        agis:724,
-        agis:725,
-        agis:731,
-        agis:735,
-        agis:797,
-        agis:798,
-        agis:801,
-        agis:802,
-        agis:803,
-        agis:804,
-        agis:806,
-        agis:807,
-        agis:808,
-        agis:810,
-        agis:811,
-        agis:812,
-        agis:813,
-        agis:814,
-        agis:847,
-        agis:848,
-        agis:849,
-        agis:851,
-        agis:852,
-        agis:857,
-        agis:858,
-        agis:895,
-        agis:897,
-        agis:898,
-        agis:901,
-        agis:902,
-        agis:903,
-        agis:904,
-        agis:905,
-        agis:906,
-        agis:907,
-        agis:908,
-        agis:909,
-        agis:911,
-        agis:921,
-        agis:922,
-        agis:923,
-        agis:924,
-        agis:925,
-        agis:926,
-        agis:927,
-        agis:928,
-        agis:929,
-        agis:930,
-        agis:931,
-        agis:933,
-        agis:935,
-        agis:936,
-        agis:998 .
+agis:1 a skos:Concept ;
+    schema:name "Ackerfläche"@de ;
+    skos:topConceptOf agis:ConceptScheme ;
+    skos:inScheme agis:ConceptScheme ;
+    :cultivationType cultivationtype:1 .
+
+agis:7 a skos:Concept ;
+    schema:name "Geschützter Anbau"@de ;
+    skos:topConceptOf agis:ConceptScheme ;
+    skos:inScheme agis:ConceptScheme ;
+    :cultivationType cultivationtype:7 .
+
+agis:12 a skos:Concept ;
+    schema:name "Flächen ausserhalb der landwirtschaftlichen Nutzfläche"@de ;
+    skos:topConceptOf agis:ConceptScheme ;
+    skos:inScheme agis:ConceptScheme ;
+    :cultivationType cultivationtype:12 .
+
+agis:13 a skos:Concept ;
+    schema:name "Sömmerungsfläche"@de ;
+    skos:topConceptOf agis:ConceptScheme ;
+    skos:inScheme agis:ConceptScheme ;
+    :cultivationType cultivationtype:13 .
+
+agis:20 a skos:Concept ;
+    schema:name "Einzelelemente"@de ;
+    skos:topConceptOf agis:ConceptScheme ;
+    skos:inScheme agis:ConceptScheme ;
+    :cultivationType cultivationtype:20 .
+
+agis:21 a skos:Concept ;
+    schema:name "Dauergrünfläche"@de ;
+    skos:topConceptOf agis:ConceptScheme ;
+    skos:inScheme agis:ConceptScheme ;
+    :cultivationType cultivationtype:21 .
 
 # ==============================================================================
 # OBSERVATIONS
