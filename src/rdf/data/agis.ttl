@@ -19,6 +19,7 @@
 @prefix dcterms:         <http://purl.org/dc/terms/> .
 @prefix frequency:       <https://publications.europa.eu/resource/authority/frequency/> .
 @prefix schema:          <http://schema.org/> .
+@prefix skos:            <http://www.w3.org/2004/02/skos/core#> .
 @prefix vcard:           <http://www.w3.org/2006/vcard/ns#> .
 @prefix void:            <http://rdfs.org/ns/void#> .
 @prefix xsd:             <http://www.w3.org/2001/XMLSchema#> .
@@ -27,35 +28,25 @@
 # DATASET METADATA
 # ==============================================================================
 
-agis: a void:Dataset,
-        schema:Dataset,
-        dcat:Dataset,
-        cube:Cube ;
-    dcterms:accrualPeriodicity frequency:ANNUAL ;
-    dcterms:creator org:bundesamt-fur-landwirtschaft-blw ;
-    schema:contributor org:bundesamt-fur-landwirtschaft-blw ;
-    schema:creativeWorkStatus status:Draft ;
-    schema:creator org:bundesamt-fur-landwirtschaft-blw ;
-    schema:dateCreated "2026-03-02"^^xsd:date ;
-    schema:datePublished "2026-03-02"^^xsd:date ;
-    schema:description "Direktzahlungkulturen, ihre Codes und deren zeitliche Gültigkeit."@de,
-        "Direct payment crops, their codes and their temporal validity."@en ;
+agis: a skos:ConceptScheme ;
     schema:name "Direktzahlungskulturen"@de,
         "Direct payment crops"@en ;
+    schema:description "Direktzahlungkulturen, ihre Codes und deren zeitliche Gültigkeit."@de,
+        "Direct payment crops, their codes and their temporal validity."@en ;
+    schema:creator org:bundesamt-fur-landwirtschaft-blw ;
     schema:publisher org:bundesamt-fur-landwirtschaft-blw ;
+    schema:dateCreated "1999-01-01"^^xsd:date ;
+    schema:dateModified "2026-27-07"^^xsd:date ;
+    dcterms:accrualPeriodicity frequency:ANNUAL ;
     schema:version "1.7" ;
-    schema:workExample <https://ld.admin.ch/application/visualize> ;
     dcat:contactPoint
         [
             a vcard:Organization ;
-            vcard:fn "Bundesamt für Landwirtschaft"^^xsd:string ;
-            vcard:hasEmail "info@blw.admin.ch"^^xsd:string
+            vcard:fn "Bundesamt für Landwirtschaft"@de ;
+            vcard:hasEmail "info@blw.admin.ch"
         ] ;
     dcat:theme theme:administration,
-        theme:agriculture ;
-    cube:observationConstraint shape:DirectPaymentCrop ;
-    cube:observationSet agis:ObservationSet .
-
+        theme:agriculture .
 
 # ==============================================================================
 # OBSERVATION SET
