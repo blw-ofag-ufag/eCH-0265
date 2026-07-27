@@ -112,7 +112,10 @@ shape:CultivationType a sh:NodeShape ;
         sh:order 5 ;
         sh:name "Parent cultivation type"@en ;
         sh:path rdfs:subClassOf ;
-        sh:nodeKind sh:IRI ;
+        sh:or (
+            [ sh:class :CultivationType ]
+            [ sh:hasValue :Cultivation ]
+        ) ;
     ],
     [
         sh:order 6 ;
