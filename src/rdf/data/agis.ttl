@@ -9,7 +9,6 @@
 
 # LINDAS-specific namespaces/qnames
 @prefix org:             <https://register.ld.admin.ch/opendataswiss/org/> .
-@prefix cube:            <https://cube.link/> .
 @prefix theme:           <https://register.ld.admin.ch/opendataswiss/category/> .
 
 # Globally used namespaces/qnames
@@ -111,7 +110,6 @@ agis:501 a skos:Concept, :DirectPaymentCrop ;
         "Orge de printemps"@fr,
         "Orzo primaverile"@it ;
     schema:validFrom 1999 ;
-    schema:validTo cube:Undefined ;
     skos:inScheme agis:ConceptScheme ;
     skos:broader agis:1 ;
     :cultivationType cultivationtype:501 .
@@ -122,7 +120,6 @@ agis:502 a skos:Concept, :DirectPaymentCrop ;
         "Orge d'automne"@fr,
         "Orzo autunnale"@it ;
     schema:validFrom 1999 ;
-    schema:validTo cube:Undefined ;
     skos:inScheme agis:ConceptScheme ;
     skos:broader agis:1 ;
     :cultivationType cultivationtype:502 .
@@ -133,7 +130,6 @@ agis:504 a skos:Concept, :DirectPaymentCrop ;
         "Avoine"@fr,
         "Avena"@it ;
     schema:validFrom 1999 ;
-    schema:validTo cube:Undefined ;
     skos:inScheme agis:ConceptScheme ;
     skos:broader agis:1 ;
     :cultivationType cultivationtype:504 .
@@ -144,7 +140,6 @@ agis:505 a skos:Concept, :DirectPaymentCrop ;
         "Triticale"@fr,
         "Triticale"@it ;
     schema:validFrom 1999 ;
-    schema:validTo cube:Undefined ;
     skos:inScheme agis:ConceptScheme ;
     skos:broader agis:1 ;
     :cultivationType cultivationtype:505 .
@@ -155,7 +150,6 @@ agis:506 a skos:Concept, :DirectPaymentCrop ;
         "Méteil de céréales fourragères"@fr,
         "Miscela di cereali da foraggio"@it ;
     schema:validFrom 1999 ;
-    schema:validTo cube:Undefined ;
     skos:inScheme agis:ConceptScheme ;
     skos:broader agis:1 ;
     :cultivationType cultivationtype:506 .
@@ -166,7 +160,6 @@ agis:507 a skos:Concept, :DirectPaymentCrop ;
         "Blé fourrager selon la liste swiss granum"@fr,
         "Frumento da foraggio giusta la lista delle varietà di swiss granum"@it ;
     schema:validFrom 2004 ;
-    schema:validTo cube:Undefined ;
     skos:inScheme agis:ConceptScheme ;
     skos:broader agis:1 ;
     :cultivationType cultivationtype:507 .
@@ -177,7 +170,6 @@ agis:508 a skos:Concept, :DirectPaymentCrop ;
         "Maïs grain"@fr,
         "Mais da granella"@it ;
     schema:validFrom 1999 ;
-    schema:validTo cube:Undefined ;
     skos:inScheme agis:ConceptScheme ;
     skos:broader agis:1 ;
     :cultivationType cultivationtype:508 .
@@ -199,7 +191,6 @@ agis:510 a skos:Concept, :DirectPaymentCrop ;
         "Blé dur"@fr,
         "Grano duro"@it ;
     schema:validFrom 2023 ;
-    schema:validTo cube:Undefined ;
     skos:inScheme agis:ConceptScheme ;
     skos:broader agis:1 ;
     :cultivationType cultivationtype:510 .
@@ -210,7 +201,6 @@ agis:511 a skos:Concept, :DirectPaymentCrop ;
         "Amidonnier, engrain"@fr,
         "Farro, piccola spelta"@it ;
     schema:validFrom 1999 ;
-    schema:validTo cube:Undefined ;
     skos:inScheme agis:ConceptScheme ;
     skos:broader agis:1 ;
     :cultivationType cultivationtype:511 .
@@ -221,7 +211,6 @@ agis:512 a skos:Concept, :DirectPaymentCrop ;
         "Blé de printemps (sans le blé fourrager de la liste swiss granum)"@fr,
         "Frumento primaverile (escl. il frumento da foraggio di swiss granum)"@it ;
     schema:validFrom 1999 ;
-    schema:validTo cube:Undefined ;
     skos:inScheme agis:ConceptScheme ;
     skos:broader agis:1 ;
     :cultivationType cultivationtype:512 .
@@ -232,7 +221,6 @@ agis:513 a skos:Concept, :DirectPaymentCrop ;
         "Blé d'automne (sans le blé fourrager de la liste swiss granum)"@fr,
         "Frumento autunnale (escl. il frumento da foraggio di swiss granum)"@it ;
     schema:validFrom 1999 ;
-    schema:validTo cube:Undefined ;
     skos:inScheme agis:ConceptScheme ;
     skos:broader agis:1 ;
     :cultivationType cultivationtype:513 .
@@ -243,7 +231,6 @@ agis:514 a skos:Concept, :DirectPaymentCrop ;
         "Seigle"@fr,
         "Segale"@it ;
     schema:validFrom 1999 ;
-    schema:validTo cube:Undefined ;
     skos:inScheme agis:ConceptScheme ;
     skos:broader agis:1 ;
     :cultivationType cultivationtype:514 .
@@ -254,7 +241,6 @@ agis:515 a skos:Concept, :DirectPaymentCrop ;
         "Méteil de céréales panifiables"@fr,
         "Miscela di cereali panificabili"@it ;
     schema:validFrom 1999 ;
-    schema:validTo cube:Undefined ;
     skos:inScheme agis:ConceptScheme ;
     skos:broader agis:1 ;
     :cultivationType cultivationtype:515 .
@@ -265,7 +251,6 @@ agis:516 a skos:Concept, :DirectPaymentCrop ;
         "Epeautre"@fr,
         "Spelta"@it ;
     schema:validFrom 1999 ;
-    schema:validTo cube:Undefined ;
     skos:inScheme agis:ConceptScheme ;
     skos:broader agis:1 ;
     :cultivationType cultivationtype:516 .
@@ -287,7 +272,6 @@ agis:519 a skos:Concept, :DirectPaymentCrop ;
         "Semences de maïs (contrat de culture)"@fr,
         "Mais da semina (coltivazione contrattuale)"@it ;
     schema:validFrom 2009 ;
-    schema:validTo cube:Undefined ;
     skos:inScheme agis:ConceptScheme ;
     skos:broader agis:1 ;
     :cultivationType cultivationtype:519 .
@@ -298,7 +282,6 @@ agis:520 a skos:Concept, :DirectPaymentCrop ;
         "Riz en culture sèche"@fr,
         "Riso seminato su terreno asciutto"@it ;
     schema:validFrom 2023 ;
-    schema:validTo cube:Undefined ;
     skos:inScheme agis:ConceptScheme ;
     skos:broader agis:1 ;
     :cultivationType cultivationtype:520 .
@@ -309,7 +292,6 @@ agis:521 a skos:Concept, :DirectPaymentCrop ;
         "Maïs d'ensilage et maïs vert"@fr,
         "Mais da insilamento e verde"@it ;
     schema:validFrom 1999 ;
-    schema:validTo cube:Undefined ;
     skos:inScheme agis:ConceptScheme ;
     skos:broader agis:1 ;
     :cultivationType cultivationtype:521 .
@@ -320,7 +302,6 @@ agis:522 a skos:Concept, :DirectPaymentCrop ;
         "Betteraves sucrières"@fr,
         "Barbabietole da zucchero"@it ;
     schema:validFrom 1999 ;
-    schema:validTo cube:Undefined ;
     skos:inScheme agis:ConceptScheme ;
     skos:broader agis:1 ;
     :cultivationType cultivationtype:522 .
@@ -331,7 +312,6 @@ agis:523 a skos:Concept, :DirectPaymentCrop ;
         "Betteraves fourragères"@fr,
         "Barbabietole da foraggio"@it ;
     schema:validFrom 1999 ;
-    schema:validTo cube:Undefined ;
     skos:inScheme agis:ConceptScheme ;
     skos:broader agis:1 ;
     :cultivationType cultivationtype:523 .
@@ -342,7 +322,6 @@ agis:524 a skos:Concept, :DirectPaymentCrop ;
         "Pommes de terre"@fr,
         "Patate"@it ;
     schema:validFrom 1999 ;
-    schema:validTo cube:Undefined ;
     skos:inScheme agis:ConceptScheme ;
     skos:broader agis:1 ;
     :cultivationType cultivationtype:524 .
@@ -353,7 +332,6 @@ agis:525 a skos:Concept, :DirectPaymentCrop ;
         "Plants de pommes de terre (contrat de culture)"@fr,
         "Tuberi-seme di patate (coltivazione contrattuale)"@it ;
     schema:validFrom 2009 ;
-    schema:validTo cube:Undefined ;
     skos:inScheme agis:ConceptScheme ;
     skos:broader agis:1 ;
     :cultivationType cultivationtype:525 .
@@ -364,7 +342,6 @@ agis:526 a skos:Concept, :DirectPaymentCrop ;
         "Colza de printemps destiné à la fabrication d'huile comestible"@fr,
         "Colza primaverile per l'estrazione di olio commestibile"@it ;
     schema:validFrom 1999 ;
-    schema:validTo cube:Undefined ;
     skos:inScheme agis:ConceptScheme ;
     skos:broader agis:1 ;
     :cultivationType cultivationtype:526 .
@@ -375,7 +352,6 @@ agis:527 a skos:Concept, :DirectPaymentCrop ;
         "Colza d'automne destiné à la fabrication d'huile comestible"@fr,
         "Colza autunnale per l'estrazione di olio commestibile"@it ;
     schema:validFrom 1999 ;
-    schema:validTo cube:Undefined ;
     skos:inScheme agis:ConceptScheme ;
     skos:broader agis:1 ;
     :cultivationType cultivationtype:527 .
@@ -386,7 +362,6 @@ agis:528 a skos:Concept, :DirectPaymentCrop ;
         "Soja"@fr,
         "Soia"@it ;
     schema:validFrom 1999 ;
-    schema:validTo cube:Undefined ;
     skos:inScheme agis:ConceptScheme ;
     skos:broader agis:1 ;
     :cultivationType cultivationtype:528 .
@@ -397,7 +372,6 @@ agis:529 a skos:Concept, :DirectPaymentCrop ;
         "Riz en culture humide"@fr,
         "Riso seminato su terreno bagnato"@it ;
     schema:validFrom 2023 ;
-    schema:validTo cube:Undefined ;
     skos:inScheme agis:ConceptScheme ;
     skos:broader agis:1 ;
     :cultivationType cultivationtype:529 .
@@ -408,7 +382,6 @@ agis:531 a skos:Concept, :DirectPaymentCrop ;
         "Tournesol destiné à la fabrication d'huile comestible"@fr,
         "Girasole per l'estrazione di olio commestibile"@it ;
     schema:validFrom 1999 ;
-    schema:validTo cube:Undefined ;
     skos:inScheme agis:ConceptScheme ;
     skos:broader agis:1 ;
     :cultivationType cultivationtype:531 .
@@ -441,7 +414,6 @@ agis:534 a skos:Concept, :DirectPaymentCrop ;
         "Lin"@fr,
         "Lino"@it ;
     schema:validFrom 1999 ;
-    schema:validTo cube:Undefined ;
     skos:inScheme agis:ConceptScheme ;
     skos:broader agis:1 ;
     :cultivationType cultivationtype:534 .
@@ -463,7 +435,6 @@ agis:536 a skos:Concept, :DirectPaymentCrop ;
         "Haricots et vesces en grains (p.ex. féveroles)"@fr,
         "Fagioli e vecce per l'estrazione di granelli (p.es. favette)"@it ;
     schema:validFrom 1999 ;
-    schema:validTo cube:Undefined ;
     skos:inScheme agis:ConceptScheme ;
     skos:broader agis:1 ;
     :cultivationType cultivationtype:536 .
@@ -474,7 +445,6 @@ agis:537 a skos:Concept, :DirectPaymentCrop ;
         "Pois en grains (p.ex. pois protéagineux)"@fr,
         "Piselli per l'estrazione di granelli (p.es. piselli proteici)"@it ;
     schema:validFrom 1999 ;
-    schema:validTo cube:Undefined ;
     skos:inScheme agis:ConceptScheme ;
     skos:broader agis:1 ;
     :cultivationType cultivationtype:537 .
@@ -485,7 +455,6 @@ agis:538 a skos:Concept, :DirectPaymentCrop ;
         "Lupin"@fr,
         "Lupini"@it ;
     schema:validFrom 1999 ;
-    schema:validTo cube:Undefined ;
     skos:inScheme agis:ConceptScheme ;
     skos:broader agis:1 ;
     :cultivationType cultivationtype:538 .
@@ -496,7 +465,6 @@ agis:539 a skos:Concept, :DirectPaymentCrop ;
         "Courges à huile"@fr,
         "Zucche per l'estrazione di olio"@it ;
     schema:validFrom 2001 ;
-    schema:validTo cube:Undefined ;
     skos:inScheme agis:ConceptScheme ;
     skos:broader agis:1 ;
     :cultivationType cultivationtype:539 .
@@ -507,7 +475,6 @@ agis:540 a skos:Concept, :DirectPaymentCrop ;
         "Pois chiches"@fr,
         "Ceci"@it ;
     schema:validFrom 2023 ;
-    schema:validTo cube:Undefined ;
     skos:inScheme agis:ConceptScheme ;
     skos:broader agis:1 ;
     :cultivationType cultivationtype:540 .
@@ -518,7 +485,6 @@ agis:541 a skos:Concept, :DirectPaymentCrop ;
         "Tabac"@fr,
         "Tabacco"@it ;
     schema:validFrom 1999 ;
-    schema:validTo cube:Undefined ;
     skos:inScheme agis:ConceptScheme ;
     skos:broader agis:1 ;
     :cultivationType cultivationtype:541 .
@@ -540,7 +506,6 @@ agis:543 a skos:Concept, :DirectPaymentCrop ;
         "Céréales ensilées"@fr,
         "Cereali insilati"@it ;
     schema:validFrom 2016 ;
-    schema:validTo cube:Undefined ;
     skos:inScheme agis:ConceptScheme ;
     skos:broader agis:1 ;
     :cultivationType cultivationtype:543 .
@@ -551,7 +516,6 @@ agis:544 a skos:Concept, :DirectPaymentCrop ;
         "Cameline"@fr,
         "Dorella"@it ;
     schema:validFrom 2016 ;
-    schema:validTo cube:Undefined ;
     skos:inScheme agis:ConceptScheme ;
     skos:broader agis:1 ;
     :cultivationType cultivationtype:544 .
@@ -562,7 +526,6 @@ agis:545 a skos:Concept, :DirectPaymentCrop ;
         "Cultures maraîchères de plein champ annuelles (sans les légumes de conserve)"@fr,
         "Ortaggi annuali di pieno campo (esclusi quelli destinati alla conservazione)"@it ;
     schema:validFrom 1999 ;
-    schema:validTo cube:Undefined ;
     skos:inScheme agis:ConceptScheme ;
     skos:broader agis:1 ;
     :cultivationType cultivationtype:545 .
@@ -573,7 +536,6 @@ agis:546 a skos:Concept, :DirectPaymentCrop ;
         "Légumes de conserve cultivés en plein champ"@fr,
         "Ortaggi di pieno campo per la conservazione"@it ;
     schema:validFrom 1999 ;
-    schema:validTo cube:Undefined ;
     skos:inScheme agis:ConceptScheme ;
     skos:broader agis:1 ;
     :cultivationType cultivationtype:546 .
@@ -584,7 +546,6 @@ agis:547 a skos:Concept, :DirectPaymentCrop ;
         "Racines de chicorée"@fr,
         "Radici di cicoria di coltura forzata"@it ;
     schema:validFrom 2001 ;
-    schema:validTo cube:Undefined ;
     skos:inScheme agis:ConceptScheme ;
     skos:broader agis:1 ;
     :cultivationType cultivationtype:547 .
@@ -595,7 +556,6 @@ agis:548 a skos:Concept, :DirectPaymentCrop ;
         "Sarrasin"@fr,
         "Grano saraceno"@it ;
     schema:validFrom 2016 ;
-    schema:validTo cube:Undefined ;
     skos:inScheme agis:ConceptScheme ;
     skos:broader agis:1 ;
     :cultivationType cultivationtype:548 .
@@ -617,7 +577,6 @@ agis:551 a skos:Concept, :DirectPaymentCrop ;
         "Baies annuelles (p.ex. fraises)"@fr,
         "Bacche annuali (p.es. fragole)"@it ;
     schema:validFrom 1999 ;
-    schema:validTo cube:Undefined ;
     skos:inScheme agis:ConceptScheme ;
     skos:broader agis:1 ;
     :cultivationType cultivationtype:551 .
@@ -628,7 +587,6 @@ agis:552 a skos:Concept, :DirectPaymentCrop ;
         "Matières premières renouvelables annuelles (kénaf, etc.)"@fr,
         "Materie prime rinnovabili annuali (kenaf, ecc.)"@it ;
     schema:validFrom 1999 ;
-    schema:validTo cube:Undefined ;
     skos:inScheme agis:ConceptScheme ;
     skos:broader agis:1 ;
     :cultivationType cultivationtype:552 .
@@ -639,7 +597,6 @@ agis:553 a skos:Concept, :DirectPaymentCrop ;
         "Plantes aromatiques et plantes médicinales annuelles"@fr,
         "Piante aromatiche e medicinali annuali"@it ;
     schema:validFrom 1999 ;
-    schema:validTo cube:Undefined ;
     skos:inScheme agis:ConceptScheme ;
     skos:broader agis:1 ;
     :cultivationType cultivationtype:553 .
@@ -650,7 +607,6 @@ agis:554 a skos:Concept, :DirectPaymentCrop ;
         "Cultures horticoles de plein champ annuelles (p.ex. fleurs, gazon en rouleaux)"@fr,
         "Floricoltura di pieno campo annuale (fiori, manto erboso in rotoli, ecc.)"@it ;
     schema:validFrom 1999 ;
-    schema:validTo cube:Undefined ;
     skos:inScheme agis:ConceptScheme ;
     skos:broader agis:1 ;
     :cultivationType cultivationtype:554 .
@@ -672,7 +628,6 @@ agis:556 a skos:Concept, :DirectPaymentCrop ;
         "Jachère florale"@fr,
         "Maggese fioriti"@it ;
     schema:validFrom 1999 ;
-    schema:validTo cube:Undefined ;
     skos:inScheme agis:ConceptScheme ;
     skos:broader agis:1 ;
     :cultivationType cultivationtype:556 .
@@ -683,7 +638,6 @@ agis:557 a skos:Concept, :DirectPaymentCrop ;
         "Jachère tournante"@fr,
         "Maggese da rotazione"@it ;
     schema:validFrom 1999 ;
-    schema:validTo cube:Undefined ;
     skos:inScheme agis:ConceptScheme ;
     skos:broader agis:1 ;
     :cultivationType cultivationtype:557 .
@@ -705,7 +659,6 @@ agis:559 a skos:Concept, :DirectPaymentCrop ;
         "Ourlet sur terres assolées"@fr,
         "Striscia su superficie coltiva"@it ;
     schema:validFrom 2008 ;
-    schema:validTo cube:Undefined ;
     skos:inScheme agis:ConceptScheme ;
     skos:broader agis:1 ;
     :cultivationType cultivationtype:559 .
@@ -771,7 +724,6 @@ agis:566 a skos:Concept, :DirectPaymentCrop ;
         "Pavot"@fr,
         "Papavero"@it ;
     schema:validFrom 2014 ;
-    schema:validTo cube:Undefined ;
     skos:inScheme agis:ConceptScheme ;
     skos:broader agis:1 ;
     :cultivationType cultivationtype:566 .
@@ -782,7 +734,6 @@ agis:567 a skos:Concept, :DirectPaymentCrop ;
         "Carthame"@fr,
         "Cartamo"@it ;
     schema:validFrom 2014 ;
-    schema:validTo cube:Undefined ;
     skos:inScheme agis:ConceptScheme ;
     skos:broader agis:1 ;
     :cultivationType cultivationtype:567 .
@@ -793,7 +744,6 @@ agis:568 a skos:Concept, :DirectPaymentCrop ;
         "Lentilles"@fr,
         "Lenticchie"@it ;
     schema:validFrom 2014 ;
-    schema:validTo cube:Undefined ;
     skos:inScheme agis:ConceptScheme ;
     skos:broader agis:1 ;
     :cultivationType cultivationtype:568 .
@@ -804,7 +754,6 @@ agis:569 a skos:Concept, :DirectPaymentCrop ;
         "Méteil de haricots, de vesces, de pois, de pois chiches et de lupins avec des céréales ou de la caméline, au moins 30 % de légumineuses lors de la récolte (pour la production de grains)"@fr,
         "Miscele di fagioli, vecce, piselli, ceci e lupini con cereali o camelina sativa, almeno il 30% di quota di leguminose nel raccolto (per l'estrazione di granelli)"@it ;
     schema:validFrom 2014 ;
-    schema:validTo cube:Undefined ;
     skos:inScheme agis:ConceptScheme ;
     skos:broader agis:1 ;
     :cultivationType cultivationtype:569 .
@@ -815,7 +764,6 @@ agis:570 a skos:Concept, :DirectPaymentCrop ;
         "Méteil de lentilles avec des céréales ou de la caméline, au moins 30 % de lentilles lors de la récolte (pour la production de grains)"@fr,
         "Miscele di lenticchie con cereali o camelina sativa, almeno il 30% di quota di lenticchie nel raccolto (per l'estrazione di granelli)"@it ;
     schema:validFrom 2023 ;
-    schema:validTo cube:Undefined ;
     skos:inScheme agis:ConceptScheme ;
     skos:broader agis:1 ;
     :cultivationType cultivationtype:570 .
@@ -837,7 +785,6 @@ agis:572 a skos:Concept, :DirectPaymentCrop ;
         "Bandes semées pour organismes utiles dans les terres ouvertes"@fr,
         "Strisce per organismi utili sulla superficie coltiva aperta"@it ;
     schema:validFrom 2015 ;
-    schema:validTo cube:Undefined ;
     skos:inScheme agis:ConceptScheme ;
     skos:broader agis:1 ;
     :cultivationType cultivationtype:572 .
@@ -848,7 +795,6 @@ agis:573 a skos:Concept, :DirectPaymentCrop ;
         "Moutarde"@fr,
         "Senape"@it ;
     schema:validFrom 2018 ;
-    schema:validTo cube:Undefined ;
     skos:inScheme agis:ConceptScheme ;
     skos:broader agis:1 ;
     :cultivationType cultivationtype:573 .
@@ -859,7 +805,6 @@ agis:574 a skos:Concept, :DirectPaymentCrop ;
         "Quinoa"@fr,
         "Quinoa"@it ;
     schema:validFrom 2019 ;
-    schema:validTo cube:Undefined ;
     skos:inScheme agis:ConceptScheme ;
     skos:broader agis:1 ;
     :cultivationType cultivationtype:574 .
@@ -870,7 +815,6 @@ agis:575 a skos:Concept, :DirectPaymentCrop ;
         "Chanvre pour l'utilisation des graines"@fr,
         "Canapa per l'uso dei semi"@it ;
     schema:validFrom 2022 ;
-    schema:validTo cube:Undefined ;
     skos:inScheme agis:ConceptScheme ;
     skos:broader agis:1 ;
     :cultivationType cultivationtype:575 .
@@ -881,7 +825,6 @@ agis:576 a skos:Concept, :DirectPaymentCrop ;
         "Chanvre pour l'utilisation des fibres"@fr,
         "Canapa per l'uso delle fibre"@it ;
     schema:validFrom 2022 ;
-    schema:validTo cube:Undefined ;
     skos:inScheme agis:ConceptScheme ;
     skos:broader agis:1 ;
     :cultivationType cultivationtype:576 .
@@ -892,7 +835,6 @@ agis:577 a skos:Concept, :DirectPaymentCrop ;
         "Autre chanvre"@fr,
         "Restante canapa"@it ;
     schema:validFrom 2022 ;
-    schema:validTo cube:Undefined ;
     skos:inScheme agis:ConceptScheme ;
     skos:broader agis:1 ;
     :cultivationType cultivationtype:577 .
@@ -903,7 +845,6 @@ agis:578 a skos:Concept, :DirectPaymentCrop ;
         "Millet grains"@fr,
         "Miglio per l'estrazione di granelli"@it ;
     schema:validFrom 2023 ;
-    schema:validTo cube:Undefined ;
     skos:inScheme agis:ConceptScheme ;
     skos:broader agis:1 ;
     :cultivationType cultivationtype:578 .
@@ -914,7 +855,6 @@ agis:579 a skos:Concept, :DirectPaymentCrop ;
         "Millet plante entière"@fr,
         "Miglio per la raccolta della pianta intera"@it ;
     schema:validFrom 2023 ;
-    schema:validTo cube:Undefined ;
     skos:inScheme agis:ConceptScheme ;
     skos:broader agis:1 ;
     :cultivationType cultivationtype:579 .
@@ -925,7 +865,6 @@ agis:580 a skos:Concept, :DirectPaymentCrop ;
         "Sorgho grains"@fr,
         "Sorgo per l'estrazione di granelli"@it ;
     schema:validFrom 2023 ;
-    schema:validTo cube:Undefined ;
     skos:inScheme agis:ConceptScheme ;
     skos:broader agis:1 ;
     :cultivationType cultivationtype:580 .
@@ -936,7 +875,6 @@ agis:581 a skos:Concept, :DirectPaymentCrop ;
         "Sorgho plante entière"@fr,
         "Sorgo per la raccolta della pianta intera"@it ;
     schema:validFrom 2023 ;
-    schema:validTo cube:Undefined ;
     skos:inScheme agis:ConceptScheme ;
     skos:broader agis:1 ;
     :cultivationType cultivationtype:581 .
@@ -947,7 +885,6 @@ agis:590 a skos:Concept, :DirectPaymentCrop ;
         "Colza de printemps comme matière première renouvelable"@fr,
         "Colza primaverile quale materia prima rinnovabile"@it ;
     schema:validFrom 1999 ;
-    schema:validTo cube:Undefined ;
     skos:inScheme agis:ConceptScheme ;
     skos:broader agis:1 ;
     :cultivationType cultivationtype:590 .
@@ -958,7 +895,6 @@ agis:591 a skos:Concept, :DirectPaymentCrop ;
         "Colza d'automne comme matière première renouvelable"@fr,
         "Colza autunnale quale materia prima rinnovabile"@it ;
     schema:validFrom 1999 ;
-    schema:validTo cube:Undefined ;
     skos:inScheme agis:ConceptScheme ;
     skos:broader agis:1 ;
     :cultivationType cultivationtype:591 .
@@ -969,7 +905,6 @@ agis:592 a skos:Concept, :DirectPaymentCrop ;
         "Tournesol comme matière première renouvelable"@fr,
         "Girasole quale materia prima rinnovabile"@it ;
     schema:validFrom 1999 ;
-    schema:validTo cube:Undefined ;
     skos:inScheme agis:ConceptScheme ;
     skos:broader agis:1 ;
     :cultivationType cultivationtype:592 .
@@ -980,7 +915,6 @@ agis:594 a skos:Concept, :DirectPaymentCrop ;
         "Terres ouvertes donnant droit aux contributions (surfaces de promotion de la biodiversité spécifiques à la région)"@fr,
         "Superficie coltiva aperta, avente diritto ai contributi (superfici per la promozione della biodiversità specifiche di una regione)"@it ;
     schema:validFrom 2016 ;
-    schema:validTo cube:Undefined ;
     skos:inScheme agis:ConceptScheme ;
     skos:broader agis:1 ;
     :cultivationType cultivationtype:594 .
@@ -991,7 +925,6 @@ agis:595 a skos:Concept, :DirectPaymentCrop ;
         "Autres terres ouvertes ne donnant pas droit aux contributions (surfaces de promotion de la biodiversité spécifiques à la région)"@fr,
         "Altra superficie coltiva aperta, non avente diritto ai contributi (superfici per la promozione della biodiversità specifiche di una regione)"@it ;
     schema:validFrom 2016 ;
-    schema:validTo cube:Undefined ;
     skos:inScheme agis:ConceptScheme ;
     skos:broader agis:1 ;
     :cultivationType cultivationtype:595 .
@@ -1002,7 +935,6 @@ agis:597 a skos:Concept, :DirectPaymentCrop ;
         "Autres terres ouvertes donnant droit aux contributions"@fr,
         "Altra superficie coltiva aperta, avente diritto ai contributi"@it ;
     schema:validFrom 1999 ;
-    schema:validTo cube:Undefined ;
     skos:inScheme agis:ConceptScheme ;
     skos:broader agis:1 ;
     :cultivationType cultivationtype:597 .
@@ -1013,7 +945,6 @@ agis:598 a skos:Concept, :DirectPaymentCrop ;
         "Autres terres ouvertes ne donnant pas droit aux contributions"@fr,
         "Altra superficie coltiva aperta, non avente diritto ai contributi"@it ;
     schema:validFrom 1999 ;
-    schema:validTo cube:Undefined ;
     skos:inScheme agis:ConceptScheme ;
     skos:broader agis:1 ;
     :cultivationType cultivationtype:598 .
@@ -1024,7 +955,6 @@ agis:601 a skos:Concept, :DirectPaymentCrop ;
         "Prairies artificielles (sans les pâturages)"@fr,
         "Prati artificiali (senza pascoli)"@it ;
     schema:validFrom 1999 ;
-    schema:validTo cube:Undefined ;
     skos:inScheme agis:ConceptScheme ;
     skos:broader agis:1 ;
     :cultivationType cultivationtype:601 .
@@ -1035,7 +965,6 @@ agis:602 a skos:Concept, :DirectPaymentCrop ;
         "Autres prairies artificielles donnant droit aux contributions (p.ex. pâturages pour porcs et volaille)"@fr,
         "Altri prati artificiali avente diritto ai contributi (p.es. pascoli riservati ai suini e al pollame)"@it ;
     schema:validFrom 2014 ;
-    schema:validTo cube:Undefined ;
     skos:inScheme agis:ConceptScheme ;
     skos:broader agis:1 ;
     :cultivationType cultivationtype:602 .
@@ -1046,7 +975,6 @@ agis:611 a skos:Concept, :DirectPaymentCrop ;
         "Prairies extensives (sans les pâturages)"@fr,
         "Prati estensivi (senza pascoli)"@it ;
     schema:validFrom 1999 ;
-    schema:validTo cube:Undefined ;
     skos:inScheme agis:ConceptScheme ;
     skos:broader agis:21 ;
     :cultivationType cultivationtype:611 .
@@ -1057,7 +985,6 @@ agis:612 a skos:Concept, :DirectPaymentCrop ;
         "Prairies peu intensives (sans les pâturages)"@fr,
         "Prati poco intensivi (senza pascoli)"@it ;
     schema:validFrom 1999 ;
-    schema:validTo cube:Undefined ;
     skos:inScheme agis:ConceptScheme ;
     skos:broader agis:21 ;
     :cultivationType cultivationtype:612 .
@@ -1068,7 +995,6 @@ agis:613 a skos:Concept, :DirectPaymentCrop ;
         "Autres prairies permanentes (sans les pâturages)"@fr,
         "Altri prati permanenti (senza pascoli)"@it ;
     schema:validFrom 1999 ;
-    schema:validTo cube:Undefined ;
     skos:inScheme agis:ConceptScheme ;
     skos:broader agis:21 ;
     :cultivationType cultivationtype:613 .
@@ -1079,7 +1005,6 @@ agis:616 a skos:Concept, :DirectPaymentCrop ;
         "Pâturages (pâturages attenants à la ferme, autres pâturages, sauf les pâturages d'estivage)"@fr,
         "Pascoli (pascoli propri, altri pascoli senza pascoli d'estivazione)"@it ;
     schema:validFrom 1999 ;
-    schema:validTo cube:Undefined ;
     skos:inScheme agis:ConceptScheme ;
     skos:broader agis:21 ;
     :cultivationType cultivationtype:616 .
@@ -1090,7 +1015,6 @@ agis:617 a skos:Concept, :DirectPaymentCrop ;
         "Pâturages extensifs"@fr,
         "Pascoli estensivi"@it ;
     schema:validFrom 1999 ;
-    schema:validTo cube:Undefined ;
     skos:inScheme agis:ConceptScheme ;
     skos:broader agis:21 ;
     :cultivationType cultivationtype:617 .
@@ -1101,7 +1025,6 @@ agis:618 a skos:Concept, :DirectPaymentCrop ;
         "Pâturages boisés (sauf surfaces boisées)"@fr,
         "Pascoli boschivi (senza i boschi)"@it ;
     schema:validFrom 1999 ;
-    schema:validTo cube:Undefined ;
     skos:inScheme agis:ConceptScheme ;
     skos:broader agis:21 ;
     :cultivationType cultivationtype:618 .
@@ -1123,7 +1046,6 @@ agis:621 a skos:Concept, :DirectPaymentCrop ;
         "Prairies de fauche en région d'estivage, autres (pas de SPB)"@fr,
         "Prati da sfalcio nella regione d'estivazione, altri prati (nessuna SPB)"@it ;
     schema:validFrom 1999 ;
-    schema:validTo cube:Undefined ;
     skos:inScheme agis:ConceptScheme ;
     skos:broader agis:21 ;
     :cultivationType cultivationtype:621 .
@@ -1134,7 +1056,6 @@ agis:622 a skos:Concept, :DirectPaymentCrop ;
         "Prairies de fauche en région d'estivage, type prairie extensive"@fr,
         "Prati da sfalcio nella regione d'estivazione, tipo prati sfruttati in modo estensivo"@it ;
     schema:validFrom 2000 ;
-    schema:validTo cube:Undefined ;
     skos:inScheme agis:ConceptScheme ;
     skos:broader agis:21 ;
     :cultivationType cultivationtype:622 .
@@ -1145,7 +1066,6 @@ agis:623 a skos:Concept, :DirectPaymentCrop ;
         "Prairies de fauche en région d'estivage, type prairie peu intensive"@fr,
         "Prati da sfalcio nella regione d'estivazione, tipo prati sfruttati in modo poco intensivo"@it ;
     schema:validFrom 2000 ;
-    schema:validTo cube:Undefined ;
     skos:inScheme agis:ConceptScheme ;
     skos:broader agis:21 ;
     :cultivationType cultivationtype:623 .
@@ -1156,7 +1076,6 @@ agis:625 a skos:Concept, :DirectPaymentCrop ;
         "Pâturages boisés (sauf surfaces boisées)"@fr,
         "Pascoli boschivi (senza i boschi)"@it ;
     schema:validFrom 2009 ;
-    schema:validTo cube:Undefined ;
     skos:inScheme agis:ConceptScheme ;
     skos:broader agis:21 ;
     :cultivationType cultivationtype:625 .
@@ -1167,7 +1086,6 @@ agis:631 a skos:Concept, :DirectPaymentCrop ;
         "Légumineuses fourragères destinées à la production de semences (contrat de culture)"@fr,
         "Leguminose da foraggio per la produzione di sementi (coltivazione contrattuale)"@it ;
     schema:validFrom 2009 ;
-    schema:validTo cube:Undefined ;
     skos:inScheme agis:ConceptScheme ;
     skos:broader agis:1 ;
     :cultivationType cultivationtype:631 .
@@ -1178,7 +1096,6 @@ agis:632 a skos:Concept, :DirectPaymentCrop ;
         "Graminées fourragères destinées à la production de semences (contrat de culture)"@fr,
         "Graminacee da foraggio per la produzione di sementi (coltivazione contrattuale)"@it ;
     schema:validFrom 2009 ;
-    schema:validTo cube:Undefined ;
     skos:inScheme agis:ConceptScheme ;
     skos:broader agis:1 ;
     :cultivationType cultivationtype:632 .
@@ -1211,7 +1128,6 @@ agis:635 a skos:Concept, :DirectPaymentCrop ;
         "Prairies riveraines (sauf les pâturages)"@fr,
         "Prati rivieraschi (senza pascoli)"@it ;
     schema:validFrom 2023 ;
-    schema:validTo cube:Undefined ;
     skos:inScheme agis:ConceptScheme ;
     skos:broader agis:21 ;
     :cultivationType cultivationtype:635 .
@@ -1222,7 +1138,6 @@ agis:693 a skos:Concept, :DirectPaymentCrop ;
         "Pâturages (surfaces de promotion de la biodiversité spécifiques à la région)"@fr,
         "Pascoli (superfici per la promozione della biodiversità specifiche di una regione)"@it ;
     schema:validFrom 2015 ;
-    schema:validTo cube:Undefined ;
     skos:inScheme agis:ConceptScheme ;
     skos:broader agis:21 ;
     :cultivationType cultivationtype:693 .
@@ -1233,7 +1148,6 @@ agis:694 a skos:Concept, :DirectPaymentCrop ;
         "Surfaces herbagère sans les pâturages (surfaces de promotion de la biodiversité spécifiques à la région)"@fr,
         "Superfici inerbite, senza pascoli (superfici per la promozione della biodiversità specifiche di una regione)"@it ;
     schema:validFrom 2015 ;
-    schema:validTo cube:Undefined ;
     skos:inScheme agis:ConceptScheme ;
     skos:broader agis:21 ;
     :cultivationType cultivationtype:694 .
@@ -1255,7 +1169,6 @@ agis:697 a skos:Concept, :DirectPaymentCrop ;
         "Autres surfaces herbagères (surface herbagère permanente) donnant droit aux contributions"@fr,
         "Altre superfici (permanentemente) inerbite, aventi diritto ai contributi"@it ;
     schema:validFrom 1999 ;
-    schema:validTo cube:Undefined ;
     skos:inScheme agis:ConceptScheme ;
     skos:broader agis:21 ;
     :cultivationType cultivationtype:697 .
@@ -1266,7 +1179,6 @@ agis:698 a skos:Concept, :DirectPaymentCrop ;
         "Autres surfaces herbagères (surface herbagère permanente) ne donnant pas droit aux contributions"@fr,
         "Altre superfici (permanentemente) inerbite, non aventi diritto ai contributi"@it ;
     schema:validFrom 1999 ;
-    schema:validTo cube:Undefined ;
     skos:inScheme agis:ConceptScheme ;
     skos:broader agis:21 ;
     :cultivationType cultivationtype:698 .
@@ -1277,7 +1189,6 @@ agis:701 a skos:Concept, :DirectPaymentCrop ;
         "Vignes"@fr,
         "Vigna"@it ;
     schema:validFrom 1999 ;
-    schema:validTo cube:Undefined ;
     :cultivationType cultivationtype:701 .
 
 agis:702 a skos:Concept, :DirectPaymentCrop ;
@@ -1286,7 +1197,6 @@ agis:702 a skos:Concept, :DirectPaymentCrop ;
         "Cultures fruitières (pommes)"@fr,
         "Frutteto (mele)"@it ;
     schema:validFrom 1999 ;
-    schema:validTo cube:Undefined ;
     :cultivationType cultivationtype:702 .
 
 agis:703 a skos:Concept, :DirectPaymentCrop ;
@@ -1295,7 +1205,6 @@ agis:703 a skos:Concept, :DirectPaymentCrop ;
         "Cultures fruitières (poires)"@fr,
         "Frutteto (pere)"@it ;
     schema:validFrom 1999 ;
-    schema:validTo cube:Undefined ;
     :cultivationType cultivationtype:703 .
 
 agis:704 a skos:Concept, :DirectPaymentCrop ;
@@ -1304,7 +1213,6 @@ agis:704 a skos:Concept, :DirectPaymentCrop ;
         "Cultures fruitières (fruits à noyau)"@fr,
         "Frutteto (frutta a nocciolo)"@it ;
     schema:validFrom 1999 ;
-    schema:validTo cube:Undefined ;
     :cultivationType cultivationtype:704 .
 
 agis:705 a skos:Concept, :DirectPaymentCrop ;
@@ -1313,7 +1221,6 @@ agis:705 a skos:Concept, :DirectPaymentCrop ;
         "Baies pluriannuelles"@fr,
         "Bacche pluriennali"@it ;
     schema:validFrom 1999 ;
-    schema:validTo cube:Undefined ;
     :cultivationType cultivationtype:705 .
 
 agis:706 a skos:Concept, :DirectPaymentCrop ;
@@ -1322,7 +1229,6 @@ agis:706 a skos:Concept, :DirectPaymentCrop ;
         "Plantes aromatiques et plantes médicinales pluriannuelles"@fr,
         "Piante aromatiche e medicinali pluriennali"@it ;
     schema:validFrom 1999 ;
-    schema:validTo cube:Undefined ;
     :cultivationType cultivationtype:706 .
 
 agis:707 a skos:Concept, :DirectPaymentCrop ;
@@ -1331,7 +1237,6 @@ agis:707 a skos:Concept, :DirectPaymentCrop ;
         "Matières premières renouvelables pluriannuelles (roseau de chine etc.)"@fr,
         "Materie prime rinnovabili pluriennali (Miscanthus sin. ecc.)"@it ;
     schema:validFrom 1999 ;
-    schema:validTo cube:Undefined ;
     :cultivationType cultivationtype:707 .
 
 agis:708 a skos:Concept, :DirectPaymentCrop ;
@@ -1340,7 +1245,6 @@ agis:708 a skos:Concept, :DirectPaymentCrop ;
         "Houblon"@fr,
         "Luppolo"@it ;
     schema:validFrom 1999 ;
-    schema:validTo cube:Undefined ;
     :cultivationType cultivationtype:708 .
 
 agis:709 a skos:Concept, :DirectPaymentCrop ;
@@ -1349,7 +1253,6 @@ agis:709 a skos:Concept, :DirectPaymentCrop ;
         "Rhubarbe"@fr,
         "Rabarbaro"@it ;
     schema:validFrom 1999 ;
-    schema:validTo cube:Undefined ;
     :cultivationType cultivationtype:709 .
 
 agis:710 a skos:Concept, :DirectPaymentCrop ;
@@ -1358,7 +1261,6 @@ agis:710 a skos:Concept, :DirectPaymentCrop ;
         "Asperges"@fr,
         "Asparagi"@it ;
     schema:validFrom 1999 ;
-    schema:validTo cube:Undefined ;
     :cultivationType cultivationtype:710 .
 
 agis:711 a skos:Concept, :DirectPaymentCrop ;
@@ -1367,7 +1269,6 @@ agis:711 a skos:Concept, :DirectPaymentCrop ;
         "Champignons en pleine terre"@fr,
         "Funghi (in pieno campo)"@it ;
     schema:validFrom 1999 ;
-    schema:validTo cube:Undefined ;
     :cultivationType cultivationtype:711 .
 
 agis:712 a skos:Concept, :DirectPaymentCrop ;
@@ -1376,7 +1277,6 @@ agis:712 a skos:Concept, :DirectPaymentCrop ;
         "Sapins de Noël"@fr,
         "Alberelli di Natale"@it ;
     schema:validFrom 1999 ;
-    schema:validTo cube:Undefined ;
     :cultivationType cultivationtype:712 .
 
 agis:713 a skos:Concept, :DirectPaymentCrop ;
@@ -1385,7 +1285,6 @@ agis:713 a skos:Concept, :DirectPaymentCrop ;
         "Pépinières de plantes forestières hors zone forestière"@fr,
         "Vivai forestali fuori delle zone forestali"@it ;
     schema:validFrom 1999 ;
-    schema:validTo cube:Undefined ;
     :cultivationType cultivationtype:713 .
 
 agis:714 a skos:Concept, :DirectPaymentCrop ;
@@ -1394,7 +1293,6 @@ agis:714 a skos:Concept, :DirectPaymentCrop ;
         "Buissons, arbrisseaux et arbustes ornementaux"@fr,
         "Arbusti, arboscelli e cespugli ornamentali"@it ;
     schema:validFrom 1999 ;
-    schema:validTo cube:Undefined ;
     :cultivationType cultivationtype:714 .
 
 agis:715 a skos:Concept, :DirectPaymentCrop ;
@@ -1421,7 +1319,6 @@ agis:717 a skos:Concept, :DirectPaymentCrop ;
         "Surfaces viticoles présentant une biodiversité naturelle"@fr,
         "Vigneti con biodiversità naturale"@it ;
     schema:validFrom 1999 ;
-    schema:validTo cube:Undefined ;
     :cultivationType cultivationtype:717 .
 
 agis:718 a skos:Concept, :DirectPaymentCrop ;
@@ -1430,7 +1327,6 @@ agis:718 a skos:Concept, :DirectPaymentCrop ;
         "Truffières"@fr,
         "Tartufaie"@it ;
     schema:validFrom 2014 ;
-    schema:validTo cube:Undefined ;
     :cultivationType cultivationtype:718 .
 
 agis:719 a skos:Concept, :DirectPaymentCrop ;
@@ -1439,7 +1335,6 @@ agis:719 a skos:Concept, :DirectPaymentCrop ;
         "Cultures de mûriers (alimentation des vers à soie)"@fr,
         "Coltivazioni di gelsi (foraggiamento dei bachi da seta)"@it ;
     schema:validFrom 2014 ;
-    schema:validTo cube:Undefined ;
     :cultivationType cultivationtype:719 .
 
 agis:720 a skos:Concept, :DirectPaymentCrop ;
@@ -1448,7 +1343,6 @@ agis:720 a skos:Concept, :DirectPaymentCrop ;
         "Châtaigneraies entretenues (surface)"@fr,
         "Selve curate (castagni)"@it ;
     schema:validFrom 2014 ;
-    schema:validTo cube:Undefined ;
     :cultivationType cultivationtype:720 .
 
 agis:721 a skos:Concept, :DirectPaymentCrop ;
@@ -1457,7 +1351,6 @@ agis:721 a skos:Concept, :DirectPaymentCrop ;
         "Cultures horticoles pluriannuelles de plein air (pas en serres)"@fr,
         "Floricoltura di pieno campo pluriennale (non in serra)"@it ;
     schema:validFrom 2015 ;
-    schema:validTo cube:Undefined ;
     :cultivationType cultivationtype:721 .
 
 agis:722 a skos:Concept, :DirectPaymentCrop ;
@@ -1466,7 +1359,6 @@ agis:722 a skos:Concept, :DirectPaymentCrop ;
         "Pépinière viticoles"@fr,
         "Vivai viticoli"@it ;
     schema:validFrom 2016 ;
-    schema:validTo cube:Undefined ;
     :cultivationType cultivationtype:722 .
 
 agis:723 a skos:Concept, :DirectPaymentCrop ;
@@ -1475,7 +1367,6 @@ agis:723 a skos:Concept, :DirectPaymentCrop ;
         "Pépinière de fruits et de baies"@fr,
         "Vivaio di alberi da frutto e bacche"@it ;
     schema:validFrom 2023 ;
-    schema:validTo cube:Undefined ;
     :cultivationType cultivationtype:723 .
 
 agis:724 a skos:Concept, :DirectPaymentCrop ;
@@ -1484,7 +1375,6 @@ agis:724 a skos:Concept, :DirectPaymentCrop ;
         "Autres pépinières (rosiers, plantes ornementales, etc.)"@fr,
         "Altri vivai (rose, arbusti ornamentali, ecc.)"@it ;
     schema:validFrom 2023 ;
-    schema:validTo cube:Undefined ;
     :cultivationType cultivationtype:724 .
 
 agis:725 a skos:Concept, :DirectPaymentCrop ;
@@ -1493,7 +1383,6 @@ agis:725 a skos:Concept, :DirectPaymentCrop ;
         "Permaculture (mélange à petite échelle de différentes cultures avec plus de 50 % de cultures spéciales)"@fr,
         "Permacultura (miscelazione su piccola scala di diverse colture con più del 50 % di colture speciali)"@it ;
     schema:validFrom 2020 ;
-    schema:validTo cube:Undefined ;
     :cultivationType cultivationtype:725 .
 
 agis:731 a skos:Concept, :DirectPaymentCrop ;
@@ -1502,7 +1391,6 @@ agis:731 a skos:Concept, :DirectPaymentCrop ;
         "Autres cultures fruitières (kiwi, sureau, etc.)"@fr,
         "Altri frutteti (kiwi, sambuco, ecc.)"@it ;
     schema:validFrom 2009 ;
-    schema:validTo cube:Undefined ;
     :cultivationType cultivationtype:731 .
 
 agis:735 a skos:Concept, :DirectPaymentCrop ;
@@ -1511,7 +1399,6 @@ agis:735 a skos:Concept, :DirectPaymentCrop ;
         "Vignes (surfaces de promotion de la biodiversité spécifiques à la région)"@fr,
         "Vigna (superfici per la promozione della biodiversità specifiche di una regione)"@it ;
     schema:validFrom 2016 ;
-    schema:validTo cube:Undefined ;
     :cultivationType cultivationtype:735 .
 
 agis:797 a skos:Concept, :DirectPaymentCrop ;
@@ -1520,7 +1407,6 @@ agis:797 a skos:Concept, :DirectPaymentCrop ;
         "Autres surfaces de cultures pérennes donnant droit aux contributions"@fr,
         "Altre superfici con colture perenni, aventi diritto ai contributi"@it ;
     schema:validFrom 1999 ;
-    schema:validTo cube:Undefined ;
     :cultivationType cultivationtype:797 .
 
 agis:798 a skos:Concept, :DirectPaymentCrop ;
@@ -1529,7 +1415,6 @@ agis:798 a skos:Concept, :DirectPaymentCrop ;
         "Autres surfaces de cultures pérennes ne donnant pas droit aux contributions"@fr,
         "Altre superfici con colture perenni, non aventi diritto ai contributi"@it ;
     schema:validFrom 1999 ;
-    schema:validTo cube:Undefined ;
     :cultivationType cultivationtype:798 .
 
 agis:801 a skos:Concept, :DirectPaymentCrop ;
@@ -1538,7 +1423,6 @@ agis:801 a skos:Concept, :DirectPaymentCrop ;
         "Cultures maraîchères sous serres avec fondations permanentes"@fr,
         "Colture orticole in serre con fondamenta fisse"@it ;
     schema:validFrom 1999 ;
-    schema:validTo cube:Undefined ;
     skos:inScheme agis:ConceptScheme ;
     skos:broader agis:7 ;
     :cultivationType cultivationtype:801 .
@@ -1549,7 +1433,6 @@ agis:802 a skos:Concept, :DirectPaymentCrop ;
         "Autres cultures spéciales sous serres avec fondations permanentes"@fr,
         "Altre colture speciali in serre con fondamenta fisse"@it ;
     schema:validFrom 1999 ;
-    schema:validTo cube:Undefined ;
     skos:inScheme agis:ConceptScheme ;
     skos:broader agis:7 ;
     :cultivationType cultivationtype:802 .
@@ -1560,7 +1443,6 @@ agis:803 a skos:Concept, :DirectPaymentCrop ;
         "Cultures horticoles sous serres avec fondations permanentes"@fr,
         "Floricoltura in serre con fondamenta fisse"@it ;
     schema:validFrom 1999 ;
-    schema:validTo cube:Undefined ;
     skos:inScheme agis:ConceptScheme ;
     skos:broader agis:7 ;
     :cultivationType cultivationtype:803 .
@@ -1571,7 +1453,6 @@ agis:804 a skos:Concept, :DirectPaymentCrop ;
         "Cultures de petits fruits sous serres avec fondations permanentes"@fr,
         "Colture di bacche in serre con fondamenta fisse"@it ;
     schema:validFrom 2023 ;
-    schema:validTo cube:Undefined ;
     skos:inScheme agis:ConceptScheme ;
     skos:broader agis:7 ;
     :cultivationType cultivationtype:804 .
@@ -1593,7 +1474,6 @@ agis:807 a skos:Concept, :DirectPaymentCrop ;
         "Autres cultures spéciales sous abri sans fondations permanentes"@fr,
         "Altre colture speciali coltivate al coperto senza fondamenta fisse"@it ;
     schema:validFrom 1999 ;
-    schema:validTo cube:Undefined ;
     skos:inScheme agis:ConceptScheme ;
     skos:broader agis:7 ;
     :cultivationType cultivationtype:807 .
@@ -1604,7 +1484,6 @@ agis:808 a skos:Concept, :DirectPaymentCrop ;
         "Cultures horticoles sous abri sans fondations permanentes"@fr,
         "Floricoltura al coperto senza fondamenta fisse"@it ;
     schema:validFrom 1999 ;
-    schema:validTo cube:Undefined ;
     skos:inScheme agis:ConceptScheme ;
     skos:broader agis:7 ;
     :cultivationType cultivationtype:808 .
@@ -1615,7 +1494,6 @@ agis:810 a skos:Concept, :DirectPaymentCrop ;
         "Champignons sous abri avec fondations permanentes"@fr,
         "Funghi coltivati al coperto con fondamenta fisse"@it ;
     schema:validFrom 2014 ;
-    schema:validTo cube:Undefined ;
     skos:inScheme agis:ConceptScheme ;
     skos:broader agis:7 ;
     :cultivationType cultivationtype:810 .
@@ -1626,7 +1504,6 @@ agis:811 a skos:Concept, :DirectPaymentCrop ;
         "Cultures maraîchères sous abri sans fondations permanentes, sur sol naturel"@fr,
         "Colture orticole coltivate al coperto senza fondamenta fisse, nel terreno naturale"@it ;
     schema:validFrom 2023 ;
-    schema:validTo cube:Undefined ;
     skos:inScheme agis:ConceptScheme ;
     skos:broader agis:7 ;
     :cultivationType cultivationtype:811 .
@@ -1637,7 +1514,6 @@ agis:812 a skos:Concept, :DirectPaymentCrop ;
         "Cultures maraîchères sous abri sans fondations permanentes, sur des tables de plantation ou des étagères"@fr,
         "Colture orticole coltivate al coperto senza fondamenta fisse, su tavole di piantagione o rastrelliere"@it ;
     schema:validFrom 2023 ;
-    schema:validTo cube:Undefined ;
     skos:inScheme agis:ConceptScheme ;
     skos:broader agis:7 ;
     :cultivationType cultivationtype:812 .
@@ -1648,7 +1524,6 @@ agis:813 a skos:Concept, :DirectPaymentCrop ;
         "Cultures de petits fruits sous abri sans fondations permanentes, sur sol naturel"@fr,
         "Colture di bacche coltivate al coperto senza fondamenta fisse, nel terreno naturale"@it ;
     schema:validFrom 2023 ;
-    schema:validTo cube:Undefined ;
     skos:inScheme agis:ConceptScheme ;
     skos:broader agis:7 ;
     :cultivationType cultivationtype:813 .
@@ -1659,7 +1534,6 @@ agis:814 a skos:Concept, :DirectPaymentCrop ;
         "Cultures de petits fruits sous abri sans fondations permanentes, sur des tables de plantation ou des étagères"@fr,
         "Colture di bacche coltivate al coperto senza fondamenta fisse, su tavole di piantagione o rastrelliere"@it ;
     schema:validFrom 2023 ;
-    schema:validTo cube:Undefined ;
     skos:inScheme agis:ConceptScheme ;
     skos:broader agis:7 ;
     :cultivationType cultivationtype:814 .
@@ -1670,7 +1544,6 @@ agis:847 a skos:Concept, :DirectPaymentCrop ;
         "Autres cultures sous abri sans fondations permanentes donnant droit aux contributions"@fr,
         "Altre colture coltivate al coperto senza fondamenta fisse, aventi diritto ai contributi"@it ;
     schema:validFrom 1999 ;
-    schema:validTo cube:Undefined ;
     skos:inScheme agis:ConceptScheme ;
     skos:broader agis:7 ;
     :cultivationType cultivationtype:847 .
@@ -1681,7 +1554,6 @@ agis:848 a skos:Concept, :DirectPaymentCrop ;
         "Autres cultures sous abri avec fondations permanentes"@fr,
         "Altre colture coltivate al coperto con fondamenta fisse"@it ;
     schema:validFrom 1999 ;
-    schema:validTo cube:Undefined ;
     skos:inScheme agis:ConceptScheme ;
     skos:broader agis:7 ;
     :cultivationType cultivationtype:848 .
@@ -1692,7 +1564,6 @@ agis:849 a skos:Concept, :DirectPaymentCrop ;
         "Autres cultures sous abri sans fondations permanentes ne donnant pas droit aux contributions"@fr,
         "Altre colture coltivate al coperto senza fondamenta fisse, non aventi diritto ai contributi"@it ;
     schema:validFrom 2014 ;
-    schema:validTo cube:Undefined ;
     skos:inScheme agis:ConceptScheme ;
     skos:broader agis:7 ;
     :cultivationType cultivationtype:849 .
@@ -1703,7 +1574,6 @@ agis:851 a skos:Concept, :DirectPaymentCrop ;
         "Surfaces à litière dans la surface agricole utile"@fr,
         "Terreni da strame all’interno della superficie agricola utile"@it ;
     schema:validFrom 1999 ;
-    schema:validTo cube:Undefined ;
     skos:inScheme agis:ConceptScheme ;
     skos:broader agis:10 ;
     :cultivationType cultivationtype:851 .
@@ -1714,7 +1584,6 @@ agis:852 a skos:Concept, :DirectPaymentCrop ;
         "Haies, bosquets champêtres et berges boisées (avec la bande herbeuse)"@fr,
         "Siepi, boschetti campestri e rivieraschi (con bordo inerbito)"@it ;
     schema:validFrom 1999 ;
-    schema:validTo cube:Undefined ;
     skos:inScheme agis:ConceptScheme ;
     skos:broader agis:10 ;
     :cultivationType cultivationtype:852 .
@@ -1725,7 +1594,6 @@ agis:857 a skos:Concept, :DirectPaymentCrop ;
         "Haies, bosquets champêtres et berges boisées (avec la bande tampon)"@fr,
         "Siepi, boschetti campestri e rivieraschi (con fascia tampone)"@it ;
     schema:validFrom 2008 ;
-    schema:validTo cube:Undefined ;
     skos:inScheme agis:ConceptScheme ;
     skos:broader agis:10 ;
     :cultivationType cultivationtype:857 .
@@ -1736,7 +1604,6 @@ agis:858 a skos:Concept, :DirectPaymentCrop ;
         "Haies, bosquets champêtres et berges boisées (avec la bande tampon) (Surfaces de promotion de la biodiversité spécifiques à la région)"@fr,
         "Siepi, boschetti campestri e rivieraschi (con fascia tampone) (Superfici per la promozione della biodiversità specifiche di una regione)"@it ;
     schema:validFrom 2016 ;
-    schema:validTo cube:Undefined ;
     skos:inScheme agis:ConceptScheme ;
     skos:broader agis:10 ;
     :cultivationType cultivationtype:858 .
@@ -1758,7 +1625,6 @@ agis:897 a skos:Concept, :DirectPaymentCrop ;
         "Autres surfaces dans la surface agricole utile donnant droit aux contributions"@fr,
         "Altre superfici all’interno della superficie agricola utile, aventi diritto ai contributi"@it ;
     schema:validFrom 1999 ;
-    schema:validTo cube:Undefined ;
     skos:inScheme agis:ConceptScheme ;
     skos:broader agis:10 ;
     :cultivationType cultivationtype:897 .
@@ -1769,7 +1635,6 @@ agis:898 a skos:Concept, :DirectPaymentCrop ;
         "Autres surfaces dans la surface agricole utile ne donnant pas droit aux contributions"@fr,
         "Altre superfici all’interno della superficie agricola utile, non aventi diritto ai contributi"@it ;
     schema:validFrom 1999 ;
-    schema:validTo cube:Undefined ;
     skos:inScheme agis:ConceptScheme ;
     skos:broader agis:10 ;
     :cultivationType cultivationtype:898 .
@@ -1780,7 +1645,6 @@ agis:901 a skos:Concept, :DirectPaymentCrop ;
         "Forêt"@fr,
         "Bosco"@it ;
     schema:validFrom 1999 ;
-    schema:validTo cube:Undefined ;
     skos:inScheme agis:ConceptScheme ;
     skos:broader agis:12 ;
     :cultivationType cultivationtype:901 .
@@ -1791,7 +1655,6 @@ agis:902 a skos:Concept, :DirectPaymentCrop ;
         "Surfaces improductives (p.ex. haies sans les bandes tampons, surfaces broyées, surfaces avec un degré élevé de mauvaises herbes)"@fr,
         "Altre superfici improduttive (p.es. siepi senza fascia tampone, superfici pacciamate, superfici con elevata presenza di malerbe)"@it ;
     schema:validFrom 1999 ;
-    schema:validTo cube:Undefined ;
     skos:inScheme agis:ConceptScheme ;
     skos:broader agis:12 ;
     :cultivationType cultivationtype:902 .
@@ -1803,7 +1666,6 @@ agis:903 a skos:Concept, :DirectPaymentCrop ;
         "Surfaces dont l'affectation principale n'est pas l'exploitation agricole (terrains à bâtir équipés et surfaces comprises dans les terrains de golf et de camping, aérodromes et terrains d'entraînement militaire, surfaces délimitées des bas-côtés des lignes de chemins de fer, de routes publiques, de cours et de plans d'eau)"@fr,
         "Superfici la cui destinazione principale non è l'utilizzazione agricola (quelle inserite in terreni edificabili urbanizzati, da golf, da equitazione, da campeggio, di aerodromi e d'esercitazione militare o che rientrano nella zona delimitata di ferrovie, strade pubbliche e corsi d'acqua)"@it ;
     schema:validFrom 1999 ;
-    schema:validTo cube:Undefined ;
     skos:inScheme agis:ConceptScheme ;
     skos:broader agis:12 ;
     :cultivationType cultivationtype:903 .
@@ -1814,7 +1676,6 @@ agis:904 a skos:Concept, :DirectPaymentCrop ;
         "Fossés humides, mares, étangs"@fr,
         "Fossati umidi, stagni, pozze"@it ;
     schema:validFrom 1999 ;
-    schema:validTo cube:Undefined ;
     skos:inScheme agis:ConceptScheme ;
     skos:broader agis:12 ;
     :cultivationType cultivationtype:904 .
@@ -1825,7 +1686,6 @@ agis:905 a skos:Concept, :DirectPaymentCrop ;
         "Surfaces rudérales, tas d'épierrage et affleurements rocheux"@fr,
         "Superfici ruderali, cumuli di pietra, affioramenti rocciosi"@it ;
     schema:validFrom 1999 ;
-    schema:validTo cube:Undefined ;
     skos:inScheme agis:ConceptScheme ;
     skos:broader agis:12 ;
     :cultivationType cultivationtype:905 .
@@ -1836,7 +1696,6 @@ agis:906 a skos:Concept, :DirectPaymentCrop ;
         "Murs de pierres sèches"@fr,
         "Muri a secco"@it ;
     schema:validFrom 1999 ;
-    schema:validTo cube:Undefined ;
     skos:inScheme agis:ConceptScheme ;
     skos:broader agis:12 ;
     :cultivationType cultivationtype:906 .
@@ -1847,7 +1706,6 @@ agis:907 a skos:Concept, :DirectPaymentCrop ;
         "Chemins naturels non stabilisés"@fr,
         "Sentieri e accessi naturali non consolidati"@it ;
     schema:validFrom 1999 ;
-    schema:validTo cube:Undefined ;
     skos:inScheme agis:ConceptScheme ;
     skos:broader agis:12 ;
     :cultivationType cultivationtype:907 .
@@ -1858,7 +1716,6 @@ agis:908 a skos:Concept, :DirectPaymentCrop ;
         "Surfaces de promotion de la biodiversité spécifiques à la région"@fr,
         "Superfici per la promozione della biodiversità specifiche di una regione"@it ;
     schema:validFrom 1999 ;
-    schema:validTo cube:Undefined ;
     skos:inScheme agis:ConceptScheme ;
     skos:broader agis:12 ;
     :cultivationType cultivationtype:908 .
@@ -1869,7 +1726,6 @@ agis:909 a skos:Concept, :DirectPaymentCrop ;
         "Jardins potager"@fr,
         "Giardini e orti domestici"@it ;
     schema:validFrom 1999 ;
-    schema:validTo cube:Undefined ;
     skos:inScheme agis:ConceptScheme ;
     skos:broader agis:12 ;
     :cultivationType cultivationtype:909 .
@@ -1880,7 +1736,6 @@ agis:911 a skos:Concept, :DirectPaymentCrop ;
         "Production agricole dans des bâtiments (p.ex. champignons, chicorée witloof)"@fr,
         "Produzione agricola in edifici (p.es. funghi, cicoria belga)"@it ;
     schema:validFrom 2015 ;
-    schema:validTo cube:Undefined ;
     skos:inScheme agis:ConceptScheme ;
     skos:broader agis:12 ;
     :cultivationType cultivationtype:911 .
@@ -1891,7 +1746,6 @@ agis:921 a skos:Concept, :DirectPaymentCrop ;
         "Arbres fruitiers haute-tige"@fr,
         "Alberi da frutto ad alto fusto nei campi"@it ;
     schema:validFrom 1999 ;
-    schema:validTo cube:Undefined ;
     skos:inScheme agis:ConceptScheme ;
     skos:broader agis:20 ;
     :cultivationType cultivationtype:921 .
@@ -1902,7 +1756,6 @@ agis:922 a skos:Concept, :DirectPaymentCrop ;
         "Noyers"@fr,
         "Noci"@it ;
     schema:validFrom 2014 ;
-    schema:validTo cube:Undefined ;
     skos:inScheme agis:ConceptScheme ;
     skos:broader agis:20 ;
     :cultivationType cultivationtype:922 .
@@ -1913,7 +1766,6 @@ agis:923 a skos:Concept, :DirectPaymentCrop ;
         "Châtaigniers"@fr,
         "Castagni"@it ;
     schema:validFrom 2014 ;
-    schema:validTo cube:Undefined ;
     skos:inScheme agis:ConceptScheme ;
     skos:broader agis:20 ;
     :cultivationType cultivationtype:923 .
@@ -1924,7 +1776,6 @@ agis:924 a skos:Concept, :DirectPaymentCrop ;
         "Arbres isolés indigènes adaptés au site et allées d'arbres"@fr,
         "Alberi indigeni isolati adatti al luogo e viali alberati"@it ;
     schema:validFrom 1999 ;
-    schema:validTo cube:Undefined ;
     skos:inScheme agis:ConceptScheme ;
     skos:broader agis:20 ;
     :cultivationType cultivationtype:924 .
@@ -1935,7 +1786,6 @@ agis:925 a skos:Concept, :DirectPaymentCrop ;
         "Arbres isolés remarquables"@fr,
         "Alberi isolati importanti"@it ;
     schema:validFrom 2014 ;
-    schema:validTo cube:Undefined ;
     skos:inScheme agis:ConceptScheme ;
     skos:broader agis:20 ;
     :cultivationType cultivationtype:925 .
@@ -1946,7 +1796,6 @@ agis:926 a skos:Concept, :DirectPaymentCrop ;
         "Autres arbres"@fr,
         "Altri alberi"@it ;
     schema:validFrom 2014 ;
-    schema:validTo cube:Undefined ;
     skos:inScheme agis:ConceptScheme ;
     skos:broader agis:20 ;
     :cultivationType cultivationtype:926 .
@@ -1957,7 +1806,6 @@ agis:927 a skos:Concept, :DirectPaymentCrop ;
         "Autres arbres (surfaces de promotion de la biodiversité spécifiques à la région)"@fr,
         "Altri alberi (superfici per la promozione della biodiversità specifiche di una regione)"@it ;
     schema:validFrom 2016 ;
-    schema:validTo cube:Undefined ;
     skos:inScheme agis:ConceptScheme ;
     skos:broader agis:20 ;
     :cultivationType cultivationtype:927 .
@@ -1968,7 +1816,6 @@ agis:928 a skos:Concept, :DirectPaymentCrop ;
         "Autres éléments (surfaces de promotion de la biodiversité spécifiques à la région)"@fr,
         "Altri elementi (superficie per la promozione della biodiversità specifica di una regione)"@it ;
     schema:validFrom 2016 ;
-    schema:validTo cube:Undefined ;
     skos:inScheme agis:ConceptScheme ;
     skos:broader agis:20 ;
     :cultivationType cultivationtype:928 .
@@ -1979,7 +1826,6 @@ agis:929 a skos:Concept, :DirectPaymentCrop ;
         "Autres éléments (qualité du paysage)"@fr,
         "Altri elementi (qualità del paesaggio)"@it ;
     schema:validFrom 2016 ;
-    schema:validTo cube:Undefined ;
     skos:inScheme agis:ConceptScheme ;
     skos:broader agis:20 ;
     :cultivationType cultivationtype:929 .
@@ -1990,7 +1836,6 @@ agis:930 a skos:Concept, :DirectPaymentCrop ;
         "Pâturages d'estivage"@fr,
         "Pascoli d'estivazione"@it ;
     schema:validFrom 1999 ;
-    schema:validTo cube:Undefined ;
     skos:inScheme agis:ConceptScheme ;
     skos:broader agis:13 ;
     :cultivationType cultivationtype:930 .
@@ -2001,7 +1846,6 @@ agis:931 a skos:Concept, :DirectPaymentCrop ;
         "Surfaces herbagères et surfaces à litière riches en espèces dans la région d'estivage"@fr,
         "Superfici inerbite e terreni da strame ricchi di specie nella regione d'estivazione"@it ;
     schema:validFrom 2014 ;
-    schema:validTo cube:Undefined ;
     skos:inScheme agis:ConceptScheme ;
     skos:broader agis:13 ;
     :cultivationType cultivationtype:931 .
@@ -2012,7 +1856,6 @@ agis:933 a skos:Concept, :DirectPaymentCrop ;
         "Pâturages communautaires"@fr,
         "Pascoli comunitari"@it ;
     schema:validFrom 2014 ;
-    schema:validTo cube:Undefined ;
     skos:inScheme agis:ConceptScheme ;
     skos:broader agis:13 ;
     :cultivationType cultivationtype:933 .
@@ -2023,7 +1866,6 @@ agis:935 a skos:Concept, :DirectPaymentCrop ;
         "Prairies de fauche en région d'estivage, pour l'affouragement pendant l'estivage"@fr,
         "Prati da sfalcio nella regione d'estivazione, per l'alimentazione durante l'estivazione"@it ;
     schema:validFrom 2014 ;
-    schema:validTo cube:Undefined ;
     skos:inScheme agis:ConceptScheme ;
     skos:broader agis:13 ;
     :cultivationType cultivationtype:935 .
@@ -2034,7 +1876,6 @@ agis:936 a skos:Concept, :DirectPaymentCrop ;
         "Surfaces à litière, région d'estivage"@fr,
         "Terreni da strame nella regione d'estivazione"@it ;
     schema:validFrom 2014 ;
-    schema:validTo cube:Undefined ;
     skos:inScheme agis:ConceptScheme ;
     skos:broader agis:13 ;
     :cultivationType cultivationtype:936 .
@@ -2045,7 +1886,6 @@ agis:998 a skos:Concept, :DirectPaymentCrop ;
         "Autres surfaces hors de la surface agricole utile"@fr,
         "Altre superfici fuori della superficie agricola utile"@it ;
     schema:validFrom 1999 ;
-    schema:validTo cube:Undefined ;
     skos:inScheme agis:ConceptScheme ;
     skos:broader agis:12 ;
     :cultivationType cultivationtype:998 .
