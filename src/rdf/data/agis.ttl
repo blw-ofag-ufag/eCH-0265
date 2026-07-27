@@ -101,7 +101,7 @@ agis:21 a skos:Concept ;
     :cultivationType cultivationtype:21 .
 
 # ==============================================================================
-# OBSERVATIONS
+# Direktzahlungskulturen
 # ==============================================================================
 
 agis:501 a skos:Concept, :DirectPaymentCrop ;
