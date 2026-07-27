@@ -50,25 +50,41 @@ agis:ConceptScheme a skos:ConceptScheme ;
 # ==============================================================================
 
 agis:1 a skos:Concept ;
-    schema:name "Ackerfläche"@de ;
+    schema:name "Ackerfläche"@de,
+        "Terres cultivées"@fr,
+        "Superficie coltiva"@it ;
     skos:topConceptOf agis:ConceptScheme ;
     skos:inScheme agis:ConceptScheme ;
     :cultivationType cultivationtype:1 .
 
 agis:7 a skos:Concept ;
-    schema:name "Geschützter Anbau"@de ;
+    schema:name "Geschützter Anbau"@de,
+        "Cultures protégées"@fr,
+        "Colture protette tutto l’anno"@it ;
     skos:topConceptOf agis:ConceptScheme ;
     skos:inScheme agis:ConceptScheme ;
     :cultivationType cultivationtype:7 .
 
+agis:10 a skos:Concept ;
+    schema:name "Weitere Flächen innerhalb der landwirtschaftlichen Nutzfläche"@de,
+        "Autres surfaces comprises dans la surface agricole utile"@fr,
+        "Altre superfici all’interno della superficie agricola utile"@it ;
+    skos:topConceptOf agis:ConceptScheme ;
+    skos:inScheme agis:ConceptScheme ;
+    :cultivationType cultivationtype:10 .
+
 agis:12 a skos:Concept ;
-    schema:name "Flächen ausserhalb der landwirtschaftlichen Nutzfläche"@de ;
+    schema:name "Flächen ausserhalb der landwirtschaftlichen Nutzfläche"@de,
+        "Surfaces en dehors de la surface agricole utile"@fr,
+        "Superfici fuori della superficie agricola utilizzata"@it ;
     skos:topConceptOf agis:ConceptScheme ;
     skos:inScheme agis:ConceptScheme ;
     :cultivationType cultivationtype:12 .
 
 agis:13 a skos:Concept ;
-    schema:name "Sömmerungsfläche"@de ;
+    schema:name "Sömmerungsfläche"@de,
+        "Surface d’estivage"@fr,
+        "Superfici d’estivazione"@it ;
     skos:topConceptOf agis:ConceptScheme ;
     skos:inScheme agis:ConceptScheme ;
     :cultivationType cultivationtype:13 .
