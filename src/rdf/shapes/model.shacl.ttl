@@ -51,8 +51,9 @@ In this project, we propose a unified master data system for crops and crop-rela
 # ==============================================================================
 
 shape:CultivationType a sh:NodeShape ;
-    rdfs:label "Cultivation type"@en ;
-    rdfs:comment "This is the core class for the classification of 'cultivations', i.e. for crops. (Partial) translation of other crop types is possible via the hierarchy modelled with this class. For the general hierachy modelling, we use the [RDF schema (RDFS)](https://www.w3.org/TR/rdf-schema/) as well as the [Web Ontology Language (OWL)](https://www.w3.org/TR/owl-guide/)."@en ;
+    rdfs:label "Cultivation type"@en,
+        "Nutzungstyp"@de ;
+    rdfs:comment "Die Kernklasse für die Klassifikation von «Kulturen», bzw. Landnutzungen. Eine (teilweise) Übersetzung anderer Kulturarten ist über die mit dieser Klasse modellierte Hierarchie möglich. Für die allgemeine Hierarchiemodellierung wird das [*RDF-Schema* (RDFS)](https://www.w3.org/TR/rdf-schema/) sowie die [*Web Ontology Language* (OWL)](https://www.w3.org/TR/owl-guide/) verwendet."@de ;
     sh:closed true ;
     sh:targetClass :CultivationType ;
     sh:ignoredProperties ( rdf:type owl:intersectionOf owl:unionOf owl:equivalentClass skos:exactMatch skos:broadMatch skos:narrowMatch ) ;
@@ -88,6 +89,7 @@ shape:CultivationType a sh:NodeShape ;
     ],
     [
         sh:order 2 ;
+        sh:name "Alternate name"@en, "Alias"@de ;
         sh:path schema:alternateName ;
         sh:nodeKind sh:Literal ;
         sh:datatype rdf:langString ;
@@ -95,7 +97,8 @@ shape:CultivationType a sh:NodeShape ;
     [
         sh:order 3 ;
         sh:path schema:description ;
-        sh:name "Description"@en, "Beschreibung"@de ;
+        sh:name "Description"@en,
+            "Beschreibung"@de ;
         sh:description "Textual description of this cultivation type."@en ;
         sh:nodeKind sh:Literal ;
         sh:datatype rdf:langString ;
@@ -133,7 +136,8 @@ shape:CultivationType a sh:NodeShape ;
     ],
     [
         sh:order 9 ;
-        sh:name "Botanical plant"@en ;
+        sh:name "Botanical plant"@en,
+            "Botanische Pflanze"@de ;
         sh:description "A plant taxon that specify a given cultivation type. For example, \"winter wheat\" has botanical plant *Triticum aestivum*. Note that while the first describes a form of cultivations, the latter describes a class of plant individuals."@en ;
         sh:path :botanicalPlant ;
         sh:nodeKind sh:IRI ;
@@ -141,7 +145,8 @@ shape:CultivationType a sh:NodeShape ;
     ],
     [
         sh:order 10 ;
-        sh:name "Management intensity"@en, "Anbauintensität"@de ;
+        sh:name "Management intensity"@en,
+            "Anbauintensität"@de ;
         schema:description "Anbauintensität, mit welcher Flächen der Bezugsklasse bewirtschaftet werden."@de ;
         sh:path :managementIntensity ;
         sh:nodeKind sh:IRI ;
@@ -189,8 +194,10 @@ shape:DirectPaymentAreaCategory a sh:NodeShape ;
         shape:cultivationType .
 
 shape:DirectPaymentCrop a sh:NodeShape ;
-    rdfs:label "Direct payment crop"@en ;
-    rdfs:comment "A classification scheme built for the Swiss direct payment system"@en ;
+    rdfs:label "Direct payment crop"@en,
+        "Direktzahlungskultur"@de ;
+    rdfs:comment "A classification scheme built for the Swiss direct payment system"@en,
+        "Beschreibt eine Liste der «Kulturen», die gemäss Direktzahlungsverordnung (DZV) im Bereich Landwirtschaft relevant sind. Diese «Kulturen» werden für den Direktzahlungsvollzug verwendet. Sie entsprechen den Hauptkulturen."@de ;
     sh:closed true ;
     sh:ignoredProperties ( rdf:type skos:exactMatch skos:broadMatch skos:narrowMatch ) ;
     
@@ -233,6 +240,9 @@ shape:DirectPaymentCrop a sh:NodeShape ;
             sh:order 3 ;
             sh:name "Identifikator"@de ;
             sh:description "Der LNF-Code, auch Kulturcode genannt, ist der allgemein gebräuchliche Identifikator für Direktzahlungskulturen in der Schweiz."@de ;
+            a cube:KeyDimension ;
+            sh:name "LNF-Code"@de ;
+            sh:description "Auch Kulturcode genannt, ist der allgemein gebräuchliche Identifikator für Direktzahlungskulturen in der Schweiz."@de ;
             sh:maxCount 1 ;
             sh:minCount 1 ;
             sh:path schema:identifier ;
@@ -240,8 +250,9 @@ shape:DirectPaymentCrop a sh:NodeShape ;
             sh:datatype xsd:string ;
         ],
         [
-            sh:order 4 ;
-            sh:name "Bezeichnung"@de, "Name"@en ;
+            sh:order 2 ;
+            sh:name "Name"@de, "Name"@en ;
+            sh:description "Die offizielle Bezeichnung dieser Direktzahlungskultur, abgegelichen mit der Landwirtschaftlichen Begriffsverordnung (LBV)."@de ;
             sh:minCount 1 ;
             sh:path schema:name ;
             sh:nodeKind sh:Literal ;
@@ -273,7 +284,8 @@ shape:DirectPaymentCrop a sh:NodeShape ;
 # ==============================================================================
 
 shape:NutrientBalanceCrop a sh:NodeShape ;
-    rdfs:label "Nutrient Balance Crop"@en ;
+    rdfs:label "Kultur der Nährstoffbilanz"@de,
+        "Nutrient Balance Crop"@en ;
     sh:closed true ;
     sh:ignoredProperties ( rdf:type skos:exactMatch skos:broadMatch skos:narrowMatch ) ;
     sh:targetClass :NutrientBalanceCrop ;
@@ -362,8 +374,9 @@ shape:NutrientBalanceCrop a sh:NodeShape ;
 # ==============================================================================
 
 shape:PlantProtectionCrop a sh:NodeShape ;
-    rdfs:label "Plant protection crop"@en ;
-    rdfs:comment "Crop of the Swiss registry of plant protection products"@en ;
+    rdfs:label "Pflanzenschutzmittel-Kultur"@de,
+        "Plant protection crop"@en ;
+    rdfs:comment "Kultur, wie sie im [Pflanzenschutzmittelverzeichnis](https://psm.admin.ch/) modelliert ist. Diese Kulturen sind über die Attribute `schema:isPartOf` sowie `schema:hasPart` hierarchisch organisiert."@de ;
     sh:closed true ;
     sh:ignoredProperties ( rdf:type skos:exactMatch skos:broadMatch skos:narrowMatch ) ;
     sh:targetClass :PlantProtectionCrop ;
@@ -372,7 +385,7 @@ shape:PlantProtectionCrop a sh:NodeShape ;
         [
             sh:order 2 ;
             sh:name "Name"@de ;
-            sh:description "Der in Infofito eingetragene Name dieser Kultur"@de ;
+            sh:description "Der in Infofito eingetragene Name dieser Kultur."@de ;
             sh:maxCount 4 ;
             sh:minCount 2 ;
             sh:languageIn ( "de" "fr" "it" "en" ) ;
@@ -426,7 +439,8 @@ shape:identifier a sh:PropertyShape ;
 
 shape:cultivationType a sh:PropertyShape ;
     sh:order 0 ;
-    sh:name "Kultivierungstyp"@de, "Cultivation type"@en ;
+    sh:name "Kultivierungstyp"@de,
+        "Cultivation type"@en ;
     sh:description "The corresponding cultivation type in the crops ontology that semantically describes this crop."@en ;
     sh:path :cultivationType ;
     sh:minCount 0 ;
