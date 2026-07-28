@@ -876,8 +876,7 @@ psm:147 a :PlantProtectionCrop  ;
     schema:name "leere Lagerräume"@de,
         "Êntrepôts vides"@fr,
         "Locali di stoccaggio vuoti"@it ;
-    schema:version 0 ;
-    :cultivationType cube:Undefined .
+    schema:version 0 .
 
 psm:148 a :PlantProtectionCrop  ;
     schema:identifier "7D65DFD2-C26E-4CAB-9E2C-66A6C7CBA641" ;
@@ -1160,8 +1159,7 @@ psm:176 a :PlantProtectionCrop  ;
         "Lager- und Produktionsräume allg."@en,
         "Lager- und Produktionsräume allg."@fr,
         "Lager- und Produktionsräume allg."@it ;
-    schema:version 0 ;
-    :cultivationType cube:Undefined .
+    schema:version 0 .
 
 psm:177 a :PlantProtectionCrop  ;
     schema:identifier "2314EB9F-7207-409F-A0D4-89B6A1177363" ;
@@ -1232,8 +1230,7 @@ psm:185 a :PlantProtectionCrop  ;
     schema:name "Leere Produktionsräume"@de,
         "Locaux de production vides"@fr,
         "Locali di produzione vuoti"@it ;
-    schema:version 0 ;
-    :cultivationType cube:Undefined .
+    schema:version 0 .
 
 psm:186 a :PlantProtectionCrop  ;
     schema:identifier "6EDA1989-51C8-490E-90FD-974CE3E8FF03" ;
@@ -1387,8 +1384,7 @@ psm:200 a :PlantProtectionCrop  ;
     schema:name "Verarbeitungsräume"@de,
         "locaux de transformation"@fr,
         "Locali per la lavorazione"@it ;
-    schema:version 0 ;
-    :cultivationType cube:Undefined .
+    schema:version 0 .
 
 psm:201 a :PlantProtectionCrop  ;
     schema:identifier "4465118D-78E7-4748-A47A-7F39E593771A" ;
@@ -1642,8 +1638,7 @@ psm:227 a :PlantProtectionCrop  ;
     schema:name "Humusdeponie"@de,
         "dépôt de terre végétale"@fr,
         "Deposito di terreno vegetale"@it ;
-    schema:version 0 ;
-    :cultivationType cube:Undefined .
+    schema:version 0 .
 
 psm:228 a :PlantProtectionCrop  ;
     schema:identifier "BBD16782-6EB3-4923-9DBB-CC7D97EBCB0E" ;
@@ -1678,8 +1673,7 @@ psm:230 a :PlantProtectionCrop  ;
     schema:name "Pflanzen"@de,
         "plantes"@fr,
         "Piante"@it ;
-    schema:version 0 ;
-    :cultivationType cube:Undefined .
+    schema:version 0 .
 
 psm:231 a :PlantProtectionCrop  ;
     schema:identifier "91522E50-F1AC-42B1-870B-68218110C235" ;
@@ -1714,8 +1708,7 @@ psm:234 a :PlantProtectionCrop  ;
     schema:name "Allgemein Vorratsschutz"@de,
         "protection des récoltes"@fr,
         "Protezione delle scorte (in generale)"@it ;
-    schema:version 0 ;
-    :cultivationType cube:Undefined .
+    schema:version 0 .
 
 psm:235 a :PlantProtectionCrop  ;
     schema:identifier "8303C191-3315-4942-91DF-668C019850D7" ;
@@ -1769,8 +1762,7 @@ psm:24 a :PlantProtectionCrop  ;
     schema:name "Einrichtungen und Geräte"@de,
         "installations et outils"@fr,
         "Installazioni e apparecchi"@it ;
-    schema:version 0 ;
-    :cultivationType cube:Undefined .
+    schema:version 0 .
 
 psm:240 a :PlantProtectionCrop  ;
     schema:identifier "85BB3788-27A8-4E73-800A-0E8F154EC0BE" ;
@@ -1787,8 +1779,7 @@ psm:241 a :PlantProtectionCrop  ;
     schema:name "Böschungen und Grünstreifen entlang von Verkehrswegen (gem. ChemRRV)"@de,
         "talus et bandes vertes le long des voies de communication (selon ORRChim)"@fr,
         "Scarpate e strisce verdi lungo le vie di comunicazione (conformemente ORRPChim)"@it ;
-    schema:version 0 ;
-    :cultivationType cube:Undefined .
+    schema:version 0 .
 
 psm:242 a :PlantProtectionCrop  ;
     schema:identifier "8BDDCACC-13C1-4676-9322-402ECF20BE85" ;
@@ -1814,8 +1805,7 @@ psm:244 a :PlantProtectionCrop  ;
     schema:name "leere Verarbeitungsräume"@de,
         "Locaux de transformation vides"@fr,
         "Locali per la lavorazione vuoti"@it ;
-    schema:version 0 ;
-    :cultivationType cube:Undefined .
+    schema:version 0 .
 
 psm:245 a :PlantProtectionCrop  ;
     schema:identifier "83C510D2-293A-4E1B-B691-06B1F02149B4" ;
@@ -1922,8 +1912,7 @@ psm:255 a :PlantProtectionCrop  ;
     schema:name "Lagerhallen, Mühlen, Silogebäude"@de,
         "entrepôts, moulins, silos"@fr,
         "Depositi, mulini, sili"@it ;
-    schema:version 0 ;
-    :cultivationType cube:Undefined .
+    schema:version 0 .
 
 psm:256 a :PlantProtectionCrop  ;
     schema:identifier "A9F01BDE-468A-477A-8ED5-704359B663F6" ;
@@ -2277,16 +2266,14 @@ psm:292 a :PlantProtectionCrop  ;
     schema:name "Holzpaletten, Packholz, Stammholz"@de,
         "Palette en bois, bois d'emballage, bois en général"@fr,
         "Palette in legno, legno da imballaggio, legno non lavorato"@it ;
-    schema:version 0 ;
-    :cultivationType cube:Undefined .
+    schema:version 0 .
 
 psm:293 a :PlantProtectionCrop  ;
     schema:identifier "7F20F06C-C950-49B9-A78F-9E2F696B079E" ;
     schema:name "Nichtkulturland allg."@de,
         "domaine non agricole en général"@fr,
         "Superfici non coltive in generale"@it ;
-    schema:version 0 ;
-    :cultivationType cube:Undefined .
+    schema:version 0 .
 
 psm:294 a :PlantProtectionCrop  ;
     schema:identifier "B4368C0E-9129-4C6C-A752-747D00073ADF" ;
@@ -2706,8 +2693,7 @@ psm:336 a :PlantProtectionCrop  ;
     schema:name "Tabak produzierende Betriebe"@de,
         "Les exploitations tabacoles"@fr,
         "Aziende produttrici di tabacco"@it ;
-    schema:version 0 ;
-    :cultivationType cube:Undefined .
+    schema:version 0 .
 
 psm:337 a :PlantProtectionCrop ;
     schema:identifier "0FEBE55E-236F-483E-AE05-88A35B181A55" ;
@@ -2782,8 +2768,7 @@ psm:38 a :PlantProtectionCrop  ;
     schema:name "Liegendes Rundholz im Wald und auf Lagerplätzen"@de,
         "grumes en forêt et sur les places de stockage"@fr,
         "Tronchi abbattuti nella foresta e presso piazzali di deposito"@it ;
-    schema:version 0 ;
-    :cultivationType cube:Undefined .
+    schema:version 0 .
 
 psm:39 a :PlantProtectionCrop  ;
     schema:identifier "037E11B2-128A-4194-9A5B-A3E980AE4113" ;
@@ -2890,8 +2875,7 @@ psm:49 a :PlantProtectionCrop  ;
     schema:name "Erntegut"@de,
         "denrée stockée"@fr,
         "Raccolto stoccato"@it ;
-    schema:version 0 ;
-    :cultivationType cube:Undefined .
+    schema:version 0 .
 
 psm:5 a :PlantProtectionCrop  ;
     schema:identifier "B542EC7D-B423-43B4-9010-82A6889BB3B4" ;
@@ -2945,8 +2929,7 @@ psm:54 a :PlantProtectionCrop  ;
     schema:name "Auf und an National- und Kantonsstrassen (gem. ChemRRV)"@de,
         "le long des routes nationales et cantonales  (selon ORRChim)"@fr,
         "Lungo le strade nazionali e cantonali (conformemente ORRPChim)"@it ;
-    schema:version 0 ;
-    :cultivationType cube:Undefined .
+    schema:version 0 .
 
 psm:55 a :PlantProtectionCrop  ;
     schema:identifier "C3F940E4-D07C-4F4D-851C-D1024F8A6A62" ;
@@ -3347,8 +3330,7 @@ psm:97 a :PlantProtectionCrop  ;
     schema:name "Lagerräume"@de,
         "entrepôts"@fr,
         "Depositi"@it ;
-    schema:version 2 ;
-    :cultivationType cube:Undefined .
+    schema:version 2 .
 
 psm:98 a :PlantProtectionCrop  ;
     schema:identifier "E2A335E5-D797-46E7-9CE4-9CB3F301AAA2" ;

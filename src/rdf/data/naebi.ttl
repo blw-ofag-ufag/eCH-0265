@@ -582,8 +582,7 @@ naebi:115 a :NutrientBalanceCrop  ;
     :N2 0.0 ;
     :P2O5 0.08 ;
     :cultivationCategory cultivationtype:1 ;
-    :cultivationSubCategory cultivationtype:17 ;
-    :cultivationType cube:Undefined .
+    :cultivationSubCategory cultivationtype:17 .
 
 naebi:116 a :NutrientBalanceCrop  ;
     schema:identifier "CROP_KARPFE_N" ;
@@ -1121,8 +1120,7 @@ naebi:16 a :NutrientBalanceCrop  ;
     :N2 0.0 ;
     :P2O5 0.52 ;
     :cultivationCategory cultivationtype:464 ;
-    :cultivationSubCategory cultivationtype:463 ;
-    :cultivationType cube:Undefined .
+    :cultivationSubCategory cultivationtype:463 .
 
 naebi:160 a :NutrientBalanceCrop  ;
     schema:identifier "CROP_ORGNO" ;
@@ -2210,8 +2208,7 @@ naebi:249 a :NutrientBalanceCrop  ;
     :N2 0.0 ;
     :P2O5 0.19 ;
     :cultivationCategory cultivationtype:1 ;
-    :cultivationSubCategory cultivationtype:466 ;
-    :cultivationType cube:Undefined .
+    :cultivationSubCategory cultivationtype:466 .
 
 naebi:25 a :NutrientBalanceCrop  ;
     schema:identifier "CROP_BONIONW" ;
@@ -2429,8 +2426,7 @@ naebi:268 a :NutrientBalanceCrop  ;
     :N2 80.0 ;
     :P2O5 60.0 ;
     :cultivationCategory cultivationtype:1 ;
-    :cultivationSubCategory cultivationtype:462 ;
-    :cultivationType cube:Undefined .
+    :cultivationSubCategory cultivationtype:462 .
 
 naebi:269 a :NutrientBalanceCrop  ;
     schema:identifier "CROP_TGEYH" ;
@@ -3606,8 +3602,7 @@ naebi:82 a :NutrientBalanceCrop  ;
     :N2 0.0 ;
     :P2O5 0.22 ;
     :cultivationCategory cultivationtype:464 ;
-    :cultivationSubCategory cultivationtype:463 ;
-    :cultivationType cube:Undefined .
+    :cultivationSubCategory cultivationtype:463 .
 
 naebi:83 a :NutrientBalanceCrop  ;
     schema:identifier "CROP_FRUB" ;
