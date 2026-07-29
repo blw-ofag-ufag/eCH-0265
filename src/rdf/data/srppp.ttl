@@ -51,7 +51,7 @@ psm:ConceptScheme a skos:ConceptScheme ;
 psm:1 a skos:Concept ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "00D94F57-BA6F-4BA0-8F68-26D4C497539A" ;
-    schema:isPartOf psm:329 ;
+    skos:broader psm:329 ;
     schema:name "Ein- und zweijährige Zierpflanzen"@de,
         "plantes ornementales annuelles et bisannuelles"@fr,
         "Piante ornamentali annuali e biennali"@it ;
@@ -61,7 +61,7 @@ psm:1 a skos:Concept ;
 psm:10 a skos:Concept ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "9C6CEE37-8105-4E48-9CA4-11BA3AB556FB" ;
-    schema:isPartOf psm:145,
+    skos:broader psm:145,
         psm:310 ;
     schema:name "Gerbera"@de,
         "Gerbera"@en,
@@ -73,7 +73,7 @@ psm:10 a skos:Concept ;
 psm:100 a skos:Concept ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "99379C08-8682-4628-BD67-6E566F5130FA" ;
-    schema:isPartOf psm:27 ;
+    skos:broader psm:27 ;
     schema:name "Trockenreis"@de,
         "Riz semis sur terrain sec"@fr,
         "Riso seminato su terreno asciutto"@it ;
@@ -83,7 +83,7 @@ psm:100 a skos:Concept ;
 psm:101 a skos:Concept ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "9A9A2586-34FF-4256-8FA4-BA9F2FA38CAE" ;
-    schema:isPartOf psm:108,
+    skos:broader psm:108,
         psm:145 ;
     schema:name "Cyclame"@de,
         "cyclamen"@fr,
@@ -94,7 +94,7 @@ psm:101 a skos:Concept ;
 psm:102 a skos:Concept ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "9F6AE17C-0BE1-457A-B780-D408BCD333BF" ;
-    schema:isPartOf psm:27 ;
+    skos:broader psm:27 ;
     schema:name "Sojabohne"@de,
         "Soja"@fr,
         "Soia"@it ;
@@ -104,7 +104,7 @@ psm:102 a skos:Concept ;
 psm:103 a skos:Concept ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "9CA61204-7EA7-4F2F-BAD3-BD02EDD6A829" ;
-    schema:isPartOf psm:105 ;
+    skos:broader psm:105 ;
     schema:name "Blattsalate (Asteraceae)"@de,
         "laitues à tondre (Asteraceae)"@fr,
         "Insalate a foglie (Asteracee)"@it ;
@@ -114,7 +114,7 @@ psm:103 a skos:Concept ;
 psm:104 a skos:Concept ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "9B8F475B-C6FA-4642-9CD8-89A98A293D50" ;
-    schema:isPartOf psm:27 ;
+    skos:broader psm:27 ;
     schema:name "Mohn"@de,
         "pavot"@fr,
         "Papavero"@it ;
@@ -124,7 +124,7 @@ psm:104 a skos:Concept ;
 psm:105 a skos:Concept ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "33686F38-1E1A-4698-81E4-C40EE4494EF3" ;
-    schema:isPartOf psm:320 ;
+    skos:broader psm:320 ;
     schema:name "Lactuca-Salate"@de,
         "salades lactuca"@fr,
         "Insalate del genere Lactuca"@it ;
@@ -134,7 +134,7 @@ psm:105 a skos:Concept ;
 psm:106 a skos:Concept ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "3C2F424F-DFA0-4A59-A3DF-6E33A6B0B97E" ;
-    schema:isPartOf psm:67 ;
+    skos:broader psm:67 ;
     schema:name "Basilikum"@de,
         "basilic"@fr,
         "Basilico"@it ;
@@ -144,7 +144,7 @@ psm:106 a skos:Concept ;
 psm:107 a skos:Concept ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "2AB457D1-DB9D-4545-92FF-04A6BD2CEC08" ;
-    schema:isPartOf psm:327 ;
+    skos:broader psm:327 ;
     schema:name "Karotten"@de,
         "carotte"@fr,
         "Carote"@it ;
@@ -154,7 +154,7 @@ psm:107 a skos:Concept ;
 psm:108 a skos:Concept ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "2A05DA01-5722-46A2-BCCF-3B75C6D17BB6" ;
-    schema:isPartOf psm:329 ;
+    skos:broader psm:329 ;
     schema:name "Topf- und Kontainerpflanzen"@de,
         "plantes en pot et en container"@fr,
         "Pianta in vaso e in container"@it ;
@@ -164,7 +164,7 @@ psm:108 a skos:Concept ;
 psm:109 a skos:Concept ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "2C8A4414-AD7F-4708-9C58-BF1969131693" ;
-    schema:isPartOf psm:67 ;
+    skos:broader psm:67 ;
     schema:name "Kerbel"@de,
         "cerfeuil"@fr,
         "Cerfoglio"@it ;
@@ -174,7 +174,7 @@ psm:109 a skos:Concept ;
 psm:11 a skos:Concept ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "9BA6BDE9-AD45-4F91-A190-708D39AD5B63" ;
-    schema:isPartOf psm:27 ;
+    skos:broader psm:27 ;
     schema:name "Lein"@de,
         "Lin"@fr,
         "Lino"@it ;
@@ -184,7 +184,7 @@ psm:11 a skos:Concept ;
 psm:110 a skos:Concept ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "1BFC9694-C7DC-4D74-84B2-1418AB94A8BA" ;
-    schema:isPartOf psm:95 ;
+    skos:broader psm:95 ;
     schema:name "Artischocken"@de,
         "artichaut"@fr,
         "Carciofi"@it ;
@@ -194,7 +194,7 @@ psm:110 a skos:Concept ;
 psm:111 a skos:Concept ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "1E129025-DFD8-42D1-8A86-D90485B282A1" ;
-    schema:isPartOf psm:324 ;
+    skos:broader psm:324 ;
     schema:name "Blumenkohl"@de,
         "chou-fleur"@fr,
         "Cavolfiore"@it ;
@@ -204,7 +204,7 @@ psm:111 a skos:Concept ;
 psm:112 a skos:Concept ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "1D9F568C-5170-43A1-86B9-B25808DD6A43" ;
-    schema:isPartOf psm:85 ;
+    skos:broader psm:85 ;
     schema:name "Cherrytomaten"@de,
         "tomate-cerise"@fr,
         "Pomodoro ciliegia"@it ;
@@ -214,7 +214,7 @@ psm:112 a skos:Concept ;
 psm:113 a skos:Concept ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "24A364B9-6BD7-42A6-A9EC-AB9E94E010FF" ;
-    schema:isPartOf psm:50 ;
+    skos:broader psm:50 ;
     schema:name "Zwetschge / Pflaume"@de,
         "prunier (pruneau/prune)"@fr,
         "Prugno/Susino"@it ;
@@ -224,7 +224,7 @@ psm:113 a skos:Concept ;
 psm:114 a skos:Concept ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "24EA0CC6-D1D5-4BB4-981C-A836E3D7125D" ;
-    schema:isPartOf psm:194 ;
+    skos:broader psm:194 ;
     schema:name "Grünfläche"@de,
         "surfaces herbagères"@fr,
         "Superficie inerbita"@it ;
@@ -234,7 +234,7 @@ psm:114 a skos:Concept ;
 psm:115 a skos:Concept ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "1F004DAA-89AD-4A9D-A172-95D24B8A45FA" ;
-    schema:isPartOf psm:247 ;
+    skos:broader psm:247 ;
     schema:name "Brassica napus-Rüben"@de,
         "rave de Brassica napus"@fr,
         "Rapa di Brassica napus"@it ;
@@ -244,7 +244,7 @@ psm:115 a skos:Concept ;
 psm:116 a skos:Concept ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "E77825CE-5021-479E-B6C1-8F55766E497B" ;
-    schema:isPartOf psm:27 ;
+    skos:broader psm:27 ;
     schema:name "Wiesen und Weiden"@de,
         "Prairies et pâturages"@fr,
         "Prati e pascoli"@it ;
@@ -254,7 +254,7 @@ psm:116 a skos:Concept ;
 psm:117 a skos:Concept ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "1F0B6451-EC2C-4647-A53A-23B0EAE626B1" ;
-    schema:isPartOf psm:263 ;
+    skos:broader psm:263 ;
     schema:name "Stachys"@de,
         "crosnes du japon"@fr,
         "Tuberina"@it ;
@@ -264,7 +264,7 @@ psm:117 a skos:Concept ;
 psm:118 a skos:Concept ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "0A5F3E91-96B9-4C6D-B99C-2E6E4835F6D5" ;
-    schema:isPartOf psm:17 ;
+    skos:broader psm:17 ;
     schema:name "Nadelgehölze (Koniferen)"@de,
         "conifères"@fr,
         "Conifere"@it ;
@@ -274,7 +274,7 @@ psm:118 a skos:Concept ;
 psm:119 a skos:Concept ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "09269926-BA07-42DC-BE9D-5B34658BDBF0" ;
-    schema:isPartOf psm:235 ;
+    skos:broader psm:235 ;
     schema:name "Wassermelonen"@de,
         "pastèque"@fr,
         "Angurie"@it ;
@@ -284,7 +284,7 @@ psm:119 a skos:Concept ;
 psm:12 a skos:Concept ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "EEC471CB-C715-489D-B3E5-2A0D37DC2A90" ;
-    schema:isPartOf psm:50 ;
+    skos:broader psm:50 ;
     schema:name "Aprikose"@de,
         "abricotier"@fr,
         "Albicocco"@it ;
@@ -294,7 +294,7 @@ psm:12 a skos:Concept ;
 psm:120 a skos:Concept ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "0A3519B1-A42F-43EE-AF82-6DCF17EA8DA6" ;
-    schema:isPartOf psm:134 ;
+    skos:broader psm:134 ;
     schema:name "Knöterichgewächse (Polygonaceae)"@de,
         "polygonacées"@fr,
         "Poligonacee"@it ;
@@ -304,7 +304,7 @@ psm:120 a skos:Concept ;
 psm:121 a skos:Concept ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "095E9650-A880-4BD2-A1BB-39297582BCE6" ;
-    schema:isPartOf psm:27 ;
+    skos:broader psm:27 ;
     schema:name "Sonnenblume"@de,
         "Tournesol"@fr,
         "Girasole"@it ;
@@ -314,7 +314,7 @@ psm:121 a skos:Concept ;
 psm:122 a skos:Concept ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "ED17FD35-4C96-4D28-902B-ACEA3F4950D6" ;
-    schema:isPartOf psm:118,
+    skos:broader psm:118,
         psm:72 ;
     schema:name "Zypressengewächse"@de,
         "Cupressaceae"@en,
@@ -326,7 +326,7 @@ psm:122 a skos:Concept ;
 psm:123 a skos:Concept ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "EC349B29-6A2B-4E43-990F-C553D278DC0E" ;
-    schema:isPartOf psm:13 ;
+    skos:broader psm:13 ;
     schema:name "Hagebutten"@de,
         "rose hip"@en,
         "cynorhodon"@fr,
@@ -337,7 +337,7 @@ psm:123 a skos:Concept ;
 psm:124 a skos:Concept ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "F7BB2F1C-EDE5-4C95-931E-0B2C973F5A29" ;
-    schema:isPartOf psm:3 ;
+    skos:broader psm:3 ;
     schema:name "Bohnen mit Hülsen"@de,
         "haricots non écossés"@fr,
         "Fagioli con baccello"@it ;
@@ -347,7 +347,7 @@ psm:124 a skos:Concept ;
 psm:125 a skos:Concept ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "FD180555-9DEF-42BA-86E0-EBD31AB8FABB" ;
-    schema:isPartOf psm:309 ;
+    skos:broader psm:309 ;
     schema:name "Quitte"@de,
         "cognassier"@fr,
         "Cotogno"@it ;
@@ -357,7 +357,7 @@ psm:125 a skos:Concept ;
 psm:126 a skos:Concept ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "FD18F42C-C390-4701-B07B-B8108B33320B" ;
-    schema:isPartOf psm:309 ;
+    skos:broader psm:309 ;
     schema:name "Apfel"@de,
         "pommier"@fr,
         "Melo"@it ;
@@ -367,7 +367,7 @@ psm:126 a skos:Concept ;
 psm:127 a skos:Concept ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "F730D531-B0C8-4A20-AC4B-4F86445E2491" ;
-    schema:isPartOf psm:210,
+    skos:broader psm:210,
         psm:239 ;
     schema:name "Emmer"@de,
         "Amidonnier"@fr,
@@ -378,7 +378,7 @@ psm:127 a skos:Concept ;
 psm:128 a skos:Concept ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "F8A8C1D8-E2C7-4230-8435-4D5AEE69813E" ;
-    schema:isPartOf psm:73 ;
+    skos:broader psm:73 ;
     schema:name "Hafer"@de,
         "Avoine"@fr,
         "Avena"@it ;
@@ -388,7 +388,7 @@ psm:128 a skos:Concept ;
 psm:129 a skos:Concept ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "EE7EE009-EBD4-471D-AE85-1A98130F6119" ;
-    schema:isPartOf psm:327 ;
+    skos:broader psm:327 ;
     schema:name "Pastinake"@de,
         "Panais"@fr,
         "Pastinaca"@it ;
@@ -407,7 +407,7 @@ psm:13 a skos:Concept ;
 psm:130 a skos:Concept ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "E5B9C6F0-5C57-4A12-8ED9-D65B669B8243" ;
-    schema:isPartOf psm:95 ;
+    skos:broader psm:95 ;
     schema:name "Chicorée"@de,
         "chicorée witloof (chicorée-endive)"@fr,
         "Cicoria belga"@it ;
@@ -417,7 +417,7 @@ psm:130 a skos:Concept ;
 psm:131 a skos:Concept ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "BE3C6915-B28E-4CC8-980E-7F243F14F519" ;
-    schema:isPartOf psm:13 ;
+    skos:broader psm:13 ;
     schema:name "Ribes Arten"@de,
         "espèces de Ribes"@fr,
         "Specie di ribes"@it ;
@@ -427,7 +427,7 @@ psm:131 a skos:Concept ;
 psm:132 a skos:Concept ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "C264982A-CA81-4311-9E38-67D2D956BC78" ;
-    schema:isPartOf psm:48 ;
+    skos:broader psm:48 ;
     schema:name "Cima di Rapa"@de,
         "cima di rapa"@fr,
         "Cima di rapa"@it ;
@@ -437,7 +437,7 @@ psm:132 a skos:Concept ;
 psm:133 a skos:Concept ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "B535B6DD-517D-4A62-ACC7-2948B15175ED" ;
-    schema:isPartOf psm:141 ;
+    skos:broader psm:141 ;
     schema:name "Radicchio- und Cicorino-Typen"@de,
         "types de radicchio/trévises et cicorino"@fr,
         "Tipi di radicchio e cicorino"@it ;
@@ -456,7 +456,7 @@ psm:134 a skos:Concept ;
 psm:135 a skos:Concept ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "B82B5C60-02CB-4B7A-B3D3-A4CA34A809C3" ;
-    schema:isPartOf psm:145 ;
+    skos:broader psm:145 ;
     schema:name "Liliengewächse (Zierpflanzen)"@de,
         "liliacées (plantes ornementales)"@fr,
         "Liliacee (pianti ornamentali)"@it ;
@@ -466,7 +466,7 @@ psm:135 a skos:Concept ;
 psm:136 a skos:Concept ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "AEC07D17-6D8B-4180-A368-056A187DE2F8" ;
-    schema:isPartOf psm:312 ;
+    skos:broader psm:312 ;
     schema:name "Dahlien"@de,
         "dahlia"@fr,
         "Dalie"@it ;
@@ -476,7 +476,7 @@ psm:136 a skos:Concept ;
 psm:137 a skos:Concept ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "AE97719E-9D0F-425C-BCD7-0F5D84092113" ;
-    schema:isPartOf psm:35 ;
+    skos:broader psm:35 ;
     schema:name "Johanniskraut"@de,
         "Saint-John's-wort"@en,
         "millepertuis"@fr,
@@ -487,7 +487,7 @@ psm:137 a skos:Concept ;
 psm:138 a skos:Concept ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "AED83C4B-0546-4C91-B370-4AB5B425942F" ;
-    schema:isPartOf psm:32 ;
+    skos:broader psm:32 ;
     schema:name "Nostranogurken"@de,
         "concombre nostrano"@fr,
         "Cetriolo nostrano"@it ;
@@ -497,7 +497,7 @@ psm:138 a skos:Concept ;
 psm:139 a skos:Concept ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "BFDDCB65-6E46-47E1-90B1-A998D5BD0546" ;
-    schema:isPartOf psm:48 ;
+    skos:broader psm:48 ;
     schema:name "Asia-Salate (Brassicaceae)"@de,
         "salades Asia (Brassicaceae)"@fr,
         "Insalate asiatiche (Brassicacee)"@it ;
@@ -507,7 +507,7 @@ psm:139 a skos:Concept ;
 psm:14 a skos:Concept ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "068FF636-982B-4F95-A1C1-93E3DC0B7162" ;
-    schema:isPartOf psm:67 ;
+    skos:broader psm:67 ;
     schema:name "Liebstöckel"@de,
         "livèche"@fr,
         "Levistico"@it ;
@@ -517,7 +517,7 @@ psm:14 a skos:Concept ;
 psm:140 a skos:Concept ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "B92BA12C-EA9D-4EA8-ADEE-A4547872DD58" ;
-    schema:isPartOf psm:13 ;
+    skos:broader psm:13 ;
     schema:name "Blaue Heckenkirsche"@de,
         "camérisier bleu"@fr,
         "Caprifoglio turchino"@it ;
@@ -527,7 +527,7 @@ psm:140 a skos:Concept ;
 psm:141 a skos:Concept ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "8DB1A579-6BAC-4DCB-8026-E79B65D3BD3A" ;
-    schema:isPartOf psm:320 ;
+    skos:broader psm:320 ;
     schema:name "Endivien und Blattzichorien"@de,
         "chicorée pommée et chicorée à feuilles"@fr,
         "Indivia e cicoria da foglia"@it ;
@@ -537,7 +537,7 @@ psm:141 a skos:Concept ;
 psm:143 a skos:Concept ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "77267F83-907F-4537-98A8-7B9C1E4714F0" ;
-    schema:isPartOf psm:75 ;
+    skos:broader psm:75 ;
     schema:name "Gemüseportulak"@de,
         "pourpier commun"@fr,
         "Portulaca estiva"@it ;
@@ -547,7 +547,7 @@ psm:143 a skos:Concept ;
 psm:144 a skos:Concept ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "74C47437-5700-45F5-86E2-D410DACD39B6" ;
-    schema:isPartOf psm:175 ;
+    skos:broader psm:175 ;
     schema:name "Andenbeere"@de,
         "cape gooseberry"@en,
         "coqueret du Pérou"@fr,
@@ -558,7 +558,7 @@ psm:144 a skos:Concept ;
 psm:145 a skos:Concept ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "75317E57-B194-4B3D-8FF2-3489A39AC177" ;
-    schema:isPartOf psm:329 ;
+    skos:broader psm:329 ;
     schema:name "Blumenkulturen und Grünpflanzen"@de,
         "cultures florales et plantes vertes"@fr,
         "Colture da fiore e piante verdi"@it ;
@@ -568,7 +568,7 @@ psm:145 a skos:Concept ;
 psm:146 a skos:Concept ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "7870FD70-C44A-4788-ABEA-FB673A5FD106" ;
-    schema:isPartOf psm:239 ;
+    skos:broader psm:239 ;
     schema:name "Hartweizen"@de,
         "Blé dur"@fr,
         "Grano duro"@it ;
@@ -578,7 +578,7 @@ psm:146 a skos:Concept ;
 psm:147 a skos:Concept ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "7D23702C-980B-4B90-A86B-70013806D3EA" ;
-    schema:isPartOf psm:176 ;
+    skos:broader psm:176 ;
     schema:name "leere Lagerräume"@de,
         "Êntrepôts vides"@fr,
         "Locali di stoccaggio vuoti"@it ;
@@ -587,7 +587,7 @@ psm:147 a skos:Concept ;
 psm:148 a skos:Concept ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "7D65DFD2-C26E-4CAB-9E2C-66A6C7CBA641" ;
-    schema:isPartOf psm:197,
+    skos:broader psm:197,
         psm:210 ;
     schema:name "Wintergerste"@de,
         "Orge d'automne"@fr,
@@ -598,7 +598,7 @@ psm:148 a skos:Concept ;
 psm:149 a skos:Concept ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "7D76F5F6-5810-4556-A7D5-84C91FDE3FF2" ;
-    schema:isPartOf psm:73 ;
+    skos:broader psm:73 ;
     schema:name "Roggen"@de,
         "Seigle"@fr,
         "Segale"@it ;
@@ -608,7 +608,7 @@ psm:149 a skos:Concept ;
 psm:15 a skos:Concept ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "A067CC81-6A5D-4684-BE95-7941A51B9EF2" ;
-    schema:isPartOf psm:67 ;
+    skos:broader psm:67 ;
     schema:name "Salbei"@de,
         "sauge"@fr,
         "Salvia"@it ;
@@ -618,7 +618,7 @@ psm:15 a skos:Concept ;
 psm:150 a skos:Concept ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "77462EAB-3BD3-4EAC-B740-F95597FFAE35" ;
-    schema:isPartOf psm:186 ;
+    skos:broader psm:186 ;
     schema:name "Nüsse"@de,
         "noix"@fr,
         "Noci"@it ;
@@ -628,7 +628,7 @@ psm:150 a skos:Concept ;
 psm:151 a skos:Concept ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "7A993953-3C2F-4BC3-98EE-2EE5E83C6E77" ;
-    schema:isPartOf psm:300 ;
+    skos:broader psm:300 ;
     schema:name "Rande"@de,
         "betterave à salade"@fr,
         "Barbabietola"@it ;
@@ -638,7 +638,7 @@ psm:151 a skos:Concept ;
 psm:152 a skos:Concept ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "7CE53BA0-097D-44FB-82FF-C30DFD3769DD" ;
-    schema:isPartOf psm:48 ;
+    skos:broader psm:48 ;
     schema:name "Kresse"@de,
         "cresson de jardin"@fr,
         "Crescione"@it ;
@@ -648,7 +648,7 @@ psm:152 a skos:Concept ;
 psm:153 a skos:Concept ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "79C28385-E183-4661-AAC0-80E82C67089C" ;
-    schema:isPartOf psm:118,
+    skos:broader psm:118,
         psm:72 ;
     schema:name "Weihnachtsbäume"@de,
         "arbres de Noël"@fr,
@@ -659,7 +659,7 @@ psm:153 a skos:Concept ;
 psm:154 a skos:Concept ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "B9323B4D-249D-4CF3-A5DF-4FDA2E66532F" ;
-    schema:isPartOf psm:324 ;
+    skos:broader psm:324 ;
     schema:name "Broccoli"@de,
         "brocoli"@fr,
         "Broccoli"@it ;
@@ -669,7 +669,7 @@ psm:154 a skos:Concept ;
 psm:155 a skos:Concept ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "B75AC4CC-6BB7-4A99-808A-9F7BDFCF8E6A" ;
-    schema:isPartOf psm:108,
+    skos:broader psm:108,
         psm:145 ;
     schema:name "Pelargonien"@de,
         "géranium"@fr,
@@ -680,7 +680,7 @@ psm:155 a skos:Concept ;
 psm:156 a skos:Concept ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "516862FD-DCB0-42BF-8E18-ADA820B1DB90" ;
-    schema:isPartOf psm:177 ;
+    skos:broader psm:177 ;
     schema:name "Jungreben"@de,
         "jeune vigne"@fr,
         "Ceppi giovani"@it ;
@@ -690,7 +690,7 @@ psm:156 a skos:Concept ;
 psm:157 a skos:Concept ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "4D799EC6-1483-4D65-90EA-8DDB6A4166CA" ;
-    schema:isPartOf psm:67 ;
+    skos:broader psm:67 ;
     schema:name "Bohnenkraut"@de,
         "sarriette"@fr,
         "Santoreggia"@it ;
@@ -700,7 +700,7 @@ psm:157 a skos:Concept ;
 psm:158 a skos:Concept ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "56884AC3-B629-440D-8E82-05075A18697F" ;
-    schema:isPartOf psm:94 ;
+    skos:broader psm:94 ;
     schema:name "Knollensellerie"@de,
         "céleri-pomme"@fr,
         "Sedano rapa"@it ;
@@ -710,7 +710,7 @@ psm:158 a skos:Concept ;
 psm:159 a skos:Concept ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "42466A90-AFCD-4DA6-8769-99C4BC5BE217" ;
-    schema:isPartOf psm:41 ;
+    skos:broader psm:41 ;
     schema:name "Birne"@de,
         "poirier"@fr,
         "Pero"@it ;
@@ -720,7 +720,7 @@ psm:159 a skos:Concept ;
 psm:16 a skos:Concept ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "7971013B-801D-4595-8208-782446A6C7E0" ;
-    schema:isPartOf psm:17 ;
+    skos:broader psm:17 ;
     schema:name "Laubgehölze"@de,
         "feuillus"@fr,
         "Latifoglie"@it ;
@@ -730,7 +730,7 @@ psm:16 a skos:Concept ;
 psm:161 a skos:Concept ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "42D50BC4-0019-4B55-9CB5-6C3E86C9D112" ;
-    schema:isPartOf psm:13 ;
+    skos:broader psm:13 ;
     schema:name "Schwarzer Holunder"@de,
         "Elder berry"@en,
         "grand sureau"@fr,
@@ -741,7 +741,7 @@ psm:161 a skos:Concept ;
 psm:162 a skos:Concept ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "43FC7C18-BDA5-4364-B4CA-74EA37B7B8DC" ;
-    schema:isPartOf psm:296,
+    skos:broader psm:296,
         psm:333 ;
     schema:name "Forstliche Pflanzgärten"@de,
         "pépinières forestières"@fr,
@@ -752,7 +752,7 @@ psm:162 a skos:Concept ;
 psm:163 a skos:Concept ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "449A5380-96E3-4C3F-AB31-7CB3D0579561" ;
-    schema:isPartOf psm:73 ;
+    skos:broader psm:73 ;
     schema:name "Sommergetreide"@de,
         "Céréales de printemps"@fr,
         "Cereali primaverili"@it ;
@@ -770,7 +770,7 @@ psm:164 a skos:Concept ;
 psm:165 a skos:Concept ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "56AF3EA3-01F4-4F10-B240-7EF4BE1C1CCE" ;
-    schema:isPartOf psm:47 ;
+    skos:broader psm:47 ;
     schema:name "Puffbohne"@de,
         "fève"@fr,
         "Fave"@it ;
@@ -780,7 +780,7 @@ psm:165 a skos:Concept ;
 psm:166 a skos:Concept ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "573B50E9-ED1D-4999-B4FD-4537CA2A6306" ;
-    schema:isPartOf psm:235 ;
+    skos:broader psm:235 ;
     schema:name "Speisekürbisse (ungeniessbare Schale)"@de,
         "courges (écorce non comestible)"@fr,
         "Zucche (buccia non commestibile)"@it ;
@@ -790,7 +790,7 @@ psm:166 a skos:Concept ;
 psm:167 a skos:Concept ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "5B651459-FC70-4D22-9469-4991F847EA89" ;
-    schema:isPartOf psm:118,
+    skos:broader psm:118,
         psm:72 ;
     schema:name "Blautanne"@de,
         "sapin bleu"@fr,
@@ -801,7 +801,7 @@ psm:167 a skos:Concept ;
 psm:168 a skos:Concept ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "49F7DA15-E241-4080-9D42-1523ECA834B5" ;
-    schema:isPartOf psm:27 ;
+    skos:broader psm:27 ;
     schema:name "Färberdistel (Saflor)"@de,
         "Safflower"@en,
         "Carthame"@fr,
@@ -812,7 +812,7 @@ psm:168 a skos:Concept ;
 psm:169 a skos:Concept ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "4A386AE2-A36F-4A55-8668-7B896A1E8092" ;
-    schema:isPartOf psm:27 ;
+    skos:broader psm:27 ;
     schema:name "Chinaschilf"@de,
         "Roseau de Chine"@fr,
         "Miscanto"@it ;
@@ -822,7 +822,7 @@ psm:169 a skos:Concept ;
 psm:17 a skos:Concept ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "7B3C8CEE-526F-4381-A757-669C1864291A" ;
-    schema:isPartOf psm:329 ;
+    skos:broader psm:329 ;
     schema:name "Gehölze (ausserhalb Forst)"@de,
         "plantes ligneuses (hors forêt)"@fr,
         "Boschetti (al di fuori del bosco)"@it ;
@@ -832,7 +832,7 @@ psm:17 a skos:Concept ;
 psm:170 a skos:Concept ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "4E8A4BB8-3B5D-4695-B17C-F4C1202D5138" ;
-    schema:isPartOf psm:131 ;
+    skos:broader psm:131 ;
     schema:name "Schwarze Johannisbeere"@de,
         "cassis"@fr,
         "Ribes nero"@it ;
@@ -842,7 +842,7 @@ psm:170 a skos:Concept ;
 psm:171 a skos:Concept ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "102C28F6-4AFB-4079-909B-ACE8E0819A77" ;
-    schema:isPartOf psm:3 ;
+    skos:broader psm:3 ;
     schema:name "Bohnen ohne Hülsen"@de,
         "haricots écossés"@fr,
         "Fagioli senza baccello"@it ;
@@ -862,7 +862,7 @@ psm:172 a skos:Concept ;
 psm:173 a skos:Concept ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "4DD550C5-15BB-4D52-98BD-6770972575F0" ;
-    schema:isPartOf psm:105 ;
+    skos:broader psm:105 ;
     schema:name "Kopfsalate"@de,
         "laitues pommées"@fr,
         "Insalate cappuccio"@it ;
@@ -872,7 +872,7 @@ psm:173 a skos:Concept ;
 psm:174 a skos:Concept ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "122B909A-CE9C-47BC-B5CA-DCF523646D38" ;
-    schema:isPartOf psm:13 ;
+    skos:broader psm:13 ;
     schema:name "Eberesche"@de,
         "sorbier des oiseleurs"@fr,
         "Sorbo degli ucellatori"@it ;
@@ -882,7 +882,7 @@ psm:174 a skos:Concept ;
 psm:175 a skos:Concept ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "46901564-D096-4323-AE81-C93831AFEC64" ;
-    schema:isPartOf psm:134 ;
+    skos:broader psm:134 ;
     schema:name "Nachtschattengewächse (Solanaceae)"@de,
         "solanacées"@fr,
         "Solanacee"@it ;
@@ -901,7 +901,7 @@ psm:176 a skos:Concept ;
 psm:177 a skos:Concept ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "2314EB9F-7207-409F-A0D4-89B6A1177363" ;
-    schema:isPartOf psm:164 ;
+    skos:broader psm:164 ;
     schema:name "Reben"@de,
         "vigne"@fr,
         "Vite"@it ;
@@ -911,7 +911,7 @@ psm:177 a skos:Concept ;
 psm:179 a skos:Concept ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "62BF86AE-FD69-4F95-A72C-1D57AF1DCD99" ;
-    schema:isPartOf psm:141 ;
+    skos:broader psm:141 ;
     schema:name "Endivien"@de,
         "chicorée scarole, chicorée frisée"@fr,
         "Indivia"@it ;
@@ -921,7 +921,7 @@ psm:179 a skos:Concept ;
 psm:18 a skos:Concept ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "7B90BAC4-B80F-4039-ADC3-ADF9225CCBB7" ;
-    schema:isPartOf psm:25 ;
+    skos:broader psm:25 ;
     schema:name "Rosenkohl"@de,
         "chou de Bruxelles"@fr,
         "Cavoli di Bruxelles"@it ;
@@ -931,7 +931,7 @@ psm:18 a skos:Concept ;
 psm:180 a skos:Concept ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "6388D9E7-CD0D-4823-80DD-E6FA472AF12C" ;
-    schema:isPartOf psm:27 ;
+    skos:broader psm:27 ;
     schema:name "Klee zur Saatgutproduktion"@de,
         "Trèfles pour la production de semences"@fr,
         "Trifoglio per la produzione di sementi"@it ;
@@ -941,7 +941,7 @@ psm:180 a skos:Concept ;
 psm:181 a skos:Concept ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "52019F0F-3BAF-4161-A223-62EECBA47871" ;
-    schema:isPartOf psm:64 ;
+    skos:broader psm:64 ;
     schema:name "Mulchsaaten"@de,
         "semis sous litière"@fr,
         "Semine a lattiera"@it ;
@@ -951,7 +951,7 @@ psm:181 a skos:Concept ;
 psm:182 a skos:Concept ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "4E1ACD79-F162-4EBB-93CB-C6857A811E9C" ;
-    schema:isPartOf psm:116 ;
+    skos:broader psm:116 ;
     schema:name "Kleegrasmischung (Kunstwiese)"@de,
         "mélange trèfles-graminées (prairie arificielle)"@fr,
         "Miscela trifoglio-graminacee (prati artificiali)"@it ;
@@ -961,7 +961,7 @@ psm:182 a skos:Concept ;
 psm:183 a skos:Concept ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "54C75B64-57C4-46E2-BCEA-741EBC10FDDF" ;
-    schema:isPartOf psm:47 ;
+    skos:broader psm:47 ;
     schema:name "Linse"@de,
         "lentille"@fr,
         "Lenticchia"@it ;
@@ -971,7 +971,7 @@ psm:183 a skos:Concept ;
 psm:185 a skos:Concept ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "28ECDBFE-F44F-44C6-BF06-9B7E6EBFC1F6" ;
-    schema:isPartOf psm:176 ;
+    skos:broader psm:176 ;
     schema:name "Leere Produktionsräume"@de,
         "Locaux de production vides"@fr,
         "Locali di produzione vuoti"@it ;
@@ -980,7 +980,7 @@ psm:185 a skos:Concept ;
 psm:186 a skos:Concept ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "6EDA1989-51C8-490E-90FD-974CE3E8FF03" ;
-    schema:isPartOf psm:285 ;
+    skos:broader psm:285 ;
     schema:name "Hartschalenobst"@de,
         "noix en général"@fr,
         "Frutta con guscio"@it ;
@@ -990,7 +990,7 @@ psm:186 a skos:Concept ;
 psm:187 a skos:Concept ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "6C3D663E-442F-4783-87A2-A46806E119E5" ;
-    schema:isPartOf psm:2 ;
+    skos:broader psm:2 ;
     schema:name "Baby-Leaf (Brassicaceae)"@de,
         "Baby-Leaf (Brassicaceae)"@fr,
         "Baby-Leaf (Brassicaceae)"@it ;
@@ -1000,7 +1000,7 @@ psm:187 a skos:Concept ;
 psm:189 a skos:Concept ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "5433C814-C0CD-4815-B236-2D02E1C66F3D" ;
-    schema:isPartOf psm:57 ;
+    skos:broader psm:57 ;
     schema:name "Zuckermais"@de,
         "maïs sucré"@fr,
         "Mais dolce"@it ;
@@ -1010,7 +1010,7 @@ psm:189 a skos:Concept ;
 psm:19 a skos:Concept ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "7D52C099-7C6F-453C-8513-4BBFB94EE66A" ;
-    schema:isPartOf psm:27 ;
+    skos:broader psm:27 ;
     schema:name "Eiweisserbse"@de,
         "pois protéagineux"@fr,
         "Pisello proteico"@it ;
@@ -1020,7 +1020,7 @@ psm:19 a skos:Concept ;
 psm:190 a skos:Concept ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "5755AD92-721E-431E-8473-6FA2F340532F" ;
-    schema:isPartOf psm:286 ;
+    skos:broader psm:286 ;
     schema:name "Winterraps"@de,
         "Colza d'automne"@fr,
         "Colza autunnale"@it ;
@@ -1030,7 +1030,7 @@ psm:190 a skos:Concept ;
 psm:191 a skos:Concept ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "5DF3AB4D-7CAC-4112-90D9-67BD80EC5E96" ;
-    schema:isPartOf psm:47 ;
+    skos:broader psm:47 ;
     schema:name "Erbsen"@de,
         "pois"@fr,
         "Piselli"@it ;
@@ -1040,7 +1040,7 @@ psm:191 a skos:Concept ;
 psm:192 a skos:Concept ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "807F5A2C-7904-456D-BBC7-A80A4B207964" ;
-    schema:isPartOf psm:67 ;
+    skos:broader psm:67 ;
     schema:name "Kümmel"@de,
         "caraway"@en,
         "carvi"@fr,
@@ -1051,7 +1051,7 @@ psm:192 a skos:Concept ;
 psm:193 a skos:Concept ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "7AB6690B-B2B9-4F12-AFAE-A9B0222C2637" ;
-    schema:isPartOf psm:210,
+    skos:broader psm:210,
         psm:71 ;
     schema:name "Winterweizen"@de,
         "Blé d'automne"@fr,
@@ -1071,7 +1071,7 @@ psm:194 a skos:Concept ;
 psm:195 a skos:Concept ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "61D9C648-0736-43D4-BF04-B8643B1D74E0" ;
-    schema:isPartOf psm:145,
+    skos:broader psm:145,
         psm:4 ;
     schema:name "Hyazinthe"@de,
         "jacinthe"@fr,
@@ -1082,7 +1082,7 @@ psm:195 a skos:Concept ;
 psm:196 a skos:Concept ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "6D06A7F9-DF91-4BB5-84B8-FB877C211E66" ;
-    schema:isPartOf psm:27 ;
+    skos:broader psm:27 ;
     schema:name "Kenaf"@de,
         "Kenaf"@fr,
         "Kenaf"@it ;
@@ -1092,7 +1092,7 @@ psm:196 a skos:Concept ;
 psm:197 a skos:Concept ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "F4273CE5-EC2B-42A3-89FC-C5F63EF425D2" ;
-    schema:isPartOf psm:73 ;
+    skos:broader psm:73 ;
     schema:name "Gerste"@de,
         "Orge"@fr,
         "Orzo"@it ;
@@ -1102,7 +1102,7 @@ psm:197 a skos:Concept ;
 psm:198 a skos:Concept ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "66B27CD1-032A-456E-99C4-28F6E989CC14" ;
-    schema:isPartOf psm:113 ;
+    skos:broader psm:113 ;
     schema:name "Zwetschge"@de,
         "prunier (pruneau)"@fr,
         "Prugno"@it ;
@@ -1112,7 +1112,7 @@ psm:198 a skos:Concept ;
 psm:199 a skos:Concept ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "5C610428-6087-4A2E-B977-3E83EDBB19F0" ;
-    schema:isPartOf psm:329 ;
+    skos:broader psm:329 ;
     schema:name "Zier- und Sportrasen"@de,
         "gazon d'ornement et terrains de sport"@fr,
         "Tappeti erbosi e terreni sportivi"@it ;
@@ -1122,7 +1122,7 @@ psm:199 a skos:Concept ;
 psm:2 a skos:Concept ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "0106A8DF-6CDF-4E18-8F46-3D9E1D52D0E5" ;
-    schema:isPartOf psm:134 ;
+    skos:broader psm:134 ;
     schema:name "Baby-Leaf"@de,
         "Baby-Leaf"@fr,
         "Baby-Leaf"@it ;
@@ -1132,7 +1132,7 @@ psm:2 a skos:Concept ;
 psm:20 a skos:Concept ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "6F26F4E0-401C-4B16-A28B-4CC889907361" ;
-    schema:isPartOf psm:25 ;
+    skos:broader psm:25 ;
     schema:name "Blattkohle"@de,
         "choux à feuilles"@fr,
         "Cavoli fogliacei"@it ;
@@ -1142,7 +1142,7 @@ psm:20 a skos:Concept ;
 psm:200 a skos:Concept ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "3E4AFACC-03CA-4CEC-8392-520B07DDC604" ;
-    schema:isPartOf psm:234 ;
+    skos:broader psm:234 ;
     schema:name "Verarbeitungsräume"@de,
         "locaux de transformation"@fr,
         "Locali per la lavorazione"@it ;
@@ -1151,7 +1151,7 @@ psm:200 a skos:Concept ;
 psm:201 a skos:Concept ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "4465118D-78E7-4748-A47A-7F39E593771A" ;
-    schema:isPartOf psm:124 ;
+    skos:broader psm:124 ;
     schema:name "Stangenbohne"@de,
         "haricot à rames"@fr,
         "Fagiolo rampicante"@it ;
@@ -1161,7 +1161,7 @@ psm:201 a skos:Concept ;
 psm:202 a skos:Concept ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "3346CB25-6DC9-42AF-8BA2-F725BD92304A" ;
-    schema:isPartOf psm:95 ;
+    skos:broader psm:95 ;
     schema:name "Kardy"@de,
         "Cardy"@en,
         "cardon"@fr,
@@ -1172,7 +1172,7 @@ psm:202 a skos:Concept ;
 psm:204 a skos:Concept ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "33097BFE-2487-46DB-85A0-A8A4E06030AF" ;
-    schema:isPartOf psm:23 ;
+    skos:broader psm:23 ;
     schema:name "Azaleen"@de,
         "azalée"@fr,
         "Azalee"@it ;
@@ -1182,7 +1182,7 @@ psm:204 a skos:Concept ;
 psm:205 a skos:Concept ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "25DC9B01-CA06-426A-B743-C0D293447898" ;
-    schema:isPartOf psm:67 ;
+    skos:broader psm:67 ;
     schema:name "Römische Kamille"@de,
         "lat. Chamaemelum nobile"@en,
         "Camomille romaine"@fr,
@@ -1203,7 +1203,7 @@ psm:206 a skos:Concept ;
 psm:207 a skos:Concept ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "238AB652-AD62-4703-A74B-7550C693ED6E" ;
-    schema:isPartOf psm:32 ;
+    skos:broader psm:32 ;
     schema:name "Einlegegurken"@de,
         "cornichons"@fr,
         "cetrioli per conserva"@it ;
@@ -1213,7 +1213,7 @@ psm:207 a skos:Concept ;
 psm:208 a skos:Concept ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "25DA6F5A-1BD0-4040-A210-BB05CCB66AE4" ;
-    schema:isPartOf psm:320 ;
+    skos:broader psm:320 ;
     schema:name "Löwenzahn"@de,
         "dent-de-lion"@fr,
         "Dente di leone"@it ;
@@ -1223,7 +1223,7 @@ psm:208 a skos:Concept ;
 psm:209 a skos:Concept ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "2FAEBED2-193A-460C-A538-9B5C78024D98" ;
-    schema:isPartOf psm:134 ;
+    skos:broader psm:134 ;
     schema:name "Baldriangewächse (Valerianaceae)"@de,
         "valérianacées"@fr,
         "Valerianacee"@it ;
@@ -1233,7 +1233,7 @@ psm:209 a skos:Concept ;
 psm:21 a skos:Concept ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "6CC3F1FF-84DF-4E4A-A91E-57C5ECB82F61" ;
-    schema:isPartOf psm:175 ;
+    skos:broader psm:175 ;
     schema:name "Aubergine"@de,
         "aubergine"@fr,
         "Melanzana"@it ;
@@ -1243,7 +1243,7 @@ psm:21 a skos:Concept ;
 psm:210 a skos:Concept ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "287584B7-E43E-494B-84C2-D13B2C9C3736" ;
-    schema:isPartOf psm:73 ;
+    skos:broader psm:73 ;
     schema:name "Wintergetreide"@de,
         "Céréales d'automne"@fr,
         "Cereali autunnali"@it ;
@@ -1253,7 +1253,7 @@ psm:210 a skos:Concept ;
 psm:211 a skos:Concept ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "27ACD8EA-49E8-4C99-84D4-53E2E605390E" ;
-    schema:isPartOf psm:120 ;
+    skos:broader psm:120 ;
     schema:name "Rhabarber"@de,
         "rhubarbe"@fr,
         "Rabarbaro"@it ;
@@ -1263,7 +1263,7 @@ psm:211 a skos:Concept ;
 psm:212 a skos:Concept ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "27FBFA25-5091-4D7E-9C96-3C0BC05B6474" ;
-    schema:isPartOf psm:27 ;
+    skos:broader psm:27 ;
     schema:name "Sorghum"@de,
         "Sorgho commun"@fr,
         "Sorgo"@it ;
@@ -1273,7 +1273,7 @@ psm:212 a skos:Concept ;
 psm:213 a skos:Concept ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "293D431D-8501-4D41-A0E5-F1A5AD59C8B6" ;
-    schema:isPartOf psm:177 ;
+    skos:broader psm:177 ;
     schema:name "Ertragsreben"@de,
         "vigne en production"@fr,
         "Vite in produzione"@it ;
@@ -1283,7 +1283,7 @@ psm:213 a skos:Concept ;
 psm:214 a skos:Concept ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "FF0DF95C-A3A9-47EE-95FA-00FCB428A4ED" ;
-    schema:isPartOf psm:145 ;
+    skos:broader psm:145 ;
     schema:name "Tulpe"@de,
         "tulipe"@fr,
         "Tulipano"@it ;
@@ -1293,7 +1293,7 @@ psm:214 a skos:Concept ;
 psm:215 a skos:Concept ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "02BF379A-E526-422A-952B-3B0CD995F8C1" ;
-    schema:isPartOf psm:191 ;
+    skos:broader psm:191 ;
     schema:name "Erbsen mit Hülsen"@de,
         "pois non écossés"@fr,
         "Piselli con baccello"@it ;
@@ -1303,7 +1303,7 @@ psm:215 a skos:Concept ;
 psm:216 a skos:Concept ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "FCF24426-CAB8-43C8-9E42-B09581420287" ;
-    schema:isPartOf psm:329 ;
+    skos:broader psm:329 ;
     schema:name "Stauden"@de,
         "plantes vivaces"@fr,
         "Arbusti"@it ;
@@ -1313,7 +1313,7 @@ psm:216 a skos:Concept ;
 psm:217 a skos:Concept ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "F4479311-1516-49F1-95BA-E232030F9AAC" ;
-    schema:isPartOf psm:329 ;
+    skos:broader psm:329 ;
     schema:name "Ziergehölze (ausserhalb Forst)"@de,
         "arbustes d'ornement (hors forêt)"@fr,
         "Arbusti ornamentali (al di fuori della foresta)"@it ;
@@ -1323,7 +1323,7 @@ psm:217 a skos:Concept ;
 psm:218 a skos:Concept ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "F718EA3C-F363-4DB2-BDF6-2D6236706822" ;
-    schema:isPartOf psm:337 ;
+    skos:broader psm:337 ;
     schema:name "Schalotten"@de,
         "échalote"@fr,
         "Scalogni"@it ;
@@ -1333,7 +1333,7 @@ psm:218 a skos:Concept ;
 psm:219 a skos:Concept ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "FA8C26CF-E3B4-456D-AA4E-94D21AEADA1A" ;
-    schema:isPartOf psm:67 ;
+    skos:broader psm:67 ;
     schema:name "Schnittlauch"@de,
         "ciboulette"@fr,
         "Erba cipollina"@it ;
@@ -1343,7 +1343,7 @@ psm:219 a skos:Concept ;
 psm:22 a skos:Concept ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "657E4B0A-50BD-424B-9DB4-1B84582AD3D7" ;
-    schema:isPartOf psm:27 ;
+    skos:broader psm:27 ;
     schema:name "Ackerbohne"@de,
         "féverole"@fr,
         "Fava"@it ;
@@ -1353,7 +1353,7 @@ psm:22 a skos:Concept ;
 psm:220 a skos:Concept ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "BC86A080-EDBD-4BBC-A36A-BE41037227C4" ;
-    schema:isPartOf psm:27 ;
+    skos:broader psm:27 ;
     schema:name "Mais"@de,
         "maïs"@fr,
         "Mais"@it ;
@@ -1363,7 +1363,7 @@ psm:220 a skos:Concept ;
 psm:221 a skos:Concept ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "C5188A42-9C79-4110-B1E8-AEE9D6078BEA" ;
-    schema:isPartOf psm:191 ;
+    skos:broader psm:191 ;
     schema:name "Erbsen ohne Hülsen"@de,
         "pois écossés"@fr,
         "Piselli senza baccello"@it ;
@@ -1373,7 +1373,7 @@ psm:221 a skos:Concept ;
 psm:222 a skos:Concept ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "CB7061F0-B1D8-4AC0-9C50-A596763B68CF" ;
-    schema:isPartOf psm:329 ;
+    skos:broader psm:329 ;
     schema:name "Euphorbia"@de,
         "euphorbe"@fr,
         "Euforbia"@it ;
@@ -1383,7 +1383,7 @@ psm:222 a skos:Concept ;
 psm:223 a skos:Concept ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "9230C798-B1D0-4342-947C-C7A0988F416E" ;
-    schema:isPartOf psm:13 ;
+    skos:broader psm:13 ;
     schema:name "Erdbeere"@de,
         "fraise"@fr,
         "Fragola"@it ;
@@ -1393,7 +1393,7 @@ psm:223 a skos:Concept ;
 psm:224 a skos:Concept ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "BDB73EC5-46E5-413B-85B5-78D3801F4E7E" ;
-    schema:isPartOf psm:95 ;
+    skos:broader psm:95 ;
     schema:name "Topinambur"@de,
         "topinambour"@fr,
         "Topinambur"@it ;
@@ -1403,7 +1403,7 @@ psm:224 a skos:Concept ;
 psm:225 a skos:Concept ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "C1A1842A-37E5-46D3-9646-9ECC15BAEE99" ;
-    schema:isPartOf psm:40 ;
+    skos:broader psm:40 ;
     schema:name "Zucchetti"@de,
         "courgette"@fr,
         "Zucchine"@it ;
@@ -1413,7 +1413,7 @@ psm:225 a skos:Concept ;
 psm:226 a skos:Concept ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "B74E61A6-30BD-4A63-8A24-94FC0A54D489" ;
-    schema:isPartOf psm:149,
+    skos:broader psm:149,
         psm:210 ;
     schema:name "Winterroggen"@de,
         "Seigle d'automne"@fr,
@@ -1424,7 +1424,7 @@ psm:226 a skos:Concept ;
 psm:227 a skos:Concept ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "BAE217C2-8C72-4706-8A0E-911FB18FC723" ;
-    schema:isPartOf psm:293 ;
+    skos:broader psm:293 ;
     schema:name "Humusdeponie"@de,
         "dépôt de terre végétale"@fr,
         "Deposito di terreno vegetale"@it ;
@@ -1433,7 +1433,7 @@ psm:227 a skos:Concept ;
 psm:228 a skos:Concept ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "BBD16782-6EB3-4923-9DBB-CC7D97EBCB0E" ;
-    schema:isPartOf psm:235 ;
+    skos:broader psm:235 ;
     schema:name "Ölkürbisse"@de,
         "courges oléagineuses"@fr,
         "Zucca da olio"@it ;
@@ -1443,7 +1443,7 @@ psm:228 a skos:Concept ;
 psm:229 a skos:Concept ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "B7DE9539-35FD-4172-B72D-488EA12F2DF7" ;
-    schema:isPartOf psm:321 ;
+    skos:broader psm:321 ;
     schema:name "Schnittmangold"@de,
         "bette à tondre"@fr,
         "Bietola da taglio"@it ;
@@ -1453,7 +1453,7 @@ psm:229 a skos:Concept ;
 psm:23 a skos:Concept ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "3A53A166-7559-4E75-BDED-F65CA6FDFDE1" ;
-    schema:isPartOf psm:16,
+    skos:broader psm:16,
         psm:72 ;
     schema:name "Rhododendron"@de,
         "rhododendron"@fr,
@@ -1472,7 +1472,7 @@ psm:230 a skos:Concept ;
 psm:231 a skos:Concept ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "91522E50-F1AC-42B1-870B-68218110C235" ;
-    schema:isPartOf psm:67 ;
+    skos:broader psm:67 ;
     schema:name "Dill"@de,
         "dill"@en,
         "aneth"@fr,
@@ -1483,7 +1483,7 @@ psm:231 a skos:Concept ;
 psm:232 a skos:Concept ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "874850AA-2F48-47B6-A789-C67D6DEE97DA" ;
-    schema:isPartOf psm:277 ;
+    skos:broader psm:277 ;
     schema:name "Bundzwiebeln"@de,
         "oignons en botte"@fr,
         "Cipollotti a mazzi"@it ;
@@ -1493,7 +1493,7 @@ psm:232 a skos:Concept ;
 psm:233 a skos:Concept ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "8621CDCC-EE8A-4188-9F2C-14C9497FBED3" ;
-    schema:isPartOf psm:326 ;
+    skos:broader psm:326 ;
     schema:name "Brombeere"@de,
         "mûre"@fr,
         "Mora"@it ;
@@ -1511,7 +1511,7 @@ psm:234 a skos:Concept ;
 psm:235 a skos:Concept ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "8303C191-3315-4942-91DF-668C019850D7" ;
-    schema:isPartOf psm:134 ;
+    skos:broader psm:134 ;
     schema:name "Kürbisgewächse (Cucurbitaceae)"@de,
         "cucurbitacées"@fr,
         "Cucurbitacee"@it ;
@@ -1521,7 +1521,7 @@ psm:235 a skos:Concept ;
 psm:236 a skos:Concept ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "8262D735-4D45-4499-AE0B-497FF4C0C4AA" ;
-    schema:isPartOf psm:27 ;
+    skos:broader psm:27 ;
     schema:name "Tabak"@de,
         "Tabac"@fr,
         "Tabacco"@it ;
@@ -1531,7 +1531,7 @@ psm:236 a skos:Concept ;
 psm:237 a skos:Concept ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "80395E92-C39B-45D9-91AC-AB7E6DCAC3DB" ;
-    schema:isPartOf psm:20 ;
+    skos:broader psm:20 ;
     schema:name "Markstammkohl"@de,
         "chou moellier"@fr,
         "Cavolo fustoso"@it ;
@@ -1541,7 +1541,7 @@ psm:237 a skos:Concept ;
 psm:238 a skos:Concept ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "83A9CEC5-FC31-421C-A3B8-CA219AF649CF" ;
-    schema:isPartOf psm:145,
+    skos:broader psm:145,
         psm:310 ;
     schema:name "Nelken"@de,
         "oeillet"@fr,
@@ -1552,7 +1552,7 @@ psm:238 a skos:Concept ;
 psm:239 a skos:Concept ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "82376115-14E2-449A-8DFA-F8119476FE3F" ;
-    schema:isPartOf psm:73 ;
+    skos:broader psm:73 ;
     schema:name "Weizen"@de,
         "Blé"@fr,
         "Frumento"@it ;
@@ -1562,7 +1562,7 @@ psm:239 a skos:Concept ;
 psm:24 a skos:Concept ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "465E7118-95AB-46A2-9A85-7A0B9070E63A" ;
-    schema:isPartOf psm:176 ;
+    skos:broader psm:176 ;
     schema:name "Einrichtungen und Geräte"@de,
         "installations et outils"@fr,
         "Installazioni e apparecchi"@it ;
@@ -1571,7 +1571,7 @@ psm:24 a skos:Concept ;
 psm:240 a skos:Concept ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "85BB3788-27A8-4E73-800A-0E8F154EC0BE" ;
-    schema:isPartOf psm:48 ;
+    skos:broader psm:48 ;
     schema:name "Blattsalate (Brassicaceae)"@de,
         "laitues à tondre  (Brassicaceae)"@fr,
         "Insalate a foglie (Brassicacee)"@it ;
@@ -1581,7 +1581,7 @@ psm:240 a skos:Concept ;
 psm:241 a skos:Concept ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "A22521E4-7D71-40C2-9FDF-B1230008D934" ;
-    schema:isPartOf psm:293 ;
+    skos:broader psm:293 ;
     schema:name "Böschungen und Grünstreifen entlang von Verkehrswegen (gem. ChemRRV)"@de,
         "talus et bandes vertes le long des voies de communication (selon ORRChim)"@fr,
         "Scarpate e strisce verdi lungo le vie di comunicazione (conformemente ORRPChim)"@it ;
@@ -1590,7 +1590,7 @@ psm:241 a skos:Concept ;
 psm:242 a skos:Concept ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "8BDDCACC-13C1-4676-9322-402ECF20BE85" ;
-    schema:isPartOf psm:194 ;
+    skos:broader psm:194 ;
     schema:name "Offene Ackerfläche"@de,
         "terres ouvertes"@fr,
         "Superficie coltiva aperta"@it ;
@@ -1600,7 +1600,7 @@ psm:242 a skos:Concept ;
 psm:243 a skos:Concept ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "8FF3D364-2BA6-40AA-A370-4B72E3CAC8DF" ;
-    schema:isPartOf psm:48 ;
+    skos:broader psm:48 ;
     schema:name "Radies"@de,
         "radis de tous les mois"@fr,
         "Ravanello"@it ;
@@ -1610,7 +1610,7 @@ psm:243 a skos:Concept ;
 psm:244 a skos:Concept ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "4B6DC713-3B11-42C5-92A8-E504D594E978" ;
-    schema:isPartOf psm:176 ;
+    skos:broader psm:176 ;
     schema:name "leere Verarbeitungsräume"@de,
         "Locaux de transformation vides"@fr,
         "Locali per la lavorazione vuoti"@it ;
@@ -1619,7 +1619,7 @@ psm:244 a skos:Concept ;
 psm:245 a skos:Concept ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "83C510D2-293A-4E1B-B691-06B1F02149B4" ;
-    schema:isPartOf psm:277 ;
+    skos:broader psm:277 ;
     schema:name "Gemüsezwiebel"@de,
         "oignon potager"@fr,
         "Cipolle dolci"@it ;
@@ -1629,7 +1629,7 @@ psm:245 a skos:Concept ;
 psm:246 a skos:Concept ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "A024CDFC-A05D-46B8-B08A-221C26BDF5DE" ;
-    schema:isPartOf psm:329 ;
+    skos:broader psm:329 ;
     schema:name "Rosen"@de,
         "rosier"@fr,
         "Rose"@it ;
@@ -1639,7 +1639,7 @@ psm:246 a skos:Concept ;
 psm:247 a skos:Concept ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "A0C29069-5DBA-4E89-B7F9-4C556C272821" ;
-    schema:isPartOf psm:48 ;
+    skos:broader psm:48 ;
     schema:name "Speisekohlrüben"@de,
         "rave de Brassica rapa et B. napus"@fr,
         "Rapa di Brassica rapa e B. napus"@it ;
@@ -1649,7 +1649,7 @@ psm:247 a skos:Concept ;
 psm:248 a skos:Concept ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "91406007-35B9-49E2-A62F-04BDE262366F" ;
-    schema:isPartOf psm:131 ;
+    skos:broader psm:131 ;
     schema:name "Rote Johannisbeere"@de,
         "groseilles à grappes"@fr,
         "Ribes rosso"@it ;
@@ -1659,7 +1659,7 @@ psm:248 a skos:Concept ;
 psm:249 a skos:Concept ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "930524FB-BD0A-4CA9-A89D-4FEEE1F9174F" ;
-    schema:isPartOf psm:124 ;
+    skos:broader psm:124 ;
     schema:name "Buschbohne"@de,
         "haricot nain"@fr,
         "Fagiolo nano"@it ;
@@ -1669,7 +1669,7 @@ psm:249 a skos:Concept ;
 psm:25 a skos:Concept ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "4380EC0F-E195-4783-8BB7-F6B0464B37D6" ;
-    schema:isPartOf psm:48 ;
+    skos:broader psm:48 ;
     schema:name "Kohlarten"@de,
         "choux"@fr,
         "Specie di cavoli"@it ;
@@ -1679,7 +1679,7 @@ psm:25 a skos:Concept ;
 psm:250 a skos:Concept ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "93A2DA1B-F920-461B-A9C9-BA9981CDB278" ;
-    schema:isPartOf psm:300 ;
+    skos:broader psm:300 ;
     schema:name "Spinat"@de,
         "épinard"@fr,
         "Spinaci"@it ;
@@ -1689,7 +1689,7 @@ psm:250 a skos:Concept ;
 psm:251 a skos:Concept ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "B9DC95B4-DD22-49F9-9048-4B37F8DD8F8F" ;
-    schema:isPartOf psm:96 ;
+    skos:broader psm:96 ;
     schema:name "Kartoffeln zur Pflanzgutproduktion"@de,
         "pommes de terre pour la production de plants"@fr,
         "Patate per la produzione di tuberi-seme"@it ;
@@ -1699,7 +1699,7 @@ psm:251 a skos:Concept ;
 psm:252 a skos:Concept ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "6D45EAF5-D29C-48AB-A212-91C67357E898" ;
-    schema:isPartOf psm:150 ;
+    skos:broader psm:150 ;
     schema:name "Walnuss"@de,
         "noyer"@fr,
         "Noce comune"@it ;
@@ -1709,7 +1709,7 @@ psm:252 a skos:Concept ;
 psm:253 a skos:Concept ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "ABF54D5D-620B-4A08-A37D-416C1AD8D1BF" ;
-    schema:isPartOf psm:67 ;
+    skos:broader psm:67 ;
     schema:name "Estragon"@de,
         "estragon"@fr,
         "Dragoncello"@it ;
@@ -1719,7 +1719,7 @@ psm:253 a skos:Concept ;
 psm:254 a skos:Concept ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "A8647F38-2A16-46AB-8B0E-2257EBF53C63" ;
-    schema:isPartOf psm:145 ;
+    skos:broader psm:145 ;
     schema:name "Iris"@de,
         "iris"@fr,
         "Iris"@it ;
@@ -1729,7 +1729,7 @@ psm:254 a skos:Concept ;
 psm:255 a skos:Concept ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "AC0240B5-B610-4D7C-8704-AA8E182821AC" ;
-    schema:isPartOf psm:234 ;
+    skos:broader psm:234 ;
     schema:name "Lagerhallen, Mühlen, Silogebäude"@de,
         "entrepôts, moulins, silos"@fr,
         "Depositi, mulini, sili"@it ;
@@ -1738,7 +1738,7 @@ psm:255 a skos:Concept ;
 psm:256 a skos:Concept ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "A9F01BDE-468A-477A-8ED5-704359B663F6" ;
-    schema:isPartOf psm:13 ;
+    skos:broader psm:13 ;
     schema:name "Heidelbeere"@de,
         "myrtille"@fr,
         "Mirtillo"@it ;
@@ -1748,7 +1748,7 @@ psm:256 a skos:Concept ;
 psm:257 a skos:Concept ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "9BCEB85B-1578-4001-839D-68BFB9CE4CD8" ;
-    schema:isPartOf psm:285 ;
+    skos:broader psm:285 ;
     schema:name "Olive"@de,
         "Olive"@en,
         "olivier"@fr,
@@ -1759,7 +1759,7 @@ psm:257 a skos:Concept ;
 psm:258 a skos:Concept ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "9BD6A435-E370-4DFE-82E5-7E7813B4D193" ;
-    schema:isPartOf psm:2 ;
+    skos:broader psm:2 ;
     schema:name "Baby-Leaf (Chenopodiaceae)"@de,
         "Baby-Leaf (Chenopodiaceae)"@fr,
         "Baby-Leaf (Chenopodiaceae)"@it ;
@@ -1769,7 +1769,7 @@ psm:258 a skos:Concept ;
 psm:259 a skos:Concept ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "9C38BA77-FDC8-461A-800A-9E2467C52105" ;
-    schema:isPartOf psm:113 ;
+    skos:broader psm:113 ;
     schema:name "Pflaume"@de,
         "prunier (prune)"@fr,
         "Prugnolo"@it ;
@@ -1779,7 +1779,7 @@ psm:259 a skos:Concept ;
 psm:26 a skos:Concept ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "2D7D1AE2-E685-4C6B-B8EE-DC5C6391EC76" ;
-    schema:isPartOf psm:134 ;
+    skos:broader psm:134 ;
     schema:name "Spargelgewächse (Asparagaceae)"@de,
         "asparagacées (Asparagaceae)"@fr,
         "Asparagacee (Asparagaceae)"@it ;
@@ -1789,7 +1789,7 @@ psm:26 a skos:Concept ;
 psm:260 a skos:Concept ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "707A99EF-0290-4CA9-9D90-8ADFDAA43330" ;
-    schema:isPartOf psm:209 ;
+    skos:broader psm:209 ;
     schema:name "Nüsslisalat"@de,
         "mâche, rampon"@fr,
         "Valerianella"@it ;
@@ -1819,7 +1819,7 @@ psm:262 a skos:Concept ;
 psm:263 a skos:Concept ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "BA6FCA8F-68B8-4408-A267-2546B1FA5764" ;
-    schema:isPartOf psm:134 ;
+    skos:broader psm:134 ;
     schema:name "Lippenblütler (Labiatae)"@de,
         "lamiacées (Labiatae)"@fr,
         "Lamiacee (Labiatae)"@it ;
@@ -1829,7 +1829,7 @@ psm:263 a skos:Concept ;
 psm:264 a skos:Concept ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "BB923645-6E65-48EE-9C64-DA2232EEE7EF" ;
-    schema:isPartOf psm:48 ;
+    skos:broader psm:48 ;
     schema:name "Rettich"@de,
         "radis long"@fr,
         "Ramolaccio"@it ;
@@ -1839,7 +1839,7 @@ psm:264 a skos:Concept ;
 psm:265 a skos:Concept ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "B02E0EFA-B8AF-425A-A779-6A4DFE8D4172" ;
-    schema:isPartOf psm:173 ;
+    skos:broader psm:173 ;
     schema:name "Kopfsalat"@de,
         "laitue pommée"@fr,
         "Lattuga cappuccio"@it ;
@@ -1849,7 +1849,7 @@ psm:265 a skos:Concept ;
 psm:267 a skos:Concept ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "A3E943A5-C6D8-4CB0-A069-85BFC48E8B8A" ;
-    schema:isPartOf psm:13 ;
+    skos:broader psm:13 ;
     schema:name "Gojibeere"@de,
         "Goji berry, wolfberry"@en,
         "Baies de Goji"@fr,
@@ -1860,7 +1860,7 @@ psm:267 a skos:Concept ;
 psm:268 a skos:Concept ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "730AACDC-B956-493D-8148-7520019CE0BC" ;
-    schema:isPartOf psm:67 ;
+    skos:broader psm:67 ;
     schema:name "Thymian"@de,
         "thym"@fr,
         "Timo"@it ;
@@ -1870,7 +1870,7 @@ psm:268 a skos:Concept ;
 psm:269 a skos:Concept ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "68688AEC-44E2-490B-AC80-E8DEDCC82B8F" ;
-    schema:isPartOf psm:335 ;
+    skos:broader psm:335 ;
     schema:name "Gemüsepaprika"@de,
         "poivron doux"@fr,
         "Peperone dolce"@it ;
@@ -1889,7 +1889,7 @@ psm:27 a skos:Concept ;
 psm:270 a skos:Concept ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "46D3C073-CBD8-4B3A-A9AA-21785BA911CA" ;
-    schema:isPartOf psm:335 ;
+    skos:broader psm:335 ;
     schema:name "Peperoni"@de,
         "poivron"@fr,
         "Peperone"@it ;
@@ -1899,7 +1899,7 @@ psm:270 a skos:Concept ;
 psm:271 a skos:Concept ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "3702313F-95C6-4FE9-8B6B-C7CE3987CD18" ;
-    schema:isPartOf psm:94 ;
+    skos:broader psm:94 ;
     schema:name "Stangensellerie"@de,
         "céleri-branche"@fr,
         "Sedano da coste"@it ;
@@ -1909,7 +1909,7 @@ psm:271 a skos:Concept ;
 psm:272 a skos:Concept ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "18C6314C-C067-4E7F-AAB6-2DEF3F01DF9D" ;
-    schema:isPartOf psm:94 ;
+    skos:broader psm:94 ;
     schema:name "Suppensellerie"@de,
         "céleri-pomme pour bouillon"@fr,
         "Sedano da condimento"@it ;
@@ -1919,7 +1919,7 @@ psm:272 a skos:Concept ;
 psm:273 a skos:Concept ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "0D20E815-633E-4F38-AC93-7B6578B0483E" ;
-    schema:isPartOf psm:327 ;
+    skos:broader psm:327 ;
     schema:name "Knollenfenchel"@de,
         "fenouil bulbeux"@fr,
         "Finocchio dolce"@it ;
@@ -1929,7 +1929,7 @@ psm:273 a skos:Concept ;
 psm:274 a skos:Concept ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "404C1D02-5666-4AA3-8487-65A9EEE0B53D" ;
-    schema:isPartOf psm:27 ;
+    skos:broader psm:27 ;
     schema:name "Lupinen"@de,
         "Lupin"@fr,
         "Lupini"@it ;
@@ -1939,7 +1939,7 @@ psm:274 a skos:Concept ;
 psm:275 a skos:Concept ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "F512809F-5CC7-44A2-A378-8FDAFA67CFEA" ;
-    schema:isPartOf psm:175 ;
+    skos:broader psm:175 ;
     schema:name "Pepino"@de,
         "pear melon"@en,
         "poire melon"@fr,
@@ -1950,7 +1950,7 @@ psm:275 a skos:Concept ;
 psm:276 a skos:Concept ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "CE13A930-22B8-44D6-98E4-97707B0F7F6C" ;
-    schema:isPartOf psm:32 ;
+    skos:broader psm:32 ;
     schema:name "Gewächshausgurken"@de,
         "concombre de serre"@fr,
         "Cetriolo olandese"@it ;
@@ -1960,7 +1960,7 @@ psm:276 a skos:Concept ;
 psm:277 a skos:Concept ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "DB98FC8E-5AFA-4434-9478-960124F960CA" ;
-    schema:isPartOf psm:337 ;
+    skos:broader psm:337 ;
     schema:name "Zwiebeln"@de,
         "oignon"@fr,
         "Cipolle"@it ;
@@ -1970,7 +1970,7 @@ psm:277 a skos:Concept ;
 psm:278 a skos:Concept ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "CC9D982D-A99F-4143-8298-BC029BD1D1AD" ;
-    schema:isPartOf psm:48 ;
+    skos:broader psm:48 ;
     schema:name "Rucola"@de,
         "rocket"@en,
         "roquette"@fr,
@@ -1981,7 +1981,7 @@ psm:278 a skos:Concept ;
 psm:279 a skos:Concept ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "C38D7DE4-C804-4F7C-AA2F-A536D03E0DFC" ;
-    schema:isPartOf psm:83 ;
+    skos:broader psm:83 ;
     schema:name "Wolliger Fingerhut"@de,
         "Grecian foxglove"@en,
         "digitale lanifère"@fr,
@@ -1992,7 +1992,7 @@ psm:279 a skos:Concept ;
 psm:28 a skos:Concept ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "36D9AFE2-7506-48CE-BA39-EFD54535294A" ;
-    schema:isPartOf psm:13 ;
+    skos:broader psm:13 ;
     schema:name "Schwarze Apfelbeere"@de,
         "aronie noire"@fr,
         "Aronia nera"@it ;
@@ -2002,7 +2002,7 @@ psm:28 a skos:Concept ;
 psm:280 a skos:Concept ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "C763D817-B4AC-43DB-9C6E-A262CC32F400" ;
-    schema:isPartOf psm:305 ;
+    skos:broader psm:305 ;
     schema:name "Futterrübe"@de,
         "Betterave fourragère"@fr,
         "Barbabietola da foraggio"@it ;
@@ -2012,7 +2012,7 @@ psm:280 a skos:Concept ;
 psm:282 a skos:Concept ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "DA5835F6-C295-4A4F-829D-007B1FA50A6D" ;
-    schema:isPartOf psm:20 ;
+    skos:broader psm:20 ;
     schema:name "Stielmus"@de,
         "navet à tondre"@fr,
         "Cavoli / rape da taglio"@it ;
@@ -2022,7 +2022,7 @@ psm:282 a skos:Concept ;
 psm:283 a skos:Concept ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "ABA3C163-EFDF-4B91-9F61-8380B6DDE0A6" ;
-    schema:isPartOf psm:50 ;
+    skos:broader psm:50 ;
     schema:name "Kirsche"@de,
         "cerisier"@fr,
         "Ciliegio"@it ;
@@ -2032,7 +2032,7 @@ psm:283 a skos:Concept ;
 psm:284 a skos:Concept ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "5C0E6310-52CD-4368-9057-135822C019E6" ;
-    schema:isPartOf psm:64 ;
+    skos:broader psm:64 ;
     schema:name "Frässaaten"@de,
         "semis après travail superficiel"@fr,
         "Semine dopo la fresatura"@it ;
@@ -2051,7 +2051,7 @@ psm:285 a skos:Concept ;
 psm:286 a skos:Concept ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "BD424265-B4C9-4410-AB7E-982930129FAE" ;
-    schema:isPartOf psm:27 ;
+    skos:broader psm:27 ;
     schema:name "Raps"@de,
         "Colza"@fr,
         "colza"@it ;
@@ -2061,7 +2061,7 @@ psm:286 a skos:Concept ;
 psm:287 a skos:Concept ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "D51188F1-9F8F-46E6-8F5B-550A7D45A4BE" ;
-    schema:isPartOf psm:67 ;
+    skos:broader psm:67 ;
     schema:name "Melisse"@de,
         "mélisse"@fr,
         "Melissa"@it ;
@@ -2071,7 +2071,7 @@ psm:287 a skos:Concept ;
 psm:288 a skos:Concept ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "D63D73AC-87B1-41F7-82AC-D1DFF12F6704" ;
-    schema:isPartOf psm:326 ;
+    skos:broader psm:326 ;
     schema:name "Himbeere"@de,
         "framboise"@fr,
         "Lampone"@it ;
@@ -2081,7 +2081,7 @@ psm:288 a skos:Concept ;
 psm:289 a skos:Concept ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "F6A02973-2AF5-47AF-B99D-FFAD9A24BCB4" ;
-    schema:isPartOf psm:40 ;
+    skos:broader psm:40 ;
     schema:name "Rondini"@de,
         "rondini"@fr,
         "Rondini"@it ;
@@ -2091,7 +2091,7 @@ psm:289 a skos:Concept ;
 psm:29 a skos:Concept ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "36EC3084-D6AE-494D-A5B2-EC39DCC4F412" ;
-    schema:isPartOf psm:145 ;
+    skos:broader psm:145 ;
     schema:name "Anemone"@de,
         "anémone"@fr,
         "Anemone"@it ;
@@ -2101,7 +2101,7 @@ psm:29 a skos:Concept ;
 psm:290 a skos:Concept ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "EB0C465C-50B7-4DC0-914B-ABE4C284A907" ;
-    schema:isPartOf psm:134 ;
+    skos:broader psm:134 ;
     schema:name "Kohlgemüse"@de,
         "choux"@fr,
         "Cavoli"@it ;
@@ -2111,7 +2111,7 @@ psm:290 a skos:Concept ;
 psm:291 a skos:Concept ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "B6669854-1833-4BBC-A931-E67505848EA7" ;
-    schema:isPartOf psm:163,
+    skos:broader psm:163,
         psm:71 ;
     schema:name "Sommerweizen"@de,
         "Blé de printemps"@fr,
@@ -2122,7 +2122,7 @@ psm:291 a skos:Concept ;
 psm:292 a skos:Concept ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "75047A9C-12E2-4BAC-89D8-B14BC4C6B100" ;
-    schema:isPartOf psm:176 ;
+    skos:broader psm:176 ;
     schema:name "Holzpaletten, Packholz, Stammholz"@de,
         "Palette en bois, bois d'emballage, bois en général"@fr,
         "Palette in legno, legno da imballaggio, legno non lavorato"@it ;
@@ -2148,7 +2148,7 @@ psm:294 a skos:Concept ;
 psm:295 a skos:Concept ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "710CC0C8-B138-4B31-9975-4DA04AF67792" ;
-    schema:isPartOf psm:67 ;
+    skos:broader psm:67 ;
     schema:name "Majoran"@de,
         "Marjoram"@en,
         "marjolaine"@fr,
@@ -2168,7 +2168,7 @@ psm:296 a skos:Concept ;
 psm:297 a skos:Concept ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "399AC89E-29BB-44AD-8B1F-0B2F327D5230" ;
-    schema:isPartOf psm:235 ;
+    skos:broader psm:235 ;
     schema:name "Melonen"@de,
         "melons"@fr,
         "Meloni"@it ;
@@ -2178,7 +2178,7 @@ psm:297 a skos:Concept ;
 psm:298 a skos:Concept ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "3A522DC8-E6D3-426D-AA99-65C148ED1A84" ;
-    schema:isPartOf psm:131 ;
+    skos:broader psm:131 ;
     schema:name "Stachelbeere"@de,
         "groseilles à maquereau"@fr,
         "Uva spina"@it ;
@@ -2188,7 +2188,7 @@ psm:298 a skos:Concept ;
 psm:299 a skos:Concept ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "37059300-8031-4A64-B75C-7490288E32BA" ;
-    schema:isPartOf psm:67 ;
+    skos:broader psm:67 ;
     schema:name "Minze"@de,
         "Mint"@en,
         "menthe"@fr,
@@ -2199,7 +2199,7 @@ psm:299 a skos:Concept ;
 psm:3 a skos:Concept ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "A8BAC5BB-239F-4EE0-8CE2-F55590DA3FC0" ;
-    schema:isPartOf psm:47 ;
+    skos:broader psm:47 ;
     schema:name "Bohnen"@de,
         "haricots"@fr,
         "Fagioli"@it ;
@@ -2209,7 +2209,7 @@ psm:3 a skos:Concept ;
 psm:30 a skos:Concept ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "2F7BD13A-BAA5-4708-83C6-17D44E57EA4D" ;
-    schema:isPartOf psm:16,
+    skos:broader psm:16,
         psm:72 ;
     schema:name "Rosskastanie"@de,
         "marronnier d'Inde"@fr,
@@ -2220,7 +2220,7 @@ psm:30 a skos:Concept ;
 psm:300 a skos:Concept ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "39D599AA-B93E-4AC2-970E-5A99A3113572" ;
-    schema:isPartOf psm:134 ;
+    skos:broader psm:134 ;
     schema:name "Gänsefussgewächse (Chenopodiaceae)"@de,
         "chénopodiacées"@fr,
         "Chenopodiacee"@it ;
@@ -2230,7 +2230,7 @@ psm:300 a skos:Concept ;
 psm:301 a skos:Concept ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "19C5BA72-A0D5-4409-8D05-0A7C9D821E20" ;
-    schema:isPartOf psm:48 ;
+    skos:broader psm:48 ;
     schema:name "Brunnenkresse"@de,
         "cresson de fontaine"@fr,
         "Crescione acquatico"@it ;
@@ -2240,7 +2240,7 @@ psm:301 a skos:Concept ;
 psm:302 a skos:Concept ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "0DAB25B6-C3AA-430B-BF83-05FA66D889A4" ;
-    schema:isPartOf psm:67 ;
+    skos:broader psm:67 ;
     schema:name "Koriander"@de,
         "coriandre"@fr,
         "Coriandolo"@it ;
@@ -2250,7 +2250,7 @@ psm:302 a skos:Concept ;
 psm:303 a skos:Concept ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "048FDB44-710A-4801-849C-72F1A458DB82" ;
-    schema:isPartOf psm:73 ;
+    skos:broader psm:73 ;
     schema:name "Triticale"@de,
         "Triticale"@fr,
         "Triticale"@it ;
@@ -2260,7 +2260,7 @@ psm:303 a skos:Concept ;
 psm:304 a skos:Concept ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "07A12E5B-DB0B-4421-A215-E306768AC0BE" ;
-    schema:isPartOf psm:85 ;
+    skos:broader psm:85 ;
     schema:name "Tomaten Spezialitäten"@de,
         "tomates, spécialités"@fr,
         "Varietà particolari di pomodoro"@it ;
@@ -2270,7 +2270,7 @@ psm:304 a skos:Concept ;
 psm:305 a skos:Concept ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "086E34F3-82E5-4F92-9224-41C9F7529E70" ;
-    schema:isPartOf psm:27 ;
+    skos:broader psm:27 ;
     schema:name "Futter- und Zuckerrüben"@de,
         "betteraves à sucre et fourragère"@fr,
         "Barbabietole da foraggio e da zucchero"@it ;
@@ -2280,7 +2280,7 @@ psm:305 a skos:Concept ;
 psm:306 a skos:Concept ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "21228D46-5B00-4CDD-9C71-48C0A0B21C78" ;
-    schema:isPartOf psm:327 ;
+    skos:broader psm:327 ;
     schema:name "Wurzelpetersilie"@de,
         "Turnip-rooted parsley"@en,
         "persil à grosse racine"@fr,
@@ -2291,7 +2291,7 @@ psm:306 a skos:Concept ;
 psm:307 a skos:Concept ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "2260B6A9-FC51-4F50-8E8F-D39BC6D5DA3A" ;
-    schema:isPartOf psm:47 ;
+    skos:broader psm:47 ;
     schema:name "Kichererbse"@de,
         "chickpea"@en,
         "pois chiche"@fr,
@@ -2302,7 +2302,7 @@ psm:307 a skos:Concept ;
 psm:308 a skos:Concept ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "14B19DFD-331F-4C30-8724-8EDDF8E2D0D4" ;
-    schema:isPartOf psm:67 ;
+    skos:broader psm:67 ;
     schema:name "Rosmarin"@de,
         "Rosemary"@en,
         "romarin"@fr,
@@ -2313,7 +2313,7 @@ psm:308 a skos:Concept ;
 psm:309 a skos:Concept ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "0F5F1FEE-084C-4961-A76F-82F9B17B2635" ;
-    schema:isPartOf psm:285 ;
+    skos:broader psm:285 ;
     schema:name "Kernobst"@de,
         "fruits à pépins"@fr,
         "Frutta a granelli"@it ;
@@ -2323,7 +2323,7 @@ psm:309 a skos:Concept ;
 psm:31 a skos:Concept ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "307A62EA-67D6-4D28-9CF7-F1218C9BE2CD" ;
-    schema:isPartOf psm:50 ;
+    skos:broader psm:50 ;
     schema:name "Pfirsich / Nektarine"@de,
         "pêcher / nectarine"@fr,
         "Pesco/pesco noce"@it ;
@@ -2333,7 +2333,7 @@ psm:31 a skos:Concept ;
 psm:310 a skos:Concept ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "10642620-4F7B-4E5E-8F38-D73914354014" ;
-    schema:isPartOf psm:329 ;
+    skos:broader psm:329 ;
     schema:name "Schnittblumen"@de,
         "fleurs coupées"@fr,
         "Fiori recisi"@it ;
@@ -2343,7 +2343,7 @@ psm:310 a skos:Concept ;
 psm:311 a skos:Concept ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "1A1D511B-4ABD-44F2-8BB5-55192F5310D2" ;
-    schema:isPartOf psm:67 ;
+    skos:broader psm:67 ;
     schema:name "Petersilie"@de,
         "persil"@fr,
         "Prezzemolo"@it ;
@@ -2353,7 +2353,7 @@ psm:311 a skos:Concept ;
 psm:312 a skos:Concept ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "1B9B39A9-D742-4E8D-A88E-280B65C4B913" ;
-    schema:isPartOf psm:329 ;
+    skos:broader psm:329 ;
     schema:name "Blumenknollen"@de,
         "tubercules de fleurs"@fr,
         "Radici tuberose floreali"@it ;
@@ -2363,7 +2363,7 @@ psm:312 a skos:Concept ;
 psm:314 a skos:Concept ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "3447F4C9-2E90-437F-A240-0462AFEDF2B5" ;
-    schema:isPartOf psm:40 ;
+    skos:broader psm:40 ;
     schema:name "Patisson"@de,
         "pâtisson"@fr,
         "Patisson"@it ;
@@ -2373,7 +2373,7 @@ psm:314 a skos:Concept ;
 psm:315 a skos:Concept ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "34753E17-C34D-4D0B-88A0-91143DADABB2" ;
-    schema:isPartOf psm:145,
+    skos:broader psm:145,
         psm:310 ;
     schema:name "Chrysantheme"@de,
         "chrysanthème"@fr,
@@ -2384,7 +2384,7 @@ psm:315 a skos:Concept ;
 psm:317 a skos:Concept ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "17CE2494-D0C9-484B-A91E-15B7B04733FD" ;
-    schema:isPartOf psm:134 ;
+    skos:broader psm:134 ;
     schema:name "Portulakgewächse (Portulacaceae)"@de,
         "portulacacées (Portulacaceae)"@fr,
         "Portulacee (Portulacaceae)"@it ;
@@ -2394,7 +2394,7 @@ psm:317 a skos:Concept ;
 psm:318 a skos:Concept ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "230F7417-5500-4124-B273-95AA1FFB940B" ;
-    schema:isPartOf psm:145 ;
+    skos:broader psm:145 ;
     schema:name "Ranunkel"@de,
         "ranunculus"@fr,
         "ranuncolo"@it ;
@@ -2404,7 +2404,7 @@ psm:318 a skos:Concept ;
 psm:319 a skos:Concept ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "01AFF6EB-9C8D-4D0D-B225-0BA07B59A72F" ;
-    schema:isPartOf psm:27 ;
+    skos:broader psm:27 ;
     schema:name "Hopfen"@de,
         "Houblon"@fr,
         "Luppolo"@it ;
@@ -2414,7 +2414,7 @@ psm:319 a skos:Concept ;
 psm:32 a skos:Concept ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "30F9F737-0A18-43EC-AF88-F28940E567F1" ;
-    schema:isPartOf psm:235 ;
+    skos:broader psm:235 ;
     schema:name "Gurken"@de,
         "concombre"@fr,
         "Cetrioli"@it ;
@@ -2424,7 +2424,7 @@ psm:32 a skos:Concept ;
 psm:320 a skos:Concept ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "E786D43D-444B-49D6-B0D0-294265F91403" ;
-    schema:isPartOf psm:95 ;
+    skos:broader psm:95 ;
     schema:name "Salate (Asteraceae)"@de,
         "salades (Asteraceae)"@fr,
         "Insalate (Asteracee)"@it ;
@@ -2434,7 +2434,7 @@ psm:320 a skos:Concept ;
 psm:321 a skos:Concept ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "AB0798FE-64B8-49A2-8E75-14467EB7AB58" ;
-    schema:isPartOf psm:300 ;
+    skos:broader psm:300 ;
     schema:name "Mangold"@de,
         "bette"@fr,
         "Bietola"@it ;
@@ -2444,7 +2444,7 @@ psm:321 a skos:Concept ;
 psm:322 a skos:Concept ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "AE465EA2-A950-4661-B631-D5A267B2F076" ;
-    schema:isPartOf psm:293 ;
+    skos:broader psm:293 ;
     schema:name "Brachland"@de,
         "friche"@fr,
         "Terreno incolto"@it ;
@@ -2454,7 +2454,7 @@ psm:322 a skos:Concept ;
 psm:323 a skos:Concept ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "8DFDE2D1-C004-4C25-BF54-21CF7C815232" ;
-    schema:isPartOf psm:337 ;
+    skos:broader psm:337 ;
     schema:name "Lauch"@de,
         "poireau"@fr,
         "Porro"@it ;
@@ -2464,7 +2464,7 @@ psm:323 a skos:Concept ;
 psm:324 a skos:Concept ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "4A22B9D3-747C-4323-A852-1CB1F6ADB680" ;
-    schema:isPartOf psm:25 ;
+    skos:broader psm:25 ;
     schema:name "Blumenkohle"@de,
         "Flowering brassica"@en,
         "choux (développement de l'inflorescence)"@fr,
@@ -2475,7 +2475,7 @@ psm:324 a skos:Concept ;
 psm:325 a skos:Concept ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "394AE687-29A0-4BA6-B0B9-D7DFB0C08FCE" ;
-    schema:isPartOf psm:20 ;
+    skos:broader psm:20 ;
     schema:name "Pak-Choi"@de,
         "pakchoi"@fr,
         "Pak-Choi"@it ;
@@ -2485,7 +2485,7 @@ psm:325 a skos:Concept ;
 psm:326 a skos:Concept ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "43F8091A-A333-40F5-8845-FF83398B9AC3" ;
-    schema:isPartOf psm:13 ;
+    skos:broader psm:13 ;
     schema:name "Rubus Arten"@de,
         "espèces de Rubus"@fr,
         "Specie di rubus"@it ;
@@ -2495,7 +2495,7 @@ psm:326 a skos:Concept ;
 psm:327 a skos:Concept ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "5276BCA7-CEA5-4B6D-90E3-52F3A0532490" ;
-    schema:isPartOf psm:134 ;
+    skos:broader psm:134 ;
     schema:name "Doldenblütler (Apiaceae)"@de,
         "ombellifères (Apiaceae)"@fr,
         "Ombrellifere (Apiacee)"@it ;
@@ -2505,7 +2505,7 @@ psm:327 a skos:Concept ;
 psm:328 a skos:Concept ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "BC3BA289-5090-487A-A2FE-3B0A0FDE4A1B" ;
-    schema:isPartOf psm:103 ;
+    skos:broader psm:103 ;
     schema:name "Schnittsalat"@de,
         "laitue à tondre"@fr,
         "Lattuga da taglio"@it ;
@@ -2524,7 +2524,7 @@ psm:329 a skos:Concept ;
 psm:33 a skos:Concept ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "6C44D265-956D-457C-B395-71C81B327416" ;
-    schema:isPartOf psm:83 ;
+    skos:broader psm:83 ;
     schema:name "Baldrian"@de,
         "Valerian"@en,
         "valériane"@fr,
@@ -2535,7 +2535,7 @@ psm:33 a skos:Concept ;
 psm:330 a skos:Concept ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "8512D352-73CC-4535-9469-965AAF1FD0B1" ;
-    schema:isPartOf psm:67 ;
+    skos:broader psm:67 ;
     schema:name "Gewürzfenchel"@de,
         "fenouil aromatique"@fr,
         "Finocchio aromatico"@it ;
@@ -2545,7 +2545,7 @@ psm:330 a skos:Concept ;
 psm:331 a skos:Concept ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "8AFA14F8-CCE3-4012-BD12-9D690EBAE1AD" ;
-    schema:isPartOf psm:324 ;
+    skos:broader psm:324 ;
     schema:name "Romanesco"@de,
         "romanesco"@fr,
         "Romanesco"@it ;
@@ -2555,7 +2555,7 @@ psm:331 a skos:Concept ;
 psm:332 a skos:Concept ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "3BEFA6F7-0D34-4E29-8207-85E9D5783ECC" ;
-    schema:isPartOf psm:329 ;
+    skos:broader psm:329 ;
     schema:name "Baumschule"@de,
         "pépinière"@fr,
         "Vivaio"@it ;
@@ -2565,7 +2565,7 @@ psm:332 a skos:Concept ;
 psm:333 a skos:Concept ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "19CC4F57-CB08-4970-BEDB-3DB2B2CB1034" ;
-    schema:isPartOf psm:296 ;
+    skos:broader psm:296 ;
     schema:name "Wald"@de,
         "forêt"@fr,
         "Bosco"@it ;
@@ -2575,7 +2575,7 @@ psm:333 a skos:Concept ;
 psm:334 a skos:Concept ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "0E2847EB-CEFD-4640-82EB-F09F3F1A5E13" ;
-    schema:isPartOf psm:67 ;
+    skos:broader psm:67 ;
     schema:name "Oregano"@de,
         "Oregano"@en,
         "origan"@fr,
@@ -2586,7 +2586,7 @@ psm:334 a skos:Concept ;
 psm:335 a skos:Concept ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "096444CD-43E6-41F9-8914-2E7DADA4C801" ;
-    schema:isPartOf psm:175 ;
+    skos:broader psm:175 ;
     schema:name "Paprika"@de,
         "poivron"@fr,
         "Peperone"@it ;
@@ -2596,7 +2596,7 @@ psm:335 a skos:Concept ;
 psm:336 a skos:Concept ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "17B69B05-E650-4A6F-815A-D6DA55A92CDB" ;
-    schema:isPartOf psm:176 ;
+    skos:broader psm:176 ;
     schema:name "Tabak produzierende Betriebe"@de,
         "Les exploitations tabacoles"@fr,
         "Aziende produttrici di tabacco"@it ;
@@ -2605,7 +2605,7 @@ psm:336 a skos:Concept ;
 psm:337 a skos:Concept ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "0FEBE55E-236F-483E-AE05-88A35B181A55" ;
-    schema:isPartOf psm:134 ;
+    skos:broader psm:134 ;
     schema:name "Amaryllidaceae"@de,
         "amaryllidaceae"@fr,
         "Amaryllidaceae"@en,
@@ -2616,7 +2616,7 @@ psm:337 a skos:Concept ;
 psm:338 a skos:Concept ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "C27B142E-1F10-46E0-A1CA-2ACCDA029027" ;
-    schema:isPartOf psm:27 ;
+    skos:broader psm:27 ;
     schema:name "Rispenhirse"@de,
         "millet"@fr,
         "Common millet"@en,
@@ -2627,7 +2627,7 @@ psm:338 a skos:Concept ;
 psm:339 a skos:Concept ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "855980B6-D3CA-46B5-86C5-12E9847344B5" ;
-    schema:isPartOf psm:134 ;
+    skos:broader psm:134 ;
     schema:name "Windengewächse (Convolvulaceae)"@de,
         "convolvulacées (Convolvulaceae)"@fr,
         "Convolvulaceae"@en,
@@ -2638,7 +2638,7 @@ psm:339 a skos:Concept ;
 psm:34 a skos:Concept ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "2E38C972-4160-4D2B-8ED2-3B48FC781EF0" ;
-    schema:isPartOf psm:108,
+    skos:broader psm:108,
         psm:145 ;
     schema:name "Begonia"@de,
         "bégonia"@fr,
@@ -2649,7 +2649,7 @@ psm:34 a skos:Concept ;
 psm:35 a skos:Concept ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "31A0539F-1D4C-4BCF-876F-215CEBC4C864" ;
-    schema:isPartOf psm:134 ;
+    skos:broader psm:134 ;
     schema:name "Gewürz- und Medizinalkräuter"@de,
         "herbes aromatiques et médicinales"@fr,
         "Erbe aromatiche e medicinali"@it ;
@@ -2659,7 +2659,7 @@ psm:35 a skos:Concept ;
 psm:36 a skos:Concept ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "302E5676-26A3-41EB-980F-2B6BDE117D3A" ;
-    schema:isPartOf psm:145 ;
+    skos:broader psm:145 ;
     schema:name "Zierkürbis"@de,
         "courge d'ornement"@fr,
         "Zucca ornamentale"@it ;
@@ -2669,7 +2669,7 @@ psm:36 a skos:Concept ;
 psm:37 a skos:Concept ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "0A88EFE2-B85E-4BF7-9C38-AEE8CB2BFE42" ;
-    schema:isPartOf psm:67 ;
+    skos:broader psm:67 ;
     schema:name "Ysop"@de,
         "Hysope"@fr,
         "Issopo"@it ;
@@ -2679,7 +2679,7 @@ psm:37 a skos:Concept ;
 psm:38 a skos:Concept ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "13BB4B9E-6CEE-4729-AE29-8A4380EB33B0" ;
-    schema:isPartOf psm:296 ;
+    skos:broader psm:296 ;
     schema:name "Liegendes Rundholz im Wald und auf Lagerplätzen"@de,
         "grumes en forêt et sur les places de stockage"@fr,
         "Tronchi abbattuti nella foresta e presso piazzali di deposito"@it ;
@@ -2688,7 +2688,7 @@ psm:38 a skos:Concept ;
 psm:39 a skos:Concept ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "037E11B2-128A-4194-9A5B-A3E980AE4113" ;
-    schema:isPartOf psm:337 ;
+    skos:broader psm:337 ;
     schema:name "Knoblauch"@de,
         "ail"@fr,
         "Aglio"@it ;
@@ -2698,7 +2698,7 @@ psm:39 a skos:Concept ;
 psm:4 a skos:Concept ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "B85EF4C2-C22E-4A5A-A431-98DC8F621D92" ;
-    schema:isPartOf psm:329 ;
+    skos:broader psm:329 ;
     schema:name "Blumenzwiebeln"@de,
         "bulbes des fleurs"@fr,
         "Bulbi di fiori"@it ;
@@ -2708,7 +2708,7 @@ psm:4 a skos:Concept ;
 psm:40 a skos:Concept ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "FE69D926-4BE1-4C67-840E-30C3D299442E" ;
-    schema:isPartOf psm:235 ;
+    skos:broader psm:235 ;
     schema:name "Kürbisse mit geniessbarer Schale"@de,
         "courges à peau comestible"@fr,
         "Zucche con buccia commestibile"@it ;
@@ -2718,7 +2718,7 @@ psm:40 a skos:Concept ;
 psm:41 a skos:Concept ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "9CBD7DB6-38F5-4C41-952D-72F253C88809" ;
-    schema:isPartOf psm:309 ;
+    skos:broader psm:309 ;
     schema:name "Birne / Nashi"@de,
         "poirier / nashi"@fr,
         "Pero / Nashi"@it ;
@@ -2728,7 +2728,7 @@ psm:41 a skos:Concept ;
 psm:42 a skos:Concept ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "EF29B430-95C5-45D4-A812-DCCE046E1B8E" ;
-    schema:isPartOf psm:339 ;
+    skos:broader psm:339 ;
     schema:name "Süsskartoffel"@de,
         "Sweet potato"@en,
         "Patate douce"@fr,
@@ -2739,7 +2739,7 @@ psm:42 a skos:Concept ;
 psm:43 a skos:Concept ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "FFDDDA7D-B340-473C-94F4-841272B602FA" ;
-    schema:isPartOf psm:131 ;
+    skos:broader psm:131 ;
     schema:name "Jostabeere"@de,
         "josta"@fr,
         "Josta"@it ;
@@ -2757,7 +2757,7 @@ psm:44 a skos:Concept ;
 psm:45 a skos:Concept ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "D95CD842-A5BC-4DAA-935D-F009DA7BA748" ;
-    schema:isPartOf psm:118 ;
+    skos:broader psm:118 ;
     schema:name "Fichte"@de,
         "épicéa"@fr,
         "Abete rosso"@it ;
@@ -2767,7 +2767,7 @@ psm:45 a skos:Concept ;
 psm:46 a skos:Concept ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "DAF00AE7-5272-4E07-9A66-E9F9BD8FEE43" ;
-    schema:isPartOf psm:145,
+    skos:broader psm:145,
         psm:310 ;
     schema:name "Blaudistel"@de,
         "chardon bleu"@fr,
@@ -2778,7 +2778,7 @@ psm:46 a skos:Concept ;
 psm:47 a skos:Concept ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "DB4E4C8B-016C-4C31-8DC5-587A9F1F8FFD" ;
-    schema:isPartOf psm:134 ;
+    skos:broader psm:134 ;
     schema:name "Hülsenfrüchtler (Fabaceae)"@de,
         "fabacées (légumineuses)"@fr,
         "Fabacee (Leguminose)"@it ;
@@ -2788,7 +2788,7 @@ psm:47 a skos:Concept ;
 psm:48 a skos:Concept ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "E55D75D3-B805-4BFD-B2B0-D02368BD32AC" ;
-    schema:isPartOf psm:134 ;
+    skos:broader psm:134 ;
     schema:name "Kreuzblütler (Brassicaceae)"@de,
         "crucifères (Brassicaceae)"@fr,
         "Crocifere (Brassicacee)"@it ;
@@ -2798,7 +2798,7 @@ psm:48 a skos:Concept ;
 psm:49 a skos:Concept ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "CC08E1E6-655D-4FAA-B0E8-AD968A68A536" ;
-    schema:isPartOf psm:176 ;
+    skos:broader psm:176 ;
     schema:name "Erntegut"@de,
         "denrée stockée"@fr,
         "Raccolto stoccato"@it ;
@@ -2807,7 +2807,7 @@ psm:49 a skos:Concept ;
 psm:5 a skos:Concept ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "B542EC7D-B423-43B4-9010-82A6889BB3B4" ;
-    schema:isPartOf psm:305 ;
+    skos:broader psm:305 ;
     schema:name "Zuckerrübe"@de,
         "Betterave à sucre"@fr,
         "Barbabietola da zucchero"@it ;
@@ -2817,7 +2817,7 @@ psm:5 a skos:Concept ;
 psm:50 a skos:Concept ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "01D7815D-B309-4ECF-B172-DA38B80C8732" ;
-    schema:isPartOf psm:285 ;
+    skos:broader psm:285 ;
     schema:name "Steinobst"@de,
         "fruits à noyaux"@fr,
         "Frutta a nocciolo"@it ;
@@ -2827,7 +2827,7 @@ psm:50 a skos:Concept ;
 psm:51 a skos:Concept ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "C96EE4F4-12EA-49DE-9BEF-21EA73B52760" ;
-    schema:isPartOf psm:26 ;
+    skos:broader psm:26 ;
     schema:name "Spargel"@de,
         "asperge"@fr,
         "Asparagi"@it ;
@@ -2837,7 +2837,7 @@ psm:51 a skos:Concept ;
 psm:52 a skos:Concept ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "CEC488FC-D9AD-4515-A28E-DEEC6C807926" ;
-    schema:isPartOf psm:210,
+    skos:broader psm:210,
         psm:303 ;
     schema:name "Wintertriticale"@de,
         "Triticale d'automne"@fr,
@@ -2848,7 +2848,7 @@ psm:52 a skos:Concept ;
 psm:53 a skos:Concept ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "BA2DECCF-5987-4987-B56E-C5EC6E5D19C0" ;
-    schema:isPartOf psm:48 ;
+    skos:broader psm:48 ;
     schema:name "Barbarakraut"@de,
         "Barbarée du printemps"@fr,
         "Erba di Santa Barbara vernale"@it ;
@@ -2858,7 +2858,7 @@ psm:53 a skos:Concept ;
 psm:54 a skos:Concept ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "C3E12AAE-119E-47CF-9B8A-6F1CA657CF6B" ;
-    schema:isPartOf psm:293 ;
+    skos:broader psm:293 ;
     schema:name "Auf und an National- und Kantonsstrassen (gem. ChemRRV)"@de,
         "le long des routes nationales et cantonales  (selon ORRChim)"@fr,
         "Lungo le strade nazionali e cantonali (conformemente ORRPChim)"@it ;
@@ -2867,7 +2867,7 @@ psm:54 a skos:Concept ;
 psm:55 a skos:Concept ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "C3F940E4-D07C-4F4D-851C-D1024F8A6A62" ;
-    schema:isPartOf psm:134 ;
+    skos:broader psm:134 ;
     schema:name "Kräuter"@de,
         "herbes"@fr,
         "Erbe"@it ;
@@ -2877,7 +2877,7 @@ psm:55 a skos:Concept ;
 psm:56 a skos:Concept ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "BFD1B79E-ABD1-4A44-8E61-891FF97960A1" ;
-    schema:isPartOf psm:247 ;
+    skos:broader psm:247 ;
     schema:name "Brassica rapa-Rüben"@de,
         "rave de Brassica rapa"@fr,
         "Rapa di Brassica rapa"@it ;
@@ -2887,7 +2887,7 @@ psm:56 a skos:Concept ;
 psm:57 a skos:Concept ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "BF77A7F8-C4C5-43AF-9BCD-B7F904506E7A" ;
-    schema:isPartOf psm:134 ;
+    skos:broader psm:134 ;
     schema:name "Süssgräser (Poaceae)"@de,
         "poacées (Gramineae)"@fr,
         "Poacee (Graminaceae)"@it ;
@@ -2897,7 +2897,7 @@ psm:57 a skos:Concept ;
 psm:58 a skos:Concept ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "C37A7EE2-D06B-4204-809A-F50A934F79E3" ;
-    schema:isPartOf psm:20 ;
+    skos:broader psm:20 ;
     schema:name "Chinakohl"@de,
         "chou de Chine"@fr,
         "Cavolo cinese"@it ;
@@ -2907,7 +2907,7 @@ psm:58 a skos:Concept ;
 psm:59 a skos:Concept ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "C026CB2D-39B4-4FDF-AD04-FBA22AD2B4F1" ;
-    schema:isPartOf psm:163,
+    skos:broader psm:163,
         psm:197 ;
     schema:name "Sommergerste"@de,
         "orge de printemps"@fr,
@@ -2918,7 +2918,7 @@ psm:59 a skos:Concept ;
 psm:6 a skos:Concept ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "A21391C3-A1A3-4472-8AA1-56449FB56B36" ;
-    schema:isPartOf psm:16,
+    skos:broader psm:16,
         psm:72 ;
     schema:name "Kirschlorbeer"@de,
         "laurier-cerise"@fr,
@@ -2929,7 +2929,7 @@ psm:6 a skos:Concept ;
 psm:60 a skos:Concept ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "C69EBD93-43E5-457F-9CBE-EE1C04791274" ;
-    schema:isPartOf psm:1 ;
+    skos:broader psm:1 ;
     schema:name "Sommerflor"@de,
         "fleurs estivales"@fr,
         "Fiori estivi"@it ;
@@ -2939,7 +2939,7 @@ psm:60 a skos:Concept ;
 psm:63 a skos:Concept ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "DF455946-B2AB-45D2-9780-4A45A98D72D6" ;
-    schema:isPartOf psm:16,
+    skos:broader psm:16,
         psm:72 ;
     schema:name "Buchsbäume (Buxus)"@de,
         "buis (Buxus)"@fr,
@@ -2950,7 +2950,7 @@ psm:63 a skos:Concept ;
 psm:64 a skos:Concept ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "E107FECF-24B6-43D7-B3E6-05C5C239EFBB" ;
-    schema:isPartOf psm:27 ;
+    skos:broader psm:27 ;
     schema:name "Anbautechnik"@de,
         "techniques culturales"@fr,
         "Tecnica di coltivazione"@it ;
@@ -2960,7 +2960,7 @@ psm:64 a skos:Concept ;
 psm:65 a skos:Concept ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "E8B23A5E-B65E-4DC8-977D-BD84F143A442" ;
-    schema:isPartOf psm:108,
+    skos:broader psm:108,
         psm:145 ;
     schema:name "Primeln"@de,
         "primevères"@fr,
@@ -2971,7 +2971,7 @@ psm:65 a skos:Concept ;
 psm:66 a skos:Concept ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "EACDD832-D1CD-479C-973F-CD0DB6A9FBC3" ;
-    schema:isPartOf psm:48 ;
+    skos:broader psm:48 ;
     schema:name "Meerrettich"@de,
         "raifort"@fr,
         "Rafano rusticana / Ramolaccio"@it ;
@@ -2981,7 +2981,7 @@ psm:66 a skos:Concept ;
 psm:67 a skos:Concept ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "D541F2F5-8BA6-4E26-AA66-9CF469648AFF" ;
-    schema:isPartOf psm:134 ;
+    skos:broader psm:134 ;
     schema:name "Küchenkräuter"@de,
         "fines herbes"@fr,
         "Erbette da cucina"@it ;
@@ -2991,7 +2991,7 @@ psm:67 a skos:Concept ;
 psm:68 a skos:Concept ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "D3CD23DC-4C49-4EE5-8BF8-6B074E74352A" ;
-    schema:isPartOf psm:27 ;
+    skos:broader psm:27 ;
     schema:name "Luzerne"@de,
         "Luzerne"@fr,
         "Erba medica"@it ;
@@ -3001,7 +3001,7 @@ psm:68 a skos:Concept ;
 psm:69 a skos:Concept ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "DDAE7B47-8561-44B4-BA3A-F9855E30BB54" ;
-    schema:isPartOf psm:13 ;
+    skos:broader psm:13 ;
     schema:name "Mini-Kiwi"@de,
         "mini-Kiwi (Kiwaï)"@fr,
         "Mini-Kiwi"@it ;
@@ -3011,7 +3011,7 @@ psm:69 a skos:Concept ;
 psm:7 a skos:Concept ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "A0012475-8478-4CA9-A18A-DC1CB96D788B" ;
-    schema:isPartOf psm:329 ;
+    skos:broader psm:329 ;
     schema:name "Blumenzwiebeln und Blumenknollen"@de,
         "bulbes ornementaux"@fr,
         "Bulbi ornamentali"@it ;
@@ -3021,7 +3021,7 @@ psm:7 a skos:Concept ;
 psm:70 a skos:Concept ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "D3D49C53-8EBC-4DAC-9C4C-B988AA162F7D" ;
-    schema:isPartOf psm:210,
+    skos:broader psm:210,
         psm:239 ;
     schema:name "Korn (Dinkel)"@de,
         "Épeautre"@fr,
@@ -3032,7 +3032,7 @@ psm:70 a skos:Concept ;
 psm:71 a skos:Concept ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "D3D90BE6-0924-4844-98FB-52C4D7F21A38" ;
-    schema:isPartOf psm:239 ;
+    skos:broader psm:239 ;
     schema:name "Weichweizen"@de,
         "Blé tendre"@fr,
         "Grano tenero"@it ;
@@ -3042,7 +3042,7 @@ psm:71 a skos:Concept ;
 psm:72 a skos:Concept ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "4D46051A-2DE7-42B1-8FB9-5DC0B007A26E" ;
-    schema:isPartOf psm:329 ;
+    skos:broader psm:329 ;
     schema:name "Bäume und Sträucher (ausserhalb Forst)"@de,
         "arbres et arbustes (hors fôret)"@fr,
         "Alberi e arbusti (al di fuori della foresta)"@it ;
@@ -3052,7 +3052,7 @@ psm:72 a skos:Concept ;
 psm:73 a skos:Concept ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "8B5A3E2B-2534-4FC0-84C5-685915165A77" ;
-    schema:isPartOf psm:27 ;
+    skos:broader psm:27 ;
     schema:name "Getreide"@de,
         "Céréales"@fr,
         "Cereali"@it ;
@@ -3062,7 +3062,7 @@ psm:73 a skos:Concept ;
 psm:75 a skos:Concept ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "8A00630A-32FC-4B5A-8171-EC0F41D39F48" ;
-    schema:isPartOf psm:317 ;
+    skos:broader psm:317 ;
     schema:name "Portulak"@de,
         "pourpier"@fr,
         "Portulaca"@it ;
@@ -3072,7 +3072,7 @@ psm:75 a skos:Concept ;
 psm:76 a skos:Concept ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "915B2192-1651-4B8A-B2D8-C162A5D27211" ;
-    schema:isPartOf psm:321 ;
+    skos:broader psm:321 ;
     schema:name "Krautstiel"@de,
         "Swiss chard"@en,
         "bette à côte"@fr,
@@ -3092,7 +3092,7 @@ psm:77 a skos:Concept ;
 psm:78 a skos:Concept ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "C9DB1105-33C7-44E8-92BA-9BBE5BA2BB3F" ;
-    schema:isPartOf psm:128,
+    skos:broader psm:128,
         psm:163 ;
     schema:name "Sommerhafer"@de,
         "Avoine de printemps"@fr,
@@ -3103,7 +3103,7 @@ psm:78 a skos:Concept ;
 psm:79 a skos:Concept ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "CDF1E5BC-0740-4214-8912-870CC2BB37F4" ;
-    schema:isPartOf psm:27 ;
+    skos:broader psm:27 ;
     schema:name "Grasbestände zur Saatgutproduktion"@de,
         "Graminées pour la production de semences"@fr,
         "Graminacee per la produzione di sementi"@it ;
@@ -3113,7 +3113,7 @@ psm:79 a skos:Concept ;
 psm:8 a skos:Concept ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "A2D2B4EC-D7D6-4A30-BEE9-0A8F907A874A" ;
-    schema:isPartOf psm:67 ;
+    skos:broader psm:67 ;
     schema:name "Süssdolde"@de,
         "cicely"@en,
         "Cerfeuil musqué"@fr,
@@ -3124,7 +3124,7 @@ psm:8 a skos:Concept ;
 psm:80 a skos:Concept ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "D18572C7-A270-4AA7-B766-48D62C5E9AB7" ;
-    schema:isPartOf psm:13 ;
+    skos:broader psm:13 ;
     schema:name "Schwarze Maulbeere"@de,
         "mûrier noir"@fr,
         "Moro nero"@it ;
@@ -3134,7 +3134,7 @@ psm:80 a skos:Concept ;
 psm:81 a skos:Concept ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "CA58ABAE-E494-4608-BE51-5FF49D853A03" ;
-    schema:isPartOf psm:25 ;
+    skos:broader psm:25 ;
     schema:name "Kopfkohle"@de,
         "choux pommés"@fr,
         "Cavoli a testa"@it ;
@@ -3144,7 +3144,7 @@ psm:81 a skos:Concept ;
 psm:82 a skos:Concept ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "EA82A16B-4A8C-4917-A08F-C2AD3B266640" ;
-    schema:isPartOf psm:27 ;
+    skos:broader psm:27 ;
     schema:name "Hanf"@de,
         "Hemp"@en,
         "Chanvre"@fr,
@@ -3164,7 +3164,7 @@ psm:83 a skos:Concept ;
 psm:84 a skos:Concept ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "EB820B26-DE4E-4AF4-8BA3-46844F045306" ;
-    schema:isPartOf psm:115 ;
+    skos:broader psm:115 ;
     schema:name "Bodenkohlrabi"@de,
         "rutabaga"@fr,
         "Cavolo navone"@it ;
@@ -3174,7 +3174,7 @@ psm:84 a skos:Concept ;
 psm:85 a skos:Concept ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "E9E3C127-33C1-40D9-8552-3CBE45E8E4C4" ;
-    schema:isPartOf psm:175 ;
+    skos:broader psm:175 ;
     schema:name "Tomaten"@de,
         "tomate"@fr,
         "Pomodori"@it ;
@@ -3184,7 +3184,7 @@ psm:85 a skos:Concept ;
 psm:86 a skos:Concept ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "D8A50212-BD15-456A-9D2E-2A401C2EF21D" ;
-    schema:isPartOf psm:25 ;
+    skos:broader psm:25 ;
     schema:name "Kohlrabi"@de,
         "colrave"@fr,
         "Cavolo rapa"@it ;
@@ -3194,7 +3194,7 @@ psm:86 a skos:Concept ;
 psm:87 a skos:Concept ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "DF4B3775-8361-41CE-9843-AC953197403D" ;
-    schema:isPartOf psm:20 ;
+    skos:broader psm:20 ;
     schema:name "Federkohl"@de,
         "chou frisé non pommé"@fr,
         "Cavolo piuma"@it ;
@@ -3204,7 +3204,7 @@ psm:87 a skos:Concept ;
 psm:88 a skos:Concept ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "4FC4A2B5-73DC-4C30-940C-813BBB4DFD10" ;
-    schema:isPartOf psm:96 ;
+    skos:broader psm:96 ;
     schema:name "Speise- und Futterkartoffeln"@de,
         "pommes de terre de consommation et fourragère"@fr,
         "Patate da tavola e da foraggio"@it ;
@@ -3214,7 +3214,7 @@ psm:88 a skos:Concept ;
 psm:89 a skos:Concept ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "C883F887-6B72-4917-9385-7A757E5FD8D6" ;
-    schema:isPartOf psm:277 ;
+    skos:broader psm:277 ;
     schema:name "Speisezwiebel"@de,
         "oignon (condiment)"@fr,
         "Cipolle da tavola"@it ;
@@ -3233,7 +3233,7 @@ psm:9 a skos:Concept ;
 psm:90 a skos:Concept ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "D100976A-2598-4614-AB7A-61436FF2B053" ;
-    schema:isPartOf psm:85 ;
+    skos:broader psm:85 ;
     schema:name "Rispentomaten"@de,
         "tomate à grappe"@fr,
         "Pomodoro ramato"@it ;
@@ -3243,7 +3243,7 @@ psm:90 a skos:Concept ;
 psm:91 a skos:Concept ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "D605CAA5-9199-4739-8C9C-343C74DABAEB" ;
-    schema:isPartOf psm:13 ;
+    skos:broader psm:13 ;
     schema:name "Gemeine Felsenbirne"@de,
         "amélavier commun"@fr,
         "Pero corvino"@it ;
@@ -3253,7 +3253,7 @@ psm:91 a skos:Concept ;
 psm:92 a skos:Concept ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "9A9333CA-AD6C-459D-9AFF-B8E8FB2FF8D4" ;
-    schema:isPartOf psm:95 ;
+    skos:broader psm:95 ;
     schema:name "Schwarzwurzel"@de,
         "scorsonère"@fr,
         "Scorzonera"@it ;
@@ -3263,7 +3263,7 @@ psm:92 a skos:Concept ;
 psm:93 a skos:Concept ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "D1E8D0D6-BD3C-4C47-9017-DBEADC9215A9" ;
-    schema:isPartOf psm:13 ;
+    skos:broader psm:13 ;
     schema:name "Sanddorn"@de,
         "argousier"@fr,
         "Olivello spinoso"@it ;
@@ -3273,7 +3273,7 @@ psm:93 a skos:Concept ;
 psm:94 a skos:Concept ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "D36B92CB-136F-46C3-8217-10C3F86ECA12" ;
-    schema:isPartOf psm:327 ;
+    skos:broader psm:327 ;
     schema:name "Sellerie"@de,
         "céleri"@fr,
         "Sedano"@it ;
@@ -3283,7 +3283,7 @@ psm:94 a skos:Concept ;
 psm:95 a skos:Concept ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "B05127D4-FF0A-4F36-AFDD-0D487043122A" ;
-    schema:isPartOf psm:134 ;
+    skos:broader psm:134 ;
     schema:name "Korbblütler (Asteraceae)"@de,
         "composées (Asteracea)"@fr,
         "Composite (Asteracee)"@it ;
@@ -3293,7 +3293,7 @@ psm:95 a skos:Concept ;
 psm:96 a skos:Concept ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "575A1469-EF59-4B4E-96C3-38FC0CAEF637" ;
-    schema:isPartOf psm:27 ;
+    skos:broader psm:27 ;
     schema:name "Kartoffeln"@de,
         "pommes de terre"@fr,
         "Patate"@it ;
@@ -3303,7 +3303,7 @@ psm:96 a skos:Concept ;
 psm:97 a skos:Concept ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "F171615D-81A1-4654-BF30-BF51620DFFB9" ;
-    schema:isPartOf psm:234 ;
+    skos:broader psm:234 ;
     schema:name "Lagerräume"@de,
         "entrepôts"@fr,
         "Depositi"@it ;
@@ -3312,7 +3312,7 @@ psm:97 a skos:Concept ;
 psm:98 a skos:Concept ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "E2A335E5-D797-46E7-9CE4-9CB3F301AAA2" ;
-    schema:isPartOf psm:145,
+    skos:broader psm:145,
         psm:310 ;
     schema:name "Gladiole"@de,
         "glaïeul"@fr,
@@ -3323,7 +3323,7 @@ psm:98 a skos:Concept ;
 psm:99 a skos:Concept ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "DB0DCB7D-CA9F-454A-8398-606F066FBF4F" ;
-    schema:isPartOf psm:2 ;
+    skos:broader psm:2 ;
     schema:name "Baby-Leaf (Asteraceae)"@de,
         "Baby-Leaf (Asteraceae)"@fr,
         "Baby-Leaf (Asteraceae)"@it ;
