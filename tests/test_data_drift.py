@@ -136,7 +136,6 @@ def test_naebi_drift(final_graph):
 
     assert not has_drift, f"NAEBI data drift detected. See {LOG_DIR}/{NAEBI_LOG_FILENAME} for details."
 
-@pytest.mark.xfail(reason="PSM-crops have a known drift, should be fixed with #429")
 def test_psmv_drift(final_graph):
     """
     Tests that the hierarchy and localized names in the remote PSMV CSV 
