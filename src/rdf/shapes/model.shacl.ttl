@@ -6,7 +6,9 @@
 @prefix : <https://agriculture.ld.admin.ch/crops/> .
 @prefix agis: <https://agriculture.ld.admin.ch/crops/agis/1/> .
 @prefix shape: <https://agriculture.ld.admin.ch/crops/shape/> .
+@prefix naebi:           <https://agriculture.ld.admin.ch/crops/naebi/1/> .
 @prefix cultivationtype: <https://agriculture.ld.admin.ch/crops/cultivationtype/> .
+@prefix psm: <https://agriculture.ld.admin.ch/crops/psm/1/> .
 @prefix intensity: <https://agriculture.ld.admin.ch/crops/intensity/> .
 
 # LINDAS prefixes --------------------------------------------------------------
@@ -372,8 +374,6 @@ shape:NutrientBalanceCrop a sh:NodeShape ;
 # ==============================================================================
 # Plant protection crop (from the Swiss registry of plant protection products)
 # ==============================================================================
-
-@prefix psm: <https://agriculture.ld.admin.ch/crops/psm/1/> .
 
 shape:PlantProtectionCrop a sh:NodeShape ;
     rdfs:label "Pflanzenschutzmittel-Kultur"@de,
