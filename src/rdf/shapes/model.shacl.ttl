@@ -285,46 +285,117 @@ shape:DirectPaymentCrop a sh:NodeShape ;
 # Nutrient Balance Crop (Suisse Bilanz, Näbi, Naebi)
 # ==============================================================================
 
-shape:NutrientBalanceCrop a sh:NodeShape ;
-    rdfs:label "Kultur der Nährstoffbilanz"@de,
-        "Nutrient Balance Crop"@en ;
+shape:NutrientBalanceCropCategory a sh:NodeShape ;
+    rdfs:label "Kultivierungskategorie (Nährstoffbilanz)"@de,
+        "Nutrient balance cultivation category"@en ;
+    rdfs:comment "Oberste Hierarchieebene der Kulturen im Nährstoffbilanz-Berechnungsservice, dient der reinen Strukturierung."@de ;
     sh:closed true ;
-    sh:ignoredProperties ( rdf:type skos:exactMatch skos:broadMatch skos:narrowMatch ) ;
-    sh:targetClass :NutrientBalanceCrop ;
+    sh:ignoredProperties ( rdf:type skos:exactMatch skos:broadMatch skos:narrowMatch skos:broader ) ;
+    
+    # Entry point for the validation chain
+    sh:targetSubjectsOf skos:topConceptOf ; 
+    
     sh:property
-        shape:identifier,
+        [
+            sh:order 1 ;
+            sh:name "Concept Scheme"@en, "Konzeptschema"@de ;
+            sh:path skos:inScheme ;
+            sh:hasValue naebi:ConceptScheme ;
+            sh:minCount 1 ;
+            sh:nodeKind sh:IRI ;
+        ],
         [
             sh:order 2 ;
-            sh:name "Bezeichnung"@de,
-                "Name"@en ;
-            sh:maxCount 1 ;
+            sh:name "Top Concept Of"@en, "Oberstes Konzept von"@de ;
+            sh:path skos:topConceptOf ;
+            sh:hasValue naebi:ConceptScheme ;
             sh:minCount 1 ;
-            sh:path schema:name ;
+            sh:maxCount 1 ;
+            sh:nodeKind sh:IRI ;
+        ],
+        [
+            sh:order 3 ;
+            sh:name "Bevorzugte Bezeichnung"@de, "Preferred Label"@en ;
+            sh:path skos:prefLabel ;
+            sh:minCount 1 ;
+            sh:nodeKind sh:Literal ;
+            sh:datatype rdf:langString ;
+        ],
+        [
+            sh:order 4 ;
+            sh:name "Unterkategorie"@de, "Subcategory"@en ;
+            sh:path skos:narrower ;
+            sh:minCount 1 ;
+            sh:nodeKind sh:IRI ;
+            sh:class skos:Concept ;
+            # Chained validation for the middle tier
+            sh:node shape:NutrientBalanceCropSubCategory ;
+        ],
+        shape:cultivationType .
+
+shape:NutrientBalanceCropSubCategory a sh:NodeShape ;
+    rdfs:label "Kultivierungsunterkategorie (Nährstoffbilanz)"@de,
+        "Nutrient balance cultivation subcategory"@en ;
+    rdfs:comment "Mittlere Hierarchieebene der Kulturen im Nährstoffbilanz-Berechnungsservice."@de ;
+    sh:closed true ;
+    sh:ignoredProperties ( rdf:type skos:exactMatch skos:broadMatch skos:narrowMatch skos:broader ) ;
+    sh:property
+        [
+            sh:order 1 ;
+            sh:name "Concept Scheme"@en, "Konzeptschema"@de ;
+            sh:path skos:inScheme ;
+            sh:hasValue naebi:ConceptScheme ;
+            sh:minCount 1 ;
+            sh:nodeKind sh:IRI ;
+        ],
+        [
+            sh:order 2 ;
+            sh:name "Bevorzugte Bezeichnung"@de, "Preferred Label"@en ;
+            sh:path skos:prefLabel ;
+            sh:minCount 1 ;
             sh:nodeKind sh:Literal ;
             sh:datatype rdf:langString ;
         ],
         [
             sh:order 3 ;
-            sh:name "Kulturkategorie"@de ;
-            sh:maxCount 1 ;
+            sh:name "Agronomische Kultur"@de, "Agronomic crop"@en ;
+            sh:path skos:narrower ;
             sh:minCount 1 ;
             sh:nodeKind sh:IRI ;
-            sh:class :CultivationType ;
-            sh:path :cultivationCategory ;
+            sh:class skos:Concept ;
+            # Chained validation for the bottom tier
+            sh:node shape:NutrientBalanceCrop ;
+        ],
+        shape:cultivationType .
+
+shape:NutrientBalanceCrop a sh:NodeShape ;
+    rdfs:label "Agronomische Kulturkategorie (Nährstoffbilanz)"@de,
+        "Nutrient balance agronomic crop category"@en ;
+    rdfs:comment "Unterste Hierarchieebene, welche die eigentlichen Kulturen mit spezifischen agronomischen Eigenschaften für die Suisse-Bilanz beinhaltet."@de ;
+    sh:closed true ;
+    sh:ignoredProperties ( rdf:type skos:exactMatch skos:broadMatch skos:narrowMatch skos:broader ) ;
+    sh:property
+        shape:identifier,
+        [
+            sh:order 2 ;
+            sh:name "Concept Scheme"@en, "Konzeptschema"@de ;
+            sh:path skos:inScheme ;
+            sh:hasValue naebi:ConceptScheme ;
+            sh:minCount 1 ;
+            sh:nodeKind sh:IRI ;
         ],
         [
-            sh:order 4 ;
-            sh:name "Kultur-Unterkategorie"@de ;
-            sh:maxCount 1 ;
+            sh:order 3 ;
+            sh:name "Bevorzugte Bezeichnung"@de, "Preferred Label"@en ;
+            sh:path skos:prefLabel ;
             sh:minCount 1 ;
-            sh:nodeKind sh:IRI ;
-            sh:class :CultivationType ;
-            sh:path :cultivationSubCategory ;
+            sh:nodeKind sh:Literal ;
+            sh:datatype rdf:langString ;
         ],
         shape:cultivationType,
         [
             a cube:MeasureDimension ;
-            sh:order 6 ;
+            sh:order 5 ;
             sh:name "N"@de ;
             sh:description "Stickstoff, kg/ha"@de ;
             sh:maxCount 1 ;
@@ -336,7 +407,7 @@ shape:NutrientBalanceCrop a sh:NodeShape ;
         ],
         [
             a cube:MeasureDimension ;
-            sh:order 7 ;
+            sh:order 6 ;
             sh:name "P₂O₅"@de ;
             sh:description "Phosphor, kg/dt"@de ;
             sh:maxCount 1 ;
@@ -348,7 +419,7 @@ shape:NutrientBalanceCrop a sh:NodeShape ;
         ],
         [
             a cube:MeasureDimension ;
-            sh:order 8 ;
+            sh:order 7 ;
             sh:name "K₂O"@de ;
             sh:description "Kalium, kg/dt"@de ;
             sh:maxCount 1 ;
@@ -360,7 +431,7 @@ shape:NutrientBalanceCrop a sh:NodeShape ;
         ],
         [
             a cube:MeasureDimension ;
-            sh:order 9 ;
+            sh:order 8 ;
             sh:name "Mg"@de ;
             sh:description "Magnesium, kg/dt"@de ;
             sh:maxCount 1 ;
