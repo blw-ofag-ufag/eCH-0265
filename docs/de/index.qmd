@@ -159,7 +159,7 @@ Für weiterführende Informationen zur Publikation, Nutzung und den Kernprozesse
 
 Das konsolidierte Datenmodell wird durch eine RDFS-Ontologie abgebildet und mittels SHACL-Shapes validiert [@rdf;@owl2;@shacl].
 
-![UML-Diagramm des Datenmodells.](../assets/img/uml.png)
+![UML-Diagramm des Datenmodells von eCH-0265. Dieses Diagramm wurde automatisch mithilfe von aus den SHACL-Spezifikationen generiert.](../assets/img/uml.png){#fig-uml width="100%" .lightbox}
 
 TBC.
 
