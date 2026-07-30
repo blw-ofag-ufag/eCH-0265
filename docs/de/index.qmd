@@ -169,14 +169,6 @@ TBC.
 
 # Nutzung der Daten
 
-Hier ist die Übersetzung, die für eCH-Standards (z. B. Konzept- oder Spezifikationsdokumente der Schweizer Behörden) optimiert wurde. Die direkte Anrede („Du/Sie“) wurde durch objektive, im Verwaltungskontext übliche Passivkonstruktionen ersetzt.
-
-Wie gewünscht, wurde die Schweizer Rechtschreibung (ohne „ß“) angewendet.
-
----
-
-# Nutzung der Daten
-
 Das System der Kulturenstammdaten kann mittels der Abfragesprache [SPARQL 1.1 Query Language](https://www.w3.org/TR/sparql11-query/) abgefragt werden.
 Nachfolgend ist ein [Abfragebeispiel](https://s.zazuko.com/3xUUXpv) aufgeführt, welches sämtliche URIs der Nutzungsarten sowie deren deutschsprachige Bezeichnungen abruft:
 
