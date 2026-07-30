@@ -3,13 +3,13 @@
 # ==============================================================================
 
 # Local prefixes ---------------------------------------------------------------
-@prefix : <https://agriculture.ld.admin.ch/crops/> .
-@prefix agis: <https://agriculture.ld.admin.ch/crops/agis/1/> .
-@prefix shape: <https://agriculture.ld.admin.ch/crops/shape/> .
+@prefix :                <https://agriculture.ld.admin.ch/crops/> .
+@prefix agis:            <https://agriculture.ld.admin.ch/crops/agis/1/> .
+@prefix eCH-0265:        <https://agriculture.ld.admin.ch/eCH-0265/2/> .
 @prefix naebi:           <https://agriculture.ld.admin.ch/crops/naebi/1/> .
 @prefix cultivationtype: <https://agriculture.ld.admin.ch/crops/cultivationtype/> .
-@prefix psm: <https://agriculture.ld.admin.ch/crops/psm/1/> .
-@prefix intensity: <https://agriculture.ld.admin.ch/crops/intensity/> .
+@prefix psm:             <https://agriculture.ld.admin.ch/crops/psm/1/> .
+@prefix intensity:       <https://agriculture.ld.admin.ch/crops/intensity/> .
 
 # LINDAS prefixes --------------------------------------------------------------
 @prefix country: <https://ld.admin.ch/country/> .
@@ -36,7 +36,7 @@
 # Visit https://shacl-play.sparna.fr/play/doc for more on this.
 # ==============================================================================
 
-shape: a owl:Ontology ;
+eCH-0265: a owl:Ontology ;
     dcterms:creator "Damian Oswald, Lea Stauber, Marc Beringer, Christian Wilda" ;
     dcterms:title "RDF master and reference data about crops"@en ;
     dcterms:created "2026-03-05"^^xsd:date ;
@@ -52,7 +52,7 @@ In this project, we propose a unified master data system for crops and crop-rela
 # CULTIVATION TYPE
 # ==============================================================================
 
-shape:CultivationType a sh:NodeShape ;
+eCH-0265:CultivationType a sh:NodeShape ;
     rdfs:label "Cultivation type"@en,
         "Nutzungstyp"@de ;
     rdfs:comment "Die Kernklasse für die Klassifikation von «Kulturen», bzw. Landnutzungen. Eine (teilweise) Übersetzung anderer Kulturarten ist über die mit dieser Klasse modellierte Hierarchie möglich. Für die allgemeine Hierarchiemodellierung wird das [*RDF-Schema* (RDFS)](https://www.w3.org/TR/rdf-schema/) sowie die [*Web Ontology Language* (OWL)](https://www.w3.org/TR/owl-guide/) verwendet."@de ;
@@ -75,8 +75,6 @@ shape:CultivationType a sh:NodeShape ;
             sh:minCount 1 
         ] ]
     ) ;
-
-    # global property definitions
     sh:property
     [
         sh:order 1 ;
@@ -108,12 +106,6 @@ shape:CultivationType a sh:NodeShape ;
         sh:uniqueLang true ;
     ],
     [
-        sh:order 4 ;
-        sh:name "Image"@en, "Bild"@de ;
-        sh:path schema:image ;
-        sh:nodeKind sh:IRI ;
-    ] ,
-    [
         sh:order 5 ;
         sh:name "Parent cultivation type"@en ;
         sh:path rdfs:subClassOf ;
@@ -123,44 +115,17 @@ shape:CultivationType a sh:NodeShape ;
         ) ;
     ],
     [
-        sh:order 6 ;
-        sh:path owl:intersectionOf ;
-    ],
-    [
-        sh:order 7 ;
-        sh:path owl:unionOf ;
-    ],
-    [
         sh:order 8 ;
         sh:path owl:disjointWith ;
         sh:nodeKind sh:IRI ;
         sh:class :CultivationType ;
-    ],
-    [
-        sh:order 9 ;
-        sh:name "Botanical plant"@en,
-            "Botanische Pflanze"@de ;
-        sh:description "A plant taxon that specify a given cultivation type. For example, \"winter wheat\" has botanical plant *Triticum aestivum*. Note that while the first describes a form of cultivations, the latter describes a class of plant individuals."@en ;
-        sh:path :botanicalPlant ;
-        sh:nodeKind sh:IRI ;
-        sh:maxCount 1 ;
-    ],
-    [
-        sh:order 10 ;
-        sh:name "Management intensity"@en,
-            "Anbauintensität"@de ;
-        schema:description "Anbauintensität, mit welcher Flächen der Bezugsklasse bewirtschaftet werden."@de ;
-        sh:path :managementIntensity ;
-        sh:nodeKind sh:IRI ;
-        sh:maxCount 1 ;
-        sh:in ( intensity:Extensive intensity:Low intensity:Medium intensity:Intensive ) ;
     ] .
 
 # ==============================================================================
 # Direct payment crop (AGIS)
 # ==============================================================================
 
-shape:DirectPaymentAreaCategory a sh:NodeShape ;
+eCH-0265:DirectPaymentAreaCategory a sh:NodeShape ;
     rdfs:label "Flächenkategorie Direktzahlung"@de,
         "Direct payment area category"@en ;
     rdfs:comment "Level 1 in the AGIS direct payment crops hierarchy."@en ;
@@ -193,9 +158,9 @@ shape:DirectPaymentAreaCategory a sh:NodeShape ;
             sh:nodeKind sh:Literal ;
             sh:datatype rdf:langString ;
         ],
-        shape:cultivationType .
+        eCH-0265:cultivationType .
 
-shape:DirectPaymentCrop a sh:NodeShape ;
+eCH-0265:DirectPaymentCrop a sh:NodeShape ;
     rdfs:label "Direct payment crop"@en,
         "Direktzahlungskultur"@de ;
     rdfs:comment "A classification scheme built for the Swiss direct payment system"@en,
@@ -225,7 +190,7 @@ shape:DirectPaymentCrop a sh:NodeShape ;
             # Validate that the crop links up to a Level 1 Category
             sh:order 1 ;
             sh:path skos:broader ;
-            sh:node shape:DirectPaymentAreaCategory ; 
+            sh:node eCH-0265:DirectPaymentAreaCategory ; 
             sh:minCount 1 ;
             sh:maxCount 1 ;
             sh:nodeKind sh:IRI ;
@@ -260,7 +225,7 @@ shape:DirectPaymentCrop a sh:NodeShape ;
             sh:nodeKind sh:Literal ;
             sh:datatype rdf:langString ;
         ],
-        shape:cultivationType,
+        eCH-0265:cultivationType,
         [
             sh:order 7 ;
             sh:name "Gültig von"@de ;
@@ -285,7 +250,7 @@ shape:DirectPaymentCrop a sh:NodeShape ;
 # Nutrient Balance Crop (Suisse Bilanz, Näbi, Naebi)
 # ==============================================================================
 
-shape:NutrientBalanceCropCategory a sh:NodeShape ;
+eCH-0265:NutrientBalanceCropCategory a sh:NodeShape ;
     rdfs:label "Kultivierungskategorie (Nährstoffbilanz)"@de,
         "Nutrient balance cultivation category"@en ;
     rdfs:comment "Oberste Hierarchieebene der Kulturen im Nährstoffbilanz-Berechnungsservice, dient der reinen Strukturierung."@de ;
@@ -329,11 +294,11 @@ shape:NutrientBalanceCropCategory a sh:NodeShape ;
             sh:nodeKind sh:IRI ;
             sh:class skos:Concept ;
             # Chained validation for the middle tier
-            sh:node shape:NutrientBalanceCropSubCategory ;
+            sh:node eCH-0265:NutrientBalanceCropSubCategory ;
         ],
-        shape:cultivationType .
+        eCH-0265:cultivationType .
 
-shape:NutrientBalanceCropSubCategory a sh:NodeShape ;
+eCH-0265:NutrientBalanceCropSubCategory a sh:NodeShape ;
     rdfs:label "Kultivierungsunterkategorie (Nährstoffbilanz)"@de,
         "Nutrient balance cultivation subcategory"@en ;
     rdfs:comment "Mittlere Hierarchieebene der Kulturen im Nährstoffbilanz-Berechnungsservice."@de ;
@@ -350,35 +315,37 @@ shape:NutrientBalanceCropSubCategory a sh:NodeShape ;
         ],
         [
             sh:order 2 ;
-            sh:name "Bevorzugte Bezeichnung"@de, "Preferred Label"@en ;
-            sh:path skos:prefLabel ;
+            sh:name "Name"@de,
+                "Name"@en ;
+            sh:path schema:name ;
             sh:minCount 1 ;
             sh:nodeKind sh:Literal ;
             sh:datatype rdf:langString ;
         ],
         [
             sh:order 3 ;
-            sh:name "Agronomische Kultur"@de, "Agronomic crop"@en ;
+            sh:name "Agronomische Kultur"@de,
+                "Agronomic crop"@en ;
             sh:path skos:narrower ;
             sh:minCount 1 ;
             sh:nodeKind sh:IRI ;
             sh:class skos:Concept ;
-            # Chained validation for the bottom tier
-            sh:node shape:NutrientBalanceCrop ;
+            sh:node eCH-0265:NutrientBalanceCrop ;
         ],
-        shape:cultivationType .
+        eCH-0265:cultivationType .
 
-shape:NutrientBalanceCrop a sh:NodeShape ;
-    rdfs:label "Agronomische Kulturkategorie (Nährstoffbilanz)"@de,
+eCH-0265:NutrientBalanceCrop a sh:NodeShape ;
+    rdfs:label "Agronomische Kulturkategorie"@de,
         "Nutrient balance agronomic crop category"@en ;
     rdfs:comment "Unterste Hierarchieebene, welche die eigentlichen Kulturen mit spezifischen agronomischen Eigenschaften für die Suisse-Bilanz beinhaltet."@de ;
     sh:closed true ;
     sh:ignoredProperties ( rdf:type skos:exactMatch skos:broadMatch skos:narrowMatch skos:broader ) ;
     sh:property
-        shape:identifier,
+        eCH-0265:identifier,
         [
             sh:order 2 ;
-            sh:name "Concept Scheme"@en, "Konzeptschema"@de ;
+            sh:name "Concept Scheme"@en,
+                "Konzeptschema"@de ;
             sh:path skos:inScheme ;
             sh:hasValue naebi:ConceptScheme ;
             sh:minCount 1 ;
@@ -386,74 +353,27 @@ shape:NutrientBalanceCrop a sh:NodeShape ;
         ],
         [
             sh:order 3 ;
-            sh:name "Bevorzugte Bezeichnung"@de, "Preferred Label"@en ;
-            sh:path skos:prefLabel ;
+            sh:name "Name"@de,
+                "Name"@en ;
+            sh:path schema:name ;
             sh:minCount 1 ;
             sh:nodeKind sh:Literal ;
             sh:datatype rdf:langString ;
         ],
-        shape:cultivationType,
-        [
-            a cube:MeasureDimension ;
-            sh:order 5 ;
-            sh:name "N"@de ;
-            sh:description "Stickstoff, kg/ha"@de ;
-            sh:maxCount 1 ;
-            sh:path :N2 ;
-            sh:nodeKind sh:Literal ;
-            sh:datatype xsd:decimal ;
-            qudt:hasUnit unit:KiloGM-PER-HA ;
-            qudt:scaleType qudt:RatioScale ;
-        ],
-        [
-            a cube:MeasureDimension ;
-            sh:order 6 ;
-            sh:name "P₂O₅"@de ;
-            sh:description "Phosphor, kg/dt"@de ;
-            sh:maxCount 1 ;
-            sh:path :P2O5 ;
-            sh:nodeKind sh:Literal ;
-            sh:datatype xsd:decimal ;
-            qudt:hasUnit unit:KiloGM-PER-DeciTONNE ;
-            qudt:scaleType qudt:RatioScale ;
-        ],
-        [
-            a cube:MeasureDimension ;
-            sh:order 7 ;
-            sh:name "K₂O"@de ;
-            sh:description "Kalium, kg/dt"@de ;
-            sh:maxCount 1 ;
-            sh:path :K2O ;
-            sh:nodeKind sh:Literal ;
-            sh:datatype xsd:decimal ;
-            qudt:hasUnit unit:KiloGM-PER-DeciTONNE ;
-            qudt:scaleType qudt:RatioScale ;
-        ],
-        [
-            a cube:MeasureDimension ;
-            sh:order 8 ;
-            sh:name "Mg"@de ;
-            sh:description "Magnesium, kg/dt"@de ;
-            sh:maxCount 1 ;
-            sh:path :Mg ;
-            sh:nodeKind sh:Literal ;
-            sh:datatype xsd:decimal ;
-            qudt:hasUnit unit:KiloGM-PER-DeciTONNE ;
-            qudt:scaleType qudt:RatioScale ;
-        ] .
+        eCH-0265:cultivationType .
 
 # ==============================================================================
 # Plant protection crop (from the Swiss registry of plant protection products)
 # ==============================================================================
 
-shape:PlantProtectionCrop a sh:NodeShape ;
+eCH-0265:PlantProtectionCrop a sh:NodeShape ;
     rdfs:label "Pflanzenschutzmittel-Kultur"@de,
         "Plant protection crop"@en ;
     rdfs:comment "Kultur, wie sie im [Pflanzenschutzmittelverzeichnis](https://psm.admin.ch/) modelliert ist. Diese Kulturen sind über die Attribute `schema:isPartOf` sowie `schema:hasPart` hierarchisch organisiert."@de ;
     sh:closed true ;
     sh:ignoredProperties ( rdf:type skos:exactMatch skos:broadMatch skos:narrowMatch ) ;
     sh:property
-        shape:identifier,
+        eCH-0265:identifier,
         [
             sh:order 1.5 ;
             sh:name "Concept Scheme"@en, 
@@ -476,7 +396,7 @@ shape:PlantProtectionCrop a sh:NodeShape ;
             sh:path schema:name ;
             sh:datatype rdf:langString ;
         ],
-        shape:cultivationType,
+        eCH-0265:cultivationType,
         [
             sh:order 4 ;
             sh:name "Version"@de ;
@@ -495,24 +415,14 @@ shape:PlantProtectionCrop a sh:NodeShape ;
             sh:maxCount 2 ;
             sh:nodeKind sh:IRI ;
             sh:class skos:Concept ;
-            sh:node shape:PlantProtectionCrop ;
-        ],
-        [
-            sh:order 7 ;
-            sh:name "Child crop"@en,
-                "Unterkultur"@de ;
-            sh:path skos:narrower ;
-            sh:minCount 0 ;
-            sh:nodeKind sh:IRI ;
-            sh:class skos:Concept ;
-            sh:node shape:PlantProtectionCrop ;
+            sh:node eCH-0265:PlantProtectionCrop ;
         ] .
 
 # ==============================================================================
 # GENERIC PROPERTIES TO BE RE-USED
 # ==============================================================================
 
-shape:identifier a sh:PropertyShape ;
+eCH-0265:identifier a sh:PropertyShape ;
     sh:name "Identifier"@en,
         "Identifikator"@de ;
     sh:order 1 ;
@@ -522,12 +432,12 @@ shape:identifier a sh:PropertyShape ;
     sh:nodeKind sh:Literal ;
     sh:datatype xsd:string .
 
-shape:cultivationType a sh:PropertyShape ;
+eCH-0265:cultivationType a sh:PropertyShape ;
     sh:order 0 ;
     sh:name "Kultivierungstyp"@de,
         "Cultivation type"@en ;
-    sh:description "The corresponding cultivation type in the crops ontology that semantically describes this crop."@en ;
-    sh:path :cultivationType ;
+    sh:description "Der dieser bereichsspezifischen Kultur korrespondierende Kultivierungstyp in der Kulturenontologie."@en ;
+    sh:path skos:exactMatch ;
     sh:minCount 0 ;
     sh:maxCount 1 ;
     sh:class :CultivationType .
