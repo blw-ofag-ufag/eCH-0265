@@ -31,6 +31,8 @@ format:
     toc: true
     number-sections: true
     embed-resources: true
+    syntax-definitions:
+     - assets/sparql.xml
   gfm: 
     toc: false
     number-sections: false
@@ -41,3 +43,5 @@ format:
     link-citations: true
   typst:
     number-sections: true
+    syntax-definitions:
+     - assets/sparql.xml

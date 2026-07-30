@@ -169,8 +169,47 @@ TBC.
 
 # Nutzung der Daten
 
-- Sämtliche hier beschriebenen Daten können auf LINDAS bezogen werden.
-- Knappe Anleitung zum Beziehen der Daten.
+Hier ist die Übersetzung, die für eCH-Standards (z. B. Konzept- oder Spezifikationsdokumente der Schweizer Behörden) optimiert wurde. Die direkte Anrede („Du/Sie“) wurde durch objektive, im Verwaltungskontext übliche Passivkonstruktionen ersetzt.
+
+Wie gewünscht, wurde die Schweizer Rechtschreibung (ohne „ß“) angewendet.
+
+---
+
+# Nutzung der Daten
+
+Das System der Kulturenstammdaten kann mittels der Abfragesprache [SPARQL 1.1 Query Language](https://www.w3.org/TR/sparql11-query/) abgefragt werden.
+Nachfolgend ist ein [Abfragebeispiel](https://s.zazuko.com/3xUUXpv) aufgeführt, welches sämtliche URIs der Nutzungsarten sowie deren deutschsprachige Bezeichnungen abruft:
+
+```sparql
+PREFIX schema: <http://schema.org/>
+PREFIX owl: <http://www.w3.org/2002/07/owl#> 
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX : <https://agriculture.ld.admin.ch/crops/>
+
+SELECT ?name ?URI
+FROM <https://lindas.admin.ch/foag/crops>
+WHERE {
+  ?URI a owl:Class ;
+    schema:name ?name ;
+    rdfs:subClassOf+ :Cultivation .
+  FILTER(LANG(?name) = "de")
+}
+ORDER BY ?name
+```
+
+Weitere Beispiele sind im Verzeichnis [`src/sparql/queries`](https://www.google.com/search?q=src/sparql/queries) verfügbar. Es gilt zu beachten, dass bestimmte Beispiele parametrisiert sind und folglich ohne vorherige Modifikation nicht ausgeführt werden können.
+
+Für den automatisierten Datenabruf aus LINDAS kann eine POST-Anfrage an den LINDAS-Endpunkt übermittelt werden, wobei die SPARQL-Abfrage als Parameter zu übergeben ist.
+
+``` sh
+# Beliebige Abfrage definieren...
+query="SELECT * FROM <https://lindas.admin.ch/foag/crops> WHERE { ?s ?p ?o }"
+curl -G "https://lindas.admin.ch/query" \
+     --data-urlencode "query=$query" \
+     -H "Accept: application/json"
+```
+
+Abhängig von den jeweiligen Integrationsanforderungen lässt sich der Accept-Header anpassen, um die Zieldaten in diversen Formaten zu beziehen. Dazu zählen unter anderem JSON (`application/json`), XML (`application/sparql-results+xml`) oder CSV (`text/csv`).
 
 ## Bezug von Mapping-Tabellen {#sec-mapping-tables}
 
