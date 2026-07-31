@@ -2,32 +2,25 @@
 # PREFIXES
 # ==============================================================================
 
-# Local prefixes ---------------------------------------------------------------
-@prefix :        <https://agriculture.ld.admin.ch/crops/> .
-@prefix agis:    <https://agriculture.ld.admin.ch/crops/agis/1/> .
-@prefix eCH-0265: <https://agriculture.ld.admin.ch/eCH-0265/2/> .
-@prefix naebi:   <https://agriculture.ld.admin.ch/crops/naebi/1/> .
-@prefix cultivationtype: <https://agriculture.ld.admin.ch/crops/cultivationtype/> .
-@prefix psm:     <https://agriculture.ld.admin.ch/crops/psm/1/> .
-@prefix intensity: <https://agriculture.ld.admin.ch/crops/intensity/> .
+# Project-specific namespaces/qnames
+@prefix :                <https://agriculture.ld.admin.ch/crops/> .
+@prefix eCH-0265:        <https://agriculture.ld.admin.ch/eCH-0265/2/> .
+@prefix psm:             <https://agriculture.ld.admin.ch/crops/psm/1/> .
+@prefix agis:            <https://agriculture.ld.admin.ch/crops/agis/1/> .
+@prefix naebi:           <https://agriculture.ld.admin.ch/crops/naebi/1/> .
 
-# LINDAS prefixes --------------------------------------------------------------
-@prefix country: <https://ld.admin.ch/country/> .
-@prefix cube:    <https://cube.link/> .
+# LINDAS-specific namespaces/qnames
+@prefix cube:            <https://cube.link/> .
 
-# International prefixes -------------------------------------------------------
-@prefix adms:    <https://www.w3.org/ns/adms#> .
-@prefix dcterms: <http://purl.org/dc/terms/> .
-@prefix doap:    <http://usefulinc.com/ns/doap#> .
-@prefix owl:     <http://www.w3.org/2002/07/owl#> .
-@prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
-@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix schema:  <http://schema.org/> .
-@prefix sh:      <http://www.w3.org/ns/shacl#> .
-@prefix skos:    <http://www.w3.org/2004/02/skos/core#> .
-@prefix unit:    <http://qudt.org/vocab/unit/> .
-@prefix qudt:    <http://qudt.org/schema/qudt/> .
-@prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
+# Globally used namespaces/qnames
+@prefix dcterms:         <http://purl.org/dc/terms/> .
+@prefix owl:             <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:             <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:            <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema:          <http://schema.org/> .
+@prefix sh:              <http://www.w3.org/ns/shacl#> .
+@prefix skos:            <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd:             <http://www.w3.org/2001/XMLSchema#> .
 
 # ==============================================================================
 # DOCUMENT METADATA
