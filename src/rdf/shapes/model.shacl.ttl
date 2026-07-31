@@ -9,9 +9,6 @@
 @prefix agis:            <https://agriculture.ld.admin.ch/crops/agis/1/> .
 @prefix naebi:           <https://agriculture.ld.admin.ch/crops/naebi/1/> .
 
-# LINDAS-specific namespaces/qnames
-@prefix cube:            <https://cube.link/> .
-
 # Globally used namespaces/qnames
 @prefix dcterms:         <http://purl.org/dc/terms/> .
 @prefix owl:             <http://www.w3.org/2002/07/owl#> .
@@ -170,12 +167,11 @@ eCH-0265:DirectPaymentCrop a sh:NodeShape ;
         sh:message "schema:validFrom must be less than or equal to schema:validTo" ;
         sh:select """
             PREFIX schema: <http://schema.org/>
-            PREFIX cube: <https://cube.link/>
             SELECT $this ?validFrom ?validTo
             WHERE {
                 $this schema:validFrom ?validFrom .
                 $this schema:validTo ?validTo .
-                FILTER (?validTo != cube:Undefined && ?validFrom > ?validTo)
+                FILTER (?validFrom > ?validTo)
             }
         """ ;
     ] ;
@@ -201,7 +197,6 @@ eCH-0265:DirectPaymentCrop a sh:NodeShape ;
             sh:order 3 ;
             sh:name "Identifikator"@de ;
             sh:description "Der LNF-Code, auch Kulturcode genannt, ist der allgemein gebräuchliche Identifikator für Direktzahlungskulturen in der Schweiz."@de ;
-            a cube:KeyDimension ;
             sh:name "LNF-Code"@de ;
             sh:description "Auch Kulturcode genannt, ist der allgemein gebräuchliche Identifikator für Direktzahlungskulturen in der Schweiz."@de ;
             sh:maxCount 1 ;
