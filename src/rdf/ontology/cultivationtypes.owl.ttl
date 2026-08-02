@@ -1837,8 +1837,7 @@ cultivationtype:413 a :CultivationType ;
 
 cultivationtype:414 a :CultivationType ;
     schema:name "Biodiversitätsförderfläche"@de ;
-    schema:alternateName "Ökologischen Ausgleichsflächen"@de,
-        "Übriger Ökoausgleich"@de ;
+    schema:alternateName "Ökologischen Ausgleichsflächen"@de ;
     rdfs:subClassOf :Cultivation .
 
 cultivationtype:460 a :CultivationType ;
