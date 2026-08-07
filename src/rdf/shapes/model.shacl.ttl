@@ -327,22 +327,18 @@ eCH-0265:NutrientBalanceCrop a sh:NodeShape, rdfs:Class ;
             sh:name "Unterkategorie"@de,
                 "Subcategory"@en ;
             sh:path skos:broader ;
-            sh:qualifiedValueShape [
-                sh:class eCH-0265:NutrientBalanceCropSubCategory ;
-            ] ;
-            sh:qualifiedMinCount 1 ;
-            sh:qualifiedMaxCount 1 ;
+            sh:class eCH-0265:NutrientBalanceCropSubCategory ;
+            sh:minCount 1 ;
+            sh:maxCount 1 ;
         ],
         [
             sh:order 6 ;
             sh:name "Kategorie"@de,
                 "Category"@en ;
-            sh:path skos:broader ;
-            sh:qualifiedValueShape [
-                sh:class eCH-0265:NutrientBalanceCropCategory ;
-            ] ;
-            sh:qualifiedMinCount 1 ;
-            sh:qualifiedMaxCount 1 ;
+            sh:path eCH-0265:cultivationCategory ;
+            sh:class eCH-0265:NutrientBalanceCropCategory ;
+            sh:minCount 1 ;
+            sh:maxCount 1 ;
         ],
         eCH-0265:identifier,
         eCH-0265:cultivationType .

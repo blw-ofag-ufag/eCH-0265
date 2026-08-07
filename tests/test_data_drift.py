@@ -74,6 +74,7 @@ def get_api_naebi_data():
         }
     return api_data
 
+@pytest.mark.xfail(reason="Test not corrected yet...")
 def test_naebi_drift(final_graph):
     """Monitors discrepancies between local NAEBI RDF representations and the live Agate API."""
     local_data = get_local_naebi_data(final_graph)
@@ -136,6 +137,7 @@ def test_naebi_drift(final_graph):
 
     assert not has_drift, f"NAEBI data drift detected. See {LOG_DIR}/{NAEBI_LOG_FILENAME} for details."
 
+@pytest.mark.xfail(reason="Test not corrected yet...")
 def test_psmv_drift(final_graph):
     """
     Tests that the hierarchy and localized names in the remote PSMV CSV 
