@@ -4,7 +4,7 @@
 # ==============================================================================
 
 # Project-specific namespaces/qnames
-@prefix :                <https://agriculture.ld.admin.ch/crops/> .
+@prefix eCH-0265:        <https://agriculture.ld.admin.ch/eCH-0265/2/> .
 @prefix psm:             <https://agriculture.ld.admin.ch/crops/psm/1/> .
 @prefix cultivationtype: <https://agriculture.ld.admin.ch/crops/cultivationtype/> .
 @prefix shape:           <https://agriculture.ld.admin.ch/crops/shape/> .
@@ -29,7 +29,7 @@
 # DATASET METADATA
 # ==============================================================================
 
-psm:ConceptScheme a skos:ConceptScheme ;
+psm:ConceptScheme a eCH-0265:PlantProtectionCropScheme ;
     schema:name "PSM-Kulturen"@de,
         "PSM crops"@en ;
     schema:description "Kulturen aus dem Pflanzenschutzmittelverzeichnis (PSM) und ihre Identifikatoren."@de,
@@ -48,7 +48,7 @@ psm:ConceptScheme a skos:ConceptScheme ;
 # CROP DEFINITIONS
 # ==============================================================================
 
-psm:1 a skos:Concept ;
+psm:1 a eCH-0265:PlantProtectionCrop ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "00D94F57-BA6F-4BA0-8F68-26D4C497539A" ;
     skos:broader psm:329 ;
@@ -56,9 +56,9 @@ psm:1 a skos:Concept ;
         "plantes ornementales annuelles et bisannuelles"@fr,
         "Piante ornamentali annuali e biennali"@it ;
     schema:version 0 ;
-    :cultivationType cultivationtype:405 .
+    skos:exactMatch cultivationtype:405 .
 
-psm:10 a skos:Concept ;
+psm:10 a eCH-0265:PlantProtectionCrop ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "9C6CEE37-8105-4E48-9CA4-11BA3AB556FB" ;
     skos:broader psm:145,
@@ -68,9 +68,9 @@ psm:10 a skos:Concept ;
         "gerbera"@fr,
         "Gerbera"@it ;
     schema:version 0 ;
-    :cultivationType cultivationtype:406 .
+    skos:exactMatch cultivationtype:406 .
 
-psm:100 a skos:Concept ;
+psm:100 a eCH-0265:PlantProtectionCrop ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "99379C08-8682-4628-BD67-6E566F5130FA" ;
     skos:broader psm:27 ;
@@ -78,9 +78,9 @@ psm:100 a skos:Concept ;
         "Riz semis sur terrain sec"@fr,
         "Riso seminato su terreno asciutto"@it ;
     schema:version 0 ;
-    :cultivationType cultivationtype:520 .
+    skos:exactMatch cultivationtype:520 .
 
-psm:101 a skos:Concept ;
+psm:101 a eCH-0265:PlantProtectionCrop ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "9A9A2586-34FF-4256-8FA4-BA9F2FA38CAE" ;
     skos:broader psm:108,
@@ -89,9 +89,9 @@ psm:101 a skos:Concept ;
         "cyclamen"@fr,
         "Ciclamino"@it ;
     schema:version 0 ;
-    :cultivationType cultivationtype:101 .
+    skos:exactMatch cultivationtype:101 .
 
-psm:102 a skos:Concept ;
+psm:102 a eCH-0265:PlantProtectionCrop ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "9F6AE17C-0BE1-457A-B780-D408BCD333BF" ;
     skos:broader psm:27 ;
@@ -99,9 +99,9 @@ psm:102 a skos:Concept ;
         "Soja"@fr,
         "Soia"@it ;
     schema:version 0 ;
-    :cultivationType cultivationtype:528 .
+    skos:exactMatch cultivationtype:528 .
 
-psm:103 a skos:Concept ;
+psm:103 a eCH-0265:PlantProtectionCrop ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "9CA61204-7EA7-4F2F-BAD3-BD02EDD6A829" ;
     skos:broader psm:105 ;
@@ -109,9 +109,9 @@ psm:103 a skos:Concept ;
         "laitues à tondre (Asteraceae)"@fr,
         "Insalate a foglie (Asteracee)"@it ;
     schema:version 0 ;
-    :cultivationType cultivationtype:103 .
+    skos:exactMatch cultivationtype:103 .
 
-psm:104 a skos:Concept ;
+psm:104 a eCH-0265:PlantProtectionCrop ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "9B8F475B-C6FA-4642-9CD8-89A98A293D50" ;
     skos:broader psm:27 ;
@@ -119,9 +119,9 @@ psm:104 a skos:Concept ;
         "pavot"@fr,
         "Papavero"@it ;
     schema:version 0 ;
-    :cultivationType cultivationtype:566 .
+    skos:exactMatch cultivationtype:566 .
 
-psm:105 a skos:Concept ;
+psm:105 a eCH-0265:PlantProtectionCrop ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "33686F38-1E1A-4698-81E4-C40EE4494EF3" ;
     skos:broader psm:320 ;
@@ -129,9 +129,9 @@ psm:105 a skos:Concept ;
         "salades lactuca"@fr,
         "Insalate del genere Lactuca"@it ;
     schema:version 0 ;
-    :cultivationType cultivationtype:105 .
+    skos:exactMatch cultivationtype:105 .
 
-psm:106 a skos:Concept ;
+psm:106 a eCH-0265:PlantProtectionCrop ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "3C2F424F-DFA0-4A59-A3DF-6E33A6B0B97E" ;
     skos:broader psm:67 ;
@@ -139,9 +139,9 @@ psm:106 a skos:Concept ;
         "basilic"@fr,
         "Basilico"@it ;
     schema:version 0 ;
-    :cultivationType cultivationtype:106 .
+    skos:exactMatch cultivationtype:106 .
 
-psm:107 a skos:Concept ;
+psm:107 a eCH-0265:PlantProtectionCrop ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "2AB457D1-DB9D-4545-92FF-04A6BD2CEC08" ;
     skos:broader psm:327 ;
@@ -149,9 +149,9 @@ psm:107 a skos:Concept ;
         "carotte"@fr,
         "Carote"@it ;
     schema:version 0 ;
-    :cultivationType cultivationtype:107 .
+    skos:exactMatch cultivationtype:107 .
 
-psm:108 a skos:Concept ;
+psm:108 a eCH-0265:PlantProtectionCrop ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "2A05DA01-5722-46A2-BCCF-3B75C6D17BB6" ;
     skos:broader psm:329 ;
@@ -159,9 +159,9 @@ psm:108 a skos:Concept ;
         "plantes en pot et en container"@fr,
         "Pianta in vaso e in container"@it ;
     schema:version 0 ;
-    :cultivationType cultivationtype:108 .
+    skos:exactMatch cultivationtype:108 .
 
-psm:109 a skos:Concept ;
+psm:109 a eCH-0265:PlantProtectionCrop ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "2C8A4414-AD7F-4708-9C58-BF1969131693" ;
     skos:broader psm:67 ;
@@ -169,9 +169,9 @@ psm:109 a skos:Concept ;
         "cerfeuil"@fr,
         "Cerfoglio"@it ;
     schema:version 0 ;
-    :cultivationType cultivationtype:109 .
+    skos:exactMatch cultivationtype:109 .
 
-psm:11 a skos:Concept ;
+psm:11 a eCH-0265:PlantProtectionCrop ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "9BA6BDE9-AD45-4F91-A190-708D39AD5B63" ;
     skos:broader psm:27 ;
@@ -179,9 +179,9 @@ psm:11 a skos:Concept ;
         "Lin"@fr,
         "Lino"@it ;
     schema:version 0 ;
-    :cultivationType cultivationtype:534 .
+    skos:exactMatch cultivationtype:534 .
 
-psm:110 a skos:Concept ;
+psm:110 a eCH-0265:PlantProtectionCrop ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "1BFC9694-C7DC-4D74-84B2-1418AB94A8BA" ;
     skos:broader psm:95 ;
@@ -189,9 +189,9 @@ psm:110 a skos:Concept ;
         "artichaut"@fr,
         "Carciofi"@it ;
     schema:version 0 ;
-    :cultivationType cultivationtype:110 .
+    skos:exactMatch cultivationtype:110 .
 
-psm:111 a skos:Concept ;
+psm:111 a eCH-0265:PlantProtectionCrop ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "1E129025-DFD8-42D1-8A86-D90485B282A1" ;
     skos:broader psm:324 ;
@@ -199,9 +199,9 @@ psm:111 a skos:Concept ;
         "chou-fleur"@fr,
         "Cavolfiore"@it ;
     schema:version 0 ;
-    :cultivationType cultivationtype:111 .
+    skos:exactMatch cultivationtype:111 .
 
-psm:112 a skos:Concept ;
+psm:112 a eCH-0265:PlantProtectionCrop ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "1D9F568C-5170-43A1-86B9-B25808DD6A43" ;
     skos:broader psm:85 ;
@@ -209,9 +209,9 @@ psm:112 a skos:Concept ;
         "tomate-cerise"@fr,
         "Pomodoro ciliegia"@it ;
     schema:version 0 ;
-    :cultivationType cultivationtype:112 .
+    skos:exactMatch cultivationtype:112 .
 
-psm:113 a skos:Concept ;
+psm:113 a eCH-0265:PlantProtectionCrop ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "24A364B9-6BD7-42A6-A9EC-AB9E94E010FF" ;
     skos:broader psm:50 ;
@@ -219,9 +219,9 @@ psm:113 a skos:Concept ;
         "prunier (pruneau/prune)"@fr,
         "Prugno/Susino"@it ;
     schema:version 0 ;
-    :cultivationType cultivationtype:113 .
+    skos:exactMatch cultivationtype:113 .
 
-psm:114 a skos:Concept ;
+psm:114 a eCH-0265:PlantProtectionCrop ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "24EA0CC6-D1D5-4BB4-981C-A836E3D7125D" ;
     skos:broader psm:194 ;
@@ -229,9 +229,9 @@ psm:114 a skos:Concept ;
         "surfaces herbagères"@fr,
         "Superficie inerbita"@it ;
     schema:version 0 ;
-    :cultivationType cultivationtype:114 .
+    skos:exactMatch cultivationtype:114 .
 
-psm:115 a skos:Concept ;
+psm:115 a eCH-0265:PlantProtectionCrop ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "1F004DAA-89AD-4A9D-A172-95D24B8A45FA" ;
     skos:broader psm:247 ;
@@ -239,9 +239,9 @@ psm:115 a skos:Concept ;
         "rave de Brassica napus"@fr,
         "Rapa di Brassica napus"@it ;
     schema:version 0 ;
-    :cultivationType cultivationtype:115 .
+    skos:exactMatch cultivationtype:115 .
 
-psm:116 a skos:Concept ;
+psm:116 a eCH-0265:PlantProtectionCrop ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "E77825CE-5021-479E-B6C1-8F55766E497B" ;
     skos:broader psm:27 ;
@@ -249,9 +249,9 @@ psm:116 a skos:Concept ;
         "Prairies et pâturages"@fr,
         "Prati e pascoli"@it ;
     schema:version 0 ;
-    :cultivationType cultivationtype:116 .
+    skos:exactMatch cultivationtype:116 .
 
-psm:117 a skos:Concept ;
+psm:117 a eCH-0265:PlantProtectionCrop ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "1F0B6451-EC2C-4647-A53A-23B0EAE626B1" ;
     skos:broader psm:263 ;
@@ -259,9 +259,9 @@ psm:117 a skos:Concept ;
         "crosnes du japon"@fr,
         "Tuberina"@it ;
     schema:version 0 ;
-    :cultivationType cultivationtype:117 .
+    skos:exactMatch cultivationtype:117 .
 
-psm:118 a skos:Concept ;
+psm:118 a eCH-0265:PlantProtectionCrop ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "0A5F3E91-96B9-4C6D-B99C-2E6E4835F6D5" ;
     skos:broader psm:17 ;
@@ -269,9 +269,9 @@ psm:118 a skos:Concept ;
         "conifères"@fr,
         "Conifere"@it ;
     schema:version 0 ;
-    :cultivationType cultivationtype:118 .
+    skos:exactMatch cultivationtype:118 .
 
-psm:119 a skos:Concept ;
+psm:119 a eCH-0265:PlantProtectionCrop ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "09269926-BA07-42DC-BE9D-5B34658BDBF0" ;
     skos:broader psm:235 ;
@@ -279,9 +279,9 @@ psm:119 a skos:Concept ;
         "pastèque"@fr,
         "Angurie"@it ;
     schema:version 0 ;
-    :cultivationType cultivationtype:119 .
+    skos:exactMatch cultivationtype:119 .
 
-psm:12 a skos:Concept ;
+psm:12 a eCH-0265:PlantProtectionCrop ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "EEC471CB-C715-489D-B3E5-2A0D37DC2A90" ;
     skos:broader psm:50 ;
@@ -289,9 +289,9 @@ psm:12 a skos:Concept ;
         "abricotier"@fr,
         "Albicocco"@it ;
     schema:version 0 ;
-    :cultivationType cultivationtype:472 .
+    skos:exactMatch cultivationtype:472 .
 
-psm:120 a skos:Concept ;
+psm:120 a eCH-0265:PlantProtectionCrop ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "0A3519B1-A42F-43EE-AF82-6DCF17EA8DA6" ;
     skos:broader psm:134 ;
@@ -299,9 +299,9 @@ psm:120 a skos:Concept ;
         "polygonacées"@fr,
         "Poligonacee"@it ;
     schema:version 0 ;
-    :cultivationType cultivationtype:120 .
+    skos:exactMatch cultivationtype:120 .
 
-psm:121 a skos:Concept ;
+psm:121 a eCH-0265:PlantProtectionCrop ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "095E9650-A880-4BD2-A1BB-39297582BCE6" ;
     skos:broader psm:27 ;
@@ -309,9 +309,9 @@ psm:121 a skos:Concept ;
         "Tournesol"@fr,
         "Girasole"@it ;
     schema:version 0 ;
-    :cultivationType cultivationtype:493 .
+    skos:exactMatch cultivationtype:493 .
 
-psm:122 a skos:Concept ;
+psm:122 a eCH-0265:PlantProtectionCrop ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "ED17FD35-4C96-4D28-902B-ACEA3F4950D6" ;
     skos:broader psm:118,
@@ -321,9 +321,9 @@ psm:122 a skos:Concept ;
         "cupressacées"@fr,
         "Cupressaceae"@it ;
     schema:version 0 ;
-    :cultivationType cultivationtype:122 .
+    skos:exactMatch cultivationtype:122 .
 
-psm:123 a skos:Concept ;
+psm:123 a eCH-0265:PlantProtectionCrop ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "EC349B29-6A2B-4E43-990F-C553D278DC0E" ;
     skos:broader psm:13 ;
@@ -332,9 +332,9 @@ psm:123 a skos:Concept ;
         "cynorhodon"@fr,
         "rosa canina"@it ;
     schema:version 0 ;
-    :cultivationType cultivationtype:123 .
+    skos:exactMatch cultivationtype:123 .
 
-psm:124 a skos:Concept ;
+psm:124 a eCH-0265:PlantProtectionCrop ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "F7BB2F1C-EDE5-4C95-931E-0B2C973F5A29" ;
     skos:broader psm:3 ;
@@ -342,9 +342,9 @@ psm:124 a skos:Concept ;
         "haricots non écossés"@fr,
         "Fagioli con baccello"@it ;
     schema:version 0 ;
-    :cultivationType cultivationtype:124 .
+    skos:exactMatch cultivationtype:124 .
 
-psm:125 a skos:Concept ;
+psm:125 a eCH-0265:PlantProtectionCrop ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "FD180555-9DEF-42BA-86E0-EBD31AB8FABB" ;
     skos:broader psm:309 ;
@@ -352,9 +352,9 @@ psm:125 a skos:Concept ;
         "cognassier"@fr,
         "Cotogno"@it ;
     schema:version 0 ;
-    :cultivationType cultivationtype:125 .
+    skos:exactMatch cultivationtype:125 .
 
-psm:126 a skos:Concept ;
+psm:126 a eCH-0265:PlantProtectionCrop ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "FD18F42C-C390-4701-B07B-B8108B33320B" ;
     skos:broader psm:309 ;
@@ -362,9 +362,9 @@ psm:126 a skos:Concept ;
         "pommier"@fr,
         "Melo"@it ;
     schema:version 0 ;
-    :cultivationType cultivationtype:702 .
+    skos:exactMatch cultivationtype:702 .
 
-psm:127 a skos:Concept ;
+psm:127 a eCH-0265:PlantProtectionCrop ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "F730D531-B0C8-4A20-AC4B-4F86445E2491" ;
     skos:broader psm:210,
@@ -373,9 +373,9 @@ psm:127 a skos:Concept ;
         "Amidonnier"@fr,
         "Farro"@it ;
     schema:version 0 ;
-    :cultivationType cultivationtype:500 .
+    skos:exactMatch cultivationtype:500 .
 
-psm:128 a skos:Concept ;
+psm:128 a eCH-0265:PlantProtectionCrop ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "F8A8C1D8-E2C7-4230-8435-4D5AEE69813E" ;
     skos:broader psm:73 ;
@@ -383,9 +383,9 @@ psm:128 a skos:Concept ;
         "Avoine"@fr,
         "Avena"@it ;
     schema:version 0 ;
-    :cultivationType cultivationtype:504 .
+    skos:exactMatch cultivationtype:504 .
 
-psm:129 a skos:Concept ;
+psm:129 a eCH-0265:PlantProtectionCrop ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "EE7EE009-EBD4-471D-AE85-1A98130F6119" ;
     skos:broader psm:327 ;
@@ -393,18 +393,18 @@ psm:129 a skos:Concept ;
         "Panais"@fr,
         "Pastinaca"@it ;
     schema:version 0 ;
-    :cultivationType cultivationtype:129 .
+    skos:exactMatch cultivationtype:129 .
 
-psm:13 a skos:Concept ;
+psm:13 a eCH-0265:PlantProtectionCrop ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "9DE574C1-EE11-42BC-9C05-930BCAE13A44" ;
     schema:name "Beerenbau allg."@de,
         "culture des baies en général"@fr,
         "Coltivazione di bacche in generale"@it ;
     schema:version 0 ;
-    :cultivationType cultivationtype:471 .
+    skos:exactMatch cultivationtype:471 .
 
-psm:130 a skos:Concept ;
+psm:130 a eCH-0265:PlantProtectionCrop ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "E5B9C6F0-5C57-4A12-8ED9-D65B669B8243" ;
     skos:broader psm:95 ;
@@ -412,9 +412,9 @@ psm:130 a skos:Concept ;
         "chicorée witloof (chicorée-endive)"@fr,
         "Cicoria belga"@it ;
     schema:version 0 ;
-    :cultivationType cultivationtype:130 .
+    skos:exactMatch cultivationtype:130 .
 
-psm:131 a skos:Concept ;
+psm:131 a eCH-0265:PlantProtectionCrop ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "BE3C6915-B28E-4CC8-980E-7F243F14F519" ;
     skos:broader psm:13 ;
@@ -422,9 +422,9 @@ psm:131 a skos:Concept ;
         "espèces de Ribes"@fr,
         "Specie di ribes"@it ;
     schema:version 0 ;
-    :cultivationType cultivationtype:131 .
+    skos:exactMatch cultivationtype:131 .
 
-psm:132 a skos:Concept ;
+psm:132 a eCH-0265:PlantProtectionCrop ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "C264982A-CA81-4311-9E38-67D2D956BC78" ;
     skos:broader psm:48 ;
@@ -432,9 +432,9 @@ psm:132 a skos:Concept ;
         "cima di rapa"@fr,
         "Cima di rapa"@it ;
     schema:version 0 ;
-    :cultivationType cultivationtype:132 .
+    skos:exactMatch cultivationtype:132 .
 
-psm:133 a skos:Concept ;
+psm:133 a eCH-0265:PlantProtectionCrop ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "B535B6DD-517D-4A62-ACC7-2948B15175ED" ;
     skos:broader psm:141 ;
@@ -442,18 +442,18 @@ psm:133 a skos:Concept ;
         "types de radicchio/trévises et cicorino"@fr,
         "Tipi di radicchio e cicorino"@it ;
     schema:version 0 ;
-    :cultivationType cultivationtype:133 .
+    skos:exactMatch cultivationtype:133 .
 
-psm:134 a skos:Concept ;
+psm:134 a eCH-0265:PlantProtectionCrop ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "B4CA8F81-4A66-4880-98AB-C7760AECCDA6" ;
     schema:name "Gemüsebau allg."@de,
         "culture maraîchère en général"@fr,
         "Orticoltura in generale"@it ;
     schema:version 0 ;
-    :cultivationType cultivationtype:22 .
+    skos:exactMatch cultivationtype:22 .
 
-psm:135 a skos:Concept ;
+psm:135 a eCH-0265:PlantProtectionCrop ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "B82B5C60-02CB-4B7A-B3D3-A4CA34A809C3" ;
     skos:broader psm:145 ;
@@ -461,9 +461,9 @@ psm:135 a skos:Concept ;
         "liliacées (plantes ornementales)"@fr,
         "Liliacee (pianti ornamentali)"@it ;
     schema:version 0 ;
-    :cultivationType cultivationtype:135 .
+    skos:exactMatch cultivationtype:135 .
 
-psm:136 a skos:Concept ;
+psm:136 a eCH-0265:PlantProtectionCrop ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "AEC07D17-6D8B-4180-A368-056A187DE2F8" ;
     skos:broader psm:312 ;
@@ -471,9 +471,9 @@ psm:136 a skos:Concept ;
         "dahlia"@fr,
         "Dalie"@it ;
     schema:version 0 ;
-    :cultivationType cultivationtype:136 .
+    skos:exactMatch cultivationtype:136 .
 
-psm:137 a skos:Concept ;
+psm:137 a eCH-0265:PlantProtectionCrop ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "AE97719E-9D0F-425C-BCD7-0F5D84092113" ;
     skos:broader psm:35 ;
@@ -482,9 +482,9 @@ psm:137 a skos:Concept ;
         "millepertuis"@fr,
         "Iperico"@it ;
     schema:version 0 ;
-    :cultivationType cultivationtype:137 .
+    skos:exactMatch cultivationtype:137 .
 
-psm:138 a skos:Concept ;
+psm:138 a eCH-0265:PlantProtectionCrop ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "AED83C4B-0546-4C91-B370-4AB5B425942F" ;
     skos:broader psm:32 ;
@@ -492,9 +492,9 @@ psm:138 a skos:Concept ;
         "concombre nostrano"@fr,
         "Cetriolo nostrano"@it ;
     schema:version 0 ;
-    :cultivationType cultivationtype:138 .
+    skos:exactMatch cultivationtype:138 .
 
-psm:139 a skos:Concept ;
+psm:139 a eCH-0265:PlantProtectionCrop ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "BFDDCB65-6E46-47E1-90B1-A998D5BD0546" ;
     skos:broader psm:48 ;
@@ -502,9 +502,9 @@ psm:139 a skos:Concept ;
         "salades Asia (Brassicaceae)"@fr,
         "Insalate asiatiche (Brassicacee)"@it ;
     schema:version 0 ;
-    :cultivationType cultivationtype:139 .
+    skos:exactMatch cultivationtype:139 .
 
-psm:14 a skos:Concept ;
+psm:14 a eCH-0265:PlantProtectionCrop ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "068FF636-982B-4F95-A1C1-93E3DC0B7162" ;
     skos:broader psm:67 ;
@@ -512,9 +512,9 @@ psm:14 a skos:Concept ;
         "livèche"@fr,
         "Levistico"@it ;
     schema:version 0 ;
-    :cultivationType cultivationtype:479 .
+    skos:exactMatch cultivationtype:479 .
 
-psm:140 a skos:Concept ;
+psm:140 a eCH-0265:PlantProtectionCrop ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "B92BA12C-EA9D-4EA8-ADEE-A4547872DD58" ;
     skos:broader psm:13 ;
@@ -522,9 +522,9 @@ psm:140 a skos:Concept ;
         "camérisier bleu"@fr,
         "Caprifoglio turchino"@it ;
     schema:version 0 ;
-    :cultivationType cultivationtype:140 .
+    skos:exactMatch cultivationtype:140 .
 
-psm:141 a skos:Concept ;
+psm:141 a eCH-0265:PlantProtectionCrop ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "8DB1A579-6BAC-4DCB-8026-E79B65D3BD3A" ;
     skos:broader psm:320 ;
@@ -532,9 +532,9 @@ psm:141 a skos:Concept ;
         "chicorée pommée et chicorée à feuilles"@fr,
         "Indivia e cicoria da foglia"@it ;
     schema:version 0 ;
-    :cultivationType cultivationtype:141 .
+    skos:exactMatch cultivationtype:141 .
 
-psm:143 a skos:Concept ;
+psm:143 a eCH-0265:PlantProtectionCrop ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "77267F83-907F-4537-98A8-7B9C1E4714F0" ;
     skos:broader psm:75 ;
@@ -542,9 +542,9 @@ psm:143 a skos:Concept ;
         "pourpier commun"@fr,
         "Portulaca estiva"@it ;
     schema:version 0 ;
-    :cultivationType cultivationtype:143 .
+    skos:exactMatch cultivationtype:143 .
 
-psm:144 a skos:Concept ;
+psm:144 a eCH-0265:PlantProtectionCrop ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "74C47437-5700-45F5-86E2-D410DACD39B6" ;
     skos:broader psm:175 ;
@@ -553,9 +553,9 @@ psm:144 a skos:Concept ;
         "coqueret du Pérou"@fr,
         "Alchechengio"@it ;
     schema:version 0 ;
-    :cultivationType cultivationtype:144 .
+    skos:exactMatch cultivationtype:144 .
 
-psm:145 a skos:Concept ;
+psm:145 a eCH-0265:PlantProtectionCrop ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "75317E57-B194-4B3D-8FF2-3489A39AC177" ;
     skos:broader psm:329 ;
@@ -563,9 +563,9 @@ psm:145 a skos:Concept ;
         "cultures florales et plantes vertes"@fr,
         "Colture da fiore e piante verdi"@it ;
     schema:version 0 ;
-    :cultivationType cultivationtype:145 .
+    skos:exactMatch cultivationtype:145 .
 
-psm:146 a skos:Concept ;
+psm:146 a eCH-0265:PlantProtectionCrop ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "7870FD70-C44A-4788-ABEA-FB673A5FD106" ;
     skos:broader psm:239 ;
@@ -573,9 +573,9 @@ psm:146 a skos:Concept ;
         "Blé dur"@fr,
         "Grano duro"@it ;
     schema:version 0 ;
-    :cultivationType cultivationtype:510 .
+    skos:exactMatch cultivationtype:510 .
 
-psm:147 a skos:Concept ;
+psm:147 a eCH-0265:PlantProtectionCrop ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "7D23702C-980B-4B90-A86B-70013806D3EA" ;
     skos:broader psm:176 ;
@@ -584,7 +584,7 @@ psm:147 a skos:Concept ;
         "Locali di stoccaggio vuoti"@it ;
     schema:version 0 .
 
-psm:148 a skos:Concept ;
+psm:148 a eCH-0265:PlantProtectionCrop ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "7D65DFD2-C26E-4CAB-9E2C-66A6C7CBA641" ;
     skos:broader psm:197,
@@ -593,9 +593,9 @@ psm:148 a skos:Concept ;
         "Orge d'automne"@fr,
         "Orzo autunnale"@it ;
     schema:version 0 ;
-    :cultivationType cultivationtype:502 .
+    skos:exactMatch cultivationtype:502 .
 
-psm:149 a skos:Concept ;
+psm:149 a eCH-0265:PlantProtectionCrop ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "7D76F5F6-5810-4556-A7D5-84C91FDE3FF2" ;
     skos:broader psm:73 ;
@@ -603,9 +603,9 @@ psm:149 a skos:Concept ;
         "Seigle"@fr,
         "Segale"@it ;
     schema:version 0 ;
-    :cultivationType cultivationtype:514 .
+    skos:exactMatch cultivationtype:514 .
 
-psm:15 a skos:Concept ;
+psm:15 a eCH-0265:PlantProtectionCrop ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "A067CC81-6A5D-4684-BE95-7941A51B9EF2" ;
     skos:broader psm:67 ;
@@ -613,9 +613,9 @@ psm:15 a skos:Concept ;
         "sauge"@fr,
         "Salvia"@it ;
     schema:version 0 ;
-    :cultivationType cultivationtype:478 .
+    skos:exactMatch cultivationtype:478 .
 
-psm:150 a skos:Concept ;
+psm:150 a eCH-0265:PlantProtectionCrop ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "77462EAB-3BD3-4EAC-B740-F95597FFAE35" ;
     skos:broader psm:186 ;
@@ -623,9 +623,9 @@ psm:150 a skos:Concept ;
         "noix"@fr,
         "Noci"@it ;
     schema:version 0 ;
-    :cultivationType cultivationtype:150 .
+    skos:exactMatch cultivationtype:150 .
 
-psm:151 a skos:Concept ;
+psm:151 a eCH-0265:PlantProtectionCrop ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "7A993953-3C2F-4BC3-98EE-2EE5E83C6E77" ;
     skos:broader psm:300 ;
@@ -633,9 +633,9 @@ psm:151 a skos:Concept ;
         "betterave à salade"@fr,
         "Barbabietola"@it ;
     schema:version 0 ;
-    :cultivationType cultivationtype:151 .
+    skos:exactMatch cultivationtype:151 .
 
-psm:152 a skos:Concept ;
+psm:152 a eCH-0265:PlantProtectionCrop ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "7CE53BA0-097D-44FB-82FF-C30DFD3769DD" ;
     skos:broader psm:48 ;
@@ -643,9 +643,9 @@ psm:152 a skos:Concept ;
         "cresson de jardin"@fr,
         "Crescione"@it ;
     schema:version 0 ;
-    :cultivationType cultivationtype:152 .
+    skos:exactMatch cultivationtype:152 .
 
-psm:153 a skos:Concept ;
+psm:153 a eCH-0265:PlantProtectionCrop ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "79C28385-E183-4661-AAC0-80E82C67089C" ;
     skos:broader psm:118,
@@ -654,9 +654,9 @@ psm:153 a skos:Concept ;
         "arbres de Noël"@fr,
         "Alberi di Natale"@it ;
     schema:version 0 ;
-    :cultivationType cultivationtype:712 .
+    skos:exactMatch cultivationtype:712 .
 
-psm:154 a skos:Concept ;
+psm:154 a eCH-0265:PlantProtectionCrop ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "B9323B4D-249D-4CF3-A5DF-4FDA2E66532F" ;
     skos:broader psm:324 ;
@@ -664,9 +664,9 @@ psm:154 a skos:Concept ;
         "brocoli"@fr,
         "Broccoli"@it ;
     schema:version 0 ;
-    :cultivationType cultivationtype:154 .
+    skos:exactMatch cultivationtype:154 .
 
-psm:155 a skos:Concept ;
+psm:155 a eCH-0265:PlantProtectionCrop ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "B75AC4CC-6BB7-4A99-808A-9F7BDFCF8E6A" ;
     skos:broader psm:108,
@@ -675,9 +675,9 @@ psm:155 a skos:Concept ;
         "géranium"@fr,
         "Geranio"@it ;
     schema:version 0 ;
-    :cultivationType cultivationtype:155 .
+    skos:exactMatch cultivationtype:155 .
 
-psm:156 a skos:Concept ;
+psm:156 a eCH-0265:PlantProtectionCrop ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "516862FD-DCB0-42BF-8E18-ADA820B1DB90" ;
     skos:broader psm:177 ;
@@ -685,9 +685,9 @@ psm:156 a skos:Concept ;
         "jeune vigne"@fr,
         "Ceppi giovani"@it ;
     schema:version 0 ;
-    :cultivationType cultivationtype:156 .
+    skos:exactMatch cultivationtype:156 .
 
-psm:157 a skos:Concept ;
+psm:157 a eCH-0265:PlantProtectionCrop ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "4D799EC6-1483-4D65-90EA-8DDB6A4166CA" ;
     skos:broader psm:67 ;
@@ -695,9 +695,9 @@ psm:157 a skos:Concept ;
         "sarriette"@fr,
         "Santoreggia"@it ;
     schema:version 0 ;
-    :cultivationType cultivationtype:157 .
+    skos:exactMatch cultivationtype:157 .
 
-psm:158 a skos:Concept ;
+psm:158 a eCH-0265:PlantProtectionCrop ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "56884AC3-B629-440D-8E82-05075A18697F" ;
     skos:broader psm:94 ;
@@ -705,9 +705,9 @@ psm:158 a skos:Concept ;
         "céleri-pomme"@fr,
         "Sedano rapa"@it ;
     schema:version 0 ;
-    :cultivationType cultivationtype:158 .
+    skos:exactMatch cultivationtype:158 .
 
-psm:159 a skos:Concept ;
+psm:159 a eCH-0265:PlantProtectionCrop ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "42466A90-AFCD-4DA6-8769-99C4BC5BE217" ;
     skos:broader psm:41 ;
@@ -715,9 +715,9 @@ psm:159 a skos:Concept ;
         "poirier"@fr,
         "Pero"@it ;
     schema:version 0 ;
-    :cultivationType cultivationtype:703 .
+    skos:exactMatch cultivationtype:703 .
 
-psm:16 a skos:Concept ;
+psm:16 a eCH-0265:PlantProtectionCrop ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "7971013B-801D-4595-8208-782446A6C7E0" ;
     skos:broader psm:17 ;
@@ -725,9 +725,9 @@ psm:16 a skos:Concept ;
         "feuillus"@fr,
         "Latifoglie"@it ;
     schema:version 0 ;
-    :cultivationType cultivationtype:402 .
+    skos:exactMatch cultivationtype:402 .
 
-psm:161 a skos:Concept ;
+psm:161 a eCH-0265:PlantProtectionCrop ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "42D50BC4-0019-4B55-9CB5-6C3E86C9D112" ;
     skos:broader psm:13 ;
@@ -736,9 +736,9 @@ psm:161 a skos:Concept ;
         "grand sureau"@fr,
         "Sambuco nero"@it ;
     schema:version 0 ;
-    :cultivationType cultivationtype:161 .
+    skos:exactMatch cultivationtype:161 .
 
-psm:162 a skos:Concept ;
+psm:162 a eCH-0265:PlantProtectionCrop ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "43FC7C18-BDA5-4364-B4CA-74EA37B7B8DC" ;
     skos:broader psm:296,
@@ -747,9 +747,9 @@ psm:162 a skos:Concept ;
         "pépinières forestières"@fr,
         "Vivai forestali"@it ;
     schema:version 0 ;
-    :cultivationType cultivationtype:162 .
+    skos:exactMatch cultivationtype:162 .
 
-psm:163 a skos:Concept ;
+psm:163 a eCH-0265:PlantProtectionCrop ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "449A5380-96E3-4C3F-AB31-7CB3D0579561" ;
     skos:broader psm:73 ;
@@ -757,17 +757,17 @@ psm:163 a skos:Concept ;
         "Céréales de printemps"@fr,
         "Cereali primaverili"@it ;
     schema:version 0 ;
-    :cultivationType cultivationtype:1000 .
+    skos:exactMatch cultivationtype:1000 .
 
-psm:164 a skos:Concept ;
+psm:164 a eCH-0265:PlantProtectionCrop ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "43ED81C2-40E7-4A22-9114-3E623BE1B14C" ;
     schema:name "allg. Weinbau"@de,
         "domaine app. vignes"@fr ;
     schema:version 0 ;
-    :cultivationType cultivationtype:4 .
+    skos:exactMatch cultivationtype:4 .
 
-psm:165 a skos:Concept ;
+psm:165 a eCH-0265:PlantProtectionCrop ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "56AF3EA3-01F4-4F10-B240-7EF4BE1C1CCE" ;
     skos:broader psm:47 ;
@@ -775,9 +775,9 @@ psm:165 a skos:Concept ;
         "fève"@fr,
         "Fave"@it ;
     schema:version 0 ;
-    :cultivationType cultivationtype:165 .
+    skos:exactMatch cultivationtype:165 .
 
-psm:166 a skos:Concept ;
+psm:166 a eCH-0265:PlantProtectionCrop ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "573B50E9-ED1D-4999-B4FD-4537CA2A6306" ;
     skos:broader psm:235 ;
@@ -785,9 +785,9 @@ psm:166 a skos:Concept ;
         "courges (écorce non comestible)"@fr,
         "Zucche (buccia non commestibile)"@it ;
     schema:version 0 ;
-    :cultivationType cultivationtype:166 .
+    skos:exactMatch cultivationtype:166 .
 
-psm:167 a skos:Concept ;
+psm:167 a eCH-0265:PlantProtectionCrop ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "5B651459-FC70-4D22-9469-4991F847EA89" ;
     skos:broader psm:118,
@@ -796,9 +796,9 @@ psm:167 a skos:Concept ;
         "sapin bleu"@fr,
         "Abete del Colorado"@it ;
     schema:version 0 ;
-    :cultivationType cultivationtype:167 .
+    skos:exactMatch cultivationtype:167 .
 
-psm:168 a skos:Concept ;
+psm:168 a eCH-0265:PlantProtectionCrop ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "49F7DA15-E241-4080-9D42-1523ECA834B5" ;
     skos:broader psm:27 ;
@@ -807,9 +807,9 @@ psm:168 a skos:Concept ;
         "Carthame"@fr,
         "Cartamo"@it ;
     schema:version 0 ;
-    :cultivationType cultivationtype:567 .
+    skos:exactMatch cultivationtype:567 .
 
-psm:169 a skos:Concept ;
+psm:169 a eCH-0265:PlantProtectionCrop ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "4A386AE2-A36F-4A55-8668-7B896A1E8092" ;
     skos:broader psm:27 ;
@@ -817,9 +817,9 @@ psm:169 a skos:Concept ;
         "Roseau de Chine"@fr,
         "Miscanto"@it ;
     schema:version 0 ;
-    :cultivationType cultivationtype:169 .
+    skos:exactMatch cultivationtype:169 .
 
-psm:17 a skos:Concept ;
+psm:17 a eCH-0265:PlantProtectionCrop ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "7B3C8CEE-526F-4381-A757-669C1864291A" ;
     skos:broader psm:329 ;
@@ -827,9 +827,9 @@ psm:17 a skos:Concept ;
         "plantes ligneuses (hors forêt)"@fr,
         "Boschetti (al di fuori del bosco)"@it ;
     schema:version 0 ;
-    :cultivationType cultivationtype:401 .
+    skos:exactMatch cultivationtype:401 .
 
-psm:170 a skos:Concept ;
+psm:170 a eCH-0265:PlantProtectionCrop ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "4E8A4BB8-3B5D-4695-B17C-F4C1202D5138" ;
     skos:broader psm:131 ;
@@ -837,9 +837,9 @@ psm:170 a skos:Concept ;
         "cassis"@fr,
         "Ribes nero"@it ;
     schema:version 0 ;
-    :cultivationType cultivationtype:170 .
+    skos:exactMatch cultivationtype:170 .
 
-psm:171 a skos:Concept ;
+psm:171 a eCH-0265:PlantProtectionCrop ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "102C28F6-4AFB-4079-909B-ACE8E0819A77" ;
     skos:broader psm:3 ;
@@ -847,9 +847,9 @@ psm:171 a skos:Concept ;
         "haricots écossés"@fr,
         "Fagioli senza baccello"@it ;
     schema:version 0 ;
-    :cultivationType cultivationtype:171 .
+    skos:exactMatch cultivationtype:171 .
 
-psm:172 a skos:Concept ;
+psm:172 a eCH-0265:PlantProtectionCrop ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "AB4A906B-73C5-4D7D-AA74-EC42983BE679" ;
     schema:name "Lorbeer"@de,
@@ -857,9 +857,9 @@ psm:172 a skos:Concept ;
         "Laurier"@fr,
         "Alloro"@it ;
     schema:version 0 ;
-    :cultivationType cultivationtype:172 .
+    skos:exactMatch cultivationtype:172 .
 
-psm:173 a skos:Concept ;
+psm:173 a eCH-0265:PlantProtectionCrop ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "4DD550C5-15BB-4D52-98BD-6770972575F0" ;
     skos:broader psm:105 ;
@@ -867,9 +867,9 @@ psm:173 a skos:Concept ;
         "laitues pommées"@fr,
         "Insalate cappuccio"@it ;
     schema:version 0 ;
-    :cultivationType cultivationtype:173 .
+    skos:exactMatch cultivationtype:173 .
 
-psm:174 a skos:Concept ;
+psm:174 a eCH-0265:PlantProtectionCrop ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "122B909A-CE9C-47BC-B5CA-DCF523646D38" ;
     skos:broader psm:13 ;
@@ -877,9 +877,9 @@ psm:174 a skos:Concept ;
         "sorbier des oiseleurs"@fr,
         "Sorbo degli ucellatori"@it ;
     schema:version 0 ;
-    :cultivationType cultivationtype:174 .
+    skos:exactMatch cultivationtype:174 .
 
-psm:175 a skos:Concept ;
+psm:175 a eCH-0265:PlantProtectionCrop ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "46901564-D096-4323-AE81-C93831AFEC64" ;
     skos:broader psm:134 ;
@@ -887,9 +887,9 @@ psm:175 a skos:Concept ;
         "solanacées"@fr,
         "Solanacee"@it ;
     schema:version 0 ;
-    :cultivationType cultivationtype:175 .
+    skos:exactMatch cultivationtype:175 .
 
-psm:176 a skos:Concept ;
+psm:176 a eCH-0265:PlantProtectionCrop ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "0FC26BDD-5CD1-4321-93D0-6AB24FA678B5" ;
     schema:name "Lager- und Produktionsräume allg."@de,
@@ -898,7 +898,7 @@ psm:176 a skos:Concept ;
         "Lager- und Produktionsräume allg."@it ;
     schema:version 0 .
 
-psm:177 a skos:Concept ;
+psm:177 a eCH-0265:PlantProtectionCrop ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "2314EB9F-7207-409F-A0D4-89B6A1177363" ;
     skos:broader psm:164 ;
@@ -906,9 +906,9 @@ psm:177 a skos:Concept ;
         "vigne"@fr,
         "Vite"@it ;
     schema:version 0 ;
-    :cultivationType cultivationtype:4 .
+    skos:exactMatch cultivationtype:4 .
 
-psm:179 a skos:Concept ;
+psm:179 a eCH-0265:PlantProtectionCrop ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "62BF86AE-FD69-4F95-A72C-1D57AF1DCD99" ;
     skos:broader psm:141 ;
@@ -916,9 +916,9 @@ psm:179 a skos:Concept ;
         "chicorée scarole, chicorée frisée"@fr,
         "Indivia"@it ;
     schema:version 0 ;
-    :cultivationType cultivationtype:179 .
+    skos:exactMatch cultivationtype:179 .
 
-psm:18 a skos:Concept ;
+psm:18 a eCH-0265:PlantProtectionCrop ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "7B90BAC4-B80F-4039-ADC3-ADF9225CCBB7" ;
     skos:broader psm:25 ;
@@ -926,9 +926,9 @@ psm:18 a skos:Concept ;
         "chou de Bruxelles"@fr,
         "Cavoli di Bruxelles"@it ;
     schema:version 0 ;
-    :cultivationType cultivationtype:473 .
+    skos:exactMatch cultivationtype:473 .
 
-psm:180 a skos:Concept ;
+psm:180 a eCH-0265:PlantProtectionCrop ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "6388D9E7-CD0D-4823-80DD-E6FA472AF12C" ;
     skos:broader psm:27 ;
@@ -936,9 +936,9 @@ psm:180 a skos:Concept ;
         "Trèfles pour la production de semences"@fr,
         "Trifoglio per la produzione di sementi"@it ;
     schema:version 0 ;
-    :cultivationType cultivationtype:1052 .
+    skos:exactMatch cultivationtype:1052 .
 
-psm:181 a skos:Concept ;
+psm:181 a eCH-0265:PlantProtectionCrop ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "52019F0F-3BAF-4161-A223-62EECBA47871" ;
     skos:broader psm:64 ;
@@ -946,9 +946,9 @@ psm:181 a skos:Concept ;
         "semis sous litière"@fr,
         "Semine a lattiera"@it ;
     schema:version 0 ;
-    :cultivationType cultivationtype:181 .
+    skos:exactMatch cultivationtype:181 .
 
-psm:182 a skos:Concept ;
+psm:182 a eCH-0265:PlantProtectionCrop ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "4E1ACD79-F162-4EBB-93CB-C6857A811E9C" ;
     skos:broader psm:116 ;
@@ -956,9 +956,9 @@ psm:182 a skos:Concept ;
         "mélange trèfles-graminées (prairie arificielle)"@fr,
         "Miscela trifoglio-graminacee (prati artificiali)"@it ;
     schema:version 0 ;
-    :cultivationType cultivationtype:182 .
+    skos:exactMatch cultivationtype:182 .
 
-psm:183 a skos:Concept ;
+psm:183 a eCH-0265:PlantProtectionCrop ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "54C75B64-57C4-46E2-BCEA-741EBC10FDDF" ;
     skos:broader psm:47 ;
@@ -966,9 +966,9 @@ psm:183 a skos:Concept ;
         "lentille"@fr,
         "Lenticchia"@it ;
     schema:version 0 ;
-    :cultivationType cultivationtype:183 .
+    skos:exactMatch cultivationtype:183 .
 
-psm:185 a skos:Concept ;
+psm:185 a eCH-0265:PlantProtectionCrop ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "28ECDBFE-F44F-44C6-BF06-9B7E6EBFC1F6" ;
     skos:broader psm:176 ;
@@ -977,7 +977,7 @@ psm:185 a skos:Concept ;
         "Locali di produzione vuoti"@it ;
     schema:version 0 .
 
-psm:186 a skos:Concept ;
+psm:186 a eCH-0265:PlantProtectionCrop ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "6EDA1989-51C8-490E-90FD-974CE3E8FF03" ;
     skos:broader psm:285 ;
@@ -985,9 +985,9 @@ psm:186 a skos:Concept ;
         "noix en général"@fr,
         "Frutta con guscio"@it ;
     schema:version 0 ;
-    :cultivationType cultivationtype:186 .
+    skos:exactMatch cultivationtype:186 .
 
-psm:187 a skos:Concept ;
+psm:187 a eCH-0265:PlantProtectionCrop ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "6C3D663E-442F-4783-87A2-A46806E119E5" ;
     skos:broader psm:2 ;
@@ -995,9 +995,9 @@ psm:187 a skos:Concept ;
         "Baby-Leaf (Brassicaceae)"@fr,
         "Baby-Leaf (Brassicaceae)"@it ;
     schema:version 0 ;
-    :cultivationType cultivationtype:187 .
+    skos:exactMatch cultivationtype:187 .
 
-psm:189 a skos:Concept ;
+psm:189 a eCH-0265:PlantProtectionCrop ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "5433C814-C0CD-4815-B236-2D02E1C66F3D" ;
     skos:broader psm:57 ;
@@ -1005,9 +1005,9 @@ psm:189 a skos:Concept ;
         "maïs sucré"@fr,
         "Mais dolce"@it ;
     schema:version 0 ;
-    :cultivationType cultivationtype:189 .
+    skos:exactMatch cultivationtype:189 .
 
-psm:19 a skos:Concept ;
+psm:19 a eCH-0265:PlantProtectionCrop ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "7D52C099-7C6F-453C-8513-4BBFB94EE66A" ;
     skos:broader psm:27 ;
@@ -1015,9 +1015,9 @@ psm:19 a skos:Concept ;
         "pois protéagineux"@fr,
         "Pisello proteico"@it ;
     schema:version 0 ;
-    :cultivationType cultivationtype:1027 .
+    skos:exactMatch cultivationtype:1027 .
 
-psm:190 a skos:Concept ;
+psm:190 a eCH-0265:PlantProtectionCrop ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "5755AD92-721E-431E-8473-6FA2F340532F" ;
     skos:broader psm:286 ;
@@ -1025,9 +1025,9 @@ psm:190 a skos:Concept ;
         "Colza d'automne"@fr,
         "Colza autunnale"@it ;
     schema:version 0 ;
-    :cultivationType cultivationtype:190 .
+    skos:exactMatch cultivationtype:190 .
 
-psm:191 a skos:Concept ;
+psm:191 a eCH-0265:PlantProtectionCrop ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "5DF3AB4D-7CAC-4112-90D9-67BD80EC5E96" ;
     skos:broader psm:47 ;
@@ -1035,9 +1035,9 @@ psm:191 a skos:Concept ;
         "pois"@fr,
         "Piselli"@it ;
     schema:version 0 ;
-    :cultivationType cultivationtype:191 .
+    skos:exactMatch cultivationtype:191 .
 
-psm:192 a skos:Concept ;
+psm:192 a eCH-0265:PlantProtectionCrop ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "807F5A2C-7904-456D-BBC7-A80A4B207964" ;
     skos:broader psm:67 ;
@@ -1046,9 +1046,9 @@ psm:192 a skos:Concept ;
         "carvi"@fr,
         "Carvi"@it ;
     schema:version 0 ;
-    :cultivationType cultivationtype:192 .
+    skos:exactMatch cultivationtype:192 .
 
-psm:193 a skos:Concept ;
+psm:193 a eCH-0265:PlantProtectionCrop ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "7AB6690B-B2B9-4F12-AFAE-A9B0222C2637" ;
     skos:broader psm:210,
@@ -1057,18 +1057,18 @@ psm:193 a skos:Concept ;
         "Blé d'automne"@fr,
         "Frumento autunnale"@it ;
     schema:version 0 ;
-    :cultivationType cultivationtype:490 .
+    skos:exactMatch cultivationtype:490 .
 
-psm:194 a skos:Concept ;
+psm:194 a eCH-0265:PlantProtectionCrop ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "E798A7B8-F618-42EE-88F4-289B1283C7B3" ;
     schema:name "Biodiversitätforderflächen allg."@de,
         "Surfaces de promotion de la biodiversité en général"@fr,
         "Superfici per la promozione della biodiversità in generale"@it ;
     schema:version 0 ;
-    :cultivationType cultivationtype:414 .
+    skos:exactMatch cultivationtype:414 .
 
-psm:195 a skos:Concept ;
+psm:195 a eCH-0265:PlantProtectionCrop ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "61D9C648-0736-43D4-BF04-B8643B1D74E0" ;
     skos:broader psm:145,
@@ -1077,9 +1077,9 @@ psm:195 a skos:Concept ;
         "jacinthe"@fr,
         "Giacinto"@it ;
     schema:version 0 ;
-    :cultivationType cultivationtype:195 .
+    skos:exactMatch cultivationtype:195 .
 
-psm:196 a skos:Concept ;
+psm:196 a eCH-0265:PlantProtectionCrop ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "6D06A7F9-DF91-4BB5-84B8-FB877C211E66" ;
     skos:broader psm:27 ;
@@ -1087,9 +1087,9 @@ psm:196 a skos:Concept ;
         "Kenaf"@fr,
         "Kenaf"@it ;
     schema:version 0 ;
-    :cultivationType cultivationtype:1063 .
+    skos:exactMatch cultivationtype:1063 .
 
-psm:197 a skos:Concept ;
+psm:197 a eCH-0265:PlantProtectionCrop ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "F4273CE5-EC2B-42A3-89FC-C5F63EF425D2" ;
     skos:broader psm:73 ;
@@ -1097,9 +1097,9 @@ psm:197 a skos:Concept ;
         "Orge"@fr,
         "Orzo"@it ;
     schema:version 0 ;
-    :cultivationType cultivationtype:498 .
+    skos:exactMatch cultivationtype:498 .
 
-psm:198 a skos:Concept ;
+psm:198 a eCH-0265:PlantProtectionCrop ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "66B27CD1-032A-456E-99C4-28F6E989CC14" ;
     skos:broader psm:113 ;
@@ -1107,9 +1107,9 @@ psm:198 a skos:Concept ;
         "prunier (pruneau)"@fr,
         "Prugno"@it ;
     schema:version 0 ;
-    :cultivationType cultivationtype:198 .
+    skos:exactMatch cultivationtype:198 .
 
-psm:199 a skos:Concept ;
+psm:199 a eCH-0265:PlantProtectionCrop ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "5C610428-6087-4A2E-B977-3E83EDBB19F0" ;
     skos:broader psm:329 ;
@@ -1117,9 +1117,9 @@ psm:199 a skos:Concept ;
         "gazon d'ornement et terrains de sport"@fr,
         "Tappeti erbosi e terreni sportivi"@it ;
     schema:version 0 ;
-    :cultivationType cultivationtype:199 .
+    skos:exactMatch cultivationtype:199 .
 
-psm:2 a skos:Concept ;
+psm:2 a eCH-0265:PlantProtectionCrop ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "0106A8DF-6CDF-4E18-8F46-3D9E1D52D0E5" ;
     skos:broader psm:134 ;
@@ -1127,9 +1127,9 @@ psm:2 a skos:Concept ;
         "Baby-Leaf"@fr,
         "Baby-Leaf"@it ;
     schema:version 0 ;
-    :cultivationType cultivationtype:400 .
+    skos:exactMatch cultivationtype:400 .
 
-psm:20 a skos:Concept ;
+psm:20 a eCH-0265:PlantProtectionCrop ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "6F26F4E0-401C-4B16-A28B-4CC889907361" ;
     skos:broader psm:25 ;
@@ -1137,9 +1137,9 @@ psm:20 a skos:Concept ;
         "choux à feuilles"@fr,
         "Cavoli fogliacei"@it ;
     schema:version 0 ;
-    :cultivationType cultivationtype:475 .
+    skos:exactMatch cultivationtype:475 .
 
-psm:200 a skos:Concept ;
+psm:200 a eCH-0265:PlantProtectionCrop ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "3E4AFACC-03CA-4CEC-8392-520B07DDC604" ;
     skos:broader psm:234 ;
@@ -1148,7 +1148,7 @@ psm:200 a skos:Concept ;
         "Locali per la lavorazione"@it ;
     schema:version 0 .
 
-psm:201 a skos:Concept ;
+psm:201 a eCH-0265:PlantProtectionCrop ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "4465118D-78E7-4748-A47A-7F39E593771A" ;
     skos:broader psm:124 ;
@@ -1156,9 +1156,9 @@ psm:201 a skos:Concept ;
         "haricot à rames"@fr,
         "Fagiolo rampicante"@it ;
     schema:version 0 ;
-    :cultivationType cultivationtype:201 .
+    skos:exactMatch cultivationtype:201 .
 
-psm:202 a skos:Concept ;
+psm:202 a eCH-0265:PlantProtectionCrop ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "3346CB25-6DC9-42AF-8BA2-F725BD92304A" ;
     skos:broader psm:95 ;
@@ -1167,9 +1167,9 @@ psm:202 a skos:Concept ;
         "cardon"@fr,
         "Cardo"@it ;
     schema:version 0 ;
-    :cultivationType cultivationtype:202 .
+    skos:exactMatch cultivationtype:202 .
 
-psm:204 a skos:Concept ;
+psm:204 a eCH-0265:PlantProtectionCrop ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "33097BFE-2487-46DB-85A0-A8A4E06030AF" ;
     skos:broader psm:23 ;
@@ -1177,9 +1177,9 @@ psm:204 a skos:Concept ;
         "azalée"@fr,
         "Azalee"@it ;
     schema:version 0 ;
-    :cultivationType cultivationtype:204 .
+    skos:exactMatch cultivationtype:204 .
 
-psm:205 a skos:Concept ;
+psm:205 a eCH-0265:PlantProtectionCrop ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "25DC9B01-CA06-426A-B743-C0D293447898" ;
     skos:broader psm:67 ;
@@ -1188,9 +1188,9 @@ psm:205 a skos:Concept ;
         "Camomille romaine"@fr,
         "Camomilla romana"@it ;
     schema:version 0 ;
-    :cultivationType cultivationtype:205 .
+    skos:exactMatch cultivationtype:205 .
 
-psm:206 a skos:Concept ;
+psm:206 a eCH-0265:PlantProtectionCrop ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "A707FD99-918E-49B2-ACA2-0393372D8C7C" ;
     schema:name "Spitzwegerich"@de,
@@ -1198,9 +1198,9 @@ psm:206 a skos:Concept ;
         "plantain lancéolé"@fr,
         "piantaggine lanciuola"@it ;
     schema:version 0 ;
-    :cultivationType cultivationtype:206 .
+    skos:exactMatch cultivationtype:206 .
 
-psm:207 a skos:Concept ;
+psm:207 a eCH-0265:PlantProtectionCrop ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "238AB652-AD62-4703-A74B-7550C693ED6E" ;
     skos:broader psm:32 ;
@@ -1208,9 +1208,9 @@ psm:207 a skos:Concept ;
         "cornichons"@fr,
         "cetrioli per conserva"@it ;
     schema:version 0 ;
-    :cultivationType cultivationtype:207 .
+    skos:exactMatch cultivationtype:207 .
 
-psm:208 a skos:Concept ;
+psm:208 a eCH-0265:PlantProtectionCrop ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "25DA6F5A-1BD0-4040-A210-BB05CCB66AE4" ;
     skos:broader psm:320 ;
@@ -1218,9 +1218,9 @@ psm:208 a skos:Concept ;
         "dent-de-lion"@fr,
         "Dente di leone"@it ;
     schema:version 0 ;
-    :cultivationType cultivationtype:208 .
+    skos:exactMatch cultivationtype:208 .
 
-psm:209 a skos:Concept ;
+psm:209 a eCH-0265:PlantProtectionCrop ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "2FAEBED2-193A-460C-A538-9B5C78024D98" ;
     skos:broader psm:134 ;
@@ -1228,9 +1228,9 @@ psm:209 a skos:Concept ;
         "valérianacées"@fr,
         "Valerianacee"@it ;
     schema:version 0 ;
-    :cultivationType cultivationtype:209 .
+    skos:exactMatch cultivationtype:209 .
 
-psm:21 a skos:Concept ;
+psm:21 a eCH-0265:PlantProtectionCrop ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "6CC3F1FF-84DF-4E4A-A91E-57C5ECB82F61" ;
     skos:broader psm:175 ;
@@ -1238,9 +1238,9 @@ psm:21 a skos:Concept ;
         "aubergine"@fr,
         "Melanzana"@it ;
     schema:version 0 ;
-    :cultivationType cultivationtype:474 .
+    skos:exactMatch cultivationtype:474 .
 
-psm:210 a skos:Concept ;
+psm:210 a eCH-0265:PlantProtectionCrop ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "287584B7-E43E-494B-84C2-D13B2C9C3736" ;
     skos:broader psm:73 ;
@@ -1248,9 +1248,9 @@ psm:210 a skos:Concept ;
         "Céréales d'automne"@fr,
         "Cereali autunnali"@it ;
     schema:version 0 ;
-    :cultivationType cultivationtype:19 .
+    skos:exactMatch cultivationtype:19 .
 
-psm:211 a skos:Concept ;
+psm:211 a eCH-0265:PlantProtectionCrop ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "27ACD8EA-49E8-4C99-84D4-53E2E605390E" ;
     skos:broader psm:120 ;
@@ -1258,9 +1258,9 @@ psm:211 a skos:Concept ;
         "rhubarbe"@fr,
         "Rabarbaro"@it ;
     schema:version 0 ;
-    :cultivationType cultivationtype:709 .
+    skos:exactMatch cultivationtype:709 .
 
-psm:212 a skos:Concept ;
+psm:212 a eCH-0265:PlantProtectionCrop ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "27FBFA25-5091-4D7E-9C96-3C0BC05B6474" ;
     skos:broader psm:27 ;
@@ -1268,9 +1268,9 @@ psm:212 a skos:Concept ;
         "Sorgho commun"@fr,
         "Sorgo"@it ;
     schema:version 0 ;
-    :cultivationType cultivationtype:549 .
+    skos:exactMatch cultivationtype:549 .
 
-psm:213 a skos:Concept ;
+psm:213 a eCH-0265:PlantProtectionCrop ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "293D431D-8501-4D41-A0E5-F1A5AD59C8B6" ;
     skos:broader psm:177 ;
@@ -1278,9 +1278,9 @@ psm:213 a skos:Concept ;
         "vigne en production"@fr,
         "Vite in produzione"@it ;
     schema:version 0 ;
-    :cultivationType cultivationtype:213 .
+    skos:exactMatch cultivationtype:213 .
 
-psm:214 a skos:Concept ;
+psm:214 a eCH-0265:PlantProtectionCrop ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "FF0DF95C-A3A9-47EE-95FA-00FCB428A4ED" ;
     skos:broader psm:145 ;
@@ -1288,9 +1288,9 @@ psm:214 a skos:Concept ;
         "tulipe"@fr,
         "Tulipano"@it ;
     schema:version 0 ;
-    :cultivationType cultivationtype:214 .
+    skos:exactMatch cultivationtype:214 .
 
-psm:215 a skos:Concept ;
+psm:215 a eCH-0265:PlantProtectionCrop ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "02BF379A-E526-422A-952B-3B0CD995F8C1" ;
     skos:broader psm:191 ;
@@ -1298,9 +1298,9 @@ psm:215 a skos:Concept ;
         "pois non écossés"@fr,
         "Piselli con baccello"@it ;
     schema:version 0 ;
-    :cultivationType cultivationtype:215 .
+    skos:exactMatch cultivationtype:215 .
 
-psm:216 a skos:Concept ;
+psm:216 a eCH-0265:PlantProtectionCrop ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "FCF24426-CAB8-43C8-9E42-B09581420287" ;
     skos:broader psm:329 ;
@@ -1308,9 +1308,9 @@ psm:216 a skos:Concept ;
         "plantes vivaces"@fr,
         "Arbusti"@it ;
     schema:version 0 ;
-    :cultivationType cultivationtype:216 .
+    skos:exactMatch cultivationtype:216 .
 
-psm:217 a skos:Concept ;
+psm:217 a eCH-0265:PlantProtectionCrop ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "F4479311-1516-49F1-95BA-E232030F9AAC" ;
     skos:broader psm:329 ;
@@ -1318,9 +1318,9 @@ psm:217 a skos:Concept ;
         "arbustes d'ornement (hors forêt)"@fr,
         "Arbusti ornamentali (al di fuori della foresta)"@it ;
     schema:version 0 ;
-    :cultivationType cultivationtype:217 .
+    skos:exactMatch cultivationtype:217 .
 
-psm:218 a skos:Concept ;
+psm:218 a eCH-0265:PlantProtectionCrop ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "F718EA3C-F363-4DB2-BDF6-2D6236706822" ;
     skos:broader psm:337 ;
@@ -1328,9 +1328,9 @@ psm:218 a skos:Concept ;
         "échalote"@fr,
         "Scalogni"@it ;
     schema:version 0 ;
-    :cultivationType cultivationtype:218 .
+    skos:exactMatch cultivationtype:218 .
 
-psm:219 a skos:Concept ;
+psm:219 a eCH-0265:PlantProtectionCrop ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "FA8C26CF-E3B4-456D-AA4E-94D21AEADA1A" ;
     skos:broader psm:67 ;
@@ -1338,9 +1338,9 @@ psm:219 a skos:Concept ;
         "ciboulette"@fr,
         "Erba cipollina"@it ;
     schema:version 0 ;
-    :cultivationType cultivationtype:219 .
+    skos:exactMatch cultivationtype:219 .
 
-psm:22 a skos:Concept ;
+psm:22 a eCH-0265:PlantProtectionCrop ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "657E4B0A-50BD-424B-9DB4-1B84582AD3D7" ;
     skos:broader psm:27 ;
@@ -1348,9 +1348,9 @@ psm:22 a skos:Concept ;
         "féverole"@fr,
         "Fava"@it ;
     schema:version 0 ;
-    :cultivationType cultivationtype:468 .
+    skos:exactMatch cultivationtype:468 .
 
-psm:220 a skos:Concept ;
+psm:220 a eCH-0265:PlantProtectionCrop ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "BC86A080-EDBD-4BBC-A36A-BE41037227C4" ;
     skos:broader psm:27 ;
@@ -1358,9 +1358,9 @@ psm:220 a skos:Concept ;
         "maïs"@fr,
         "Mais"@it ;
     schema:version 0 ;
-    :cultivationType cultivationtype:497 .
+    skos:exactMatch cultivationtype:497 .
 
-psm:221 a skos:Concept ;
+psm:221 a eCH-0265:PlantProtectionCrop ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "C5188A42-9C79-4110-B1E8-AEE9D6078BEA" ;
     skos:broader psm:191 ;
@@ -1368,9 +1368,9 @@ psm:221 a skos:Concept ;
         "pois écossés"@fr,
         "Piselli senza baccello"@it ;
     schema:version 0 ;
-    :cultivationType cultivationtype:221 .
+    skos:exactMatch cultivationtype:221 .
 
-psm:222 a skos:Concept ;
+psm:222 a eCH-0265:PlantProtectionCrop ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "CB7061F0-B1D8-4AC0-9C50-A596763B68CF" ;
     skos:broader psm:329 ;
@@ -1378,9 +1378,9 @@ psm:222 a skos:Concept ;
         "euphorbe"@fr,
         "Euforbia"@it ;
     schema:version 0 ;
-    :cultivationType cultivationtype:222 .
+    skos:exactMatch cultivationtype:222 .
 
-psm:223 a skos:Concept ;
+psm:223 a eCH-0265:PlantProtectionCrop ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "9230C798-B1D0-4342-947C-C7A0988F416E" ;
     skos:broader psm:13 ;
@@ -1388,9 +1388,9 @@ psm:223 a skos:Concept ;
         "fraise"@fr,
         "Fragola"@it ;
     schema:version 0 ;
-    :cultivationType cultivationtype:223 .
+    skos:exactMatch cultivationtype:223 .
 
-psm:224 a skos:Concept ;
+psm:224 a eCH-0265:PlantProtectionCrop ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "BDB73EC5-46E5-413B-85B5-78D3801F4E7E" ;
     skos:broader psm:95 ;
@@ -1398,9 +1398,9 @@ psm:224 a skos:Concept ;
         "topinambour"@fr,
         "Topinambur"@it ;
     schema:version 0 ;
-    :cultivationType cultivationtype:224 .
+    skos:exactMatch cultivationtype:224 .
 
-psm:225 a skos:Concept ;
+psm:225 a eCH-0265:PlantProtectionCrop ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "C1A1842A-37E5-46D3-9646-9ECC15BAEE99" ;
     skos:broader psm:40 ;
@@ -1408,9 +1408,9 @@ psm:225 a skos:Concept ;
         "courgette"@fr,
         "Zucchine"@it ;
     schema:version 0 ;
-    :cultivationType cultivationtype:225 .
+    skos:exactMatch cultivationtype:225 .
 
-psm:226 a skos:Concept ;
+psm:226 a eCH-0265:PlantProtectionCrop ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "B74E61A6-30BD-4A63-8A24-94FC0A54D489" ;
     skos:broader psm:149,
@@ -1419,9 +1419,9 @@ psm:226 a skos:Concept ;
         "Seigle d'automne"@fr,
         "Segale autunnale"@it ;
     schema:version 0 ;
-    :cultivationType cultivationtype:1012 .
+    skos:exactMatch cultivationtype:1012 .
 
-psm:227 a skos:Concept ;
+psm:227 a eCH-0265:PlantProtectionCrop ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "BAE217C2-8C72-4706-8A0E-911FB18FC723" ;
     skos:broader psm:293 ;
@@ -1430,7 +1430,7 @@ psm:227 a skos:Concept ;
         "Deposito di terreno vegetale"@it ;
     schema:version 0 .
 
-psm:228 a skos:Concept ;
+psm:228 a eCH-0265:PlantProtectionCrop ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "BBD16782-6EB3-4923-9DBB-CC7D97EBCB0E" ;
     skos:broader psm:235 ;
@@ -1438,9 +1438,9 @@ psm:228 a skos:Concept ;
         "courges oléagineuses"@fr,
         "Zucca da olio"@it ;
     schema:version 0 ;
-    :cultivationType cultivationtype:539 .
+    skos:exactMatch cultivationtype:539 .
 
-psm:229 a skos:Concept ;
+psm:229 a eCH-0265:PlantProtectionCrop ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "B7DE9539-35FD-4172-B72D-488EA12F2DF7" ;
     skos:broader psm:321 ;
@@ -1448,9 +1448,9 @@ psm:229 a skos:Concept ;
         "bette à tondre"@fr,
         "Bietola da taglio"@it ;
     schema:version 0 ;
-    :cultivationType cultivationtype:229 .
+    skos:exactMatch cultivationtype:229 .
 
-psm:23 a skos:Concept ;
+psm:23 a eCH-0265:PlantProtectionCrop ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "3A53A166-7559-4E75-BDED-F65CA6FDFDE1" ;
     skos:broader psm:16,
@@ -1459,9 +1459,9 @@ psm:23 a skos:Concept ;
         "rhododendron"@fr,
         "Rododendro"@it ;
     schema:version 0 ;
-    :cultivationType cultivationtype:403 .
+    skos:exactMatch cultivationtype:403 .
 
-psm:230 a skos:Concept ;
+psm:230 a eCH-0265:PlantProtectionCrop ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "8E6C3D3A-6D7A-4D82-94CC-E4F227CC1EB2" ;
     schema:name "Pflanzen"@de,
@@ -1469,7 +1469,7 @@ psm:230 a skos:Concept ;
         "Piante"@it ;
     schema:version 0 .
 
-psm:231 a skos:Concept ;
+psm:231 a eCH-0265:PlantProtectionCrop ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "91522E50-F1AC-42B1-870B-68218110C235" ;
     skos:broader psm:67 ;
@@ -1478,9 +1478,9 @@ psm:231 a skos:Concept ;
         "aneth"@fr,
         "Aneto"@it ;
     schema:version 0 ;
-    :cultivationType cultivationtype:231 .
+    skos:exactMatch cultivationtype:231 .
 
-psm:232 a skos:Concept ;
+psm:232 a eCH-0265:PlantProtectionCrop ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "874850AA-2F48-47B6-A789-C67D6DEE97DA" ;
     skos:broader psm:277 ;
@@ -1488,9 +1488,9 @@ psm:232 a skos:Concept ;
         "oignons en botte"@fr,
         "Cipollotti a mazzi"@it ;
     schema:version 0 ;
-    :cultivationType cultivationtype:232 .
+    skos:exactMatch cultivationtype:232 .
 
-psm:233 a skos:Concept ;
+psm:233 a eCH-0265:PlantProtectionCrop ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "8621CDCC-EE8A-4188-9F2C-14C9497FBED3" ;
     skos:broader psm:326 ;
@@ -1498,9 +1498,9 @@ psm:233 a skos:Concept ;
         "mûre"@fr,
         "Mora"@it ;
     schema:version 0 ;
-    :cultivationType cultivationtype:233 .
+    skos:exactMatch cultivationtype:233 .
 
-psm:234 a skos:Concept ;
+psm:234 a eCH-0265:PlantProtectionCrop ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "8774F019-8BB4-409D-ADA9-B565ECA1A6A9" ;
     schema:name "Allgemein Vorratsschutz"@de,
@@ -1508,7 +1508,7 @@ psm:234 a skos:Concept ;
         "Protezione delle scorte (in generale)"@it ;
     schema:version 0 .
 
-psm:235 a skos:Concept ;
+psm:235 a eCH-0265:PlantProtectionCrop ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "8303C191-3315-4942-91DF-668C019850D7" ;
     skos:broader psm:134 ;
@@ -1516,9 +1516,9 @@ psm:235 a skos:Concept ;
         "cucurbitacées"@fr,
         "Cucurbitacee"@it ;
     schema:version 0 ;
-    :cultivationType cultivationtype:235 .
+    skos:exactMatch cultivationtype:235 .
 
-psm:236 a skos:Concept ;
+psm:236 a eCH-0265:PlantProtectionCrop ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "8262D735-4D45-4499-AE0B-497FF4C0C4AA" ;
     skos:broader psm:27 ;
@@ -1526,9 +1526,9 @@ psm:236 a skos:Concept ;
         "Tabac"@fr,
         "Tabacco"@it ;
     schema:version 0 ;
-    :cultivationType cultivationtype:541 .
+    skos:exactMatch cultivationtype:541 .
 
-psm:237 a skos:Concept ;
+psm:237 a eCH-0265:PlantProtectionCrop ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "80395E92-C39B-45D9-91AC-AB7E6DCAC3DB" ;
     skos:broader psm:20 ;
@@ -1536,9 +1536,9 @@ psm:237 a skos:Concept ;
         "chou moellier"@fr,
         "Cavolo fustoso"@it ;
     schema:version 0 ;
-    :cultivationType cultivationtype:237 .
+    skos:exactMatch cultivationtype:237 .
 
-psm:238 a skos:Concept ;
+psm:238 a eCH-0265:PlantProtectionCrop ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "83A9CEC5-FC31-421C-A3B8-CA219AF649CF" ;
     skos:broader psm:145,
@@ -1547,9 +1547,9 @@ psm:238 a skos:Concept ;
         "oeillet"@fr,
         "Garofani"@it ;
     schema:version 0 ;
-    :cultivationType cultivationtype:238 .
+    skos:exactMatch cultivationtype:238 .
 
-psm:239 a skos:Concept ;
+psm:239 a eCH-0265:PlantProtectionCrop ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "82376115-14E2-449A-8DFA-F8119476FE3F" ;
     skos:broader psm:73 ;
@@ -1557,9 +1557,9 @@ psm:239 a skos:Concept ;
         "Blé"@fr,
         "Frumento"@it ;
     schema:version 0 ;
-    :cultivationType cultivationtype:492 .
+    skos:exactMatch cultivationtype:492 .
 
-psm:24 a skos:Concept ;
+psm:24 a eCH-0265:PlantProtectionCrop ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "465E7118-95AB-46A2-9A85-7A0B9070E63A" ;
     skos:broader psm:176 ;
@@ -1568,7 +1568,7 @@ psm:24 a skos:Concept ;
         "Installazioni e apparecchi"@it ;
     schema:version 0 .
 
-psm:240 a skos:Concept ;
+psm:240 a eCH-0265:PlantProtectionCrop ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "85BB3788-27A8-4E73-800A-0E8F154EC0BE" ;
     skos:broader psm:48 ;
@@ -1576,9 +1576,9 @@ psm:240 a skos:Concept ;
         "laitues à tondre  (Brassicaceae)"@fr,
         "Insalate a foglie (Brassicacee)"@it ;
     schema:version 0 ;
-    :cultivationType cultivationtype:240 .
+    skos:exactMatch cultivationtype:240 .
 
-psm:241 a skos:Concept ;
+psm:241 a eCH-0265:PlantProtectionCrop ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "A22521E4-7D71-40C2-9FDF-B1230008D934" ;
     skos:broader psm:293 ;
@@ -1587,7 +1587,7 @@ psm:241 a skos:Concept ;
         "Scarpate e strisce verdi lungo le vie di comunicazione (conformemente ORRPChim)"@it ;
     schema:version 0 .
 
-psm:242 a skos:Concept ;
+psm:242 a eCH-0265:PlantProtectionCrop ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "8BDDCACC-13C1-4676-9322-402ECF20BE85" ;
     skos:broader psm:194 ;
@@ -1595,9 +1595,9 @@ psm:242 a skos:Concept ;
         "terres ouvertes"@fr,
         "Superficie coltiva aperta"@it ;
     schema:version 0 ;
-    :cultivationType cultivationtype:1 .
+    skos:exactMatch cultivationtype:1 .
 
-psm:243 a skos:Concept ;
+psm:243 a eCH-0265:PlantProtectionCrop ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "8FF3D364-2BA6-40AA-A370-4B72E3CAC8DF" ;
     skos:broader psm:48 ;
@@ -1605,9 +1605,9 @@ psm:243 a skos:Concept ;
         "radis de tous les mois"@fr,
         "Ravanello"@it ;
     schema:version 0 ;
-    :cultivationType cultivationtype:243 .
+    skos:exactMatch cultivationtype:243 .
 
-psm:244 a skos:Concept ;
+psm:244 a eCH-0265:PlantProtectionCrop ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "4B6DC713-3B11-42C5-92A8-E504D594E978" ;
     skos:broader psm:176 ;
@@ -1616,7 +1616,7 @@ psm:244 a skos:Concept ;
         "Locali per la lavorazione vuoti"@it ;
     schema:version 0 .
 
-psm:245 a skos:Concept ;
+psm:245 a eCH-0265:PlantProtectionCrop ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "83C510D2-293A-4E1B-B691-06B1F02149B4" ;
     skos:broader psm:277 ;
@@ -1624,9 +1624,9 @@ psm:245 a skos:Concept ;
         "oignon potager"@fr,
         "Cipolle dolci"@it ;
     schema:version 0 ;
-    :cultivationType cultivationtype:245 .
+    skos:exactMatch cultivationtype:245 .
 
-psm:246 a skos:Concept ;
+psm:246 a eCH-0265:PlantProtectionCrop ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "A024CDFC-A05D-46B8-B08A-221C26BDF5DE" ;
     skos:broader psm:329 ;
@@ -1634,9 +1634,9 @@ psm:246 a skos:Concept ;
         "rosier"@fr,
         "Rose"@it ;
     schema:version 0 ;
-    :cultivationType cultivationtype:246 .
+    skos:exactMatch cultivationtype:246 .
 
-psm:247 a skos:Concept ;
+psm:247 a eCH-0265:PlantProtectionCrop ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "A0C29069-5DBA-4E89-B7F9-4C556C272821" ;
     skos:broader psm:48 ;
@@ -1644,9 +1644,9 @@ psm:247 a skos:Concept ;
         "rave de Brassica rapa et B. napus"@fr,
         "Rapa di Brassica rapa e B. napus"@it ;
     schema:version 0 ;
-    :cultivationType cultivationtype:247 .
+    skos:exactMatch cultivationtype:247 .
 
-psm:248 a skos:Concept ;
+psm:248 a eCH-0265:PlantProtectionCrop ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "91406007-35B9-49E2-A62F-04BDE262366F" ;
     skos:broader psm:131 ;
@@ -1654,9 +1654,9 @@ psm:248 a skos:Concept ;
         "groseilles à grappes"@fr,
         "Ribes rosso"@it ;
     schema:version 0 ;
-    :cultivationType cultivationtype:248 .
+    skos:exactMatch cultivationtype:248 .
 
-psm:249 a skos:Concept ;
+psm:249 a eCH-0265:PlantProtectionCrop ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "930524FB-BD0A-4CA9-A89D-4FEEE1F9174F" ;
     skos:broader psm:124 ;
@@ -1664,9 +1664,9 @@ psm:249 a skos:Concept ;
         "haricot nain"@fr,
         "Fagiolo nano"@it ;
     schema:version 0 ;
-    :cultivationType cultivationtype:249 .
+    skos:exactMatch cultivationtype:249 .
 
-psm:25 a skos:Concept ;
+psm:25 a eCH-0265:PlantProtectionCrop ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "4380EC0F-E195-4783-8BB7-F6B0464B37D6" ;
     skos:broader psm:48 ;
@@ -1674,9 +1674,9 @@ psm:25 a skos:Concept ;
         "choux"@fr,
         "Specie di cavoli"@it ;
     schema:version 0 ;
-    :cultivationType cultivationtype:25 .
+    skos:exactMatch cultivationtype:25 .
 
-psm:250 a skos:Concept ;
+psm:250 a eCH-0265:PlantProtectionCrop ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "93A2DA1B-F920-461B-A9C9-BA9981CDB278" ;
     skos:broader psm:300 ;
@@ -1684,9 +1684,9 @@ psm:250 a skos:Concept ;
         "épinard"@fr,
         "Spinaci"@it ;
     schema:version 0 ;
-    :cultivationType cultivationtype:250 .
+    skos:exactMatch cultivationtype:250 .
 
-psm:251 a skos:Concept ;
+psm:251 a eCH-0265:PlantProtectionCrop ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "B9DC95B4-DD22-49F9-9048-4B37F8DD8F8F" ;
     skos:broader psm:96 ;
@@ -1694,9 +1694,9 @@ psm:251 a skos:Concept ;
         "pommes de terre pour la production de plants"@fr,
         "Patate per la produzione di tuberi-seme"@it ;
     schema:version 0 ;
-    :cultivationType cultivationtype:411 .
+    skos:exactMatch cultivationtype:411 .
 
-psm:252 a skos:Concept ;
+psm:252 a eCH-0265:PlantProtectionCrop ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "6D45EAF5-D29C-48AB-A212-91C67357E898" ;
     skos:broader psm:150 ;
@@ -1704,9 +1704,9 @@ psm:252 a skos:Concept ;
         "noyer"@fr,
         "Noce comune"@it ;
     schema:version 0 ;
-    :cultivationType cultivationtype:252 .
+    skos:exactMatch cultivationtype:252 .
 
-psm:253 a skos:Concept ;
+psm:253 a eCH-0265:PlantProtectionCrop ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "ABF54D5D-620B-4A08-A37D-416C1AD8D1BF" ;
     skos:broader psm:67 ;
@@ -1714,9 +1714,9 @@ psm:253 a skos:Concept ;
         "estragon"@fr,
         "Dragoncello"@it ;
     schema:version 0 ;
-    :cultivationType cultivationtype:253 .
+    skos:exactMatch cultivationtype:253 .
 
-psm:254 a skos:Concept ;
+psm:254 a eCH-0265:PlantProtectionCrop ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "A8647F38-2A16-46AB-8B0E-2257EBF53C63" ;
     skos:broader psm:145 ;
@@ -1724,9 +1724,9 @@ psm:254 a skos:Concept ;
         "iris"@fr,
         "Iris"@it ;
     schema:version 0 ;
-    :cultivationType cultivationtype:254 .
+    skos:exactMatch cultivationtype:254 .
 
-psm:255 a skos:Concept ;
+psm:255 a eCH-0265:PlantProtectionCrop ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "AC0240B5-B610-4D7C-8704-AA8E182821AC" ;
     skos:broader psm:234 ;
@@ -1735,7 +1735,7 @@ psm:255 a skos:Concept ;
         "Depositi, mulini, sili"@it ;
     schema:version 0 .
 
-psm:256 a skos:Concept ;
+psm:256 a eCH-0265:PlantProtectionCrop ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "A9F01BDE-468A-477A-8ED5-704359B663F6" ;
     skos:broader psm:13 ;
@@ -1743,9 +1743,9 @@ psm:256 a skos:Concept ;
         "myrtille"@fr,
         "Mirtillo"@it ;
     schema:version 0 ;
-    :cultivationType cultivationtype:256 .
+    skos:exactMatch cultivationtype:256 .
 
-psm:257 a skos:Concept ;
+psm:257 a eCH-0265:PlantProtectionCrop ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "9BCEB85B-1578-4001-839D-68BFB9CE4CD8" ;
     skos:broader psm:285 ;
@@ -1754,9 +1754,9 @@ psm:257 a skos:Concept ;
         "olivier"@fr,
         "Olivo"@it ;
     schema:version 0 ;
-    :cultivationType cultivationtype:257 .
+    skos:exactMatch cultivationtype:257 .
 
-psm:258 a skos:Concept ;
+psm:258 a eCH-0265:PlantProtectionCrop ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "9BD6A435-E370-4DFE-82E5-7E7813B4D193" ;
     skos:broader psm:2 ;
@@ -1764,9 +1764,9 @@ psm:258 a skos:Concept ;
         "Baby-Leaf (Chenopodiaceae)"@fr,
         "Baby-Leaf (Chenopodiaceae)"@it ;
     schema:version 0 ;
-    :cultivationType cultivationtype:258 .
+    skos:exactMatch cultivationtype:258 .
 
-psm:259 a skos:Concept ;
+psm:259 a eCH-0265:PlantProtectionCrop ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "9C38BA77-FDC8-461A-800A-9E2467C52105" ;
     skos:broader psm:113 ;
@@ -1774,9 +1774,9 @@ psm:259 a skos:Concept ;
         "prunier (prune)"@fr,
         "Prugnolo"@it ;
     schema:version 0 ;
-    :cultivationType cultivationtype:259 .
+    skos:exactMatch cultivationtype:259 .
 
-psm:26 a skos:Concept ;
+psm:26 a eCH-0265:PlantProtectionCrop ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "2D7D1AE2-E685-4C6B-B8EE-DC5C6391EC76" ;
     skos:broader psm:134 ;
@@ -1784,9 +1784,9 @@ psm:26 a skos:Concept ;
         "asparagacées (Asparagaceae)"@fr,
         "Asparagacee (Asparagaceae)"@it ;
     schema:version 0 ;
-    :cultivationType cultivationtype:26 .
+    skos:exactMatch cultivationtype:26 .
 
-psm:260 a skos:Concept ;
+psm:260 a eCH-0265:PlantProtectionCrop ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "707A99EF-0290-4CA9-9D90-8ADFDAA43330" ;
     skos:broader psm:209 ;
@@ -1794,9 +1794,9 @@ psm:260 a skos:Concept ;
         "mâche, rampon"@fr,
         "Valerianella"@it ;
     schema:version 0 ;
-    :cultivationType cultivationtype:260 .
+    skos:exactMatch cultivationtype:260 .
 
-psm:261 a skos:Concept ;
+psm:261 a eCH-0265:PlantProtectionCrop ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "38A60506-8FFA-4E1C-92AD-70A25987C64C" ;
     schema:name "Rosenwurz"@de,
@@ -1804,9 +1804,9 @@ psm:261 a skos:Concept ;
         "Orpin rose"@fr,
         "Rhodiola rosea"@it ;
     schema:version 0 ;
-    :cultivationType cultivationtype:261 .
+    skos:exactMatch cultivationtype:261 .
 
-psm:262 a skos:Concept ;
+psm:262 a eCH-0265:PlantProtectionCrop ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "D1C8A572-3D39-46F7-BEAC-10B485FE4FC3" ;
     schema:name "Traubensilberkerze"@de,
@@ -1814,9 +1814,9 @@ psm:262 a skos:Concept ;
         "actée à grappe"@fr,
         "actaea racemosa"@it ;
     schema:version 0 ;
-    :cultivationType cultivationtype:262 .
+    skos:exactMatch cultivationtype:262 .
 
-psm:263 a skos:Concept ;
+psm:263 a eCH-0265:PlantProtectionCrop ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "BA6FCA8F-68B8-4408-A267-2546B1FA5764" ;
     skos:broader psm:134 ;
@@ -1824,9 +1824,9 @@ psm:263 a skos:Concept ;
         "lamiacées (Labiatae)"@fr,
         "Lamiacee (Labiatae)"@it ;
     schema:version 0 ;
-    :cultivationType cultivationtype:263 .
+    skos:exactMatch cultivationtype:263 .
 
-psm:264 a skos:Concept ;
+psm:264 a eCH-0265:PlantProtectionCrop ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "BB923645-6E65-48EE-9C64-DA2232EEE7EF" ;
     skos:broader psm:48 ;
@@ -1834,9 +1834,9 @@ psm:264 a skos:Concept ;
         "radis long"@fr,
         "Ramolaccio"@it ;
     schema:version 0 ;
-    :cultivationType cultivationtype:264 .
+    skos:exactMatch cultivationtype:264 .
 
-psm:265 a skos:Concept ;
+psm:265 a eCH-0265:PlantProtectionCrop ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "B02E0EFA-B8AF-425A-A779-6A4DFE8D4172" ;
     skos:broader psm:173 ;
@@ -1844,9 +1844,9 @@ psm:265 a skos:Concept ;
         "laitue pommée"@fr,
         "Lattuga cappuccio"@it ;
     schema:version 0 ;
-    :cultivationType cultivationtype:265 .
+    skos:exactMatch cultivationtype:265 .
 
-psm:267 a skos:Concept ;
+psm:267 a eCH-0265:PlantProtectionCrop ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "A3E943A5-C6D8-4CB0-A069-85BFC48E8B8A" ;
     skos:broader psm:13 ;
@@ -1855,9 +1855,9 @@ psm:267 a skos:Concept ;
         "Baies de Goji"@fr,
         "Bacche di Goji"@it ;
     schema:version 0 ;
-    :cultivationType cultivationtype:267 .
+    skos:exactMatch cultivationtype:267 .
 
-psm:268 a skos:Concept ;
+psm:268 a eCH-0265:PlantProtectionCrop ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "730AACDC-B956-493D-8148-7520019CE0BC" ;
     skos:broader psm:67 ;
@@ -1865,9 +1865,9 @@ psm:268 a skos:Concept ;
         "thym"@fr,
         "Timo"@it ;
     schema:version 0 ;
-    :cultivationType cultivationtype:268 .
+    skos:exactMatch cultivationtype:268 .
 
-psm:269 a skos:Concept ;
+psm:269 a eCH-0265:PlantProtectionCrop ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "68688AEC-44E2-490B-AC80-E8DEDCC82B8F" ;
     skos:broader psm:335 ;
@@ -1875,18 +1875,18 @@ psm:269 a skos:Concept ;
         "poivron doux"@fr,
         "Peperone dolce"@it ;
     schema:version 0 ;
-    :cultivationType cultivationtype:269 .
+    skos:exactMatch cultivationtype:269 .
 
-psm:27 a skos:Concept ;
+psm:27 a eCH-0265:PlantProtectionCrop ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "3783A322-9E9C-44F6-B683-FE35221CA6AC" ;
     schema:name "Feldbau allg."@de,
         "grande culture en général"@fr,
         "Campicoltura in generale"@it ;
     schema:version 0 ;
-    :cultivationType cultivationtype:1022 .
+    skos:exactMatch cultivationtype:1022 .
 
-psm:270 a skos:Concept ;
+psm:270 a eCH-0265:PlantProtectionCrop ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "46D3C073-CBD8-4B3A-A9AA-21785BA911CA" ;
     skos:broader psm:335 ;
@@ -1894,9 +1894,9 @@ psm:270 a skos:Concept ;
         "poivron"@fr,
         "Peperone"@it ;
     schema:version 0 ;
-    :cultivationType cultivationtype:270 .
+    skos:exactMatch cultivationtype:270 .
 
-psm:271 a skos:Concept ;
+psm:271 a eCH-0265:PlantProtectionCrop ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "3702313F-95C6-4FE9-8B6B-C7CE3987CD18" ;
     skos:broader psm:94 ;
@@ -1904,9 +1904,9 @@ psm:271 a skos:Concept ;
         "céleri-branche"@fr,
         "Sedano da coste"@it ;
     schema:version 0 ;
-    :cultivationType cultivationtype:271 .
+    skos:exactMatch cultivationtype:271 .
 
-psm:272 a skos:Concept ;
+psm:272 a eCH-0265:PlantProtectionCrop ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "18C6314C-C067-4E7F-AAB6-2DEF3F01DF9D" ;
     skos:broader psm:94 ;
@@ -1914,9 +1914,9 @@ psm:272 a skos:Concept ;
         "céleri-pomme pour bouillon"@fr,
         "Sedano da condimento"@it ;
     schema:version 0 ;
-    :cultivationType cultivationtype:272 .
+    skos:exactMatch cultivationtype:272 .
 
-psm:273 a skos:Concept ;
+psm:273 a eCH-0265:PlantProtectionCrop ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "0D20E815-633E-4F38-AC93-7B6578B0483E" ;
     skos:broader psm:327 ;
@@ -1924,9 +1924,9 @@ psm:273 a skos:Concept ;
         "fenouil bulbeux"@fr,
         "Finocchio dolce"@it ;
     schema:version 0 ;
-    :cultivationType cultivationtype:273 .
+    skos:exactMatch cultivationtype:273 .
 
-psm:274 a skos:Concept ;
+psm:274 a eCH-0265:PlantProtectionCrop ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "404C1D02-5666-4AA3-8487-65A9EEE0B53D" ;
     skos:broader psm:27 ;
@@ -1934,9 +1934,9 @@ psm:274 a skos:Concept ;
         "Lupin"@fr,
         "Lupini"@it ;
     schema:version 0 ;
-    :cultivationType cultivationtype:538 .
+    skos:exactMatch cultivationtype:538 .
 
-psm:275 a skos:Concept ;
+psm:275 a eCH-0265:PlantProtectionCrop ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "F512809F-5CC7-44A2-A378-8FDAFA67CFEA" ;
     skos:broader psm:175 ;
@@ -1945,9 +1945,9 @@ psm:275 a skos:Concept ;
         "poire melon"@fr,
         "Pepino"@it ;
     schema:version 0 ;
-    :cultivationType cultivationtype:275 .
+    skos:exactMatch cultivationtype:275 .
 
-psm:276 a skos:Concept ;
+psm:276 a eCH-0265:PlantProtectionCrop ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "CE13A930-22B8-44D6-98E4-97707B0F7F6C" ;
     skos:broader psm:32 ;
@@ -1955,9 +1955,9 @@ psm:276 a skos:Concept ;
         "concombre de serre"@fr,
         "Cetriolo olandese"@it ;
     schema:version 0 ;
-    :cultivationType cultivationtype:276 .
+    skos:exactMatch cultivationtype:276 .
 
-psm:277 a skos:Concept ;
+psm:277 a eCH-0265:PlantProtectionCrop ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "DB98FC8E-5AFA-4434-9478-960124F960CA" ;
     skos:broader psm:337 ;
@@ -1965,9 +1965,9 @@ psm:277 a skos:Concept ;
         "oignon"@fr,
         "Cipolle"@it ;
     schema:version 0 ;
-    :cultivationType cultivationtype:277 .
+    skos:exactMatch cultivationtype:277 .
 
-psm:278 a skos:Concept ;
+psm:278 a eCH-0265:PlantProtectionCrop ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "CC9D982D-A99F-4143-8298-BC029BD1D1AD" ;
     skos:broader psm:48 ;
@@ -1976,9 +1976,9 @@ psm:278 a skos:Concept ;
         "roquette"@fr,
         "Rucola"@it ;
     schema:version 0 ;
-    :cultivationType cultivationtype:278 .
+    skos:exactMatch cultivationtype:278 .
 
-psm:279 a skos:Concept ;
+psm:279 a eCH-0265:PlantProtectionCrop ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "C38D7DE4-C804-4F7C-AA2F-A536D03E0DFC" ;
     skos:broader psm:83 ;
@@ -1987,9 +1987,9 @@ psm:279 a skos:Concept ;
         "digitale lanifère"@fr,
         "Digitale lanata"@it ;
     schema:version 0 ;
-    :cultivationType cultivationtype:279 .
+    skos:exactMatch cultivationtype:279 .
 
-psm:28 a skos:Concept ;
+psm:28 a eCH-0265:PlantProtectionCrop ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "36D9AFE2-7506-48CE-BA39-EFD54535294A" ;
     skos:broader psm:13 ;
@@ -1997,9 +1997,9 @@ psm:28 a skos:Concept ;
         "aronie noire"@fr,
         "Aronia nera"@it ;
     schema:version 0 ;
-    :cultivationType cultivationtype:28 .
+    skos:exactMatch cultivationtype:28 .
 
-psm:280 a skos:Concept ;
+psm:280 a eCH-0265:PlantProtectionCrop ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "C763D817-B4AC-43DB-9C6E-A262CC32F400" ;
     skos:broader psm:305 ;
@@ -2007,9 +2007,9 @@ psm:280 a skos:Concept ;
         "Betterave fourragère"@fr,
         "Barbabietola da foraggio"@it ;
     schema:version 0 ;
-    :cultivationType cultivationtype:523 .
+    skos:exactMatch cultivationtype:523 .
 
-psm:282 a skos:Concept ;
+psm:282 a eCH-0265:PlantProtectionCrop ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "DA5835F6-C295-4A4F-829D-007B1FA50A6D" ;
     skos:broader psm:20 ;
@@ -2017,9 +2017,9 @@ psm:282 a skos:Concept ;
         "navet à tondre"@fr,
         "Cavoli / rape da taglio"@it ;
     schema:version 0 ;
-    :cultivationType cultivationtype:282 .
+    skos:exactMatch cultivationtype:282 .
 
-psm:283 a skos:Concept ;
+psm:283 a eCH-0265:PlantProtectionCrop ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "ABA3C163-EFDF-4B91-9F61-8380B6DDE0A6" ;
     skos:broader psm:50 ;
@@ -2027,9 +2027,9 @@ psm:283 a skos:Concept ;
         "cerisier"@fr,
         "Ciliegio"@it ;
     schema:version 0 ;
-    :cultivationType cultivationtype:704 .
+    skos:exactMatch cultivationtype:704 .
 
-psm:284 a skos:Concept ;
+psm:284 a eCH-0265:PlantProtectionCrop ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "5C0E6310-52CD-4368-9057-135822C019E6" ;
     skos:broader psm:64 ;
@@ -2037,18 +2037,18 @@ psm:284 a skos:Concept ;
         "semis après travail superficiel"@fr,
         "Semine dopo la fresatura"@it ;
     schema:version 0 ;
-    :cultivationType cultivationtype:284 .
+    skos:exactMatch cultivationtype:284 .
 
-psm:285 a skos:Concept ;
+psm:285 a eCH-0265:PlantProtectionCrop ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "DA71526F-AC1D-40F1-8EF5-109E3F3FFD76" ;
     schema:name "Obstbau allg."@de,
         "arboriculture en général"@fr,
         "Frutticoltura in generale"@it ;
     schema:version 0 ;
-    :cultivationType cultivationtype:5 .
+    skos:exactMatch cultivationtype:5 .
 
-psm:286 a skos:Concept ;
+psm:286 a eCH-0265:PlantProtectionCrop ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "BD424265-B4C9-4410-AB7E-982930129FAE" ;
     skos:broader psm:27 ;
@@ -2056,9 +2056,9 @@ psm:286 a skos:Concept ;
         "Colza"@fr,
         "colza"@it ;
     schema:version 0 ;
-    :cultivationType cultivationtype:494 .
+    skos:exactMatch cultivationtype:494 .
 
-psm:287 a skos:Concept ;
+psm:287 a eCH-0265:PlantProtectionCrop ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "D51188F1-9F8F-46E6-8F5B-550A7D45A4BE" ;
     skos:broader psm:67 ;
@@ -2066,9 +2066,9 @@ psm:287 a skos:Concept ;
         "mélisse"@fr,
         "Melissa"@it ;
     schema:version 0 ;
-    :cultivationType cultivationtype:287 .
+    skos:exactMatch cultivationtype:287 .
 
-psm:288 a skos:Concept ;
+psm:288 a eCH-0265:PlantProtectionCrop ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "D63D73AC-87B1-41F7-82AC-D1DFF12F6704" ;
     skos:broader psm:326 ;
@@ -2076,9 +2076,9 @@ psm:288 a skos:Concept ;
         "framboise"@fr,
         "Lampone"@it ;
     schema:version 0 ;
-    :cultivationType cultivationtype:288 .
+    skos:exactMatch cultivationtype:288 .
 
-psm:289 a skos:Concept ;
+psm:289 a eCH-0265:PlantProtectionCrop ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "F6A02973-2AF5-47AF-B99D-FFAD9A24BCB4" ;
     skos:broader psm:40 ;
@@ -2086,9 +2086,9 @@ psm:289 a skos:Concept ;
         "rondini"@fr,
         "Rondini"@it ;
     schema:version 0 ;
-    :cultivationType cultivationtype:289 .
+    skos:exactMatch cultivationtype:289 .
 
-psm:29 a skos:Concept ;
+psm:29 a eCH-0265:PlantProtectionCrop ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "36EC3084-D6AE-494D-A5B2-EC39DCC4F412" ;
     skos:broader psm:145 ;
@@ -2096,9 +2096,9 @@ psm:29 a skos:Concept ;
         "anémone"@fr,
         "Anemone"@it ;
     schema:version 0 ;
-    :cultivationType cultivationtype:408 .
+    skos:exactMatch cultivationtype:408 .
 
-psm:290 a skos:Concept ;
+psm:290 a eCH-0265:PlantProtectionCrop ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "EB0C465C-50B7-4DC0-914B-ABE4C284A907" ;
     skos:broader psm:134 ;
@@ -2106,9 +2106,9 @@ psm:290 a skos:Concept ;
         "choux"@fr,
         "Cavoli"@it ;
     schema:version 0 ;
-    :cultivationType cultivationtype:25 .
+    skos:exactMatch cultivationtype:25 .
 
-psm:291 a skos:Concept ;
+psm:291 a eCH-0265:PlantProtectionCrop ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "B6669854-1833-4BBC-A931-E67505848EA7" ;
     skos:broader psm:163,
@@ -2117,9 +2117,9 @@ psm:291 a skos:Concept ;
         "Blé de printemps"@fr,
         "Frumento primaverile"@it ;
     schema:version 0 ;
-    :cultivationType cultivationtype:1006 .
+    skos:exactMatch cultivationtype:1006 .
 
-psm:292 a skos:Concept ;
+psm:292 a eCH-0265:PlantProtectionCrop ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "75047A9C-12E2-4BAC-89D8-B14BC4C6B100" ;
     skos:broader psm:176 ;
@@ -2128,7 +2128,7 @@ psm:292 a skos:Concept ;
         "Palette in legno, legno da imballaggio, legno non lavorato"@it ;
     schema:version 0 .
 
-psm:293 a skos:Concept ;
+psm:293 a eCH-0265:PlantProtectionCrop ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "7F20F06C-C950-49B9-A78F-9E2F696B079E" ;
     schema:name "Nichtkulturland allg."@de,
@@ -2136,16 +2136,16 @@ psm:293 a skos:Concept ;
         "Superfici non coltive in generale"@it ;
     schema:version 0 .
 
-psm:294 a skos:Concept ;
+psm:294 a eCH-0265:PlantProtectionCrop ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "B4368C0E-9129-4C6C-A752-747D00073ADF" ;
     schema:name "Kerbelrübe"@de,
         "Cerfeuil tubéreux"@fr,
         "Cerfoglio bulboso"@it ;
     schema:version 0 ;
-    :cultivationType cultivationtype:294 .
+    skos:exactMatch cultivationtype:294 .
 
-psm:295 a skos:Concept ;
+psm:295 a eCH-0265:PlantProtectionCrop ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "710CC0C8-B138-4B31-9975-4DA04AF67792" ;
     skos:broader psm:67 ;
@@ -2154,18 +2154,18 @@ psm:295 a skos:Concept ;
         "marjolaine"@fr,
         "maggiorana"@it ;
     schema:version 0 ;
-    :cultivationType cultivationtype:295 .
+    skos:exactMatch cultivationtype:295 .
 
-psm:296 a skos:Concept ;
+psm:296 a eCH-0265:PlantProtectionCrop ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "3FEAB48F-0D66-4814-B3E3-C4BC0AB749B3" ;
     schema:name "Forstwirtschaft allg."@de,
         "sylviculture en général"@fr,
         "Selvicoltura in generale"@it ;
     schema:version 0 ;
-    :cultivationType cultivationtype:901 .
+    skos:exactMatch cultivationtype:901 .
 
-psm:297 a skos:Concept ;
+psm:297 a eCH-0265:PlantProtectionCrop ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "399AC89E-29BB-44AD-8B1F-0B2F327D5230" ;
     skos:broader psm:235 ;
@@ -2173,9 +2173,9 @@ psm:297 a skos:Concept ;
         "melons"@fr,
         "Meloni"@it ;
     schema:version 0 ;
-    :cultivationType cultivationtype:297 .
+    skos:exactMatch cultivationtype:297 .
 
-psm:298 a skos:Concept ;
+psm:298 a eCH-0265:PlantProtectionCrop ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "3A522DC8-E6D3-426D-AA99-65C148ED1A84" ;
     skos:broader psm:131 ;
@@ -2183,9 +2183,9 @@ psm:298 a skos:Concept ;
         "groseilles à maquereau"@fr,
         "Uva spina"@it ;
     schema:version 0 ;
-    :cultivationType cultivationtype:298 .
+    skos:exactMatch cultivationtype:298 .
 
-psm:299 a skos:Concept ;
+psm:299 a eCH-0265:PlantProtectionCrop ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "37059300-8031-4A64-B75C-7490288E32BA" ;
     skos:broader psm:67 ;
@@ -2194,9 +2194,9 @@ psm:299 a skos:Concept ;
         "menthe"@fr,
         "Menta"@it ;
     schema:version 0 ;
-    :cultivationType cultivationtype:299 .
+    skos:exactMatch cultivationtype:299 .
 
-psm:3 a skos:Concept ;
+psm:3 a eCH-0265:PlantProtectionCrop ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "A8BAC5BB-239F-4EE0-8CE2-F55590DA3FC0" ;
     skos:broader psm:47 ;
@@ -2204,9 +2204,9 @@ psm:3 a skos:Concept ;
         "haricots"@fr,
         "Fagioli"@it ;
     schema:version 0 ;
-    :cultivationType cultivationtype:476 .
+    skos:exactMatch cultivationtype:476 .
 
-psm:30 a skos:Concept ;
+psm:30 a eCH-0265:PlantProtectionCrop ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "2F7BD13A-BAA5-4708-83C6-17D44E57EA4D" ;
     skos:broader psm:16,
@@ -2215,9 +2215,9 @@ psm:30 a skos:Concept ;
         "marronnier d'Inde"@fr,
         "Ippocastano"@it ;
     schema:version 0 ;
-    :cultivationType cultivationtype:30 .
+    skos:exactMatch cultivationtype:30 .
 
-psm:300 a skos:Concept ;
+psm:300 a eCH-0265:PlantProtectionCrop ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "39D599AA-B93E-4AC2-970E-5A99A3113572" ;
     skos:broader psm:134 ;
@@ -2225,9 +2225,9 @@ psm:300 a skos:Concept ;
         "chénopodiacées"@fr,
         "Chenopodiacee"@it ;
     schema:version 0 ;
-    :cultivationType cultivationtype:300 .
+    skos:exactMatch cultivationtype:300 .
 
-psm:301 a skos:Concept ;
+psm:301 a eCH-0265:PlantProtectionCrop ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "19C5BA72-A0D5-4409-8D05-0A7C9D821E20" ;
     skos:broader psm:48 ;
@@ -2235,9 +2235,9 @@ psm:301 a skos:Concept ;
         "cresson de fontaine"@fr,
         "Crescione acquatico"@it ;
     schema:version 0 ;
-    :cultivationType cultivationtype:301 .
+    skos:exactMatch cultivationtype:301 .
 
-psm:302 a skos:Concept ;
+psm:302 a eCH-0265:PlantProtectionCrop ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "0DAB25B6-C3AA-430B-BF83-05FA66D889A4" ;
     skos:broader psm:67 ;
@@ -2245,9 +2245,9 @@ psm:302 a skos:Concept ;
         "coriandre"@fr,
         "Coriandolo"@it ;
     schema:version 0 ;
-    :cultivationType cultivationtype:302 .
+    skos:exactMatch cultivationtype:302 .
 
-psm:303 a skos:Concept ;
+psm:303 a eCH-0265:PlantProtectionCrop ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "048FDB44-710A-4801-849C-72F1A458DB82" ;
     skos:broader psm:73 ;
@@ -2255,9 +2255,9 @@ psm:303 a skos:Concept ;
         "Triticale"@fr,
         "Triticale"@it ;
     schema:version 0 ;
-    :cultivationType cultivationtype:505 .
+    skos:exactMatch cultivationtype:505 .
 
-psm:304 a skos:Concept ;
+psm:304 a eCH-0265:PlantProtectionCrop ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "07A12E5B-DB0B-4421-A215-E306768AC0BE" ;
     skos:broader psm:85 ;
@@ -2265,9 +2265,9 @@ psm:304 a skos:Concept ;
         "tomates, spécialités"@fr,
         "Varietà particolari di pomodoro"@it ;
     schema:version 0 ;
-    :cultivationType cultivationtype:304 .
+    skos:exactMatch cultivationtype:304 .
 
-psm:305 a skos:Concept ;
+psm:305 a eCH-0265:PlantProtectionCrop ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "086E34F3-82E5-4F92-9224-41C9F7529E70" ;
     skos:broader psm:27 ;
@@ -2275,9 +2275,9 @@ psm:305 a skos:Concept ;
         "betteraves à sucre et fourragère"@fr,
         "Barbabietole da foraggio e da zucchero"@it ;
     schema:version 0 ;
-    :cultivationType cultivationtype:305 .
+    skos:exactMatch cultivationtype:305 .
 
-psm:306 a skos:Concept ;
+psm:306 a eCH-0265:PlantProtectionCrop ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "21228D46-5B00-4CDD-9C71-48C0A0B21C78" ;
     skos:broader psm:327 ;
@@ -2286,9 +2286,9 @@ psm:306 a skos:Concept ;
         "persil à grosse racine"@fr,
         "Prezzemolo tuberoso"@it ;
     schema:version 0 ;
-    :cultivationType cultivationtype:306 .
+    skos:exactMatch cultivationtype:306 .
 
-psm:307 a skos:Concept ;
+psm:307 a eCH-0265:PlantProtectionCrop ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "2260B6A9-FC51-4F50-8E8F-D39BC6D5DA3A" ;
     skos:broader psm:47 ;
@@ -2297,9 +2297,9 @@ psm:307 a skos:Concept ;
         "pois chiche"@fr,
         "cece"@it ;
     schema:version 0 ;
-    :cultivationType cultivationtype:540 .
+    skos:exactMatch cultivationtype:540 .
 
-psm:308 a skos:Concept ;
+psm:308 a eCH-0265:PlantProtectionCrop ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "14B19DFD-331F-4C30-8724-8EDDF8E2D0D4" ;
     skos:broader psm:67 ;
@@ -2308,9 +2308,9 @@ psm:308 a skos:Concept ;
         "romarin"@fr,
         "Rosmarino"@it ;
     schema:version 0 ;
-    :cultivationType cultivationtype:308 .
+    skos:exactMatch cultivationtype:308 .
 
-psm:309 a skos:Concept ;
+psm:309 a eCH-0265:PlantProtectionCrop ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "0F5F1FEE-084C-4961-A76F-82F9B17B2635" ;
     skos:broader psm:285 ;
@@ -2318,9 +2318,9 @@ psm:309 a skos:Concept ;
         "fruits à pépins"@fr,
         "Frutta a granelli"@it ;
     schema:version 0 ;
-    :cultivationType cultivationtype:309 .
+    skos:exactMatch cultivationtype:309 .
 
-psm:31 a skos:Concept ;
+psm:31 a eCH-0265:PlantProtectionCrop ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "307A62EA-67D6-4D28-9CF7-F1218C9BE2CD" ;
     skos:broader psm:50 ;
@@ -2328,9 +2328,9 @@ psm:31 a skos:Concept ;
         "pêcher / nectarine"@fr,
         "Pesco/pesco noce"@it ;
     schema:version 0 ;
-    :cultivationType cultivationtype:31 .
+    skos:exactMatch cultivationtype:31 .
 
-psm:310 a skos:Concept ;
+psm:310 a eCH-0265:PlantProtectionCrop ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "10642620-4F7B-4E5E-8F38-D73914354014" ;
     skos:broader psm:329 ;
@@ -2338,9 +2338,9 @@ psm:310 a skos:Concept ;
         "fleurs coupées"@fr,
         "Fiori recisi"@it ;
     schema:version 0 ;
-    :cultivationType cultivationtype:310 .
+    skos:exactMatch cultivationtype:310 .
 
-psm:311 a skos:Concept ;
+psm:311 a eCH-0265:PlantProtectionCrop ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "1A1D511B-4ABD-44F2-8BB5-55192F5310D2" ;
     skos:broader psm:67 ;
@@ -2348,9 +2348,9 @@ psm:311 a skos:Concept ;
         "persil"@fr,
         "Prezzemolo"@it ;
     schema:version 0 ;
-    :cultivationType cultivationtype:311 .
+    skos:exactMatch cultivationtype:311 .
 
-psm:312 a skos:Concept ;
+psm:312 a eCH-0265:PlantProtectionCrop ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "1B9B39A9-D742-4E8D-A88E-280B65C4B913" ;
     skos:broader psm:329 ;
@@ -2358,9 +2358,9 @@ psm:312 a skos:Concept ;
         "tubercules de fleurs"@fr,
         "Radici tuberose floreali"@it ;
     schema:version 0 ;
-    :cultivationType cultivationtype:312 .
+    skos:exactMatch cultivationtype:312 .
 
-psm:314 a skos:Concept ;
+psm:314 a eCH-0265:PlantProtectionCrop ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "3447F4C9-2E90-437F-A240-0462AFEDF2B5" ;
     skos:broader psm:40 ;
@@ -2368,9 +2368,9 @@ psm:314 a skos:Concept ;
         "pâtisson"@fr,
         "Patisson"@it ;
     schema:version 0 ;
-    :cultivationType cultivationtype:314 .
+    skos:exactMatch cultivationtype:314 .
 
-psm:315 a skos:Concept ;
+psm:315 a eCH-0265:PlantProtectionCrop ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "34753E17-C34D-4D0B-88A0-91143DADABB2" ;
     skos:broader psm:145,
@@ -2379,9 +2379,9 @@ psm:315 a skos:Concept ;
         "chrysanthème"@fr,
         "Crisantemo"@it ;
     schema:version 0 ;
-    :cultivationType cultivationtype:315 .
+    skos:exactMatch cultivationtype:315 .
 
-psm:317 a skos:Concept ;
+psm:317 a eCH-0265:PlantProtectionCrop ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "17CE2494-D0C9-484B-A91E-15B7B04733FD" ;
     skos:broader psm:134 ;
@@ -2389,9 +2389,9 @@ psm:317 a skos:Concept ;
         "portulacacées (Portulacaceae)"@fr,
         "Portulacee (Portulacaceae)"@it ;
     schema:version 0 ;
-    :cultivationType cultivationtype:317 .
+    skos:exactMatch cultivationtype:317 .
 
-psm:318 a skos:Concept ;
+psm:318 a eCH-0265:PlantProtectionCrop ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "230F7417-5500-4124-B273-95AA1FFB940B" ;
     skos:broader psm:145 ;
@@ -2399,9 +2399,9 @@ psm:318 a skos:Concept ;
         "ranunculus"@fr,
         "ranuncolo"@it ;
     schema:version 0 ;
-    :cultivationType cultivationtype:318 .
+    skos:exactMatch cultivationtype:318 .
 
-psm:319 a skos:Concept ;
+psm:319 a eCH-0265:PlantProtectionCrop ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "01AFF6EB-9C8D-4D0D-B225-0BA07B59A72F" ;
     skos:broader psm:27 ;
@@ -2409,9 +2409,9 @@ psm:319 a skos:Concept ;
         "Houblon"@fr,
         "Luppolo"@it ;
     schema:version 0 ;
-    :cultivationType cultivationtype:708 .
+    skos:exactMatch cultivationtype:708 .
 
-psm:32 a skos:Concept ;
+psm:32 a eCH-0265:PlantProtectionCrop ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "30F9F737-0A18-43EC-AF88-F28940E567F1" ;
     skos:broader psm:235 ;
@@ -2419,9 +2419,9 @@ psm:32 a skos:Concept ;
         "concombre"@fr,
         "Cetrioli"@it ;
     schema:version 0 ;
-    :cultivationType cultivationtype:32 .
+    skos:exactMatch cultivationtype:32 .
 
-psm:320 a skos:Concept ;
+psm:320 a eCH-0265:PlantProtectionCrop ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "E786D43D-444B-49D6-B0D0-294265F91403" ;
     skos:broader psm:95 ;
@@ -2429,9 +2429,9 @@ psm:320 a skos:Concept ;
         "salades (Asteraceae)"@fr,
         "Insalate (Asteracee)"@it ;
     schema:version 0 ;
-    :cultivationType cultivationtype:320 .
+    skos:exactMatch cultivationtype:320 .
 
-psm:321 a skos:Concept ;
+psm:321 a eCH-0265:PlantProtectionCrop ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "AB0798FE-64B8-49A2-8E75-14467EB7AB58" ;
     skos:broader psm:300 ;
@@ -2439,9 +2439,9 @@ psm:321 a skos:Concept ;
         "bette"@fr,
         "Bietola"@it ;
     schema:version 0 ;
-    :cultivationType cultivationtype:321 .
+    skos:exactMatch cultivationtype:321 .
 
-psm:322 a skos:Concept ;
+psm:322 a eCH-0265:PlantProtectionCrop ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "AE465EA2-A950-4661-B631-D5A267B2F076" ;
     skos:broader psm:293 ;
@@ -2449,9 +2449,9 @@ psm:322 a skos:Concept ;
         "friche"@fr,
         "Terreno incolto"@it ;
     schema:version 0 ;
-    :cultivationType cultivationtype:322 .
+    skos:exactMatch cultivationtype:322 .
 
-psm:323 a skos:Concept ;
+psm:323 a eCH-0265:PlantProtectionCrop ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "8DFDE2D1-C004-4C25-BF54-21CF7C815232" ;
     skos:broader psm:337 ;
@@ -2459,9 +2459,9 @@ psm:323 a skos:Concept ;
         "poireau"@fr,
         "Porro"@it ;
     schema:version 0 ;
-    :cultivationType cultivationtype:323 .
+    skos:exactMatch cultivationtype:323 .
 
-psm:324 a skos:Concept ;
+psm:324 a eCH-0265:PlantProtectionCrop ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "4A22B9D3-747C-4323-A852-1CB1F6ADB680" ;
     skos:broader psm:25 ;
@@ -2470,9 +2470,9 @@ psm:324 a skos:Concept ;
         "choux (développement de l'inflorescence)"@fr,
         "Cavoli a infiorescenza"@it ;
     schema:version 0 ;
-    :cultivationType cultivationtype:324 .
+    skos:exactMatch cultivationtype:324 .
 
-psm:325 a skos:Concept ;
+psm:325 a eCH-0265:PlantProtectionCrop ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "394AE687-29A0-4BA6-B0B9-D7DFB0C08FCE" ;
     skos:broader psm:20 ;
@@ -2480,9 +2480,9 @@ psm:325 a skos:Concept ;
         "pakchoi"@fr,
         "Pak-Choi"@it ;
     schema:version 0 ;
-    :cultivationType cultivationtype:325 .
+    skos:exactMatch cultivationtype:325 .
 
-psm:326 a skos:Concept ;
+psm:326 a eCH-0265:PlantProtectionCrop ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "43F8091A-A333-40F5-8845-FF83398B9AC3" ;
     skos:broader psm:13 ;
@@ -2490,9 +2490,9 @@ psm:326 a skos:Concept ;
         "espèces de Rubus"@fr,
         "Specie di rubus"@it ;
     schema:version 0 ;
-    :cultivationType cultivationtype:326 .
+    skos:exactMatch cultivationtype:326 .
 
-psm:327 a skos:Concept ;
+psm:327 a eCH-0265:PlantProtectionCrop ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "5276BCA7-CEA5-4B6D-90E3-52F3A0532490" ;
     skos:broader psm:134 ;
@@ -2500,9 +2500,9 @@ psm:327 a skos:Concept ;
         "ombellifères (Apiaceae)"@fr,
         "Ombrellifere (Apiacee)"@it ;
     schema:version 0 ;
-    :cultivationType cultivationtype:327 .
+    skos:exactMatch cultivationtype:327 .
 
-psm:328 a skos:Concept ;
+psm:328 a eCH-0265:PlantProtectionCrop ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "BC3BA289-5090-487A-A2FE-3B0A0FDE4A1B" ;
     skos:broader psm:103 ;
@@ -2510,18 +2510,18 @@ psm:328 a skos:Concept ;
         "laitue à tondre"@fr,
         "Lattuga da taglio"@it ;
     schema:version 0 ;
-    :cultivationType cultivationtype:328 .
+    skos:exactMatch cultivationtype:328 .
 
-psm:329 a skos:Concept ;
+psm:329 a eCH-0265:PlantProtectionCrop ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "890D8A5E-BF86-4B2D-9B98-45B779D80F7F" ;
     schema:name "Zierpflanzen allg."@de,
         "culture ornementale en général"@fr,
         "Coltivazione piante ornam. in generale"@it ;
     schema:version 0 ;
-    :cultivationType cultivationtype:329 .
+    skos:exactMatch cultivationtype:329 .
 
-psm:33 a skos:Concept ;
+psm:33 a eCH-0265:PlantProtectionCrop ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "6C44D265-956D-457C-B395-71C81B327416" ;
     skos:broader psm:83 ;
@@ -2530,9 +2530,9 @@ psm:33 a skos:Concept ;
         "valériane"@fr,
         "Valeriana"@it ;
     schema:version 0 ;
-    :cultivationType cultivationtype:33 .
+    skos:exactMatch cultivationtype:33 .
 
-psm:330 a skos:Concept ;
+psm:330 a eCH-0265:PlantProtectionCrop ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "8512D352-73CC-4535-9469-965AAF1FD0B1" ;
     skos:broader psm:67 ;
@@ -2540,9 +2540,9 @@ psm:330 a skos:Concept ;
         "fenouil aromatique"@fr,
         "Finocchio aromatico"@it ;
     schema:version 0 ;
-    :cultivationType cultivationtype:330 .
+    skos:exactMatch cultivationtype:330 .
 
-psm:331 a skos:Concept ;
+psm:331 a eCH-0265:PlantProtectionCrop ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "8AFA14F8-CCE3-4012-BD12-9D690EBAE1AD" ;
     skos:broader psm:324 ;
@@ -2550,9 +2550,9 @@ psm:331 a skos:Concept ;
         "romanesco"@fr,
         "Romanesco"@it ;
     schema:version 0 ;
-    :cultivationType cultivationtype:331 .
+    skos:exactMatch cultivationtype:331 .
 
-psm:332 a skos:Concept ;
+psm:332 a eCH-0265:PlantProtectionCrop ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "3BEFA6F7-0D34-4E29-8207-85E9D5783ECC" ;
     skos:broader psm:329 ;
@@ -2560,9 +2560,9 @@ psm:332 a skos:Concept ;
         "pépinière"@fr,
         "Vivaio"@it ;
     schema:version 0 ;
-    :cultivationType cultivationtype:1065 .
+    skos:exactMatch cultivationtype:1065 .
 
-psm:333 a skos:Concept ;
+psm:333 a eCH-0265:PlantProtectionCrop ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "19CC4F57-CB08-4970-BEDB-3DB2B2CB1034" ;
     skos:broader psm:296 ;
@@ -2570,9 +2570,9 @@ psm:333 a skos:Concept ;
         "forêt"@fr,
         "Bosco"@it ;
     schema:version 0 ;
-    :cultivationType cultivationtype:901 .
+    skos:exactMatch cultivationtype:901 .
 
-psm:334 a skos:Concept ;
+psm:334 a eCH-0265:PlantProtectionCrop ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "0E2847EB-CEFD-4640-82EB-F09F3F1A5E13" ;
     skos:broader psm:67 ;
@@ -2581,9 +2581,9 @@ psm:334 a skos:Concept ;
         "origan"@fr,
         "origano"@it ;
     schema:version 0 ;
-    :cultivationType cultivationtype:334 .
+    skos:exactMatch cultivationtype:334 .
 
-psm:335 a skos:Concept ;
+psm:335 a eCH-0265:PlantProtectionCrop ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "096444CD-43E6-41F9-8914-2E7DADA4C801" ;
     skos:broader psm:175 ;
@@ -2591,9 +2591,9 @@ psm:335 a skos:Concept ;
         "poivron"@fr,
         "Peperone"@it ;
     schema:version 0 ;
-    :cultivationType cultivationtype:335 .
+    skos:exactMatch cultivationtype:335 .
 
-psm:336 a skos:Concept ;
+psm:336 a eCH-0265:PlantProtectionCrop ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "17B69B05-E650-4A6F-815A-D6DA55A92CDB" ;
     skos:broader psm:176 ;
@@ -2602,7 +2602,7 @@ psm:336 a skos:Concept ;
         "Aziende produttrici di tabacco"@it ;
     schema:version 0 .
 
-psm:337 a skos:Concept ;
+psm:337 a eCH-0265:PlantProtectionCrop ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "0FEBE55E-236F-483E-AE05-88A35B181A55" ;
     skos:broader psm:134 ;
@@ -2611,9 +2611,9 @@ psm:337 a skos:Concept ;
         "Amaryllidaceae"@en,
         "Amaryllidaceae"@it ;
     schema:version 0 ;
-    :cultivationType cultivationtype:188 .
+    skos:exactMatch cultivationtype:188 .
 
-psm:338 a skos:Concept ;
+psm:338 a eCH-0265:PlantProtectionCrop ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "C27B142E-1F10-46E0-A1CA-2ACCDA029027" ;
     skos:broader psm:27 ;
@@ -2622,9 +2622,9 @@ psm:338 a skos:Concept ;
         "Common millet"@en,
         "Miglio"@it ;
     schema:version 0 ;
-    :cultivationType cultivationtype:542 .
+    skos:exactMatch cultivationtype:542 .
 
-psm:339 a skos:Concept ;
+psm:339 a eCH-0265:PlantProtectionCrop ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "855980B6-D3CA-46B5-86C5-12E9847344B5" ;
     skos:broader psm:134 ;
@@ -2633,9 +2633,9 @@ psm:339 a skos:Concept ;
         "Convolvulaceae"@en,
         "Convolvulaceae"@it ;
     schema:version 0 ;
-    :cultivationType cultivationtype:339 .
+    skos:exactMatch cultivationtype:339 .
 
-psm:34 a skos:Concept ;
+psm:34 a eCH-0265:PlantProtectionCrop ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "2E38C972-4160-4D2B-8ED2-3B48FC781EF0" ;
     skos:broader psm:108,
@@ -2644,9 +2644,9 @@ psm:34 a skos:Concept ;
         "bégonia"@fr,
         "Begonia"@it ;
     schema:version 0 ;
-    :cultivationType cultivationtype:34 .
+    skos:exactMatch cultivationtype:34 .
 
-psm:35 a skos:Concept ;
+psm:35 a eCH-0265:PlantProtectionCrop ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "31A0539F-1D4C-4BCF-876F-215CEBC4C864" ;
     skos:broader psm:134 ;
@@ -2654,9 +2654,9 @@ psm:35 a skos:Concept ;
         "herbes aromatiques et médicinales"@fr,
         "Erbe aromatiche e medicinali"@it ;
     schema:version 0 ;
-    :cultivationType cultivationtype:35 .
+    skos:exactMatch cultivationtype:35 .
 
-psm:36 a skos:Concept ;
+psm:36 a eCH-0265:PlantProtectionCrop ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "302E5676-26A3-41EB-980F-2B6BDE117D3A" ;
     skos:broader psm:145 ;
@@ -2664,9 +2664,9 @@ psm:36 a skos:Concept ;
         "courge d'ornement"@fr,
         "Zucca ornamentale"@it ;
     schema:version 0 ;
-    :cultivationType cultivationtype:36 .
+    skos:exactMatch cultivationtype:36 .
 
-psm:37 a skos:Concept ;
+psm:37 a eCH-0265:PlantProtectionCrop ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "0A88EFE2-B85E-4BF7-9C38-AEE8CB2BFE42" ;
     skos:broader psm:67 ;
@@ -2674,9 +2674,9 @@ psm:37 a skos:Concept ;
         "Hysope"@fr,
         "Issopo"@it ;
     schema:version 0 ;
-    :cultivationType cultivationtype:37 .
+    skos:exactMatch cultivationtype:37 .
 
-psm:38 a skos:Concept ;
+psm:38 a eCH-0265:PlantProtectionCrop ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "13BB4B9E-6CEE-4729-AE29-8A4380EB33B0" ;
     skos:broader psm:296 ;
@@ -2685,7 +2685,7 @@ psm:38 a skos:Concept ;
         "Tronchi abbattuti nella foresta e presso piazzali di deposito"@it ;
     schema:version 0 .
 
-psm:39 a skos:Concept ;
+psm:39 a eCH-0265:PlantProtectionCrop ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "037E11B2-128A-4194-9A5B-A3E980AE4113" ;
     skos:broader psm:337 ;
@@ -2693,9 +2693,9 @@ psm:39 a skos:Concept ;
         "ail"@fr,
         "Aglio"@it ;
     schema:version 0 ;
-    :cultivationType cultivationtype:39 .
+    skos:exactMatch cultivationtype:39 .
 
-psm:4 a skos:Concept ;
+psm:4 a eCH-0265:PlantProtectionCrop ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "B85EF4C2-C22E-4A5A-A431-98DC8F621D92" ;
     skos:broader psm:329 ;
@@ -2703,9 +2703,9 @@ psm:4 a skos:Concept ;
         "bulbes des fleurs"@fr,
         "Bulbi di fiori"@it ;
     schema:version 0 ;
-    :cultivationType cultivationtype:329 .
+    skos:exactMatch cultivationtype:329 .
 
-psm:40 a skos:Concept ;
+psm:40 a eCH-0265:PlantProtectionCrop ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "FE69D926-4BE1-4C67-840E-30C3D299442E" ;
     skos:broader psm:235 ;
@@ -2713,9 +2713,9 @@ psm:40 a skos:Concept ;
         "courges à peau comestible"@fr,
         "Zucche con buccia commestibile"@it ;
     schema:version 0 ;
-    :cultivationType cultivationtype:40 .
+    skos:exactMatch cultivationtype:40 .
 
-psm:41 a skos:Concept ;
+psm:41 a eCH-0265:PlantProtectionCrop ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "9CBD7DB6-38F5-4C41-952D-72F253C88809" ;
     skos:broader psm:309 ;
@@ -2723,9 +2723,9 @@ psm:41 a skos:Concept ;
         "poirier / nashi"@fr,
         "Pero / Nashi"@it ;
     schema:version 2 ;
-    :cultivationType cultivationtype:41 .
+    skos:exactMatch cultivationtype:41 .
 
-psm:42 a skos:Concept ;
+psm:42 a eCH-0265:PlantProtectionCrop ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "EF29B430-95C5-45D4-A812-DCCE046E1B8E" ;
     skos:broader psm:339 ;
@@ -2734,9 +2734,9 @@ psm:42 a skos:Concept ;
         "Patate douce"@fr,
         "Patata dolce"@it ;
     schema:version 2 ;
-    :cultivationType cultivationtype:1137 .
+    skos:exactMatch cultivationtype:1137 .
 
-psm:43 a skos:Concept ;
+psm:43 a eCH-0265:PlantProtectionCrop ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "FFDDDA7D-B340-473C-94F4-841272B602FA" ;
     skos:broader psm:131 ;
@@ -2744,17 +2744,17 @@ psm:43 a skos:Concept ;
         "josta"@fr,
         "Josta"@it ;
     schema:version 0 ;
-    :cultivationType cultivationtype:43 .
+    skos:exactMatch cultivationtype:43 .
 
-psm:44 a skos:Concept ;
+psm:44 a eCH-0265:PlantProtectionCrop ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "FD7AB34C-F432-445D-9440-F44FDAB8422C" ;
     schema:name "allg. Wiesen und Weiden"@de,
         "domaine app. prairies et paturages"@fr ;
     schema:version 0 ;
-    :cultivationType cultivationtype:116 .
+    skos:exactMatch cultivationtype:116 .
 
-psm:45 a skos:Concept ;
+psm:45 a eCH-0265:PlantProtectionCrop ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "D95CD842-A5BC-4DAA-935D-F009DA7BA748" ;
     skos:broader psm:118 ;
@@ -2762,9 +2762,9 @@ psm:45 a skos:Concept ;
         "épicéa"@fr,
         "Abete rosso"@it ;
     schema:version 0 ;
-    :cultivationType cultivationtype:45 .
+    skos:exactMatch cultivationtype:45 .
 
-psm:46 a skos:Concept ;
+psm:46 a eCH-0265:PlantProtectionCrop ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "DAF00AE7-5272-4E07-9A66-E9F9BD8FEE43" ;
     skos:broader psm:145,
@@ -2773,9 +2773,9 @@ psm:46 a skos:Concept ;
         "chardon bleu"@fr,
         "Cardo azzurro"@it ;
     schema:version 0 ;
-    :cultivationType cultivationtype:46 .
+    skos:exactMatch cultivationtype:46 .
 
-psm:47 a skos:Concept ;
+psm:47 a eCH-0265:PlantProtectionCrop ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "DB4E4C8B-016C-4C31-8DC5-587A9F1F8FFD" ;
     skos:broader psm:134 ;
@@ -2783,9 +2783,9 @@ psm:47 a skos:Concept ;
         "fabacées (légumineuses)"@fr,
         "Fabacee (Leguminose)"@it ;
     schema:version 0 ;
-    :cultivationType cultivationtype:47 .
+    skos:exactMatch cultivationtype:47 .
 
-psm:48 a skos:Concept ;
+psm:48 a eCH-0265:PlantProtectionCrop ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "E55D75D3-B805-4BFD-B2B0-D02368BD32AC" ;
     skos:broader psm:134 ;
@@ -2793,9 +2793,9 @@ psm:48 a skos:Concept ;
         "crucifères (Brassicaceae)"@fr,
         "Crocifere (Brassicacee)"@it ;
     schema:version 0 ;
-    :cultivationType cultivationtype:48 .
+    skos:exactMatch cultivationtype:48 .
 
-psm:49 a skos:Concept ;
+psm:49 a eCH-0265:PlantProtectionCrop ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "CC08E1E6-655D-4FAA-B0E8-AD968A68A536" ;
     skos:broader psm:176 ;
@@ -2804,7 +2804,7 @@ psm:49 a skos:Concept ;
         "Raccolto stoccato"@it ;
     schema:version 0 .
 
-psm:5 a skos:Concept ;
+psm:5 a eCH-0265:PlantProtectionCrop ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "B542EC7D-B423-43B4-9010-82A6889BB3B4" ;
     skos:broader psm:305 ;
@@ -2812,9 +2812,9 @@ psm:5 a skos:Concept ;
         "Betterave à sucre"@fr,
         "Barbabietola da zucchero"@it ;
     schema:version 0 ;
-    :cultivationType cultivationtype:522 .
+    skos:exactMatch cultivationtype:522 .
 
-psm:50 a skos:Concept ;
+psm:50 a eCH-0265:PlantProtectionCrop ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "01D7815D-B309-4ECF-B172-DA38B80C8732" ;
     skos:broader psm:285 ;
@@ -2822,9 +2822,9 @@ psm:50 a skos:Concept ;
         "fruits à noyaux"@fr,
         "Frutta a nocciolo"@it ;
     schema:version 0 ;
-    :cultivationType cultivationtype:704 .
+    skos:exactMatch cultivationtype:704 .
 
-psm:51 a skos:Concept ;
+psm:51 a eCH-0265:PlantProtectionCrop ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "C96EE4F4-12EA-49DE-9BEF-21EA73B52760" ;
     skos:broader psm:26 ;
@@ -2832,9 +2832,9 @@ psm:51 a skos:Concept ;
         "asperge"@fr,
         "Asparagi"@it ;
     schema:version 0 ;
-    :cultivationType cultivationtype:710 .
+    skos:exactMatch cultivationtype:710 .
 
-psm:52 a skos:Concept ;
+psm:52 a eCH-0265:PlantProtectionCrop ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "CEC488FC-D9AD-4515-A28E-DEEC6C807926" ;
     skos:broader psm:210,
@@ -2843,9 +2843,9 @@ psm:52 a skos:Concept ;
         "Triticale d'automne"@fr,
         "Triticale autunnale"@it ;
     schema:version 0 ;
-    :cultivationType cultivationtype:1017 .
+    skos:exactMatch cultivationtype:1017 .
 
-psm:53 a skos:Concept ;
+psm:53 a eCH-0265:PlantProtectionCrop ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "BA2DECCF-5987-4987-B56E-C5EC6E5D19C0" ;
     skos:broader psm:48 ;
@@ -2853,9 +2853,9 @@ psm:53 a skos:Concept ;
         "Barbarée du printemps"@fr,
         "Erba di Santa Barbara vernale"@it ;
     schema:version 0 ;
-    :cultivationType cultivationtype:53 .
+    skos:exactMatch cultivationtype:53 .
 
-psm:54 a skos:Concept ;
+psm:54 a eCH-0265:PlantProtectionCrop ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "C3E12AAE-119E-47CF-9B8A-6F1CA657CF6B" ;
     skos:broader psm:293 ;
@@ -2864,7 +2864,7 @@ psm:54 a skos:Concept ;
         "Lungo le strade nazionali e cantonali (conformemente ORRPChim)"@it ;
     schema:version 0 .
 
-psm:55 a skos:Concept ;
+psm:55 a eCH-0265:PlantProtectionCrop ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "C3F940E4-D07C-4F4D-851C-D1024F8A6A62" ;
     skos:broader psm:134 ;
@@ -2872,9 +2872,9 @@ psm:55 a skos:Concept ;
         "herbes"@fr,
         "Erbe"@it ;
     schema:version 0 ;
-    :cultivationType cultivationtype:55 .
+    skos:exactMatch cultivationtype:55 .
 
-psm:56 a skos:Concept ;
+psm:56 a eCH-0265:PlantProtectionCrop ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "BFD1B79E-ABD1-4A44-8E61-891FF97960A1" ;
     skos:broader psm:247 ;
@@ -2882,9 +2882,9 @@ psm:56 a skos:Concept ;
         "rave de Brassica rapa"@fr,
         "Rapa di Brassica rapa"@it ;
     schema:version 0 ;
-    :cultivationType cultivationtype:56 .
+    skos:exactMatch cultivationtype:56 .
 
-psm:57 a skos:Concept ;
+psm:57 a eCH-0265:PlantProtectionCrop ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "BF77A7F8-C4C5-43AF-9BCD-B7F904506E7A" ;
     skos:broader psm:134 ;
@@ -2892,9 +2892,9 @@ psm:57 a skos:Concept ;
         "poacées (Gramineae)"@fr,
         "Poacee (Graminaceae)"@it ;
     schema:version 0 ;
-    :cultivationType cultivationtype:57 .
+    skos:exactMatch cultivationtype:57 .
 
-psm:58 a skos:Concept ;
+psm:58 a eCH-0265:PlantProtectionCrop ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "C37A7EE2-D06B-4204-809A-F50A934F79E3" ;
     skos:broader psm:20 ;
@@ -2902,9 +2902,9 @@ psm:58 a skos:Concept ;
         "chou de Chine"@fr,
         "Cavolo cinese"@it ;
     schema:version 0 ;
-    :cultivationType cultivationtype:58 .
+    skos:exactMatch cultivationtype:58 .
 
-psm:59 a skos:Concept ;
+psm:59 a eCH-0265:PlantProtectionCrop ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "C026CB2D-39B4-4FDF-AD04-FBA22AD2B4F1" ;
     skos:broader psm:163,
@@ -2913,9 +2913,9 @@ psm:59 a skos:Concept ;
         "orge de printemps"@fr,
         "Orzo primaverile"@it ;
     schema:version 0 ;
-    :cultivationType cultivationtype:501 .
+    skos:exactMatch cultivationtype:501 .
 
-psm:6 a skos:Concept ;
+psm:6 a eCH-0265:PlantProtectionCrop ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "A21391C3-A1A3-4472-8AA1-56449FB56B36" ;
     skos:broader psm:16,
@@ -2924,9 +2924,9 @@ psm:6 a skos:Concept ;
         "laurier-cerise"@fr,
         "Lauro ceraso"@it ;
     schema:version 0 ;
-    :cultivationType cultivationtype:404 .
+    skos:exactMatch cultivationtype:404 .
 
-psm:60 a skos:Concept ;
+psm:60 a eCH-0265:PlantProtectionCrop ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "C69EBD93-43E5-457F-9CBE-EE1C04791274" ;
     skos:broader psm:1 ;
@@ -2934,9 +2934,9 @@ psm:60 a skos:Concept ;
         "fleurs estivales"@fr,
         "Fiori estivi"@it ;
     schema:version 0 ;
-    :cultivationType cultivationtype:60 .
+    skos:exactMatch cultivationtype:60 .
 
-psm:63 a skos:Concept ;
+psm:63 a eCH-0265:PlantProtectionCrop ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "DF455946-B2AB-45D2-9780-4A45A98D72D6" ;
     skos:broader psm:16,
@@ -2945,9 +2945,9 @@ psm:63 a skos:Concept ;
         "buis (Buxus)"@fr,
         "Bosso (Buxus)"@it ;
     schema:version 0 ;
-    :cultivationType cultivationtype:63 .
+    skos:exactMatch cultivationtype:63 .
 
-psm:64 a skos:Concept ;
+psm:64 a eCH-0265:PlantProtectionCrop ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "E107FECF-24B6-43D7-B3E6-05C5C239EFBB" ;
     skos:broader psm:27 ;
@@ -2955,9 +2955,9 @@ psm:64 a skos:Concept ;
         "techniques culturales"@fr,
         "Tecnica di coltivazione"@it ;
     schema:version 0 ;
-    :cultivationType cultivationtype:64 .
+    skos:exactMatch cultivationtype:64 .
 
-psm:65 a skos:Concept ;
+psm:65 a eCH-0265:PlantProtectionCrop ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "E8B23A5E-B65E-4DC8-977D-BD84F143A442" ;
     skos:broader psm:108,
@@ -2966,9 +2966,9 @@ psm:65 a skos:Concept ;
         "primevères"@fr,
         "Primule"@it ;
     schema:version 0 ;
-    :cultivationType cultivationtype:65 .
+    skos:exactMatch cultivationtype:65 .
 
-psm:66 a skos:Concept ;
+psm:66 a eCH-0265:PlantProtectionCrop ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "EACDD832-D1CD-479C-973F-CD0DB6A9FBC3" ;
     skos:broader psm:48 ;
@@ -2976,9 +2976,9 @@ psm:66 a skos:Concept ;
         "raifort"@fr,
         "Rafano rusticana / Ramolaccio"@it ;
     schema:version 0 ;
-    :cultivationType cultivationtype:66 .
+    skos:exactMatch cultivationtype:66 .
 
-psm:67 a skos:Concept ;
+psm:67 a eCH-0265:PlantProtectionCrop ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "D541F2F5-8BA6-4E26-AA66-9CF469648AFF" ;
     skos:broader psm:134 ;
@@ -2986,9 +2986,9 @@ psm:67 a skos:Concept ;
         "fines herbes"@fr,
         "Erbette da cucina"@it ;
     schema:version 0 ;
-    :cultivationType cultivationtype:67 .
+    skos:exactMatch cultivationtype:67 .
 
-psm:68 a skos:Concept ;
+psm:68 a eCH-0265:PlantProtectionCrop ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "D3CD23DC-4C49-4EE5-8BF8-6B074E74352A" ;
     skos:broader psm:27 ;
@@ -2996,9 +2996,9 @@ psm:68 a skos:Concept ;
         "Luzerne"@fr,
         "Erba medica"@it ;
     schema:version 0 ;
-    :cultivationType cultivationtype:68 .
+    skos:exactMatch cultivationtype:68 .
 
-psm:69 a skos:Concept ;
+psm:69 a eCH-0265:PlantProtectionCrop ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "DDAE7B47-8561-44B4-BA3A-F9855E30BB54" ;
     skos:broader psm:13 ;
@@ -3006,9 +3006,9 @@ psm:69 a skos:Concept ;
         "mini-Kiwi (Kiwaï)"@fr,
         "Mini-Kiwi"@it ;
     schema:version 0 ;
-    :cultivationType cultivationtype:69 .
+    skos:exactMatch cultivationtype:69 .
 
-psm:7 a skos:Concept ;
+psm:7 a eCH-0265:PlantProtectionCrop ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "A0012475-8478-4CA9-A18A-DC1CB96D788B" ;
     skos:broader psm:329 ;
@@ -3016,9 +3016,9 @@ psm:7 a skos:Concept ;
         "bulbes ornementaux"@fr,
         "Bulbi ornamentali"@it ;
     schema:version 0 ;
-    :cultivationType cultivationtype:409 .
+    skos:exactMatch cultivationtype:409 .
 
-psm:70 a skos:Concept ;
+psm:70 a eCH-0265:PlantProtectionCrop ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "D3D49C53-8EBC-4DAC-9C4C-B988AA162F7D" ;
     skos:broader psm:210,
@@ -3027,9 +3027,9 @@ psm:70 a skos:Concept ;
         "Épeautre"@fr,
         "Spelta"@it ;
     schema:version 0 ;
-    :cultivationType cultivationtype:516 .
+    skos:exactMatch cultivationtype:516 .
 
-psm:71 a skos:Concept ;
+psm:71 a eCH-0265:PlantProtectionCrop ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "D3D90BE6-0924-4844-98FB-52C4D7F21A38" ;
     skos:broader psm:239 ;
@@ -3037,9 +3037,9 @@ psm:71 a skos:Concept ;
         "Blé tendre"@fr,
         "Grano tenero"@it ;
     schema:version 0 ;
-    :cultivationType cultivationtype:491 .
+    skos:exactMatch cultivationtype:491 .
 
-psm:72 a skos:Concept ;
+psm:72 a eCH-0265:PlantProtectionCrop ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "4D46051A-2DE7-42B1-8FB9-5DC0B007A26E" ;
     skos:broader psm:329 ;
@@ -3047,9 +3047,9 @@ psm:72 a skos:Concept ;
         "arbres et arbustes (hors fôret)"@fr,
         "Alberi e arbusti (al di fuori della foresta)"@it ;
     schema:version 0 ;
-    :cultivationType cultivationtype:72 .
+    skos:exactMatch cultivationtype:72 .
 
-psm:73 a skos:Concept ;
+psm:73 a eCH-0265:PlantProtectionCrop ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "8B5A3E2B-2534-4FC0-84C5-685915165A77" ;
     skos:broader psm:27 ;
@@ -3057,9 +3057,9 @@ psm:73 a skos:Concept ;
         "Céréales"@fr,
         "Cereali"@it ;
     schema:version 0 ;
-    :cultivationType cultivationtype:1033 .
+    skos:exactMatch cultivationtype:1033 .
 
-psm:75 a skos:Concept ;
+psm:75 a eCH-0265:PlantProtectionCrop ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "8A00630A-32FC-4B5A-8171-EC0F41D39F48" ;
     skos:broader psm:317 ;
@@ -3067,9 +3067,9 @@ psm:75 a skos:Concept ;
         "pourpier"@fr,
         "Portulaca"@it ;
     schema:version 0 ;
-    :cultivationType cultivationtype:75 .
+    skos:exactMatch cultivationtype:75 .
 
-psm:76 a skos:Concept ;
+psm:76 a eCH-0265:PlantProtectionCrop ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "915B2192-1651-4B8A-B2D8-C162A5D27211" ;
     skos:broader psm:321 ;
@@ -3078,18 +3078,18 @@ psm:76 a skos:Concept ;
         "bette à côte"@fr,
         "Costa"@it ;
     schema:version 0 ;
-    :cultivationType cultivationtype:76 .
+    skos:exactMatch cultivationtype:76 .
 
-psm:77 a skos:Concept ;
+psm:77 a eCH-0265:PlantProtectionCrop ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "C8AB8319-939E-4CF3-B78E-549A85DEF756" ;
     schema:name "Brache"@de,
         "jachère"@fr,
         "Maggese"@it ;
     schema:version 0 ;
-    :cultivationType cultivationtype:77 .
+    skos:exactMatch cultivationtype:77 .
 
-psm:78 a skos:Concept ;
+psm:78 a eCH-0265:PlantProtectionCrop ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "C9DB1105-33C7-44E8-92BA-9BBE5BA2BB3F" ;
     skos:broader psm:128,
@@ -3098,9 +3098,9 @@ psm:78 a skos:Concept ;
         "Avoine de printemps"@fr,
         "Avena primaverile"@it ;
     schema:version 0 ;
-    :cultivationType cultivationtype:1011 .
+    skos:exactMatch cultivationtype:1011 .
 
-psm:79 a skos:Concept ;
+psm:79 a eCH-0265:PlantProtectionCrop ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "CDF1E5BC-0740-4214-8912-870CC2BB37F4" ;
     skos:broader psm:27 ;
@@ -3108,9 +3108,9 @@ psm:79 a skos:Concept ;
         "Graminées pour la production de semences"@fr,
         "Graminacee per la produzione di sementi"@it ;
     schema:version 0 ;
-    :cultivationType cultivationtype:79 .
+    skos:exactMatch cultivationtype:79 .
 
-psm:8 a skos:Concept ;
+psm:8 a eCH-0265:PlantProtectionCrop ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "A2D2B4EC-D7D6-4A30-BEE9-0A8F907A874A" ;
     skos:broader psm:67 ;
@@ -3119,9 +3119,9 @@ psm:8 a skos:Concept ;
         "Cerfeuil musqué"@fr,
         "finocchiella"@it ;
     schema:version 0 ;
-    :cultivationType cultivationtype:412 .
+    skos:exactMatch cultivationtype:412 .
 
-psm:80 a skos:Concept ;
+psm:80 a eCH-0265:PlantProtectionCrop ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "D18572C7-A270-4AA7-B766-48D62C5E9AB7" ;
     skos:broader psm:13 ;
@@ -3129,9 +3129,9 @@ psm:80 a skos:Concept ;
         "mûrier noir"@fr,
         "Moro nero"@it ;
     schema:version 0 ;
-    :cultivationType cultivationtype:80 .
+    skos:exactMatch cultivationtype:80 .
 
-psm:81 a skos:Concept ;
+psm:81 a eCH-0265:PlantProtectionCrop ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "CA58ABAE-E494-4608-BE51-5FF49D853A03" ;
     skos:broader psm:25 ;
@@ -3139,9 +3139,9 @@ psm:81 a skos:Concept ;
         "choux pommés"@fr,
         "Cavoli a testa"@it ;
     schema:version 0 ;
-    :cultivationType cultivationtype:81 .
+    skos:exactMatch cultivationtype:81 .
 
-psm:82 a skos:Concept ;
+psm:82 a eCH-0265:PlantProtectionCrop ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "EA82A16B-4A8C-4917-A08F-C2AD3B266640" ;
     skos:broader psm:27 ;
@@ -3150,18 +3150,18 @@ psm:82 a skos:Concept ;
         "Chanvre"@fr,
         "Canapa"@it ;
     schema:version 0 ;
-    :cultivationType cultivationtype:535 .
+    skos:exactMatch cultivationtype:535 .
 
-psm:83 a skos:Concept ;
+psm:83 a eCH-0265:PlantProtectionCrop ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "79A5CFAD-0AB3-41EB-8C69-E260DCD2DEE6" ;
     schema:name "Medizinalkräuter"@de,
         "plantes médicinales"@fr,
         "erbe medicinali"@it ;
     schema:version 0 ;
-    :cultivationType cultivationtype:83 .
+    skos:exactMatch cultivationtype:83 .
 
-psm:84 a skos:Concept ;
+psm:84 a eCH-0265:PlantProtectionCrop ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "EB820B26-DE4E-4AF4-8BA3-46844F045306" ;
     skos:broader psm:115 ;
@@ -3169,9 +3169,9 @@ psm:84 a skos:Concept ;
         "rutabaga"@fr,
         "Cavolo navone"@it ;
     schema:version 0 ;
-    :cultivationType cultivationtype:84 .
+    skos:exactMatch cultivationtype:84 .
 
-psm:85 a skos:Concept ;
+psm:85 a eCH-0265:PlantProtectionCrop ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "E9E3C127-33C1-40D9-8552-3CBE45E8E4C4" ;
     skos:broader psm:175 ;
@@ -3179,9 +3179,9 @@ psm:85 a skos:Concept ;
         "tomate"@fr,
         "Pomodori"@it ;
     schema:version 0 ;
-    :cultivationType cultivationtype:85 .
+    skos:exactMatch cultivationtype:85 .
 
-psm:86 a skos:Concept ;
+psm:86 a eCH-0265:PlantProtectionCrop ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "D8A50212-BD15-456A-9D2E-2A401C2EF21D" ;
     skos:broader psm:25 ;
@@ -3189,9 +3189,9 @@ psm:86 a skos:Concept ;
         "colrave"@fr,
         "Cavolo rapa"@it ;
     schema:version 0 ;
-    :cultivationType cultivationtype:86 .
+    skos:exactMatch cultivationtype:86 .
 
-psm:87 a skos:Concept ;
+psm:87 a eCH-0265:PlantProtectionCrop ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "DF4B3775-8361-41CE-9843-AC953197403D" ;
     skos:broader psm:20 ;
@@ -3199,9 +3199,9 @@ psm:87 a skos:Concept ;
         "chou frisé non pommé"@fr,
         "Cavolo piuma"@it ;
     schema:version 0 ;
-    :cultivationType cultivationtype:87 .
+    skos:exactMatch cultivationtype:87 .
 
-psm:88 a skos:Concept ;
+psm:88 a eCH-0265:PlantProtectionCrop ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "4FC4A2B5-73DC-4C30-940C-813BBB4DFD10" ;
     skos:broader psm:96 ;
@@ -3209,9 +3209,9 @@ psm:88 a skos:Concept ;
         "pommes de terre de consommation et fourragère"@fr,
         "Patate da tavola e da foraggio"@it ;
     schema:version 0 ;
-    :cultivationType cultivationtype:88 .
+    skos:exactMatch cultivationtype:88 .
 
-psm:89 a skos:Concept ;
+psm:89 a eCH-0265:PlantProtectionCrop ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "C883F887-6B72-4917-9385-7A757E5FD8D6" ;
     skos:broader psm:277 ;
@@ -3219,18 +3219,18 @@ psm:89 a skos:Concept ;
         "oignon (condiment)"@fr,
         "Cipolle da tavola"@it ;
     schema:version 0 ;
-    :cultivationType cultivationtype:89 .
+    skos:exactMatch cultivationtype:89 .
 
-psm:9 a skos:Concept ;
+psm:9 a eCH-0265:PlantProtectionCrop ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "B03E1EE3-18EE-4DC9-A98F-D528894885EB" ;
     schema:name "Speisepilze"@de,
         "champignons comestibles"@fr,
         "Funghi commestibili"@it ;
     schema:version 0 ;
-    :cultivationType cultivationtype:477 .
+    skos:exactMatch cultivationtype:477 .
 
-psm:90 a skos:Concept ;
+psm:90 a eCH-0265:PlantProtectionCrop ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "D100976A-2598-4614-AB7A-61436FF2B053" ;
     skos:broader psm:85 ;
@@ -3238,9 +3238,9 @@ psm:90 a skos:Concept ;
         "tomate à grappe"@fr,
         "Pomodoro ramato"@it ;
     schema:version 0 ;
-    :cultivationType cultivationtype:90 .
+    skos:exactMatch cultivationtype:90 .
 
-psm:91 a skos:Concept ;
+psm:91 a eCH-0265:PlantProtectionCrop ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "D605CAA5-9199-4739-8C9C-343C74DABAEB" ;
     skos:broader psm:13 ;
@@ -3248,9 +3248,9 @@ psm:91 a skos:Concept ;
         "amélavier commun"@fr,
         "Pero corvino"@it ;
     schema:version 0 ;
-    :cultivationType cultivationtype:91 .
+    skos:exactMatch cultivationtype:91 .
 
-psm:92 a skos:Concept ;
+psm:92 a eCH-0265:PlantProtectionCrop ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "9A9333CA-AD6C-459D-9AFF-B8E8FB2FF8D4" ;
     skos:broader psm:95 ;
@@ -3258,9 +3258,9 @@ psm:92 a skos:Concept ;
         "scorsonère"@fr,
         "Scorzonera"@it ;
     schema:version 0 ;
-    :cultivationType cultivationtype:92 .
+    skos:exactMatch cultivationtype:92 .
 
-psm:93 a skos:Concept ;
+psm:93 a eCH-0265:PlantProtectionCrop ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "D1E8D0D6-BD3C-4C47-9017-DBEADC9215A9" ;
     skos:broader psm:13 ;
@@ -3268,9 +3268,9 @@ psm:93 a skos:Concept ;
         "argousier"@fr,
         "Olivello spinoso"@it ;
     schema:version 0 ;
-    :cultivationType cultivationtype:93 .
+    skos:exactMatch cultivationtype:93 .
 
-psm:94 a skos:Concept ;
+psm:94 a eCH-0265:PlantProtectionCrop ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "D36B92CB-136F-46C3-8217-10C3F86ECA12" ;
     skos:broader psm:327 ;
@@ -3278,9 +3278,9 @@ psm:94 a skos:Concept ;
         "céleri"@fr,
         "Sedano"@it ;
     schema:version 0 ;
-    :cultivationType cultivationtype:94 .
+    skos:exactMatch cultivationtype:94 .
 
-psm:95 a skos:Concept ;
+psm:95 a eCH-0265:PlantProtectionCrop ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "B05127D4-FF0A-4F36-AFDD-0D487043122A" ;
     skos:broader psm:134 ;
@@ -3288,9 +3288,9 @@ psm:95 a skos:Concept ;
         "composées (Asteracea)"@fr,
         "Composite (Asteracee)"@it ;
     schema:version 0 ;
-    :cultivationType cultivationtype:95 .
+    skos:exactMatch cultivationtype:95 .
 
-psm:96 a skos:Concept ;
+psm:96 a eCH-0265:PlantProtectionCrop ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "575A1469-EF59-4B4E-96C3-38FC0CAEF637" ;
     skos:broader psm:27 ;
@@ -3298,9 +3298,9 @@ psm:96 a skos:Concept ;
         "pommes de terre"@fr,
         "Patate"@it ;
     schema:version 0 ;
-    :cultivationType cultivationtype:410 .
+    skos:exactMatch cultivationtype:410 .
 
-psm:97 a skos:Concept ;
+psm:97 a eCH-0265:PlantProtectionCrop ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "F171615D-81A1-4654-BF30-BF51620DFFB9" ;
     skos:broader psm:234 ;
@@ -3309,7 +3309,7 @@ psm:97 a skos:Concept ;
         "Depositi"@it ;
     schema:version 2 .
 
-psm:98 a skos:Concept ;
+psm:98 a eCH-0265:PlantProtectionCrop ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "E2A335E5-D797-46E7-9CE4-9CB3F301AAA2" ;
     skos:broader psm:145,
@@ -3318,9 +3318,9 @@ psm:98 a skos:Concept ;
         "glaïeul"@fr,
         "Gladiolo"@it ;
     schema:version 0 ;
-    :cultivationType cultivationtype:98 .
+    skos:exactMatch cultivationtype:98 .
 
-psm:99 a skos:Concept ;
+psm:99 a eCH-0265:PlantProtectionCrop ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "DB0DCB7D-CA9F-454A-8398-606F066FBF4F" ;
     skos:broader psm:2 ;
@@ -3328,4 +3328,4 @@ psm:99 a skos:Concept ;
         "Baby-Leaf (Asteraceae)"@fr,
         "Baby-Leaf (Asteraceae)"@it ;
     schema:version 0 ;
-    :cultivationType cultivationtype:99 .
+    skos:exactMatch cultivationtype:99 .
