@@ -3,7 +3,6 @@
 # ==============================================================================
 
 # Project-specific namespaces/qnames
-@prefix :                <https://agriculture.ld.admin.ch/crops/> .
 @prefix eCH-0265:        <https://agriculture.ld.admin.ch/eCH-0265/2/> .
 @prefix psm:             <https://agriculture.ld.admin.ch/crops/psm/1/> .
 @prefix agis:            <https://agriculture.ld.admin.ch/crops/agis/1/> .
@@ -42,13 +41,12 @@ In this project, we propose a unified master data system for crops and crop-rela
 # CULTIVATION TYPE
 # ==============================================================================
 
-eCH-0265:CultivationType a sh:NodeShape ;
+eCH-0265:CultivationType a sh:NodeShape, rdfs:Class ;
     rdfs:label "Cultivation type"@en,
         "Nutzungstyp"@de ;
     rdfs:comment "Die Kernklasse für die Klassifikation von «Kulturen», bzw. Landnutzungen. Eine (teilweise) Übersetzung anderer Kulturarten ist über die mit dieser Klasse modellierte Hierarchie möglich. Für die allgemeine Hierarchiemodellierung wird das [*RDF-Schema* (RDFS)](https://www.w3.org/TR/rdf-schema/) sowie die [*Web Ontology Language* (OWL)](https://www.w3.org/TR/owl-guide/) verwendet."@de ;
     sh:closed true ;
-    sh:targetClass :CultivationType ;
-    sh:ignoredProperties ( rdf:type owl:intersectionOf owl:unionOf owl:equivalentClass skos:exactMatch skos:broadMatch skos:narrowMatch ) ;
+    sh:ignoredProperties ( rdf:type owl:intersectionOf owl:unionOf owl:equivalentClass skos:exactMatch skos:broadMatch skos:narrowMatch eCH-0265:managementIntensity eCH-0265:botanicalPlant schema:image ) ;
     # Require AT LEAST ONE of the following relationships:
     # - a parent class (rdfs:subClassOf),
     # - an intersection definition (owl:intersectionOf),
@@ -101,28 +99,27 @@ eCH-0265:CultivationType a sh:NodeShape ;
         sh:name "Parent cultivation type"@en ;
         sh:path rdfs:subClassOf ;
         sh:or (
-            [ sh:class :CultivationType ]
-            [ sh:hasValue :Cultivation ]
+            [ sh:class eCH-0265:CultivationType ]
+            [ sh:hasValue eCH-0265:Cultivation ]
         ) ;
     ],
     [
         sh:order 8 ;
         sh:path owl:disjointWith ;
         sh:nodeKind sh:IRI ;
-        sh:class :CultivationType ;
+        sh:class eCH-0265:CultivationType ;
     ] .
 
 # ==============================================================================
 # Direct payment crop (AGIS)
 # ==============================================================================
 
-eCH-0265:DirectPaymentAreaCategory a sh:NodeShape ;
+eCH-0265:DirectPaymentAreaCategory a sh:NodeShape, rdfs:Class ;
     rdfs:label "Flächenkategorie Direktzahlung"@de,
         "Direct payment area category"@en ;
     rdfs:comment "Level 1 in the AGIS direct payment crops hierarchy."@en ;
     sh:closed true ;
     sh:ignoredProperties ( rdf:type skos:exactMatch skos:broadMatch skos:narrowMatch skos:narrower ) ;
-    sh:targetSubjectsOf skos:topConceptOf ;
     sh:property
         [
             sh:order 1 ;
@@ -151,17 +148,13 @@ eCH-0265:DirectPaymentAreaCategory a sh:NodeShape ;
         ],
         eCH-0265:cultivationType .
 
-eCH-0265:DirectPaymentCrop a sh:NodeShape ;
+eCH-0265:DirectPaymentCrop a sh:NodeShape, rdfs:Class ;
     rdfs:label "Direct payment crop"@en,
         "Direktzahlungskultur"@de ;
     rdfs:comment "A classification scheme built for the Swiss direct payment system"@en,
         "Beschreibt eine Liste der «Kulturen», die gemäss Direktzahlungsverordnung (DZV) im Bereich Landwirtschaft relevant sind. Diese «Kulturen» werden für den Direktzahlungsvollzug verwendet. Sie entsprechen den Hauptkulturen."@de ;
     sh:closed true ;
-    sh:ignoredProperties ( rdf:type skos:exactMatch skos:broadMatch skos:narrowMatch skos:narrower ) ;
-    
-    # Target all nodes that have a skos:broader property
-    sh:targetSubjectsOf skos:broader ; 
-    
+    sh:ignoredProperties ( rdf:type skos:exactMatch skos:broadMatch skos:narrowMatch skos:narrower ) ;    
     sh:sparql [
         a sh:SPARQLConstraint ;
         sh:message "schema:validFrom must be less than or equal to schema:validTo" ;
@@ -177,11 +170,10 @@ eCH-0265:DirectPaymentCrop a sh:NodeShape ;
     ] ;
     sh:property
         [
-            # Validate that the crop links up to a Level 1 Category
             sh:order 1 ;
             sh:path skos:broader ;
-            sh:node eCH-0265:DirectPaymentAreaCategory ; 
-            sh:minCount 1 ;
+            sh:class eCH-0265:DirectPaymentAreaCategory ; 
+            sh:minCount 0 ;
             sh:maxCount 1 ;
             sh:nodeKind sh:IRI ;
         ],
@@ -240,16 +232,12 @@ eCH-0265:DirectPaymentCrop a sh:NodeShape ;
 # Nutrient Balance Crop (Suisse Bilanz, Näbi, Naebi)
 # ==============================================================================
 
-eCH-0265:NutrientBalanceCropCategory a sh:NodeShape ;
-    rdfs:label "Kultivierungskategorie (Nährstoffbilanz)"@de,
+eCH-0265:NutrientBalanceCropCategory a sh:NodeShape, rdfs:Class ;
+    rdfs:label "Nährstoffbilanz-Kultivierungskategorie"@de,
         "Nutrient balance cultivation category"@en ;
     rdfs:comment "Oberste Hierarchieebene der Kulturen im Nährstoffbilanz-Berechnungsservice, dient der reinen Strukturierung."@de ;
     sh:closed true ;
-    sh:ignoredProperties ( rdf:type skos:exactMatch skos:broadMatch skos:narrowMatch skos:broader skos:narrower ) ;
-    
-    # Entry point for the validation chain
-    sh:targetSubjectsOf skos:topConceptOf ; 
-    
+    sh:ignoredProperties ( rdf:type skos:exactMatch skos:broadMatch skos:narrowMatch skos:broader skos:narrower ) ;    
     sh:property
         [
             sh:order 1 ;
@@ -277,14 +265,16 @@ eCH-0265:NutrientBalanceCropCategory a sh:NodeShape ;
             sh:nodeKind sh:Literal ;
             sh:datatype rdf:langString ;
         ],
+        eCH-0265:identifier,
         eCH-0265:cultivationType .
 
-eCH-0265:NutrientBalanceCropSubCategory a sh:NodeShape ;
-    rdfs:label "Kultivierungsunterkategorie (Nährstoffbilanz)"@de,
+eCH-0265:NutrientBalanceCropSubCategory a sh:NodeShape, rdfs:Class ;
+    rdfs:subClassOf skos:Concept ;
+    rdfs:label "Nährstoffbilanz-Kultivierungsunterkategorie"@de,
         "Nutrient balance cultivation subcategory"@en ;
     rdfs:comment "Mittlere Hierarchieebene der Kulturen im Nährstoffbilanz-Berechnungsservice."@de ;
     sh:closed true ;
-    sh:ignoredProperties ( rdf:type skos:exactMatch skos:broadMatch skos:narrowMatch skos:broader skos:narrower ) ;
+    sh:ignoredProperties ( rdf:type skos:exactMatch skos:broadMatch skos:narrowMatch skos:broader skos:narrower skos:topConceptOf ) ;
     sh:property
         [
             sh:order 1 ;
@@ -303,20 +293,10 @@ eCH-0265:NutrientBalanceCropSubCategory a sh:NodeShape ;
             sh:nodeKind sh:Literal ;
             sh:datatype rdf:langString ;
         ],
-        [
-            sh:order 3 ;
-            sh:name "Oberkategorie"@de,
-                "Category"@en ;
-            sh:path skos:broader ;
-            sh:minCount 1 ;
-            sh:maxCount 1 ;
-            sh:nodeKind sh:IRI ;
-            sh:class skos:Concept ;
-            sh:node eCH-0265:NutrientBalanceCropCategory ;
-        ],
+        eCH-0265:identifier,
         eCH-0265:cultivationType .
 
-eCH-0265:NutrientBalanceCrop a sh:NodeShape ;
+eCH-0265:NutrientBalanceCrop a sh:NodeShape, rdfs:Class ;
     rdfs:label "Agronomische Kulturkategorie"@de,
         "Nutrient balance agronomic crop category"@en ;
     rdfs:comment "Unterste Hierarchieebene, welche die eigentlichen Kulturen mit spezifischen agronomischen Eigenschaften für die Suisse-Bilanz beinhaltet."@de ;
@@ -343,23 +323,36 @@ eCH-0265:NutrientBalanceCrop a sh:NodeShape ;
             sh:datatype rdf:langString ;
         ],
         [
-            sh:order 4 ;
+            sh:order 5 ;
             sh:name "Unterkategorie"@de,
                 "Subcategory"@en ;
             sh:path skos:broader ;
-            sh:minCount 1 ;
-            sh:maxCount 1 ;
-            sh:nodeKind sh:IRI ;
-            sh:class skos:Concept ;
-            sh:node eCH-0265:NutrientBalanceCropSubCategory ;
+            sh:qualifiedValueShape [
+                sh:class eCH-0265:NutrientBalanceCropSubCategory ;
+            ] ;
+            sh:qualifiedMinCount 1 ;
+            sh:qualifiedMaxCount 1 ;
         ],
+        [
+            sh:order 6 ;
+            sh:name "Kategorie"@de,
+                "Category"@en ;
+            sh:path skos:broader ;
+            sh:qualifiedValueShape [
+                sh:class eCH-0265:NutrientBalanceCropCategory ;
+            ] ;
+            sh:qualifiedMinCount 1 ;
+            sh:qualifiedMaxCount 1 ;
+        ],
+        eCH-0265:identifier,
         eCH-0265:cultivationType .
 
 # ==============================================================================
 # Plant protection crop (from the Swiss registry of plant protection products)
 # ==============================================================================
 
-eCH-0265:PlantProtectionCrop a sh:NodeShape ;
+eCH-0265:PlantProtectionCrop a sh:NodeShape, rdfs:Class ;
+    rdfs:subClassOf skos:Concept ;
     rdfs:label "Pflanzenschutzmittel-Kultur"@de,
         "Plant protection crop"@en ;
     rdfs:comment "Kultur, wie sie im [Pflanzenschutzmittelverzeichnis](https://psm.admin.ch/) modelliert ist. Diese Kulturen sind über die Attribute `schema:isPartOf` sowie `schema:hasPart` hierarchisch organisiert."@de ;
@@ -434,4 +427,4 @@ eCH-0265:cultivationType a sh:PropertyShape ;
     sh:path skos:exactMatch ;
     sh:minCount 0 ;
     sh:maxCount 1 ;
-    sh:class :CultivationType .
+    sh:class eCH-0265:CultivationType .
