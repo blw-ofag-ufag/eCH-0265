@@ -217,7 +217,7 @@ Die Relationen der Kulturen zueinander werden durch semantische Prädikate des *
 - `skos:exactMatch`: Verknüpft zwei Konzepte (d.h. Kulturen aus zwei Systemen) bei denen ein hohes Mass an Sicherheit besteht, dass sie synonym verwendet werden können.
 - `skos:narrowMatch` und `skos:broadMatch`: Beschreiben eine hierarchische Zuordnung zwischen zwei Konzepten, wobei die beiden Prädikate zueinander invers sind.
 
-| Quellsystem | Kultur Quellsystem | SKOS-Prädikat | Zielsystem | Kultur Zielsystem | Semantische Beziehung |
+| Quellsystem | Kultur Quellsystem | SKOS-Beziehung | Zielsystem | Kultur Zielsystem | Anmerkung |
 | :--- | :--- | :--- | :--- | :--- | :--- |
 | AGIS | Sommergerste | `skos:exactMatch` | NAEBI | Sommergerste | Die Kulturen im Quell- und Zielsystem sind synonym. |
 | AGIS | Wintergerste | `skos:narrowMatch` | NAEBI | Wintergerste in 62a Nitrat-Projekt | Die Kultur im Zielsystem ist spezifischer als jene im Quellsystem. |
