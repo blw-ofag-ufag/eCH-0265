@@ -212,9 +212,9 @@ Je nach Anforderung lässt sich das Rückgabeformat über den `Accept`-Header st
 
 Um die Beziehungen zwischen den Kulturen der unterschiedlichen Systeme aufzuzeigen, werden Mapping-Tabellen bereitgestellt. Diese dienen als «Übersetzung» zwischen dem Direktzahlungssystem (AGIS), dem Nährstoffbilanz-Berechnungsservice (NAEBI) und dem Pflanzenschutzmittelverzeichnis (PSM). 
 
-Die Relationen der Kulturen zueinander werden durch semantische Beziehungen des *Simple Knowledge Organization System* (SKOS) klassifiziert:
+Die Relationen der Kulturen zueinander werden durch Beziehungen des *Simple Knowledge Organization System* (SKOS) klassifiziert:
 
-- `skos:exactMatch`: Verknüpft zwei Konzepte (d.h. Kulturen aus zwei Systemen) bei denen ein hohes Mass an Sicherheit besteht, dass sie synonym verwendet werden können.
+- `skos:exactMatch`: Verknüpft zwei Konzepte (d.h. Kulturen aus zwei Systemen) bei denen genau dasselbe gemeint ist.
 - `skos:narrowMatch` und `skos:broadMatch`: Beschreiben eine hierarchische Zuordnung zwischen zwei Konzepten, wobei die beiden Beziehungen zueinander invers sind.
 
 | Quellsystem | Kultur Quellsystem | SKOS-Beziehung | Zielsystem | Kultur Zielsystem | Anmerkung |
