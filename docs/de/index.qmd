@@ -169,7 +169,7 @@ TBC.
 
 # Instruktionen zur Datenintegration
 
-Die diesem Dokument zugrundeliegenden Master- und Referenzdaten als _Linked Data_ verfügbar.
+Die diesem Dokument zugrundeliegenden Master- und Referenzdaten sind als _Linked Data_ verfügbar.
 
 Die technologische Basis dafür bildet das [Resource Description Framework (RDF)](https://www.w3.org/TR/rdf11-concepts/), ein zentraler Standard des World Wide Web Consortiums (W3C) zur Modellierung von Datenstrukturen im Web.
 In RDF werden Informationen nicht in klassischen Tabellen, sondern als vernetzte Graphen abgebildet.
@@ -184,7 +184,7 @@ Das folgende Kapitel gibt eine minimale Anleitung, wie die Daten von LINDAS abge
 ## Bezug der Stammdaten über LINDAS {#sec-lindas-data-integration}
 
 Die Kulturenstammdaten können als Linked Data mittels der Abfragesprache [SPARQL 1.1 Query Language](https://www.w3.org/TR/sparql11-query/) direkt aus dem LINDAS-Triplestore bezogen werden.
-Das nachfolgende generische Beispiel zeigt eine einfache Abfrage, welche sämtliche Nutzungstypen mit deren Deutschem Namen zurückgibt:
+Das nachfolgende generische Beispiel zeigt eine einfache Abfrage, welche sämtliche Nutzungstypen mit deren deutschem Namen zurückgibt:
 
 ``` rq
 {{< include ../../src/sparql/queries/example.rq >}}
@@ -206,7 +206,8 @@ curl -X POST "https://lindas.admin.ch/query" \
 ```
 
 Dieser Aufruf setzt voraus, dass eine gültige SPARQL-Abfrage in der lokalen Datei `query.rq` vorliegt.
-Je nach Anforderung lässt sich das Rückgabeformat über den `Accept`-Header steuern. Für `SELECT`-Abfragen unterstützt LINDAS standardmässig strukturierte Formate wie JSON (`application/sparql-results+json`), XML (`application/sparql-results+xml`) CSV (`text/csv`).
+Je nach Anforderung lässt sich das Rückgabeformat über den `Accept`-Header steuern.
+Für `SELECT`-Abfragen unterstützt LINDAS standardmässig strukturierte Formate wie JSON (`application/sparql-results+json`), XML (`application/sparql-results+xml`) und CSV (`text/csv`).
 
 ## Bezug von Mapping-Tabellen {#sec-mapping-tables}
 
