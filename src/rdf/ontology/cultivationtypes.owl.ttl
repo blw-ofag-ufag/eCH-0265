@@ -3820,7 +3820,7 @@ cultivationtype:1097 a eCH-0265:CultivationType ;
     schema:name "Himbeer-Jungpflanzen (Long-Cane)"@de,
         "Jeunes plants de framboisiers (Long-Cane)"@fr,
         "Giovani piante di lampone (Long-Cane)"@it ;
-    rdfs:subClassOf cultivationtype:723 .
+    rdfs:subClassOf cultivationtype:471 .
 
 cultivationtype:1098 a eCH-0265:CultivationType ;
     schema:name "Blaue Malve"@de,
