@@ -1,0 +1,11 @@
+# Table of all cultivation types and their German name
+PREFIX : <https://agriculture.ld.admin.ch/crops/>
+PREFIX schema: <http://schema.org/>
+SELECT *
+FROM <https://lindas.admin.ch/foag/ech/0265/2>
+WHERE {
+  ?crop a :CultivationType ;
+    schema:name ?name .
+  FILTER(LANG(?name) = "de")
+}
+ORDER BY ?name
