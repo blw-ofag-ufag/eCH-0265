@@ -1,4 +1,4 @@
-name: Render and publish working draft
+name: Deploy documentation site
 
 on:
   push:
