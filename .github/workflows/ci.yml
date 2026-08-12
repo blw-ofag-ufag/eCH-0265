@@ -6,8 +6,11 @@ on:
       - main
   pull_request:
 
+permissions:
+  contents: write
+
 jobs:
-  build-test-publish:
+  build-test-publish-deploy:
     runs-on: ubuntu-latest
     
     # force terminal tools to output colors in GitHub Actions
@@ -18,7 +21,7 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Set up python
+      - name: Set up Python
         uses: actions/setup-python@v5
         with:
           python-version: '3.10'
@@ -30,6 +33,9 @@ jobs:
           distribution: 'temurin'
           java-version: '17'
 
+      - name: Set up Quarto
+        uses: quarto-dev/quarto-actions/setup@v2
+
       - name: Set up dependencies
         run: make setup
 
@@ -38,7 +44,8 @@ jobs:
         if: github.ref != 'refs/heads/main'
         run: make test
 
-      # 2. FOR MAIN BRANCH: Run tests AND publish
+      # 2. FOR MAIN BRANCH: Run tests and publish
+      # If this step fails, the subsequent documentation steps are automatically skipped.
       - name: Run pipeline, test, and publish
         if: github.ref == 'refs/heads/main'
         env:
@@ -47,3 +54,17 @@ jobs:
           GRAPH: ${{ secrets.GRAPH }}
           ENDPOINT: ${{ secrets.ENDPOINT }}
         run: make publish
+
+      # 3. FOR MAIN BRANCH: Build documentation
+      - name: Build documentation site
+        if: github.ref == 'refs/heads/main'
+        run: make docs
+
+      # 4. FOR MAIN BRANCH: Deploy documentation
+      - name: Deploy to gh-pages branch
+        if: github.ref == 'refs/heads/main'
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: build/docs/
+          publish_branch: gh-pages
