@@ -1903,6 +1903,7 @@ cultivationtype:470 a eCH-0265:CultivationType ;
 cultivationtype:471 a eCH-0265:CultivationType ;
     schema:name "Beerenbau"@de ;
     rdfs:subClassOf cultivationtype:465 ;
+    schema:description "Umfasst alle Beerenkulturen zur Lebensmittelgewinnung, massgebend für die Beurteilung von Rückständen gemäss Pflanzenschutzmittelverzeichnis."@de ;
     owl:unionOf ( cultivationtype:470 cultivationtype:551 cultivationtype:469 ) .
 
 cultivationtype:472 a eCH-0265:CultivationType ;
