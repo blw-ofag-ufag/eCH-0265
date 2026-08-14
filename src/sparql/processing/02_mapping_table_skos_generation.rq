@@ -43,4 +43,4 @@ WHERE {
   FILTER NOT EXISTS { 
     ?s (skos:exactMatch|skos:broadMatch) / ^cube:observation ?t_set .
   }
-};
+}

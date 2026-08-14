@@ -9,7 +9,7 @@
 # ==============================================================================
 
 # Project-specific namespaces/qnames
-@prefix :                <https://agriculture.ld.admin.ch/crops/> .
+@prefix eCH-0265:        <https://agriculture.ld.admin.ch/eCH-0265/2/> .
 @prefix intensity:       <https://agriculture.ld.admin.ch/crops/intensity/> .
 
 # LINDAS-specific namespaces/qnames
@@ -21,6 +21,7 @@
 @prefix rdfs:            <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema:          <http://schema.org/> .
 @prefix sh:              <http://www.w3.org/ns/shacl#> .
+@prefix skos:            <http://www.w3.org/2004/02/skos/core#> .
 @prefix wikidata:        <http://www.wikidata.org/entity/> .
 
 
@@ -28,34 +29,25 @@
 # ONTOLOGY METADATA
 # ==============================================================================
 
-: a owl:Ontology ; dcterms:title "Kulturen-Ontologie"@de .
-
+eCH-0265: a owl:Ontology .
 
 # ==============================================================================
 # CLASSES
 # ==============================================================================
 
-:Cultivation a owl:Class .
+eCH-0265:Cultivation a owl:Class .
 
-:CultivationType a owl:Class ;
+eCH-0265:CultivationType a owl:Class ;
     rdfs:subClassOf owl:Class .
 
-:DeprecatedCultivationType a owl:Class ;
-    rdfs:subClassOf owl:DeprecatedClass,
-        :CultivationType .
+eCH-0265:DirectPaymentCrop a owl:Class ;
+    rdfs:subClassOf skos:Concept .
 
-:DirectPaymentCrop a owl:Class ;
-    rdfs:subClassOf cube:Observation .
+eCH-0265:NutrientBalanceCrop a owl:Class ;
+    rdfs:subClassOf skos:Concept .
 
-:NutrientBalanceCrop a owl:Class ;
-    rdfs:subClassOf cube:Observation .
-
-:PlantProtectionCrop a owl:Class ;
-    rdfs:subClassOf cube:Observation .
-
-:Taxon a owl:Class ;
-    rdfs:subClassOf wikidata:Q16521 .
-
+eCH-0265:PlantProtectionCrop a owl:Class ;
+    rdfs:subClassOf skos:Concept .
 
 # ==============================================================================
 # DATATYPE PROPERTIES
@@ -94,25 +86,21 @@ schema:hasPart a owl:ObjectProperty ;
 schema:isPartOf a owl:ObjectProperty ;
     owl:inverseOf schema:hasPart .
 
-:botanicalPlant a owl:ObjectProperty ;
-    rdfs:domain :CultivationType ;
-    rdfs:range :Taxon .
+eCH-0265:botanicalPlant a owl:ObjectProperty ;
+    rdfs:domain eCH-0265:CultivationType ;
+    rdfs:range eCH-0265:Taxon .
 
-:managementIntensity a owl:ObjectProperty ;
+eCH-0265:managementIntensity a owl:ObjectProperty ;
     schema:name "Cultivation intensity"@en ;
-    rdfs:domain :CultivationType ;
+    rdfs:domain eCH-0265:CultivationType ;
     rdfs:range [ owl:oneOf ( intensity:Extensive intensity:Low intensity:Medium intensity:Intensive ) ] .
 
-:parentTaxon a owl:ObjectProperty ;
-    schema:name "Parent taxon"@en ;
-    rdfs:domain :Taxon ;
-    rdfs:range :Taxon .
-
-:taxonRank a owl:ObjectProperty ;
-    schema:name "Taxon rank"@en ;
-    rdfs:domain :Taxon ;
-    rdfs:range [ owl:oneOf ( :Variety :Subspecies :Species :Genus :Family :Order :Class :Phylum :Kingdom ) ] .
-
-:cultivationType a owl:ObjectProperty ;
+eCH-0265:cultivationType a owl:ObjectProperty ;
     rdfs:domain cube:Observation ;
-    rdfs:range :CultivationType .
+    rdfs:range eCH-0265:CultivationType .
+
+eCH-0265:cultivationCategory a owl:ObjectProperty ;
+    rdfs:subPropertyOf skos:broader .
+
+eCH-0265:cultivationSubCategory a owl:ObjectProperty ;
+    rdfs:subPropertyOf skos:broader .
