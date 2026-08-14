@@ -1,6 +1,6 @@
 # eCH-0265 Landwirtschaftliche Kulturen
 eCH Fachgruppe AgriFood
-12. August 2026
+14. August 2026
 
 # Hinweis
 
@@ -104,52 +104,69 @@ Im Gegensatz zum Pflanzenschutzmittelverzeichnis wird beim Nährstoffbilanzrechn
 
 Das konsolidierte Datenmodell wird durch eine RDFS-Ontologie abgebildet und mittels SHACL-Shapes validiert (Cyganiak u. a. 2014; W3C OWL Working Group 2012; Knublauch und Kontokostas 2017).
 
-![UML-Diagramm des Datenmodells.](../assets/img/uml.png)
+<div id="fig-uml">
+
+<img src="../assets/img/uml.png" class="lightbox" style="width:100.0%" />
+
+Abbildung 1: UML-Diagramm des Datenmodells von eCH-0265. Dieses Diagramm wurde automatisch mithilfe von SHACL PLAY! (Francart 2020) aus den SHACL-Spezifikationen generiert.
+
+</div>
 
 TBC.
 
 # Klassen
 
-## Direktzahlungskultur
+## Agronomische Kulturkategorie
 
-Beschreibt eine Liste der «Kulturen», die gemäss Direktzahlungsverordnung (DZV) im Bereich Landwirtschaft relevant sind. Diese «Kulturen» werden für den Direktzahlungsvollzug verwendet. Sie entsprechen den Hauptkulturen.
+Unterste Hierarchieebene, welche die eigentlichen Kulturen mit spezifischen agronomischen Eigenschaften für die Suisse-Bilanz beinhaltet.
 
-**Zielklasse:** `:DirectPaymentCrop`
+<div id="tbl-agronomische-kulturkategorie">
 
-<div id="tbl-direktzahlungskultur">
-
-Tabelle 3: Direktzahlungskultur Eigenschaften
-
-| Beschreibung | Pfad | Typ | Kardinalität |
-|:---|:---|:---|---:|
-| **LNF-Code**: Auch Kulturcode genannt, ist der allgemein gebräuchliche Identifikator für Direktzahlungskulturen in der Schweiz. | `schema:identifier` | `xsd:string` oder `sh:Literal` | 1..1 |
-| **Name**: Die offizielle Bezeichnung dieser Direktzahlungskultur, abgegelichen mit der Landwirtschaftlichen Begriffsverordnung (LBV). | `schema:name` | `rdf:langString` oder `sh:Literal` | 1..\* |
-| **Kulturgruppe**: Eine Kategorie für die Kultur, oft definiert in der LBV. | `:cultivationGroup` | [:CultivationType](#sec-nutzungstyp) oder `sh:IRI` | 0..1 |
-| **Gültig von**: Ab welchem Jahr wurde diese Direktzahlungskultur offiziell verwendet? | `schema:validFrom` | `xsd:integer` oder `sh:Literal` | 0..1 |
-| **Gültig bis**: Bis in welchem Jahr wurde diese Direktzahlungskultur offiziell verwendet? | `schema:validTo` |  | 0..1 |
-| **Kultivierungstyp** | `:cultivationType` | [:CultivationType](#sec-nutzungstyp) | 0..1 |
-
-</div>
-
-## Kultur der Nährstoffbilanz
-
-**Zielklasse:** `:NutrientBalanceCrop`
-
-<div id="tbl-kultur-der-n-hrstoffbilanz">
-
-Tabelle 4: Kultur der Nährstoffbilanz Eigenschaften
+Tabelle 3: Agronomische Kulturkategorie Eigenschaften
 
 | Beschreibung | Pfad | Typ | Kardinalität |
 |:---|:---|:---|---:|
 | **Identifikator** | `schema:identifier` | `xsd:string` oder `sh:Literal` | 1..1 |
-| **Bezeichnung** | `schema:name` | `rdf:langString` oder `sh:Literal` | 1..1 |
-| **Kulturkategorie** | `:cultivationCategory` | [:CultivationType](#sec-nutzungstyp) oder `sh:IRI` | 1..1 |
-| **Kultur-Unterkategorie** | `:cultivationSubCategory` | [:CultivationType](#sec-nutzungstyp) oder `sh:IRI` | 1..1 |
-| **N**: Stickstoff, kg/ha | `:N2` | `xsd:decimal` oder `sh:Literal` | 0..1 |
-| **P₂O₅**: Phosphor, kg/dt | `:P2O5` | `xsd:decimal` oder `sh:Literal` | 0..1 |
-| **K₂O**: Kalium, kg/dt | `:K2O` | `xsd:decimal` oder `sh:Literal` | 0..1 |
-| **Mg**: Magnesium, kg/dt | `:Mg` | `xsd:decimal` oder `sh:Literal` | 0..1 |
-| **Kultivierungstyp** | `:cultivationType` | [:CultivationType](#sec-nutzungstyp) | 0..1 |
+| **Konzeptschema** | `skos:inScheme` | `sh:IRI` | 1..\* |
+| **Name** | `schema:name` | `rdf:langString` oder `sh:Literal` | 1..\* |
+| **Unterkategorie** | `eCH-0265:cultivationSubCategory` | [eCH-0265:NutrientBalanceCropSubCategory](#sec-n-hrstoffbilanz-kultivierungsunterkategorie) | 1..1 |
+| **Kategorie** | `eCH-0265:cultivationCategory` | [eCH-0265:NutrientBalanceCropCategory](#sec-n-hrstoffbilanz-kultivierungskategorie) | 1..1 |
+| **Kultivierungstyp** | `skos:exactMatch` | [eCH-0265:CultivationType](#sec-nutzungstyp) | 0..1 |
+
+</div>
+
+## Direktzahlungskultur
+
+Beschreibt eine Liste der «Kulturen», die gemäss Direktzahlungsverordnung (DZV) im Bereich Landwirtschaft relevant sind. Diese «Kulturen» werden für den Direktzahlungsvollzug verwendet. Sie entsprechen den Hauptkulturen.
+
+<div id="tbl-direktzahlungskultur">
+
+Tabelle 4: Direktzahlungskultur Eigenschaften
+
+| Beschreibung | Pfad | Typ | Kardinalität |
+|:---|:---|:---|---:|
+|  | `skos:broader` | [eCH-0265:DirectPaymentAreaCategory](#sec-fl-chenkategorie-direktzahlung) oder `sh:IRI` | 0..1 |
+|  | `skos:inScheme` | `sh:IRI` | 1..1 |
+| **Name**: Die offizielle Bezeichnung dieser Direktzahlungskultur, abgeglichen mit der Landwirtschaftlichen Begriffsverordnung (LBV). | `schema:name` | `rdf:langString` oder `sh:Literal` | 1..\* |
+| **LNF-Code**: Auch Kulturcode genannt, ist der allgemein gebräuchliche Identifikator für Direktzahlungskulturen in der Schweiz. | `schema:identifier` | `xsd:string` oder `sh:Literal` | 1..1 |
+| **Gültig von**: Ab welchem Jahr wurde diese Direktzahlungskultur offiziell verwendet? | `schema:validFrom` | `xsd:integer` oder `sh:Literal` | 0..1 |
+| **Gültig bis**: Bis in welchem Jahr wurde diese Direktzahlungskultur offiziell verwendet? | `schema:validTo` | `xsd:integer` oder `sh:Literal` | 0..1 |
+| **Kultivierungstyp** | `skos:exactMatch` | [eCH-0265:CultivationType](#sec-nutzungstyp) | 0..1 |
+
+</div>
+
+## Flächenkategorie Direktzahlung
+
+<div id="tbl-fl-chenkategorie-direktzahlung">
+
+Tabelle 5: Flächenkategorie Direktzahlung Eigenschaften
+
+| Beschreibung | Pfad | Typ | Kardinalität |
+|:---|:---|:---|---:|
+|  | `skos:topConceptOf` | `sh:IRI` | 1..1 |
+|  | `skos:inScheme` | `sh:IRI` | 1..1 |
+| **Name** | `schema:name` | `rdf:langString` oder `sh:Literal` | 1..\* |
+| **Kultivierungstyp** | `skos:exactMatch` | [eCH-0265:CultivationType](#sec-nutzungstyp) | 0..1 |
 
 </div>
 
@@ -157,24 +174,52 @@ Tabelle 4: Kultur der Nährstoffbilanz Eigenschaften
 
 Die Kernklasse für die Klassifikation von «Kulturen», bzw. Landnutzungen. Eine (teilweise) Übersetzung anderer Kulturarten ist über die mit dieser Klasse modellierte Hierarchie möglich. Für die allgemeine Hierarchiemodellierung wird das [*RDF-Schema* (RDFS)](https://www.w3.org/TR/rdf-schema/) sowie die [*Web Ontology Language* (OWL)](https://www.w3.org/TR/owl-guide/) verwendet.
 
-**Zielklasse:** `:CultivationType`
-
 <div id="tbl-nutzungstyp">
 
-Tabelle 5: Nutzungstyp Eigenschaften
+Tabelle 6: Nutzungstyp Eigenschaften
 
 | Beschreibung | Pfad | Typ | Kardinalität |
 |:---|:---|:---|---:|
 | **Name** | `schema:name` | `rdf:langString` oder `sh:Literal` | 1..\* |
 | **Alias** | `schema:alternateName` | `rdf:langString` oder `sh:Literal` | 0..\* |
 | **Beschreibung** | `schema:description` | `rdf:langString` oder `sh:Literal` | 0..\* |
-| **Bild** | `schema:image` | `sh:IRI` | 0..\* |
-|  | `rdfs:subClassOf` | `sh:IRI` | 0..\* |
-|  | `owl:intersectionOf` |  | 0..\* |
-|  | `owl:unionOf` |  | 0..\* |
-|  | `owl:disjointWith` | [:CultivationType](#sec-nutzungstyp) oder `sh:IRI` | 0..\* |
-| **Botanische Pflanze** | `:botanicalPlant` | `sh:IRI` | 0..1 |
-| **Anbauintensität** | `:managementIntensity` | `sh:IRI` | 0..1 |
+|  | `rdfs:subClassOf` | [eCH-0265:CultivationType](#sec-nutzungstyp) | 0..\* |
+|  | `owl:disjointWith` | [eCH-0265:CultivationType](#sec-nutzungstyp) oder `sh:IRI` | 0..\* |
+
+</div>
+
+## Nährstoffbilanz-Kultivierungskategorie
+
+Oberste Hierarchieebene der Kulturen im Nährstoffbilanz-Berechnungsservice, dient der reinen Strukturierung.
+
+<div id="tbl-n-hrstoffbilanz-kultivierungskategorie">
+
+Tabelle 7: Nährstoffbilanz-Kultivierungskategorie Eigenschaften
+
+| Beschreibung | Pfad | Typ | Kardinalität |
+|:---|:---|:---|---:|
+| **Identifikator** | `schema:identifier` | `xsd:string` oder `sh:Literal` | 1..1 |
+| **Konzeptschema** | `skos:inScheme` | `sh:IRI` | 1..\* |
+| **Oberstes Konzept von** | `skos:topConceptOf` | `sh:IRI` | 1..1 |
+| **Name** | `schema:name` | `rdf:langString` oder `sh:Literal` | 1..\* |
+| **Kultivierungstyp** | `skos:exactMatch` | [eCH-0265:CultivationType](#sec-nutzungstyp) | 0..1 |
+
+</div>
+
+## Nährstoffbilanz-Kultivierungsunterkategorie
+
+Mittlere Hierarchieebene der Kulturen im Nährstoffbilanz-Berechnungsservice.
+
+<div id="tbl-n-hrstoffbilanz-kultivierungsunterkategorie">
+
+Tabelle 8: Nährstoffbilanz-Kultivierungsunterkategorie Eigenschaften
+
+| Beschreibung | Pfad | Typ | Kardinalität |
+|:---|:---|:---|---:|
+| **Identifikator** | `schema:identifier` | `xsd:string` oder `sh:Literal` | 1..1 |
+| **Konzeptschema** | `skos:inScheme` | `sh:IRI` | 1..\* |
+| **Name** | `schema:name` | `rdf:langString` oder `sh:Literal` | 1..\* |
+| **Kultivierungstyp** | `skos:exactMatch` | [eCH-0265:CultivationType](#sec-nutzungstyp) | 0..1 |
 
 </div>
 
@@ -182,20 +227,18 @@ Tabelle 5: Nutzungstyp Eigenschaften
 
 Kultur, wie sie im [Pflanzenschutzmittelverzeichnis](https://psm.admin.ch/) modelliert ist. Diese Kulturen sind über die Attribute `schema:isPartOf` sowie `schema:hasPart` hierarchisch organisiert.
 
-**Zielklasse:** `:PlantProtectionCrop`
-
 <div id="tbl-pflanzenschutzmittel-kultur">
 
-Tabelle 6: Pflanzenschutzmittel-Kultur Eigenschaften
+Tabelle 9: Pflanzenschutzmittel-Kultur Eigenschaften
 
 | Beschreibung | Pfad | Typ | Kardinalität |
 |:---|:---|:---|---:|
 | **Identifikator** | `schema:identifier` | `xsd:string` oder `sh:Literal` | 1..1 |
-| **Name**: Der in Infofito eingetragene Name dieser Kultur. | `schema:name` | `sh:Literal` | 2..4 |
+| **Konzeptschema** | `skos:inScheme` | `sh:IRI` | 1..1 |
+| **Name**: Der in Infofito eingetragene Name dieser Kultur. | `schema:name` | `rdf:langString` oder `sh:Literal` | 2..4 |
 | **Version** | `schema:version` | `xsd:integer` oder `sh:Literal` | 1..1 |
-| **Überkultur** | `schema:isPartOf` | [:PlantProtectionCrop](#sec-pflanzenschutzmittel-kultur) oder `sh:IRI` | 0..2 |
-| **Unterkultur** | `schema:hasPart` | [:PlantProtectionCrop](#sec-pflanzenschutzmittel-kultur) oder `sh:IRI` | 0..\* |
-| **Kultivierungstyp** | `:cultivationType` | [:CultivationType](#sec-nutzungstyp) | 0..1 |
+| **Überkultur** | `skos:broader` | `skos:Concept` oder `sh:IRI` | 0..2 |
+| **Kultivierungstyp** | `skos:exactMatch` | [eCH-0265:CultivationType](#sec-nutzungstyp) | 0..1 |
 
 </div>
 
@@ -253,7 +296,7 @@ Die Relationen der Kulturen zueinander werden durch Beziehungen des *Simple Know
 
 <div id="tbl-mapping-example">
 
-Tabelle 7: Beispiele der Mapping-Relationen
+Tabelle 10: Beispiele der Mapping-Relationen
 
 | Quellsystem | Kultur Quellsystem | SKOS-Beziehung | Zielsystem | Kultur Zielsystem | Anmerkung |
 |:---|:---|:---|:---|:---|:---|
@@ -329,6 +372,12 @@ Cyganiak, Richard, David Wood, und Markus Lanthaler. 2014. *RDF 1.1 Concepts and
 
 </div>
 
+<div id="ref-francart2020shacl" class="csl-entry">
+
+Francart, Thomas. 2020. *SHACL Play!* Sparna, released. <https://shacl-play.sparna.fr/>.
+
+</div>
+
 <div id="ref-shacl" class="csl-entry">
 
 Knublauch, Holger, und Dimitris Kontokostas. 2017. *Shapes Constraint Language (SHACL)*. W3C Recommendation. World Wide Web Consortium (W3C). <https://www.w3.org/TR/shacl/>.
@@ -347,7 +396,7 @@ W3C OWL Working Group. 2012. *OWL 2 Web Ontology Language Document Overview (Sec
 
 <div id="tbl-authors">
 
-Tabelle 8: Autoren und Revision
+Tabelle 11: Autoren und Revision
 
 | Name            | Organisation                 |
 |:----------------|:-----------------------------|
@@ -362,7 +411,7 @@ Tabelle 8: Autoren und Revision
 
 <div id="tbl-abbreviations">
 
-Tabelle 9: Abkürzungsverzeichnis
+Tabelle 12: Abkürzungsverzeichnis
 
 | Abkürzung | Beschreibung                        |
 |:----------|:------------------------------------|
