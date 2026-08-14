@@ -223,7 +223,8 @@ cultivationtype:28 a eCH-0265:CultivationType ;
     schema:name "Schwarze Apfelbeere"@de,
         "aronie noire"@fr,
         "Aronia nera"@it ;
-    rdfs:subClassOf cultivationtype:471 .
+    schema:alternateName "Aronia"@de ;
+    rdfs:subClassOf cultivationtype:1158 .
 
 cultivationtype:30 a eCH-0265:CultivationType ;
     schema:name "Rosskastanie"@de,
@@ -302,7 +303,7 @@ cultivationtype:43 a eCH-0265:CultivationType ;
     schema:name "Jostabeere"@de,
         "josta"@fr,
         "Josta"@it ;
-    rdfs:subClassOf cultivationtype:131 .
+    rdfs:subClassOf cultivationtype:131, cultivationtype:1158 .
 
 cultivationtype:45 a eCH-0265:CultivationType ;
     schema:name "Fichte"@de,
@@ -460,7 +461,7 @@ cultivationtype:80 a eCH-0265:CultivationType ;
         "Black mulberry"@en,
         "mûrier noir"@fr,
         "Moro nero"@it ;
-    rdfs:subClassOf cultivationtype:471 .
+    rdfs:subClassOf cultivationtype:1158 .
 
 cultivationtype:81 a eCH-0265:CultivationType ;
     schema:name "Kopfkohle"@de,
@@ -522,7 +523,7 @@ cultivationtype:91 a eCH-0265:CultivationType ;
     schema:name "Gemeine Felsenbirne"@de,
         "amélavier commun"@fr,
         "Pero corvino"@it ;
-    rdfs:subClassOf cultivationtype:471 .
+    rdfs:subClassOf cultivationtype:1158 .
 
 cultivationtype:92 a eCH-0265:CultivationType ;
     schema:name "Schwarzwurzel"@de,
@@ -859,7 +860,7 @@ cultivationtype:161 a eCH-0265:CultivationType ;
         "Elder berry"@en,
         "grand sureau"@fr,
         "Sambuco nero"@it ;
-    rdfs:subClassOf cultivationtype:471 .
+    rdfs:subClassOf cultivationtype:1158 .
 
 cultivationtype:162 a eCH-0265:CultivationType ;
     schema:name "Forstliche Pflanzgärten"@de,
@@ -934,7 +935,10 @@ cultivationtype:174 a eCH-0265:CultivationType ;
         "sorbier des oiseleurs"@fr,
         "Sorbo degli ucellatori"@it ;
     schema:alternateName "Vogelbeere"@de ;
-    rdfs:subClassOf cultivationtype:471 .
+    schema:description "Nur Bestände/Sorten zur Gewinnung von essbaren Beeren."@de,
+        "Uniquement les variétés/cultures destinées à la consommation des baies."@fr,
+        "Solo varietà/colture destinate al consumo delle bacche."@it ;
+    rdfs:subClassOf cultivationtype:1158 .
 
 cultivationtype:175 a eCH-0265:CultivationType ;
     schema:name "Nachtschattengewächse (Solanaceae)"@de,
@@ -1510,7 +1514,7 @@ cultivationtype:298 a eCH-0265:CultivationType ;
     schema:name "Stachelbeere"@de,
         "groseilles à maquereau"@fr,
         "Uva spina"@it ;
-    rdfs:subClassOf cultivationtype:131 .
+    rdfs:subClassOf cultivationtype:131, cultivationtype:1158 .
 
 cultivationtype:299 a eCH-0265:CultivationType ;
     schema:name "Minze"@de,
