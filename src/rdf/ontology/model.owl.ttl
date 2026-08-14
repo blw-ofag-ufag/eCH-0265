@@ -98,3 +98,9 @@ eCH-0265:managementIntensity a owl:ObjectProperty ;
 eCH-0265:cultivationType a owl:ObjectProperty ;
     rdfs:domain cube:Observation ;
     rdfs:range eCH-0265:CultivationType .
+
+eCH-0265:cultivationCategory a owl:ObjectProperty ;
+    rdfs:subPropertyOf skos:broader .
+
+eCH-0265:cultivationSubCategory a owl:ObjectProperty ;
+    rdfs:subPropertyOf skos:broader .

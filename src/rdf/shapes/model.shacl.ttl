@@ -326,7 +326,7 @@ eCH-0265:NutrientBalanceCrop a sh:NodeShape, rdfs:Class ;
             sh:order 5 ;
             sh:name "Unterkategorie"@de,
                 "Subcategory"@en ;
-            sh:path skos:broader ;
+            sh:path eCH-0265:cultivationSubCategory ;
             sh:class eCH-0265:NutrientBalanceCropSubCategory ;
             sh:minCount 1 ;
             sh:maxCount 1 ;

@@ -136,7 +136,7 @@ naebi:1036 a eCH-0265:NutrientBalanceCrop ;
     schema:identifier "CROP_ABRGS" ;
     schema:name "Aubergine, Erdkultur (geschützter Anbau)"@de ;
     eCH-0265:cultivationCategory naebi:SPECIAL ;
-    skos:broader naebi:PRCRP ;
+    eCH-0265:cultivationSubCategory naebi:PRCRP ;
     skos:exactMatch cultivationtype:1036 .
 
 naebi:10 a eCH-0265:NutrientBalanceCrop ;
@@ -144,7 +144,7 @@ naebi:10 a eCH-0265:NutrientBalanceCrop ;
     schema:identifier "CROP_ASPBW" ;
     schema:name "Spargel Bleich-"@de ;
     eCH-0265:cultivationCategory naebi:SPECIAL ;
-    skos:broader naebi:PRMCR ;
+    eCH-0265:cultivationSubCategory naebi:PRMCR ;
     skos:exactMatch cultivationtype:1037 .
 
 naebi:100 a eCH-0265:NutrientBalanceCrop ;
@@ -152,7 +152,7 @@ naebi:100 a eCH-0265:NutrientBalanceCrop ;
     schema:identifier "CROP_HOPS" ;
     schema:name "Hopfen"@de ;
     eCH-0265:cultivationCategory naebi:SPECIAL ;
-    skos:broader naebi:PRMCR ;
+    eCH-0265:cultivationSubCategory naebi:PRMCR ;
     skos:exactMatch cultivationtype:708 .
 
 naebi:101 a eCH-0265:NutrientBalanceCrop ;
@@ -160,7 +160,7 @@ naebi:101 a eCH-0265:NutrientBalanceCrop ;
     schema:identifier "CROP_HRB1L" ;
     schema:name "Kräuter,1-jährig, gross"@de ;
     eCH-0265:cultivationCategory naebi:SPECIAL ;
-    skos:broader naebi:OUTVG ;
+    eCH-0265:cultivationSubCategory naebi:OUTVG ;
     skos:exactMatch cultivationtype:1188 .
 
 naebi:102 a eCH-0265:NutrientBalanceCrop ;
@@ -168,7 +168,7 @@ naebi:102 a eCH-0265:NutrientBalanceCrop ;
     schema:identifier "CROP_HRB1M" ;
     schema:name "Kräuter,1-jährig, mittel"@de ;
     eCH-0265:cultivationCategory naebi:SPECIAL ;
-    skos:broader naebi:OUTVG ;
+    eCH-0265:cultivationSubCategory naebi:OUTVG ;
     skos:exactMatch cultivationtype:1189 .
 
 naebi:103 a eCH-0265:NutrientBalanceCrop ;
@@ -176,7 +176,7 @@ naebi:103 a eCH-0265:NutrientBalanceCrop ;
     schema:identifier "CROP_HRB1MB" ;
     schema:name "Kräuter,1-jährig, mittel-gross"@de ;
     eCH-0265:cultivationCategory naebi:SPECIAL ;
-    skos:broader naebi:OUTVG ;
+    eCH-0265:cultivationSubCategory naebi:OUTVG ;
     skos:exactMatch cultivationtype:1190 .
 
 naebi:104 a eCH-0265:NutrientBalanceCrop ;
@@ -184,7 +184,7 @@ naebi:104 a eCH-0265:NutrientBalanceCrop ;
     schema:identifier "CROP_HRB1S" ;
     schema:name "Kräuter,1-jährig, klein"@de ;
     eCH-0265:cultivationCategory naebi:SPECIAL ;
-    skos:broader naebi:OUTVG ;
+    eCH-0265:cultivationSubCategory naebi:OUTVG ;
     skos:exactMatch cultivationtype:1191 .
 
 naebi:105 a eCH-0265:NutrientBalanceCrop ;
@@ -192,7 +192,7 @@ naebi:105 a eCH-0265:NutrientBalanceCrop ;
     schema:identifier "CROP_HRBPRB" ;
     schema:name "Kräuter,mehrjährig, mittel-gross"@de ;
     eCH-0265:cultivationCategory naebi:SPECIAL ;
-    skos:broader naebi:PRMCR ;
+    eCH-0265:cultivationSubCategory naebi:PRMCR ;
     skos:exactMatch cultivationtype:1192 .
 
 naebi:106 a eCH-0265:NutrientBalanceCrop ;
@@ -200,7 +200,7 @@ naebi:106 a eCH-0265:NutrientBalanceCrop ;
     schema:identifier "CROP_HRBPRL" ;
     schema:name "Kräuter,mehrjährig, gross"@de ;
     eCH-0265:cultivationCategory naebi:SPECIAL ;
-    skos:broader naebi:PRMCR ;
+    eCH-0265:cultivationSubCategory naebi:PRMCR ;
     skos:exactMatch cultivationtype:1193 .
 
 naebi:107 a eCH-0265:NutrientBalanceCrop ;
@@ -208,7 +208,7 @@ naebi:107 a eCH-0265:NutrientBalanceCrop ;
     schema:identifier "CROP_HRBPRM" ;
     schema:name "Kräuter,mehrjährig, mittel"@de ;
     eCH-0265:cultivationCategory naebi:SPECIAL ;
-    skos:broader naebi:PRMCR ;
+    eCH-0265:cultivationSubCategory naebi:PRMCR ;
     skos:exactMatch cultivationtype:1194 .
 
 naebi:108 a eCH-0265:NutrientBalanceCrop ;
@@ -216,7 +216,7 @@ naebi:108 a eCH-0265:NutrientBalanceCrop ;
     schema:identifier "CROP_HRBPRS" ;
     schema:name "Kräuter,mehrjährig, klein"@de ;
     eCH-0265:cultivationCategory naebi:SPECIAL ;
-    skos:broader naebi:PRMCR ;
+    eCH-0265:cultivationSubCategory naebi:PRMCR ;
     skos:exactMatch cultivationtype:1195 .
 
 naebi:109 a eCH-0265:NutrientBalanceCrop ;
@@ -224,7 +224,7 @@ naebi:109 a eCH-0265:NutrientBalanceCrop ;
     schema:identifier "CROP_HYSSP" ;
     schema:name "Ysop"@de ;
     eCH-0265:cultivationCategory naebi:SPECIAL ;
-    skos:broader naebi:PRMCR ;
+    eCH-0265:cultivationSubCategory naebi:PRMCR ;
     skos:exactMatch cultivationtype:37 .
 
 naebi:11 a eCH-0265:NutrientBalanceCrop ;
@@ -232,7 +232,7 @@ naebi:11 a eCH-0265:NutrientBalanceCrop ;
     schema:identifier "CROP_ASPGR" ;
     schema:name "Spargel Grün-"@de ;
     eCH-0265:cultivationCategory naebi:SPECIAL ;
-    skos:broader naebi:PRMCR ;
+    eCH-0265:cultivationSubCategory naebi:PRMCR ;
     skos:exactMatch cultivationtype:1038 .
 
 naebi:110 a eCH-0265:NutrientBalanceCrop ;
@@ -240,7 +240,7 @@ naebi:110 a eCH-0265:NutrientBalanceCrop ;
     schema:identifier "CROP_IFEED" ;
     schema:name "Zwischenfutter (herbstgesäte KW), ha"@de ;
     eCH-0265:cultivationCategory naebi:FODDER ;
-    skos:broader naebi:FORAG ;
+    eCH-0265:cultivationSubCategory naebi:FORAG ;
     skos:exactMatch cultivationtype:1289 .
 
 naebi:111 a eCH-0265:NutrientBalanceCrop ;
@@ -248,7 +248,7 @@ naebi:111 a eCH-0265:NutrientBalanceCrop ;
     schema:identifier "CROP_IFWOC" ;
     schema:name "Zwischenfutter (ohne KW), ha"@de ;
     eCH-0265:cultivationCategory naebi:FODDER ;
-    skos:broader naebi:FORAG ;
+    eCH-0265:cultivationSubCategory naebi:FORAG ;
     skos:exactMatch cultivationtype:1290 .
 
 naebi:112 a eCH-0265:NutrientBalanceCrop ;
@@ -256,7 +256,7 @@ naebi:112 a eCH-0265:NutrientBalanceCrop ;
     schema:identifier "CROP_KALE" ;
     schema:name "Federkohl"@de ;
     eCH-0265:cultivationCategory naebi:SPECIAL ;
-    skos:broader naebi:OUTVG ;
+    eCH-0265:cultivationSubCategory naebi:OUTVG ;
     skos:exactMatch cultivationtype:87 .
 
 naebi:113 a eCH-0265:NutrientBalanceCrop ;
@@ -264,7 +264,7 @@ naebi:113 a eCH-0265:NutrientBalanceCrop ;
     schema:identifier "CROP_KARPA" ;
     schema:name "Sonnenblumen"@de ;
     eCH-0265:cultivationCategory naebi:ARABLE ;
-    skos:broader naebi:DIVCR ;
+    eCH-0265:cultivationSubCategory naebi:DIVCR ;
     skos:exactMatch cultivationtype:493 .
 
 naebi:114 a eCH-0265:NutrientBalanceCrop ;
@@ -272,7 +272,7 @@ naebi:114 a eCH-0265:NutrientBalanceCrop ;
     schema:identifier "CROP_KARPB" ;
     schema:name "Sommerraps"@de ;
     eCH-0265:cultivationCategory naebi:ARABLE ;
-    skos:broader naebi:RTCRP ;
+    eCH-0265:cultivationSubCategory naebi:RTCRP ;
     skos:exactMatch cultivationtype:1039 .
 
 naebi:115 a eCH-0265:NutrientBalanceCrop ;
@@ -280,14 +280,14 @@ naebi:115 a eCH-0265:NutrientBalanceCrop ;
     schema:identifier "CROP_KARPFC" ;
     schema:name "Vom Betrieb weggeführtes Rübenblatt, ha"@de ;
     eCH-0265:cultivationCategory naebi:ARABLE ;
-    skos:broader naebi:RTCRP .
+    eCH-0265:cultivationSubCategory naebi:RTCRP .
 
 naebi:116 a eCH-0265:NutrientBalanceCrop ;
     skos:inScheme naebi:ConceptScheme ;
     schema:identifier "CROP_KARPFE_N" ;
     schema:name "Eiweisserbsen"@de ;
     eCH-0265:cultivationCategory naebi:ARABLE ;
-    skos:broader naebi:RTCRP ;
+    eCH-0265:cultivationSubCategory naebi:RTCRP ;
     skos:exactMatch cultivationtype:1027 .
 
 naebi:117 a eCH-0265:NutrientBalanceCrop ;
@@ -295,7 +295,7 @@ naebi:117 a eCH-0265:NutrientBalanceCrop ;
     schema:identifier "CROP_KENAF" ;
     schema:name "Faserhanf"@de ;
     eCH-0265:cultivationCategory naebi:ARABLE ;
-    skos:broader naebi:DIVCR ;
+    eCH-0265:cultivationSubCategory naebi:DIVCR ;
     skos:exactMatch cultivationtype:576 .
 
 naebi:118 a eCH-0265:NutrientBalanceCrop ;
@@ -303,7 +303,7 @@ naebi:118 a eCH-0265:NutrientBalanceCrop ;
     schema:identifier "CROP_KIDK" ;
     schema:name "Kleine Anlagen (<20 a) mit versch. Dauerkulturen"@de ;
     eCH-0265:cultivationCategory naebi:SPECIAL ;
-    skos:broader naebi:PRMCR ;
+    eCH-0265:cultivationSubCategory naebi:PRMCR ;
     skos:exactMatch cultivationtype:1288 .
 
 naebi:119 a eCH-0265:NutrientBalanceCrop ;
@@ -311,7 +311,7 @@ naebi:119 a eCH-0265:NutrientBalanceCrop ;
     schema:identifier "CROP_KIWEY" ;
     schema:name "Kiwianlage, hoher Ertrag"@de ;
     eCH-0265:cultivationCategory naebi:SPECIAL ;
-    skos:broader naebi:PRMCR ;
+    eCH-0265:cultivationSubCategory naebi:PRMCR ;
     skos:exactMatch cultivationtype:1041 .
 
 naebi:12 a eCH-0265:NutrientBalanceCrop ;
@@ -319,7 +319,7 @@ naebi:12 a eCH-0265:NutrientBalanceCrop ;
     schema:identifier "CROP_AWMI" ;
     schema:name "Kunstwiese intensiv"@de ;
     eCH-0265:cultivationCategory naebi:FODDER ;
-    skos:broader naebi:FORAG ;
+    eCH-0265:cultivationSubCategory naebi:FORAG ;
     skos:exactMatch cultivationtype:1042 .
 
 naebi:120 a eCH-0265:NutrientBalanceCrop ;
@@ -327,7 +327,7 @@ naebi:120 a eCH-0265:NutrientBalanceCrop ;
     schema:identifier "CROP_KIWPL" ;
     schema:name "Kiwianlage"@de ;
     eCH-0265:cultivationCategory naebi:SPECIAL ;
-    skos:broader naebi:PRMCR ;
+    eCH-0265:cultivationSubCategory naebi:PRMCR ;
     skos:exactMatch cultivationtype:1040 .
 
 naebi:121 a eCH-0265:NutrientBalanceCrop ;
@@ -335,7 +335,7 @@ naebi:121 a eCH-0265:NutrientBalanceCrop ;
     schema:identifier "CROP_KOCRN" ;
     schema:name "Futterrüben"@de ;
     eCH-0265:cultivationCategory naebi:FODDER ;
-    skos:broader naebi:RTCRP ;
+    eCH-0265:cultivationSubCategory naebi:RTCRP ;
     skos:exactMatch cultivationtype:523 .
 
 naebi:122 a eCH-0265:NutrientBalanceCrop ;
@@ -343,7 +343,7 @@ naebi:122 a eCH-0265:NutrientBalanceCrop ;
     schema:identifier "CROP_KOHLC" ;
     schema:name "Kohlrabi (geschützter Anbau)"@de ;
     eCH-0265:cultivationCategory naebi:SPECIAL ;
-    skos:broader naebi:PRCRP ;
+    eCH-0265:cultivationSubCategory naebi:PRCRP ;
     skos:exactMatch cultivationtype:1043 .
 
 naebi:123 a eCH-0265:NutrientBalanceCrop ;
@@ -351,7 +351,7 @@ naebi:123 a eCH-0265:NutrientBalanceCrop ;
     schema:identifier "CROP_KOHLR" ;
     schema:name "Kohlrabi"@de ;
     eCH-0265:cultivationCategory naebi:SPECIAL ;
-    skos:broader naebi:OUTVG ;
+    eCH-0265:cultivationSubCategory naebi:OUTVG ;
     skos:exactMatch cultivationtype:86 .
 
 naebi:124 a eCH-0265:NutrientBalanceCrop ;
@@ -359,7 +359,7 @@ naebi:124 a eCH-0265:NutrientBalanceCrop ;
     schema:identifier "CROP_KOHP" ;
     schema:name "Kohlrabi Verarbeitungs-"@de ;
     eCH-0265:cultivationCategory naebi:SPECIAL ;
-    skos:broader naebi:OUTVG ;
+    eCH-0265:cultivationSubCategory naebi:OUTVG ;
     skos:exactMatch cultivationtype:1044 .
 
 naebi:125 a eCH-0265:NutrientBalanceCrop ;
@@ -367,7 +367,7 @@ naebi:125 a eCH-0265:NutrientBalanceCrop ;
     schema:identifier "CROP_KOHRA" ;
     schema:name "Bodenkohlrabi"@de ;
     eCH-0265:cultivationCategory naebi:SPECIAL ;
-    skos:broader naebi:OUTVG ;
+    eCH-0265:cultivationSubCategory naebi:OUTVG ;
     skos:exactMatch cultivationtype:84 .
 
 naebi:126 a eCH-0265:NutrientBalanceCrop ;
@@ -375,7 +375,7 @@ naebi:126 a eCH-0265:NutrientBalanceCrop ;
     schema:identifier "CROP_LAMBSS" ;
     schema:name "Nüsslisalat, Feldsalat"@de ;
     eCH-0265:cultivationCategory naebi:SPECIAL ;
-    skos:broader naebi:OUTVG ;
+    eCH-0265:cultivationSubCategory naebi:OUTVG ;
     skos:exactMatch cultivationtype:266 .
 
 naebi:127 a eCH-0265:NutrientBalanceCrop ;
@@ -383,7 +383,7 @@ naebi:127 a eCH-0265:NutrientBalanceCrop ;
     schema:identifier "CROP_LCROP" ;
     schema:name "Ölhanf"@de ;
     eCH-0265:cultivationCategory naebi:ARABLE ;
-    skos:broader naebi:DIVCR ;
+    eCH-0265:cultivationSubCategory naebi:DIVCR ;
     skos:exactMatch cultivationtype:1045 .
 
 naebi:128 a eCH-0265:NutrientBalanceCrop ;
@@ -391,7 +391,7 @@ naebi:128 a eCH-0265:NutrientBalanceCrop ;
     schema:identifier "CROP_LDYSM" ;
     schema:name "Frauenmantel"@de ;
     eCH-0265:cultivationCategory naebi:SPECIAL ;
-    skos:broader naebi:PRMCR ;
+    eCH-0265:cultivationSubCategory naebi:PRMCR ;
     skos:exactMatch cultivationtype:1046 .
 
 naebi:129 a eCH-0265:NutrientBalanceCrop ;
@@ -399,7 +399,7 @@ naebi:129 a eCH-0265:NutrientBalanceCrop ;
     schema:identifier "CROP_LEEKE" ;
     schema:name "Lauch, früh gepflanzt"@de ;
     eCH-0265:cultivationCategory naebi:SPECIAL ;
-    skos:broader naebi:PRCRP ;
+    eCH-0265:cultivationSubCategory naebi:PRCRP ;
     skos:exactMatch cultivationtype:1047 .
 
 naebi:13 a eCH-0265:NutrientBalanceCrop ;
@@ -407,7 +407,7 @@ naebi:13 a eCH-0265:NutrientBalanceCrop ;
     schema:identifier "CROP_BBREY" ;
     schema:name "Brombeeren, 3.0 kg/m2"@de ;
     eCH-0265:cultivationCategory naebi:SPECIAL ;
-    skos:broader naebi:PRMCR ;
+    eCH-0265:cultivationSubCategory naebi:PRMCR ;
     skos:exactMatch cultivationtype:1186 .
 
 naebi:130 a eCH-0265:NutrientBalanceCrop ;
@@ -415,7 +415,7 @@ naebi:130 a eCH-0265:NutrientBalanceCrop ;
     schema:identifier "CROP_LEEKL" ;
     schema:name "Lauch, spät gepflanzt"@de ;
     eCH-0265:cultivationCategory naebi:SPECIAL ;
-    skos:broader naebi:PRCRP ;
+    eCH-0265:cultivationSubCategory naebi:PRCRP ;
     skos:exactMatch cultivationtype:1048 .
 
 naebi:131 a eCH-0265:NutrientBalanceCrop ;
@@ -423,7 +423,7 @@ naebi:131 a eCH-0265:NutrientBalanceCrop ;
     schema:identifier "CROP_LEEKP" ;
     schema:name "Lauch (geschützter Anbau)"@de ;
     eCH-0265:cultivationCategory naebi:SPECIAL ;
-    skos:broader naebi:PRCRP ;
+    eCH-0265:cultivationSubCategory naebi:PRCRP ;
     skos:exactMatch cultivationtype:1049 .
 
 naebi:132 a eCH-0265:NutrientBalanceCrop ;
@@ -431,7 +431,7 @@ naebi:132 a eCH-0265:NutrientBalanceCrop ;
     schema:identifier "CROP_LEEKS" ;
     schema:name "Lauch"@de ;
     eCH-0265:cultivationCategory naebi:SPECIAL ;
-    skos:broader naebi:OUTVG ;
+    eCH-0265:cultivationSubCategory naebi:OUTVG ;
     skos:exactMatch cultivationtype:323 .
 
 naebi:133 a eCH-0265:NutrientBalanceCrop ;
@@ -439,7 +439,7 @@ naebi:133 a eCH-0265:NutrientBalanceCrop ;
     schema:identifier "CROP_LEEKSE" ;
     schema:name "Lauch, gesät"@de ;
     eCH-0265:cultivationCategory naebi:SPECIAL ;
-    skos:broader naebi:PRCRP ;
+    eCH-0265:cultivationSubCategory naebi:PRCRP ;
     skos:exactMatch cultivationtype:1050 .
 
 naebi:134 a eCH-0265:NutrientBalanceCrop ;
@@ -447,7 +447,7 @@ naebi:134 a eCH-0265:NutrientBalanceCrop ;
     schema:identifier "CROP_LEEKW" ;
     schema:name "Lauch, gepflanzt, Überwinterung"@de ;
     eCH-0265:cultivationCategory naebi:SPECIAL ;
-    skos:broader naebi:PRCRP ;
+    eCH-0265:cultivationSubCategory naebi:PRCRP ;
     skos:exactMatch cultivationtype:1051 .
 
 naebi:135 a eCH-0265:NutrientBalanceCrop ;
@@ -455,7 +455,7 @@ naebi:135 a eCH-0265:NutrientBalanceCrop ;
     schema:identifier "CROP_LGMPR" ;
     schema:name "Kleesamenproduktion"@de ;
     eCH-0265:cultivationCategory naebi:FODDER ;
-    skos:broader naebi:FORAG ;
+    eCH-0265:cultivationSubCategory naebi:FORAG ;
     skos:exactMatch cultivationtype:1052 .
 
 naebi:136 a eCH-0265:NutrientBalanceCrop ;
@@ -463,7 +463,7 @@ naebi:136 a eCH-0265:NutrientBalanceCrop ;
     schema:identifier "CROP_LGVGM" ;
     schema:name "Gründüngung Leguminosen (Freilandgemüse)"@de ;
     eCH-0265:cultivationCategory naebi:SPECIAL ;
-    skos:broader naebi:OUTVG ;
+    eCH-0265:cultivationSubCategory naebi:OUTVG ;
     skos:exactMatch cultivationtype:1053 .
 
 naebi:137 a eCH-0265:NutrientBalanceCrop ;
@@ -471,7 +471,7 @@ naebi:137 a eCH-0265:NutrientBalanceCrop ;
     schema:identifier "CROP_LINSD" ;
     schema:name "Buntbrache"@de ;
     eCH-0265:cultivationCategory naebi:ARABLE ;
-    skos:broader naebi:DIVCR ;
+    eCH-0265:cultivationSubCategory naebi:DIVCR ;
     skos:exactMatch cultivationtype:556 .
 
 naebi:138 a eCH-0265:NutrientBalanceCrop ;
@@ -479,7 +479,7 @@ naebi:138 a eCH-0265:NutrientBalanceCrop ;
     schema:identifier "CROP_LMBLM" ;
     schema:name "Zitronenmelisse"@de ;
     eCH-0265:cultivationCategory naebi:SPECIAL ;
-    skos:broader naebi:PRMCR ;
+    eCH-0265:cultivationSubCategory naebi:PRMCR ;
     skos:exactMatch cultivationtype:287 .
 
 naebi:139 a eCH-0265:NutrientBalanceCrop ;
@@ -487,7 +487,7 @@ naebi:139 a eCH-0265:NutrientBalanceCrop ;
     schema:identifier "CROP_LMNRM" ;
     schema:name "Indianernessel, Rosenmelisse"@de ;
     eCH-0265:cultivationCategory naebi:SPECIAL ;
-    skos:broader naebi:PRMCR ;
+    eCH-0265:cultivationSubCategory naebi:PRMCR ;
     skos:exactMatch cultivationtype:1055 .
 
 naebi:14 a eCH-0265:NutrientBalanceCrop ;
@@ -495,7 +495,7 @@ naebi:14 a eCH-0265:NutrientBalanceCrop ;
     schema:identifier "CROP_BEANP" ;
     schema:name "Bohnen, Verarbeitung-"@de ;
     eCH-0265:cultivationCategory naebi:SPECIAL ;
-    skos:broader naebi:OUTVG ;
+    eCH-0265:cultivationSubCategory naebi:OUTVG ;
     skos:exactMatch cultivationtype:1056 .
 
 naebi:140 a eCH-0265:NutrientBalanceCrop ;
@@ -503,7 +503,7 @@ naebi:140 a eCH-0265:NutrientBalanceCrop ;
     schema:identifier "CROP_LTTLG" ;
     schema:name "Salate Kopf-, Eisberg, Lollo (geschützter Anbau)"@de ;
     eCH-0265:cultivationCategory naebi:SPECIAL ;
-    skos:broader naebi:PRCRP ;
+    eCH-0265:cultivationSubCategory naebi:PRCRP ;
     skos:exactMatch cultivationtype:1058 .
 
 naebi:141 a eCH-0265:NutrientBalanceCrop ;
@@ -511,7 +511,7 @@ naebi:141 a eCH-0265:NutrientBalanceCrop ;
     schema:identifier "CROP_LVGGK" ;
     schema:name "Liebstöckel / Maggikraut"@de ;
     eCH-0265:cultivationCategory naebi:SPECIAL ;
-    skos:broader naebi:PRMCR ;
+    eCH-0265:cultivationSubCategory naebi:PRMCR ;
     skos:exactMatch cultivationtype:479 .
 
 naebi:142 a eCH-0265:NutrientBalanceCrop ;
@@ -519,7 +519,7 @@ naebi:142 a eCH-0265:NutrientBalanceCrop ;
     schema:identifier "CROP_MELON" ;
     schema:name "Melone"@de ;
     eCH-0265:cultivationCategory naebi:SPECIAL ;
-    skos:broader naebi:OUTVG ;
+    eCH-0265:cultivationSubCategory naebi:OUTVG ;
     skos:exactMatch cultivationtype:297 .
 
 naebi:143 a eCH-0265:NutrientBalanceCrop ;
@@ -527,7 +527,7 @@ naebi:143 a eCH-0265:NutrientBalanceCrop ;
     schema:identifier "CROP_MILLE" ;
     schema:name "Getreide-Silage mit Leguminosen"@de ;
     eCH-0265:cultivationCategory naebi:FODDER ;
-    skos:broader naebi:GRAIN ;
+    eCH-0265:cultivationSubCategory naebi:GRAIN ;
     skos:exactMatch cultivationtype:1031 .
 
 naebi:144 a eCH-0265:NutrientBalanceCrop ;
@@ -535,7 +535,7 @@ naebi:144 a eCH-0265:NutrientBalanceCrop ;
     schema:identifier "CROP_MLKTL" ;
     schema:name "Andorn"@de ;
     eCH-0265:cultivationCategory naebi:SPECIAL ;
-    skos:broader naebi:PRMCR ;
+    eCH-0265:cultivationSubCategory naebi:PRMCR ;
     skos:exactMatch cultivationtype:1059 .
 
 naebi:145 a eCH-0265:NutrientBalanceCrop ;
@@ -543,7 +543,7 @@ naebi:145 a eCH-0265:NutrientBalanceCrop ;
     schema:identifier "CROP_MRJRM" ;
     schema:name "Majoran"@de ;
     eCH-0265:cultivationCategory naebi:SPECIAL ;
-    skos:broader naebi:OUTVG ;
+    eCH-0265:cultivationSubCategory naebi:OUTVG ;
     skos:exactMatch cultivationtype:295 .
 
 naebi:146 a eCH-0265:NutrientBalanceCrop ;
@@ -551,7 +551,7 @@ naebi:146 a eCH-0265:NutrientBalanceCrop ;
     schema:identifier "CROP_MRSHW" ;
     schema:name "Eibisch"@de ;
     eCH-0265:cultivationCategory naebi:SPECIAL ;
-    skos:broader naebi:OUTVG ;
+    eCH-0265:cultivationSubCategory naebi:OUTVG ;
     skos:exactMatch cultivationtype:1061 .
 
 naebi:147 a eCH-0265:NutrientBalanceCrop ;
@@ -559,7 +559,7 @@ naebi:147 a eCH-0265:NutrientBalanceCrop ;
     schema:identifier "CROP_MSELV" ;
     schema:name "Selve gepflegt"@de ;
     eCH-0265:cultivationCategory naebi:SPECIAL ;
-    skos:broader naebi:PRMCR ;
+    eCH-0265:cultivationSubCategory naebi:PRMCR ;
     skos:exactMatch cultivationtype:716 .
 
 naebi:148 a eCH-0265:NutrientBalanceCrop ;
@@ -567,7 +567,7 @@ naebi:148 a eCH-0265:NutrientBalanceCrop ;
     schema:identifier "CROP_MSHML" ;
     schema:name "Eisenkraut"@de ;
     eCH-0265:cultivationCategory naebi:SPECIAL ;
-    skos:broader naebi:PRMCR ;
+    eCH-0265:cultivationSubCategory naebi:PRMCR ;
     skos:exactMatch cultivationtype:1062 .
 
 naebi:149 a eCH-0265:NutrientBalanceCrop ;
@@ -575,7 +575,7 @@ naebi:149 a eCH-0265:NutrientBalanceCrop ;
     schema:identifier "CROP_MULBER" ;
     schema:name "Maulbeerbaumanlagen (Fütterung Seidenraupen)"@de ;
     eCH-0265:cultivationCategory naebi:SPECIAL ;
-    skos:broader naebi:PRMCR ;
+    eCH-0265:cultivationSubCategory naebi:PRMCR ;
     skos:exactMatch cultivationtype:719 .
 
 naebi:15 a eCH-0265:NutrientBalanceCrop ;
@@ -583,7 +583,7 @@ naebi:15 a eCH-0265:NutrientBalanceCrop ;
     schema:identifier "CROP_BEETS" ;
     schema:name "Randen"@de ;
     eCH-0265:cultivationCategory naebi:SPECIAL ;
-    skos:broader naebi:OUTVG ;
+    eCH-0265:cultivationSubCategory naebi:OUTVG ;
     skos:exactMatch cultivationtype:151 .
 
 naebi:150 a eCH-0265:NutrientBalanceCrop ;
@@ -591,7 +591,7 @@ naebi:150 a eCH-0265:NutrientBalanceCrop ;
     schema:identifier "CROP_NCROP" ;
     schema:name "Kenaf"@de ;
     eCH-0265:cultivationCategory naebi:ARABLE ;
-    skos:broader naebi:DIVCR ;
+    eCH-0265:cultivationSubCategory naebi:DIVCR ;
     skos:exactMatch cultivationtype:1063 .
 
 naebi:151 a eCH-0265:NutrientBalanceCrop ;
@@ -599,7 +599,7 @@ naebi:151 a eCH-0265:NutrientBalanceCrop ;
     schema:identifier "CROP_NLGMV" ;
     schema:name "Gründüngung Nichtleguminosen (Freilandgemüse)"@de ;
     eCH-0265:cultivationCategory naebi:SPECIAL ;
-    skos:broader naebi:OUTVG ;
+    eCH-0265:cultivationSubCategory naebi:OUTVG ;
     skos:exactMatch cultivationtype:1064 .
 
 naebi:152 a eCH-0265:NutrientBalanceCrop ;
@@ -607,7 +607,7 @@ naebi:152 a eCH-0265:NutrientBalanceCrop ;
     schema:identifier "CROP_NTT01" ;
     schema:name "Nussbäume, 0.01 ha/Baum"@de ;
     eCH-0265:cultivationCategory naebi:SPECIAL ;
-    skos:broader naebi:ECOBL ;
+    eCH-0265:cultivationSubCategory naebi:ECOBL ;
     skos:exactMatch cultivationtype:922 .
 
 naebi:153 a eCH-0265:NutrientBalanceCrop ;
@@ -615,7 +615,7 @@ naebi:153 a eCH-0265:NutrientBalanceCrop ;
     schema:identifier "CROP_NURFRU" ;
     schema:name "Baumschulen für den Erwerbsobstbau (hohe Pflanzendichte)"@de ;
     eCH-0265:cultivationCategory naebi:SPECIAL ;
-    skos:broader naebi:PRMCR ;
+    eCH-0265:cultivationSubCategory naebi:PRMCR ;
     skos:exactMatch cultivationtype:1066 .
 
 naebi:154 a eCH-0265:NutrientBalanceCrop ;
@@ -623,7 +623,7 @@ naebi:154 a eCH-0265:NutrientBalanceCrop ;
     schema:identifier "CROP_NURSRY" ;
     schema:name "Baumschulen"@de ;
     eCH-0265:cultivationCategory naebi:SPECIAL ;
-    skos:broader naebi:PRMCR ;
+    eCH-0265:cultivationSubCategory naebi:PRMCR ;
     skos:exactMatch cultivationtype:1067 .
 
 naebi:155 a eCH-0265:NutrientBalanceCrop ;
@@ -631,7 +631,7 @@ naebi:155 a eCH-0265:NutrientBalanceCrop ;
     schema:identifier "CROP_OAFNLN" ;
     schema:name "Naturwiese wenig intensiv"@de ;
     eCH-0265:cultivationCategory naebi:FODDER ;
-    skos:broader naebi:FORAG ;
+    eCH-0265:cultivationSubCategory naebi:FORAG ;
     skos:exactMatch cultivationtype:612 .
 
 naebi:156 a eCH-0265:NutrientBalanceCrop ;
@@ -639,7 +639,7 @@ naebi:156 a eCH-0265:NutrientBalanceCrop ;
     schema:identifier "CROP_OAFNT" ;
     schema:name "Nützlingsstreifen (DK)"@de ;
     eCH-0265:cultivationCategory naebi:ARABLE ;
-    skos:broader naebi:PRMCR ;
+    eCH-0265:cultivationSubCategory naebi:PRMCR ;
     skos:exactMatch cultivationtype:1023 .
 
 naebi:157 a eCH-0265:NutrientBalanceCrop ;
@@ -647,7 +647,7 @@ naebi:157 a eCH-0265:NutrientBalanceCrop ;
     schema:identifier "CROP_OAFNTN" ;
     schema:name "Naturwiese extensiv"@de ;
     eCH-0265:cultivationCategory naebi:FODDER ;
-    skos:broader naebi:FORAG ;
+    eCH-0265:cultivationSubCategory naebi:FORAG ;
     skos:exactMatch cultivationtype:611 .
 
 naebi:158 a eCH-0265:NutrientBalanceCrop ;
@@ -655,7 +655,7 @@ naebi:158 a eCH-0265:NutrientBalanceCrop ;
     schema:identifier "CROP_ONION" ;
     schema:name "Zwiebeln"@de ;
     eCH-0265:cultivationCategory naebi:SPECIAL ;
-    skos:broader naebi:OUTVG ;
+    eCH-0265:cultivationSubCategory naebi:OUTVG ;
     skos:exactMatch cultivationtype:277 .
 
 naebi:159 a eCH-0265:NutrientBalanceCrop ;
@@ -663,7 +663,7 @@ naebi:159 a eCH-0265:NutrientBalanceCrop ;
     schema:identifier "CROP_ORGMN" ;
     schema:name "Orangenminze"@de ;
     eCH-0265:cultivationCategory naebi:SPECIAL ;
-    skos:broader naebi:PRMCR ;
+    eCH-0265:cultivationSubCategory naebi:PRMCR ;
     skos:exactMatch cultivationtype:1068 .
 
 naebi:16 a eCH-0265:NutrientBalanceCrop ;
@@ -671,14 +671,14 @@ naebi:16 a eCH-0265:NutrientBalanceCrop ;
     schema:identifier "CROP_BERBL" ;
     schema:name "betriebseigenes verfütt. Rübenblatt, ha"@de ;
     eCH-0265:cultivationCategory naebi:FODDER ;
-    skos:broader naebi:FORAG .
+    eCH-0265:cultivationSubCategory naebi:FORAG .
 
 naebi:160 a eCH-0265:NutrientBalanceCrop ;
     skos:inScheme naebi:ConceptScheme ;
     schema:identifier "CROP_ORGNO" ;
     schema:name "Oregano"@de ;
     eCH-0265:cultivationCategory naebi:SPECIAL ;
-    skos:broader naebi:PRMCR ;
+    eCH-0265:cultivationSubCategory naebi:PRMCR ;
     skos:exactMatch cultivationtype:334 .
 
 naebi:161 a eCH-0265:NutrientBalanceCrop ;
@@ -686,7 +686,7 @@ naebi:161 a eCH-0265:NutrientBalanceCrop ;
     schema:identifier "CROP_ORNSTB" ;
     schema:name "Ziersträucher, -gehölze, -stauden"@de ;
     eCH-0265:cultivationCategory naebi:SPECIAL ;
-    skos:broader naebi:PRMCR ;
+    eCH-0265:cultivationSubCategory naebi:PRMCR ;
     skos:exactMatch cultivationtype:714 .
 
 naebi:162 a eCH-0265:NutrientBalanceCrop ;
@@ -694,7 +694,7 @@ naebi:162 a eCH-0265:NutrientBalanceCrop ;
     schema:identifier "CROP_PAKCH" ;
     schema:name "Pak Choi"@de ;
     eCH-0265:cultivationCategory naebi:SPECIAL ;
-    skos:broader naebi:PRCRP ;
+    eCH-0265:cultivationSubCategory naebi:PRCRP ;
     skos:exactMatch cultivationtype:325 .
 
 naebi:163 a eCH-0265:NutrientBalanceCrop ;
@@ -702,7 +702,7 @@ naebi:163 a eCH-0265:NutrientBalanceCrop ;
     schema:identifier "CROP_PANSY" ;
     schema:name "Viola (Stiefmütterchen)"@de ;
     eCH-0265:cultivationCategory naebi:SPECIAL ;
-    skos:broader naebi:OUTVG ;
+    eCH-0265:cultivationSubCategory naebi:OUTVG ;
     skos:exactMatch cultivationtype:1070 .
 
 naebi:164 a eCH-0265:NutrientBalanceCrop ;
@@ -710,7 +710,7 @@ naebi:164 a eCH-0265:NutrientBalanceCrop ;
     schema:identifier "CROP_PAPSC" ;
     schema:name "Paprika, Bodenkulturen (geschützter Anbau)"@de ;
     eCH-0265:cultivationCategory naebi:SPECIAL ;
-    skos:broader naebi:PRCRP ;
+    eCH-0265:cultivationSubCategory naebi:PRCRP ;
     skos:exactMatch cultivationtype:1071 .
 
 naebi:165 a eCH-0265:NutrientBalanceCrop ;
@@ -718,7 +718,7 @@ naebi:165 a eCH-0265:NutrientBalanceCrop ;
     schema:identifier "CROP_PARSC" ;
     schema:name "Petersilie, je weiterem Schnitt"@de ;
     eCH-0265:cultivationCategory naebi:SPECIAL ;
-    skos:broader naebi:OUTVG ;
+    eCH-0265:cultivationSubCategory naebi:OUTVG ;
     skos:exactMatch cultivationtype:1072 .
 
 naebi:166 a eCH-0265:NutrientBalanceCrop ;
@@ -726,7 +726,7 @@ naebi:166 a eCH-0265:NutrientBalanceCrop ;
     schema:identifier "CROP_PARSR" ;
     schema:name "Petersilienwurzeln"@de ;
     eCH-0265:cultivationCategory naebi:SPECIAL ;
-    skos:broader naebi:OUTVG ;
+    eCH-0265:cultivationSubCategory naebi:OUTVG ;
     skos:exactMatch cultivationtype:306 .
 
 naebi:167 a eCH-0265:NutrientBalanceCrop ;
@@ -734,7 +734,7 @@ naebi:167 a eCH-0265:NutrientBalanceCrop ;
     schema:identifier "CROP_PARSY" ;
     schema:name "Petersilie, bis zum ersten Schnitt"@de ;
     eCH-0265:cultivationCategory naebi:SPECIAL ;
-    skos:broader naebi:OUTVG ;
+    eCH-0265:cultivationSubCategory naebi:OUTVG ;
     skos:exactMatch cultivationtype:1073 .
 
 naebi:168 a eCH-0265:NutrientBalanceCrop ;
@@ -742,7 +742,7 @@ naebi:168 a eCH-0265:NutrientBalanceCrop ;
     schema:identifier "CROP_PEAKE" ;
     schema:name "Erbsen, Kefen"@de ;
     eCH-0265:cultivationCategory naebi:SPECIAL ;
-    skos:broader naebi:OUTVG ;
+    eCH-0265:cultivationSubCategory naebi:OUTVG ;
     skos:exactMatch cultivationtype:1075 .
 
 naebi:169 a eCH-0265:NutrientBalanceCrop ;
@@ -750,7 +750,7 @@ naebi:169 a eCH-0265:NutrientBalanceCrop ;
     schema:identifier "CROP_PEAP" ;
     schema:name "Erbsen, Verarbeitung-"@de ;
     eCH-0265:cultivationCategory naebi:SPECIAL ;
-    skos:broader naebi:OUTVG ;
+    eCH-0265:cultivationSubCategory naebi:OUTVG ;
     skos:exactMatch cultivationtype:1076 .
 
 naebi:17 a eCH-0265:NutrientBalanceCrop ;
@@ -758,7 +758,7 @@ naebi:17 a eCH-0265:NutrientBalanceCrop ;
     schema:identifier "CROP_BLACK4" ;
     schema:name "Brombeeren, 4.0 kg/m2"@de ;
     eCH-0265:cultivationCategory naebi:SPECIAL ;
-    skos:broader naebi:PRMCR ;
+    eCH-0265:cultivationSubCategory naebi:PRMCR ;
     skos:exactMatch cultivationtype:1187 .
 
 naebi:170 a eCH-0265:NutrientBalanceCrop ;
@@ -766,7 +766,7 @@ naebi:170 a eCH-0265:NutrientBalanceCrop ;
     schema:identifier "CROP_PEXT" ;
     schema:name "Weide extensiv"@de ;
     eCH-0265:cultivationCategory naebi:FODDER ;
-    skos:broader naebi:FORAG ;
+    eCH-0265:cultivationSubCategory naebi:FORAG ;
     skos:exactMatch cultivationtype:617 .
 
 naebi:171 a eCH-0265:NutrientBalanceCrop ;
@@ -774,7 +774,7 @@ naebi:171 a eCH-0265:NutrientBalanceCrop ;
     schema:identifier "CROP_PFREY" ;
     schema:name "Pfirsichanlage, hoher Ertrag"@de ;
     eCH-0265:cultivationCategory naebi:SPECIAL ;
-    skos:broader naebi:PRMCR ;
+    eCH-0265:cultivationSubCategory naebi:PRMCR ;
     skos:exactMatch cultivationtype:1077 .
 
 naebi:172 a eCH-0265:NutrientBalanceCrop ;
@@ -782,7 +782,7 @@ naebi:172 a eCH-0265:NutrientBalanceCrop ;
     schema:identifier "CROP_PFRPL" ;
     schema:name "Pfirsichanlage"@de ;
     eCH-0265:cultivationCategory naebi:SPECIAL ;
-    skos:broader naebi:PRMCR ;
+    eCH-0265:cultivationSubCategory naebi:PRMCR ;
     skos:exactMatch cultivationtype:1078 .
 
 naebi:173 a eCH-0265:NutrientBalanceCrop ;
@@ -790,7 +790,7 @@ naebi:173 a eCH-0265:NutrientBalanceCrop ;
     schema:identifier "CROP_PICKL" ;
     schema:name "Gurken, Essiggurken"@de ;
     eCH-0265:cultivationCategory naebi:SPECIAL ;
-    skos:broader naebi:OUTVG ;
+    eCH-0265:cultivationSubCategory naebi:OUTVG ;
     skos:exactMatch cultivationtype:1079 .
 
 naebi:174 a eCH-0265:NutrientBalanceCrop ;
@@ -798,7 +798,7 @@ naebi:174 a eCH-0265:NutrientBalanceCrop ;
     schema:identifier "CROP_PINTE" ;
     schema:name "Weide (Mäh-) intensiv"@de ;
     eCH-0265:cultivationCategory naebi:FODDER ;
-    skos:broader naebi:FORAG ;
+    eCH-0265:cultivationSubCategory naebi:FORAG ;
     skos:exactMatch cultivationtype:1080 .
 
 naebi:175 a eCH-0265:NutrientBalanceCrop ;
@@ -806,7 +806,7 @@ naebi:175 a eCH-0265:NutrientBalanceCrop ;
     schema:identifier "CROP_PLBNP" ;
     schema:name "Bohnen Stangen- (geschützter Anbau)"@de ;
     eCH-0265:cultivationCategory naebi:SPECIAL ;
-    skos:broader naebi:PRCRP ;
+    eCH-0265:cultivationSubCategory naebi:PRCRP ;
     skos:exactMatch cultivationtype:1081 .
 
 naebi:176 a eCH-0265:NutrientBalanceCrop ;
@@ -814,7 +814,7 @@ naebi:176 a eCH-0265:NutrientBalanceCrop ;
     schema:identifier "CROP_PLMEY" ;
     schema:name "Zwetschgenanlage, hoher Ertrag"@de ;
     eCH-0265:cultivationCategory naebi:SPECIAL ;
-    skos:broader naebi:PRMCR ;
+    eCH-0265:cultivationSubCategory naebi:PRMCR ;
     skos:exactMatch cultivationtype:1082 .
 
 naebi:177 a eCH-0265:NutrientBalanceCrop ;
@@ -822,7 +822,7 @@ naebi:177 a eCH-0265:NutrientBalanceCrop ;
     schema:identifier "CROP_PLMPL" ;
     schema:name "Zwetschgenanlage"@de ;
     eCH-0265:cultivationCategory naebi:SPECIAL ;
-    skos:broader naebi:PRMCR ;
+    eCH-0265:cultivationSubCategory naebi:PRMCR ;
     skos:exactMatch cultivationtype:1083 .
 
 naebi:178 a eCH-0265:NutrientBalanceCrop ;
@@ -830,7 +830,7 @@ naebi:178 a eCH-0265:NutrientBalanceCrop ;
     schema:identifier "CROP_PLTNL" ;
     schema:name "Spitzwegerich"@de ;
     eCH-0265:cultivationCategory naebi:SPECIAL ;
-    skos:broader naebi:OUTVG ;
+    eCH-0265:cultivationSubCategory naebi:OUTVG ;
     skos:exactMatch cultivationtype:206 .
 
 naebi:179 a eCH-0265:NutrientBalanceCrop ;
@@ -838,7 +838,7 @@ naebi:179 a eCH-0265:NutrientBalanceCrop ;
     schema:identifier "CROP_PMEDI" ;
     schema:name "Weide (Mäh-) mittelintensiv"@de ;
     eCH-0265:cultivationCategory naebi:FODDER ;
-    skos:broader naebi:FORAG ;
+    eCH-0265:cultivationSubCategory naebi:FORAG ;
     skos:exactMatch cultivationtype:1085 .
 
 naebi:18 a eCH-0265:NutrientBalanceCrop ;
@@ -846,7 +846,7 @@ naebi:18 a eCH-0265:NutrientBalanceCrop ;
     schema:identifier "CROP_BLKBRY" ;
     schema:name "Brombeeren, 2.0 kg/m2"@de ;
     eCH-0265:cultivationCategory naebi:SPECIAL ;
-    skos:broader naebi:PRMCR ;
+    eCH-0265:cultivationSubCategory naebi:PRMCR ;
     skos:exactMatch cultivationtype:1185 .
 
 naebi:180 a eCH-0265:NutrientBalanceCrop ;
@@ -854,7 +854,7 @@ naebi:180 a eCH-0265:NutrientBalanceCrop ;
     schema:identifier "CROP_PMLAW" ;
     schema:name "Schlüsselblume (ganze Pflanze)"@de ;
     eCH-0265:cultivationCategory naebi:SPECIAL ;
-    skos:broader naebi:PRMCR ;
+    eCH-0265:cultivationSubCategory naebi:PRMCR ;
     skos:exactMatch cultivationtype:1086 .
 
 naebi:181 a eCH-0265:NutrientBalanceCrop ;
@@ -862,7 +862,7 @@ naebi:181 a eCH-0265:NutrientBalanceCrop ;
     schema:identifier "CROP_POPEY" ;
     schema:name "Kernobstanlage, hoher Ertrag"@de ;
     eCH-0265:cultivationCategory naebi:SPECIAL ;
-    skos:broader naebi:PRMCR ;
+    eCH-0265:cultivationSubCategory naebi:PRMCR ;
     skos:exactMatch cultivationtype:1087 .
 
 naebi:182 a eCH-0265:NutrientBalanceCrop ;
@@ -870,7 +870,7 @@ naebi:182 a eCH-0265:NutrientBalanceCrop ;
     schema:identifier "CROP_POPFR" ;
     schema:name "Kernobstanlage"@de ;
     eCH-0265:cultivationCategory naebi:SPECIAL ;
-    skos:broader naebi:PRMCR ;
+    eCH-0265:cultivationSubCategory naebi:PRMCR ;
     skos:exactMatch cultivationtype:1088 .
 
 naebi:183 a eCH-0265:NutrientBalanceCrop ;
@@ -878,7 +878,7 @@ naebi:183 a eCH-0265:NutrientBalanceCrop ;
     schema:identifier "CROP_POTEA" ;
     schema:name "Kartoffeln (b), Früh-"@de ;
     eCH-0265:cultivationCategory naebi:ARABLE ;
-    skos:broader naebi:RTCRP ;
+    eCH-0265:cultivationSubCategory naebi:RTCRP ;
     skos:exactMatch cultivationtype:1308 .
 
 naebi:184 a eCH-0265:NutrientBalanceCrop ;
@@ -886,7 +886,7 @@ naebi:184 a eCH-0265:NutrientBalanceCrop ;
     schema:identifier "CROP_POTPC" ;
     schema:name "Kartoffeln (a), Speise-, Verarbeitungs-"@de ;
     eCH-0265:cultivationCategory naebi:ARABLE ;
-    skos:broader naebi:RTCRP ;
+    eCH-0265:cultivationSubCategory naebi:RTCRP ;
     skos:exactMatch cultivationtype:1304 .
 
 naebi:185 a eCH-0265:NutrientBalanceCrop ;
@@ -894,7 +894,7 @@ naebi:185 a eCH-0265:NutrientBalanceCrop ;
     schema:identifier "CROP_POTPE" ;
     schema:name "Kartoffeln (b), Pflanz-"@de ;
     eCH-0265:cultivationCategory naebi:ARABLE ;
-    skos:broader naebi:RTCRP ;
+    eCH-0265:cultivationSubCategory naebi:RTCRP ;
     skos:exactMatch cultivationtype:1311 .
 
 naebi:186 a eCH-0265:NutrientBalanceCrop ;
@@ -902,7 +902,7 @@ naebi:186 a eCH-0265:NutrientBalanceCrop ;
     schema:identifier "CROP_POTPFA" ;
     schema:name "Kartoffeln (c), Speise-, Verarbeitungs-"@de ;
     eCH-0265:cultivationCategory naebi:ARABLE ;
-    skos:broader naebi:RTCRP ;
+    eCH-0265:cultivationSubCategory naebi:RTCRP ;
     skos:exactMatch cultivationtype:1306 .
 
 naebi:187 a eCH-0265:NutrientBalanceCrop ;
@@ -910,7 +910,7 @@ naebi:187 a eCH-0265:NutrientBalanceCrop ;
     schema:identifier "CROP_POTPFB" ;
     schema:name "Kartoffeln (c), Pflanz-"@de ;
     eCH-0265:cultivationCategory naebi:ARABLE ;
-    skos:broader naebi:RTCRP ;
+    eCH-0265:cultivationSubCategory naebi:RTCRP ;
     skos:exactMatch cultivationtype:1312 .
 
 naebi:188 a eCH-0265:NutrientBalanceCrop ;
@@ -918,7 +918,7 @@ naebi:188 a eCH-0265:NutrientBalanceCrop ;
     schema:identifier "CROP_POTPFC" ;
     schema:name "Kartoffeln (a), Pflanz-"@de ;
     eCH-0265:cultivationCategory naebi:ARABLE ;
-    skos:broader naebi:RTCRP ;
+    eCH-0265:cultivationSubCategory naebi:RTCRP ;
     skos:exactMatch cultivationtype:1310 .
 
 naebi:189 a eCH-0265:NutrientBalanceCrop ;
@@ -926,7 +926,7 @@ naebi:189 a eCH-0265:NutrientBalanceCrop ;
     schema:identifier "CROP_POTPFD" ;
     schema:name "Kartoffeln (a), Früh-"@de ;
     eCH-0265:cultivationCategory naebi:ARABLE ;
-    skos:broader naebi:RTCRP ;
+    eCH-0265:cultivationSubCategory naebi:RTCRP ;
     skos:exactMatch cultivationtype:1307 .
 
 naebi:19 a eCH-0265:NutrientBalanceCrop ;
@@ -934,7 +934,7 @@ naebi:19 a eCH-0265:NutrientBalanceCrop ;
     schema:identifier "CROP_BLKEL" ;
     schema:name "Schwarzer Holunder"@de ;
     eCH-0265:cultivationCategory naebi:SPECIAL ;
-    skos:broader naebi:PRMCR ;
+    eCH-0265:cultivationSubCategory naebi:PRMCR ;
     skos:exactMatch cultivationtype:161 .
 
 naebi:190 a eCH-0265:NutrientBalanceCrop ;
@@ -942,7 +942,7 @@ naebi:190 a eCH-0265:NutrientBalanceCrop ;
     schema:identifier "CROP_POTPFE" ;
     schema:name "Kartoffeln (c), Früh-"@de ;
     eCH-0265:cultivationCategory naebi:ARABLE ;
-    skos:broader naebi:RTCRP ;
+    eCH-0265:cultivationSubCategory naebi:RTCRP ;
     skos:exactMatch cultivationtype:1309 .
 
 naebi:191 a eCH-0265:NutrientBalanceCrop ;
@@ -950,7 +950,7 @@ naebi:191 a eCH-0265:NutrientBalanceCrop ;
     schema:identifier "CROP_POTPP" ;
     schema:name "Kartoffeln (b), Speise-, Verarbeitungs-"@de ;
     eCH-0265:cultivationCategory naebi:ARABLE ;
-    skos:broader naebi:RTCRP ;
+    eCH-0265:cultivationSubCategory naebi:RTCRP ;
     skos:exactMatch cultivationtype:1305 .
 
 naebi:192 a eCH-0265:NutrientBalanceCrop ;
@@ -958,7 +958,7 @@ naebi:192 a eCH-0265:NutrientBalanceCrop ;
     schema:identifier "CROP_PPMNT" ;
     schema:name "Pfefferminze"@de ;
     eCH-0265:cultivationCategory naebi:SPECIAL ;
-    skos:broader naebi:PRMCR ;
+    eCH-0265:cultivationSubCategory naebi:PRMCR ;
     skos:exactMatch cultivationtype:1091 .
 
 naebi:193 a eCH-0265:NutrientBalanceCrop ;
@@ -966,7 +966,7 @@ naebi:193 a eCH-0265:NutrientBalanceCrop ;
     schema:identifier "CROP_PRLYP" ;
     schema:name "Petersilie (geschützter Anbau)"@de ;
     eCH-0265:cultivationCategory naebi:SPECIAL ;
-    skos:broader naebi:PRCRP ;
+    eCH-0265:cultivationSubCategory naebi:PRCRP ;
     skos:exactMatch cultivationtype:1092 .
 
 naebi:194 a eCH-0265:NutrientBalanceCrop ;
@@ -974,7 +974,7 @@ naebi:194 a eCH-0265:NutrientBalanceCrop ;
     schema:identifier "CROP_PROBE" ;
     schema:name "Ackerbohnen"@de ;
     eCH-0265:cultivationCategory naebi:ARABLE ;
-    skos:broader naebi:RTCRP ;
+    eCH-0265:cultivationSubCategory naebi:RTCRP ;
     skos:exactMatch cultivationtype:468 .
 
 naebi:195 a eCH-0265:NutrientBalanceCrop ;
@@ -982,7 +982,7 @@ naebi:195 a eCH-0265:NutrientBalanceCrop ;
     schema:identifier "CROP_PRSNP" ;
     schema:name "Pastinake"@de ;
     eCH-0265:cultivationCategory naebi:SPECIAL ;
-    skos:broader naebi:OUTVG ;
+    eCH-0265:cultivationSubCategory naebi:OUTVG ;
     skos:exactMatch cultivationtype:129 .
 
 naebi:196 a eCH-0265:NutrientBalanceCrop ;
@@ -990,7 +990,7 @@ naebi:196 a eCH-0265:NutrientBalanceCrop ;
     schema:identifier "CROP_PUMPK" ;
     schema:name "Kürbis"@de ;
     eCH-0265:cultivationCategory naebi:SPECIAL ;
-    skos:broader naebi:OUTVG ;
+    eCH-0265:cultivationSubCategory naebi:OUTVG ;
     skos:exactMatch cultivationtype:1093 .
 
 naebi:197 a eCH-0265:NutrientBalanceCrop ;
@@ -998,7 +998,7 @@ naebi:197 a eCH-0265:NutrientBalanceCrop ;
     schema:identifier "CROP_PURSLA" ;
     schema:name "Portulak (geschützter Anbau)"@de ;
     eCH-0265:cultivationCategory naebi:SPECIAL ;
-    skos:broader naebi:PRCRP ;
+    eCH-0265:cultivationSubCategory naebi:PRCRP ;
     skos:exactMatch cultivationtype:1094 .
 
 naebi:198 a eCH-0265:NutrientBalanceCrop ;
@@ -1006,7 +1006,7 @@ naebi:198 a eCH-0265:NutrientBalanceCrop ;
     schema:identifier "CROP_PWINT" ;
     schema:name "Weide wenig intensiv"@de ;
     eCH-0265:cultivationCategory naebi:FODDER ;
-    skos:broader naebi:FORAG ;
+    eCH-0265:cultivationSubCategory naebi:FORAG ;
     skos:exactMatch cultivationtype:1126 .
 
 naebi:199 a eCH-0265:NutrientBalanceCrop ;
@@ -1014,7 +1014,7 @@ naebi:199 a eCH-0265:NutrientBalanceCrop ;
     schema:identifier "CROP_QUINO" ;
     schema:name "Quinoa"@de ;
     eCH-0265:cultivationCategory naebi:ARABLE ;
-    skos:broader naebi:GRAIN ;
+    eCH-0265:cultivationSubCategory naebi:GRAIN ;
     skos:exactMatch cultivationtype:574 .
 
 naebi:2 a eCH-0265:NutrientBalanceCrop ;
@@ -1022,7 +1022,7 @@ naebi:2 a eCH-0265:NutrientBalanceCrop ;
     schema:identifier "CROP_ACBOE" ;
     schema:name "Süsslupinen"@de ;
     eCH-0265:cultivationCategory naebi:ARABLE ;
-    skos:broader naebi:DIVCR ;
+    eCH-0265:cultivationSubCategory naebi:DIVCR ;
     skos:exactMatch cultivationtype:1095 .
 
 naebi:20 a eCH-0265:NutrientBalanceCrop ;
@@ -1030,7 +1030,7 @@ naebi:20 a eCH-0265:NutrientBalanceCrop ;
     schema:identifier "CROP_BLKSAL" ;
     schema:name "Schwarzwurzel"@de ;
     eCH-0265:cultivationCategory naebi:SPECIAL ;
-    skos:broader naebi:OUTVG ;
+    eCH-0265:cultivationSubCategory naebi:OUTVG ;
     skos:exactMatch cultivationtype:92 .
 
 naebi:200 a eCH-0265:NutrientBalanceCrop ;
@@ -1038,7 +1038,7 @@ naebi:200 a eCH-0265:NutrientBalanceCrop ;
     schema:identifier "CROP_RAD10B" ;
     schema:name "Radies 10 Bund/m2"@de ;
     eCH-0265:cultivationCategory naebi:SPECIAL ;
-    skos:broader naebi:OUTVG ;
+    eCH-0265:cultivationSubCategory naebi:OUTVG ;
     skos:exactMatch cultivationtype:1208 .
 
 naebi:201 a eCH-0265:NutrientBalanceCrop ;
@@ -1046,7 +1046,7 @@ naebi:201 a eCH-0265:NutrientBalanceCrop ;
     schema:identifier "CROP_RAD18" ;
     schema:name "Rettich 18 Stk/m2 (geschützter Anbau)"@de ;
     eCH-0265:cultivationCategory naebi:SPECIAL ;
-    skos:broader naebi:PRCRP ;
+    eCH-0265:cultivationSubCategory naebi:PRCRP ;
     skos:exactMatch cultivationtype:1209 .
 
 naebi:202 a eCH-0265:NutrientBalanceCrop ;
@@ -1054,7 +1054,7 @@ naebi:202 a eCH-0265:NutrientBalanceCrop ;
     schema:identifier "CROP_RAD20" ;
     schema:name "Radies 20 Bund/m2 (geschützter Anbau)"@de ;
     eCH-0265:cultivationCategory naebi:SPECIAL ;
-    skos:broader naebi:PRCRP ;
+    eCH-0265:cultivationSubCategory naebi:PRCRP ;
     skos:exactMatch cultivationtype:1210 .
 
 naebi:203 a eCH-0265:NutrientBalanceCrop ;
@@ -1062,7 +1062,7 @@ naebi:203 a eCH-0265:NutrientBalanceCrop ;
     schema:identifier "CROP_RAD89S" ;
     schema:name "Rettich 8-9 Stk/m2"@de ;
     eCH-0265:cultivationCategory naebi:SPECIAL ;
-    skos:broader naebi:OUTVG ;
+    eCH-0265:cultivationSubCategory naebi:OUTVG ;
     skos:exactMatch cultivationtype:1211 .
 
 naebi:204 a eCH-0265:NutrientBalanceCrop ;
@@ -1070,7 +1070,7 @@ naebi:204 a eCH-0265:NutrientBalanceCrop ;
     schema:identifier "CROP_RADCH" ;
     schema:name "Cicorino rosso, Radicchio"@de ;
     eCH-0265:cultivationCategory naebi:SPECIAL ;
-    skos:broader naebi:OUTVG ;
+    eCH-0265:cultivationSubCategory naebi:OUTVG ;
     skos:exactMatch cultivationtype:1298 .
 
 naebi:205 a eCH-0265:NutrientBalanceCrop ;
@@ -1078,7 +1078,7 @@ naebi:205 a eCH-0265:NutrientBalanceCrop ;
     schema:identifier "CROP_RADCHP" ;
     schema:name "Cicorino rosso, Radicchio, Verarbeitung"@de ;
     eCH-0265:cultivationCategory naebi:SPECIAL ;
-    skos:broader naebi:OUTVG ;
+    eCH-0265:cultivationSubCategory naebi:OUTVG ;
     skos:exactMatch cultivationtype:1096 .
 
 naebi:206 a eCH-0265:NutrientBalanceCrop ;
@@ -1086,7 +1086,7 @@ naebi:206 a eCH-0265:NutrientBalanceCrop ;
     schema:identifier "CROP_RASJLC" ;
     schema:name "Himbeer-Jungpflanzen (Long-Cane)"@de ;
     eCH-0265:cultivationCategory naebi:SPECIAL ;
-    skos:broader naebi:DIVCR ;
+    eCH-0265:cultivationSubCategory naebi:DIVCR ;
     skos:exactMatch cultivationtype:1097 .
 
 naebi:207 a eCH-0265:NutrientBalanceCrop ;
@@ -1094,7 +1094,7 @@ naebi:207 a eCH-0265:NutrientBalanceCrop ;
     schema:identifier "CROP_RASPB" ;
     schema:name "Himbeeren,  1.5 kg/m2"@de ;
     eCH-0265:cultivationCategory naebi:SPECIAL ;
-    skos:broader naebi:PRMCR ;
+    eCH-0265:cultivationSubCategory naebi:PRMCR ;
     skos:exactMatch cultivationtype:1212 .
 
 naebi:208 a eCH-0265:NutrientBalanceCrop ;
@@ -1102,7 +1102,7 @@ naebi:208 a eCH-0265:NutrientBalanceCrop ;
     schema:identifier "CROP_RASPB3" ;
     schema:name "Himbeeren, 3.5 kg/m2"@de ;
     eCH-0265:cultivationCategory naebi:SPECIAL ;
-    skos:broader naebi:PRMCR ;
+    eCH-0265:cultivationSubCategory naebi:PRMCR ;
     skos:exactMatch cultivationtype:1213 .
 
 naebi:209 a eCH-0265:NutrientBalanceCrop ;
@@ -1110,7 +1110,7 @@ naebi:209 a eCH-0265:NutrientBalanceCrop ;
     schema:identifier "CROP_RBEYH" ;
     schema:name "Himbeeren, 2.5 kg/m2"@de ;
     eCH-0265:cultivationCategory naebi:SPECIAL ;
-    skos:broader naebi:PRMCR ;
+    eCH-0265:cultivationSubCategory naebi:PRMCR ;
     skos:exactMatch cultivationtype:1214 .
 
 naebi:21 a eCH-0265:NutrientBalanceCrop ;
@@ -1118,7 +1118,7 @@ naebi:21 a eCH-0265:NutrientBalanceCrop ;
     schema:identifier "CROP_BLMLW" ;
     schema:name "Blaue Malve"@de ;
     eCH-0265:cultivationCategory naebi:SPECIAL ;
-    skos:broader naebi:OUTVG ;
+    eCH-0265:cultivationSubCategory naebi:OUTVG ;
     skos:exactMatch cultivationtype:1098 .
 
 naebi:210 a eCH-0265:NutrientBalanceCrop ;
@@ -1126,7 +1126,7 @@ naebi:210 a eCH-0265:NutrientBalanceCrop ;
     schema:identifier "CROP_REDCUR" ;
     schema:name "Rote Johannisbeeren, 2.0 kg/m2"@de ;
     eCH-0265:cultivationCategory naebi:SPECIAL ;
-    skos:broader naebi:PRMCR ;
+    eCH-0265:cultivationSubCategory naebi:PRMCR ;
     skos:exactMatch cultivationtype:1215 .
 
 naebi:211 a eCH-0265:NutrientBalanceCrop ;
@@ -1134,7 +1134,7 @@ naebi:211 a eCH-0265:NutrientBalanceCrop ;
     schema:identifier "CROP_REDCUR3" ;
     schema:name "Rote Johannisbeeren, 3.5 kg/m2"@de ;
     eCH-0265:cultivationCategory naebi:SPECIAL ;
-    skos:broader naebi:PRMCR ;
+    eCH-0265:cultivationSubCategory naebi:PRMCR ;
     skos:exactMatch cultivationtype:1216 .
 
 naebi:212 a eCH-0265:NutrientBalanceCrop ;
@@ -1142,7 +1142,7 @@ naebi:212 a eCH-0265:NutrientBalanceCrop ;
     schema:identifier "CROP_RHUBB" ;
     schema:name "Rhabarber"@de ;
     eCH-0265:cultivationCategory naebi:SPECIAL ;
-    skos:broader naebi:PRMCR ;
+    eCH-0265:cultivationSubCategory naebi:PRMCR ;
     skos:exactMatch cultivationtype:709 .
 
 naebi:213 a eCH-0265:NutrientBalanceCrop ;
@@ -1150,7 +1150,7 @@ naebi:213 a eCH-0265:NutrientBalanceCrop ;
     schema:identifier "CROP_RICE" ;
     schema:name "Nicht aufgeführte Ackerkulturen, Leguminosen"@de ;
     eCH-0265:cultivationCategory naebi:ARABLE ;
-    skos:broader naebi:DIVCR ;
+    eCH-0265:cultivationSubCategory naebi:DIVCR ;
     skos:exactMatch cultivationtype:1101 .
 
 naebi:214 a eCH-0265:NutrientBalanceCrop ;
@@ -1158,7 +1158,7 @@ naebi:214 a eCH-0265:NutrientBalanceCrop ;
     schema:identifier "CROP_RIVER" ;
     schema:name "Uferwiese entlang von Fliessgewässer"@de ;
     eCH-0265:cultivationCategory naebi:FODDER ;
-    skos:broader naebi:FORAG ;
+    eCH-0265:cultivationSubCategory naebi:FORAG ;
     skos:exactMatch cultivationtype:635 .
 
 naebi:215 a eCH-0265:NutrientBalanceCrop ;
@@ -1166,7 +1166,7 @@ naebi:215 a eCH-0265:NutrientBalanceCrop ;
     schema:identifier "CROP_RJEYH" ;
     schema:name "Rote Johannisbeeren, 2.5 kg/m2"@de ;
     eCH-0265:cultivationCategory naebi:SPECIAL ;
-    skos:broader naebi:PRMCR ;
+    eCH-0265:cultivationSubCategory naebi:PRMCR ;
     skos:exactMatch cultivationtype:1217 .
 
 naebi:216 a eCH-0265:NutrientBalanceCrop ;
@@ -1174,7 +1174,7 @@ naebi:216 a eCH-0265:NutrientBalanceCrop ;
     schema:identifier "CROP_RKTC1" ;
     schema:name "Rucola, 1 Schnitt (geschützter Anbau)"@de ;
     eCH-0265:cultivationCategory naebi:SPECIAL ;
-    skos:broader naebi:PRCRP ;
+    eCH-0265:cultivationSubCategory naebi:PRCRP ;
     skos:exactMatch cultivationtype:1099 .
 
 naebi:217 a eCH-0265:NutrientBalanceCrop ;
@@ -1182,7 +1182,7 @@ naebi:217 a eCH-0265:NutrientBalanceCrop ;
     schema:identifier "CROP_RKTC2" ;
     schema:name "Rucola, 2 Schnitte (geschützter Anbau)"@de ;
     eCH-0265:cultivationCategory naebi:SPECIAL ;
-    skos:broader naebi:PRCRP ;
+    eCH-0265:cultivationSubCategory naebi:PRCRP ;
     skos:exactMatch cultivationtype:1100 .
 
 naebi:218 a eCH-0265:NutrientBalanceCrop ;
@@ -1190,7 +1190,7 @@ naebi:218 a eCH-0265:NutrientBalanceCrop ;
     schema:identifier "CROP_RMEAD" ;
     schema:name "Uebr. Wiesen mit Düngeverbot"@de ;
     eCH-0265:cultivationCategory naebi:FODDER ;
-    skos:broader naebi:FORAG ;
+    eCH-0265:cultivationSubCategory naebi:FORAG ;
     skos:exactMatch cultivationtype:611 .
 
 naebi:219 a eCH-0265:NutrientBalanceCrop ;
@@ -1198,7 +1198,7 @@ naebi:219 a eCH-0265:NutrientBalanceCrop ;
     schema:identifier "CROP_RSMRY" ;
     schema:name "Rosmarin"@de ;
     eCH-0265:cultivationCategory naebi:SPECIAL ;
-    skos:broader naebi:PRMCR ;
+    eCH-0265:cultivationSubCategory naebi:PRMCR ;
     skos:exactMatch cultivationtype:308 .
 
 naebi:22 a eCH-0265:NutrientBalanceCrop ;
@@ -1206,7 +1206,7 @@ naebi:22 a eCH-0265:NutrientBalanceCrop ;
     schema:identifier "CROP_BLUBRY" ;
     schema:name "Heidelbeeren, 1.5 kg/m2"@de ;
     eCH-0265:cultivationCategory naebi:SPECIAL ;
-    skos:broader naebi:PRMCR ;
+    eCH-0265:cultivationSubCategory naebi:PRMCR ;
     skos:exactMatch cultivationtype:1218 .
 
 naebi:220 a eCH-0265:NutrientBalanceCrop ;
@@ -1214,7 +1214,7 @@ naebi:220 a eCH-0265:NutrientBalanceCrop ;
     schema:identifier "CROP_RUEHR" ;
     schema:name "Edelraute"@de ;
     eCH-0265:cultivationCategory naebi:SPECIAL ;
-    skos:broader naebi:PRMCR ;
+    eCH-0265:cultivationSubCategory naebi:PRMCR ;
     skos:exactMatch cultivationtype:1102 .
 
 naebi:221 a eCH-0265:NutrientBalanceCrop ;
@@ -1222,7 +1222,7 @@ naebi:221 a eCH-0265:NutrientBalanceCrop ;
     schema:identifier "CROP_SALHY" ;
     schema:name "Salate, diverse, hoher Ertrag"@de ;
     eCH-0265:cultivationCategory naebi:SPECIAL ;
-    skos:broader naebi:OUTVG ;
+    eCH-0265:cultivationSubCategory naebi:OUTVG ;
     skos:exactMatch cultivationtype:1103 .
 
 naebi:222 a eCH-0265:NutrientBalanceCrop ;
@@ -1230,7 +1230,7 @@ naebi:222 a eCH-0265:NutrientBalanceCrop ;
     schema:identifier "CROP_SALMY" ;
     schema:name "Salate, diverse, mittlerer Ertrag"@de ;
     eCH-0265:cultivationCategory naebi:SPECIAL ;
-    skos:broader naebi:OUTVG ;
+    eCH-0265:cultivationSubCategory naebi:OUTVG ;
     skos:exactMatch cultivationtype:1104 .
 
 naebi:223 a eCH-0265:NutrientBalanceCrop ;
@@ -1238,7 +1238,7 @@ naebi:223 a eCH-0265:NutrientBalanceCrop ;
     schema:identifier "CROP_SAVOYL" ;
     schema:name "Wirz leicht"@de ;
     eCH-0265:cultivationCategory naebi:SPECIAL ;
-    skos:broader naebi:OUTVG ;
+    eCH-0265:cultivationSubCategory naebi:OUTVG ;
     skos:exactMatch cultivationtype:1105 .
 
 naebi:224 a eCH-0265:NutrientBalanceCrop ;
@@ -1246,7 +1246,7 @@ naebi:224 a eCH-0265:NutrientBalanceCrop ;
     schema:identifier "CROP_SAVOYS" ;
     schema:name "Wirz schwer"@de ;
     eCH-0265:cultivationCategory naebi:SPECIAL ;
-    skos:broader naebi:OUTVG ;
+    eCH-0265:cultivationSubCategory naebi:OUTVG ;
     skos:exactMatch cultivationtype:1106 .
 
 naebi:225 a eCH-0265:NutrientBalanceCrop ;
@@ -1254,7 +1254,7 @@ naebi:225 a eCH-0265:NutrientBalanceCrop ;
     schema:identifier "CROP_SCRUB" ;
     schema:name "Streue-, Torfland"@de ;
     eCH-0265:cultivationCategory naebi:ARABLE ;
-    skos:broader naebi:ECOBL ;
+    eCH-0265:cultivationSubCategory naebi:ECOBL ;
     skos:exactMatch cultivationtype:1107 .
 
 naebi:226 a eCH-0265:NutrientBalanceCrop ;
@@ -1262,7 +1262,7 @@ naebi:226 a eCH-0265:NutrientBalanceCrop ;
     schema:identifier "CROP_SCT01" ;
     schema:name "Edelkastanien"@de ;
     eCH-0265:cultivationCategory naebi:SPECIAL ;
-    skos:broader naebi:ECOBL ;
+    eCH-0265:cultivationSubCategory naebi:ECOBL ;
     skos:exactMatch cultivationtype:923 .
 
 naebi:227 a eCH-0265:NutrientBalanceCrop ;
@@ -1270,7 +1270,7 @@ naebi:227 a eCH-0265:NutrientBalanceCrop ;
     schema:identifier "CROP_SFVGV" ;
     schema:name "Kleine Freilandpflanzungen mit versch. Gemüsen"@de ;
     eCH-0265:cultivationCategory naebi:SPECIAL ;
-    skos:broader naebi:OUTVG ;
+    eCH-0265:cultivationSubCategory naebi:OUTVG ;
     skos:exactMatch cultivationtype:1108 .
 
 naebi:228 a eCH-0265:NutrientBalanceCrop ;
@@ -1278,7 +1278,7 @@ naebi:228 a eCH-0265:NutrientBalanceCrop ;
     schema:identifier "CROP_SGESG" ;
     schema:name "Salbei"@de ;
     eCH-0265:cultivationCategory naebi:SPECIAL ;
-    skos:broader naebi:PRMCR ;
+    eCH-0265:cultivationSubCategory naebi:PRMCR ;
     skos:exactMatch cultivationtype:478 .
 
 naebi:229 a eCH-0265:NutrientBalanceCrop ;
@@ -1286,7 +1286,7 @@ naebi:229 a eCH-0265:NutrientBalanceCrop ;
     schema:identifier "CROP_SGPVV" ;
     schema:name "Kleine Gewächshauspflanzungen mit versch. Gemüsen"@de ;
     eCH-0265:cultivationCategory naebi:SPECIAL ;
-    skos:broader naebi:PRCRP ;
+    eCH-0265:cultivationSubCategory naebi:PRCRP ;
     skos:exactMatch cultivationtype:1109 .
 
 naebi:23 a eCH-0265:NutrientBalanceCrop ;
@@ -1294,7 +1294,7 @@ naebi:23 a eCH-0265:NutrientBalanceCrop ;
     schema:identifier "CROP_BONIONF" ;
     schema:name "Bundzwiebeln, Frühjahr"@de ;
     eCH-0265:cultivationCategory naebi:SPECIAL ;
-    skos:broader naebi:OUTVG ;
+    eCH-0265:cultivationSubCategory naebi:OUTVG ;
     skos:exactMatch cultivationtype:1110 .
 
 naebi:230 a eCH-0265:NutrientBalanceCrop ;
@@ -1302,7 +1302,7 @@ naebi:230 a eCH-0265:NutrientBalanceCrop ;
     schema:identifier "CROP_SGRST" ;
     schema:name "Sommergerste"@de ;
     eCH-0265:cultivationCategory naebi:ARABLE ;
-    skos:broader naebi:GRAIN ;
+    eCH-0265:cultivationSubCategory naebi:GRAIN ;
     skos:exactMatch cultivationtype:501 .
 
 naebi:231 a eCH-0265:NutrientBalanceCrop ;
@@ -1310,7 +1310,7 @@ naebi:231 a eCH-0265:NutrientBalanceCrop ;
     schema:identifier "CROP_SILCRN" ;
     schema:name "Körnermais"@de ;
     eCH-0265:cultivationCategory naebi:ARABLE ;
-    skos:broader naebi:RTCRP ;
+    eCH-0265:cultivationSubCategory naebi:RTCRP ;
     skos:exactMatch cultivationtype:508 .
 
 naebi:232 a eCH-0265:NutrientBalanceCrop ;
@@ -1318,7 +1318,7 @@ naebi:232 a eCH-0265:NutrientBalanceCrop ;
     schema:identifier "CROP_SOGST" ;
     schema:name "Sommerhafer"@de ;
     eCH-0265:cultivationCategory naebi:ARABLE ;
-    skos:broader naebi:GRAIN ;
+    eCH-0265:cultivationSubCategory naebi:GRAIN ;
     skos:exactMatch cultivationtype:1011 .
 
 naebi:233 a eCH-0265:NutrientBalanceCrop ;
@@ -1326,7 +1326,7 @@ naebi:233 a eCH-0265:NutrientBalanceCrop ;
     schema:identifier "CROP_SOMRA" ;
     schema:name "Winterraps in 62a Nitrat-Projekt"@de ;
     eCH-0265:cultivationCategory naebi:ARABLE ;
-    skos:broader naebi:RTCRP ;
+    eCH-0265:cultivationSubCategory naebi:RTCRP ;
     skos:exactMatch cultivationtype:1111 .
 
 naebi:234 a eCH-0265:NutrientBalanceCrop ;
@@ -1334,7 +1334,7 @@ naebi:234 a eCH-0265:NutrientBalanceCrop ;
     schema:identifier "CROP_SOR2ND" ;
     schema:name "Ganzpflanzen-Sorghum (Zweitkultur), ha"@de ;
     eCH-0265:cultivationCategory naebi:FODDER ;
-    skos:broader naebi:FORAG ;
+    eCH-0265:cultivationSubCategory naebi:FORAG ;
     skos:exactMatch cultivationtype:1029 .
 
 naebi:235 a eCH-0265:NutrientBalanceCrop ;
@@ -1342,7 +1342,7 @@ naebi:235 a eCH-0265:NutrientBalanceCrop ;
     schema:identifier "CROP_SOYBN" ;
     schema:name "Tabak Burley"@de ;
     eCH-0265:cultivationCategory naebi:ARABLE ;
-    skos:broader naebi:DIVCR ;
+    eCH-0265:cultivationSubCategory naebi:DIVCR ;
     skos:exactMatch cultivationtype:1112 .
 
 naebi:236 a eCH-0265:NutrientBalanceCrop ;
@@ -1350,7 +1350,7 @@ naebi:236 a eCH-0265:NutrientBalanceCrop ;
     schema:identifier "CROP_SPIN1C" ;
     schema:name "Spinat, 1 Schnitt, nach Mitte April gesät"@de ;
     eCH-0265:cultivationCategory naebi:SPECIAL ;
-    skos:broader naebi:OUTVG ;
+    eCH-0265:cultivationSubCategory naebi:OUTVG ;
     skos:exactMatch cultivationtype:1114 .
 
 naebi:237 a eCH-0265:NutrientBalanceCrop ;
@@ -1358,7 +1358,7 @@ naebi:237 a eCH-0265:NutrientBalanceCrop ;
     schema:identifier "CROP_SPIN2A" ;
     schema:name "Spinat, 2 Schnitte, nach Mitte April gesät"@de ;
     eCH-0265:cultivationCategory naebi:SPECIAL ;
-    skos:broader naebi:OUTVG ;
+    eCH-0265:cultivationSubCategory naebi:OUTVG ;
     skos:exactMatch cultivationtype:1115 .
 
 naebi:238 a eCH-0265:NutrientBalanceCrop ;
@@ -1366,7 +1366,7 @@ naebi:238 a eCH-0265:NutrientBalanceCrop ;
     schema:identifier "CROP_SPIN2C" ;
     schema:name "Spinat, 2 Schnitte, vor Mitte April gesät"@de ;
     eCH-0265:cultivationCategory naebi:SPECIAL ;
-    skos:broader naebi:OUTVG ;
+    eCH-0265:cultivationSubCategory naebi:OUTVG ;
     skos:exactMatch cultivationtype:1116 .
 
 naebi:239 a eCH-0265:NutrientBalanceCrop ;
@@ -1374,7 +1374,7 @@ naebi:239 a eCH-0265:NutrientBalanceCrop ;
     schema:identifier "CROP_SPINI1" ;
     schema:name "Spinat, Industrie, 1 Schnitt, vor Mitte April gesät"@de ;
     eCH-0265:cultivationCategory naebi:SPECIAL ;
-    skos:broader naebi:OUTVG ;
+    eCH-0265:cultivationSubCategory naebi:OUTVG ;
     skos:exactMatch cultivationtype:1117 .
 
 naebi:24 a eCH-0265:NutrientBalanceCrop ;
@@ -1382,7 +1382,7 @@ naebi:24 a eCH-0265:NutrientBalanceCrop ;
     schema:identifier "CROP_BONIONS" ;
     schema:name "Bundzwiebeln, Sommer"@de ;
     eCH-0265:cultivationCategory naebi:SPECIAL ;
-    skos:broader naebi:OUTVG ;
+    eCH-0265:cultivationSubCategory naebi:OUTVG ;
     skos:exactMatch cultivationtype:1118 .
 
 naebi:240 a eCH-0265:NutrientBalanceCrop ;
@@ -1390,7 +1390,7 @@ naebi:240 a eCH-0265:NutrientBalanceCrop ;
     schema:identifier "CROP_SPINI1A" ;
     schema:name "Spinat, Industrie, 1 Schnitt, nach Mitte April gesät"@de ;
     eCH-0265:cultivationCategory naebi:SPECIAL ;
-    skos:broader naebi:OUTVG ;
+    eCH-0265:cultivationSubCategory naebi:OUTVG ;
     skos:exactMatch cultivationtype:1119 .
 
 naebi:241 a eCH-0265:NutrientBalanceCrop ;
@@ -1398,7 +1398,7 @@ naebi:241 a eCH-0265:NutrientBalanceCrop ;
     schema:identifier "CROP_SPINI2" ;
     schema:name "Spinat, Industrie, 2 Schnitte, vor Mitte April gesät"@de ;
     eCH-0265:cultivationCategory naebi:SPECIAL ;
-    skos:broader naebi:OUTVG ;
+    eCH-0265:cultivationSubCategory naebi:OUTVG ;
     skos:exactMatch cultivationtype:1120 .
 
 naebi:242 a eCH-0265:NutrientBalanceCrop ;
@@ -1406,7 +1406,7 @@ naebi:242 a eCH-0265:NutrientBalanceCrop ;
     schema:identifier "CROP_SPINI2A" ;
     schema:name "Spinat, Industrie, 2 Schnitte, nach Mitte April gesät"@de ;
     eCH-0265:cultivationCategory naebi:SPECIAL ;
-    skos:broader naebi:OUTVG ;
+    eCH-0265:cultivationSubCategory naebi:OUTVG ;
     skos:exactMatch cultivationtype:1121 .
 
 naebi:243 a eCH-0265:NutrientBalanceCrop ;
@@ -1414,7 +1414,7 @@ naebi:243 a eCH-0265:NutrientBalanceCrop ;
     schema:identifier "CROP_SPINP1" ;
     schema:name "Spinat, 1 Schnitt, vor Mitte April gesät"@de ;
     eCH-0265:cultivationCategory naebi:SPECIAL ;
-    skos:broader naebi:OUTVG ;
+    eCH-0265:cultivationSubCategory naebi:OUTVG ;
     skos:exactMatch cultivationtype:1122 .
 
 naebi:244 a eCH-0265:NutrientBalanceCrop ;
@@ -1422,7 +1422,7 @@ naebi:244 a eCH-0265:NutrientBalanceCrop ;
     schema:identifier "CROP_SPNCH" ;
     schema:name "Spinat (geschützter Anbau)"@de ;
     eCH-0265:cultivationCategory naebi:SPECIAL ;
-    skos:broader naebi:PRCRP ;
+    eCH-0265:cultivationSubCategory naebi:PRCRP ;
     skos:exactMatch cultivationtype:1123 .
 
 naebi:245 a eCH-0265:NutrientBalanceCrop ;
@@ -1430,7 +1430,7 @@ naebi:245 a eCH-0265:NutrientBalanceCrop ;
     schema:identifier "CROP_SPRCP" ;
     schema:name "Frühjahrsschnitt vor Wiesenumbruch, ha"@de ;
     eCH-0265:cultivationCategory naebi:FODDER ;
-    skos:broader naebi:FORAG ;
+    eCH-0265:cultivationSubCategory naebi:FORAG ;
     skos:exactMatch cultivationtype:1124 .
 
 naebi:246 a eCH-0265:NutrientBalanceCrop ;
@@ -1438,7 +1438,7 @@ naebi:246 a eCH-0265:NutrientBalanceCrop ;
     schema:identifier "CROP_ST1EY" ;
     schema:name "Erdbeeren 1-jährig, 3.0 kg/m2"@de ;
     eCH-0265:cultivationCategory naebi:SPECIAL ;
-    skos:broader naebi:DIVCR ;
+    eCH-0265:cultivationSubCategory naebi:DIVCR ;
     skos:exactMatch cultivationtype:1219 .
 
 naebi:247 a eCH-0265:NutrientBalanceCrop ;
@@ -1446,7 +1446,7 @@ naebi:247 a eCH-0265:NutrientBalanceCrop ;
     schema:identifier "CROP_STJHW" ;
     schema:name "Johanniskraut"@de ;
     eCH-0265:cultivationCategory naebi:SPECIAL ;
-    skos:broader naebi:PRMCR ;
+    eCH-0265:cultivationSubCategory naebi:PRMCR ;
     skos:exactMatch cultivationtype:137 .
 
 naebi:248 a eCH-0265:NutrientBalanceCrop ;
@@ -1454,7 +1454,7 @@ naebi:248 a eCH-0265:NutrientBalanceCrop ;
     schema:identifier "CROP_STORC" ;
     schema:name "Kabis Lager"@de ;
     eCH-0265:cultivationCategory naebi:SPECIAL ;
-    skos:broader naebi:OUTVG ;
+    eCH-0265:cultivationSubCategory naebi:OUTVG ;
     skos:exactMatch cultivationtype:1125 .
 
 naebi:249 a eCH-0265:NutrientBalanceCrop ;
@@ -1462,14 +1462,14 @@ naebi:249 a eCH-0265:NutrientBalanceCrop ;
     schema:identifier "CROP_STRAW" ;
     schema:name "Vom Betrieb weggeführtes Stroh, ha"@de ;
     eCH-0265:cultivationCategory naebi:ARABLE ;
-    skos:broader naebi:GRAIN .
+    eCH-0265:cultivationSubCategory naebi:GRAIN .
 
 naebi:25 a eCH-0265:NutrientBalanceCrop ;
     skos:inScheme naebi:ConceptScheme ;
     schema:identifier "CROP_BONIONW" ;
     schema:name "Bundzwiebeln, Überwinterung"@de ;
     eCH-0265:cultivationCategory naebi:SPECIAL ;
-    skos:broader naebi:OUTVG ;
+    eCH-0265:cultivationSubCategory naebi:OUTVG ;
     skos:exactMatch cultivationtype:1127 .
 
 naebi:250 a eCH-0265:NutrientBalanceCrop ;
@@ -1477,7 +1477,7 @@ naebi:250 a eCH-0265:NutrientBalanceCrop ;
     schema:identifier "CROP_STRAW1" ;
     schema:name "Erdbeeren 1-jährig, 2.0 kg/m2"@de ;
     eCH-0265:cultivationCategory naebi:SPECIAL ;
-    skos:broader naebi:DIVCR ;
+    eCH-0265:cultivationSubCategory naebi:DIVCR ;
     skos:exactMatch cultivationtype:1221 .
 
 naebi:251 a eCH-0265:NutrientBalanceCrop ;
@@ -1485,7 +1485,7 @@ naebi:251 a eCH-0265:NutrientBalanceCrop ;
     schema:identifier "CROP_STRAW4" ;
     schema:name "Erdbeeren 1-jährig, 4.0 kg/m2"@de ;
     eCH-0265:cultivationCategory naebi:SPECIAL ;
-    skos:broader naebi:DIVCR ;
+    eCH-0265:cultivationSubCategory naebi:DIVCR ;
     skos:exactMatch cultivationtype:1222 .
 
 naebi:252 a eCH-0265:NutrientBalanceCrop ;
@@ -1493,7 +1493,7 @@ naebi:252 a eCH-0265:NutrientBalanceCrop ;
     schema:identifier "CROP_STRAWL" ;
     schema:name "Getreide-Silage"@de ;
     eCH-0265:cultivationCategory naebi:FODDER ;
-    skos:broader naebi:GRAIN ;
+    eCH-0265:cultivationSubCategory naebi:GRAIN ;
     skos:exactMatch cultivationtype:1030 .
 
 naebi:253 a eCH-0265:NutrientBalanceCrop ;
@@ -1501,7 +1501,7 @@ naebi:253 a eCH-0265:NutrientBalanceCrop ;
     schema:identifier "CROP_STRAWP" ;
     schema:name "Erdbeeren mehrjährig"@de ;
     eCH-0265:cultivationCategory naebi:SPECIAL ;
-    skos:broader naebi:PRMCR ;
+    eCH-0265:cultivationSubCategory naebi:PRMCR ;
     skos:exactMatch cultivationtype:1128 .
 
 naebi:254 a eCH-0265:NutrientBalanceCrop ;
@@ -1509,7 +1509,7 @@ naebi:254 a eCH-0265:NutrientBalanceCrop ;
     schema:identifier "CROP_STRBRR" ;
     schema:name "Nützlingsstreifen (oAF)"@de ;
     eCH-0265:cultivationCategory naebi:ARABLE ;
-    skos:broader naebi:DIVCR ;
+    eCH-0265:cultivationSubCategory naebi:DIVCR ;
     skos:exactMatch cultivationtype:572 .
 
 naebi:255 a eCH-0265:NutrientBalanceCrop ;
@@ -1517,7 +1517,7 @@ naebi:255 a eCH-0265:NutrientBalanceCrop ;
     schema:identifier "CROP_STRIT" ;
     schema:name "Sommertriticale"@de ;
     eCH-0265:cultivationCategory naebi:ARABLE ;
-    skos:broader naebi:GRAIN ;
+    eCH-0265:cultivationSubCategory naebi:GRAIN ;
     skos:exactMatch cultivationtype:1018 .
 
 naebi:256 a eCH-0265:NutrientBalanceCrop ;
@@ -1525,7 +1525,7 @@ naebi:256 a eCH-0265:NutrientBalanceCrop ;
     schema:identifier "CROP_STRJPL" ;
     schema:name "Erdbeeren-Jungpflanzen (Tray-Pflanzen)"@de ;
     eCH-0265:cultivationCategory naebi:SPECIAL ;
-    skos:broader naebi:DIVCR ;
+    eCH-0265:cultivationSubCategory naebi:DIVCR ;
     skos:exactMatch cultivationtype:1130 .
 
 naebi:257 a eCH-0265:NutrientBalanceCrop ;
@@ -1533,7 +1533,7 @@ naebi:257 a eCH-0265:NutrientBalanceCrop ;
     schema:identifier "CROP_SUCORN" ;
     schema:name "Zuckermais"@de ;
     eCH-0265:cultivationCategory naebi:SPECIAL ;
-    skos:broader naebi:OUTVG ;
+    eCH-0265:cultivationSubCategory naebi:OUTVG ;
     skos:exactMatch cultivationtype:189 .
 
 naebi:258 a eCH-0265:NutrientBalanceCrop ;
@@ -1541,7 +1541,7 @@ naebi:258 a eCH-0265:NutrientBalanceCrop ;
     schema:identifier "CROP_SUGRCC" ;
     schema:name "Zuckerhut (Convenience)"@de ;
     eCH-0265:cultivationCategory naebi:SPECIAL ;
-    skos:broader naebi:OUTVG ;
+    eCH-0265:cultivationSubCategory naebi:OUTVG ;
     skos:exactMatch cultivationtype:1131 .
 
 naebi:259 a eCH-0265:NutrientBalanceCrop ;
@@ -1549,7 +1549,7 @@ naebi:259 a eCH-0265:NutrientBalanceCrop ;
     schema:identifier "CROP_SUGRCH" ;
     schema:name "Zuckerhut"@de ;
     eCH-0265:cultivationCategory naebi:SPECIAL ;
-    skos:broader naebi:OUTVG ;
+    eCH-0265:cultivationSubCategory naebi:OUTVG ;
     skos:exactMatch cultivationtype:142 .
 
 naebi:26 a eCH-0265:NutrientBalanceCrop ;
@@ -1557,7 +1557,7 @@ naebi:26 a eCH-0265:NutrientBalanceCrop ;
     schema:identifier "CROP_BRGEG" ;
     schema:name "Bohnenkraut"@de ;
     eCH-0265:cultivationCategory naebi:SPECIAL ;
-    skos:broader naebi:OUTVG ;
+    eCH-0265:cultivationSubCategory naebi:OUTVG ;
     skos:exactMatch cultivationtype:157 .
 
 naebi:260 a eCH-0265:NutrientBalanceCrop ;
@@ -1565,7 +1565,7 @@ naebi:260 a eCH-0265:NutrientBalanceCrop ;
     schema:identifier "CROP_SUMEXT" ;
     schema:name "Heuwiesen Sömmerungsg., extensive"@de ;
     eCH-0265:cultivationCategory naebi:FODDER ;
-    skos:broader naebi:FORAG ;
+    eCH-0265:cultivationSubCategory naebi:FORAG ;
     skos:exactMatch cultivationtype:1132 .
 
 naebi:261 a eCH-0265:NutrientBalanceCrop ;
@@ -1573,7 +1573,7 @@ naebi:261 a eCH-0265:NutrientBalanceCrop ;
     schema:identifier "CROP_SUMLNT" ;
     schema:name "Heuwiesen Sömmerungsg., wenig intensiv"@de ;
     eCH-0265:cultivationCategory naebi:FODDER ;
-    skos:broader naebi:FORAG ;
+    eCH-0265:cultivationSubCategory naebi:FORAG ;
     skos:exactMatch cultivationtype:1133 .
 
 naebi:262 a eCH-0265:NutrientBalanceCrop ;
@@ -1581,7 +1581,7 @@ naebi:262 a eCH-0265:NutrientBalanceCrop ;
     schema:identifier "CROP_SUMOTH" ;
     schema:name "Heuwiesen im Sömmerungsg., übrige"@de ;
     eCH-0265:cultivationCategory naebi:FODDER ;
-    skos:broader naebi:FORAG ;
+    eCH-0265:cultivationSubCategory naebi:FORAG ;
     skos:exactMatch cultivationtype:1134 .
 
 naebi:263 a eCH-0265:NutrientBalanceCrop ;
@@ -1589,7 +1589,7 @@ naebi:263 a eCH-0265:NutrientBalanceCrop ;
     schema:identifier "CROP_SWCHD" ;
     schema:name "Krautstiel (geschützter Anbau)"@de ;
     eCH-0265:cultivationCategory naebi:SPECIAL ;
-    skos:broader naebi:PRCRP ;
+    eCH-0265:cultivationSubCategory naebi:PRCRP ;
     skos:exactMatch cultivationtype:1135 .
 
 naebi:264 a eCH-0265:NutrientBalanceCrop ;
@@ -1597,7 +1597,7 @@ naebi:264 a eCH-0265:NutrientBalanceCrop ;
     schema:identifier "CROP_SWEET" ;
     schema:name "Tabak Virgine"@de ;
     eCH-0265:cultivationCategory naebi:ARABLE ;
-    skos:broader naebi:DIVCR ;
+    eCH-0265:cultivationSubCategory naebi:DIVCR ;
     skos:exactMatch cultivationtype:1136 .
 
 naebi:265 a eCH-0265:NutrientBalanceCrop ;
@@ -1605,7 +1605,7 @@ naebi:265 a eCH-0265:NutrientBalanceCrop ;
     schema:identifier "CROP_SWEPO" ;
     schema:name "Süsskartoffeln"@de ;
     eCH-0265:cultivationCategory naebi:SPECIAL ;
-    skos:broader naebi:OUTVG ;
+    eCH-0265:cultivationSubCategory naebi:OUTVG ;
     skos:exactMatch cultivationtype:1129 .
 
 naebi:266 a eCH-0265:NutrientBalanceCrop ;
@@ -1613,7 +1613,7 @@ naebi:266 a eCH-0265:NutrientBalanceCrop ;
     schema:identifier "CROP_SWHT" ;
     schema:name "Sommerweizen"@de ;
     eCH-0265:cultivationCategory naebi:ARABLE ;
-    skos:broader naebi:GRAIN ;
+    eCH-0265:cultivationSubCategory naebi:GRAIN ;
     skos:exactMatch cultivationtype:999 .
 
 naebi:267 a eCH-0265:NutrientBalanceCrop ;
@@ -1621,7 +1621,7 @@ naebi:267 a eCH-0265:NutrientBalanceCrop ;
     schema:identifier "CROP_TABAC" ;
     schema:name "Reis"@de ;
     eCH-0265:cultivationCategory naebi:ARABLE ;
-    skos:broader naebi:DIVCR ;
+    eCH-0265:cultivationSubCategory naebi:DIVCR ;
     skos:exactMatch cultivationtype:509 .
 
 naebi:268 a eCH-0265:NutrientBalanceCrop ;
@@ -1629,14 +1629,14 @@ naebi:268 a eCH-0265:NutrientBalanceCrop ;
     schema:identifier "CROP_TABAV" ;
     schema:name "Nicht aufgef. Ackerkult., Nicht-Leg.,Mischungen Leg.+Nicht-Leg"@de ;
     eCH-0265:cultivationCategory naebi:ARABLE ;
-    skos:broader naebi:DIVCR .
+    eCH-0265:cultivationSubCategory naebi:DIVCR .
 
 naebi:269 a eCH-0265:NutrientBalanceCrop ;
     skos:inScheme naebi:ConceptScheme ;
     schema:identifier "CROP_TGEYH" ;
     schema:name "Tafeltrauben, hoher Ertrag"@de ;
     eCH-0265:cultivationCategory naebi:SPECIAL ;
-    skos:broader naebi:PRMCR ;
+    eCH-0265:cultivationSubCategory naebi:PRMCR ;
     skos:exactMatch cultivationtype:1138 .
 
 naebi:27 a eCH-0265:NutrientBalanceCrop ;
@@ -1644,7 +1644,7 @@ naebi:27 a eCH-0265:NutrientBalanceCrop ;
     schema:identifier "CROP_BRNTL" ;
     schema:name "Brennessel"@de ;
     eCH-0265:cultivationCategory naebi:SPECIAL ;
-    skos:broader naebi:PRMCR ;
+    eCH-0265:cultivationSubCategory naebi:PRMCR ;
     skos:exactMatch cultivationtype:1139 .
 
 naebi:270 a eCH-0265:NutrientBalanceCrop ;
@@ -1652,7 +1652,7 @@ naebi:270 a eCH-0265:NutrientBalanceCrop ;
     schema:identifier "CROP_TGRAPE" ;
     schema:name "Tafeltrauben"@de ;
     eCH-0265:cultivationCategory naebi:SPECIAL ;
-    skos:broader naebi:PRMCR ;
+    eCH-0265:cultivationSubCategory naebi:PRMCR ;
     skos:exactMatch cultivationtype:1140 .
 
 naebi:271 a eCH-0265:NutrientBalanceCrop ;
@@ -1660,7 +1660,7 @@ naebi:271 a eCH-0265:NutrientBalanceCrop ;
     schema:identifier "CROP_THYME" ;
     schema:name "Thymian"@de ;
     eCH-0265:cultivationCategory naebi:SPECIAL ;
-    skos:broader naebi:PRMCR ;
+    eCH-0265:cultivationSubCategory naebi:PRMCR ;
     skos:exactMatch cultivationtype:268 .
 
 naebi:272 a eCH-0265:NutrientBalanceCrop ;
@@ -1668,7 +1668,7 @@ naebi:272 a eCH-0265:NutrientBalanceCrop ;
     schema:identifier "CROP_TOMAT" ;
     schema:name "Tomaten"@de ;
     eCH-0265:cultivationCategory naebi:SPECIAL ;
-    skos:broader naebi:OUTVG ;
+    eCH-0265:cultivationSubCategory naebi:OUTVG ;
     skos:exactMatch cultivationtype:1294 .
 
 naebi:273 a eCH-0265:NutrientBalanceCrop ;
@@ -1676,7 +1676,7 @@ naebi:273 a eCH-0265:NutrientBalanceCrop ;
     schema:identifier "CROP_TOMTH" ;
     schema:name "Tomaten, Bodenkultur, hoher Ertrag (geschützter Anbau)"@de ;
     eCH-0265:cultivationCategory naebi:SPECIAL ;
-    skos:broader naebi:PRCRP ;
+    eCH-0265:cultivationSubCategory naebi:PRCRP ;
     skos:exactMatch cultivationtype:1142 .
 
 naebi:274 a eCH-0265:NutrientBalanceCrop ;
@@ -1684,7 +1684,7 @@ naebi:274 a eCH-0265:NutrientBalanceCrop ;
     schema:identifier "CROP_TOMTL" ;
     schema:name "Tomaten, Bodenkulturen, tiefer Ertrag (geschützter Anbau)"@de ;
     eCH-0265:cultivationCategory naebi:SPECIAL ;
-    skos:broader naebi:PRCRP ;
+    eCH-0265:cultivationSubCategory naebi:PRCRP ;
     skos:exactMatch cultivationtype:1143 .
 
 naebi:275 a eCH-0265:NutrientBalanceCrop ;
@@ -1692,7 +1692,7 @@ naebi:275 a eCH-0265:NutrientBalanceCrop ;
     schema:identifier "CROP_TOMTM" ;
     schema:name "Tomaten, Bodenkulturen, mittlerer Ertrag (geschützter Anbau)"@de ;
     eCH-0265:cultivationCategory naebi:SPECIAL ;
-    skos:broader naebi:PRCRP ;
+    eCH-0265:cultivationSubCategory naebi:PRCRP ;
     skos:exactMatch cultivationtype:1144 .
 
 naebi:276 a eCH-0265:NutrientBalanceCrop ;
@@ -1700,7 +1700,7 @@ naebi:276 a eCH-0265:NutrientBalanceCrop ;
     schema:identifier "CROP_TOMTV" ;
     schema:name "Tomaten, Bodenkultur, sehr hoher Ertrag (geschützter Anbau)"@de ;
     eCH-0265:cultivationCategory naebi:SPECIAL ;
-    skos:broader naebi:PRCRP ;
+    eCH-0265:cultivationSubCategory naebi:PRCRP ;
     skos:exactMatch cultivationtype:1145 .
 
 naebi:277 a eCH-0265:NutrientBalanceCrop ;
@@ -1708,7 +1708,7 @@ naebi:277 a eCH-0265:NutrientBalanceCrop ;
     schema:identifier "CROP_TPAST" ;
     schema:name "Äugstlen, ha"@de ;
     eCH-0265:cultivationCategory naebi:FODDER ;
-    skos:broader naebi:FORAG ;
+    eCH-0265:cultivationSubCategory naebi:FORAG ;
     skos:exactMatch cultivationtype:1146 .
 
 naebi:278 a eCH-0265:NutrientBalanceCrop ;
@@ -1716,7 +1716,7 @@ naebi:278 a eCH-0265:NutrientBalanceCrop ;
     schema:identifier "CROP_TRNPM" ;
     schema:name "Rüben Herbst-, Mai-"@de ;
     eCH-0265:cultivationCategory naebi:SPECIAL ;
-    skos:broader naebi:OUTVG ;
+    eCH-0265:cultivationSubCategory naebi:OUTVG ;
     skos:exactMatch cultivationtype:1147 .
 
 naebi:279 a eCH-0265:NutrientBalanceCrop ;
@@ -1724,7 +1724,7 @@ naebi:279 a eCH-0265:NutrientBalanceCrop ;
     schema:identifier "CROP_TRNTP" ;
     schema:name "Cima di rapa"@de ;
     eCH-0265:cultivationCategory naebi:SPECIAL ;
-    skos:broader naebi:OUTVG ;
+    eCH-0265:cultivationSubCategory naebi:OUTVG ;
     skos:exactMatch cultivationtype:132 .
 
 naebi:28 a eCH-0265:NutrientBalanceCrop ;
@@ -1732,7 +1732,7 @@ naebi:28 a eCH-0265:NutrientBalanceCrop ;
     schema:identifier "CROP_BRNTT" ;
     schema:name "Bibernelle"@de ;
     eCH-0265:cultivationCategory naebi:SPECIAL ;
-    skos:broader naebi:OUTVG ;
+    eCH-0265:cultivationSubCategory naebi:OUTVG ;
     skos:exactMatch cultivationtype:1149 .
 
 naebi:280 a eCH-0265:NutrientBalanceCrop ;
@@ -1740,7 +1740,7 @@ naebi:280 a eCH-0265:NutrientBalanceCrop ;
     schema:identifier "CROP_VBDIV" ;
     schema:name "Rebflächen mit hoher Artenvielfalt"@de ;
     eCH-0265:cultivationCategory naebi:SPECIAL ;
-    skos:broader naebi:PRMCR ;
+    eCH-0265:cultivationSubCategory naebi:PRMCR ;
     skos:exactMatch cultivationtype:717 .
 
 naebi:281 a eCH-0265:NutrientBalanceCrop ;
@@ -1748,7 +1748,7 @@ naebi:281 a eCH-0265:NutrientBalanceCrop ;
     schema:identifier "CROP_VINES" ;
     schema:name "Reben"@de ;
     eCH-0265:cultivationCategory naebi:SPECIAL ;
-    skos:broader naebi:PRMCR ;
+    eCH-0265:cultivationSubCategory naebi:PRMCR ;
     skos:exactMatch cultivationtype:4 .
 
 naebi:282 a eCH-0265:NutrientBalanceCrop ;
@@ -1756,7 +1756,7 @@ naebi:282 a eCH-0265:NutrientBalanceCrop ;
     schema:identifier "CROP_VRVNN" ;
     schema:name "Ehrenpreis"@de ;
     eCH-0265:cultivationCategory naebi:SPECIAL ;
-    skos:broader naebi:PRMCR ;
+    eCH-0265:cultivationSubCategory naebi:PRMCR ;
     skos:exactMatch cultivationtype:1150 .
 
 naebi:283 a eCH-0265:NutrientBalanceCrop ;
@@ -1764,7 +1764,7 @@ naebi:283 a eCH-0265:NutrientBalanceCrop ;
     schema:identifier "CROP_WALN1" ;
     schema:name "Walnüsse < 185 Bäume/ha"@de ;
     eCH-0265:cultivationCategory naebi:SPECIAL ;
-    skos:broader naebi:PRMCR ;
+    eCH-0265:cultivationSubCategory naebi:PRMCR ;
     skos:exactMatch cultivationtype:1151 .
 
 naebi:284 a eCH-0265:NutrientBalanceCrop ;
@@ -1772,7 +1772,7 @@ naebi:284 a eCH-0265:NutrientBalanceCrop ;
     schema:identifier "CROP_WALN2" ;
     schema:name "Walnüsse ≥ 185 Bäume/ha"@de ;
     eCH-0265:cultivationCategory naebi:SPECIAL ;
-    skos:broader naebi:PRMCR ;
+    eCH-0265:cultivationSubCategory naebi:PRMCR ;
     skos:exactMatch cultivationtype:1152 .
 
 naebi:285 a eCH-0265:NutrientBalanceCrop ;
@@ -1780,7 +1780,7 @@ naebi:285 a eCH-0265:NutrientBalanceCrop ;
     schema:identifier "CROP_WGRIN" ;
     schema:name "Naturwiese mittelintensiv"@de ;
     eCH-0265:cultivationCategory naebi:FODDER ;
-    skos:broader naebi:FORAG ;
+    eCH-0265:cultivationSubCategory naebi:FORAG ;
     skos:exactMatch cultivationtype:1153 .
 
 naebi:286 a eCH-0265:NutrientBalanceCrop ;
@@ -1788,7 +1788,7 @@ naebi:286 a eCH-0265:NutrientBalanceCrop ;
     schema:identifier "CROP_WGRNM" ;
     schema:name "Kunstwiese mittelintensiv"@de ;
     eCH-0265:cultivationCategory naebi:FODDER ;
-    skos:broader naebi:FORAG ;
+    eCH-0265:cultivationSubCategory naebi:FORAG ;
     skos:exactMatch cultivationtype:1154 .
 
 naebi:287 a eCH-0265:NutrientBalanceCrop ;
@@ -1796,7 +1796,7 @@ naebi:287 a eCH-0265:NutrientBalanceCrop ;
     schema:identifier "CROP_WGRNN" ;
     schema:name "Naturwiese intensiv"@de ;
     eCH-0265:cultivationCategory naebi:FODDER ;
-    skos:broader naebi:FORAG ;
+    eCH-0265:cultivationSubCategory naebi:FORAG ;
     skos:exactMatch cultivationtype:1155 .
 
 naebi:288 a eCH-0265:NutrientBalanceCrop ;
@@ -1804,7 +1804,7 @@ naebi:288 a eCH-0265:NutrientBalanceCrop ;
     schema:identifier "CROP_WGRST" ;
     schema:name "Wintergerste"@de ;
     eCH-0265:cultivationCategory naebi:ARABLE ;
-    skos:broader naebi:GRAIN ;
+    eCH-0265:cultivationSubCategory naebi:GRAIN ;
     skos:exactMatch cultivationtype:1008 .
 
 naebi:289 a eCH-0265:NutrientBalanceCrop ;
@@ -1812,7 +1812,7 @@ naebi:289 a eCH-0265:NutrientBalanceCrop ;
     schema:identifier "CROP_WGRSTN" ;
     schema:name "Wintergerste in 62a Nitrat-Projekt"@de ;
     eCH-0265:cultivationCategory naebi:ARABLE ;
-    skos:broader naebi:GRAIN ;
+    eCH-0265:cultivationSubCategory naebi:GRAIN ;
     skos:exactMatch cultivationtype:1009 .
 
 naebi:29 a eCH-0265:NutrientBalanceCrop ;
@@ -1820,7 +1820,7 @@ naebi:29 a eCH-0265:NutrientBalanceCrop ;
     schema:identifier "CROP_BROCC" ;
     schema:name "Broccoli"@de ;
     eCH-0265:cultivationCategory naebi:SPECIAL ;
-    skos:broader naebi:OUTVG ;
+    eCH-0265:cultivationSubCategory naebi:OUTVG ;
     skos:exactMatch cultivationtype:154 .
 
 naebi:290 a eCH-0265:NutrientBalanceCrop ;
@@ -1828,7 +1828,7 @@ naebi:290 a eCH-0265:NutrientBalanceCrop ;
     schema:identifier "CROP_WINRA" ;
     schema:name "Ganzpflanzen-Sorghum"@de ;
     eCH-0265:cultivationCategory naebi:FODDER ;
-    skos:broader naebi:RTCRP ;
+    eCH-0265:cultivationSubCategory naebi:RTCRP ;
     skos:exactMatch cultivationtype:1028 .
 
 naebi:291 a eCH-0265:NutrientBalanceCrop ;
@@ -1836,7 +1836,7 @@ naebi:291 a eCH-0265:NutrientBalanceCrop ;
     schema:identifier "CROP_WINRAN" ;
     schema:name "Winterraps"@de ;
     eCH-0265:cultivationCategory naebi:ARABLE ;
-    skos:broader naebi:RTCRP ;
+    eCH-0265:cultivationSubCategory naebi:RTCRP ;
     skos:exactMatch cultivationtype:805 .
 
 naebi:292 a eCH-0265:NutrientBalanceCrop ;
@@ -1844,7 +1844,7 @@ naebi:292 a eCH-0265:NutrientBalanceCrop ;
     schema:identifier "CROP_WKORN" ;
     schema:name "Winterkorn, Dinkel"@de ;
     eCH-0265:cultivationCategory naebi:ARABLE ;
-    skos:broader naebi:GRAIN ;
+    eCH-0265:cultivationSubCategory naebi:GRAIN ;
     skos:exactMatch cultivationtype:1021 .
 
 naebi:293 a eCH-0265:NutrientBalanceCrop ;
@@ -1852,7 +1852,7 @@ naebi:293 a eCH-0265:NutrientBalanceCrop ;
     schema:identifier "CROP_WOGST" ;
     schema:name "Winterhafer"@de ;
     eCH-0265:cultivationCategory naebi:ARABLE ;
-    skos:broader naebi:GRAIN ;
+    eCH-0265:cultivationSubCategory naebi:GRAIN ;
     skos:exactMatch cultivationtype:1010 .
 
 naebi:294 a eCH-0265:NutrientBalanceCrop ;
@@ -1860,7 +1860,7 @@ naebi:294 a eCH-0265:NutrientBalanceCrop ;
     schema:identifier "CROP_WRHGH" ;
     schema:name "Winterroggen (Hybridsorten)"@de ;
     eCH-0265:cultivationCategory naebi:ARABLE ;
-    skos:broader naebi:GRAIN ;
+    eCH-0265:cultivationSubCategory naebi:GRAIN ;
     skos:exactMatch cultivationtype:1034 .
 
 naebi:295 a eCH-0265:NutrientBalanceCrop ;
@@ -1868,7 +1868,7 @@ naebi:295 a eCH-0265:NutrientBalanceCrop ;
     schema:identifier "CROP_WRHGH_N" ;
     schema:name "Winterroggen (Populationssorten) in 62a Nitrat-Projekt"@de ;
     eCH-0265:cultivationCategory naebi:ARABLE ;
-    skos:broader naebi:GRAIN ;
+    eCH-0265:cultivationSubCategory naebi:GRAIN ;
     skos:exactMatch cultivationtype:1015 .
 
 naebi:296 a eCH-0265:NutrientBalanceCrop ;
@@ -1876,7 +1876,7 @@ naebi:296 a eCH-0265:NutrientBalanceCrop ;
     schema:identifier "CROP_WRHGP" ;
     schema:name "Winterroggen (Populationssorten)"@de ;
     eCH-0265:cultivationCategory naebi:ARABLE ;
-    skos:broader naebi:GRAIN ;
+    eCH-0265:cultivationSubCategory naebi:GRAIN ;
     skos:exactMatch cultivationtype:1035 .
 
 naebi:297 a eCH-0265:NutrientBalanceCrop ;
@@ -1884,7 +1884,7 @@ naebi:297 a eCH-0265:NutrientBalanceCrop ;
     schema:identifier "CROP_WRHGP_N" ;
     schema:name "Winterroggen (Hybridsorten) in 62a Nitrat-Projekt"@de ;
     eCH-0265:cultivationCategory naebi:ARABLE ;
-    skos:broader naebi:GRAIN ;
+    eCH-0265:cultivationSubCategory naebi:GRAIN ;
     skos:exactMatch cultivationtype:1016 .
 
 naebi:298 a eCH-0265:NutrientBalanceCrop ;
@@ -1892,7 +1892,7 @@ naebi:298 a eCH-0265:NutrientBalanceCrop ;
     schema:identifier "CROP_WSPIN1" ;
     schema:name "Winterspinat, 1 Schnitt"@de ;
     eCH-0265:cultivationCategory naebi:SPECIAL ;
-    skos:broader naebi:OUTVG ;
+    eCH-0265:cultivationSubCategory naebi:OUTVG ;
     skos:exactMatch cultivationtype:1224 .
 
 naebi:299 a eCH-0265:NutrientBalanceCrop ;
@@ -1900,7 +1900,7 @@ naebi:299 a eCH-0265:NutrientBalanceCrop ;
     schema:identifier "CROP_WSPIN2" ;
     schema:name "Winterspinat, 2 Schnitte"@de ;
     eCH-0265:cultivationCategory naebi:SPECIAL ;
-    skos:broader naebi:OUTVG ;
+    eCH-0265:cultivationSubCategory naebi:OUTVG ;
     skos:exactMatch cultivationtype:1157 .
 
 naebi:3 a eCH-0265:NutrientBalanceCrop ;
@@ -1908,7 +1908,7 @@ naebi:3 a eCH-0265:NutrientBalanceCrop ;
     schema:identifier "CROP_ALTBRY" ;
     schema:name "Alternative Strauchbeeren (Aronia, Holunder, Goji,…)"@de ;
     eCH-0265:cultivationCategory naebi:SPECIAL ;
-    skos:broader naebi:PRMCR ;
+    eCH-0265:cultivationSubCategory naebi:PRMCR ;
     skos:exactMatch cultivationtype:1158 .
 
 naebi:30 a eCH-0265:NutrientBalanceCrop ;
@@ -1916,7 +1916,7 @@ naebi:30 a eCH-0265:NutrientBalanceCrop ;
     schema:identifier "CROP_BROCCP" ;
     schema:name "Broccoli, Verarbeitung"@de ;
     eCH-0265:cultivationCategory naebi:SPECIAL ;
-    skos:broader naebi:OUTVG ;
+    eCH-0265:cultivationSubCategory naebi:OUTVG ;
     skos:exactMatch cultivationtype:1159 .
 
 naebi:300 a eCH-0265:NutrientBalanceCrop ;
@@ -1924,7 +1924,7 @@ naebi:300 a eCH-0265:NutrientBalanceCrop ;
     schema:identifier "CROP_WSPINI1" ;
     schema:name "Winterspinat, Industrie, 1 Schnitt"@de ;
     eCH-0265:cultivationCategory naebi:SPECIAL ;
-    skos:broader naebi:OUTVG ;
+    eCH-0265:cultivationSubCategory naebi:OUTVG ;
     skos:exactMatch cultivationtype:1160 .
 
 naebi:301 a eCH-0265:NutrientBalanceCrop ;
@@ -1932,7 +1932,7 @@ naebi:301 a eCH-0265:NutrientBalanceCrop ;
     schema:identifier "CROP_WSPINI2" ;
     schema:name "Winterspinat, Industrie, 2 Schnitte"@de ;
     eCH-0265:cultivationCategory naebi:SPECIAL ;
-    skos:broader naebi:OUTVG ;
+    eCH-0265:cultivationSubCategory naebi:OUTVG ;
     skos:exactMatch cultivationtype:1161 .
 
 naebi:302 a eCH-0265:NutrientBalanceCrop ;
@@ -1940,7 +1940,7 @@ naebi:302 a eCH-0265:NutrientBalanceCrop ;
     schema:identifier "CROP_WTRIT" ;
     schema:name "Wintertriticale"@de ;
     eCH-0265:cultivationCategory naebi:ARABLE ;
-    skos:broader naebi:GRAIN ;
+    eCH-0265:cultivationSubCategory naebi:GRAIN ;
     skos:exactMatch cultivationtype:1019 .
 
 naebi:303 a eCH-0265:NutrientBalanceCrop ;
@@ -1948,7 +1948,7 @@ naebi:303 a eCH-0265:NutrientBalanceCrop ;
     schema:identifier "CROP_WTRITN" ;
     schema:name "Wintertriticale in 62a Nitrat-Projekt"@de ;
     eCH-0265:cultivationCategory naebi:ARABLE ;
-    skos:broader naebi:GRAIN ;
+    eCH-0265:cultivationSubCategory naebi:GRAIN ;
     skos:exactMatch cultivationtype:1020 .
 
 naebi:304 a eCH-0265:NutrientBalanceCrop ;
@@ -1956,7 +1956,7 @@ naebi:304 a eCH-0265:NutrientBalanceCrop ;
     schema:identifier "CROP_WWHT" ;
     schema:name "Winterweizen"@de ;
     eCH-0265:cultivationCategory naebi:ARABLE ;
-    skos:broader naebi:GRAIN ;
+    eCH-0265:cultivationSubCategory naebi:GRAIN ;
     skos:exactMatch cultivationtype:1001 .
 
 naebi:305 a eCH-0265:NutrientBalanceCrop ;
@@ -1964,7 +1964,7 @@ naebi:305 a eCH-0265:NutrientBalanceCrop ;
     schema:identifier "CROP_WWHTN" ;
     schema:name "Winterweizen in 62a Nitrat-Projekt"@de ;
     eCH-0265:cultivationCategory naebi:ARABLE ;
-    skos:broader naebi:GRAIN ;
+    eCH-0265:cultivationSubCategory naebi:GRAIN ;
     skos:exactMatch cultivationtype:1002 .
 
 naebi:306 a eCH-0265:NutrientBalanceCrop ;
@@ -1972,7 +1972,7 @@ naebi:306 a eCH-0265:NutrientBalanceCrop ;
     schema:identifier "CROP_XMASTR" ;
     schema:name "Christbäume"@de ;
     eCH-0265:cultivationCategory naebi:SPECIAL ;
-    skos:broader naebi:PRMCR ;
+    eCH-0265:cultivationSubCategory naebi:PRMCR ;
     skos:exactMatch cultivationtype:712 .
 
 naebi:307 a eCH-0265:NutrientBalanceCrop ;
@@ -1980,7 +1980,7 @@ naebi:307 a eCH-0265:NutrientBalanceCrop ;
     schema:identifier "CROP_YRRW" ;
     schema:name "Schafgarbe"@de ;
     eCH-0265:cultivationCategory naebi:SPECIAL ;
-    skos:broader naebi:PRMCR ;
+    eCH-0265:cultivationSubCategory naebi:PRMCR ;
     skos:exactMatch cultivationtype:1162 .
 
 naebi:308 a eCH-0265:NutrientBalanceCrop ;
@@ -1988,7 +1988,7 @@ naebi:308 a eCH-0265:NutrientBalanceCrop ;
     schema:identifier "CROP_ZUCCHF" ;
     schema:name "Zucchetti, gepflanzt, frühe Kurzkultur"@de ;
     eCH-0265:cultivationCategory naebi:SPECIAL ;
-    skos:broader naebi:OUTVG ;
+    eCH-0265:cultivationSubCategory naebi:OUTVG ;
     skos:exactMatch cultivationtype:1163 .
 
 naebi:309 a eCH-0265:NutrientBalanceCrop ;
@@ -1996,7 +1996,7 @@ naebi:309 a eCH-0265:NutrientBalanceCrop ;
     schema:identifier "CROP_ZUCCHP" ;
     schema:name "Pattison, Kürbis (geschützter Anbau)"@de ;
     eCH-0265:cultivationCategory naebi:SPECIAL ;
-    skos:broader naebi:PRCRP ;
+    eCH-0265:cultivationSubCategory naebi:PRCRP ;
     skos:exactMatch cultivationtype:1164 .
 
 naebi:31 a eCH-0265:NutrientBalanceCrop ;
@@ -2004,7 +2004,7 @@ naebi:31 a eCH-0265:NutrientBalanceCrop ;
     schema:identifier "CROP_BRSPR" ;
     schema:name "Rosenkohl, Strünke abgeführt"@de ;
     eCH-0265:cultivationCategory naebi:SPECIAL ;
-    skos:broader naebi:OUTVG ;
+    eCH-0265:cultivationSubCategory naebi:OUTVG ;
     skos:exactMatch cultivationtype:473 .
 
 naebi:310 a eCH-0265:NutrientBalanceCrop ;
@@ -2012,7 +2012,7 @@ naebi:310 a eCH-0265:NutrientBalanceCrop ;
     schema:identifier "CROP_ZUCCHS" ;
     schema:name "Zucchetti, gepflanzt, Sommer und Herbst"@de ;
     eCH-0265:cultivationCategory naebi:SPECIAL ;
-    skos:broader naebi:OUTVG ;
+    eCH-0265:cultivationSubCategory naebi:OUTVG ;
     skos:exactMatch cultivationtype:1165 .
 
 naebi:311 a eCH-0265:NutrientBalanceCrop ;
@@ -2020,7 +2020,7 @@ naebi:311 a eCH-0265:NutrientBalanceCrop ;
     schema:identifier "CROP_ZUCHP" ;
     schema:name "Zucchetti (geschützter Anbau)"@de ;
     eCH-0265:cultivationCategory naebi:SPECIAL ;
-    skos:broader naebi:PRCRP ;
+    eCH-0265:cultivationSubCategory naebi:PRCRP ;
     skos:exactMatch cultivationtype:1166 .
 
 naebi:312 a eCH-0265:NutrientBalanceCrop ;
@@ -2028,7 +2028,7 @@ naebi:312 a eCH-0265:NutrientBalanceCrop ;
     schema:identifier "CROP_ZUCPAT" ;
     schema:name "Patisson, Kürbis"@de ;
     eCH-0265:cultivationCategory naebi:SPECIAL ;
-    skos:broader naebi:OUTVG ;
+    eCH-0265:cultivationSubCategory naebi:OUTVG ;
     skos:exactMatch cultivationtype:1167 .
 
 naebi:313 a eCH-0265:NutrientBalanceCrop ;
@@ -2036,7 +2036,7 @@ naebi:313 a eCH-0265:NutrientBalanceCrop ;
     schema:identifier "CROP_ZUCSHS" ;
     schema:name "Zucchetti, gesät, Sommer und Herbst"@de ;
     eCH-0265:cultivationCategory naebi:SPECIAL ;
-    skos:broader naebi:OUTVG ;
+    eCH-0265:cultivationSubCategory naebi:OUTVG ;
     skos:exactMatch cultivationtype:1168 .
 
 naebi:32 a eCH-0265:NutrientBalanceCrop ;
@@ -2044,7 +2044,7 @@ naebi:32 a eCH-0265:NutrientBalanceCrop ;
     schema:identifier "CROP_BSLKM" ;
     schema:name "Basilikum"@de ;
     eCH-0265:cultivationCategory naebi:SPECIAL ;
-    skos:broader naebi:OUTVG ;
+    eCH-0265:cultivationSubCategory naebi:OUTVG ;
     skos:exactMatch cultivationtype:106 .
 
 naebi:33 a eCH-0265:NutrientBalanceCrop ;
@@ -2052,7 +2052,7 @@ naebi:33 a eCH-0265:NutrientBalanceCrop ;
     schema:identifier "CROP_BUSHB" ;
     schema:name "Bohnen, Busch- Handpflück-"@de ;
     eCH-0265:cultivationCategory naebi:SPECIAL ;
-    skos:broader naebi:OUTVG ;
+    eCH-0265:cultivationSubCategory naebi:OUTVG ;
     skos:exactMatch cultivationtype:1225 .
 
 naebi:34 a eCH-0265:NutrientBalanceCrop ;
@@ -2060,7 +2060,7 @@ naebi:34 a eCH-0265:NutrientBalanceCrop ;
     schema:identifier "CROP_CARHY" ;
     schema:name "Karotten Verarbeitung-, Lager-, hoher Ertrag"@de ;
     eCH-0265:cultivationCategory naebi:SPECIAL ;
-    skos:broader naebi:OUTVG ;
+    eCH-0265:cultivationSubCategory naebi:OUTVG ;
     skos:exactMatch cultivationtype:1226 .
 
 naebi:35 a eCH-0265:NutrientBalanceCrop ;
@@ -2068,7 +2068,7 @@ naebi:35 a eCH-0265:NutrientBalanceCrop ;
     schema:identifier "CROP_CARMY" ;
     schema:name "Karotten Verarbeitung-, Lager-, mittlerer Ertrag"@de ;
     eCH-0265:cultivationCategory naebi:SPECIAL ;
-    skos:broader naebi:OUTVG ;
+    eCH-0265:cultivationSubCategory naebi:OUTVG ;
     skos:exactMatch cultivationtype:1227 .
 
 naebi:36 a eCH-0265:NutrientBalanceCrop ;
@@ -2076,7 +2076,7 @@ naebi:36 a eCH-0265:NutrientBalanceCrop ;
     schema:identifier "CROP_CARPP" ;
     schema:name "Karotten Pariser"@de ;
     eCH-0265:cultivationCategory naebi:SPECIAL ;
-    skos:broader naebi:OUTVG ;
+    eCH-0265:cultivationSubCategory naebi:OUTVG ;
     skos:exactMatch cultivationtype:1228 .
 
 naebi:37 a eCH-0265:NutrientBalanceCrop ;
@@ -2084,7 +2084,7 @@ naebi:37 a eCH-0265:NutrientBalanceCrop ;
     schema:identifier "CROP_CAULI" ;
     schema:name "Blumenkohl, Standard"@de ;
     eCH-0265:cultivationCategory naebi:SPECIAL ;
-    skos:broader naebi:OUTVG ;
+    eCH-0265:cultivationSubCategory naebi:OUTVG ;
     skos:exactMatch cultivationtype:1181 .
 
 naebi:38 a eCH-0265:NutrientBalanceCrop ;
@@ -2092,7 +2092,7 @@ naebi:38 a eCH-0265:NutrientBalanceCrop ;
     schema:identifier "CROP_CAULIE" ;
     schema:name "Blumenkohl, früh"@de ;
     eCH-0265:cultivationCategory naebi:SPECIAL ;
-    skos:broader naebi:OUTVG ;
+    eCH-0265:cultivationSubCategory naebi:OUTVG ;
     skos:exactMatch cultivationtype:1182 .
 
 naebi:39 a eCH-0265:NutrientBalanceCrop ;
@@ -2100,7 +2100,7 @@ naebi:39 a eCH-0265:NutrientBalanceCrop ;
     schema:identifier "CROP_CAULIP" ;
     schema:name "Blumenkohl, Verarbeitung"@de ;
     eCH-0265:cultivationCategory naebi:SPECIAL ;
-    skos:broader naebi:OUTVG ;
+    eCH-0265:cultivationSubCategory naebi:OUTVG ;
     skos:exactMatch cultivationtype:1183 .
 
 naebi:4 a eCH-0265:NutrientBalanceCrop ;
@@ -2108,7 +2108,7 @@ naebi:4 a eCH-0265:NutrientBalanceCrop ;
     schema:identifier "CROP_APEYH" ;
     schema:name "Aprikosenanlage, hoher Ertrag"@de ;
     eCH-0265:cultivationCategory naebi:SPECIAL ;
-    skos:broader naebi:PRMCR ;
+    eCH-0265:cultivationSubCategory naebi:PRMCR ;
     skos:exactMatch cultivationtype:1180 .
 
 naebi:40 a eCH-0265:NutrientBalanceCrop ;
@@ -2116,7 +2116,7 @@ naebi:40 a eCH-0265:NutrientBalanceCrop ;
     schema:identifier "CROP_CBEFE" ;
     schema:name "Karotten Bund-, Früh-"@de ;
     eCH-0265:cultivationCategory naebi:SPECIAL ;
-    skos:broader naebi:OUTVG ;
+    eCH-0265:cultivationSubCategory naebi:OUTVG ;
     skos:exactMatch cultivationtype:1229 .
 
 naebi:41 a eCH-0265:NutrientBalanceCrop ;
@@ -2124,7 +2124,7 @@ naebi:41 a eCH-0265:NutrientBalanceCrop ;
     schema:identifier "CROP_CCMCRN" ;
     schema:name "Silomais"@de ;
     eCH-0265:cultivationCategory naebi:FODDER ;
-    skos:broader naebi:RTCRP ;
+    eCH-0265:cultivationSubCategory naebi:RTCRP ;
     skos:exactMatch cultivationtype:1026 .
 
 naebi:42 a eCH-0265:NutrientBalanceCrop ;
@@ -2132,7 +2132,7 @@ naebi:42 a eCH-0265:NutrientBalanceCrop ;
     schema:identifier "CROP_CEL40" ;
     schema:name "Sellerie Suppen- 40 Stk/m2 (geschützter Anbau)"@de ;
     eCH-0265:cultivationCategory naebi:SPECIAL ;
-    skos:broader naebi:PRCRP ;
+    eCH-0265:cultivationSubCategory naebi:PRCRP ;
     skos:exactMatch cultivationtype:1230 .
 
 naebi:43 a eCH-0265:NutrientBalanceCrop ;
@@ -2140,7 +2140,7 @@ naebi:43 a eCH-0265:NutrientBalanceCrop ;
     schema:identifier "CROP_CELERK" ;
     schema:name "Sellerie Knollen-"@de ;
     eCH-0265:cultivationCategory naebi:SPECIAL ;
-    skos:broader naebi:OUTVG ;
+    eCH-0265:cultivationSubCategory naebi:OUTVG ;
     skos:exactMatch cultivationtype:158 .
 
 naebi:44 a eCH-0265:NutrientBalanceCrop ;
@@ -2148,7 +2148,7 @@ naebi:44 a eCH-0265:NutrientBalanceCrop ;
     schema:identifier "CROP_CELERS" ;
     schema:name "Sellerie Stangen-"@de ;
     eCH-0265:cultivationCategory naebi:SPECIAL ;
-    skos:broader naebi:OUTVG ;
+    eCH-0265:cultivationSubCategory naebi:OUTVG ;
     skos:exactMatch cultivationtype:271 .
 
 naebi:45 a eCH-0265:NutrientBalanceCrop ;
@@ -2156,7 +2156,7 @@ naebi:45 a eCH-0265:NutrientBalanceCrop ;
     schema:identifier "CROP_CEYH" ;
     schema:name "Cassis, 3.5 kg/m2"@de ;
     eCH-0265:cultivationCategory naebi:SPECIAL ;
-    skos:broader naebi:PRMCR ;
+    eCH-0265:cultivationSubCategory naebi:PRMCR ;
     skos:exactMatch cultivationtype:1233 .
 
 naebi:46 a eCH-0265:NutrientBalanceCrop ;
@@ -2164,7 +2164,7 @@ naebi:46 a eCH-0265:NutrientBalanceCrop ;
     schema:identifier "CROP_CHARD" ;
     schema:name "Krautstiel"@de ;
     eCH-0265:cultivationCategory naebi:SPECIAL ;
-    skos:broader naebi:OUTVG ;
+    eCH-0265:cultivationSubCategory naebi:OUTVG ;
     skos:exactMatch cultivationtype:76 .
 
 naebi:47 a eCH-0265:NutrientBalanceCrop ;
@@ -2172,7 +2172,7 @@ naebi:47 a eCH-0265:NutrientBalanceCrop ;
     schema:identifier "CROP_CHEYH" ;
     schema:name "Kirschenanlage, hoher Ertrag"@de ;
     eCH-0265:cultivationCategory naebi:SPECIAL ;
-    skos:broader naebi:PRMCR ;
+    eCH-0265:cultivationSubCategory naebi:PRMCR ;
     skos:exactMatch cultivationtype:1235 .
 
 naebi:48 a eCH-0265:NutrientBalanceCrop ;
@@ -2180,7 +2180,7 @@ naebi:48 a eCH-0265:NutrientBalanceCrop ;
     schema:identifier "CROP_CHINK" ;
     schema:name "Chinakohl"@de ;
     eCH-0265:cultivationCategory naebi:SPECIAL ;
-    skos:broader naebi:OUTVG ;
+    eCH-0265:cultivationSubCategory naebi:OUTVG ;
     skos:exactMatch cultivationtype:59 .
 
 naebi:49 a eCH-0265:NutrientBalanceCrop ;
@@ -2188,7 +2188,7 @@ naebi:49 a eCH-0265:NutrientBalanceCrop ;
     schema:identifier "CROP_CHISLF" ;
     schema:name "Chinaschilf"@de ;
     eCH-0265:cultivationCategory naebi:SPECIAL ;
-    skos:broader naebi:PRMCR ;
+    eCH-0265:cultivationSubCategory naebi:PRMCR ;
     skos:exactMatch cultivationtype:169 .
 
 naebi:5 a eCH-0265:NutrientBalanceCrop ;
@@ -2196,7 +2196,7 @@ naebi:5 a eCH-0265:NutrientBalanceCrop ;
     schema:identifier "CROP_APPLT" ;
     schema:name "Aprikosenanlage"@de ;
     eCH-0265:cultivationCategory naebi:SPECIAL ;
-    skos:broader naebi:PRMCR ;
+    eCH-0265:cultivationSubCategory naebi:PRMCR ;
     skos:exactMatch cultivationtype:338 .
 
 naebi:50 a eCH-0265:NutrientBalanceCrop ;
@@ -2204,7 +2204,7 @@ naebi:50 a eCH-0265:NutrientBalanceCrop ;
     schema:identifier "CROP_CHIVES" ;
     schema:name "Schnittlauch"@de ;
     eCH-0265:cultivationCategory naebi:SPECIAL ;
-    skos:broader naebi:OUTVG ;
+    eCH-0265:cultivationSubCategory naebi:OUTVG ;
     skos:exactMatch cultivationtype:220 .
 
 naebi:51 a eCH-0265:NutrientBalanceCrop ;
@@ -2212,7 +2212,7 @@ naebi:51 a eCH-0265:NutrientBalanceCrop ;
     schema:identifier "CROP_CHIWR" ;
     schema:name "Chicorée, Wurzelanbau"@de ;
     eCH-0265:cultivationCategory naebi:SPECIAL ;
-    skos:broader naebi:OUTVG ;
+    eCH-0265:cultivationSubCategory naebi:OUTVG ;
     skos:exactMatch cultivationtype:1239 .
 
 naebi:52 a eCH-0265:NutrientBalanceCrop ;
@@ -2220,7 +2220,7 @@ naebi:52 a eCH-0265:NutrientBalanceCrop ;
     schema:identifier "CROP_CHMML" ;
     schema:name "Kamille"@de ;
     eCH-0265:cultivationCategory naebi:SPECIAL ;
-    skos:broader naebi:PRMCR ;
+    eCH-0265:cultivationSubCategory naebi:PRMCR ;
     skos:exactMatch cultivationtype:1240 .
 
 naebi:53 a eCH-0265:NutrientBalanceCrop ;
@@ -2228,7 +2228,7 @@ naebi:53 a eCH-0265:NutrientBalanceCrop ;
     schema:identifier "CROP_CHRPL" ;
     schema:name "Kirschenanlage"@de ;
     eCH-0265:cultivationCategory naebi:SPECIAL ;
-    skos:broader naebi:PRMCR ;
+    eCH-0265:cultivationSubCategory naebi:PRMCR ;
     skos:exactMatch cultivationtype:283 .
 
 naebi:54 a eCH-0265:NutrientBalanceCrop ;
@@ -2236,7 +2236,7 @@ naebi:54 a eCH-0265:NutrientBalanceCrop ;
     schema:identifier "CROP_CHVSP" ;
     schema:name "Schnittlauch Kultur (geschützter Anbau)"@de ;
     eCH-0265:cultivationCategory naebi:SPECIAL ;
-    skos:broader naebi:PRCRP ;
+    eCH-0265:cultivationSubCategory naebi:PRCRP ;
     skos:exactMatch cultivationtype:1242 .
 
 naebi:55 a eCH-0265:NutrientBalanceCrop ;
@@ -2244,7 +2244,7 @@ naebi:55 a eCH-0265:NutrientBalanceCrop ;
     schema:identifier "CROP_CRSSE" ;
     schema:name "Kresse (geschützter Anbau)"@de ;
     eCH-0265:cultivationCategory naebi:SPECIAL ;
-    skos:broader naebi:PRCRP ;
+    eCH-0265:cultivationSubCategory naebi:PRCRP ;
     skos:exactMatch cultivationtype:1243 .
 
 naebi:56 a eCH-0265:NutrientBalanceCrop ;
@@ -2252,7 +2252,7 @@ naebi:56 a eCH-0265:NutrientBalanceCrop ;
     schema:identifier "CROP_CSLLC" ;
     schema:name "Nüsslisalat, Feldsalat (geschützter Anbau)"@de ;
     eCH-0265:cultivationCategory naebi:SPECIAL ;
-    skos:broader naebi:PRCRP ;
+    eCH-0265:cultivationSubCategory naebi:PRCRP ;
     skos:exactMatch cultivationtype:1244 .
 
 naebi:57 a eCH-0265:NutrientBalanceCrop ;
@@ -2260,7 +2260,7 @@ naebi:57 a eCH-0265:NutrientBalanceCrop ;
     schema:identifier "CROP_CTLSP" ;
     schema:name "Schnittsalat (geschützter Anbau)"@de ;
     eCH-0265:cultivationCategory naebi:SPECIAL ;
-    skos:broader naebi:PRCRP ;
+    eCH-0265:cultivationSubCategory naebi:PRCRP ;
     skos:exactMatch cultivationtype:1245 .
 
 naebi:58 a eCH-0265:NutrientBalanceCrop ;
@@ -2268,7 +2268,7 @@ naebi:58 a eCH-0265:NutrientBalanceCrop ;
     schema:identifier "CROP_CUC30" ;
     schema:name "Gurken 30 Stk/m2, Erdkultur (geschützter Anbau)"@de ;
     eCH-0265:cultivationCategory naebi:SPECIAL ;
-    skos:broader naebi:PRCRP ;
+    eCH-0265:cultivationSubCategory naebi:PRCRP ;
     skos:exactMatch cultivationtype:1246 .
 
 naebi:59 a eCH-0265:NutrientBalanceCrop ;
@@ -2276,7 +2276,7 @@ naebi:59 a eCH-0265:NutrientBalanceCrop ;
     schema:identifier "CROP_CUC50" ;
     schema:name "Gurken 50 Stk/m2, Erdkultur (geschützter Anbau)"@de ;
     eCH-0265:cultivationCategory naebi:SPECIAL ;
-    skos:broader naebi:PRCRP ;
+    eCH-0265:cultivationSubCategory naebi:PRCRP ;
     skos:exactMatch cultivationtype:1247 .
 
 naebi:6 a eCH-0265:NutrientBalanceCrop ;
@@ -2284,7 +2284,7 @@ naebi:6 a eCH-0265:NutrientBalanceCrop ;
     schema:identifier "CROP_ARNCA" ;
     schema:name "Arnika"@de ;
     eCH-0265:cultivationCategory naebi:SPECIAL ;
-    skos:broader naebi:PRMCR ;
+    eCH-0265:cultivationSubCategory naebi:PRMCR ;
     skos:exactMatch cultivationtype:1248 .
 
 naebi:60 a eCH-0265:NutrientBalanceCrop ;
@@ -2292,7 +2292,7 @@ naebi:60 a eCH-0265:NutrientBalanceCrop ;
     schema:identifier "CROP_CURRNT" ;
     schema:name "Cassis, 2.5 kg/m2"@de ;
     eCH-0265:cultivationCategory naebi:SPECIAL ;
-    skos:broader naebi:PRMCR ;
+    eCH-0265:cultivationSubCategory naebi:PRMCR ;
     skos:exactMatch cultivationtype:1249 .
 
 naebi:61 a eCH-0265:NutrientBalanceCrop ;
@@ -2300,7 +2300,7 @@ naebi:61 a eCH-0265:NutrientBalanceCrop ;
     schema:identifier "CROP_CUSALA" ;
     schema:name "Schnittsalat"@de ;
     eCH-0265:cultivationCategory naebi:SPECIAL ;
-    skos:broader naebi:OUTVG ;
+    eCH-0265:cultivationSubCategory naebi:OUTVG ;
     skos:exactMatch cultivationtype:332 .
 
 naebi:62 a eCH-0265:NutrientBalanceCrop ;
@@ -2308,7 +2308,7 @@ naebi:62 a eCH-0265:NutrientBalanceCrop ;
     schema:identifier "CROP_CUTCN" ;
     schema:name "Kabis Einschneide-"@de ;
     eCH-0265:cultivationCategory naebi:SPECIAL ;
-    skos:broader naebi:OUTVG ;
+    eCH-0265:cultivationSubCategory naebi:OUTVG ;
     skos:exactMatch cultivationtype:1251 .
 
 naebi:63 a eCH-0265:NutrientBalanceCrop ;
@@ -2316,7 +2316,7 @@ naebi:63 a eCH-0265:NutrientBalanceCrop ;
     schema:identifier "CROP_CUTFLG" ;
     schema:name "Schnittblumen, gross"@de ;
     eCH-0265:cultivationCategory naebi:SPECIAL ;
-    skos:broader naebi:DIVCR ;
+    eCH-0265:cultivationSubCategory naebi:DIVCR ;
     skos:exactMatch cultivationtype:1252 .
 
 naebi:64 a eCH-0265:NutrientBalanceCrop ;
@@ -2324,7 +2324,7 @@ naebi:64 a eCH-0265:NutrientBalanceCrop ;
     schema:identifier "CROP_CUTFLM" ;
     schema:name "Schnittblumen, mittel"@de ;
     eCH-0265:cultivationCategory naebi:SPECIAL ;
-    skos:broader naebi:DIVCR ;
+    eCH-0265:cultivationSubCategory naebi:DIVCR ;
     skos:exactMatch cultivationtype:1253 .
 
 naebi:65 a eCH-0265:NutrientBalanceCrop ;
@@ -2332,7 +2332,7 @@ naebi:65 a eCH-0265:NutrientBalanceCrop ;
     schema:identifier "CROP_CUTFLS" ;
     schema:name "Schnittblumen, klein"@de ;
     eCH-0265:cultivationCategory naebi:SPECIAL ;
-    skos:broader naebi:DIVCR ;
+    eCH-0265:cultivationSubCategory naebi:DIVCR ;
     skos:exactMatch cultivationtype:1254 .
 
 naebi:66 a eCH-0265:NutrientBalanceCrop ;
@@ -2340,7 +2340,7 @@ naebi:66 a eCH-0265:NutrientBalanceCrop ;
     schema:identifier "CROP_DLLLD" ;
     schema:name "Dill"@de ;
     eCH-0265:cultivationCategory naebi:SPECIAL ;
-    skos:broader naebi:OUTVG ;
+    eCH-0265:cultivationSubCategory naebi:OUTVG ;
     skos:exactMatch cultivationtype:231 .
 
 naebi:67 a eCH-0265:NutrientBalanceCrop ;
@@ -2348,7 +2348,7 @@ naebi:67 a eCH-0265:NutrientBalanceCrop ;
     schema:identifier "CROP_EDLWS" ;
     schema:name "Edelweiss"@de ;
     eCH-0265:cultivationCategory naebi:SPECIAL ;
-    skos:broader naebi:PRMCR ;
+    eCH-0265:cultivationSubCategory naebi:PRMCR ;
     skos:exactMatch cultivationtype:1256 .
 
 naebi:68 a eCH-0265:NutrientBalanceCrop ;
@@ -2356,7 +2356,7 @@ naebi:68 a eCH-0265:NutrientBalanceCrop ;
     schema:identifier "CROP_EGGPL" ;
     schema:name "Aubergine"@de ;
     eCH-0265:cultivationCategory naebi:SPECIAL ;
-    skos:broader naebi:OUTVG ;
+    eCH-0265:cultivationSubCategory naebi:OUTVG ;
     skos:exactMatch cultivationtype:176 .
 
 naebi:69 a eCH-0265:NutrientBalanceCrop ;
@@ -2364,7 +2364,7 @@ naebi:69 a eCH-0265:NutrientBalanceCrop ;
     schema:identifier "CROP_EMMEK" ;
     schema:name "Emmer / Einkorn"@de ;
     eCH-0265:cultivationCategory naebi:ARABLE ;
-    skos:broader naebi:GRAIN ;
+    eCH-0265:cultivationSubCategory naebi:GRAIN ;
     skos:exactMatch cultivationtype:511 .
 
 naebi:7 a eCH-0265:NutrientBalanceCrop ;
@@ -2372,7 +2372,7 @@ naebi:7 a eCH-0265:NutrientBalanceCrop ;
     schema:identifier "CROP_ARUCL1" ;
     schema:name "Rucola, 1 Schnitt"@de ;
     eCH-0265:cultivationCategory naebi:SPECIAL ;
-    skos:broader naebi:OUTVG ;
+    eCH-0265:cultivationSubCategory naebi:OUTVG ;
     skos:exactMatch cultivationtype:1257 .
 
 naebi:70 a eCH-0265:NutrientBalanceCrop ;
@@ -2380,7 +2380,7 @@ naebi:70 a eCH-0265:NutrientBalanceCrop ;
     schema:identifier "CROP_ENDAU" ;
     schema:name "Endivie Herbst- (geschützter Anbau)"@de ;
     eCH-0265:cultivationCategory naebi:SPECIAL ;
-    skos:broader naebi:PRCRP ;
+    eCH-0265:cultivationSubCategory naebi:PRCRP ;
     skos:exactMatch cultivationtype:1258 .
 
 naebi:71 a eCH-0265:NutrientBalanceCrop ;
@@ -2388,7 +2388,7 @@ naebi:71 a eCH-0265:NutrientBalanceCrop ;
     schema:identifier "CROP_ENDEY" ;
     schema:name "Endivie, hoher Ertrag"@de ;
     eCH-0265:cultivationCategory naebi:SPECIAL ;
-    skos:broader naebi:OUTVG ;
+    eCH-0265:cultivationSubCategory naebi:OUTVG ;
     skos:exactMatch cultivationtype:1259 .
 
 naebi:72 a eCH-0265:NutrientBalanceCrop ;
@@ -2396,7 +2396,7 @@ naebi:72 a eCH-0265:NutrientBalanceCrop ;
     schema:identifier "CROP_ENDMY" ;
     schema:name "Endivie, mittlerer Ertrag"@de ;
     eCH-0265:cultivationCategory naebi:SPECIAL ;
-    skos:broader naebi:OUTVG ;
+    eCH-0265:cultivationSubCategory naebi:OUTVG ;
     skos:exactMatch cultivationtype:1260 .
 
 naebi:73 a eCH-0265:NutrientBalanceCrop ;
@@ -2404,7 +2404,7 @@ naebi:73 a eCH-0265:NutrientBalanceCrop ;
     schema:identifier "CROP_EWSPE" ;
     schema:name "Soja"@de ;
     eCH-0265:cultivationCategory naebi:ARABLE ;
-    skos:broader naebi:RTCRP ;
+    eCH-0265:cultivationSubCategory naebi:RTCRP ;
     skos:exactMatch cultivationtype:528 .
 
 naebi:74 a eCH-0265:NutrientBalanceCrop ;
@@ -2412,7 +2412,7 @@ naebi:74 a eCH-0265:NutrientBalanceCrop ;
     schema:identifier "CROP_FCRMN" ;
     schema:name "CCM"@de ;
     eCH-0265:cultivationCategory naebi:ARABLE ;
-    skos:broader naebi:RTCRP ;
+    eCH-0265:cultivationSubCategory naebi:RTCRP ;
     skos:exactMatch cultivationtype:1262 .
 
 naebi:75 a eCH-0265:NutrientBalanceCrop ;
@@ -2420,7 +2420,7 @@ naebi:75 a eCH-0265:NutrientBalanceCrop ;
     schema:identifier "CROP_FENNL" ;
     schema:name "Fenchel, Knollen"@de ;
     eCH-0265:cultivationCategory naebi:SPECIAL ;
-    skos:broader naebi:OUTVG ;
+    eCH-0265:cultivationSubCategory naebi:OUTVG ;
     skos:exactMatch cultivationtype:273 .
 
 naebi:76 a eCH-0265:NutrientBalanceCrop ;
@@ -2428,7 +2428,7 @@ naebi:76 a eCH-0265:NutrientBalanceCrop ;
     schema:identifier "CROP_FIBHE" ;
     schema:name "Faserlein"@de ;
     eCH-0265:cultivationCategory naebi:ARABLE ;
-    skos:broader naebi:DIVCR ;
+    eCH-0265:cultivationSubCategory naebi:DIVCR ;
     skos:exactMatch cultivationtype:1264 .
 
 naebi:77 a eCH-0265:NutrientBalanceCrop ;
@@ -2436,7 +2436,7 @@ naebi:77 a eCH-0265:NutrientBalanceCrop ;
     schema:identifier "CROP_FLAXD" ;
     schema:name "Saum auf Ackerfläche"@de ;
     eCH-0265:cultivationCategory naebi:ARABLE ;
-    skos:broader naebi:DIVCR ;
+    eCH-0265:cultivationSubCategory naebi:DIVCR ;
     skos:exactMatch cultivationtype:559 .
 
 naebi:78 a eCH-0265:NutrientBalanceCrop ;
@@ -2444,7 +2444,7 @@ naebi:78 a eCH-0265:NutrientBalanceCrop ;
     schema:identifier "CROP_FLLND" ;
     schema:name "Rotationsbrache"@de ;
     eCH-0265:cultivationCategory naebi:ARABLE ;
-    skos:broader naebi:DIVCR ;
+    eCH-0265:cultivationSubCategory naebi:DIVCR ;
     skos:exactMatch cultivationtype:557 .
 
 naebi:79 a eCH-0265:NutrientBalanceCrop ;
@@ -2452,7 +2452,7 @@ naebi:79 a eCH-0265:NutrientBalanceCrop ;
     schema:identifier "CROP_FNSD1" ;
     schema:name "Fenchelsamen 1-jährig"@de ;
     eCH-0265:cultivationCategory naebi:SPECIAL ;
-    skos:broader naebi:OUTVG ;
+    eCH-0265:cultivationSubCategory naebi:OUTVG ;
     skos:exactMatch cultivationtype:1267 .
 
 naebi:8 a eCH-0265:NutrientBalanceCrop ;
@@ -2460,7 +2460,7 @@ naebi:8 a eCH-0265:NutrientBalanceCrop ;
     schema:identifier "CROP_ARUCL2" ;
     schema:name "Rucola, 2 Schnitte"@de ;
     eCH-0265:cultivationCategory naebi:SPECIAL ;
-    skos:broader naebi:OUTVG ;
+    eCH-0265:cultivationSubCategory naebi:OUTVG ;
     skos:exactMatch cultivationtype:1268 .
 
 naebi:80 a eCH-0265:NutrientBalanceCrop ;
@@ -2468,7 +2468,7 @@ naebi:80 a eCH-0265:NutrientBalanceCrop ;
     schema:identifier "CROP_FNSDP" ;
     schema:name "Fenchelsamen mehrjährig"@de ;
     eCH-0265:cultivationCategory naebi:SPECIAL ;
-    skos:broader naebi:PRMCR ;
+    eCH-0265:cultivationSubCategory naebi:PRMCR ;
     skos:exactMatch cultivationtype:1269 .
 
 naebi:81 a eCH-0265:NutrientBalanceCrop ;
@@ -2476,7 +2476,7 @@ naebi:81 a eCH-0265:NutrientBalanceCrop ;
     schema:identifier "CROP_FOILC" ;
     schema:name "Kabis Früh-, Folie"@de ;
     eCH-0265:cultivationCategory naebi:SPECIAL ;
-    skos:broader naebi:OUTVG ;
+    eCH-0265:cultivationSubCategory naebi:OUTVG ;
     skos:exactMatch cultivationtype:1270 .
 
 naebi:82 a eCH-0265:NutrientBalanceCrop ;
@@ -2484,14 +2484,14 @@ naebi:82 a eCH-0265:NutrientBalanceCrop ;
     schema:identifier "CROP_FOSTR" ;
     schema:name "betriebseigenes verfütt. Stroh, ha"@de ;
     eCH-0265:cultivationCategory naebi:FODDER ;
-    skos:broader naebi:FORAG .
+    eCH-0265:cultivationSubCategory naebi:FORAG .
 
 naebi:83 a eCH-0265:NutrientBalanceCrop ;
     skos:inScheme naebi:ConceptScheme ;
     schema:identifier "CROP_FRUB" ;
     schema:name "Zuckerrüben"@de ;
     eCH-0265:cultivationCategory naebi:ARABLE ;
-    skos:broader naebi:RTCRP ;
+    eCH-0265:cultivationSubCategory naebi:RTCRP ;
     skos:exactMatch cultivationtype:522 .
 
 naebi:84 a eCH-0265:NutrientBalanceCrop ;
@@ -2499,7 +2499,7 @@ naebi:84 a eCH-0265:NutrientBalanceCrop ;
     schema:identifier "CROP_FWHT" ;
     schema:name "Futterweizen"@de ;
     eCH-0265:cultivationCategory naebi:ARABLE ;
-    skos:broader naebi:GRAIN ;
+    eCH-0265:cultivationSubCategory naebi:GRAIN ;
     skos:exactMatch cultivationtype:1004 .
 
 naebi:85 a eCH-0265:NutrientBalanceCrop ;
@@ -2507,7 +2507,7 @@ naebi:85 a eCH-0265:NutrientBalanceCrop ;
     schema:identifier "CROP_FWHTN" ;
     schema:name "Futterweizen in 62a Nitrat-Projekt"@de ;
     eCH-0265:cultivationCategory naebi:ARABLE ;
-    skos:broader naebi:GRAIN ;
+    eCH-0265:cultivationSubCategory naebi:GRAIN ;
     skos:exactMatch cultivationtype:1005 .
 
 naebi:86 a eCH-0265:NutrientBalanceCrop ;
@@ -2515,7 +2515,7 @@ naebi:86 a eCH-0265:NutrientBalanceCrop ;
     schema:identifier "CROP_GANSO" ;
     schema:name "Hirse"@de ;
     eCH-0265:cultivationCategory naebi:ARABLE ;
-    skos:broader naebi:GRAIN ;
+    eCH-0265:cultivationSubCategory naebi:GRAIN ;
     skos:exactMatch cultivationtype:542 .
 
 naebi:87 a eCH-0265:NutrientBalanceCrop ;
@@ -2523,7 +2523,7 @@ naebi:87 a eCH-0265:NutrientBalanceCrop ;
     schema:identifier "CROP_GBEYH" ;
     schema:name "Stachelbeeren, 2.5 kg/m2"@de ;
     eCH-0265:cultivationCategory naebi:SPECIAL ;
-    skos:broader naebi:PRMCR ;
+    eCH-0265:cultivationSubCategory naebi:PRMCR ;
     skos:exactMatch cultivationtype:1273 .
 
 naebi:88 a eCH-0265:NutrientBalanceCrop ;
@@ -2531,7 +2531,7 @@ naebi:88 a eCH-0265:NutrientBalanceCrop ;
     schema:identifier "CROP_GCORN" ;
     schema:name "Grünmais, ha"@de ;
     eCH-0265:cultivationCategory naebi:FODDER ;
-    skos:broader naebi:FORAG ;
+    eCH-0265:cultivationSubCategory naebi:FORAG ;
     skos:exactMatch cultivationtype:1025 .
 
 naebi:89 a eCH-0265:NutrientBalanceCrop ;
@@ -2539,7 +2539,7 @@ naebi:89 a eCH-0265:NutrientBalanceCrop ;
     schema:identifier "CROP_GMLG" ;
     schema:name "Gründüngung (Leguminosen), ha"@de ;
     eCH-0265:cultivationCategory naebi:ARABLE ;
-    skos:broader naebi:DIVCR ;
+    eCH-0265:cultivationSubCategory naebi:DIVCR ;
     skos:exactMatch cultivationtype:1053 .
 
 naebi:9 a eCH-0265:NutrientBalanceCrop ;
@@ -2547,7 +2547,7 @@ naebi:9 a eCH-0265:NutrientBalanceCrop ;
     schema:identifier "CROP_ASISAL" ;
     schema:name "Asia-Salate (Brassicaceae)"@de ;
     eCH-0265:cultivationCategory naebi:SPECIAL ;
-    skos:broader naebi:OUTVG ;
+    eCH-0265:cultivationSubCategory naebi:OUTVG ;
     skos:exactMatch cultivationtype:139 .
 
 naebi:90 a eCH-0265:NutrientBalanceCrop ;
@@ -2555,7 +2555,7 @@ naebi:90 a eCH-0265:NutrientBalanceCrop ;
     schema:identifier "CROP_GMNLE" ;
     schema:name "Gründüngung (Nichtleguminosen), ha"@de ;
     eCH-0265:cultivationCategory naebi:ARABLE ;
-    skos:broader naebi:DIVCR ;
+    eCH-0265:cultivationSubCategory naebi:DIVCR ;
     skos:exactMatch cultivationtype:1277 .
 
 naebi:91 a eCH-0265:NutrientBalanceCrop ;
@@ -2563,7 +2563,7 @@ naebi:91 a eCH-0265:NutrientBalanceCrop ;
     schema:identifier "CROP_GOOSEB" ;
     schema:name "Stachelbeeren, 1.7 kg/m2"@de ;
     eCH-0265:cultivationCategory naebi:SPECIAL ;
-    skos:broader naebi:PRMCR ;
+    eCH-0265:cultivationSubCategory naebi:PRMCR ;
     skos:exactMatch cultivationtype:1278 .
 
 naebi:92 a eCH-0265:NutrientBalanceCrop ;
@@ -2571,7 +2571,7 @@ naebi:92 a eCH-0265:NutrientBalanceCrop ;
     schema:identifier "CROP_GRLIC" ;
     schema:name "Knoblauch"@de ;
     eCH-0265:cultivationCategory naebi:SPECIAL ;
-    skos:broader naebi:OUTVG ;
+    eCH-0265:cultivationSubCategory naebi:OUTVG ;
     skos:exactMatch cultivationtype:39 .
 
 naebi:93 a eCH-0265:NutrientBalanceCrop ;
@@ -2579,7 +2579,7 @@ naebi:93 a eCH-0265:NutrientBalanceCrop ;
     schema:identifier "CROP_GSEED" ;
     schema:name "Grassamen-Produktion"@de ;
     eCH-0265:cultivationCategory naebi:FODDER ;
-    skos:broader naebi:FORAG ;
+    eCH-0265:cultivationSubCategory naebi:FORAG ;
     skos:exactMatch cultivationtype:79 .
 
 naebi:94 a eCH-0265:NutrientBalanceCrop ;
@@ -2587,7 +2587,7 @@ naebi:94 a eCH-0265:NutrientBalanceCrop ;
     schema:identifier "CROP_HAZLN" ;
     schema:name "Haselnüsse"@de ;
     eCH-0265:cultivationCategory naebi:SPECIAL ;
-    skos:broader naebi:PRMCR ;
+    eCH-0265:cultivationSubCategory naebi:PRMCR ;
     skos:exactMatch cultivationtype:1281 .
 
 naebi:95 a eCH-0265:NutrientBalanceCrop ;
@@ -2595,7 +2595,7 @@ naebi:95 a eCH-0265:NutrientBalanceCrop ;
     schema:identifier "CROP_HBEYH" ;
     schema:name "Heidelbeeren, 2.5 kg/m2"@de ;
     eCH-0265:cultivationCategory naebi:SPECIAL ;
-    skos:broader naebi:PRMCR ;
+    eCH-0265:cultivationSubCategory naebi:PRMCR ;
     skos:exactMatch cultivationtype:1282 .
 
 naebi:96 a eCH-0265:NutrientBalanceCrop ;
@@ -2603,7 +2603,7 @@ naebi:96 a eCH-0265:NutrientBalanceCrop ;
     schema:identifier "CROP_HEMP" ;
     schema:name "Öllein"@de ;
     eCH-0265:cultivationCategory naebi:ARABLE ;
-    skos:broader naebi:DIVCR ;
+    eCH-0265:cultivationSubCategory naebi:DIVCR ;
     skos:exactMatch cultivationtype:1283 .
 
 naebi:97 a eCH-0265:NutrientBalanceCrop ;
@@ -2611,7 +2611,7 @@ naebi:97 a eCH-0265:NutrientBalanceCrop ;
     schema:identifier "CROP_HFBUFF" ;
     schema:name "Hecken u. Feldgehölze mit Pufferstreifen (keine BFF)"@de ;
     eCH-0265:cultivationCategory naebi:ARABLE ;
-    skos:broader naebi:ECOBL ;
+    eCH-0265:cultivationSubCategory naebi:ECOBL ;
     skos:exactMatch cultivationtype:1024 .
 
 naebi:98 a eCH-0265:NutrientBalanceCrop ;
@@ -2619,7 +2619,7 @@ naebi:98 a eCH-0265:NutrientBalanceCrop ;
     schema:identifier "CROP_HFT01" ;
     schema:name "Hochstamm-Obstbäume, 0.01ha/Baum"@de ;
     eCH-0265:cultivationCategory naebi:SPECIAL ;
-    skos:broader naebi:ECOBL ;
+    eCH-0265:cultivationSubCategory naebi:ECOBL ;
     skos:exactMatch cultivationtype:921 .
 
 naebi:99 a eCH-0265:NutrientBalanceCrop ;
@@ -2627,7 +2627,7 @@ naebi:99 a eCH-0265:NutrientBalanceCrop ;
     schema:identifier "CROP_HFTWB" ;
     schema:name "Hecken und Feldgehölz mit Krautsaum"@de ;
     eCH-0265:cultivationCategory naebi:ARABLE ;
-    skos:broader naebi:ECOBL ;
+    eCH-0265:cultivationSubCategory naebi:ECOBL ;
     skos:exactMatch cultivationtype:1292 .
 
 naebi:314 a eCH-0265:NutrientBalanceCrop ;
@@ -2635,5 +2635,5 @@ naebi:314 a eCH-0265:NutrientBalanceCrop ;
     schema:identifier "CROP_CHINKV" ;
     schema:name "Chinakohl, Verarbeitung"@de ;
     eCH-0265:cultivationCategory naebi:SPECIAL ;
-    skos:broader naebi:OUTVG ;
+    eCH-0265:cultivationSubCategory naebi:OUTVG ;
     skos:exactMatch cultivationtype:1313 .
