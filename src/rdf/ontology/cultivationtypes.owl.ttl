@@ -2716,7 +2716,7 @@ cultivationtype:632 a eCH-0265:CultivationType ;
     schema:name "Futtergräser für die Samenproduktion (Vertragsanbau)"@de,
         "Graminées fourragères destinées à la production de semences (contrat de culture)"@fr,
         "Graminacee da foraggio per la produzione di sementi (coltivazione contrattuale)"@it ;
-    rdfs:subClassOf cultivationtype:1 .
+    rdfs:subClassOf cultivationtype:79 .
 
 cultivationtype:633 a  eCH-0265:CultivationType ;
     schema:name "Übrige Futterpflanzen für die Samenproduktion (Vertragsanbau)"@de,
