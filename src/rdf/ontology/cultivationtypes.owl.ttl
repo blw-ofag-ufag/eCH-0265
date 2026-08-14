@@ -4513,12 +4513,6 @@ cultivationtype:1236 a eCH-0265:CultivationType ;
         "Cetrioli, coltura in terra (coltura protetta)"@it ;
     owl:intersectionOf ( cultivationtype:32 cultivationtype:23 ) .
 
-cultivationtype:1239 a eCH-0265:CultivationType ;
-    schema:name "Chicorée, Wurzelanbau"@de,
-        "Chicory, root cultivation"@en,
-        "Endive (chicorée witloof), culture de racines"@fr,
-        "Cicoria (witloof), coltivazione delle radici"@it ;
-    rdfs:subClassOf cultivationtype:130 .
 
 cultivationtype:1240 a eCH-0265:CultivationType ;
     schema:name "Kamille"@de,

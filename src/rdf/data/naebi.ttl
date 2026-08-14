@@ -2213,7 +2213,7 @@ naebi:51 a eCH-0265:NutrientBalanceCrop ;
     schema:name "Chicorée, Wurzelanbau"@de ;
     eCH-0265:cultivationCategory naebi:SPECIAL ;
     eCH-0265:cultivationSubCategory naebi:OUTVG ;
-    skos:exactMatch cultivationtype:1239 .
+    skos:exactMatch cultivationtype:547 .
 
 naebi:52 a eCH-0265:NutrientBalanceCrop ;
     skos:inScheme naebi:ConceptScheme ;
