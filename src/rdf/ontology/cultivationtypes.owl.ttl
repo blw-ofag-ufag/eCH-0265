@@ -4335,7 +4335,7 @@ cultivationtype:1195 a eCH-0265:CultivationType ;
 
 cultivationtype:1206 a eCH-0265:CultivationType ;
     schema:name "Einjährige Erdbeeren"@de ;
-    owl:intersectionOf cultivationtype:223  .
+    rdfs:subClassOf cultivationtype:223  .
 
 cultivationtype:1207 a eCH-0265:CultivationType ;
     schema:name "Winterspinat"@de ;
