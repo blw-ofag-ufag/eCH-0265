@@ -101,6 +101,9 @@ eCH-0265:CultivationType a sh:NodeShape, rdfs:Class ;
         sh:or (
             [ sh:class eCH-0265:CultivationType ]
             [ sh:hasValue eCH-0265:Cultivation ]
+            [ 
+                sh:nodeKind sh:BlankNode ;
+                sh:class owl:Class ]
         ) ;
     ],
     [
