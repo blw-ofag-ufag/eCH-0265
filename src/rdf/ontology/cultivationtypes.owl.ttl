@@ -4009,6 +4009,9 @@ cultivationtype:1128 a eCH-0265:CultivationType ;
     schema:name "Erdbeeren mehrjährig"@de,
         "Fraises pluriannuelles"@fr,
         "Fragole pluriennali"@it ;
+    schema:description "In der SuisseBilanz bezieht sich «mehrjährig» auf die mehrjährige Nutzungsart. Im System der Direktzahlungen (DZV) hingegen bezieht sich der Begriff auf die botanische Eigenschaft der Pflanze selbst."@de,
+        "Dans SuisseBilanz, le terme «pluriannuel» fait référence au mode d'utilisation pluriannuel. En revanche, dans le système des paiements directs (OPD), le terme se réfère à la caractéristique botanique de la plante elle-même."@fr,
+        "In SuisseBilanz il termine «pluriennale» si riferisce al tipo di utilizzazione pluriennale. Nel sistema dei pagamenti diretti (OPD), invece, il termine si riferisce alla caratteristica botanica della pianta stessa."@it ;
     rdfs:subClassOf cultivationtype:223 .
 
 cultivationtype:1129 a eCH-0265:CultivationType ;
@@ -4339,7 +4342,7 @@ cultivationtype:1195 a eCH-0265:CultivationType ;
 
 cultivationtype:1206 a eCH-0265:CultivationType ;
     schema:name "Einjährige Erdbeeren"@de ;
-    rdfs:subClassOf cultivationtype:223  .
+    rdfs:subClassOf [ owl:unionOf ( cultivationtype:470 cultivationtype:551 ) ] . 
 
 cultivationtype:1207 a eCH-0265:CultivationType ;
     schema:name "Winterspinat"@de ;
