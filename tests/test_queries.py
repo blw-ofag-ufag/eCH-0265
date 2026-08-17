@@ -23,7 +23,7 @@ def test_example_queries(query_file):
     assert len(lines[0].strip()) > 2, f"Comment in {query_file.name} must contain a description"
     
     # Automatically check if it returns something from LINDAS
-    url = "https://agriculture.ld.admin.ch/query"
+    url = "https://lindas.admin.ch/query"
     
     headers = {
         "Accept": "application/sparql-results+json, application/ld+json, application/n-triples, text/turtle",
