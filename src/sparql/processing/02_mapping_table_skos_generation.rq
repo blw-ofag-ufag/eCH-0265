@@ -36,7 +36,7 @@ INSERT {
 WHERE {
   ?s skos:inScheme ?s_scheme .
   ?t skos:inScheme ?t_scheme .
-  FILTER(?s_set != ?t_scheme)
+  FILTER(?s_scheme != ?t_scheme)
   ?s skos:exactMatch / ^rdfs:subClassOf+ / ^skos:exactMatch ?t .
   FILTER NOT EXISTS { 
     ?s (skos:exactMatch|skos:broadMatch) / ^skos:inScheme ?t_scheme .
