@@ -1,6 +1,7 @@
 # Table of all cultivation types and their German name
 PREFIX eCH-0265: <https://agriculture.ld.admin.ch/eCH-0265/2/>
 PREFIX schema: <http://schema.org/>
+
 SELECT *
 FROM <https://lindas.admin.ch/foag/ech/0265/2>
 WHERE {

@@ -1,6 +1,7 @@
 import json
 import urllib.request
 import urllib.parse
+import urllib.error
 from pathlib import Path
 import pytest
 
@@ -23,11 +24,12 @@ def test_example_queries(query_file):
     assert len(lines[0].strip()) > 2, f"Comment in {query_file.name} must contain a description"
     
     # Automatically check if it returns something from LINDAS
-    url = "https://agriculture.ld.admin.ch/query"
+    url = "https://lindas.admin.ch/query"
     
     headers = {
         "Accept": "application/sparql-results+json, application/ld+json, application/n-triples, text/turtle",
-        "Content-Type": "application/x-www-form-urlencoded"
+        "Content-Type": "application/x-www-form-urlencoded",
+        "User-Agent": "eCH-0265-TestSuite/1.0 (Contact: agridata.ch@blw.admin.ch)"
     }
     data = urllib.parse.urlencode({"query": content}).encode("utf-8")
     req = urllib.request.Request(url, data=data, headers=headers)
@@ -53,7 +55,17 @@ def test_example_queries(query_file):
                 assert len(response_body.strip()) > 0, "Graph query returned empty results."
                 
     except urllib.error.HTTPError as e:
-        error_msg = e.read().decode('utf-8')
-        pytest.fail(f"HTTPError {e.code} for query {query_file.name}: {error_msg}")
+        # Fails test on client errors (e.g., 400 Bad Request, 404 Not Found)
+        # Ignores 429 Too Many Requests
+        if 400 <= e.code < 500 and e.code != 429:
+            error_msg = e.read().decode('utf-8')
+            pytest.fail(f"HTTPError {e.code} for query {query_file.name}: {error_msg}")
+        else:
+            # Skips test for 429 and all 5xx Server Errors instead of false positive pass
+            pytest.skip(f"Skipped due to server or rate-limit error: HTTP {e.code}")
+            
+    except urllib.error.URLError as e:
+        pytest.skip(f"Skipped due to network/connection error: {e.reason}")
+        
     except Exception as e:
         pytest.fail(f"Failed to execute query {query_file.name}: {e}")

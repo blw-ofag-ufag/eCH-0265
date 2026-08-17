@@ -223,7 +223,8 @@ cultivationtype:28 a eCH-0265:CultivationType ;
     schema:name "Schwarze Apfelbeere"@de,
         "aronie noire"@fr,
         "Aronia nera"@it ;
-    rdfs:subClassOf cultivationtype:471 .
+    schema:alternateName "Aronia"@de ;
+    rdfs:subClassOf cultivationtype:1158 .
 
 cultivationtype:30 a eCH-0265:CultivationType ;
     schema:name "Rosskastanie"@de,
@@ -302,7 +303,7 @@ cultivationtype:43 a eCH-0265:CultivationType ;
     schema:name "Jostabeere"@de,
         "josta"@fr,
         "Josta"@it ;
-    rdfs:subClassOf cultivationtype:131 .
+    rdfs:subClassOf cultivationtype:131, cultivationtype:1158 .
 
 cultivationtype:45 a eCH-0265:CultivationType ;
     schema:name "Fichte"@de,
@@ -414,7 +415,7 @@ cultivationtype:69 a eCH-0265:CultivationType ;
         "mini-Kiwi (Kiwaï)"@fr,
         "Mini-Kiwi"@it ;
     schema:description "Weil der Anbau von Mini-Kiwi agronomisch dem Beerenbau gleicht, wird er dazu gezählt und nicht (wie sonstiger Kiwi) zum Obstbau."@de ;
-    rdfs:subClassOf cultivationtype:705 .
+    rdfs:subClassOf cultivationtype:471 .
 
 cultivationtype:72 a eCH-0265:CultivationType ;
     schema:name "Bäume und Sträucher (ausserhalb Forst)"@de,
@@ -460,7 +461,7 @@ cultivationtype:80 a eCH-0265:CultivationType ;
         "Black mulberry"@en,
         "mûrier noir"@fr,
         "Moro nero"@it ;
-    rdfs:subClassOf cultivationtype:471 .
+    rdfs:subClassOf cultivationtype:1158 .
 
 cultivationtype:81 a eCH-0265:CultivationType ;
     schema:name "Kopfkohle"@de,
@@ -522,7 +523,7 @@ cultivationtype:91 a eCH-0265:CultivationType ;
     schema:name "Gemeine Felsenbirne"@de,
         "amélavier commun"@fr,
         "Pero corvino"@it ;
-    rdfs:subClassOf cultivationtype:471 .
+    rdfs:subClassOf cultivationtype:1158 .
 
 cultivationtype:92 a eCH-0265:CultivationType ;
     schema:name "Schwarzwurzel"@de,
@@ -859,7 +860,7 @@ cultivationtype:161 a eCH-0265:CultivationType ;
         "Elder berry"@en,
         "grand sureau"@fr,
         "Sambuco nero"@it ;
-    rdfs:subClassOf cultivationtype:471 .
+    rdfs:subClassOf cultivationtype:1158 .
 
 cultivationtype:162 a eCH-0265:CultivationType ;
     schema:name "Forstliche Pflanzgärten"@de,
@@ -934,7 +935,10 @@ cultivationtype:174 a eCH-0265:CultivationType ;
         "sorbier des oiseleurs"@fr,
         "Sorbo degli ucellatori"@it ;
     schema:alternateName "Vogelbeere"@de ;
-    rdfs:subClassOf cultivationtype:471 .
+    schema:description "Nur Bestände/Sorten zur Gewinnung von essbaren Beeren."@de,
+        "Uniquement les variétés/cultures destinées à la consommation des baies."@fr,
+        "Solo varietà/colture destinate al consumo delle bacche."@it ;
+    rdfs:subClassOf cultivationtype:1158 .
 
 cultivationtype:175 a eCH-0265:CultivationType ;
     schema:name "Nachtschattengewächse (Solanaceae)"@de,
@@ -1154,7 +1158,7 @@ cultivationtype:223 a eCH-0265:CultivationType ;
     schema:name "Erdbeere"@de,
         "fraise"@fr,
         "Fragola"@it ;
-    rdfs:subClassOf cultivationtype:471 .
+    rdfs:subClassOf [ owl:unionOf ( cultivationtype:470 cultivationtype:551 ) ] .
 
 cultivationtype:224 a eCH-0265:CultivationType ;
     schema:name "Topinambur"@de,
@@ -1510,7 +1514,7 @@ cultivationtype:298 a eCH-0265:CultivationType ;
     schema:name "Stachelbeere"@de,
         "groseilles à maquereau"@fr,
         "Uva spina"@it ;
-    rdfs:subClassOf cultivationtype:131 .
+    rdfs:subClassOf cultivationtype:131, cultivationtype:1158 .
 
 cultivationtype:299 a eCH-0265:CultivationType ;
     schema:name "Minze"@de,
@@ -1903,6 +1907,7 @@ cultivationtype:470 a eCH-0265:CultivationType ;
 cultivationtype:471 a eCH-0265:CultivationType ;
     schema:name "Beerenbau"@de ;
     rdfs:subClassOf cultivationtype:465 ;
+    schema:description "Umfasst alle Beerenkulturen zur Lebensmittelgewinnung, massgebend für die Beurteilung von Rückständen gemäss Pflanzenschutzmittelverzeichnis."@de ;
     owl:unionOf ( cultivationtype:470 cultivationtype:551 cultivationtype:469 ) .
 
 cultivationtype:472 a eCH-0265:CultivationType ;
@@ -2711,7 +2716,7 @@ cultivationtype:632 a eCH-0265:CultivationType ;
     schema:name "Futtergräser für die Samenproduktion (Vertragsanbau)"@de,
         "Graminées fourragères destinées à la production de semences (contrat de culture)"@fr,
         "Graminacee da foraggio per la produzione di sementi (coltivazione contrattuale)"@it ;
-    rdfs:subClassOf cultivationtype:1 .
+    rdfs:subClassOf cultivationtype:79 .
 
 cultivationtype:633 a  eCH-0265:CultivationType ;
     schema:name "Übrige Futterpflanzen für die Samenproduktion (Vertragsanbau)"@de,
@@ -3820,7 +3825,7 @@ cultivationtype:1097 a eCH-0265:CultivationType ;
     schema:name "Himbeer-Jungpflanzen (Long-Cane)"@de,
         "Jeunes plants de framboisiers (Long-Cane)"@fr,
         "Giovani piante di lampone (Long-Cane)"@it ;
-    rdfs:subClassOf cultivationtype:471 .
+    rdfs:subClassOf cultivationtype:288 .
 
 cultivationtype:1098 a eCH-0265:CultivationType ;
     schema:name "Blaue Malve"@de,
@@ -4004,6 +4009,9 @@ cultivationtype:1128 a eCH-0265:CultivationType ;
     schema:name "Erdbeeren mehrjährig"@de,
         "Fraises pluriannuelles"@fr,
         "Fragole pluriennali"@it ;
+    schema:description "In der SuisseBilanz bezieht sich «mehrjährig» auf die mehrjährige Nutzungsart. Im System der Direktzahlungen (DZV) hingegen bezieht sich der Begriff auf die botanische Eigenschaft der Pflanze selbst."@de,
+        "Dans SuisseBilanz, le terme «pluriannuel» fait référence au mode d'utilisation pluriannuel. En revanche, dans le système des paiements directs (OPD), le terme se réfère à la caractéristique botanique de la plante elle-même."@fr,
+        "In SuisseBilanz il termine «pluriennale» si riferisce al tipo di utilizzazione pluriennale. Nel sistema dei pagamenti diretti (OPD), invece, il termine si riferisce alla caratteristica botanica della pianta stessa."@it ;
     rdfs:subClassOf cultivationtype:223 .
 
 cultivationtype:1129 a eCH-0265:CultivationType ;
@@ -4334,7 +4342,7 @@ cultivationtype:1195 a eCH-0265:CultivationType ;
 
 cultivationtype:1206 a eCH-0265:CultivationType ;
     schema:name "Einjährige Erdbeeren"@de ;
-    owl:intersectionOf ( cultivationtype:551 cultivationtype:223 ) .
+    rdfs:subClassOf cultivationtype:223  .
 
 cultivationtype:1207 a eCH-0265:CultivationType ;
     schema:name "Winterspinat"@de ;
@@ -4508,12 +4516,6 @@ cultivationtype:1236 a eCH-0265:CultivationType ;
         "Cetrioli, coltura in terra (coltura protetta)"@it ;
     owl:intersectionOf ( cultivationtype:32 cultivationtype:23 ) .
 
-cultivationtype:1239 a eCH-0265:CultivationType ;
-    schema:name "Chicorée, Wurzelanbau"@de,
-        "Chicory, root cultivation"@en,
-        "Endive (chicorée witloof), culture de racines"@fr,
-        "Cicoria (witloof), coltivazione delle radici"@it ;
-    rdfs:subClassOf cultivationtype:130 .
 
 cultivationtype:1240 a eCH-0265:CultivationType ;
     schema:name "Kamille"@de,
