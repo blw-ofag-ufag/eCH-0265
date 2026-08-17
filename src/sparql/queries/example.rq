@@ -6,7 +6,7 @@ SELECT *
 FROM <https://lindas.admin.ch/foag/ech/0265/2>
 WHERE {
   ?crop a eCH-0265:CultivationType ;
-        schema:name ?name .
+    schema:name ?name .
   FILTER(LANG(?name) = "de")
 }
 ORDER BY ?name

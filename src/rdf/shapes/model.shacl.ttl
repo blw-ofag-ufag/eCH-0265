@@ -422,8 +422,10 @@ eCH-0265:cultivationType a sh:PropertyShape ;
     sh:order 0 ;
     sh:name "Kultivierungstyp"@de,
         "Cultivation type"@en ;
-    sh:description "Der dieser bereichsspezifischen Kultur korrespondierende Kultivierungstyp in der Kulturenontologie."@en ;
+    sh:description "Der dieser bereichsspezifischen Kultur korrespondierende Kultivierungstyp in der Kulturenontologie."@de ;
     sh:path skos:exactMatch ;
-    sh:minCount 0 ;
-    sh:maxCount 1 ;
-    sh:class eCH-0265:CultivationType .
+    sh:qualifiedValueShape [
+        sh:class eCH-0265:CultivationType ;
+    ] ;
+    sh:qualifiedMinCount 0 ;
+    sh:qualifiedMaxCount 1 .
