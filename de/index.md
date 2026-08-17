@@ -1,6 +1,6 @@
 # eCH-0265 Landwirtschaftliche Kulturen
 eCH Fachgruppe AgriFood
-14. August 2026
+17. August 2026
 
 # Hinweis
 
@@ -131,7 +131,7 @@ Tabelle 3: Agronomische Kulturkategorie Eigenschaften
 | **Name** | `schema:name` | `rdf:langString` oder `sh:Literal` | 1..\* |
 | **Unterkategorie** | `eCH-0265:cultivationSubCategory` | [eCH-0265:NutrientBalanceCropSubCategory](#sec-n-hrstoffbilanz-kultivierungsunterkategorie) | 1..1 |
 | **Kategorie** | `eCH-0265:cultivationCategory` | [eCH-0265:NutrientBalanceCropCategory](#sec-n-hrstoffbilanz-kultivierungskategorie) | 1..1 |
-| **Kultivierungstyp** | `skos:exactMatch` | [eCH-0265:CultivationType](#sec-nutzungstyp) | 0..1 |
+| **Kultivierungstyp**: Der dieser bereichsspezifischen Kultur korrespondierende Kultivierungstyp in der Kulturenontologie. | `skos:exactMatch` |  | 0..\* |
 
 </div>
 
@@ -151,7 +151,7 @@ Tabelle 4: Direktzahlungskultur Eigenschaften
 | **LNF-Code**: Auch Kulturcode genannt, ist der allgemein gebräuchliche Identifikator für Direktzahlungskulturen in der Schweiz. | `schema:identifier` | `xsd:string` oder `sh:Literal` | 1..1 |
 | **Gültig von**: Ab welchem Jahr wurde diese Direktzahlungskultur offiziell verwendet? | `schema:validFrom` | `xsd:integer` oder `sh:Literal` | 0..1 |
 | **Gültig bis**: Bis in welchem Jahr wurde diese Direktzahlungskultur offiziell verwendet? | `schema:validTo` | `xsd:integer` oder `sh:Literal` | 0..1 |
-| **Kultivierungstyp** | `skos:exactMatch` | [eCH-0265:CultivationType](#sec-nutzungstyp) | 0..1 |
+| **Kultivierungstyp**: Der dieser bereichsspezifischen Kultur korrespondierende Kultivierungstyp in der Kulturenontologie. | `skos:exactMatch` |  | 0..\* |
 
 </div>
 
@@ -166,7 +166,7 @@ Tabelle 5: Flächenkategorie Direktzahlung Eigenschaften
 |  | `skos:topConceptOf` | `sh:IRI` | 1..1 |
 |  | `skos:inScheme` | `sh:IRI` | 1..1 |
 | **Name** | `schema:name` | `rdf:langString` oder `sh:Literal` | 1..\* |
-| **Kultivierungstyp** | `skos:exactMatch` | [eCH-0265:CultivationType](#sec-nutzungstyp) | 0..1 |
+| **Kultivierungstyp**: Der dieser bereichsspezifischen Kultur korrespondierende Kultivierungstyp in der Kulturenontologie. | `skos:exactMatch` |  | 0..\* |
 
 </div>
 
@@ -202,7 +202,7 @@ Tabelle 7: Nährstoffbilanz-Kultivierungskategorie Eigenschaften
 | **Konzeptschema** | `skos:inScheme` | `sh:IRI` | 1..\* |
 | **Oberstes Konzept von** | `skos:topConceptOf` | `sh:IRI` | 1..1 |
 | **Name** | `schema:name` | `rdf:langString` oder `sh:Literal` | 1..\* |
-| **Kultivierungstyp** | `skos:exactMatch` | [eCH-0265:CultivationType](#sec-nutzungstyp) | 0..1 |
+| **Kultivierungstyp**: Der dieser bereichsspezifischen Kultur korrespondierende Kultivierungstyp in der Kulturenontologie. | `skos:exactMatch` |  | 0..\* |
 
 </div>
 
@@ -219,7 +219,7 @@ Tabelle 8: Nährstoffbilanz-Kultivierungsunterkategorie Eigenschaften
 | **Identifikator** | `schema:identifier` | `xsd:string` oder `sh:Literal` | 1..1 |
 | **Konzeptschema** | `skos:inScheme` | `sh:IRI` | 1..\* |
 | **Name** | `schema:name` | `rdf:langString` oder `sh:Literal` | 1..\* |
-| **Kultivierungstyp** | `skos:exactMatch` | [eCH-0265:CultivationType](#sec-nutzungstyp) | 0..1 |
+| **Kultivierungstyp**: Der dieser bereichsspezifischen Kultur korrespondierende Kultivierungstyp in der Kulturenontologie. | `skos:exactMatch` |  | 0..\* |
 
 </div>
 
@@ -238,7 +238,7 @@ Tabelle 9: Pflanzenschutzmittel-Kultur Eigenschaften
 | **Name**: Der in Infofito eingetragene Name dieser Kultur. | `schema:name` | `rdf:langString` oder `sh:Literal` | 2..4 |
 | **Version** | `schema:version` | `xsd:integer` oder `sh:Literal` | 1..1 |
 | **Überkultur** | `skos:broader` | `skos:Concept` oder `sh:IRI` | 0..2 |
-| **Kultivierungstyp** | `skos:exactMatch` | [eCH-0265:CultivationType](#sec-nutzungstyp) | 0..1 |
+| **Kultivierungstyp**: Der dieser bereichsspezifischen Kultur korrespondierende Kultivierungstyp in der Kulturenontologie. | `skos:exactMatch` |  | 0..\* |
 
 </div>
 
@@ -258,12 +258,12 @@ Die Kulturenstammdaten können als Linked Data mittels der Abfragesprache [SPARQ
 
 ``` rq
 # Table of all cultivation types and their German name
-PREFIX : <https://agriculture.ld.admin.ch/crops/>
+PREFIX eCH-0265: <https://agriculture.ld.admin.ch/eCH-0265/2/>
 PREFIX schema: <http://schema.org/>
 SELECT *
 FROM <https://lindas.admin.ch/foag/ech/0265/2>
 WHERE {
-  ?crop a :CultivationType ;
+  ?crop a eCH-0265:CultivationType ;
     schema:name ?name .
   FILTER(LANG(?name) = "de")
 }
