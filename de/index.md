@@ -30,7 +30,7 @@ In den folgenden Unterkapiteln werden die Kategorisierungssysteme landwirtschaft
 
 Im Rahmen des Direktzahlungssystems sind 159 Direktzahlungskulturen (Stand Juli 2026) definiert, welche im Rahmen der Strukturdatenerhebung von den Bewirtschaftenden in den kantonalen Agrarinformationssystemen (KAIS) eingetragen und an das agrarpolitische Informationssystem (AGIS) des Bundes übermittelt werden können.
 
-Direktzahlungskulturen können für keine bis mehrere Beiträge berechtigt sein ([Flächenkatalog und Beitragsberechtigung](https://www.blw.admin.ch/dam/fr/sd-web/QYLa6wGfdK8G/2026%20Merkblatt%20Nr.%206.2%20Fl%C3%A4chenkatalog%20und%20Beitragsberechtigung.pdf)), grundsätzlich müssen sie für die Berechtigung zu Direktzahlungen aber jährlich an AGIS übermittelt werden. In AGIS stehen also alle aktuell gültigen und historisierten Direktzahlungskulturen und deren Beitragsberechtigungen für Bund und Kantone zur Verfügung. Momentan können diese Daten aber nicht in maschinenlesbarer Form vom AGIS-Webservice bezogen werden.
+Alle Kulturen mit Direktzahlungscode müssen jährlich an AGIS übermittelt werden – unabhängig davon, ob sie für Beiträge berechtigt sind oder nicht (vgl. [Flächenkatalog und Beitragsberechtigung](https://www.blw.admin.ch/dam/fr/sd-web/QYLa6wGfdK8G/2026%20Merkblatt%20Nr.%206.2%20Fl%C3%A4chenkatalog%20und%20Beitragsberechtigung.pdf)). In AGIS stehen also alle aktuell gültigen und historisierten Direktzahlungskulturen und deren Beitragsberechtigungen für Bund und Kantone zur Verfügung. Momentan können diese Daten aber nicht in maschinenlesbarer Form vom AGIS-Webservice bezogen werden.
 
 Die Direktzahlungskulturen kommen nicht nur im Rahmen der Strukturdatenerhebung zum Einsatz, sondern auch bei der gesamtschweizerischen räumlichen Erfassung von Nutzungsflächen (siehe [«landwirtschaftliche Kulturflächen»](https://www.blw.admin.ch/de/landwirtschaftliche-kulturflaechen)). Die Kantone erfassen diese Geodaten gemäss dem minimalen Geodatenmodell 153.1 «Nutzungsflächen» und stellen die Daten via dem interkantonalen Portal [geodienste.ch](https://geodienste.ch/) zur Verfügung. Die im Rahmen der Geodaten verwendeten Kulturkategorien sind als XML-File auf <https://models.geo.admin.ch/BLW/> publiziert, wobei weitere (aggregierende) Kulturkategorien definiert wurden und die Attribute nicht zu 100% deckungsgleich zu denjenigen der Direktzahlungskulturen der Strukturdatenerhebung sind.
 
@@ -183,7 +183,7 @@ Tabelle 6: Nutzungstyp Eigenschaften
 | **Name** | `schema:name` | `rdf:langString` oder `sh:Literal` | 1..\* |
 | **Alias** | `schema:alternateName` | `rdf:langString` oder `sh:Literal` | 0..\* |
 | **Beschreibung** | `schema:description` | `rdf:langString` oder `sh:Literal` | 0..\* |
-|  | `rdfs:subClassOf` | [eCH-0265:CultivationType](#sec-nutzungstyp) | 0..\* |
+|  | `rdfs:subClassOf` | [eCH-0265:CultivationType](#sec-nutzungstyp) oder `owl:Class` | 0..\* |
 |  | `owl:disjointWith` | [eCH-0265:CultivationType](#sec-nutzungstyp) oder `sh:IRI` | 0..\* |
 
 </div>
@@ -260,6 +260,7 @@ Die Kulturenstammdaten können als Linked Data mittels der Abfragesprache [SPARQ
 # Table of all cultivation types and their German name
 PREFIX eCH-0265: <https://agriculture.ld.admin.ch/eCH-0265/2/>
 PREFIX schema: <http://schema.org/>
+
 SELECT *
 FROM <https://lindas.admin.ch/foag/ech/0265/2>
 WHERE {
