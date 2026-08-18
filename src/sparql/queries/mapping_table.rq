@@ -3,7 +3,7 @@
 PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
 PREFIX schema: <http://schema.org/>
 
-SELECT ?s_scheme ?s_id ?s_name ?t_name ?t_id ?o_scheme
+SELECT ?s_scheme ?s_id ?s_name ?t_name ?t_id ?t_scheme
 FROM <https://lindas.admin.ch/foag/ech/0265/2>
 WHERE {
   ?s ?p ?t .
@@ -12,13 +12,13 @@ WHERE {
     skos:inScheme / schema:name ?s_scheme .
   ?t schema:name ?t_name ;
     schema:identifier ?t_id ;
-    skos:inScheme / schema:name ?o_scheme .
+    skos:inScheme / schema:name ?t_scheme .
   VALUES ?p { skos:exactMatch skos:broadMatch skos:narrowMatch }
   FILTER(
     LANG(?s_name)   = "de" &&
     LANG(?t_name)   = "de" &&
     LANG(?s_scheme) = "de" &&
-    LANG(?o_scheme) = "de"
+    LANG(?t_scheme) = "de"
   )
 }
-ORDER BY ?s_scheme ?o_scheme ?s_name ?t_name
+ORDER BY ?s_scheme ?t_scheme ?s_name ?t_name
