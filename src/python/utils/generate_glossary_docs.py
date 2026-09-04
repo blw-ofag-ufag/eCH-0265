@@ -1,4 +1,5 @@
 import argparse
+import textwrap
 from pathlib import Path
 from rdflib import Graph, Namespace
 from rdflib.namespace import SKOS
@@ -7,19 +8,19 @@ SCHEMA = Namespace("http://schema.org/")
 
 TRANSLATIONS = {
     "en": {
-        "iri": "IRI", "term": "Term", "desc": "Description", "rels": "Relations",
+        "iri": "IRI", "term": "Term", "desc": "Description",
         "broader": "broader", "narrower": "narrower", "related": "related"
     },
     "de": {
-        "iri": "IRI", "term": "Begriff", "desc": "Beschreibung", "rels": "Beziehungen",
+        "iri": "IRI", "term": "Begriff", "desc": "Beschreibung",
         "broader": "Oberbegriff", "narrower": "Unterbegriff", "related": "Verwandt"
     },
     "fr": {
-        "iri": "IRI", "term": "Terme", "desc": "Description", "rels": "Relations",
+        "iri": "IRI", "term": "Terme", "desc": "Description",
         "broader": "plus générique", "narrower": "plus spécifique", "related": "lié"
     },
     "it": {
-        "iri": "IRI", "term": "Termine", "desc": "Descrizione", "rels": "Relazioni",
+        "iri": "IRI", "term": "Termine", "desc": "Descrizione",
         "broader": "più generico", "narrower": "più specifico", "related": "correlato"
     }
 }
@@ -49,7 +50,73 @@ def get_localized_value(g, subject, predicates, lang):
     return None
 
 def sanitize_cell(text):
-    return str(text).replace("\n", " ").replace("\r", "").replace("|", "&#124;").strip()
+    # In grid tables, we keep newlines natively so textwrap handles paragraphs gracefully
+    return str(text).replace("\r", "").strip()
+
+def build_grid_table(headers, rows, min_col_widths):
+    col_widths = list(min_col_widths)
+    # Ensure columns are wide enough for the longest unbreakable word/URL
+    for row in [headers] + rows:
+        for i, cell in enumerate(row):
+            for paragraph in str(cell).split('\n'):
+                for word in paragraph.split():
+                    if len(word) > col_widths[i] - 2:
+                        col_widths[i] = len(word) + 2
+
+    def wrap_cell(text, width):
+        lines = []
+        for paragraph in str(text).split('\n'):
+            if paragraph.strip() == '':
+                lines.append('')
+            else:
+                lines.extend(textwrap.wrap(paragraph, width, break_long_words=False))
+        if not lines:
+            lines = ['']
+        return lines
+
+    def format_row(row_data, separator_char='-', align_char=None):
+        wrapped = [wrap_cell(cell, w - 2) for cell, w in zip(row_data, col_widths)]
+        max_lines = max((len(c) for c in wrapped), default=1)
+        
+        lines = []
+        for i in range(max_lines):
+            line_parts = []
+            for col_idx, c in enumerate(wrapped):
+                val = c[i] if i < len(c) else ""
+                # structurally left-align the content padding
+                val = val.ljust(col_widths[col_idx] - 2)
+                line_parts.append(f" {val} ")
+            lines.append("|" + "|".join(line_parts) + "|")
+            
+        sep_parts = []
+        for w in col_widths:
+            # e.g., using `align_char=':'` forces left alignment `+:======+`
+            if align_char:
+                sep_parts.append(align_char + separator_char * (w - 1))
+            else:
+                sep_parts.append(separator_char * w)
+        sep_line = "+" + "+".join(sep_parts) + "+"
+        
+        return lines, sep_line
+
+    output = []
+    
+    # Top border
+    top_sep = "+" + "+".join("-" * w for w in col_widths) + "+"
+    output.append(top_sep)
+    
+    # Header row (enforce left alignment for Quarto/Pandoc via colon prefix)
+    h_lines, h_sep = format_row(headers, separator_char='=', align_char=':')
+    output.extend(h_lines)
+    output.append(h_sep)
+    
+    # Value rows
+    for row in rows:
+        r_lines, r_sep = format_row(row, separator_char='-', align_char=None)
+        output.extend(r_lines)
+        output.append(r_sep)
+        
+    return output
 
 def main():
     parser = argparse.ArgumentParser(description="Generate Markdown documentation from a SKOS glossary.")
@@ -94,8 +161,8 @@ def main():
         trans = TRANSLATIONS[lang]
         md_lines = []
         
-        md_lines.append(f"| {trans['iri']} | {trans['term']} | {trans['desc']} | {trans['rels']} |")
-        md_lines.append("|:--|:--|:--|:--|")
+        headers = [trans['iri'], trans['term'], trans['desc']]
+        rows = []
         
         # Sort concepts by IRI for stable output
         concepts.sort(key=lambda c: format_uri(g, c).lower())
@@ -113,16 +180,27 @@ def main():
             term_cell = sanitize_cell(term_str)
             
             desc = get_localized_value(g, c, [SCHEMA.description, SKOS.definition], lang) or ""
-            desc_cell = sanitize_cell(desc)
+            desc_str = sanitize_cell(desc)
             
             rels = []
             for p, label_key in [(SKOS.broader, 'broader'), (SKOS.narrower, 'narrower'), (SKOS.related, 'related')]:
                 for o in g.objects(c, p):
                     o_qname = format_uri(g, o)
                     rels.append(f"*{trans[label_key]}*: [`{o_qname}`]({str(o)})")
-            rels_cell = sanitize_cell(", ".join(rels))
+            
+            # Combine description and relations dynamically on new paragraphs
+            if rels:
+                if desc_str:
+                    desc_str += "\n\n"
+                desc_str += "\n".join(rels)
+                
+            desc_cell = desc_str
 
-            md_lines.append(f"| {iri_cell} | {term_cell} | {desc_cell} | {rels_cell} |")
+            rows.append([iri_cell, term_cell, desc_cell])
+        
+        # Format the collected data into a grid table natively with Python
+        grid_table = build_grid_table(headers, rows, [20, 25, 55])
+        md_lines.extend(grid_table)
         
         # Build table caption
         caption_text = ""
@@ -141,9 +219,9 @@ def main():
                 caption_text = f"{s_desc_clean}"
         
         if caption_text:
-            md_lines.append(f": {caption_text} {{#tbl-glossary tbl-colwidths=\"[15,20,40,25]\" }}")
+            md_lines.append(f"\n: {caption_text} {{#tbl-glossary tbl-colwidths=\"[20,25,55]\" }}")
         else:
-            md_lines.append(": {#tbl-glossary tbl-colwidths=\"[15,20,40,25]\"}")
+            md_lines.append("\n: {#tbl-glossary tbl-colwidths=\"[20,25,55]\"}")
             
         output_path = docs_dir / lang / "glossary.md"
         with open(output_path, "w", encoding="utf-8") as f:
