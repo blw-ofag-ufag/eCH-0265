@@ -11,6 +11,7 @@ PATTERNS = [
     "tests/*.py",
     "docs/assets/*.xml",
     "docs/assets/*.typ",
+    "docs/assets/ech.svg",
     "LICENSE.md",
     ".gitattributes",
     "src/python/utils/*.py",

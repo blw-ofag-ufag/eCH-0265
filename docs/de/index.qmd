@@ -81,7 +81,7 @@ Eine Mehrheit dieser Kategorien wird explizit in der landwirtschaftlichen Begrif
 | 5  | Flächen im Sömmerungsgebiet | [Art. 24 LBV](https://www.fedlex.admin.ch/eli/cc/1999/13/de#art_24) | «Sömmerungsweiden», «Artenreiche Grün- und Streueflächen im Sömmerungsgebiet» |
 | 9  | Andere Elemente | | «Hochstammfeldobstbäume», «Nussbäume», «Einheimische standortgerechte Einzelbäume und Alleen» |
 
-: Anzahl Direktzahlungskulturen (N) je Kulturkategorie (Kategorie) mit Referenzen auf die geltende Definition in der landwirtschaftlichen Begriffsverordnung (LBV), wo möglich. {#tbl-directpaymentcrops-categories}
+: Anzahl Direktzahlungskulturen (N) je Kulturkategorie (Kategorie) mit Referenzen auf die geltende Definition in der landwirtschaftlichen Begriffsverordnung (LBV), wo möglich. {#tbl-directpaymentcrops-categories tbl-colwidths="[5,35,20,40]"}
 
 ## Nährstoffbilanz {#sec-nutrient-balance}
 
@@ -106,7 +106,7 @@ Der NBBS ordnet die Kulturen in einer strikten, dreistufigen Hierarchie (@tbl-nb
 | 8      | Kultivierungsunterkategorien (`cultivationsubcategories`) | Mittlere Ebene, dient ebenfalls nur der Strukturierung. | Getreide, Dauerkulturen, Hackfrüchte, Freilandgemüse, geschützte Kulturen, Grundfutter, übriger Ökoausgleich, diverse Kulturen |
 | 314    | Agronomische Kulturkategorien (`agronomiccropcategories`) | Unterste Ebene, welche die eigentlichen Kulturen beinhaltet. Hier sind die spezifischen agronomischen und regulatorische Eigenschaften hinterlegt. | «Winterweizen», «Zuckerrüben», «Naturwiese extensiv», «Aubergine, Erdkultur (geschützter Anbau)», «Walnüsse ≥ 185 Bäume/ha» |
 
-: Hierarchische Struktur der Kulturen im Nährstoffbilanz-Berechnungsservice und Anzahl der Elemente (N) je Klasse, Stand Juli 2026. {#tbl-nbbs-hierarchy}
+: Hierarchische Struktur der Kulturen im Nährstoffbilanz-Berechnungsservice und Anzahl der Elemente (N) je Klasse, Stand Juli 2026. {#tbl-nbbs-hierarchy tbl-colwidths="[5,30,35,30]"}
 
 Während die beiden obersten Ebenen rein der Strukturierung und Gruppierung dienen, weisen die agronomischen Kulturkategorien auf der untersten Ebene spezifische agronomische und regulatorische Eigenschaften auf.
 Dazu gehören beispielsweise der Ertrag, die Zulässigkeit für bestimmte Direktzahlungsprogramme oder die Teilnahme an spezifischen Vorhaben wie dem «62a Nitrat-Projekt».
