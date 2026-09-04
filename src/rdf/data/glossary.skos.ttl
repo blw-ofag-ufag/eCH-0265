@@ -70,7 +70,7 @@ term:skos a skos:Concept ;
     schema:name "Simple Knowledge Organization System"@de ;
     schema:alternateName "SKOS"@de .
 
-term:suissebalance a skos:Concept ;
+term:suibi a skos:Concept ;
     skos:inScheme eCH-0265:glossary ;
     skos:topConceptOf eCH-0265:glossary ;
     schema:name "Suisse-Bilanz"@de ;
