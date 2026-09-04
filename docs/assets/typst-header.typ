@@ -11,7 +11,20 @@
 #show table.cell: set text(size: 10pt)
 #show table.cell: set par(justify: false)
 #show footnote.entry: set text(size: 10pt)
+#set text(hyphenate: true)
 #show link: set text(fill: rgb("#D00D28"))
+#show link: it => {
+  show raw: underline.with(stroke: 0.75pt, offset: 1.25pt)
+  it
+}
+#show raw.where(block: false): it => {
+  show text: t => {
+    let clean = t.text.replace("\u{200b}", "")
+    let spaced = clean.clusters().join("\u{200b}")
+    if t.text == spaced { t } else { spaced }
+  }
+  it
+}
 #set table(fill: (col, row) => if calc.even(row) { rgb("f2f2f2") } else { white })
 #show table.cell.where(y: 0): set text(weight: "bold")
 #show table: it => block(
