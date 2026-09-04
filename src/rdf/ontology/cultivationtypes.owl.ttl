@@ -2019,11 +2019,6 @@ cultivationtype:498 a eCH-0265:CultivationType ;
     rdfs:subClassOf cultivationtype:1033 ;
     eCH-0265:botanicalPlant taxon:HORVX .
 
-cultivationtype:499 a eCH-0265:CultivationType ;
-    schema:name "Einkorn"@de ;
-    rdfs:subClassOf cultivationtype:511 ;
-    eCH-0265:botanicalPlant taxon:TRZMO .
-
 cultivationtype:500 a eCH-0265:CultivationType ;
     schema:name "Emmer"@de,
         "Amidonnier"@fr,
