@@ -267,12 +267,12 @@ Die dazugehörige Dokumentation kann kostenlos angefordert werden.
 Diese Bestimmungen gelten jedoch nur für die von eCH erarbeiteten Standards, nicht aber für Standards oder Produkte Dritter, die auf eCH-Standards verweisen.
 Die Standards enthalten die entsprechenden Hinweise auf Rechte Dritter.
 
-# Anhang A - Referenzen {#sec-appendix-a .appendix}
+# Anhang A - Referenzen {#sec-appendix-a .appendix .unnumbered}
 
 ::: {#refs}
 :::
 
-# Anhang B - Mitwirkung und Prüfung {#sec-appendix-b .appendix}
+# Anhang B - Mitwirkung und Prüfung {#sec-appendix-b .appendix .unnumbered}
 
 | Name                           | Organisation                      |
 |:-------------------------------|:----------------------------------|
@@ -283,11 +283,11 @@ Die Standards enthalten die entsprechenden Hinweise auf Rechte Dritter.
 
 : Autoren und Revision {#tbl-authors}
 
-# Anhang C - Abkürzungen und Glossar {#sec-appendix-c .appendix}
+# Anhang C - Abkürzungen und Glossar {#sec-appendix-c .appendix .unnumbered}
 
 {{< include glossary.md >}}
 
-# Anhang D - Änderungen gegenüber der Vorversion {#sec-appendix-d .appendix}
+# Anhang D - Änderungen gegenüber der Vorversion {#sec-appendix-d .appendix .unnumbered}
 
 Das vorliegende Dokument ist ein Hilfsmittel zur harmonisierten, systemübergreifenden Nutzung von landwirtschaftlichen Kulturdaten in der Schweiz.
 Gegenüber der Version 1.1.0 (eCH-0265 Datenstandard Agrardaten – Flächen und Kulturen) wurde das Dokument von einem unverbindlichen Standard zu einem Hilfsmittel umgewandelt.
@@ -301,6 +301,6 @@ Neu enthalten sind dafür die Kulturen aus dem Pflanzenschutzmittelverzeichnis.
 
 Eine vollständige Übersicht der Veränderungen wird auf GitHub geführt: <https://github.com/blw-ofag-ufag/eCH-0265/releases>.
 
-# Anhang E - Abbildungsverzeichnis {#sec-appendix-e .appendix}
+# Anhang E - Abbildungsverzeichnis {#sec-appendix-e .appendix .unnumbered}
 
-# Anhang F - Tabellenverzeichnis {#sec-appendix-f .appendix}
+# Anhang F - Tabellenverzeichnis {#sec-appendix-f .appendix .unnumbered}
