@@ -161,7 +161,10 @@ Das konsolidierte Datenmodell wird durch eine RDFS-Ontologie abgebildet und mitt
 
 ![UML-Diagramm des Datenmodells von eCH-0265. Dieses Diagramm wurde automatisch mithilfe von SHACL PLAY! [@francart2020shacl] aus den SHACL-Spezifikationen generiert.](../assets/img/uml.png){#fig-uml width="100%" .lightbox}
 
-TBC.
+@fig-uml veranschaulicht die grundlegende Architektur des semantischen Modells: Im Zentrum steht eine generische Referenzklasse (`eCH-0265:CultivationType`).
+Die Kulturhierarchien der drei verschiedenen Bereiche (Direktzahlungen, Nährstoffbilanz und Pflanzenschutz) sind jeweils als SKOS-Konzeptschema modelliert.
+Jede Kultur kann dabei auf die zentrale Referenzklasse "zeigen".
+Dieser modulare Aufbau erlaubt es, die historisch gewachsenen, in sich geschlossenen Kategoriensysteme unter Beibehaltung ihrer spezifischen fachlichen und rechtlichen Eigenschaften in einem gemeinsamen Graphen abzubilden und trotzdem miteinander zu verknüpfen.
 
 # Klassen {#sec-classes}
 
