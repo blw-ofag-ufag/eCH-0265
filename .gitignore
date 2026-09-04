@@ -17,6 +17,7 @@
 **/.quarto/
 **/*.quarto_ipynb
 entities.md
+glossary.md
 
 # Small tests and notes
 /test.*

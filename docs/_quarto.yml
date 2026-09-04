@@ -29,19 +29,34 @@ format:
   html:
     theme: cosmo
     toc: true
+    toc-depth: 2
     number-sections: true
-    embed-resources: true
     syntax-definitions:
      - assets/sparql.xml
+     - assets/turtle.xml
   gfm: 
-    toc: false
-    number-sections: false
-    wrap: none
+    toc: true
+    toc-depth: 2
+    number-sections: true
   docx:
     toc: true
+    toc-depth: 2
+    number-sections: true
     reference-doc: https://s.zazuko.com/MHXTkQ
     link-citations: true
   typst:
+    toc: true
+    toc-depth: 3
     number-sections: true
+    section-numbering: 1.1.1
+    mainfont: Nimbus Sans
+    fontsize: 12pt
+    margin:
+      x: 2.5cm
+      y: 3.5cm
+    include-in-header: assets/typst-header.typ
+    include-before-body: assets/typst-before-body.typ
     syntax-definitions:
      - assets/sparql.xml
+     - assets/turtle.xml
+    citeproc: true

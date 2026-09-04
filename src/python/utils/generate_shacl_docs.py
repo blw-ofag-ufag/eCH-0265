@@ -141,7 +141,9 @@ def main():
                 
             comment = get_localized_value(g, shape_uri, [RDFS.comment, SH.description], lang) or ""
             
-            slug = slugify(label)
+            # Extract local name from the URI to ensure stable, language-independent slugs
+            local_name = str(shape_uri).split('#')[-1].split('/')[-1]
+            slug = f"nodeshape-{slugify(local_name)}"
             
             uri_to_slug[shape_uri] = slug
             if target_class:
@@ -242,7 +244,7 @@ def main():
                         if t_uri:
                             t_qname = format_uri(g, t_uri)
                             if t_uri in uri_to_slug:
-                                types.append(f"[{t_qname}](#sec-{uri_to_slug[t_uri]})")
+                                types.append(f"[`{t_qname}`](#sec-{uri_to_slug[t_uri]})")
                             else:
                                 types.append(f"`{t_qname}`")
                     
@@ -258,7 +260,7 @@ def main():
                             t_uri = oc.cls
                             t_qname = format_uri(g, t_uri)
                             if t_uri in uri_to_slug:
-                                types.append(f"[{t_qname}](#sec-{uri_to_slug[t_uri]})")
+                                types.append(f"[`{t_qname}`](#sec-{uri_to_slug[t_uri]})")
                             else:
                                 types.append(f"`{t_qname}`")
 
@@ -270,7 +272,7 @@ def main():
 
                     md_lines.append(f"| {display_name} | {p_path_str} | {p_type_str} | {cardinality} |")
                 
-                md_lines.append(f": {label} {trans['properties']} {{#tbl-{slug}}}")
+                md_lines.append(f": {trans['properties']} {label} {{#tbl-{slug} tbl-colwidths=\"[40,25,25,10]\"}}")
                 md_lines.append("")
 
         output_path = docs_dir / lang / "entities.md"

@@ -17,7 +17,7 @@ license: CC BY 4.0
 citation: true
 ---
 
-# Hinweis {.unnumbered}
+# Hinweis {#sec-note .unnumbered}
 
 Im vorliegenden Dokument wird bei der Bezeichnung von Personen eine geschlechtsneutrale Formulierung verwendet.
 Basis bildet der Leitfaden der Bundeskanzlei.
@@ -28,7 +28,7 @@ In verknappten Textpassagen, namentlich in Tabellen, können Kurzformen verwende
 Dabei wird die Kurzform mit Schrägstrich, aber ohne Auslassungsstrich verwendet (Referent/in).
 Genderstern und ähnliche Schreibweisen werden nicht verwendet.
 
-# Einleitung
+# Einleitung {#sec-introduction}
 
 Die Definitionen für landwirtschaftliche Kulturen wurden historisch unabhängig voneinander für spezifische gesetzliche Aufträge und Systeme entwickelt.
 Die fehlende systemübergreifende Harmonisierung (mit einer *Single Source of Truth*) erschwert jedoch die Informationsverarbeitung über jeweilige Systemgrenzen hinaus.
@@ -37,7 +37,7 @@ Das vorliegende Hilfsmittel formuliert keine Vorgaben, sondern unterstützt gezi
 Zu diesem Zweck stehen fertige Kulturentabellen sowie die dazugehörigen Mapping-Tabellen zur Verfügung.
 Alle definierten Ressourcen sind als *Linked Data* modelliert und lassen sich vollständig automatisiert beziehen, was eine effiziente Überführung von Daten aus einem System in ein anderes ermöglicht.
 
-## Was ist eine Kultur?
+## Was ist eine Kultur? {#sec-what-is-a-crop}
 
 Der Begriff der landwirtschaftlichen Kultur stützt sich in diesem Hilfsmittel massgeblich auf das Konzept `CultivationType` aus der Vorversion [@eCH-0265:1.0.0].
 Eine Kultur definiert sich demnach als Kategorie beziehungsweise als Teil eines Kategorisierungssystems, welches die Art der Nutzung und Kultivierung eines bestimmten Stücks Land über einen definierten Zeitraum beschreibt.
@@ -81,7 +81,7 @@ Eine Mehrheit dieser Kategorien wird explizit in der landwirtschaftlichen Begrif
 | 5  | Flächen im Sömmerungsgebiet | [Art. 24 LBV](https://www.fedlex.admin.ch/eli/cc/1999/13/de#art_24) | «Sömmerungsweiden», «Artenreiche Grün- und Streueflächen im Sömmerungsgebiet» |
 | 9  | Andere Elemente | | «Hochstammfeldobstbäume», «Nussbäume», «Einheimische standortgerechte Einzelbäume und Alleen» |
 
-: Anzahl Direktzahlungskulturen (N) je Kulturkategorie (Kategorie) mit Referenzen auf die geltende Definition in der landwirtschaftlichen Begriffsverordnung (LBV), wo möglich. {#tbl-directpaymentcrops-categories}
+: Anzahl Direktzahlungskulturen (N) je Kulturkategorie (Kategorie) mit Referenzen auf die geltende Definition in der landwirtschaftlichen Begriffsverordnung (LBV), wo möglich. {#tbl-directpaymentcrops-categories tbl-colwidths="[5,35,20,40]"}
 
 ## Nährstoffbilanz {#sec-nutrient-balance}
 
@@ -106,7 +106,7 @@ Der NBBS ordnet die Kulturen in einer strikten, dreistufigen Hierarchie (@tbl-nb
 | 8      | Kultivierungsunterkategorien (`cultivationsubcategories`) | Mittlere Ebene, dient ebenfalls nur der Strukturierung. | Getreide, Dauerkulturen, Hackfrüchte, Freilandgemüse, geschützte Kulturen, Grundfutter, übriger Ökoausgleich, diverse Kulturen |
 | 314    | Agronomische Kulturkategorien (`agronomiccropcategories`) | Unterste Ebene, welche die eigentlichen Kulturen beinhaltet. Hier sind die spezifischen agronomischen und regulatorische Eigenschaften hinterlegt. | «Winterweizen», «Zuckerrüben», «Naturwiese extensiv», «Aubergine, Erdkultur (geschützter Anbau)», «Walnüsse ≥ 185 Bäume/ha» |
 
-: Hierarchische Struktur der Kulturen im Nährstoffbilanz-Berechnungsservice und Anzahl der Elemente (N) je Klasse, Stand Juli 2026. {#tbl-nbbs-hierarchy}
+: Hierarchische Struktur der Kulturen im Nährstoffbilanz-Berechnungsservice und Anzahl der Elemente (N) je Klasse, Stand Juli 2026. {#tbl-nbbs-hierarchy tbl-colwidths="[5,30,35,30]"}
 
 Während die beiden obersten Ebenen rein der Strukturierung und Gruppierung dienen, weisen die agronomischen Kulturkategorien auf der untersten Ebene spezifische agronomische und regulatorische Eigenschaften auf.
 Dazu gehören beispielsweise der Ertrag, die Zulässigkeit für bestimmte Direktzahlungsprogramme oder die Teilnahme an spezifischen Vorhaben wie dem «62a Nitrat-Projekt».
@@ -149,7 +149,7 @@ Die korrekte Nachbildung dieser Polyhierarchie ist in den Daten folglich essenzi
   Buchweizen und Quinoa sind botanisch nicht mit Getreide verwandt.
   Ihr Erntegut und dessen Verwendung ähneln jedoch stark denen von echtem Getreide, daher werden sie manchmal als Pseudogetreide bezeichnet.
 
-# Datenmodell
+# Datenmodell {#sec-data-model}
 
 ## Nutzung von Semantic-Web-Technologien {#sec-linked-data}
 
@@ -163,11 +163,11 @@ Das konsolidierte Datenmodell wird durch eine RDFS-Ontologie abgebildet und mitt
 
 TBC.
 
-# Klassen
+# Klassen {#sec-classes}
 
 {{< include entities.md >}}
 
-# Instruktionen zur Datenintegration
+# Instruktionen zur Datenintegration {#sec-data-retrieval}
 
 Die diesem Dokument zugrundeliegenden Master- und Referenzdaten sind als _Linked Data_ verfügbar.
 
@@ -236,11 +236,11 @@ Eine vorbereitete SPARQL-Abfrage zur Generierung der vollständigen Mapping-Tabe
 
 Diese Abfrage kann direkt in der Benutzeroberfläche von [LINDAS](https://lindas.admin.ch/sparql/) ausgeführt und als CSV oder JSON exportiert werden. Alternativ lässt sich die Tabelle programmatisch beziehen, siehe @sec-lindas-data-integration.
 
-# Sicherheitsaspekte
+# Sicherheitsaspekte {#sec-safety-consideration}
 
 Informationen zu den ausdrücklich massgeblichen rechtlichen Grundlagen oder ein Hinweis darauf, dass bei der Umsetzung die entsprechenden rechtlichen Grundlagen zu beachten sind.
 
-# Haftungsausschluss
+# Haftungsausschluss {#sec-disclaimer}
 
 eCH-Standards, die der Verein eCH dem Anwender kostenlos zur Verfügung stellt oder die auf eCH verweisen, haben nur den Status von Empfehlungen.
 Der Verein eCH haftet in keinem Fall für Entscheidungen oder Massnahmen, die der Anwender auf der Grundlage dieser Dokumente trifft bzw. ergreift.
@@ -255,7 +255,7 @@ eCH behält sich das Recht vor, die Inhalte der eCH-Standards jederzeit und ohne
 
 Jede Haftung für Schäden, die durch die Nutzung der eCH-Standards durch den Anwender entstehen, wird im gesetzlich zulässigen Rahmen ausgeschlossen.
 
-# Urheberrechte
+# Urheberrechte {#sec-copyrights}
 
 Personen, die eCH-Standards erarbeiten, bleiben Inhaber ihrer geistigen Eigentumsrechte.
 Diese Personen verpflichten sich jedoch, ihre geistigen Eigentumsrechte oder andere Rechte an geistigen Eigentumsrechten Dritter, soweit möglich, den jeweiligen Fachgruppen und dem Verein eCH kostenlos und zur uneingeschränkten Nutzung und Weiterentwicklung im Rahmen des Vereinszwecks zur Verfügung zu stellen.
@@ -267,12 +267,12 @@ Die dazugehörige Dokumentation kann kostenlos angefordert werden.
 Diese Bestimmungen gelten jedoch nur für die von eCH erarbeiteten Standards, nicht aber für Standards oder Produkte Dritter, die auf eCH-Standards verweisen.
 Die Standards enthalten die entsprechenden Hinweise auf Rechte Dritter.
 
-# Anhang A - Referenzen {.appendix}
+# Anhang A - Referenzen {#sec-appendix-a .appendix .unnumbered}
 
 ::: {#refs}
 :::
 
-# Anhang B - Mitwirkung und Prüfung {.appendix}
+# Anhang B - Mitwirkung und Prüfung {#sec-appendix-b .appendix .unnumbered}
 
 | Name                           | Organisation                      |
 |:-------------------------------|:----------------------------------|
@@ -283,17 +283,11 @@ Die Standards enthalten die entsprechenden Hinweise auf Rechte Dritter.
 
 : Autoren und Revision {#tbl-authors}
 
-# Anhang C - Abkürzungen und Glossar {.appendix}
+# Anhang C - Abkürzungen und Glossar {#sec-appendix-c .appendix .unnumbered}
 
-| Abkürzung          | Beschreibung                                  |
-|:-------------------|:----------------------------------------------|
-| AGIS               | Agrarpolitisches Informationssystem           |
-| KAIS               | Kantonales Agrarinformationssystem            |
-| NBBS               | Nährstoffbilanz-Berechnungsservice            |
+{{< include glossary.md >}}
 
-: Abkürzungsverzeichnis {#tbl-abbreviations}
-
-# Anhang D - Änderungen gegenüber der Vorversion {.appendix}
+# Anhang D - Änderungen gegenüber der Vorversion {#sec-appendix-d .appendix .unnumbered}
 
 Das vorliegende Dokument ist ein Hilfsmittel zur harmonisierten, systemübergreifenden Nutzung von landwirtschaftlichen Kulturdaten in der Schweiz.
 Gegenüber der Version 1.1.0 (eCH-0265 Datenstandard Agrardaten – Flächen und Kulturen) wurde das Dokument von einem unverbindlichen Standard zu einem Hilfsmittel umgewandelt.
@@ -307,6 +301,6 @@ Neu enthalten sind dafür die Kulturen aus dem Pflanzenschutzmittelverzeichnis.
 
 Eine vollständige Übersicht der Veränderungen wird auf GitHub geführt: <https://github.com/blw-ofag-ufag/eCH-0265/releases>.
 
-# Anhang E - Abbildungsverzeichnis {.appendix}
+# Anhang E - Abbildungsverzeichnis {#sec-appendix-e .appendix .unnumbered}
 
-# Anhang F - Tabellenverzeichnis {.appendix}
+# Anhang F - Tabellenverzeichnis {#sec-appendix-f .appendix .unnumbered}
