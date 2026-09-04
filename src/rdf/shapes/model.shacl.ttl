@@ -27,15 +27,10 @@
 
 eCH-0265: a owl:Ontology ;
     dcterms:creator "Damian Oswald, Lea Stauber, Marc Beringer, Christian Wilda" ;
-    dcterms:title "RDF master and reference data about crops"@en ;
+    dcterms:title "eCH-0265 Datenmodell"@de,
+        "eCH-0265 Data Model"@en ;
     dcterms:created "2026-03-05"^^xsd:date ;
-    dcterms:modified "2026-05-04"^^xsd:date ;
-    dcterms:abstract
-"""
-This project addresses the challenge of fragmented agricultural crop data within the Swiss federal administration, where essential systems all use separate, non-harmonized crop terminologies.
-This lack of a "single source of truth" creates significant integration hurdles for digital tools.
-In this project, we propose a unified master data system for crops and crop-related objects.
-"""@en .
+    dcterms:modified "2026-05-04"^^xsd:date .
 
 # ==============================================================================
 # CULTIVATION TYPE
@@ -69,7 +64,6 @@ eCH-0265:CultivationType a sh:NodeShape, rdfs:Class ;
         sh:path schema:name ;
         sh:name "Name"@de,
             "Name"@en ;
-        sh:description "Name of this cultivation type."@en ;
         sh:minCount 1 ;
         sh:nodeKind sh:Literal ;
         sh:datatype rdf:langString ;
@@ -88,7 +82,6 @@ eCH-0265:CultivationType a sh:NodeShape, rdfs:Class ;
         sh:path schema:description ;
         sh:name "Description"@en,
             "Beschreibung"@de ;
-        sh:description "Textual description of this cultivation type."@en ;
         sh:nodeKind sh:Literal ;
         sh:datatype rdf:langString ;
         sh:languageIn ( "de" "fr" "it" "en" ) ;
@@ -96,7 +89,8 @@ eCH-0265:CultivationType a sh:NodeShape, rdfs:Class ;
     ],
     [
         sh:order 5 ;
-        sh:name "Parent cultivation type"@en ;
+        sh:name "Parent cultivation type"@en,
+            "Übergeordneter Nutzungstyp"@de ;
         sh:path rdfs:subClassOf ;
         sh:or (
             [ sh:class eCH-0265:CultivationType ]
@@ -120,7 +114,6 @@ eCH-0265:CultivationType a sh:NodeShape, rdfs:Class ;
 eCH-0265:DirectPaymentAreaCategory a sh:NodeShape, rdfs:Class ;
     rdfs:label "Flächenkategorie Direktzahlung"@de,
         "Direct payment area category"@en ;
-    rdfs:comment "Level 1 in the AGIS direct payment crops hierarchy."@en ;
     sh:closed true ;
     sh:ignoredProperties ( rdf:type skos:exactMatch skos:broadMatch skos:narrowMatch skos:narrower ) ;
     sh:property
@@ -192,8 +185,6 @@ eCH-0265:DirectPaymentCrop a sh:NodeShape, rdfs:Class ;
             sh:order 3 ;
             sh:name "Identifikator"@de ;
             sh:description "Der LNF-Code, auch Kulturcode genannt, ist der allgemein gebräuchliche Identifikator für Direktzahlungskulturen in der Schweiz."@de ;
-            sh:name "LNF-Code"@de ;
-            sh:description "Auch Kulturcode genannt, ist der allgemein gebräuchliche Identifikator für Direktzahlungskulturen in der Schweiz."@de ;
             sh:maxCount 1 ;
             sh:minCount 1 ;
             sh:path schema:identifier ;
