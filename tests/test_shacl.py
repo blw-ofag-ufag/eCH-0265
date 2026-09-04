@@ -21,20 +21,21 @@ def get_shacl_rules():
         PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
         PREFIX schema: <http://schema.org/>
 
-        SELECT DISTINCT ?shape ?type ?name ?message ?path
+        SELECT DISTINCT ?shape ?type ?name ?message ?path ?sourceShape
         WHERE {
             {
                 ?shape a sh:NodeShape .
                 BIND("NodeShape" AS ?type)
+                BIND(?shape AS ?sourceShape)
             }
             UNION
             {
-                [] sh:property ?shape .
+                ?sourceShape sh:property ?shape .
                 BIND("Property" AS ?type)
             }
             UNION
             {
-                [] sh:sparql ?shape .
+                ?sourceShape sh:sparql ?shape .
                 BIND("SPARQL" AS ?type)
             }
             OPTIONAL { ?shape schema:name|sh:name|rdfs:label|rdfs:comment ?name . }
@@ -52,7 +53,8 @@ def get_shacl_rules():
                 "messages": set(),
                 "names": set(),
                 "paths": set(),
-                "shape_uri": str(s) if isinstance(s, URIRef) else None
+                "shape_uri": str(s) if isinstance(s, URIRef) else None,
+                "source_shape": str(row.sourceShape) if isinstance(row.sourceShape, URIRef) else None
             }
             
         if row.message:
@@ -80,7 +82,8 @@ def get_shacl_rules():
             "type": data["type"],
             "message": sorted(data["messages"])[0] if data["messages"] else None,
             "path": sorted(data["paths"])[0] if data["paths"] else None,
-            "shape_uri": data["shape_uri"]
+            "shape_uri": data["shape_uri"],
+            "source_shape": data["source_shape"]
         })
 
     # Deduplicate rules by their test name
@@ -104,13 +107,7 @@ def test_shacl_report_is_populated(shacl_report):
     """Ensures that the SHACL report actually contains validation data."""
     if len(shacl_report) == 0:
         pytest.fail("The SHACL report graph is completely empty. PySHACL may have failed silently.")
-        
-    query = """
-        PREFIX sh: <http://www.w3.org/ns/shacl#>
-        ASK { ?report a sh:ValidationReport }
-    """
-    
-    # Evaluate the ASK query. QueryResult from an ASK query yields a boolean.
+    query = "ASK { ?report a <http://www.w3.org/ns/shacl#ValidationReport> }"
     has_report = False
     for res in shacl_report.query(query):
         has_report = bool(res)
@@ -118,22 +115,36 @@ def test_shacl_report_is_populated(shacl_report):
     if not has_report:
         pytest.fail("The SHACL report does not contain a sh:ValidationReport node. Validation likely failed.")
 
+def test_shacl_conforms(shacl_report):
+    query = "ASK { ?report a <http://www.w3.org/ns/shacl#ValidationReport> ; <http://www.w3.org/ns/shacl#conforms> true . }"
+    if not bool(shacl_report.query(query)):
+        pytest.fail("SHACL validation failed! Check the SHACL report or other pytest results for details.")
+
 @pytest.mark.parametrize("rule", RULES, ids=lambda r: f"{r['type']} | {r['test_name']}")
 def test_shacl_rule(rule, shacl_report):
     """Evaluates an individual SHACL constraint against the validation report."""
     
-    # We must match Rules to Report results. Since Blank Nodes do not map 
-    # reliably across different RDF graphs, we match by Message, Path, or URI.
-    if rule["message"]:
+    conditions = []
+    
+    # match rules to report results
+    if rule["type"] == "Property" and rule["path"]:
+        conditions.append(f'?path = <{rule["path"]}>')
+    elif rule["type"] == "NodeShape" and rule["shape_uri"]:
+        conditions.append(f'?sourceShape = <{rule["shape_uri"]}>')
+    elif rule["type"] == "SPARQL" and rule["source_shape"]:
+        conditions.append(f'?sourceShape = <{rule["source_shape"]}>')
+        conditions.append(f'?sourceConstraintComponent = sh:SPARQLConstraintComponent')
+    
+    # fallback to message ONLY if we don't have proper shape references
+    if rule["message"] and not conditions:
         msg_literal = rule["message"].replace('"', '\\"')
-        filter_str = f'STR(?actualMessage) = "{msg_literal}"'
-    elif rule["path"]:
-        filter_str = f'?path = <{rule["path"]}>'
-    elif rule["shape_uri"]:
-        filter_str = f'?sourceShape = <{rule["shape_uri"]}>'
-    else:
-        pytest.skip("Rule has no URI, message, or path to map to report results.")
-        
+        conditions.append(f'STR(?actualMessage) = "{msg_literal}"')
+
+    if not conditions:
+        pytest.skip("Rule has no URI, path, or source shape to map to report results.")
+
+    filter_str = " && ".join(conditions)
+
     query = f"""
         PREFIX sh: <http://www.w3.org/ns/shacl#>
         SELECT ?focusNode ?severity ?actualMessage
@@ -145,8 +156,7 @@ def test_shacl_rule(rule, shacl_report):
             OPTIONAL {{ ?result sh:resultMessage ?actualMessage . }}
             OPTIONAL {{ ?result sh:resultPath ?path . }}
             OPTIONAL {{ ?result sh:sourceShape ?sourceShape . }}
-            
-            # Inject the specific match condition for this rule
+            OPTIONAL {{ ?result sh:sourceConstraintComponent ?sourceConstraintComponent . }}            
             FILTER( {filter_str} )
         }}
     """

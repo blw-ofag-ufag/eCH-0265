@@ -64,12 +64,12 @@ Ensure identifiers are meaningful to facilitate readability and improve [DX](htt
 For individuals, use a sub-namespace based on the most important classes. For example, if the project namespace is `https://agriculture.ld.admin.ch/eCH-1234/2/`, use `https://agriculture.ld.admin.ch/eCH-1234/2/person/` for all people:
 
 ``` ttl
-@prefix :       <https://agriculture.ld.admin.ch/eCH-1234/2/> .
-@prefix person: <https://agriculture.ld.admin.ch/eCH-1234/2/person/> .
+@prefix eCH-1234: <https://agriculture.ld.admin.ch/eCH-1234/2/> .
+@prefix person:   <https://agriculture.ld.admin.ch/eCH-1234/2/person/> .
 
-person:1 a :Person .
-person:2 a :Person .
-person:3 a :Person .
+person:1 a eCH-1234:Person .
+person:2 a eCH-1234:Person .
+person:3 a eCH-1234:Person .
 ```
 
 ## Alignment with eCH processes
