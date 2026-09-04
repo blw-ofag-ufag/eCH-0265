@@ -311,7 +311,7 @@ beinhaltet.
 
 Tabelle 3: Eigenschaften Agronomische Kulturkategorie
 
-| Beschreibung | Pfad | Typ | Kardinalität |
+| Beschreibung | Pfad | Typ | Kard. |
 |:---|:---|:---|---:|
 | **Identifikator** | `schema:identifier` | `xsd:string` oder `sh:Literal` | 1..1 |
 | **Konzeptschema** | `skos:inScheme` | `sh:IRI` | 1..\* |
@@ -333,7 +333,7 @@ entsprechen den Hauptkulturen.
 
 Tabelle 4: Eigenschaften Direktzahlungskultur
 
-| Beschreibung | Pfad | Typ | Kardinalität |
+| Beschreibung | Pfad | Typ | Kard. |
 |:---|:---|:---|---:|
 |  | `skos:broader` | [`eCH-0265:DirectPaymentAreaCategory`](#sec-nodeshape-directpaymentareacategory) oder `sh:IRI` | 0..1 |
 |  | `skos:inScheme` | `sh:IRI` | 1..1 |
@@ -351,7 +351,7 @@ Tabelle 4: Eigenschaften Direktzahlungskultur
 
 Tabelle 5: Eigenschaften Flächenkategorie Direktzahlung
 
-| Beschreibung | Pfad | Typ | Kardinalität |
+| Beschreibung | Pfad | Typ | Kard. |
 |:---|:---|:---|---:|
 |  | `skos:topConceptOf` | `sh:IRI` | 1..1 |
 |  | `skos:inScheme` | `sh:IRI` | 1..1 |
@@ -373,7 +373,7 @@ Language* (OWL)](https://www.w3.org/TR/owl-guide/) verwendet.
 
 Tabelle 6: Eigenschaften Nutzungstyp
 
-| Beschreibung | Pfad | Typ | Kardinalität |
+| Beschreibung | Pfad | Typ | Kard. |
 |:---|:---|:---|---:|
 | **Name** | `schema:name` | `rdf:langString` oder `sh:Literal` | 1..\* |
 | **Alias** | `schema:alternateName` | `rdf:langString` oder `sh:Literal` | 0..\* |
@@ -392,7 +392,7 @@ Nährstoffbilanz-Berechnungsservice, dient der reinen Strukturierung.
 
 Tabelle 7: Eigenschaften Nährstoffbilanz-Kultivierungskategorie
 
-| Beschreibung | Pfad | Typ | Kardinalität |
+| Beschreibung | Pfad | Typ | Kard. |
 |:---|:---|:---|---:|
 | **Identifikator** | `schema:identifier` | `xsd:string` oder `sh:Literal` | 1..1 |
 | **Konzeptschema** | `skos:inScheme` | `sh:IRI` | 1..\* |
@@ -411,7 +411,7 @@ Nährstoffbilanz-Berechnungsservice.
 
 Tabelle 8: Eigenschaften Nährstoffbilanz-Kultivierungsunterkategorie
 
-| Beschreibung | Pfad | Typ | Kardinalität |
+| Beschreibung | Pfad | Typ | Kard. |
 |:---|:---|:---|---:|
 | **Identifikator** | `schema:identifier` | `xsd:string` oder `sh:Literal` | 1..1 |
 | **Konzeptschema** | `skos:inScheme` | `sh:IRI` | 1..\* |
@@ -431,7 +431,7 @@ Diese Kulturen sind über die Attribute `schema:isPartOf` sowie
 
 Tabelle 9: Eigenschaften Pflanzenschutzmittel-Kultur
 
-| Beschreibung | Pfad | Typ | Kardinalität |
+| Beschreibung | Pfad | Typ | Kard. |
 |:---|:---|:---|---:|
 | **Identifikator** | `schema:identifier` | `xsd:string` oder `sh:Literal` | 1..1 |
 | **Konzeptschema** | `skos:inScheme` | `sh:IRI` | 1..1 |
