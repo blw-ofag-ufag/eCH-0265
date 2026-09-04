@@ -285,13 +285,7 @@ Die Standards enthalten die entsprechenden Hinweise auf Rechte Dritter.
 
 # Anhang C - Abkürzungen und Glossar {#sec-appendix-c .appendix}
 
-| Abkürzung          | Beschreibung                                  |
-|:-------------------|:----------------------------------------------|
-| AGIS               | Agrarpolitisches Informationssystem           |
-| KAIS               | Kantonales Agrarinformationssystem            |
-| NBBS               | Nährstoffbilanz-Berechnungsservice            |
-
-: Abkürzungsverzeichnis {#tbl-abbreviations}
+{{< include glossary.md >}}
 
 # Anhang D - Änderungen gegenüber der Vorversion {#sec-appendix-d .appendix}
 

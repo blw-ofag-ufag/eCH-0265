@@ -1,0 +1,83 @@
+# ==============================================================================
+# PREFIXES
+# ==============================================================================
+
+# Project-specific namespaces/qnames
+@prefix :                <https://agriculture.ld.admin.ch/eCH-0265/2/> .
+@prefix term:            <https://agriculture.ld.admin.ch/eCH-0265/2/term/> .
+
+# Globally used namespaces/qnames
+@prefix schema:          <http://schema.org/> .
+@prefix skos:            <http://www.w3.org/2004/02/skos/core#> .
+
+# ==============================================================================
+# GLOSSARY METADATA
+# ==============================================================================
+
+:glossary a skos:ConceptScheme ;
+    schema:name "Glossar des Standards eCH-0265"@de ;
+    schema:description "Diese Glossar soll sämtliche verwendeten Fachbegriffe inklusive Abkürzungen des Standards eCH-0265 enthalten."@de .
+
+# ==============================================================================
+# GLOSSARY TERMS
+# ==============================================================================
+
+term:agis a skos:Concept ;
+    skos:inScheme :glossary ;
+    skos:topConceptOf :glossary ;
+    schema:name "Agrarpolitisches Informationssystem"@de ;
+    schema:alternateName "AGIS"@de ;
+    schema:description "Das agrarpolitische Informationssystem des Bundes, an welches im Rahmen der Strukturdatenerhebung Daten zu Direktzahlungskulturen übermittelt werden."@de .
+
+term:kais a skos:Concept ;
+    skos:inScheme :glossary ;
+    skos:topConceptOf :glossary ;
+    schema:name "Kantonales Agrarinformationssystem"@de ;
+    schema:alternateName "KAIS"@de ;
+    schema:description "Informationssystem auf Kantonsebene, in welches Bewirtschaftende im Rahmen der Strukturdatenerhebung ihre Daten eintragen."@de .
+
+term:lindas a skos:Concept ;
+    skos:inScheme :glossary ;
+    skos:topConceptOf :glossary ;
+    schema:name "Linked Data Service"@de ;
+    schema:alternateName "LINDAS"@de ;
+    schema:description "Der offizielle Linked-Data-Dienst der Schweizer Bundesverwaltung, der als Triple Store fungiert."@de .
+
+term:nbbs a skos:Concept ;
+    skos:inScheme :glossary ;
+    skos:topConceptOf :glossary ;
+    schema:name "Nährstoffbilanz-Berechnungsservice"@de ;
+    schema:alternateName "NBBS"@de ;
+    schema:description "Eine vom Bundesamt für Landwirtschaft bereitgestellte RESTful API zur Standardisierung der Suisse-Bilanz-Berechnung."@de .
+
+term:srppp a skos:Concept ;
+    skos:inScheme :glossary ;
+    skos:topConceptOf :glossary ;
+    schema:name "Pflanzenschutzmittelverzeichnis"@de ;
+    schema:alternateName "PSM-V"@de ;
+    schema:description "Das offizielle Register des Bundes, gepflegt vom BLV, das alle in der Schweiz zugelassenen Pflanzenschutzmittel sowie deren rechtmässigen Einsatzbereich auflistet."@de .
+
+term:rdf a skos:Concept ;
+    skos:inScheme :glossary ;
+    skos:topConceptOf :glossary ;
+    schema:name "Resource Description Framework"@de ;
+    schema:alternateName "RDF"@de ;
+    schema:description "Ein zentraler Standard des World Wide Web Consortiums (W3C) zur Modellierung von Datenstrukturen im Web. Informationen werden nicht in klassischen Tabellen, sondern als vernetzte Graphen abgebildet."@de .
+
+term:skos a skos:Concept ;
+    skos:inScheme :glossary ;
+    skos:topConceptOf :glossary ;
+    schema:name "Simple Knowledge Organization System"@de ;
+    schema:alternateName "SKOS"@de .
+
+term:suissebalance a skos:Concept ;
+    skos:inScheme :glossary ;
+    skos:topConceptOf :glossary ;
+    schema:name "Suisse-Bilanz"@de ;
+    schema:description "Zentrales Berechnungsinstrument, das den Nährstoffanfall und -bedarf auf Betriebsebene systematisch gegenüberstellt, um eine ausgeglichene Nährstoffbilanz auszuweisen."@de .
+
+term:triple a skos:Concept ;
+    skos:inScheme :glossary ;
+    skos:broader term:rdf ;
+    schema:name "Tripel"@de ;
+    schema:description "Die Grundstruktur einer Aussage in RDF, bestehend aus Subjekt, Prädikat und Objekt."@de .
