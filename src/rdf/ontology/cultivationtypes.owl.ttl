@@ -112,7 +112,7 @@ cultivationtype:8 a eCH-0265:CultivationType ;
     rdfs:subClassOf cultivationtype:464 .
 
 cultivationtype:9 a eCH-0265:CultivationType ;
-    schema:name "Hecken- Feld- und Ufergehölze"@de,
+    schema:name "Hecken sowie Feld- und Ufergehölze"@de,
         "Hedgerows field and riparian copses"@en,
         "Haies et bosquets et berges boisées"@fr,
         "Siepi e boschetti campestri e rivieraschi"@it ;
@@ -345,6 +345,11 @@ cultivationtype:41 a eCH-0265:CultivationType ;
         "Pear and nashi"@en,
         "Poirier et nashi"@fr,
         "Pero e nashi"@it ;
+    schema:alternateName "Nashi"@de,
+        "Nashibirne"@de,
+        "Nashi"@en,
+        "Nashi"@fr,
+        "Nashi"@it ;
     rdfs:subClassOf cultivationtype:309 .
 
 cultivationtype:43 a eCH-0265:CultivationType ;
@@ -374,6 +379,9 @@ cultivationtype:47 a eCH-0265:CultivationType ;
         "Legumes"@en,
         "Fabacées"@fr,
         "Fabacee"@it ;
+    schema:alternateName "Fabaceae"@de,
+        "Légumineuses"@fr,
+        "Leguminose"@it ;
     rdfs:subClassOf cultivationtype:22 .
 
 cultivationtype:48 a eCH-0265:CultivationType ;
@@ -381,6 +389,9 @@ cultivationtype:48 a eCH-0265:CultivationType ;
         "Crucifers"@en,
         "Crucifères"@fr,
         "Crocifere"@it ;
+    schema:alternateName "Brassicaceae"@de,
+        "Brassicaceae"@fr,
+        "Brassicacee"@it ;
     rdfs:subClassOf cultivationtype:22 .
 
 cultivationtype:53 a eCH-0265:CultivationType ;
@@ -438,6 +449,9 @@ cultivationtype:63 a eCH-0265:CultivationType ;
         "Boxwood"@en,
         "Buis"@fr,
         "Bosso"@it ;
+    schema:alternateName "Buxus"@de,
+        "Buxus"@fr,
+        "Buxus"@it ;
     rdfs:subClassOf cultivationtype:402,
         cultivationtype:72 .
 
@@ -461,6 +475,7 @@ cultivationtype:66 a eCH-0265:CultivationType ;
         "Horseradish"@en,
         "Raifort"@fr,
         "Rafano rusticano"@it ;
+    schema:alternateName "Ramolaccio"@it ;
     rdfs:subClassOf cultivationtype:48 .
 
 cultivationtype:67 a eCH-0265:CultivationType ;
@@ -485,6 +500,7 @@ cultivationtype:69 a eCH-0265:CultivationType ;
         "Mini-kiwi"@en,
         "Mini-kiwi"@fr,
         "Mini-kiwi"@it ;
+    schema:alternateName "Kiwaï"@fr ;
     schema:description "Weil der Anbau von Mini-Kiwi agronomisch dem Beerenbau gleicht, wird er dazu gezählt und nicht (wie sonstiger Kiwi) zum Obstbau."@de ;
     rdfs:subClassOf cultivationtype:471 .
 
@@ -593,6 +609,7 @@ cultivationtype:89 a eCH-0265:CultivationType ;
         "Table onion"@en,
         "Oignon condiment"@fr,
         "Cipolle da tavola"@it ;
+    schema:alternateName "Oignon condiment"@fr ;
     rdfs:subClassOf cultivationtype:277 .
 
 cultivationtype:90 a eCH-0265:CultivationType ;
@@ -635,6 +652,9 @@ cultivationtype:95 a eCH-0265:CultivationType ;
         "Composites"@en,
         "Composées"@fr,
         "Composite"@it ;
+    schema:alternateName "Asteraceae"@de,
+        "Asteraceae"@fr,
+        "Asteracee"@it ;
     rdfs:subClassOf cultivationtype:22 .
 
 cultivationtype:98 a eCH-0265:CultivationType ;
@@ -657,6 +677,7 @@ cultivationtype:101 a eCH-0265:CultivationType ;
         "Cyclamen"@en,
         "Cyclamen"@fr,
         "Ciclamino"@it ;
+    schema:alternateName "Cyclame"@de ;
     rdfs:subClassOf cultivationtype:108,
         cultivationtype:145 .
 
@@ -728,6 +749,9 @@ cultivationtype:113 a eCH-0265:CultivationType ;
         "Plums and prune plums"@en,
         "Prunes et pruneaux"@fr,
         "Prugne e susine"@it ;
+    schema:alternateName
+        "Prunier"@fr,
+        "Prugno e susino"@it ;
     owl:unionOf ( cultivationtype:259 cultivationtype:198 ) ;
     rdfs:subClassOf cultivationtype:704 .
 
@@ -764,6 +788,7 @@ cultivationtype:118 a eCH-0265:CultivationType ;
         "Conifers"@en,
         "Conifères"@fr,
         "Conifere"@it ;
+    schema:alternateName "Koniferen"@de;
     rdfs:subClassOf cultivationtype:401 .
 
 cultivationtype:119 a eCH-0265:CultivationType ;
@@ -777,6 +802,9 @@ cultivationtype:120 a eCH-0265:CultivationType ;
     schema:name "Knöterichgewächse"@de,
         "Knotweeds"@en,
         "Polygonacées"@fr,
+        "Poligonacee"@it ;
+    schema:alternateName "Polygonaceae"@de,
+        "Polygonaceae"@fr,
         "Poligonacee"@it ;
     rdfs:subClassOf cultivationtype:22 .
 
@@ -821,6 +849,7 @@ cultivationtype:130 a eCH-0265:CultivationType ;
         "Witloof chicory"@en,
         "Chicorée witloof"@fr,
         "Cicoria belga"@it ;
+    schema:alternateName "Chicorée-endive"@fr ;
     rdfs:subClassOf cultivationtype:95 .
 
 cultivationtype:131 a eCH-0265:CultivationType ;
@@ -841,15 +870,18 @@ cultivationtype:132 a eCH-0265:CultivationType ;
 cultivationtype:133 a eCH-0265:CultivationType ;
     schema:name "Radicchio- und Cicorino-Typen"@de,
         "Radicchio and cicorino types"@en,
-        "Types de radicchio/trévises et cicorino"@fr,
+        "Types de radicchio et trévises et cicorino"@fr,
         "Tipi di radicchio e cicorino"@it ;
     rdfs:subClassOf cultivationtype:141 .
 
 cultivationtype:135 a eCH-0265:CultivationType ;
-    schema:name "Liliengewächse Zierpflanzen"@de,
+    schema:name "Liliengewächse als Zierpflanzen"@de,
         "Lily ornamentals"@en,
         "Liliacées ornementales"@fr,
         "Liliacee ornamentali"@it ;
+    schema:alternateName "Liliaceae"@de,
+        "Liliaceae"@fr,
+        "Liliacee"@it ;
     rdfs:subClassOf cultivationtype:145 .
 
 cultivationtype:136 a eCH-0265:CultivationType ;
@@ -878,6 +910,10 @@ cultivationtype:139 a eCH-0265:CultivationType ;
         "Asian salads"@en,
         "Salades Asia"@fr,
         "Insalate asiatiche"@it ;
+    schema:description "Asia-Salate aus der Familie der Kreuzblütler (Brassicaceae)."@de,
+        "Asian salads belonging to the Brassicaceae family."@en,
+        "Salades Asia de la famille des Brassicaceae."@fr,
+        "Insalate asiatiche della famiglia delle Brassicacee."@it ;
     rdfs:subClassOf cultivationtype:48 .
 
 cultivationtype:140 a eCH-0265:CultivationType ;
@@ -954,9 +990,10 @@ cultivationtype:154 a eCH-0265:CultivationType ;
 
 cultivationtype:155 a eCH-0265:CultivationType ;
     schema:name "Pelargonien"@de,
-        "Pelargoniums"@en,    
+        "Pelargoniums"@en,
         "Géranium"@fr,
         "Geranio"@it ;
+    schema:alternateName "Geranien"@de ;
     rdfs:subClassOf cultivationtype:108,
         cultivationtype:145 .
 
@@ -1010,7 +1047,7 @@ cultivationtype:165 a eCH-0265:CultivationType ;
     rdfs:subClassOf cultivationtype:47 .
 
 cultivationtype:166 a eCH-0265:CultivationType ;
-    schema:name "Speisekürbisse ungeniessbare Schale"@de,
+    schema:name "Speisekürbisse mit ungeniessbarer Schale"@de,
         "Pumpkins with inedible skin"@en,
         "Courges à peau non comestible"@fr,
         "Zucche a buccia non commestibile"@it ;
@@ -1085,6 +1122,7 @@ cultivationtype:175 a eCH-0265:CultivationType ;
         "Nightshades"@en,
         "Solanacées"@fr,
         "Solanacee"@it ;
+    schema:alternateName "Solanaceae"@de ;
     rdfs:subClassOf cultivationtype:22 .
 
 cultivationtype:176 a eCH-0265:CultivationType ;
@@ -1100,6 +1138,8 @@ cultivationtype:179 a eCH-0265:CultivationType ;
         "Endives"@en,
         "Chicorées endives"@fr,
         "Indivia"@it ;
+    schema:alternateName "Chicorée scarole"@fr,
+        "Chicorée frisée"@fr ;
     rdfs:subClassOf cultivationtype:141 .
 
 cultivationtype:181 a eCH-0265:CultivationType ;
@@ -1111,10 +1151,10 @@ cultivationtype:181 a eCH-0265:CultivationType ;
     rdfs:subClassOf cultivationtype:64 .
 
 cultivationtype:182 a eCH-0265:CultivationType ;
-    schema:name "Kleegrasmischung Kunstwiese"@de,
+    schema:name "Kleegrasmischung auf Kunstwiesen"@de,
         "Clover-grass mixture temporary grassland"@en,
-        "Mélange trèfles-graminées prairie arificielle"@fr,
-        "Miscela trifoglio-graminacee prati artificiali"@it ;
+        "Mélange trèfles-graminées en prairie artificielle"@fr,
+        "Miscela trifoglio-graminacee su prati artificiali"@it ;
     rdfs:subClassOf cultivationtype:601 .
 
 cultivationtype:183 a eCH-0265:CultivationType ;
@@ -1142,6 +1182,9 @@ cultivationtype:188 a eCH-0265:CultivationType ;
     schema:name "Amaryllisgewächse"@de,
         "Amaryllids"@en,
         "Amaryllidacées"@fr,
+        "Amarillidacee"@it ;
+    schema:alternateName "Amaryllidaceae"@de,
+        "Amaryllidaceae"@fr,
         "Amarillidacee"@it ;
     rdfs:subClassOf cultivationtype:22 .
 
@@ -1186,6 +1229,7 @@ cultivationtype:198 a eCH-0265:CultivationType ;
         "Prune plum"@en,
         "Prunier"@fr,
         "Prugno"@it ;
+    schema:alternateName "Pruneau"@fr ;
     rdfs:subClassOf cultivationtype:113 .
 
 cultivationtype:199 a eCH-0265:CultivationType ;
@@ -1221,6 +1265,7 @@ cultivationtype:205 a eCH-0265:CultivationType ;
         "Roman chamomile"@en,
         "Camomille romaine"@fr,
         "Camomilla romana"@it ;
+    schema:alternateName "Chamaemelum nobile"@en ;
     rdfs:subClassOf cultivationtype:67 .
 
 cultivationtype:206 a eCH-0265:CultivationType ;
@@ -1250,6 +1295,7 @@ cultivationtype:209 a eCH-0265:CultivationType ;
         "Valerians"@en,
         "Valérianacées"@fr,
         "Valerianacee"@it ;
+    schema:alternateName "Valerianaceae"@de ;
     rdfs:subClassOf cultivationtype:22 .
 
 cultivationtype:213 a eCH-0265:CultivationType ;
@@ -1303,7 +1349,7 @@ cultivationtype:219 a eCH-0265:CultivationType ;
 
 cultivationtype:220 a eCH-0265:CultivationType ;
     schema:name "Schnittlauch Freiland"@de,
-        "Chives open field"@en,
+        "Open field chives"@en,
         "Ciboulette de plein champ"@fr,
         "Erba cipollina di pieno campo"@it ;
     rdfs:subClassOf cultivationtype:219, 
@@ -1386,6 +1432,7 @@ cultivationtype:235 a eCH-0265:CultivationType ;
         "Cucurbits"@en,
         "Cucurbitacées"@fr,
         "Cucurbitacee"@it ;
+    schema:alternateName "Cucurbitaceae"@de ;
     rdfs:subClassOf cultivationtype:22 .
 
 cultivationtype:237 a eCH-0265:CultivationType ;
@@ -1506,14 +1553,17 @@ cultivationtype:259 a eCH-0265:CultivationType ;
         "Plum"@en,
         "Prunier à prunes"@fr,
         "Prugnolo"@it ;
+    schema:alternateName "Prune"@fr ;
     rdfs:subClassOf cultivationtype:113 .
 
 cultivationtype:260 a eCH-0265:CultivationType ;
     schema:name "Nüsslisalat"@de,
         "Lamb's lettuce"@en,
-        "Mâche rampon"@fr,
+        "Mâche"@fr,
         "Valerianella"@it ;
-    schema:alternateName "Feldsalat"@de ;
+    schema:alternateName "Feldsalat"@de,
+        "Rampon"@fr,
+        "Doucette"@fr ;
     rdfs:subClassOf cultivationtype:209 .
 
 cultivationtype:261 a eCH-0265:CultivationType ;
@@ -1564,9 +1614,10 @@ cultivationtype:266 a eCH-0265:CultivationType ;
 
 cultivationtype:267 a eCH-0265:CultivationType ;
     schema:name "Gojibeere"@de,
-        "Goji berry wolfberry"@en,
+        "Goji berry"@en,
         "Baies de Goji"@fr,
         "Bacche di Goji"@it ;
+    schema:alternateName "Wolfberry"@en ;
     rdfs:subClassOf cultivationtype:1158 .
 
 cultivationtype:268 a eCH-0265:CultivationType ;
@@ -1653,7 +1704,7 @@ cultivationtype:282 a eCH-0265:CultivationType ;
     schema:name "Stielmus"@de,
         "Stem turnip"@en,
         "Navet à tondre"@fr,
-        "Cavoli rape da taglio"@it ;
+        "Cavoli e rape da taglio"@it ;
     rdfs:subClassOf cultivationtype:475 .
 
 cultivationtype:283 a eCH-0265:CultivationType ;
@@ -1836,6 +1887,10 @@ cultivationtype:317 a eCH-0265:CultivationType ;
         "Purslanes"@en,
         "Portulacacées"@fr,
         "Portulacee"@it ;
+    schema:alternateName "Portulacaceae"@de,
+        "Portulacaceae"@en,
+        "Portulacaceae"@fr,
+        "Portulacee"@it ;
     rdfs:subClassOf cultivationtype:22 .
 
 cultivationtype:318 a eCH-0265:CultivationType ;
@@ -1876,8 +1931,10 @@ cultivationtype:323 a eCH-0265:CultivationType ;
 cultivationtype:324 a eCH-0265:CultivationType ;
     schema:name "Blumenkohle"@de,
         "Flowering brassica"@en,
-        "Choux (développement de l'inflorescence)"@fr,
-        "Cavoli a infiorescenza"@it ;
+        "Choux-fleurs"@fr,
+        "Cavolfiori"@it ;
+    schema:description "Développement de l'inflorescence"@fr,
+        "A infiorescenza"@it ;
     rdfs:subClassOf cultivationtype:25 .
 
 cultivationtype:325 a eCH-0265:CultivationType ;
@@ -1899,6 +1956,10 @@ cultivationtype:327 a eCH-0265:CultivationType ;
         "Umbellifers"@en,
         "Ombellifères"@fr,
         "Ombrellifere"@it ;
+    schema:alternateName "Apiaceae"@de,
+        "Apiaceae"@en,
+        "Apiaceae"@fr,
+        "Apiacee"@it ;
     rdfs:subClassOf cultivationtype:22 .
 
 cultivationtype:328 a eCH-0265:CultivationType ;
@@ -1912,7 +1973,7 @@ cultivationtype:329 a eCH-0265:CultivationType ;
     schema:name "Zierpflanzen"@de,
         "Ornamental plants"@en,
         "Culture ornementale"@fr,
-        "Coltivazione piante ornam."@it ;
+        "Coltivazione piante ornamentali"@it ;
     rdfs:subClassOf eCH-0265:Cultivation .
 
 cultivationtype:330 a eCH-0265:CultivationType ;
@@ -1931,7 +1992,7 @@ cultivationtype:331 a eCH-0265:CultivationType ;
 
 cultivationtype:332 a eCH-0265:CultivationType ;
     schema:name "Schnittsalat Freiland"@de,
-        "Cutting lettuce open field"@en,
+        "Open field cutting lettuce"@en,
         "Laitue à tondre pleine terre"@fr,
         "Lattuga da taglio pieno campo"@it ;
     rdfs:subClassOf cultivationtype:328, 
@@ -2127,9 +2188,9 @@ cultivationtype:462 a eCH-0265:CultivationType ;
 
 cultivationtype:463 a eCH-0265:CultivationType ;
     schema:name "Grundfutterproduktion"@de,
-        "Other crops"@en,
-        "Autres cultures"@fr,
-        "Altre colture"@it ; 
+        "Basic fodder production"@en,
+        "Production de fourrage de base"@fr,
+        "Produzione di foraggio di base"@it ;
     schema:description "Als Grundfutter gelten: (a) Futter von Grünflächen und Streueflächen: frisch, siliert oder getrocknet sowie Stroh; (b) als Futtermittel angebaute Ackerkulturen, bei denen die ganze Pflanze geerntet wird: frisch, siliert oder getrocknet, ohne Maiskolbenschrot; (c) Chicorée-Wurzeln; (d) Rübenblätter und frische Rübennass- und Rübenpressschnitzel; (e) frisches Obst; (f) unverarbeitete Kartoffeln, einschliesslich Sortierabgang; und (g) Abgänge und nicht getrocknete oder konzentrierte Nebenprodukte aus der Kartoffel-, Obst- und Gemüseverarbeitung."@de ;
     rdfs:subClassOf eCH-0265:Cultivation .
 
@@ -2173,12 +2234,14 @@ cultivationtype:468 a eCH-0265:CultivationType ;
     rdfs:subClassOf cultivationtype:1 .
 
 cultivationtype:469 a eCH-0265:CultivationType ;
-    schema:name "Freiland-Beeren"@de,
-        "Open-field berries"@en,
+    schema:name "Beeren Freiland"@de,
+        "Open field berries"@en,
         "Baies de plein champ"@fr,
         "Bacche di pieno campo"@it ;
+    schema:alternateName "Freilandbeeren"@de,
+        "Freiland-Beeren"@de ;
     rdfs:subClassOf cultivationtype:471 ;
-    owl:unionOf ( cultivationtype:551 cultivationtype:705 ).
+    owl:unionOf ( cultivationtype:551 cultivationtype:705 ) .
 
 cultivationtype:470 a eCH-0265:CultivationType ;
     schema:name "Beerenkulturen in geschütztem Anbau"@de,
@@ -2427,15 +2490,15 @@ cultivationtype:510 a eCH-0265:CultivationType ;
 cultivationtype:511 a eCH-0265:CultivationType ;
     schema:name "Emmer und Einkorn"@de,
         "Emmer and einkorn wheat"@en,
-        "Amidonnier engrain"@fr,
-        "Farro piccola spelta"@it ;
+        "Amidonnier et engrain"@fr,
+        "Farro e piccola spelta"@it ;
     rdfs:subClassOf cultivationtype:492 .
 
 cultivationtype:512 a eCH-0265:CultivationType ;
     schema:name "Sommerweizen ohne Futterweizen der Sortenliste swiss granum"@de,
         "Spring wheat excluding swiss granum feed wheat"@en,
         "Blé de printemps sans blé fourrager de la liste swiss granum"@fr,
-        "Frumento primaverile escl. il frumento da foraggio di swiss granum"@it ;
+        "Frumento primaverile senza il frumento da foraggio di swiss granum"@it ;
     owl:disjointWith cultivationtype:507 ;
     rdfs:subClassOf cultivationtype:999 .
 
@@ -2443,7 +2506,7 @@ cultivationtype:513 a eCH-0265:CultivationType ;
     schema:name "Winterweizen ohne Futterweizen der Sortenliste swiss granum"@de,
         "Winter wheat excluding swiss granum feed wheat"@en,
         "Blé d'automne sans blé fourrager de la liste swiss granum"@fr,
-        "Frumento autunnale escl. il frumento da foraggio di swiss granum"@it ;
+        "Frumento autunnale senza il frumento da foraggio di swiss granum"@it ;
     owl:disjointWith cultivationtype:507 ;
     rdfs:subClassOf cultivationtype:1007 .
 
@@ -2605,17 +2668,25 @@ cultivationtype:535 a eCH-0265:CultivationType ;
     eCH-0265:botanicalPlant taxon:1CNIG .
 
 cultivationtype:536 a eCH-0265:CultivationType ;
-    schema:name "Bohnen und Wicken zur Körnergewinnung z.B. Ackerbohnen"@de,
-        "Grain beans and vetches such as field beans"@en,
-        "Haricots et vesces en grains p.ex. féveroles"@fr,
-        "Fagioli e vecce per l’estrazione di granelli p.es. favette"@it ;
+    schema:name "Bohnen und Wicken zur Körnergewinnung"@de,
+        "Grain beans and vetches"@en,
+        "Haricots et vesces en grains"@fr,
+        "Fagioli e vecce per l’estrazione di granelli"@it ;
+    schema:description "z.B. Ackerbohnen"@de,
+        "e.g. field beans"@en,
+        "p.ex. féveroles"@fr,
+        "p.es. favette"@it ;
     rdfs:subClassOf cultivationtype:15 .
 
 cultivationtype:537 a eCH-0265:CultivationType ;
-    schema:name "Erbsen zur Körnergewinnung z.B. Eiweisserbsen"@de,
-        "Dry peas for grain production such as protein peas"@en,
-        "Pois en grains p.ex. pois protéagineux"@fr,
-        "Piselli per l’estrazione di granelli p.es. piselli proteici"@it ;
+    schema:name "Erbsen zur Körnergewinnung"@de,
+        "Dry peas for grain production"@en,
+        "Pois en grains"@fr,
+        "Piselli per l'estrazione di granelli"@it ;
+    schema:description "z.B. Eiweisserbsen"@de,
+        "e.g. protein peas"@en,
+        "p.ex. pois protéagineux"@fr,
+        "p.es. piselli proteici"@it ;
     rdfs:subClassOf cultivationtype:15 .
 
 cultivationtype:538 a eCH-0265:CultivationType ;
@@ -2682,9 +2753,9 @@ cultivationtype:544 a eCH-0265:CultivationType ;
 
 cultivationtype:545 a eCH-0265:CultivationType ;
     schema:name "Einjährige Freilandgemüse ohne Konservengemüse"@de,
-        "Annual open-field vegetables excluding canning vegetables"@en,
+        "Annual open field vegetables excluding canning vegetables"@en,
         "Cultures maraîchères de plein champ annuelles sans légumes de conserve"@fr,
-        "Ortaggi annuali di pieno campo escl. quelli per la conservazione"@it ;
+        "Ortaggi annuali di pieno campo esclusi quelli per la conservazione"@it ;
     rdfs:subClassOf cultivationtype:24, cultivationtype:465, cultivationtype:910 .
 
 cultivationtype:546 a eCH-0265:CultivationType ;
@@ -2727,6 +2798,10 @@ cultivationtype:551 a eCH-0265:CultivationType ;
         "Annual berries"@en,
         "Baies annuelles"@fr,
         "Bacche annuali"@it ;
+    schema:description "z.B. Erdbeeren"@de,
+        "e.g. strawberries"@en,
+        "p.ex. fraises"@fr,
+        "p.es. fragole"@it ;
     rdfs:subClassOf cultivationtype:1 .
 
 cultivationtype:552 a eCH-0265:CultivationType ;
@@ -2734,6 +2809,10 @@ cultivationtype:552 a eCH-0265:CultivationType ;
         "Annual renewable raw materials"@en,
         "Matières premières renouvelables annuelles"@fr,
         "Materie prime rinnovabili annuali"@it ;
+    schema:description "Kenaf usw."@de,
+        "Kenaf etc."@en,
+        "Kénaf etc."@fr,
+        "Kenaf ecc."@it ;
     rdfs:subClassOf cultivationtype:1 .
 
 cultivationtype:553 a eCH-0265:CultivationType ;
@@ -2744,10 +2823,14 @@ cultivationtype:553 a eCH-0265:CultivationType ;
     rdfs:subClassOf cultivationtype:35 .
 
 cultivationtype:554 a eCH-0265:CultivationType ;
-    schema:name "Einjährige gärtnerische Freilandkulturen Blumen und Rollrasen usw."@de,
-        "Annual open-field horticultural crops flowers and rolled turf etc."@en,
-        "Cultures horticoles annuelles de plein champ fleurs et gazon en rouleaux etc."@fr,
-        "Floricoltura di pieno campo annuale fiori manto erboso in rotoli e ecc."@it ;
+    schema:name "Einjährige gärtnerische Freilandkulturen"@de,
+        "Annual open field horticultural crops"@en,
+        "Cultures horticoles annuelles de plein champ"@fr,
+        "Floricoltura annuale di pieno campo"@it ;
+    schema:description "Blumen, Rollrasen usw."@de,
+        "Flowers, rolled turf etc."@en,
+        "Fleurs, gazon en rouleaux etc."@fr,
+        "Fiori, manto erboso in rotoli ecc."@it ;
     rdfs:subClassOf cultivationtype:1 .
 
 cultivationtype:555 a eCH-0265:CultivationType ;
@@ -2810,11 +2893,15 @@ cultivationtype:563 a  eCH-0265:CultivationType ;
         "Altre colture per la produzione di sementi in coltivazione contrattuale"@it ;
     rdfs:subClassOf cultivationtype:1 .
 
-cultivationtype:564 a  eCH-0265:CultivationType ;
+cultivationtype:564 a eCH-0265:CultivationType ;
     schema:name "Ackerschonstreifen Ölsaaten"@de,
         "Extensive arable crop strips oilseeds"@en,
         "Bandes culturales extensives oléagineux"@fr,
         "Fasce di colture estensive in campicoltura semi oleosi"@it ;
+    schema:description "Raps, Sonnenblumen, Lein"@de,
+        "Oilseed rape, sunflowers, flax"@en,
+        "Colza, tournesols, lin"@fr,
+        "Colza, girasole, lino"@it ;
     rdfs:subClassOf cultivationtype:1 ;
     eCH-0265:managementIntensity intensity:Extensive .
 
@@ -2882,7 +2969,7 @@ cultivationtype:571 a  eCH-0265:CultivationType ;
 cultivationtype:572 a eCH-0265:CultivationType ;
     schema:name "Nützlingsstreifen auf offener Ackerfläche"@de,
         "Beneficial insect strips on open arable land"@en,
-        "Bandes fleuries pour organismes utiles sur terres assolées"@fr,
+        "Bandes semées pour organismes utiles dans les terres ouvertes"@fr,
         "Strisce per organismi utili sulla superficie coltiva aperta"@it ;
     rdfs:subClassOf cultivationtype:1 ;
     eCH-0265:managementIntensity intensity:Extensive .
@@ -2990,10 +3077,13 @@ cultivationtype:594 a eCH-0265:CultivationType ;
     eCH-0265:managementIntensity intensity:Extensive .
 
 cultivationtype:595 a eCH-0265:CultivationType ;
-    schema:name "Nicht beitragsberechtigte übrige offene Ackerfläche BFF"@de,
-        "Non-eligible other open arable land BPA"@en,
-        "Autres terres ouvertes ne donnant pas droit aux contributions SPB"@fr,
-        "Altra superficie coltiva aperta non avente diritto ai contributi SPB"@it ;
+    schema:name "Nicht beitragsberechtigte übrige offene Ackerfläche"@de,
+        "Non-eligible other open arable land"@en,
+        "Autres terres ouvertes ne donnant pas droit aux contributions"@fr,
+        "Altra superficie coltiva aperta non avente diritto ai contributi"@it ;
+    schema:alternateName "BFF"@de,
+        "SPB"@fr,
+        "SPB"@it ;
     schema:description "Nicht beitragsberechtigte übrige offene Ackerfläche (regionsspezifische Biodiversitätsförderfläche)"@de,
         "Autres terres ouvertes ne donnant pas droit aux contributions (surfaces de promotion de la biodiversité spécifiques à la région)"@fr,
         "Altra superficie coltiva aperta, non avente diritto ai contributi (superfici per la promozione della biodiversità specifiche di una regione)"@it ;
@@ -3063,10 +3153,17 @@ cultivationtype:613 a eCH-0265:CultivationType ;
     rdfs:subClassOf cultivationtype:2 .
 
 cultivationtype:616 a eCH-0265:CultivationType ;
-    schema:name "Weiden wie Heimweiden und übrige Weiden ohne Sömmerungsweiden"@de,
-        "Pastures including farm pastures and other pastures excluding summer pastures"@en,
-        "Pâturages y compris pâturages attenants à la ferme et autres pâturages sauf pâturages d'estivage"@fr,
-        "Pascoli compresi i pascoli aziendali e altri pascoli senza pascoli d'estivazione"@it ;
+    schema:name "Weiden"@de,
+        "Pastures"@en,
+        "Pâturages"@fr,
+        "Pascoli"@it ;
+    schema:alternateName "Heimweiden"@de,
+        "Pâturages attenants à la ferme"@fr,
+        "Pascoli aziendali"@it ;
+    schema:description "Heimweiden und übrige Weiden ohne Sömmerungsweiden"@de,
+        "Farm pastures and other pastures excluding summer pastures"@en,
+        "Pâturages attenants à la ferme et autres pâturages sauf les pâturages d'estivage"@fr,
+        "Pascoli aziendali e altri pascoli senza pascoli d'estivazione"@it ;
     rdfs:subClassOf cultivationtype:3 .
 
 cultivationtype:617 a eCH-0265:CultivationType ;
@@ -3078,10 +3175,14 @@ cultivationtype:617 a eCH-0265:CultivationType ;
     eCH-0265:managementIntensity intensity:Extensive .
 
 cultivationtype:618 a eCH-0265:CultivationType ;
-    schema:name "Waldweiden ohne bewaldete Fläche als BFF"@de,
-        "Wooded pastures excluding forested area as BPA"@en,
-        "Pâturages boisés sans surfaces boisées comme SPB"@fr,
-        "Pascoli boschivi senza i boschi come SPB"@it ;
+    schema:name "Waldweiden ohne bewaldete Fläche BFF"@de,
+        "Wooded pastures excluding forested area BPA"@en,
+        "Pâturages boisés sans surfaces boisées SPB"@fr,
+        "Pascoli boschivi senza i boschi SPB"@it ;
+    schema:alternateName "BFF"@de,
+        "BPA"@en,
+        "SPB"@fr,
+        "SPB"@it ;
     rdfs:subClassOf cultivationtype:3 .
 
 cultivationtype:619 a  eCH-0265:CultivationType ;
@@ -3089,6 +3190,9 @@ cultivationtype:619 a  eCH-0265:CultivationType ;
         "Pastures for pigs not eligible for roughage livestock unit calculation"@en,
         "Pâturages pour porcs non imputables pour le calcul des UGBFG"@fr,
         "Pascoli riservati ai suini non computabili per il calcolo delle UBGFG"@it ;
+    schema:alternateName "RGVE"@de,
+        "UGBFG"@fr,
+        "UBGFG"@it ;
     rdfs:subClassOf cultivationtype:21 .
 
 cultivationtype:621 a eCH-0265:CultivationType ;
@@ -3169,26 +3273,26 @@ cultivationtype:660 a eCH-0265:CultivationType ;
     rdfs:subClassOf cultivationtype:3 .
 
 cultivationtype:693 a eCH-0265:CultivationType ;
-    schema:name "Regionsspezifische Biodiversitätsförderflächen Weiden"@de,
-        "Region-specific biodiversity promotion areas pastures"@en,
-        "Surfaces de promotion de la biodiversité spécifiques à la région pâturages"@fr,
-        "Superfici per la promozione della biodiversità specifiche di una regione pascoli"@it ;
+    schema:name "Regionsspezifische Biodiversitätsförderflächen auf Weiden"@de,
+        "Region-specific biodiversity promotion areas on pastures"@en,
+        "Surfaces de promotion de la biodiversité spécifiques à la région sur pâturages"@fr,
+        "Superfici per la promozione della biodiversità specifiche di una regione su pascoli"@it ;
     rdfs:subClassOf cultivationtype:3 ;
     eCH-0265:managementIntensity intensity:Extensive .
 
 cultivationtype:694 a eCH-0265:CultivationType ;
-    schema:name "Regionsspezifische Biodiversitätsförderfläche Grünflächen ohne Weiden"@de,
-        "Region-specific biodiversity promotion area grassland excluding pastures"@en,
-        "Surfaces de promotion de la biodiversité spécifiques à la région surfaces herbagères sans les pâturages"@fr,
-        "Superfici per la promozione della biodiversità specifiche di una regione superfici inerbite senza pascoli"@it ;
+    schema:name "Regionsspezifische Biodiversitätsförderfläche auf Grünflächen ohne Weiden"@de,
+        "Region-specific biodiversity promotion area on grassland excluding pastures"@en,
+        "Surfaces de promotion de la biodiversité spécifiques à la région sur surfaces herbagères sans les pâturages"@fr,
+        "Superfici per la promozione della biodiversità specifiche di una regione su superfici inerbite senza pascoli"@it ;
     rdfs:subClassOf cultivationtype:2 ;
     eCH-0265:managementIntensity intensity:Extensive .
 
-cultivationtype:695 a  eCH-0265:CultivationType ;
-    schema:name "Regionsspezifische Biodiversitätsförderfläche Grünfläche"@de,
-        "Region-specific biodiversity promotion area grassland"@en,
-        "Surfaces de promotion de la biodiversité spécifiques à la région surface herbagère"@fr,
-        "Superfici per la promozione della biodiversità specifiche di una regione superfici inerbite"@it ;
+cultivationtype:695 a eCH-0265:CultivationType ;
+    schema:name "Regionsspezifische Biodiversitätsförderfläche auf Grünflächen"@de,
+        "Region-specific biodiversity promotion area on grassland"@en,
+        "Surfaces de promotion de la biodiversité spécifiques à la région sur surface herbagère"@fr,
+        "Superfici per la promozione della biodiversità specifiche di una regione su superfici inerbite"@it ;
     rdfs:subClassOf cultivationtype:21 ;
     eCH-0265:managementIntensity intensity:Extensive .
 
@@ -3249,10 +3353,14 @@ cultivationtype:706 a eCH-0265:CultivationType ;
     rdfs:subClassOf cultivationtype:750, cultivationtype:35 .
 
 cultivationtype:707 a eCH-0265:CultivationType ;
-    schema:name "Mehrjährige nachwachsende Rohstoffe Chinaschilf usw."@de,
-        "Perennial renewable raw materials Chinese silver grass etc."@en,
-        "Matières premières renouvelables pluriannuelles roseau de Chine etc."@fr,
-        "Materie prime rinnovabili pluriennali miscanthus ecc."@it ;
+    schema:name "Mehrjährige nachwachsende Rohstoffe"@de,
+        "Perennial renewable raw materials"@en,
+        "Matières premières renouvelables pluriannuelles"@fr,
+        "Materie prime rinnovabili pluriennali"@it ;
+    schema:description "Chinaschilf usw."@de,
+        "Chinese silver grass etc."@en,
+        "Roseau de Chine etc."@fr,
+        "Miscanthus ecc."@it ;
     rdfs:subClassOf cultivationtype:750 .
 
 cultivationtype:708 a eCH-0265:CultivationType ;
@@ -3283,7 +3391,7 @@ cultivationtype:710 a eCH-0265:CultivationType ;
 
 cultivationtype:711 a eCH-0265:CultivationType ;
     schema:name "Pilze Freiland"@de,
-        "Open-field mushrooms"@en,
+        "Open field mushrooms"@en,
         "Champignons de plein champ"@fr,
         "Funghi di pieno campo"@it ;
     rdfs:subClassOf cultivationtype:750 .
@@ -3308,21 +3416,25 @@ cultivationtype:713 a eCH-0265:CultivationType ;
     rdfs:subClassOf cultivationtype:750 .
 
 cultivationtype:714 a eCH-0265:CultivationType ;
-    schema:name "Ziersträucher und Ziergehölze und Zierstauden"@de,
+    schema:name "Ziersträucher sowie Ziergehölze und Zierstauden"@de,
         "Ornamental shrubs and woody plants and perennials"@en,
-        "Buissons et arbrisseaux et arbustes ornementaux"@fr,
-        "Arbusti e arboscelli cespugli ornamentali"@it ;
+        "Buissons ainsi qu'arbrisseaux et arbustes ornementaux"@fr,
+        "Arbusti nonché arboscelli e cespugli ornamentali"@it ;
     rdfs:subClassOf cultivationtype:750 .
 
 cultivationtype:715 a eCH-0265:CultivationType ;
-    schema:name "Übrige Baumschulen Rosen und Früchte usw."@de,
-        "Other nurseries roses and fruit etc."@en,
-        "Autres pépinières rosiers et fruits etc."@fr,
-        "Altri vivai rose e frutta ecc."@it ;
+    schema:name "Übrige Baumschulen für Rosen und Früchte"@de,
+        "Other nurseries for roses and fruit"@en,
+        "Autres pépinières pour rosiers et fruits"@fr,
+        "Altri vivai per rose e frutta"@it ;
+    schema:description "Rosen, Früchte usw."@de,
+        "Roses, fruit etc."@en,
+        "Rosiers, fruits etc."@fr,
+        "Rose, frutta ecc."@it ;
     rdfs:subClassOf cultivationtype:6 .
 
 cultivationtype:716 a  eCH-0265:CultivationType ;
-    schema:name "Gepflegte Selven Kastanien- und Nussbäume"@de,
+    schema:name "Gepflegte Selven von Kastanien- und Nussbäumen"@de,
         "Maintained chestnut and walnut groves"@en,
         "Châtaigneraies et noyeraies entretenues"@fr,
         "Selve curate di castagni e noci"@it ;
@@ -3343,10 +3455,14 @@ cultivationtype:718 a eCH-0265:CultivationType ;
     rdfs:subClassOf cultivationtype:750 .
 
 cultivationtype:719 a eCH-0265:CultivationType ;
-    schema:name "Maulbeerbaumanlagen zur Fütterung von Seidenraupen"@de,
-        "Mulberry plantations for silkworm feeding"@en,
-        "Cultures de mûriers pour l'alimentation des vers à soie"@fr,
-        "Coltivazioni di gelsi per il foraggiamento dei bachi da seta"@it ;
+    schema:name "Maulbeerbaumanlagen"@de,
+        "Mulberry plantations"@en,
+        "Cultures de mûriers"@fr,
+        "Coltivazioni di gelsi"@it ;
+    schema:description "Fütterung von Seidenraupen"@de,
+        "Feeding silkworms"@en,
+        "Alimentation des vers à soie"@fr,
+        "Foraggiamento dei bachi da seta"@it ;
     rdfs:subClassOf cultivationtype:750 .
 
 cultivationtype:720 a eCH-0265:CultivationType ;
@@ -3378,10 +3494,14 @@ cultivationtype:723 a eCH-0265:CultivationType ;
     rdfs:subClassOf cultivationtype:750 .
 
 cultivationtype:724 a eCH-0265:CultivationType ;
-    schema:name "Übrige Baumschulen Rosen und Zierstauden usw."@de,
-        "Other nurseries roses and ornamental perennials etc."@en,
-        "Autres pépinières rosiers et plantes vivaces ornementales etc."@fr,
-        "Altri vivai rose e piante perenni ornamentali ecc."@it ;
+    schema:name "Übrige Baumschulen für Rosen und Zierstauden"@de,
+        "Other nurseries for roses and ornamental perennials"@en,
+        "Autres pépinières pour rosiers et plantes vivaces ornementales"@fr,
+        "Altri vivai per rose e piante perenni ornamentali"@it ;
+    schema:description "Rosen, Zierstauden usw."@de,
+        "Roses, ornamental perennials etc."@en,
+        "Rosiers, plantes vivaces ornementales etc."@fr,
+        "Rose, piante perenni ornamentali ecc."@it ;
     rdfs:subClassOf cultivationtype:750 .
 
 cultivationtype:725 a eCH-0265:CultivationType ;
@@ -3393,17 +3513,21 @@ cultivationtype:725 a eCH-0265:CultivationType ;
     rdfs:subClassOf cultivationtype:750 .
 
 cultivationtype:731 a eCH-0265:CultivationType ;
-    schema:name "Andere Obstanlagen Kiwis und Holunder usw."@de,
-        "Other fruit orchards kiwis and elderberries etc."@en,
-        "Autres vergers kiwis et sureau etc."@fr,
-        "Altri frutteti kiwi e sambuco ecc."@it ;
+    schema:name "Andere Obstanlagen"@de,
+        "Other fruit orchards"@en,
+        "Autres cultures fruitières"@fr,
+        "Altri frutteti"@it ;
+    schema:description "Kiwis, Holunder usw."@de,
+        "Kiwis, elderberries etc."@en,
+        "Kiwis, sureau etc."@fr,
+        "Kiwi, sambuco ecc."@it ;
     rdfs:subClassOf cultivationtype:5 .
 
 cultivationtype:735 a eCH-0265:CultivationType ;
-    schema:name "Reben regionsspezifische Biodiversitätsförderflächen"@de,
-        "Grapevines region-specific biodiversity promotion areas"@en,
-        "Vignes surfaces de promotion de la biodiversité spécifiques à la région"@fr,
-        "Vigneti superfici per la promozione della biodiversità specifiche di una regione"@it ;
+    schema:name "Reben als regionsspezifische Biodiversitätsförderflächen"@de,
+        "Grapevines as region-specific biodiversity promotion areas"@en,
+        "Vignes comme surfaces de promotion de la biodiversité spécifiques à la région"@fr,
+        "Vigneti quali superfici per la promozione della biodiversità specifiche di una regione"@it ;
     eCH-0265:managementIntensity intensity:Extensive .
 
 cultivationtype:750 a eCH-0265:CultivationType ;
@@ -3505,7 +3629,7 @@ cultivationtype:811 a eCH-0265:CultivationType ;
     rdfs:subClassOf cultivationtype:806, cultivationtype:465 .
 
 cultivationtype:812 a eCH-0265:CultivationType ;
-    schema:name "Gemüsekulturen in geschütztem Anbau ohne festes Fundament auf Pflanztischen oder -gestellen"@de,
+    schema:name "Gemüsekulturen in geschütztem Anbau ohne festes Fundament auf Pflanztischen oder Pflanzgestellen"@de,
         "Vegetable crops in protected cultivation without permanent foundations on grow tables or racks"@en,
         "Cultures maraîchères sous abri sans fondations permanentes sur des tables de plantation ou des étagères"@fr,
         "Colture orticole coltivate al coperto senza fondamenta fisse su tavole di piantagione o rastrelliere"@it ;
@@ -3520,9 +3644,9 @@ cultivationtype:813 a eCH-0265:CultivationType ;
     rdfs:subClassOf cultivationtype:470 .
 
 cultivationtype:814 a eCH-0265:CultivationType ;
-    schema:name "Beerenkulturen in geschütztem Anbau ohne festes Fundament auf Pflanztischen oder -gestellen"@de,
-        "Berry crops in protected cultivation without permanent foundations on grow tables or racks"@en,        
-        "Cultures des baies sous abri sans fondations permanentes sur des tables de plantation ou  des étagères"@fr,
+    schema:name "Beerenkulturen in geschütztem Anbau ohne festes Fundament auf Pflanztischen oder Pflanzgestellen"@de,
+        "Berry crops in protected cultivation without permanent foundations on grow tables or racks"@en,
+        "Cultures des baies sous abri sans fondations permanentes sur des tables de plantation ou des étagères"@fr,
         "Colture di bacche coltivate al coperto senza fondamenta fisse su tavole di piantagione o rastrelliere"@it ;
     rdfs:subClassOf cultivationtype:470 .
 
@@ -3569,17 +3693,17 @@ cultivationtype:851 a eCH-0265:CultivationType ;
     rdfs:subClassOf cultivationtype:8 .
 
 cultivationtype:852 a eCH-0265:CultivationType ;
-    schema:name "Hecken- Feld- und Ufergehölze mit Krautsaum"@de,
-        "Hedges field copses and riparian woody plants with herbaceous margin"@en,
-        "Haies bosquets champêtres et berges boisées avec la bande herbeuse"@fr,
-        "Siepi boschetti campestri e rivieraschi con bordo inerbito"@it ;
+    schema:name "Hecken sowie Feld- und Ufergehölze mit Krautsaum"@de,
+        "Hedges and field copses and riparian woody plants with herbaceous margin"@en,
+        "Haies et bosquets champêtres et berges boisées avec la bande herbeuse"@fr,
+        "Siepi e boschetti campestri e rivieraschi con bordo inerbito"@it ;
     rdfs:subClassOf cultivationtype:9 .
 
 cultivationtype:857 a eCH-0265:CultivationType ;
-    schema:name "Hecken- Feld- und Ufergehölze mit Pufferstreifen"@de,
-        "Hedges field copses and riparian woody plants with buffer strip"@en,
-        "Haies bosquets champêtres et berges boisées avec la bande tampon"@fr,
-        "Siepi boschetti campestri e rivieraschi con fascia tampone"@it ;
+    schema:name "Hecken sowie Feld- und Ufergehölze mit Pufferstreifen"@de,
+        "Hedges and field copses and riparian woody plants with buffer strip"@en,
+        "Haies et bosquets champêtres et berges boisées avec la bande tampon"@fr,
+        "Siepi e boschetti campestri e rivieraschi con fascia tampone"@it ;
     rdfs:subClassOf cultivationtype:9 .
 
 cultivationtype:858 a eCH-0265:CultivationType ;
@@ -3597,7 +3721,7 @@ cultivationtype:895 a eCH-0265:CultivationType ;
     schema:name "Dauergrünfläche übrige Flächen innerhalb der LN"@de,
         "Permanent grassland other areas within UAA"@en,
         "Autres surfaces dans la SAU donnant droit aux contributions"@fr,
-        "Altre superfici all'interno della SAU, aventi diritto ai contributi"@it ;
+        "Altre superfici all'interno della SAU aventi diritto ai contributi"@it ;
     rdfs:subClassOf cultivationtype:21 .
 
 cultivationtype:897 a eCH-0265:CultivationType ;
@@ -3693,10 +3817,14 @@ cultivationtype:910 a eCH-0265:CultivationType ;
     rdfs:subClassOf cultivationtype:1 .
 
 cultivationtype:911 a eCH-0265:CultivationType ;
-    schema:name "Landwirtschaftliche Produktion in Gebäuden z. B. Champignon Brüsseler"@de,
-        "Agricultural production inside buildings e.g. button mushrooms witloof chicory"@en,
-        "Production agricole en bâtiments par ex. champignons de Paris chicorée witloof"@fr,
-        "Produzione agricola in edifici p.es. funghi cicoria belga"@it ;
+    schema:name "Landwirtschaftliche Produktion in Gebäuden"@de,
+        "Agricultural production inside buildings"@en,
+        "Production agricole en bâtiments"@fr,
+        "Produzione agricola in edifici"@it ;
+    schema:description "Champignon, Brüsseler chicorée usw."@de,
+        "Button mushrooms, witloof chicory etc."@en,
+        "Champignons de Paris, chicorée witloof etc."@fr,
+        "Funghi, cicoria belga ecc."@it ;
     rdfs:subClassOf cultivationtype:12 .
 
 cultivationtype:921 a eCH-0265:CultivationType ;
@@ -3827,11 +3955,14 @@ cultivationtype:998 a eCH-0265:CultivationType ;
 
 cultivationtype:999 a eCH-0265:CultivationType ;
     schema:name "Sommerweizen"@de,
-        "Summer wheat"@en,
+        "Spring wheat"@en,
         "Blé de printemps"@fr,
         "Frumento primaverile"@it ;
-    owl:intersectionOf ( cultivationtype:492 cultivationtype:1000 ) ;
-    eCH-0265:botanicalPlant taxon:1TRZG .
+    schema:description "Sommerweizen inklusive Futterweizen"@de,
+        "Spring wheat including feed wheat"@en,
+        "Blé de printemps y compris le blé fourrager"@fr,
+        "Frumento primaverile compreso il frumento da foraggio"@it ;
+    rdfs:subClassOf cultivationtype:492 .
 
 cultivationtype:1000 a eCH-0265:CultivationType ;
     schema:name "Sommergetreide"@de,
@@ -3841,10 +3972,10 @@ cultivationtype:1000 a eCH-0265:CultivationType ;
     rdfs:subClassOf cultivationtype:1033 .
 
 cultivationtype:1001 a eCH-0265:CultivationType ;
-    schema:name "Winterweizen ohne Winterweizen in 62a Nitrat-Projekt"@de,
-        "Winter wheat excluding winter wheat in 62a nitrate project"@en,
-        "Blé d'automne sans blé d'automne dans projet nitrate 62a"@fr,
-        "Frumento autunnale senza frumento autunnale in progetto nitrati 62a"@it ;
+    schema:name "Winterweizen ohne 62a Nitrat-Projekt"@de,
+        "Winter wheat excluding 62a nitrate project"@en,
+        "Blé d'automne sans projet nitrate 62a"@fr,
+        "Frumento autunnale senza progetto nitrati 62a"@it ;
     rdfs:subClassOf cultivationtype:1007 ;
     eCH-0265:botanicalPlant taxon:1TRZG .
 
@@ -3865,10 +3996,10 @@ cultivationtype:1003 a eCH-0265:CultivationType ;
     rdfs:subClassOf cultivationtype:492 .
 
 cultivationtype:1004 a eCH-0265:CultivationType ;
-    schema:name "Futterweizen ohne Futterweizen in 62a Nitrat-Projekt"@de,
-        "Feed wheat excluding feed wheat in 62a nitrate project"@en,
-        "Blé fourrager sans blé fourrager dans projet nitrate 62a"@fr,
-        "Frumento da foraggio senza frumento da foraggio in progetto nitrati 62a"@it ;
+    schema:name "Futterweizen ohne 62a Nitrat-Projekt"@de,
+        "Feed wheat excluding 62a nitrate project"@en,
+        "Blé fourrager sans projet nitrate 62a"@fr,
+        "Frumento da foraggio senza progetto nitrati 62a"@it ;
     rdfs:subClassOf cultivationtype:1003 ;
     eCH-0265:botanicalPlant taxon:1TRZG .
 
@@ -3897,10 +4028,10 @@ cultivationtype:1007 a eCH-0265:CultivationType ;
     owl:intersectionOf ( cultivationtype:492 cultivationtype:19 ) .
 
 cultivationtype:1008 a eCH-0265:CultivationType ;
-    schema:name "Wintergerste ohne Wintergerste in 62a Nitrat-Projekt"@de,
-        "Winter barley excluding winter barley in 62a nitrate project"@en,
-        "Orge d'automne sans orge d'automne dans projet nitrate 62a"@fr,
-        "Orzo autunnale senza orzo autunnale in progetto nitrati 62a"@it ;
+    schema:name "Wintergerste ohne 62a Nitrat-Projekt"@de,
+        "Winter barley excluding 62a nitrate project"@en,
+        "Orge d'automne sans projet nitrate 62a"@fr,
+        "Orzo autunnale senza progetto nitrati 62a"@it ;
     rdfs:subClassOf cultivationtype:502 .
 
 cultivationtype:1009 a eCH-0265:CultivationType ;
@@ -3978,10 +4109,10 @@ cultivationtype:1018 a eCH-0265:CultivationType ;
         cultivationtype:505 .
 
 cultivationtype:1019 a eCH-0265:CultivationType ;
-    schema:name "Wintertriticale ohne Wintertriticale in 62a Nitrat-Projekt"@de,
-        "Winter triticale excluding winter triticale in 62a nitrate project"@en,
-        "Triticale d'automne sans triticale d'automne dans projet nitrate 62a"@fr,
-        "Triticale autunnale senza triticale autunnale in progetto nitrati 62a"@it ;
+    schema:name "Wintertriticale ohne 62a Nitrat-Projekt"@de,
+        "Winter triticale excluding 62a nitrate project"@en,
+        "Triticale d'automne sans projet nitrate 62a"@fr,
+        "Triticale autunnale senza progetto nitrati 62a"@it ;
     rdfs:subClassOf cultivationtype:1017 .
 
 cultivationtype:1020 a eCH-0265:CultivationType ;
@@ -4198,7 +4329,7 @@ cultivationtype:1049 a eCH-0265:CultivationType ;
 
 cultivationtype:1050 a eCH-0265:CultivationType ;
     schema:name "Lauch gesät"@de, 
-        "Leeks Sown"@en,
+        "Leeks sown"@en,
         "Poireau semé"@fr, 
         "Porro seminato"@it ;
     rdfs:subClassOf cultivationtype:188 .
@@ -4219,7 +4350,7 @@ cultivationtype:1052 a eCH-0265:CultivationType ;
 
 cultivationtype:1053 a eCH-0265:CultivationType ;
     schema:name "Gründüngung Leguminosen Freilandgemüse"@de,
-        "Legume green manure open-field vegetables"@en,
+        "Legume green manure open field vegetables"@en,
         "Engrais vert légumineuses légumes de plein champ"@fr,
         "Sovescio leguminose ortaggi di pieno campo"@it ;
     schema:description "Bezeichnet eine Zwischenkultur zur Gründüngung mit Leguminosen auf Feldern, die im Rahmen der Fruchtfolge für den Freilandgemüsebau genutzt werden."@de ;
@@ -4249,10 +4380,10 @@ cultivationtype:1057 a eCH-0265:CultivationType ;
     owl:intersectionOf ( cultivationtype:103 cultivationtype:7 ) .
 
 cultivationtype:1058 a eCH-0265:CultivationType ;
-    schema:name "Kopfsalat und Eisbergsalat und Lollo im geschützten Anbau"@de,
+    schema:name "Kopfsalat sowie Eisbergsalat und Lollo im geschützten Anbau"@de,
         "Head lettuce and iceberg and lollo in protected cultivation"@en,
-        "Laitue pommée et iceberg et lollo en culture protégée"@fr,
-        "Lattuga cappuccio e iceberg e lollo in coltura protetta"@it ;
+        "Laitue pommée ainsi qu'iceberg et lollo sous abri"@fr,
+        "Lattuga cappuccio nonché iceberg e lollo in coltura protetta"@it ;
     rdfs:subClassOf cultivationtype:1057 .
 
 cultivationtype:1059 a eCH-0265:CultivationType ;
@@ -4285,7 +4416,7 @@ cultivationtype:1063 a eCH-0265:CultivationType ;
 
 cultivationtype:1064 a eCH-0265:CultivationType ;
     schema:name "Gründüngung Nichtleguminosen Freilandgemüse"@de, 
-        "Non-legume green manure openfield vegetables"@en,
+        "Non-legume green manure open field vegetables"@en,
         "Engrais vert non-légumineuses légumes de plein champ"@fr, 
         "Sovescio non leguminose ortaggi di pieno campo"@it ;
     schema:description "Bezeichnet eine Zwischenkultur zur Gründüngung mit Nicht-Leguminosen auf Feldern, die im Rahmen der Fruchtfolge für den Freilandgemüsebau genutzt werden."@de ;
@@ -4302,9 +4433,9 @@ cultivationtype:1065 a eCH-0265:CultivationType ;
     owl:unionOf ( cultivationtype:722 cultivationtype:723 cultivationtype:724 ) .
 
 cultivationtype:1066 a eCH-0265:CultivationType ;
-    schema:name "Baumschulen für den Erwerbsobstbau hohe Pflanzendichte"@de, 
-        "Tree nurseries for commercial fruit growing high density"@en,
-        "Pépinières pour l'arboriculture fruitière professionnelle haute densité"@fr, 
+    schema:name "Baumschulen für den Erwerbsobstbau mit hoher Pflanzendichte"@de,
+        "Tree nurseries for commercial fruit growing with high density"@en,
+        "Pépinières pour l'arboriculture fruitière professionnelle à haute densité"@fr,
         "Vivai per la frutticoltura professionale ad alta densità"@it ;
     rdfs:subClassOf cultivationtype:1065 .
 
@@ -4423,17 +4554,17 @@ cultivationtype:1081 a eCH-0265:CultivationType ;
     ) .
 
 cultivationtype:1082 a eCH-0265:CultivationType ;
-    schema:name "Zwetschgenanlage hoher Ertrag"@de,
-        "Plum orchard high yield"@en,
-        "Verger de pruniers rendement élevé"@fr,
-        "Prugneto/Susineto resa elevata"@it ;
+    schema:name "Zwetschgenanlage mit hohem Ertrag"@de,
+        "Plum orchard with high yield"@en,
+        "Verger de pruniers à haut rendement"@fr,
+        "Prugneto e susineto ad alta resa"@it ;
     rdfs:subClassOf cultivationtype:113 .
 
 cultivationtype:1083 a eCH-0265:CultivationType ;
-    schema:name "Zwetschgenanlage durchschnittlicher Ertrag"@de,
-        "Plum orchard average yield"@en,
-        "Verger de pruniers rendement moyen"@fr,
-        "Prugneto/Susineto resa media"@it ;
+    schema:name "Zwetschgenanlage mit durchschnittlichem Ertrag"@de,
+        "Plum orchard with average yield"@en,
+        "Verger de pruniers à rendement moyen"@fr,
+        "Prugneto e susineto a resa media"@it ;
     rdfs:subClassOf cultivationtype:113 .
 
 cultivationtype:1085 a eCH-0265:CultivationType ;
@@ -4602,21 +4733,21 @@ cultivationtype:1106 a eCH-0265:CultivationType ;
     rdfs:subClassOf cultivationtype:81 .
 
 cultivationtype:1107 a eCH-0265:CultivationType ;
-    schema:name "Streue- und Torfland"@de,
+    schema:name "Streueland und Torfland"@de,
         "Litter land and peatland"@en,
         "Surface à litière et tourbière"@fr,
         "Terreno da strame e torbiera"@it ;
     rdfs:subClassOf cultivationtype:8 .
 
 cultivationtype:1108 a eCH-0265:CultivationType ;
-    schema:name "Kleine Freilandpflanzungen mit versch. Gemüsen"@de,
-        "Small outdoor vegetable plots with various vegetables"@en,
+    schema:name "Kleine Freilandpflanzungen mit verschiedenen Gemüsen"@de,
+        "Small open field plots with various vegetables"@en,
         "Petites plantations de légumes divers en pleine terre"@fr,
         "Piccole piantagioni di ortaggi diversi in pieno campo"@it ;
     rdfs:subClassOf cultivationtype:24 .
 
 cultivationtype:1109 a eCH-0265:CultivationType ;
-    schema:name "Kleine Gewächshauspflanzungen mit versch. Gemüsen"@de,
+    schema:name "Kleine Gewächshauspflanzungen mit verschiedenen Gemüsen"@de,
         "Small greenhouse plots with various vegetables"@en,
         "Petites plantations en serre de légumes divers"@fr,
         "Piccole piantagioni in serra di ortaggi diversi"@it ;
@@ -4740,7 +4871,7 @@ cultivationtype:1126 a eCH-0265:CultivationType ;
 
 cultivationtype:1127 a eCH-0265:CultivationType ;
     schema:name "Bundzwiebeln Überwinterung"@de,
-        "Bund onions overwintering"@en,
+        "Bunching onions overwintering"@en,
         "Oignons en botte hivernage"@fr,
         "Cipollotti a mazzi svernamento"@it ;
     rdfs:subClassOf cultivationtype:232 .
@@ -4757,7 +4888,7 @@ cultivationtype:1128 a eCH-0265:CultivationType ;
 
 cultivationtype:1129 a eCH-0265:CultivationType ;
     schema:name "Süsskartoffeln Freiland"@de,
-        "Open-field sweet potatoes"@en,
+        "Open field sweet potatoes"@en,
         "Patates douces de plein champ"@fr,
         "Patate dolci di pieno campo"@it ;
     rdfs:subClassOf cultivationtype:1137, 
@@ -4766,8 +4897,8 @@ cultivationtype:1129 a eCH-0265:CultivationType ;
 cultivationtype:1130 a eCH-0265:CultivationType ;
     schema:name "Erdbeer-Jungpflanzen Traypflanzen"@de,
         "Strawberry young plants tray plants"@en,
-        "Jeunes plants de fraisiers plants en mottes"@fr,
-        "Giovani piante di fragola piante in alveolo"@it ;
+        "Jeunes plants de fraisiers en mottes"@fr,
+        "Giovani piante di fragola in alveolo"@it ;
     rdfs:subClassOf cultivationtype:223 .
 
 cultivationtype:1131 a eCH-0265:CultivationType ;
@@ -4781,24 +4912,24 @@ cultivationtype:1131 a eCH-0265:CultivationType ;
 cultivationtype:1132 a eCH-0265:CultivationType ;
     schema:name "Heuwiesen im Sömmerungsgebiet extensiv"@de,
         "Extensively managed hay meadows in summer pasturing areas"@en,
-        "Prairies de fauche de la région d'estivage, extensives"@fr,
-        "Prati da sfalcio nella regione d'estivazione, estensivi"@it ;
+        "Prairies de fauche de la région d'estivage extensives"@fr,
+        "Prati da sfalcio nella regione d'estivazione estensivi"@it ;
     rdfs:subClassOf cultivationtype:480 ;
     eCH-0265:managementIntensity intensity:Extensive .
 
 cultivationtype:1133 a eCH-0265:CultivationType ;
     schema:name "Heuwiesen im Sömmerungsgebiet wenig intensiv"@de,
         "Low-intensity hay meadows in summer pasturing areas"@en,
-        "Prairies de fauche de la région d'estivage, peu intensives"@fr,
-        "Prati da sfalcio nella regione d'estivazione, poco intensivi"@it ;
+        "Prairies de fauche de la région d'estivage peu intensives"@fr,
+        "Prati da sfalcio nella regione d'estivazione poco intensivi"@it ;
     rdfs:subClassOf cultivationtype:480 ;
     eCH-0265:managementIntensity intensity:Low .
 
 cultivationtype:1134 a eCH-0265:CultivationType ;
     schema:name "Heuwiesen im Sömmerungsgebiet übrige"@de,
         "Other hay meadows in summer pasturing areas"@en,
-        "Prairies de fauche dans la région d'estivage, autres"@fr,
-        "Prati da sfalcio nella regione d'estivazione, altri"@it ;
+        "Prairies de fauche dans la région d'estivage autres"@fr,
+        "Prati da sfalcio nella regione d'estivazione altri"@it ;
     rdfs:subClassOf cultivationtype:480 .
 
 cultivationtype:1135 a eCH-0265:CultivationType ;
@@ -4959,10 +5090,14 @@ cultivationtype:1157 a eCH-0265:CultivationType ;
     rdfs:subClassOf cultivationtype:1207 .
 
 cultivationtype:1158 a eCH-0265:CultivationType ;
-    schema:name "Alternative Strauchbeeren Aronia und Holunder und Goji usw."@de,
-        "Alternative bush berries aronia and elderberries and goji etc."@en,
-        "Autres baies arbustives aronia et sureau et goji etc."@fr,
-        "Bacche arbustive alternative aronia e sambuco e goji ecc."@it ;
+    schema:name "Alternative Strauchbeeren"@de,
+        "Alternative bush berries"@en,
+        "Autres baies arbustives"@fr,
+        "Bacche arbustive alternative"@it ;
+    schema:description "Aronia, Holunder, Goji usw."@de,
+        "Aronia, elderberries, goji etc."@en,
+        "Aronia, sureau, goji etc."@fr,
+        "Aronia, sambuco, goji ecc."@it ;
     rdfs:subClassOf cultivationtype:471 .
 
 cultivationtype:1159 a eCH-0265:CultivationType ;
@@ -5260,24 +5395,24 @@ cultivationtype:1224 a eCH-0265:CultivationType ;
     rdfs:subClassOf cultivationtype:1207 .
 
 cultivationtype:1225 a eCH-0265:CultivationType ;
-    schema:name "Bohnen Busch- Handpflück-"@de,
-        "Beans bush or hand-picked"@en,
+    schema:name "Busch- und Handpflückbohnen"@de,
+        "Bush or hand-picked beans"@en,
         "Haricots nains cueillis à la main"@fr,
         "Fagioli nani raccolti a mano"@it ;
     rdfs:subClassOf cultivationtype:476 .
 
 cultivationtype:1226 a eCH-0265:CultivationType ;
-    schema:name "Karotten Verarbeitung- Lager- hoher Ertrag"@de,
+    schema:name "Karotten Verarbeitung und Lager hoher Ertrag"@de,
         "Carrots processing storage high yield"@en,
-        "Carottes de transformation de garde à haut rendement"@fr,
-        "Carote da trasformazione da conservazione ad alta resa"@it ;
+        "Carottes transformation garde haut rendement"@fr,
+        "Carote trasformazione conservazione alta resa"@it ;
     rdfs:subClassOf cultivationtype:107 .
 
 cultivationtype:1227 a eCH-0265:CultivationType ;
-    schema:name "Karotten Verarbeitung- Lager- mittlerer Ertrag"@de,
+    schema:name "Karotten Verarbeitung und Lager mittlerer Ertrag"@de,
         "Carrots processing storage medium yield"@en,
-        "Carottes de transformation de garde à rendement moyen"@fr,
-        "Carote da trasformazione da conservazione a resa media"@it ;
+        "Carottes transformation garde rendement moyen"@fr,
+        "Carote trasformazione conservazione resa media"@it ;
     rdfs:subClassOf cultivationtype:107 .
 
 cultivationtype:1228 a eCH-0265:CultivationType ;
@@ -5288,7 +5423,7 @@ cultivationtype:1228 a eCH-0265:CultivationType ;
     rdfs:subClassOf cultivationtype:107 .
 
 cultivationtype:1229 a eCH-0265:CultivationType ;
-    schema:name "Karotten Bund- Früh-"@de,
+    schema:name "Karotten Bund und Früh"@de,
         "Carrots bunched early"@en,
         "Carottes en bottes précoces"@fr,
         "Carote a mazzi precoci"@it ;
@@ -5452,10 +5587,14 @@ cultivationtype:1260 a eCH-0265:CultivationType ;
     rdfs:subClassOf cultivationtype:141 .
 
 cultivationtype:1262 a eCH-0265:CultivationType ;
-    schema:name "Corn-Cob-Mix CCM"@de,
-        "Corn Cob Mix CCM"@en,
-        "Maïs épis complets CCM"@fr,
-        "Pastone di spiga CCM"@it ;
+    schema:name "Corn-Cob-Mix"@de,
+        "Corn Cob Mix"@en,
+        "Maïs épis complets"@fr,
+        "Pastone di spiga"@it ;
+    schema:alternateName "CCM"@de,
+        "CCM"@en,
+        "CCM"@fr,
+        "CCM"@it ;
     schema:description "Mais, der mit dem Ziel angebaut wird, als Corn-Cob-Mix geerntet zu werden. Corn-Cob-Mix (CCM) ist ein energiereiches Futtermittel für die Schweine- und Rindviehhaltung. Es besteht aus den zerkleinerten Körnern und Teilen der Spindel des Maiskolbens und wird in der Regel siliert. CCM zeichnet sich durch einen grossen Energiegehalt und eine gute Verdaulichkeit aus."@de ;
     rdfs:subClassOf cultivationtype:497 .
 
@@ -5565,10 +5704,10 @@ cultivationtype:1287 a eCH-0265:CultivationType ;
     rdfs:subClassOf cultivationtype:55 .
 
 cultivationtype:1288 a eCH-0265:CultivationType ;
-    schema:name "Kleine Anlagen <20 Aren mit verschiedenen Dauerkulturen"@de,
-        "Small plantations <20 ares with various permanent crops"@en,
-        "Petites plantations  <20 ares de cultures pérennes diverses"@fr,
-        "Piccoli impianti <20 are con diverse colture perenni"@it ;
+    schema:name "Kleine Anlagen < 20 Aren mit verschiedenen Dauerkulturen"@de,
+        "Small plantations < 20 ares with various permanent crops"@en,
+        "Petites plantations < 20 ares de cultures pérennes diverses"@fr,
+        "Piccoli impianti < 20 are con diverse colture perenni"@it ;
     rdfs:subClassOf cultivationtype:467 .
 
 cultivationtype:1289 a eCH-0265:CultivationType ;
@@ -5610,7 +5749,7 @@ cultivationtype:1293 a eCH-0265:CultivationType ;
 
 cultivationtype:1294 a eCH-0265:CultivationType ;
     schema:name "Tomaten Freiland"@de,
-        "Tomatoes open-field"@en,
+        "Tomatoes open field"@en,
         "Tomates pleine terre"@fr,
         "Pomodori pieno campo"@it ;
     rdfs:subClassOf cultivationtype:85,
@@ -5620,7 +5759,7 @@ cultivationtype:1294 a eCH-0265:CultivationType ;
 
 cultivationtype:1295 a eCH-0265:CultivationType ;
     schema:name "Krautstiel Freiland"@de,
-        "Swiss chard open-field"@en,
+        "Swiss chard open field"@en,
         "Bette à côte pleine terre"@fr,
         "Costa pieno campo"@it ;
     rdfs:subClassOf cultivationtype:76,
@@ -5629,7 +5768,7 @@ cultivationtype:1295 a eCH-0265:CultivationType ;
 
 cultivationtype:1296 a eCH-0265:CultivationType ;
     schema:name "Kohlrabi Freiland"@de,
-        "Kohlrabi open-field"@en,
+        "Kohlrabi open field"@en,
         "Chou-rave de plein champ"@fr,
         "Cavolo rapa di pieno campo"@it ;
     rdfs:subClassOf cultivationtype:48, 
