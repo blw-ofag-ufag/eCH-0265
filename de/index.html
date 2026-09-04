@@ -456,7 +456,7 @@ Abbildung&nbsp;1: UML-Diagramm des Datenmodells von eCH-0265. Dieses Diagramm wu
 </figcaption>
 </figure>
 </div>
-<p>TBC.</p>
+<p><a href="#fig-uml" class="quarto-xref">Abbildung&nbsp;1</a> veranschaulicht die grundlegende Architektur des semantischen Modells: Im Zentrum steht eine generische Referenzklasse (<code>eCH-0265:CultivationType</code>). Die Kulturhierarchien der drei verschiedenen Bereiche (Direktzahlungen, Nährstoffbilanz und Pflanzenschutz) sind jeweils als SKOS-Konzeptschema modelliert. Jede Kultur kann dabei auf die zentrale Referenzklasse “zeigen”. Dieser modulare Aufbau erlaubt es, die historisch gewachsenen, in sich geschlossenen Kategoriensysteme unter Beibehaltung ihrer spezifischen fachlichen und rechtlichen Eigenschaften in einem gemeinsamen Graphen abzubilden und trotzdem miteinander zu verknüpfen.</p>
 </section>
 </section>
 <section id="sec-classes" class="level1" data-number="3">
@@ -518,9 +518,9 @@ Tabelle&nbsp;3: Eigenschaften Agronomische Kulturkategorie
 </tr>
 <tr class="even">
 <td style="text-align: left;"><strong>Kultivierungstyp</strong>: Der dieser bereichsspezifischen Kultur korrespondierende Kultivierungstyp in der Kulturenontologie.</td>
-<td style="text-align: left;"><code>skos:exactMatch</code></td>
-<td style="text-align: left;"></td>
-<td style="text-align: right;">0..*</td>
+<td style="text-align: left;"><code>eCH-0265:exactMatch</code></td>
+<td style="text-align: left;"><a href="#sec-nodeshape-cultivationtype"><code>eCH-0265:CultivationType</code></a></td>
+<td style="text-align: right;">0..1</td>
 </tr>
 </tbody>
 </table>
@@ -591,9 +591,9 @@ Tabelle&nbsp;4: Eigenschaften Direktzahlungskultur
 </tr>
 <tr class="odd">
 <td style="text-align: left;"><strong>Kultivierungstyp</strong>: Der dieser bereichsspezifischen Kultur korrespondierende Kultivierungstyp in der Kulturenontologie.</td>
-<td style="text-align: left;"><code>skos:exactMatch</code></td>
-<td style="text-align: left;"></td>
-<td style="text-align: right;">0..*</td>
+<td style="text-align: left;"><code>eCH-0265:exactMatch</code></td>
+<td style="text-align: left;"><a href="#sec-nodeshape-cultivationtype"><code>eCH-0265:CultivationType</code></a></td>
+<td style="text-align: right;">0..1</td>
 </tr>
 </tbody>
 </table>
@@ -645,9 +645,9 @@ Tabelle&nbsp;5: Eigenschaften Flächenkategorie Direktzahlung
 </tr>
 <tr class="even">
 <td style="text-align: left;"><strong>Kultivierungstyp</strong>: Der dieser bereichsspezifischen Kultur korrespondierende Kultivierungstyp in der Kulturenontologie.</td>
-<td style="text-align: left;"><code>skos:exactMatch</code></td>
-<td style="text-align: left;"></td>
-<td style="text-align: right;">0..*</td>
+<td style="text-align: left;"><code>eCH-0265:exactMatch</code></td>
+<td style="text-align: left;"><a href="#sec-nodeshape-cultivationtype"><code>eCH-0265:CultivationType</code></a></td>
+<td style="text-align: right;">0..1</td>
 </tr>
 </tbody>
 </table>
@@ -767,9 +767,9 @@ Tabelle&nbsp;7: Eigenschaften Nährstoffbilanz-Kultivierungskategorie
 </tr>
 <tr class="odd">
 <td style="text-align: left;"><strong>Kultivierungstyp</strong>: Der dieser bereichsspezifischen Kultur korrespondierende Kultivierungstyp in der Kulturenontologie.</td>
-<td style="text-align: left;"><code>skos:exactMatch</code></td>
-<td style="text-align: left;"></td>
-<td style="text-align: right;">0..*</td>
+<td style="text-align: left;"><code>eCH-0265:exactMatch</code></td>
+<td style="text-align: left;"><a href="#sec-nodeshape-cultivationtype"><code>eCH-0265:CultivationType</code></a></td>
+<td style="text-align: right;">0..1</td>
 </tr>
 </tbody>
 </table>
@@ -822,9 +822,9 @@ Tabelle&nbsp;8: Eigenschaften Nährstoffbilanz-Kultivierungsunterkategorie
 </tr>
 <tr class="even">
 <td style="text-align: left;"><strong>Kultivierungstyp</strong>: Der dieser bereichsspezifischen Kultur korrespondierende Kultivierungstyp in der Kulturenontologie.</td>
-<td style="text-align: left;"><code>skos:exactMatch</code></td>
-<td style="text-align: left;"></td>
-<td style="text-align: right;">0..*</td>
+<td style="text-align: left;"><code>eCH-0265:exactMatch</code></td>
+<td style="text-align: left;"><a href="#sec-nodeshape-cultivationtype"><code>eCH-0265:CultivationType</code></a></td>
+<td style="text-align: right;">0..1</td>
 </tr>
 </tbody>
 </table>
@@ -889,9 +889,9 @@ Tabelle&nbsp;9: Eigenschaften Pflanzenschutzmittel-Kultur
 </tr>
 <tr class="even">
 <td style="text-align: left;"><strong>Kultivierungstyp</strong>: Der dieser bereichsspezifischen Kultur korrespondierende Kultivierungstyp in der Kulturenontologie.</td>
-<td style="text-align: left;"><code>skos:exactMatch</code></td>
-<td style="text-align: left;"></td>
-<td style="text-align: right;">0..*</td>
+<td style="text-align: left;"><code>eCH-0265:exactMatch</code></td>
+<td style="text-align: left;"><a href="#sec-nodeshape-cultivationtype"><code>eCH-0265:CultivationType</code></a></td>
+<td style="text-align: right;">0..1</td>
 </tr>
 </tbody>
 </table>

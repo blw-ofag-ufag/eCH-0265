@@ -297,7 +297,16 @@ SHACL-Spezifikationen generiert.
 
 </div>
 
-TBC.
+<a href="#fig-uml" class="quarto-xref">Abbildung 1</a> veranschaulicht
+die grundlegende Architektur des semantischen Modells: Im Zentrum steht
+eine generische Referenzklasse (`eCH-0265:CultivationType`). Die
+Kulturhierarchien der drei verschiedenen Bereiche (Direktzahlungen,
+Nährstoffbilanz und Pflanzenschutz) sind jeweils als SKOS-Konzeptschema
+modelliert. Jede Kultur kann dabei auf die zentrale Referenzklasse
+“zeigen”. Dieser modulare Aufbau erlaubt es, die historisch gewachsenen,
+in sich geschlossenen Kategoriensysteme unter Beibehaltung ihrer
+spezifischen fachlichen und rechtlichen Eigenschaften in einem
+gemeinsamen Graphen abzubilden und trotzdem miteinander zu verknüpfen.
 
 # Klassen
 
@@ -318,7 +327,7 @@ Tabelle 3: Eigenschaften Agronomische Kulturkategorie
 | **Name** | `schema:name` | `rdf:langString` oder `sh:Literal` | 1..\* |
 | **Unterkategorie** | `eCH-0265:cultivationSubCategory` | [`eCH-0265:NutrientBalanceCropSubCategory`](#sec-nodeshape-nutrientbalancecropsubcategory) | 1..1 |
 | **Kategorie** | `eCH-0265:cultivationCategory` | [`eCH-0265:NutrientBalanceCropCategory`](#sec-nodeshape-nutrientbalancecropcategory) | 1..1 |
-| **Kultivierungstyp**: Der dieser bereichsspezifischen Kultur korrespondierende Kultivierungstyp in der Kulturenontologie. | `skos:exactMatch` |  | 0..\* |
+| **Kultivierungstyp**: Der dieser bereichsspezifischen Kultur korrespondierende Kultivierungstyp in der Kulturenontologie. | `eCH-0265:exactMatch` | [`eCH-0265:CultivationType`](#sec-nodeshape-cultivationtype) | 0..1 |
 
 </div>
 
@@ -341,7 +350,7 @@ Tabelle 4: Eigenschaften Direktzahlungskultur
 | **Identifikator**: Der LNF-Code, auch Kulturcode genannt, ist der allgemein gebräuchliche Identifikator für Direktzahlungskulturen in der Schweiz. | `schema:identifier` | `xsd:string` oder `sh:Literal` | 1..1 |
 | **Gültig von**: Ab welchem Jahr wurde diese Direktzahlungskultur offiziell verwendet? | `schema:validFrom` | `xsd:integer` oder `sh:Literal` | 0..1 |
 | **Gültig bis**: Bis in welchem Jahr wurde diese Direktzahlungskultur offiziell verwendet? | `schema:validTo` | `xsd:integer` oder `sh:Literal` | 0..1 |
-| **Kultivierungstyp**: Der dieser bereichsspezifischen Kultur korrespondierende Kultivierungstyp in der Kulturenontologie. | `skos:exactMatch` |  | 0..\* |
+| **Kultivierungstyp**: Der dieser bereichsspezifischen Kultur korrespondierende Kultivierungstyp in der Kulturenontologie. | `eCH-0265:exactMatch` | [`eCH-0265:CultivationType`](#sec-nodeshape-cultivationtype) | 0..1 |
 
 </div>
 
@@ -356,7 +365,7 @@ Tabelle 5: Eigenschaften Flächenkategorie Direktzahlung
 |  | `skos:topConceptOf` | `sh:IRI` | 1..1 |
 |  | `skos:inScheme` | `sh:IRI` | 1..1 |
 | **Name** | `schema:name` | `rdf:langString` oder `sh:Literal` | 1..\* |
-| **Kultivierungstyp**: Der dieser bereichsspezifischen Kultur korrespondierende Kultivierungstyp in der Kulturenontologie. | `skos:exactMatch` |  | 0..\* |
+| **Kultivierungstyp**: Der dieser bereichsspezifischen Kultur korrespondierende Kultivierungstyp in der Kulturenontologie. | `eCH-0265:exactMatch` | [`eCH-0265:CultivationType`](#sec-nodeshape-cultivationtype) | 0..1 |
 
 </div>
 
@@ -398,7 +407,7 @@ Tabelle 7: Eigenschaften Nährstoffbilanz-Kultivierungskategorie
 | **Konzeptschema** | `skos:inScheme` | `sh:IRI` | 1..\* |
 | **Oberstes Konzept von** | `skos:topConceptOf` | `sh:IRI` | 1..1 |
 | **Name** | `schema:name` | `rdf:langString` oder `sh:Literal` | 1..\* |
-| **Kultivierungstyp**: Der dieser bereichsspezifischen Kultur korrespondierende Kultivierungstyp in der Kulturenontologie. | `skos:exactMatch` |  | 0..\* |
+| **Kultivierungstyp**: Der dieser bereichsspezifischen Kultur korrespondierende Kultivierungstyp in der Kulturenontologie. | `eCH-0265:exactMatch` | [`eCH-0265:CultivationType`](#sec-nodeshape-cultivationtype) | 0..1 |
 
 </div>
 
@@ -416,7 +425,7 @@ Tabelle 8: Eigenschaften Nährstoffbilanz-Kultivierungsunterkategorie
 | **Identifikator** | `schema:identifier` | `xsd:string` oder `sh:Literal` | 1..1 |
 | **Konzeptschema** | `skos:inScheme` | `sh:IRI` | 1..\* |
 | **Name** | `schema:name` | `rdf:langString` oder `sh:Literal` | 1..\* |
-| **Kultivierungstyp**: Der dieser bereichsspezifischen Kultur korrespondierende Kultivierungstyp in der Kulturenontologie. | `skos:exactMatch` |  | 0..\* |
+| **Kultivierungstyp**: Der dieser bereichsspezifischen Kultur korrespondierende Kultivierungstyp in der Kulturenontologie. | `eCH-0265:exactMatch` | [`eCH-0265:CultivationType`](#sec-nodeshape-cultivationtype) | 0..1 |
 
 </div>
 
@@ -438,7 +447,7 @@ Tabelle 9: Eigenschaften Pflanzenschutzmittel-Kultur
 | **Name**: Der in Infofito eingetragene Name dieser Kultur. | `schema:name` | `rdf:langString` oder `sh:Literal` | 2..4 |
 | **Version** | `schema:version` | `xsd:integer` oder `sh:Literal` | 1..1 |
 | **Überkultur** | `skos:broader` | `skos:Concept` oder `sh:IRI` | 0..2 |
-| **Kultivierungstyp**: Der dieser bereichsspezifischen Kultur korrespondierende Kultivierungstyp in der Kulturenontologie. | `skos:exactMatch` |  | 0..\* |
+| **Kultivierungstyp**: Der dieser bereichsspezifischen Kultur korrespondierende Kultivierungstyp in der Kulturenontologie. | `eCH-0265:exactMatch` | [`eCH-0265:CultivationType`](#sec-nodeshape-cultivationtype) | 0..1 |
 
 </div>
 
