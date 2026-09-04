@@ -104,3 +104,6 @@ eCH-0265:cultivationCategory a owl:ObjectProperty ;
 
 eCH-0265:cultivationSubCategory a owl:ObjectProperty ;
     rdfs:subPropertyOf skos:broader .
+
+eCH-0265:exactMatch a owl:ObjectProperty ;
+    rdfs:subPropertyOf skos:exactMatch .
