@@ -60,3 +60,4 @@ format:
      - assets/sparql.xml
      - assets/turtle.xml
     citeproc: true
+    link-citations: true
