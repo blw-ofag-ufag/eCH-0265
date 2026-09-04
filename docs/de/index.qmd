@@ -281,7 +281,7 @@ Die Standards enthalten die entsprechenden Hinweise auf Rechte Dritter.
 | Lea Stauber                    | Bundesamt für Landwirtschaft      |
 | Christian Wilda                | Bundesamt für Landwirtschaft      |
 
-: Autoren und Revision {#tbl-authors}
+: Autoren und Revision {#tbl-authors tbl-colwidths="[50,50]"}
 
 # Anhang C - Abkürzungen und Glossar {#sec-appendix-c .appendix .unnumbered}
 

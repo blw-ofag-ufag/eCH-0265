@@ -13,7 +13,7 @@ TRANSLATIONS = {
         "name": "Description",
         "path": "Path",
         "type": "Type",
-        "cardinality": "Cardinality",
+        "cardinality": "Card.",
         "target_class": "Target Class",
         "properties": "properties",
         "or": "or"
@@ -22,7 +22,7 @@ TRANSLATIONS = {
         "name": "Beschreibung",
         "path": "Pfad",
         "type": "Typ",
-        "cardinality": "Kardinalität",
+        "cardinality": "Kard.",
         "target_class": "Zielklasse",
         "properties": "Eigenschaften",
         "or": "oder"
@@ -31,7 +31,7 @@ TRANSLATIONS = {
         "name": "Description",
         "path": "Chemin",
         "type": "Type",
-        "cardinality": "Cardinalité",
+        "cardinality": "Card.",
         "target_class": "Classe cible",
         "properties": "propriétés",
         "or": "ou"
@@ -40,7 +40,7 @@ TRANSLATIONS = {
         "name": "Nome",
         "path": "Percorso",
         "type": "Tipo",
-        "cardinality": "Cardinalità",
+        "cardinality": "Card.",
         "target_class": "Classe di destinazione",
         "properties": "proprietà",
         "or": "o"
