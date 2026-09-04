@@ -4,7 +4,9 @@
 [![GitHub last commit](https://img.shields.io/github/last-commit/blw-ofag-ufag/eCH-0265.svg)](https://github.com/blw-ofag-ufag/eCH-0265/commits)
 [![GitHub issues](https://img.shields.io/github/issues/blw-ofag-ufag/eCH-0265.svg)](https://github.com/blw-ofag-ufag/eCH-0265/issues)
 
-This resource contains a data model for agricultural crops in Switzerland as well as associated reference objects, which can be retrieved in a machine-readable format as Linked Data. This aims to enable the domain-validated exchange and reuse of data between the fields of direct payments, nutrient balancing, and plant protection.
+This repository contains a data model for agricultural crops in Switzerland as well as associated reference objects, which can be retrieved in a machine-readable format as Linked Data. This aims to enable the domain-validated exchange and reuse of data between the fields of direct payments, nutrient balancing, and plant protection.
+
+For detailed (but work-in-progress) documentation, visit <https://blw-ofag-ufag.github.io/eCH-0265>.
 
 This repository includes a full semantic web pipeline, including
  
@@ -92,3 +94,7 @@ To streamline the workflow, this project uses `make` as its primary orchestratio
     ``` sh
     make clean
     ```
+
+## Contact
+
+Do you have questions? Please do not hesitate to contact us at [agridata.ch@blw.admin.ch](mailto:agridata.ch@blw.admin.ch), open an [issue in this repository](../../issues), or directly submit a [Request for Change (RFC) via the official eCH feedback form](https://ech.ch/de/ech-standards/standardisierungsprozess/request-change-rfc).
