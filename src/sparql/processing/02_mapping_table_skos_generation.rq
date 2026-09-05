@@ -1,6 +1,7 @@
 # This SPARQL update query cross-references agricultural crop observation sets
 # across different systems and materializes their relationships according to SKOS.
 
+PREFIX eCH-0265: <https://agriculture.ld.admin.ch/eCH-0265/2/>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
 
@@ -12,7 +13,7 @@ WHERE {
   ?s skos:inScheme ?s_scheme .
   ?t skos:inScheme ?t_scheme .
   FILTER(?s_scheme != ?t_scheme)
-  ?s skos:exactMatch / ^skos:exactMatch ?t .
+  ?s eCH-0265:exactMatch / ^eCH-0265:exactMatch ?t .
 };
 
 # 2. BROAD MATCH
@@ -23,9 +24,9 @@ WHERE {
   ?s skos:inScheme ?s_scheme .
   ?t skos:inScheme ?t_scheme .
   FILTER(?s_scheme != ?t_scheme)
-  ?s skos:exactMatch / rdfs:subClassOf+ / ^skos:exactMatch ?t .
+  ?s eCH-0265:exactMatch / rdfs:subClassOf+ / ^eCH-0265:exactMatch ?t .
   FILTER NOT EXISTS { 
-    ?s skos:exactMatch / ^skos:inScheme ?t_scheme . 
+    ?s eCH-0265:exactMatch / ^skos:inScheme ?t_scheme . 
   }
 };
 
@@ -37,8 +38,8 @@ WHERE {
   ?s skos:inScheme ?s_scheme .
   ?t skos:inScheme ?t_scheme .
   FILTER(?s_scheme != ?t_scheme)
-  ?s skos:exactMatch / ^rdfs:subClassOf+ / ^skos:exactMatch ?t .
+  ?s eCH-0265:exactMatch / ^rdfs:subClassOf+ / ^eCH-0265:exactMatch ?t .
   FILTER NOT EXISTS { 
-    ?s (skos:exactMatch|skos:broadMatch) / ^skos:inScheme ?t_scheme .
+    ?s (eCH-0265:exactMatch|skos:broadMatch) / ^skos:inScheme ?t_scheme .
   }
 }
