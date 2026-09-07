@@ -849,12 +849,6 @@ cultivationtype:158 a eCH-0265:CultivationType ;
         "Sedano rapa"@it ;
     rdfs:subClassOf cultivationtype:94 .
 
-cultivationtype:159 a eCH-0265:CultivationType ;
-    schema:name "Birne"@de,
-        "poirier"@fr,
-        "Pero"@it ;
-    rdfs:subClassOf cultivationtype:41 .
-
 cultivationtype:161 a eCH-0265:CultivationType ;
     schema:name "Schwarzer Holunder"@de,
         "Elder berry"@en,
@@ -2345,12 +2339,6 @@ cultivationtype:549 a eCH-0265:CultivationType ;
         "Sorgo"@it ;
     rdfs:subClassOf cultivationtype:1033 .
 
-cultivationtype:550 a eCH-0265:CultivationType ;
-    schema:name "Übrige Ackerfläche"@de,
-        "Autres terres assolées"@fr,
-        "Altra superficie coltiva"@it ;
-    rdfs:subClassOf cultivationtype:1 .
-
 cultivationtype:551 a eCH-0265:CultivationType ;
     schema:name "Einjährige Beeren (z.B. Erdbeeren)"@de,
         "Baies annuelles (p.ex. fraises)"@fr,
@@ -2731,18 +2719,6 @@ cultivationtype:635 a eCH-0265:CultivationType ;
         "Prati rivieraschi (senza pascoli)"@it ;
     rdfs:subClassOf cultivationtype:2 .
 
-cultivationtype:650 a eCH-0265:CultivationType ;
-    schema:name "Beitragsberechtigte übrige Dauerwiesen"@de,
-        "Autres prairies permanentes, avec contributions, agrégée"@fr,
-        "Altra superficie inerbita, con contributi, aggregata"@it ;
-    rdfs:subClassOf cultivationtype:2 .
-
-cultivationtype:660 a eCH-0265:CultivationType ;
-    schema:name "Beitragsberechtigte übrige Dauerweiden"@de,
-        "Autres pâturages permanentes, avec contributions, agrégée"@fr,
-        "Altri pascoli perenni, con contributi, aggregata"@it ;
-    rdfs:subClassOf cultivationtype:3 .
-
 cultivationtype:693 a eCH-0265:CultivationType ;
     schema:name "Regionsspezifische Biodiversitätsförderflächen (Weiden)"@de,
         "Surfaces de promotion de la biodiversité spécifiques à la région (pâturages)"@fr,
@@ -2955,12 +2931,6 @@ cultivationtype:750 a eCH-0265:CultivationType ;
         "Altre colture perenni, con contributi, aggregata"@it ;
     rdfs:subClassOf cultivationtype:6 .
 
-cultivationtype:760 a eCH-0265:CultivationType ;
-    schema:name "Nicht beitragsberechtigte Dauerkulturen"@de,
-        "Surfaces de cultures pérennes, sans contributions, agrégée"@fr,
-        "Colture perenni, senza contributi, aggregata"@it ;
-    rdfs:subClassOf cultivationtype:6 .
-
 cultivationtype:797 a eCH-0265:CultivationType ;
     schema:name "Dauergrünfläche übrige Flächen mit Dauerkulturen"@de,
         "Autres surfaces de cultures pérennes, avec contributions"@fr,
@@ -3056,12 +3026,6 @@ cultivationtype:830 a eCH-0265:CultivationType ;
     schema:name "Beitragsberechtigte Kulturen in ganzjährig geschütztem Anbau"@de,
         "Cultures sous abri sans fondations permanentes, avec contributions"@fr,
         "Superfici con colture protette tutto l’anno, con contributi"@it ;
-    rdfs:subClassOf cultivationtype:7 .
-
-cultivationtype:840 a eCH-0265:CultivationType ;
-    schema:name "Nicht beitragsberechtigte Kulturen in ganzjährig geschütztem Anbau"@de,
-        "Cultures sous abri sans fondations permanentes, sans contributions"@fr,
-        "Superfici con colture protette tutto l’anno, senza contributi"@it ;
     rdfs:subClassOf cultivationtype:7 .
 
 cultivationtype:847 a eCH-0265:CultivationType ;
@@ -3289,21 +3253,6 @@ cultivationtype:936 a eCH-0265:CultivationType ;
         "Surfaces à litière, région d’estivage"@fr,
         "Terreni da strame nella regione d’estivazione"@it ;
     rdfs:subClassOf cultivationtype:13 .
-
-cultivationtype:950 a eCH-0265:CultivationType ;
-    schema:name "Ackerschonstreifen"@de,
-        "Bande culturale extensive"@fr,
-        "Fasce di colture estensive in campicoltura"@it ;
-    rdfs:subClassOf eCH-0265:Cultivation ;
-    eCH-0265:managementIntensity intensity:Extensive .
-
-cultivationtype:951 a eCH-0265:CultivationType ;
-    schema:name "Getreide in weiter Reihe"@de,
-        "Céréales en lignes de semis espacées"@fr,
-        "Cereali in file distanziate"@it ;
-    schema:description "Anbau von Sommer- oder Wintergetreide, bei denen mindestens 40% der Anzahl Reihen über die Breite der Sämaschine ungesät sind. Mindestfläche 20 Aren, Mindestbreite 20 m. Der Reihenabstand in ungesäten Bereichen muss mindestens 30 cm betragen."@de ;
-    rdfs:subClassOf cultivationtype:14 ;
-    eCH-0265:botanicalPlant taxon:1GRAF .
 
 cultivationtype:998 a eCH-0265:CultivationType ;
     schema:name "Übrige Flächen ausserhalb der landwirtschaftlichen Nutzfläche und Sömmerungsfläche"@de,
@@ -3533,8 +3482,7 @@ cultivationtype:1043 a eCH-0265:CultivationType ;
 cultivationtype:1044 a eCH-0265:CultivationType ;
     schema:name "Verarbeitungskohlrabi"@de, "Chou-rave d'industrie"@fr, "Cavolo rapa da industria"@it ;
     rdfs:subClassOf cultivationtype:1296,
-        cultivationtype:546;
-    owl:disjointWith cultivationtype:1297 .
+        cultivationtype:546 .
 
 cultivationtype:1045 a eCH-0265:CultivationType ;
     schema:name "Ölhanf"@de, "Chanvre oléagineux"@fr, "Canapa da olio"@it ;
@@ -3661,13 +3609,6 @@ cultivationtype:1073 a eCH-0265:CultivationType ;
         "Persil, jusqu'à la première coupe"@fr,
         "Prezzemolo, fino al primo taglio"@it ;
     rdfs:subClassOf cultivationtype:311 .
-
-cultivationtype:1074 a eCH-0265:CultivationType ;
-    schema:name "Kefen"@de,
-        "Mange-tout"@fr,
-        "Taccole"@it ;
-    schema:alternateName "Zuckerschoten"@de ;
-    rdfs:subClassOf cultivationtype:191 .
 
 cultivationtype:1075 a eCH-0265:CultivationType ;
     schema:name "Erbsen, Kefen"@de,
@@ -4697,10 +4638,6 @@ cultivationtype:1273 a eCH-0265:CultivationType ;
         "Uva spina, 2.5 kg/m2"@it ;
     rdfs:subClassOf cultivationtype:298 .
 
-cultivationtype:1275 a eCH-0265:CultivationType ;
-    schema:name "Gründüngung (Leguminosen)"@de ;
-    rdfs:subClassOf cultivationtype:47, cultivationtype:24 .
-
 cultivationtype:1277 a eCH-0265:CultivationType ;
     schema:name "Gründüngung (Nichtleguminosen)"@de ;
     rdfs:subClassOf cultivationtype:1 .
@@ -4762,13 +4699,6 @@ cultivationtype:1292 a eCH-0265:CultivationType ;
     schema:name "Hecken und Feldgehölz mit Krautsaum"@de ;
     rdfs:subClassOf cultivationtype:852 .
 
-cultivationtype:1293 a eCH-0265:CultivationType ;
-    schema:name "Zuckerhut (Nicht-Convenience)"@de,
-        "Chicorée pain de sucre (non-convenience)"@fr,
-        "Cicoria pan di zucchero (non-convenience)"@it ;
-    rdfs:subClassOf cultivationtype:142 ;
-    owl:disjointWith cultivationtype:1131 .
-
 cultivationtype:1294 a eCH-0265:CultivationType ;
     schema:name "Tomaten (Freiland)"@de,
         "Tomates (pleine terre)"@fr,
@@ -4778,14 +4708,6 @@ cultivationtype:1294 a eCH-0265:CultivationType ;
     owl:disjointWith cultivationtype:1141 ;
     eCH-0265:botanicalPlant taxon:SOLYC .
 
-cultivationtype:1295 a eCH-0265:CultivationType ;
-    schema:name "Krautstiel (Freiland)"@de,
-        "Bette à côte (pleine terre)"@fr,
-        "Costa (pieno campo)"@it ;
-    rdfs:subClassOf cultivationtype:76,
-        cultivationtype:24 ;
-    owl:disjointWith cultivationtype:1135 .
-
 cultivationtype:1296 a eCH-0265:CultivationType ;
     schema:name "Kohlrabi Freiland"@de,
         "Chou-rave de plein champ"@fr,
@@ -4793,14 +4715,6 @@ cultivationtype:1296 a eCH-0265:CultivationType ;
     rdfs:subClassOf cultivationtype:48, 
         cultivationtype:24 ;
     owl:disjointWith cultivationtype:1043 .
-
-cultivationtype:1297 a eCH-0265:CultivationType ;
-    schema:name "Kohlrabi (nicht für die Verarbeitung)"@de,
-        "Chou-rave (pas pour l'industrie)"@fr,
-        "Cavolo rapa (non da industria)"@it ;
-    rdfs:subClassOf cultivationtype:1296, 
-        cultivationtype:545 ;
-    owl:disjointWith cultivationtype:1044 .
 
 cultivationtype:1298 a eCH-0265:CultivationType ;
     schema:name "Radicchio und Cicorino (nicht für die Verarbeitung)"@de,
