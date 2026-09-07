@@ -23,6 +23,7 @@
 @prefix sh:              <http://www.w3.org/ns/shacl#> .
 @prefix skos:            <http://www.w3.org/2004/02/skos/core#> .
 @prefix wikidata:        <http://www.wikidata.org/entity/> .
+@prefix xsd:             <http://www.w3.org/2001/XMLSchema#> .
 
 
 # ==============================================================================
@@ -47,6 +48,9 @@ eCH-0265:NutrientBalanceCrop a owl:Class ;
     rdfs:subClassOf skos:Concept .
 
 eCH-0265:PlantProtectionCrop a owl:Class ;
+    rdfs:subClassOf skos:Concept .
+
+eCH-0265:GeodataCrop a owl:Class ;
     rdfs:subClassOf skos:Concept .
 
 # ==============================================================================
@@ -75,6 +79,21 @@ rdfs:comment a owl:DatatypeProperty ;
 
 dcterms:title a owl:DatatypeProperty ;
     rdfs:subPropertyOf schema:name .
+
+eCH-0265:overlapping a owl:DatatypeProperty ;
+    schema:name "Overlapping"@en ;
+    rdfs:domain eCH-0265:GeodataCrop ;
+    rdfs:range xsd:boolean .
+
+eCH-0265:biodiversityPromotionAreaQualityLevelOne a owl:DatatypeProperty ;
+    schema:name "Biodiversity promotion area of quality level I"@en ;
+    rdfs:domain eCH-0265:GeodataCrop ;
+    rdfs:range xsd:boolean .
+
+eCH-0265:specialCrop a owl:DatatypeProperty ;
+    schema:name "Special crop"@en ;
+    rdfs:domain eCH-0265:GeodataCrop ;
+    rdfs:range xsd:boolean .
 
 # ==============================================================================
 # OBJECT PROPERTIES

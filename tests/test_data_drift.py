@@ -14,6 +14,7 @@ LOG_DIR = Path("build/test")
 PSMV_LOG_FILENAME = "psmv_drift.log"
 NAEBI_LOG_FILENAME = "naebi_drift.log"
 GIS_LOG_FILENAME = "gis_drift.log"
+MGDM_LOG_FILENAME = "mgdm_drift.log"
 
 def write_drift_log(filename: str, lines: list):
     """Writes a formatted log file detailing the data drift."""
@@ -362,3 +363,135 @@ def test_agis_drift(final_graph):
         write_drift_log(GIS_LOG_FILENAME, log_lines)
 
     assert not has_drift, f"AGIS data drift detected. See {LOG_DIR}/{GIS_LOG_FILENAME} for details."
+
+def get_local_mgdm_data(graph):
+    """Extracts local geodata crop (MGDM 153.1) data from the combined processed graph."""
+    query = """
+    PREFIX schema: <http://schema.org/>
+    PREFIX eCH-0265: <https://agriculture.ld.admin.ch/eCH-0265/2/>
+
+    SELECT ?id ?name ?validFrom ?validTo ?overlapping ?bff ?special
+    WHERE {
+        ?crop a eCH-0265:GeodataCrop ;
+              schema:identifier ?id ;
+              schema:name ?name ;
+              eCH-0265:overlapping ?overlapping ;
+              eCH-0265:biodiversityPromotionAreaQualityLevelOne ?bff ;
+              eCH-0265:specialCrop ?special .
+        OPTIONAL { ?crop schema:validFrom ?validFrom . }
+        OPTIONAL { ?crop schema:validTo ?validTo . }
+    }
+    """
+    local_data = {}
+    for row in graph.query(query):
+        code = str(row.id)
+        entry = local_data.setdefault(code, {
+            "names": {},
+            "validFrom": str(row.validFrom) if row.validFrom is not None else None,
+            "validTo": str(row.validTo) if row.validTo is not None else None,
+            "overlapping": str(bool(row.overlapping)).lower(),
+            "bff": str(bool(row.bff)).lower(),
+            "special": str(bool(row.special)).lower(),
+        })
+        entry["names"][str(row.name.language).lower()] = str(row.name).strip()
+    return local_data
+
+def get_api_mgdm_data():
+    """Fetches the LNF_Katalog_Nutzungsart entries from the remote INTERLIS XML."""
+    response = requests.get(GIS_XML_URL, timeout=15)
+    response.raise_for_status()
+    root = ET.fromstring(response.content)
+    ns = {'ili': 'http://www.interlis.ch/INTERLIS2.3'}
+
+    def text(elem, tag):
+        child = elem.find(f"ili:{tag}", ns)
+        return child.text.strip() if child is not None and child.text else None
+
+    api_data = {}
+    for nutzungsart in root.findall(".//ili:LWB_Nutzungsflaechen_V3_0.LNF_Kataloge.LNF_Katalog_Nutzungsart", ns):
+        code = text(nutzungsart, "LNF_Code")
+        if not code:
+            continue
+        names = {}
+        nutzung = nutzungsart.find("ili:Nutzung", ns)
+        if nutzung is not None:
+            for loc_text in nutzung.findall(".//ili:LocalisationCH_V1.LocalisedText", ns):
+                lang = text(loc_text, "Language")
+                value = text(loc_text, "Text")
+                if lang and value:
+                    names[lang.lower()] = value
+        api_data[code] = {
+            "names": names,
+            "validFrom": text(nutzungsart, "Gueltig_Von"),
+            "validTo": text(nutzungsart, "Gueltig_Bis"),
+            "overlapping": text(nutzungsart, "Ist_Ueberlagernd"),
+            "bff": text(nutzungsart, "Ist_BFF_QI"),
+            "special": text(nutzungsart, "Ist_Spezialkultur"),
+        }
+    return api_data
+
+def test_mgdm_drift(final_graph):
+    """Monitors discrepancies between the local geodata crops (MGDM 153.1) and the live INTERLIS XML catalogue."""
+    local_data = get_local_mgdm_data(final_graph)
+
+    try:
+        api_data = get_api_mgdm_data()
+    except requests.exceptions.RequestException as e:
+        pytest.skip(f"Network dependency unreachable. Skipping test. Error: {e}")
+    except ET.ParseError as e:
+        pytest.fail(f"Failed to parse XML from {GIS_XML_URL}. Error: {e}")
+
+    local_keys = set(local_data.keys())
+    api_keys = set(api_data.keys())
+
+    new_in_api = api_keys - local_keys
+    missing_in_api = local_keys - api_keys
+    common_keys = local_keys.intersection(api_keys)
+
+    discrepancies = {}
+    for key in common_keys:
+        local_crop = local_data[key]
+        api_crop = api_data[key]
+        diffs = []
+
+        for lang in ['de', 'fr', 'it']:
+            local_name = local_crop["names"].get(lang, "")
+            api_name = api_crop["names"].get(lang, "")
+            if local_name != api_name:
+                diffs.append(f"{lang.upper()} Name: '{local_name}' -> '{api_name}'")
+
+        for attr in ["validFrom", "validTo", "overlapping", "bff", "special"]:
+            if local_crop[attr] != api_crop[attr]:
+                diffs.append(f"{attr}: {local_crop[attr]} -> {api_crop[attr]}")
+
+        if diffs:
+            discrepancies[key] = diffs
+
+    has_drift = bool(new_in_api or missing_in_api or discrepancies)
+
+    if has_drift:
+        log_lines = ["MGDM DATA DRIFT REPORT", "=" * 22, ""]
+
+        if new_in_api:
+            log_lines.append(f"New Crops in Catalogue ({len(new_in_api)}):")
+            for key in sorted(new_in_api):
+                log_lines.append(f"  - {key}: {api_data[key]['names'].get('de', 'No DE name')}")
+            log_lines.append("")
+
+        if missing_in_api:
+            log_lines.append(f"Crops Removed From Catalogue ({len(missing_in_api)}):")
+            for key in sorted(missing_in_api):
+                log_lines.append(f"  - {key}: {local_data[key]['names'].get('de', 'No DE name')}")
+            log_lines.append("")
+
+        if discrepancies:
+            log_lines.append(f"Modified Data ({len(discrepancies)}):")
+            for key, diffs in sorted(discrepancies.items()):
+                log_lines.append(f"  {key} ({local_data[key]['names'].get('de', 'No DE name')}):")
+                for diff in diffs:
+                    log_lines.append(f"    - {diff}")
+            log_lines.append("")
+
+        write_drift_log(MGDM_LOG_FILENAME, log_lines)
+
+    assert not has_drift, f"MGDM data drift detected. See {LOG_DIR}/{MGDM_LOG_FILENAME} for details."

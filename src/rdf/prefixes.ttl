@@ -9,6 +9,7 @@
 @prefix psm:             <https://agriculture.ld.admin.ch/crops/psm/1/> .
 @prefix agis:            <https://agriculture.ld.admin.ch/crops/agis/1/> .
 @prefix naebi:           <https://agriculture.ld.admin.ch/crops/naebi/1/> .
+@prefix mgdm:            <https://agriculture.ld.admin.ch/crops/mgdm/1/> .
 @prefix cultivationtype: <https://agriculture.ld.admin.ch/crops/cultivationtype/> .
 @prefix taxon:           <https://agriculture.ld.admin.ch/crops/taxon/> .
 @prefix intensity:       <https://agriculture.ld.admin.ch/crops/intensity/> .

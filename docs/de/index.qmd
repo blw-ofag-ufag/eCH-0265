@@ -66,6 +66,8 @@ Momentan können diese Daten aber nicht in maschinenlesbarer Form vom AGIS-Webse
 Die Direktzahlungskulturen kommen nicht nur im Rahmen der Strukturdatenerhebung zum Einsatz, sondern auch bei der gesamtschweizerischen räumlichen Erfassung von Nutzungsflächen (siehe [«landwirtschaftliche Kulturflächen»](https://www.blw.admin.ch/de/landwirtschaftliche-kulturflaechen)).
 Die Kantone erfassen diese Geodaten gemäss dem minimalen Geodatenmodell 153.1 «Nutzungsflächen» und stellen die Daten via dem interkantonalen Portal [geodienste.ch](https://geodienste.ch/) zur Verfügung.
 Die im Rahmen der Geodaten verwendeten Kulturkategorien sind als XML-File auf <https://models.geo.admin.ch/BLW/> publiziert, wobei weitere (aggregierende) Kulturkategorien definiert wurden und die Attribute nicht zu 100% deckungsgleich zu denjenigen der Direktzahlungskulturen der Strukturdatenerhebung sind.
+Dieser Katalog der Nutzungsarten (`LNF_Katalog_Nutzungsart`) ist deshalb als eigenständiges Konzeptschema in diesem Hilfsmittel enthalten (Klasse «Geodaten-Nutzungsart», siehe @sec-classes).
+Jede Nutzungsart ist mit dem entsprechenden Nutzungstyp der Kulturenontologie verknüpft und trägt zusätzlich die Attribute des Geodatenmodells: ob die Nutzung überlagernd erfasst wird, ob es sich um eine Biodiversitätsförderfläche der Qualitätsstufe I handelt und ob es sich um eine Spezialkultur handelt.
 
 Die Direktzahlungskulturen sind selbst in acht Kulturkategorien eingeteilt (@tbl-directpaymentcrops-categories).
 Eine Mehrheit dieser Kategorien wird explizit in der landwirtschaftlichen Begriffsverordnung (LBV) definiert.
@@ -162,7 +164,7 @@ Das konsolidierte Datenmodell wird durch eine RDFS-Ontologie abgebildet und mitt
 ![UML-Diagramm des Datenmodells von eCH-0265. Dieses Diagramm wurde automatisch mithilfe von SHACL PLAY! [@francart2020shacl] aus den SHACL-Spezifikationen generiert.](../assets/img/uml.png){#fig-uml width="100%" .lightbox}
 
 @fig-uml veranschaulicht die grundlegende Architektur des semantischen Modells: Im Zentrum steht eine generische Referenzklasse (`eCH-0265:CultivationType`).
-Die Kulturhierarchien der drei verschiedenen Bereiche (Direktzahlungen, Nährstoffbilanz und Pflanzenschutz) sind jeweils als SKOS-Konzeptschema modelliert.
+Die Kulturhierarchien der drei verschiedenen Bereiche (Direktzahlungen, Nährstoffbilanz und Pflanzenschutz) sowie der Katalog der Nutzungsarten des Geodatenmodells sind jeweils als SKOS-Konzeptschema modelliert.
 Jede Kultur kann dabei auf die zentrale Referenzklasse "zeigen".
 Dieser modulare Aufbau erlaubt es, die historisch gewachsenen, in sich geschlossenen Kategoriensysteme unter Beibehaltung ihrer spezifischen fachlichen und rechtlichen Eigenschaften in einem gemeinsamen Graphen abzubilden und trotzdem miteinander zu verknüpfen.
 

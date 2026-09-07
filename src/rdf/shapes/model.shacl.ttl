@@ -7,6 +7,7 @@
 @prefix psm:             <https://agriculture.ld.admin.ch/crops/psm/1/> .
 @prefix agis:            <https://agriculture.ld.admin.ch/crops/agis/1/> .
 @prefix naebi:           <https://agriculture.ld.admin.ch/crops/naebi/1/> .
+@prefix mgdm:            <https://agriculture.ld.admin.ch/crops/mgdm/1/> .
 
 # Globally used namespaces/qnames
 @prefix dcterms:         <http://purl.org/dc/terms/> .
@@ -393,6 +394,186 @@ eCH-0265:PlantProtectionCrop a sh:NodeShape, rdfs:Class ;
             sh:nodeKind sh:IRI ;
             sh:class skos:Concept ;
             sh:node eCH-0265:PlantProtectionCrop ;
+        ] .
+
+# ==============================================================================
+# Geodata crop (minimal geodata model «Landwirtschaftliche Kulturflächen», 153.1)
+# ==============================================================================
+
+eCH-0265:GeodataCropCategory a sh:NodeShape, rdfs:Class ;
+    rdfs:label "Hauptkategorie der Geodaten-Nutzungsarten"@de,
+        "Geodata crop main category"@en ;
+    rdfs:comment "Hauptkategorie einer Nutzungsfläche gemäss dem minimalen Geodatenmodell «Landwirtschaftliche Kulturflächen» (Modell 153.1 Nutzungsflächen, Attribut `Hauptkategorie` der Klasse `LNF_Katalog_Nutzungsart`). Die Hauptkategorien tragen im Geodatenmodell keine eigenen Codes und werden hier als oberste Konzepte des Schemas modelliert. Überlagernd erfasste Nutzungsarten (z.B. Bäume) sind keiner Hauptkategorie zugeordnet."@de ;
+    sh:closed true ;
+    sh:ignoredProperties ( rdf:type skos:exactMatch skos:broadMatch skos:narrowMatch skos:narrower ) ;
+    sh:property
+        [
+            sh:order 1 ;
+            sh:path skos:topConceptOf ;
+            sh:hasValue mgdm:ConceptScheme ;
+            sh:minCount 1 ;
+            sh:maxCount 1 ;
+            sh:nodeKind sh:IRI ;
+        ],
+        [
+            sh:order 2 ;
+            sh:path skos:inScheme ;
+            sh:hasValue mgdm:ConceptScheme ;
+            sh:minCount 1 ;
+            sh:maxCount 1 ;
+            sh:nodeKind sh:IRI ;
+        ],
+        [
+            sh:order 3 ;
+            sh:name "Name"@de,
+                "Name"@en ;
+            sh:description "Die Bezeichnung der Hauptkategorie gemäss Geodatenmodell."@de ;
+            sh:minCount 1 ;
+            sh:path schema:name ;
+            sh:nodeKind sh:Literal ;
+            sh:datatype rdf:langString ;
+            sh:languageIn ( "de" "fr" "it" "en" ) ;
+            sh:uniqueLang true ;
+        ],
+        eCH-0265:cultivationType .
+
+eCH-0265:GeodataCrop a sh:NodeShape, rdfs:Class ;
+    rdfs:label "Geodaten-Nutzungsart"@de,
+        "Geodata crop"@en ;
+    rdfs:comment "Nutzungsart gemäss dem Katalog `LNF_Katalog_Nutzungsart` des minimalen Geodatenmodells «Landwirtschaftliche Kulturflächen» (Geobasisdaten-Identifikator 153, Modell 153.1 Nutzungsflächen). Mit diesen Nutzungsarten erfassen die Kantone die landwirtschaftlichen Nutzungsflächen geometrisch und stellen sie über [geodienste.ch](https://geodienste.ch/) bereit. Der Katalog basiert auf den Direktzahlungskulturen, enthält jedoch zusätzliche (aggregierende) Nutzungsarten, weitere Attribute sowie eine eigene, auf das Geodatenmodell bezogene zeitliche Gültigkeit. Er wird vom Bundesamt für Landwirtschaft als INTERLIS-Katalog unter <https://models.geo.admin.ch/BLW/> publiziert."@de ;
+    sh:closed true ;
+    sh:ignoredProperties ( rdf:type skos:exactMatch skos:broadMatch skos:narrowMatch skos:narrower ) ;
+    sh:sparql [
+        a sh:SPARQLConstraint ;
+        sh:message "The schema:validFrom of a geodata crop must be less than or equal to its schema:validTo" ;
+        sh:select """
+            PREFIX schema: <http://schema.org/>
+            SELECT $this ?validFrom ?validTo
+            WHERE {
+                $this schema:validFrom ?validFrom .
+                $this schema:validTo ?validTo .
+                FILTER (?validFrom > ?validTo)
+            }
+        """ ;
+    ],
+    [
+        a sh:SPARQLConstraint ;
+        sh:message "A geodata crop that is not overlapping must belong to a main category (skos:broader)" ;
+        sh:select """
+            PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+            PREFIX eCH-0265: <https://agriculture.ld.admin.ch/eCH-0265/2/>
+            SELECT $this
+            WHERE {
+                $this eCH-0265:overlapping false .
+                FILTER NOT EXISTS { $this skos:broader ?category . }
+            }
+        """ ;
+    ] ;
+    sh:property
+        [
+            sh:order 1 ;
+            sh:name "Hauptkategorie"@de,
+                "Main category"@en ;
+            sh:description "Die Hauptkategorie, welcher diese Nutzungsart im Geodatenmodell zugeordnet ist. Überlagernd erfasste Nutzungsarten haben keine Hauptkategorie."@de ;
+            sh:path skos:broader ;
+            sh:class eCH-0265:GeodataCropCategory ;
+            sh:minCount 0 ;
+            sh:maxCount 1 ;
+            sh:nodeKind sh:IRI ;
+        ],
+        [
+            sh:order 2 ;
+            sh:path skos:inScheme ;
+            sh:hasValue mgdm:ConceptScheme ;
+            sh:minCount 1 ;
+            sh:maxCount 1 ;
+            sh:nodeKind sh:IRI ;
+        ],
+        [
+            sh:order 3 ;
+            sh:name "Identifikator"@de,
+                "Identifier"@en ;
+            sh:description "Der LNF-Code gemäss Nutzungskatalog. Er entspricht dem Kulturcode der Direktzahlungskulturen, sofern die Nutzungsart auch eine Direktzahlungskultur ist."@de ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:path schema:identifier ;
+            sh:nodeKind sh:Literal ;
+            sh:datatype xsd:string ;
+        ],
+        [
+            sh:order 4 ;
+            sh:name "Name"@de,
+                "Name"@en ;
+            sh:minCount 1 ;
+            sh:path schema:name ;
+            sh:nodeKind sh:Literal ;
+            sh:datatype rdf:langString ;
+            sh:languageIn ( "de" "fr" "it" "en" ) ;
+            sh:uniqueLang true ;
+        ],
+        [
+            sh:order 5 ;
+            sh:name "Kultivierungstyp"@de,
+                "Cultivation type"@en ;
+            sh:description "Der dieser Nutzungsart korrespondierende Kultivierungstyp in der Kulturenontologie. Jede Nutzungsart des Geodatenmodells ist mit genau einem Kultivierungstyp verknüpft."@de ;
+            sh:path eCH-0265:exactMatch ;
+            sh:class eCH-0265:CultivationType ;
+            sh:minCount 1 ;
+            sh:maxCount 1 ;
+            sh:nodeKind sh:IRI ;
+        ],
+        [
+            sh:order 6 ;
+            sh:name "Überlagernd"@de,
+                "Overlapping"@en ;
+            sh:description "Gibt an, ob es sich um eine überlagernde Nutzung handelt. Überlagernde Nutzungen (z.B. Bäume oder Ackerschonstreifen) werden geometrisch über anderen Nutzungsflächen erfasst."@de ;
+            sh:path eCH-0265:overlapping ;
+            sh:minCount 1 ;
+            sh:maxCount 1 ;
+            sh:nodeKind sh:Literal ;
+            sh:datatype xsd:boolean ;
+        ],
+        [
+            sh:order 7 ;
+            sh:name "Biodiversitätsförderfläche Qualitätsstufe I"@de,
+                "Biodiversity promotion area of quality level I"@en ;
+            sh:description "Gibt an, ob die Nutzungsfläche eine Biodiversitätsförderfläche der Qualitätsstufe I ist."@de ;
+            sh:path eCH-0265:biodiversityPromotionAreaQualityLevelOne ;
+            sh:minCount 1 ;
+            sh:maxCount 1 ;
+            sh:nodeKind sh:Literal ;
+            sh:datatype xsd:boolean ;
+        ],
+        [
+            sh:order 8 ;
+            sh:name "Spezialkultur"@de,
+                "Special crop"@en ;
+            sh:description "Gibt an, ob die Nutzungsfläche eine Spezialkultur ist."@de ;
+            sh:path eCH-0265:specialCrop ;
+            sh:minCount 1 ;
+            sh:maxCount 1 ;
+            sh:nodeKind sh:Literal ;
+            sh:datatype xsd:boolean ;
+        ],
+        [
+            sh:order 9 ;
+            sh:name "Gültig von"@de,
+                "Valid from"@en ;
+            sh:description "Das Jahr, ab dem der LNF-Code im Geodatenmodell gilt. Fehlt der Wert, gilt der Code seit Einführung des Katalogs."@de ;
+            sh:maxCount 1 ;
+            sh:nodeKind sh:Literal ;
+            sh:datatype xsd:integer ;
+            sh:path schema:validFrom ;
+        ],
+        [
+            sh:order 10 ;
+            sh:name "Gültig bis"@de,
+                "Valid to"@en ;
+            sh:description "Das Jahr, bis zu dem der LNF-Code im Geodatenmodell gilt. Fehlt der Wert, ist der Code weiterhin gültig."@de ;
+            sh:maxCount 1 ;
+            sh:path schema:validTo ;
+            sh:nodeKind sh:Literal ;
+            sh:datatype xsd:integer ;
         ] .
 
 # ==============================================================================

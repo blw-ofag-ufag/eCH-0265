@@ -1,0 +1,2280 @@
+# ==============================================================================
+# PREFIXES USED FOR THIS PROJECT
+# ==============================================================================
+
+# Project-specific namespaces/qnames
+@prefix eCH-0265:        <https://agriculture.ld.admin.ch/eCH-0265/2/> .
+@prefix mgdm:            <https://agriculture.ld.admin.ch/crops/mgdm/1/> .
+@prefix cultivationtype: <https://agriculture.ld.admin.ch/crops/cultivationtype/> .
+
+# LINDAS-specific namespaces/qnames
+@prefix org:             <https://register.ld.admin.ch/opendataswiss/org/> .
+@prefix theme:           <https://register.ld.admin.ch/opendataswiss/category/> .
+
+# Globally used namespaces/qnames
+@prefix dcat:            <http://www.w3.org/ns/dcat#> .
+@prefix dcterms:         <http://purl.org/dc/terms/> .
+@prefix frequency:       <https://publications.europa.eu/resource/authority/frequency/> .
+@prefix schema:          <http://schema.org/> .
+@prefix skos:            <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard:           <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:             <http://www.w3.org/2001/XMLSchema#> .
+
+# ==============================================================================
+# DATASET METADATA
+# ------------------------------------------------------------------------------
+# Catalogue of land use types (LNF_Katalog_Nutzungsart) of the minimal geodata
+# model (MGDM) «Landwirtschaftliche Kulturflächen» (geodata identifier 153,
+# model 153.1 Nutzungsflächen), published by the Federal Office for Agriculture
+# at https://models.geo.admin.ch/BLW/LWB_Nutzungsflaechen_Kataloge_V3_0.xml
+# ==============================================================================
+
+mgdm:ConceptScheme a eCH-0265:GeodataCropScheme ;
+    schema:name "Nutzungsarten der landwirtschaftlichen Kulturflächen"@de,
+        "Land use types of agricultural cultivation areas"@en ;
+    schema:description "Katalog der Nutzungsarten (LNF_Katalog_Nutzungsart) gemäss dem minimalen Geodatenmodell «Landwirtschaftliche Kulturflächen» (Identifikator 153, Modell 153.1 Nutzungsflächen), inklusive Hauptkategorien, Attributen und zeitlicher Gültigkeit der LNF-Codes."@de,
+        "Catalogue of land use types (LNF_Katalog_Nutzungsart) according to the minimal geodata model «Agricultural cultivation areas» (identifier 153, model 153.1 Nutzungsflächen), including main categories, attributes and temporal validity of the LNF codes."@en ;
+    schema:identifier "153.1" ;
+    schema:url <https://models.geo.admin.ch/BLW/LWB_Nutzungsflaechen_Kataloge_V3_0.xml> ;
+    schema:creator org:bundesamt-fur-landwirtschaft-blw ;
+    schema:publisher org:bundesamt-fur-landwirtschaft-blw ;
+    schema:dateCreated "2023-01-01"^^xsd:date ;
+    schema:dateModified "2025-02-19"^^xsd:date ;
+    dcterms:accrualPeriodicity frequency:ANNUAL ;
+    schema:version "3.0" ;
+    dcat:contactPoint
+        [
+            a vcard:Organization ;
+            vcard:fn "Bundesamt für Landwirtschaft"@de ;
+            vcard:hasEmail "geodaten@blw.admin.ch"
+        ] ;
+    dcat:theme theme:administration,
+        theme:agriculture,
+        theme:geography .
+
+# ==============================================================================
+# Hauptkategorien der Nutzungsflächen
+# ==============================================================================
+
+mgdm:ArableLand a eCH-0265:GeodataCropCategory ;
+    schema:name "Ackerfläche"@de,
+        "Terres cultivées"@fr,
+        "Superficie coltiva"@it ;
+    skos:topConceptOf mgdm:ConceptScheme ;
+    skos:inScheme mgdm:ConceptScheme ;
+    eCH-0265:exactMatch cultivationtype:1 .
+
+mgdm:PermanentMeadows a eCH-0265:GeodataCropCategory ;
+    schema:name "Dauerwiesen"@de,
+        "Prairies permanentes"@fr,
+        "Prati perenni"@it ;
+    skos:topConceptOf mgdm:ConceptScheme ;
+    skos:inScheme mgdm:ConceptScheme ;
+    eCH-0265:exactMatch cultivationtype:2 .
+
+mgdm:PermanentPastures a eCH-0265:GeodataCropCategory ;
+    schema:name "Dauerweiden"@de,
+        "Pâturages permanents"@fr,
+        "Pascoli perenni"@it ;
+    skos:topConceptOf mgdm:ConceptScheme ;
+    skos:inScheme mgdm:ConceptScheme ;
+    eCH-0265:exactMatch cultivationtype:3 .
+
+mgdm:Vineyards a eCH-0265:GeodataCropCategory ;
+    schema:name "Reben"@de,
+        "Vignobles"@fr,
+        "Vigna"@it ;
+    skos:topConceptOf mgdm:ConceptScheme ;
+    skos:inScheme mgdm:ConceptScheme ;
+    eCH-0265:exactMatch cultivationtype:4 .
+
+mgdm:Orchards a eCH-0265:GeodataCropCategory ;
+    schema:name "Obstanlagen"@de,
+        "Cultures fruitières"@fr,
+        "Frutteti"@it ;
+    skos:topConceptOf mgdm:ConceptScheme ;
+    skos:inScheme mgdm:ConceptScheme ;
+    eCH-0265:exactMatch cultivationtype:5 .
+
+mgdm:OtherPermanentCrops a eCH-0265:GeodataCropCategory ;
+    schema:name "Übrige Dauerkulturen"@de,
+        "Autres cultures pérennes"@fr,
+        "Altre colture perenni"@it ;
+    skos:topConceptOf mgdm:ConceptScheme ;
+    skos:inScheme mgdm:ConceptScheme ;
+    eCH-0265:exactMatch cultivationtype:6 .
+
+mgdm:ProtectedCultivation a eCH-0265:GeodataCropCategory ;
+    schema:name "Geschützter Anbau"@de,
+        "Cultures protégées"@fr,
+        "Colture protette tutto l’anno"@it ;
+    skos:topConceptOf mgdm:ConceptScheme ;
+    skos:inScheme mgdm:ConceptScheme ;
+    eCH-0265:exactMatch cultivationtype:7 .
+
+mgdm:LitterMeadows a eCH-0265:GeodataCropCategory ;
+    schema:name "Streueflächen"@de,
+        "Surfaces à litière"@fr,
+        "Terreni da strame"@it ;
+    skos:topConceptOf mgdm:ConceptScheme ;
+    skos:inScheme mgdm:ConceptScheme ;
+    eCH-0265:exactMatch cultivationtype:8 .
+
+mgdm:HedgesAndCopses a eCH-0265:GeodataCropCategory ;
+    schema:name "Hecken-, Feld- und Ufergehölze"@de,
+        "Haies, bosquets et berges boisées"@fr,
+        "Siepi, boschetti campestri e rivieraschi"@it ;
+    skos:topConceptOf mgdm:ConceptScheme ;
+    skos:inScheme mgdm:ConceptScheme ;
+    eCH-0265:exactMatch cultivationtype:9 .
+
+mgdm:OtherAreasWithinAgriculturalArea a eCH-0265:GeodataCropCategory ;
+    schema:name "Übrige Flächen innerhalb der landwirtschaftlichen Nutzfläche"@de,
+        "Autre surface au sein de la surface agricole utile"@fr,
+        "Altre superfici all’interno della superficie agricola utilizzata"@it ;
+    skos:topConceptOf mgdm:ConceptScheme ;
+    skos:inScheme mgdm:ConceptScheme ;
+    eCH-0265:exactMatch cultivationtype:10 .
+
+mgdm:AreasOutsideAgriculturalArea a eCH-0265:GeodataCropCategory ;
+    schema:name "Flächen ausserhalb der landwirtschaftlichen Nutzfläche"@de,
+        "Surfaces en dehors de la surface agricole utile"@fr,
+        "Superfici fuori della superficie agricola utilizzata"@it ;
+    skos:topConceptOf mgdm:ConceptScheme ;
+    skos:inScheme mgdm:ConceptScheme ;
+    eCH-0265:exactMatch cultivationtype:12 .
+
+mgdm:SummerPastureArea a eCH-0265:GeodataCropCategory ;
+    schema:name "Sömmerungsfläche"@de,
+        "Surface d’estivage"@fr,
+        "Superfici d’estivazione"@it ;
+    skos:topConceptOf mgdm:ConceptScheme ;
+    skos:inScheme mgdm:ConceptScheme ;
+    eCH-0265:exactMatch cultivationtype:13 .
+
+mgdm:Forest a eCH-0265:GeodataCropCategory ;
+    schema:name "Wald"@de,
+        "Forêt"@fr,
+        "Bosco"@it ;
+    skos:topConceptOf mgdm:ConceptScheme ;
+    skos:inScheme mgdm:ConceptScheme ;
+    eCH-0265:exactMatch cultivationtype:901 .
+
+# ==============================================================================
+# Nutzungsarten (LNF_Katalog_Nutzungsart)
+# ==============================================================================
+
+mgdm:501 a eCH-0265:GeodataCrop ;
+    schema:identifier "501" ;
+    schema:name "Sommergerste"@de,
+        "Orge de printemps"@fr,
+        "Orzo primaverile"@it ;
+    eCH-0265:overlapping false ;
+    eCH-0265:biodiversityPromotionAreaQualityLevelOne false ;
+    eCH-0265:specialCrop false ;
+    skos:inScheme mgdm:ConceptScheme ;
+    skos:broader mgdm:ArableLand ;
+    eCH-0265:exactMatch cultivationtype:501 .
+
+mgdm:502 a eCH-0265:GeodataCrop ;
+    schema:identifier "502" ;
+    schema:name "Wintergerste"@de,
+        "Orge d’automne"@fr,
+        "Orzo autunnale"@it ;
+    eCH-0265:overlapping false ;
+    eCH-0265:biodiversityPromotionAreaQualityLevelOne false ;
+    eCH-0265:specialCrop false ;
+    skos:inScheme mgdm:ConceptScheme ;
+    skos:broader mgdm:ArableLand ;
+    eCH-0265:exactMatch cultivationtype:502 .
+
+mgdm:504 a eCH-0265:GeodataCrop ;
+    schema:identifier "504" ;
+    schema:name "Hafer"@de,
+        "Avoine"@fr,
+        "Avena"@it ;
+    eCH-0265:overlapping false ;
+    eCH-0265:biodiversityPromotionAreaQualityLevelOne false ;
+    eCH-0265:specialCrop false ;
+    skos:inScheme mgdm:ConceptScheme ;
+    skos:broader mgdm:ArableLand ;
+    eCH-0265:exactMatch cultivationtype:504 .
+
+mgdm:505 a eCH-0265:GeodataCrop ;
+    schema:identifier "505" ;
+    schema:name "Triticale"@de,
+        "Triticale"@fr,
+        "Triticale"@it ;
+    eCH-0265:overlapping false ;
+    eCH-0265:biodiversityPromotionAreaQualityLevelOne false ;
+    eCH-0265:specialCrop false ;
+    skos:inScheme mgdm:ConceptScheme ;
+    skos:broader mgdm:ArableLand ;
+    eCH-0265:exactMatch cultivationtype:505 .
+
+mgdm:506 a eCH-0265:GeodataCrop ;
+    schema:identifier "506" ;
+    schema:name "Mischel Futtergetreide"@de,
+        "Méteil de céréales fourragères"@fr,
+        "Miscela di cereali da foraggio"@it ;
+    eCH-0265:overlapping false ;
+    eCH-0265:biodiversityPromotionAreaQualityLevelOne false ;
+    eCH-0265:specialCrop false ;
+    skos:inScheme mgdm:ConceptScheme ;
+    skos:broader mgdm:ArableLand ;
+    eCH-0265:exactMatch cultivationtype:506 .
+
+mgdm:507 a eCH-0265:GeodataCrop ;
+    schema:identifier "507" ;
+    schema:name "Futterweizen gemäss Sortenliste swiss granum"@de,
+        "Blé fourrager selon liste swiss granum"@fr,
+        "Frumento da foraggio giusta la lista di swiss granum"@it ;
+    eCH-0265:overlapping false ;
+    eCH-0265:biodiversityPromotionAreaQualityLevelOne false ;
+    eCH-0265:specialCrop false ;
+    skos:inScheme mgdm:ConceptScheme ;
+    skos:broader mgdm:ArableLand ;
+    eCH-0265:exactMatch cultivationtype:507 .
+
+mgdm:508 a eCH-0265:GeodataCrop ;
+    schema:identifier "508" ;
+    schema:name "Körnermais"@de,
+        "Maïs grain"@fr,
+        "Mais da granella"@it ;
+    eCH-0265:overlapping false ;
+    eCH-0265:biodiversityPromotionAreaQualityLevelOne false ;
+    eCH-0265:specialCrop false ;
+    skos:inScheme mgdm:ConceptScheme ;
+    skos:broader mgdm:ArableLand ;
+    eCH-0265:exactMatch cultivationtype:508 .
+
+mgdm:509 a eCH-0265:GeodataCrop ;
+    schema:identifier "509" ;
+    schema:name "Reis"@de,
+        "Riz"@fr,
+        "Riso"@it ;
+    schema:validTo 2022 ;
+    eCH-0265:overlapping false ;
+    eCH-0265:biodiversityPromotionAreaQualityLevelOne false ;
+    eCH-0265:specialCrop false ;
+    skos:inScheme mgdm:ConceptScheme ;
+    skos:broader mgdm:ArableLand ;
+    eCH-0265:exactMatch cultivationtype:509 .
+
+mgdm:510 a eCH-0265:GeodataCrop ;
+    schema:identifier "510" ;
+    schema:name "Hartweizen"@de,
+        "Blé dur"@fr,
+        "Grano duro"@it ;
+    schema:validFrom 2023 ;
+    eCH-0265:overlapping false ;
+    eCH-0265:biodiversityPromotionAreaQualityLevelOne false ;
+    eCH-0265:specialCrop false ;
+    skos:inScheme mgdm:ConceptScheme ;
+    skos:broader mgdm:ArableLand ;
+    eCH-0265:exactMatch cultivationtype:510 .
+
+mgdm:511 a eCH-0265:GeodataCrop ;
+    schema:identifier "511" ;
+    schema:name "Emmer, Einkorn"@de,
+        "Amidonnier, engrain"@fr,
+        "Farro, piccola spelta"@it ;
+    eCH-0265:overlapping false ;
+    eCH-0265:biodiversityPromotionAreaQualityLevelOne false ;
+    eCH-0265:specialCrop false ;
+    skos:inScheme mgdm:ConceptScheme ;
+    skos:broader mgdm:ArableLand ;
+    eCH-0265:exactMatch cultivationtype:511 .
+
+mgdm:512 a eCH-0265:GeodataCrop ;
+    schema:identifier "512" ;
+    schema:name "Sommerweizen (ohne Futterweizen der Sortenliste swiss granum)"@de,
+        "Blé de printemps (sans blé fourrager de la liste swiss granum)"@fr,
+        "Frumento primaverile (escl. il frumento da foraggio di swiss granum)"@it ;
+    eCH-0265:overlapping false ;
+    eCH-0265:biodiversityPromotionAreaQualityLevelOne false ;
+    eCH-0265:specialCrop false ;
+    skos:inScheme mgdm:ConceptScheme ;
+    skos:broader mgdm:ArableLand ;
+    eCH-0265:exactMatch cultivationtype:512 .
+
+mgdm:513 a eCH-0265:GeodataCrop ;
+    schema:identifier "513" ;
+    schema:name "Winterweizen (ohne Futterweizen der Sortenliste swiss granum)"@de,
+        "Blé d'automne (sans blé fourrager de la liste swiss granum)"@fr,
+        "Frumento autunnale (escl. il frumento da foraggio di swiss granum)"@it ;
+    eCH-0265:overlapping false ;
+    eCH-0265:biodiversityPromotionAreaQualityLevelOne false ;
+    eCH-0265:specialCrop false ;
+    skos:inScheme mgdm:ConceptScheme ;
+    skos:broader mgdm:ArableLand ;
+    eCH-0265:exactMatch cultivationtype:513 .
+
+mgdm:514 a eCH-0265:GeodataCrop ;
+    schema:identifier "514" ;
+    schema:name "Roggen"@de,
+        "Seigle"@fr,
+        "Segale"@it ;
+    eCH-0265:overlapping false ;
+    eCH-0265:biodiversityPromotionAreaQualityLevelOne false ;
+    eCH-0265:specialCrop false ;
+    skos:inScheme mgdm:ConceptScheme ;
+    skos:broader mgdm:ArableLand ;
+    eCH-0265:exactMatch cultivationtype:514 .
+
+mgdm:515 a eCH-0265:GeodataCrop ;
+    schema:identifier "515" ;
+    schema:name "Mischel Brotgetreide"@de,
+        "Méteil de céréales panifiables"@fr,
+        "Miscela di cereali panificabili"@it ;
+    eCH-0265:overlapping false ;
+    eCH-0265:biodiversityPromotionAreaQualityLevelOne false ;
+    eCH-0265:specialCrop false ;
+    skos:inScheme mgdm:ConceptScheme ;
+    skos:broader mgdm:ArableLand ;
+    eCH-0265:exactMatch cultivationtype:515 .
+
+mgdm:516 a eCH-0265:GeodataCrop ;
+    schema:identifier "516" ;
+    schema:name "Dinkel"@de,
+        "Epeautre"@fr,
+        "Spelta"@it ;
+    eCH-0265:overlapping false ;
+    eCH-0265:biodiversityPromotionAreaQualityLevelOne false ;
+    eCH-0265:specialCrop false ;
+    skos:inScheme mgdm:ConceptScheme ;
+    skos:broader mgdm:ArableLand ;
+    eCH-0265:exactMatch cultivationtype:516 .
+
+mgdm:519 a eCH-0265:GeodataCrop ;
+    schema:identifier "519" ;
+    schema:name "Saatmais (Vertragsanbau)"@de,
+        "Semences de maïs (contrat de culture)"@fr,
+        "Mais da semina (coltivazione contrattuale)"@it ;
+    eCH-0265:overlapping false ;
+    eCH-0265:biodiversityPromotionAreaQualityLevelOne false ;
+    eCH-0265:specialCrop false ;
+    skos:inScheme mgdm:ConceptScheme ;
+    skos:broader mgdm:ArableLand ;
+    eCH-0265:exactMatch cultivationtype:519 .
+
+mgdm:520 a eCH-0265:GeodataCrop ;
+    schema:identifier "520" ;
+    schema:name "Trockenreis"@de,
+        "Riz en culture sèche"@fr,
+        "Riso seminato su terreno asciutto"@it ;
+    schema:validFrom 2023 ;
+    eCH-0265:overlapping false ;
+    eCH-0265:biodiversityPromotionAreaQualityLevelOne false ;
+    eCH-0265:specialCrop false ;
+    skos:inScheme mgdm:ConceptScheme ;
+    skos:broader mgdm:ArableLand ;
+    eCH-0265:exactMatch cultivationtype:520 .
+
+mgdm:521 a eCH-0265:GeodataCrop ;
+    schema:identifier "521" ;
+    schema:name "Silo- und Grünmais"@de,
+        "Maïs d'ensilage et maïs vert"@fr,
+        "Mais da insilamento e verde"@it ;
+    eCH-0265:overlapping false ;
+    eCH-0265:biodiversityPromotionAreaQualityLevelOne false ;
+    eCH-0265:specialCrop false ;
+    skos:inScheme mgdm:ConceptScheme ;
+    skos:broader mgdm:ArableLand ;
+    eCH-0265:exactMatch cultivationtype:521 .
+
+mgdm:522 a eCH-0265:GeodataCrop ;
+    schema:identifier "522" ;
+    schema:name "Zuckerrüben"@de,
+        "Betteraves sucrières"@fr,
+        "Barbabietole da zucchero"@it ;
+    eCH-0265:overlapping false ;
+    eCH-0265:biodiversityPromotionAreaQualityLevelOne false ;
+    eCH-0265:specialCrop false ;
+    skos:inScheme mgdm:ConceptScheme ;
+    skos:broader mgdm:ArableLand ;
+    eCH-0265:exactMatch cultivationtype:522 .
+
+mgdm:523 a eCH-0265:GeodataCrop ;
+    schema:identifier "523" ;
+    schema:name "Futterrüben"@de,
+        "Betteraves fourragères"@fr,
+        "Barbabietole da foraggio"@it ;
+    eCH-0265:overlapping false ;
+    eCH-0265:biodiversityPromotionAreaQualityLevelOne false ;
+    eCH-0265:specialCrop false ;
+    skos:inScheme mgdm:ConceptScheme ;
+    skos:broader mgdm:ArableLand ;
+    eCH-0265:exactMatch cultivationtype:523 .
+
+mgdm:524 a eCH-0265:GeodataCrop ;
+    schema:identifier "524" ;
+    schema:name "Kartoffeln"@de,
+        "Pommes de terre"@fr,
+        "Patate"@it ;
+    eCH-0265:overlapping false ;
+    eCH-0265:biodiversityPromotionAreaQualityLevelOne false ;
+    eCH-0265:specialCrop false ;
+    skos:inScheme mgdm:ConceptScheme ;
+    skos:broader mgdm:ArableLand ;
+    eCH-0265:exactMatch cultivationtype:524 .
+
+mgdm:525 a eCH-0265:GeodataCrop ;
+    schema:identifier "525" ;
+    schema:name "Pflanzkartoffeln (Vertragsanbau)"@de,
+        "Plants de pommes de terre (contrat de culture)"@fr,
+        "Tuberi-seme di patate (coltivazione contrattuale)"@it ;
+    eCH-0265:overlapping false ;
+    eCH-0265:biodiversityPromotionAreaQualityLevelOne false ;
+    eCH-0265:specialCrop false ;
+    skos:inScheme mgdm:ConceptScheme ;
+    skos:broader mgdm:ArableLand ;
+    eCH-0265:exactMatch cultivationtype:525 .
+
+mgdm:526 a eCH-0265:GeodataCrop ;
+    schema:identifier "526" ;
+    schema:name "Sommerraps zur Speiseölgewinnung"@de,
+        "Colza de printemps destiné à la fabrication d’huile comestible"@fr,
+        "Colza primaverile per l’estrazione di olio commestibile"@it ;
+    eCH-0265:overlapping false ;
+    eCH-0265:biodiversityPromotionAreaQualityLevelOne false ;
+    eCH-0265:specialCrop false ;
+    skos:inScheme mgdm:ConceptScheme ;
+    skos:broader mgdm:ArableLand ;
+    eCH-0265:exactMatch cultivationtype:526 .
+
+mgdm:527 a eCH-0265:GeodataCrop ;
+    schema:identifier "527" ;
+    schema:name "Winterraps zur Speiseölgewinnung"@de,
+        "Colza d’automne destiné à la fabrication d’huile comestible"@fr,
+        "Colza autunnale per l’estrazione di olio commestibile"@it ;
+    eCH-0265:overlapping false ;
+    eCH-0265:biodiversityPromotionAreaQualityLevelOne false ;
+    eCH-0265:specialCrop false ;
+    skos:inScheme mgdm:ConceptScheme ;
+    skos:broader mgdm:ArableLand ;
+    eCH-0265:exactMatch cultivationtype:527 .
+
+mgdm:528 a eCH-0265:GeodataCrop ;
+    schema:identifier "528" ;
+    schema:name "Soja"@de,
+        "Soja"@fr,
+        "Soia"@it ;
+    eCH-0265:overlapping false ;
+    eCH-0265:biodiversityPromotionAreaQualityLevelOne false ;
+    eCH-0265:specialCrop false ;
+    skos:inScheme mgdm:ConceptScheme ;
+    skos:broader mgdm:ArableLand ;
+    eCH-0265:exactMatch cultivationtype:528 .
+
+mgdm:529 a eCH-0265:GeodataCrop ;
+    schema:identifier "529" ;
+    schema:name "Nassreis"@de,
+        "Riz en culture humide"@fr,
+        "Riso seminato su terreno bagnato"@it ;
+    schema:validFrom 2023 ;
+    eCH-0265:overlapping false ;
+    eCH-0265:biodiversityPromotionAreaQualityLevelOne false ;
+    eCH-0265:specialCrop false ;
+    skos:inScheme mgdm:ConceptScheme ;
+    skos:broader mgdm:ArableLand ;
+    eCH-0265:exactMatch cultivationtype:529 .
+
+mgdm:531 a eCH-0265:GeodataCrop ;
+    schema:identifier "531" ;
+    schema:name "Sonnenblumen zur Speiseölgewinnung"@de,
+        "Tournesol destiné à la fabrication d’huile comestible"@fr,
+        "Girasole per l’estrazione di olio commestibile"@it ;
+    eCH-0265:overlapping false ;
+    eCH-0265:biodiversityPromotionAreaQualityLevelOne false ;
+    eCH-0265:specialCrop false ;
+    skos:inScheme mgdm:ConceptScheme ;
+    skos:broader mgdm:ArableLand ;
+    eCH-0265:exactMatch cultivationtype:531 .
+
+mgdm:534 a eCH-0265:GeodataCrop ;
+    schema:identifier "534" ;
+    schema:name "Lein"@de,
+        "Lin"@fr,
+        "Lino"@it ;
+    eCH-0265:overlapping false ;
+    eCH-0265:biodiversityPromotionAreaQualityLevelOne false ;
+    eCH-0265:specialCrop false ;
+    skos:inScheme mgdm:ConceptScheme ;
+    skos:broader mgdm:ArableLand ;
+    eCH-0265:exactMatch cultivationtype:534 .
+
+mgdm:535 a eCH-0265:GeodataCrop ;
+    schema:identifier "535" ;
+    schema:name "Hanf"@de,
+        "Chanvre"@fr,
+        "Canapa"@it ;
+    schema:validTo 2021 ;
+    eCH-0265:overlapping false ;
+    eCH-0265:biodiversityPromotionAreaQualityLevelOne false ;
+    eCH-0265:specialCrop false ;
+    skos:inScheme mgdm:ConceptScheme ;
+    skos:broader mgdm:ArableLand ;
+    eCH-0265:exactMatch cultivationtype:535 .
+
+mgdm:536 a eCH-0265:GeodataCrop ;
+    schema:identifier "536" ;
+    schema:name "Bohnen und Wicken zur Körnergewinnung (z.B. Ackerbohnen)"@de,
+        "Haricots et vesces en grains (p.ex. féveroles)"@fr,
+        "Fagioli e vecce per l’estrazione di granelli (p.es. favette)"@it ;
+    eCH-0265:overlapping false ;
+    eCH-0265:biodiversityPromotionAreaQualityLevelOne false ;
+    eCH-0265:specialCrop false ;
+    skos:inScheme mgdm:ConceptScheme ;
+    skos:broader mgdm:ArableLand ;
+    eCH-0265:exactMatch cultivationtype:536 .
+
+mgdm:537 a eCH-0265:GeodataCrop ;
+    schema:identifier "537" ;
+    schema:name "Erbsen zur Körnergewinnung (z.B. Eiweisserbsen)"@de,
+        "Pois en grains (p.ex. pois protéagineux)"@fr,
+        "Piselli per l’estrazione di granelli (p.es. piselli proteici)"@it ;
+    eCH-0265:overlapping false ;
+    eCH-0265:biodiversityPromotionAreaQualityLevelOne false ;
+    eCH-0265:specialCrop false ;
+    skos:inScheme mgdm:ConceptScheme ;
+    skos:broader mgdm:ArableLand ;
+    eCH-0265:exactMatch cultivationtype:537 .
+
+mgdm:538 a eCH-0265:GeodataCrop ;
+    schema:identifier "538" ;
+    schema:name "Lupinen"@de,
+        "Lupins"@fr,
+        "Lupini"@it ;
+    eCH-0265:overlapping false ;
+    eCH-0265:biodiversityPromotionAreaQualityLevelOne false ;
+    eCH-0265:specialCrop false ;
+    skos:inScheme mgdm:ConceptScheme ;
+    skos:broader mgdm:ArableLand ;
+    eCH-0265:exactMatch cultivationtype:538 .
+
+mgdm:539 a eCH-0265:GeodataCrop ;
+    schema:identifier "539" ;
+    schema:name "Ölkürbisse"@de,
+        "Courges à huile"@fr,
+        "Zucche per l’estrazione di olio"@it ;
+    eCH-0265:overlapping false ;
+    eCH-0265:biodiversityPromotionAreaQualityLevelOne false ;
+    eCH-0265:specialCrop false ;
+    skos:inScheme mgdm:ConceptScheme ;
+    skos:broader mgdm:ArableLand ;
+    eCH-0265:exactMatch cultivationtype:539 .
+
+mgdm:540 a eCH-0265:GeodataCrop ;
+    schema:identifier "540" ;
+    schema:name "Kichererbsen"@de,
+        "Pois chiches"@fr,
+        "Ceci"@it ;
+    schema:validFrom 2023 ;
+    eCH-0265:overlapping false ;
+    eCH-0265:biodiversityPromotionAreaQualityLevelOne false ;
+    eCH-0265:specialCrop false ;
+    skos:inScheme mgdm:ConceptScheme ;
+    skos:broader mgdm:ArableLand ;
+    eCH-0265:exactMatch cultivationtype:540 .
+
+mgdm:541 a eCH-0265:GeodataCrop ;
+    schema:identifier "541" ;
+    schema:name "Tabak"@de,
+        "Tabac"@fr,
+        "Tabacco"@it ;
+    eCH-0265:overlapping false ;
+    eCH-0265:biodiversityPromotionAreaQualityLevelOne false ;
+    eCH-0265:specialCrop true ;
+    skos:inScheme mgdm:ConceptScheme ;
+    skos:broader mgdm:ArableLand ;
+    eCH-0265:exactMatch cultivationtype:541 .
+
+mgdm:542 a eCH-0265:GeodataCrop ;
+    schema:identifier "542" ;
+    schema:name "Hirse"@de,
+        "Millet"@fr,
+        "Miglio"@it ;
+    schema:validTo 2022 ;
+    eCH-0265:overlapping false ;
+    eCH-0265:biodiversityPromotionAreaQualityLevelOne false ;
+    eCH-0265:specialCrop false ;
+    skos:inScheme mgdm:ConceptScheme ;
+    skos:broader mgdm:ArableLand ;
+    eCH-0265:exactMatch cultivationtype:542 .
+
+mgdm:543 a eCH-0265:GeodataCrop ;
+    schema:identifier "543" ;
+    schema:name "Getreide siliert"@de,
+        "Céréales ensilées"@fr,
+        "Cereali insilati"@it ;
+    eCH-0265:overlapping false ;
+    eCH-0265:biodiversityPromotionAreaQualityLevelOne false ;
+    eCH-0265:specialCrop false ;
+    skos:inScheme mgdm:ConceptScheme ;
+    skos:broader mgdm:ArableLand ;
+    eCH-0265:exactMatch cultivationtype:543 .
+
+mgdm:544 a eCH-0265:GeodataCrop ;
+    schema:identifier "544" ;
+    schema:name "Leindotter"@de,
+        "Cameline"@fr,
+        "Dorella"@it ;
+    eCH-0265:overlapping false ;
+    eCH-0265:biodiversityPromotionAreaQualityLevelOne false ;
+    eCH-0265:specialCrop false ;
+    skos:inScheme mgdm:ConceptScheme ;
+    skos:broader mgdm:ArableLand ;
+    eCH-0265:exactMatch cultivationtype:544 .
+
+mgdm:545 a eCH-0265:GeodataCrop ;
+    schema:identifier "545" ;
+    schema:name "Einjährige Freilandgemüse, ohne Konservengemüse"@de,
+        "Cultures maraîchères de plein champ annuelles (sauf les légumes de conserve)"@fr,
+        "Ortaggi annuali di pieno campo (esclusi quelli destinati alla conservazione)"@it ;
+    eCH-0265:overlapping false ;
+    eCH-0265:biodiversityPromotionAreaQualityLevelOne false ;
+    eCH-0265:specialCrop true ;
+    skos:inScheme mgdm:ConceptScheme ;
+    skos:broader mgdm:ArableLand ;
+    eCH-0265:exactMatch cultivationtype:545 .
+
+mgdm:546 a eCH-0265:GeodataCrop ;
+    schema:identifier "546" ;
+    schema:name "Freiland-Konservengemüse"@de,
+        "Légumes de conserve cultivés en plein champ"@fr,
+        "Ortaggi di pieno campo per la conservazione"@it ;
+    eCH-0265:overlapping false ;
+    eCH-0265:biodiversityPromotionAreaQualityLevelOne false ;
+    eCH-0265:specialCrop false ;
+    skos:inScheme mgdm:ConceptScheme ;
+    skos:broader mgdm:ArableLand ;
+    eCH-0265:exactMatch cultivationtype:546 .
+
+mgdm:547 a eCH-0265:GeodataCrop ;
+    schema:identifier "547" ;
+    schema:name "Wurzeln der Treibzichorie"@de,
+        "Racines de chicorée"@fr,
+        "Radici di cicoria di coltura forzata"@it ;
+    eCH-0265:overlapping false ;
+    eCH-0265:biodiversityPromotionAreaQualityLevelOne false ;
+    eCH-0265:specialCrop true ;
+    skos:inScheme mgdm:ConceptScheme ;
+    skos:broader mgdm:ArableLand ;
+    eCH-0265:exactMatch cultivationtype:547 .
+
+mgdm:548 a eCH-0265:GeodataCrop ;
+    schema:identifier "548" ;
+    schema:name "Buchweizen"@de,
+        "Sarrasin"@fr,
+        "Grano saraceno"@it ;
+    eCH-0265:overlapping false ;
+    eCH-0265:biodiversityPromotionAreaQualityLevelOne false ;
+    eCH-0265:specialCrop false ;
+    skos:inScheme mgdm:ConceptScheme ;
+    skos:broader mgdm:ArableLand ;
+    eCH-0265:exactMatch cultivationtype:548 .
+
+mgdm:549 a eCH-0265:GeodataCrop ;
+    schema:identifier "549" ;
+    schema:name "Sorghum"@de,
+        "Sorgho"@fr,
+        "Sorgo"@it ;
+    schema:validTo 2022 ;
+    eCH-0265:overlapping false ;
+    eCH-0265:biodiversityPromotionAreaQualityLevelOne false ;
+    eCH-0265:specialCrop false ;
+    skos:inScheme mgdm:ConceptScheme ;
+    skos:broader mgdm:ArableLand ;
+    eCH-0265:exactMatch cultivationtype:549 .
+
+mgdm:550 a eCH-0265:GeodataCrop ;
+    schema:identifier "550" ;
+    schema:name "Übrige Ackerfläche"@de,
+        "Autres terres assolées"@fr,
+        "Altra superficie coltiva"@it ;
+    eCH-0265:overlapping false ;
+    eCH-0265:biodiversityPromotionAreaQualityLevelOne false ;
+    eCH-0265:specialCrop false ;
+    skos:inScheme mgdm:ConceptScheme ;
+    skos:broader mgdm:ArableLand ;
+    eCH-0265:exactMatch cultivationtype:550 .
+
+mgdm:551 a eCH-0265:GeodataCrop ;
+    schema:identifier "551" ;
+    schema:name "Einjährige Beeren (z.B. Erdbeeren)"@de,
+        "Baies annuelles (p.ex. fraises)"@fr,
+        "Bacche annuali (p.es. fragole)"@it ;
+    eCH-0265:overlapping false ;
+    eCH-0265:biodiversityPromotionAreaQualityLevelOne false ;
+    eCH-0265:specialCrop true ;
+    skos:inScheme mgdm:ConceptScheme ;
+    skos:broader mgdm:ArableLand ;
+    eCH-0265:exactMatch cultivationtype:551 .
+
+mgdm:552 a eCH-0265:GeodataCrop ;
+    schema:identifier "552" ;
+    schema:name "Einjährige nachwachsende Rohstoffe (Kenaf, usw.)"@de,
+        "Matières premières renouvelables annuelles (kénaf, etc.)"@fr,
+        "Materie prime rinnovabili annuali (kenaf, ecc.)"@it ;
+    eCH-0265:overlapping false ;
+    eCH-0265:biodiversityPromotionAreaQualityLevelOne false ;
+    eCH-0265:specialCrop false ;
+    skos:inScheme mgdm:ConceptScheme ;
+    skos:broader mgdm:ArableLand ;
+    eCH-0265:exactMatch cultivationtype:552 .
+
+mgdm:553 a eCH-0265:GeodataCrop ;
+    schema:identifier "553" ;
+    schema:name "Einjährige Gewürz- und Medizinalpflanzen"@de,
+        "Plantes aromatiques et médicinales annuelles"@fr,
+        "Piante aromatiche e medicinali annuali"@it ;
+    eCH-0265:overlapping false ;
+    eCH-0265:biodiversityPromotionAreaQualityLevelOne false ;
+    eCH-0265:specialCrop true ;
+    skos:inScheme mgdm:ConceptScheme ;
+    skos:broader mgdm:ArableLand ;
+    eCH-0265:exactMatch cultivationtype:553 .
+
+mgdm:554 a eCH-0265:GeodataCrop ;
+    schema:identifier "554" ;
+    schema:name "Einjährige gärtnerische Freilandkulturen (Blumen, Rollrasen usw.)"@de,
+        "Cultures horticoles annuelles de plein champ (fleurs, gazon en rouleaux, etc.)"@fr,
+        "Floricoltura di pieno campo annuale (fiori, manto erboso in rotoli, ecc.)"@it ;
+    eCH-0265:overlapping false ;
+    eCH-0265:biodiversityPromotionAreaQualityLevelOne false ;
+    eCH-0265:specialCrop false ;
+    skos:inScheme mgdm:ConceptScheme ;
+    skos:broader mgdm:ArableLand ;
+    eCH-0265:exactMatch cultivationtype:554 .
+
+mgdm:555 a eCH-0265:GeodataCrop ;
+    schema:identifier "555" ;
+    schema:name "Ackerschonstreifen"@de,
+        "Bande culturale extensive"@fr,
+        "Fasce di colture estensive in campicoltura"@it ;
+    schema:validTo 2022 ;
+    eCH-0265:overlapping false ;
+    eCH-0265:biodiversityPromotionAreaQualityLevelOne true ;
+    eCH-0265:specialCrop false ;
+    skos:inScheme mgdm:ConceptScheme ;
+    skos:broader mgdm:ArableLand ;
+    eCH-0265:exactMatch cultivationtype:555 .
+
+mgdm:556 a eCH-0265:GeodataCrop ;
+    schema:identifier "556" ;
+    schema:name "Buntbrache"@de,
+        "Jachère florale"@fr,
+        "Maggese fioriti"@it ;
+    eCH-0265:overlapping false ;
+    eCH-0265:biodiversityPromotionAreaQualityLevelOne true ;
+    eCH-0265:specialCrop false ;
+    skos:inScheme mgdm:ConceptScheme ;
+    skos:broader mgdm:ArableLand ;
+    eCH-0265:exactMatch cultivationtype:556 .
+
+mgdm:557 a eCH-0265:GeodataCrop ;
+    schema:identifier "557" ;
+    schema:name "Rotationsbrache"@de,
+        "Jachère tournante"@fr,
+        "Maggese da rotazione"@it ;
+    eCH-0265:overlapping false ;
+    eCH-0265:biodiversityPromotionAreaQualityLevelOne true ;
+    eCH-0265:specialCrop false ;
+    skos:inScheme mgdm:ConceptScheme ;
+    skos:broader mgdm:ArableLand ;
+    eCH-0265:exactMatch cultivationtype:557 .
+
+mgdm:559 a eCH-0265:GeodataCrop ;
+    schema:identifier "559" ;
+    schema:name "Saum auf Ackerflächen"@de,
+        "Ourlet sur terres assolées"@fr,
+        "Striscia su superficie coltiva"@it ;
+    eCH-0265:overlapping false ;
+    eCH-0265:biodiversityPromotionAreaQualityLevelOne true ;
+    eCH-0265:specialCrop false ;
+    skos:inScheme mgdm:ConceptScheme ;
+    skos:broader mgdm:ArableLand ;
+    eCH-0265:exactMatch cultivationtype:559 .
+
+mgdm:566 a eCH-0265:GeodataCrop ;
+    schema:identifier "566" ;
+    schema:name "Mohn"@de,
+        "Pavot"@fr,
+        "Papavero"@it ;
+    eCH-0265:overlapping false ;
+    eCH-0265:biodiversityPromotionAreaQualityLevelOne false ;
+    eCH-0265:specialCrop false ;
+    skos:inScheme mgdm:ConceptScheme ;
+    skos:broader mgdm:ArableLand ;
+    eCH-0265:exactMatch cultivationtype:566 .
+
+mgdm:567 a eCH-0265:GeodataCrop ;
+    schema:identifier "567" ;
+    schema:name "Saflor"@de,
+        "Carthame"@fr,
+        "Cartamo"@it ;
+    eCH-0265:overlapping false ;
+    eCH-0265:biodiversityPromotionAreaQualityLevelOne false ;
+    eCH-0265:specialCrop false ;
+    skos:inScheme mgdm:ConceptScheme ;
+    skos:broader mgdm:ArableLand ;
+    eCH-0265:exactMatch cultivationtype:567 .
+
+mgdm:568 a eCH-0265:GeodataCrop ;
+    schema:identifier "568" ;
+    schema:name "Linsen"@de,
+        "Lentilles"@fr,
+        "Lenticchie"@it ;
+    eCH-0265:overlapping false ;
+    eCH-0265:biodiversityPromotionAreaQualityLevelOne false ;
+    eCH-0265:specialCrop false ;
+    skos:inScheme mgdm:ConceptScheme ;
+    skos:broader mgdm:ArableLand ;
+    eCH-0265:exactMatch cultivationtype:568 .
+
+mgdm:569 a eCH-0265:GeodataCrop ;
+    schema:identifier "569" ;
+    schema:name "Mischungen von Bohnen, Wicken, Erbsen, Kichererbsen und Lupinen mit Getreide oder Leindotter, mindestens 30 % Anteil Leguminosen bei der Ernte (zur Körnergewinnung)"@de,
+        "Méteil de haricots, de vesces, de pois, de pois chiches et de lupins avec des céréales ou de la caméline, au moins 30 % de légumineuses lors de la récolte (pour la production de grains)"@fr,
+        "Miscele di fagioli, vecce, piselli, ceci e lupini con cereali o camelina sativa, almeno il 30% di quota di leguminose nel raccolto (per l’estrazione di granelli)"@it ;
+    eCH-0265:overlapping false ;
+    eCH-0265:biodiversityPromotionAreaQualityLevelOne false ;
+    eCH-0265:specialCrop false ;
+    skos:inScheme mgdm:ConceptScheme ;
+    skos:broader mgdm:ArableLand ;
+    eCH-0265:exactMatch cultivationtype:569 .
+
+mgdm:570 a eCH-0265:GeodataCrop ;
+    schema:identifier "570" ;
+    schema:name "Mischungen von Linsen mit Getreide oder Leindotter, mindestens 30 % Anteil Linsen bei der Ernte (zur Körnergewinnung)"@de,
+        "Méteil de lentilles avec des céréales ou de la caméline, au moins 30 % de lentilles lors de la récolte (pour la production de grains)"@fr,
+        "Miscele di lenticchie con cereali o camelina sativa, almeno il 30% di quota di lenticchie nel raccolto (per l’estrazione di granelli)"@it ;
+    schema:validFrom 2023 ;
+    eCH-0265:overlapping false ;
+    eCH-0265:biodiversityPromotionAreaQualityLevelOne false ;
+    eCH-0265:specialCrop false ;
+    skos:inScheme mgdm:ConceptScheme ;
+    skos:broader mgdm:ArableLand ;
+    eCH-0265:exactMatch cultivationtype:570 .
+
+mgdm:572 a eCH-0265:GeodataCrop ;
+    schema:identifier "572" ;
+    schema:name "Nützlingsstreifen auf offener Ackerfläche"@de,
+        "avec des céréales ou de la caméline, au moins 30 % de lentilles lors de la récolte (pour la production de grains)"@fr,
+        "Strisce per organismi utili sulla superficie coltiva aperta"@it ;
+    eCH-0265:overlapping false ;
+    eCH-0265:biodiversityPromotionAreaQualityLevelOne false ;
+    eCH-0265:specialCrop false ;
+    skos:inScheme mgdm:ConceptScheme ;
+    skos:broader mgdm:ArableLand ;
+    eCH-0265:exactMatch cultivationtype:572 .
+
+mgdm:573 a eCH-0265:GeodataCrop ;
+    schema:identifier "573" ;
+    schema:name "Senf"@de,
+        "Moutarde"@fr,
+        "Senape"@it ;
+    eCH-0265:overlapping false ;
+    eCH-0265:biodiversityPromotionAreaQualityLevelOne false ;
+    eCH-0265:specialCrop false ;
+    skos:inScheme mgdm:ConceptScheme ;
+    skos:broader mgdm:ArableLand ;
+    eCH-0265:exactMatch cultivationtype:573 .
+
+mgdm:574 a eCH-0265:GeodataCrop ;
+    schema:identifier "574" ;
+    schema:name "Quinoa"@de,
+        "Quinoa"@fr,
+        "Quinoa"@it ;
+    eCH-0265:overlapping false ;
+    eCH-0265:biodiversityPromotionAreaQualityLevelOne false ;
+    eCH-0265:specialCrop false ;
+    skos:inScheme mgdm:ConceptScheme ;
+    skos:broader mgdm:ArableLand ;
+    eCH-0265:exactMatch cultivationtype:574 .
+
+mgdm:575 a eCH-0265:GeodataCrop ;
+    schema:identifier "575" ;
+    schema:name "Hanf zur Nutzung der Samen"@de,
+        "Chanvre pour l’utilisation des graines"@fr,
+        "Canapa per i semi"@it ;
+    schema:validFrom 2022 ;
+    eCH-0265:overlapping false ;
+    eCH-0265:biodiversityPromotionAreaQualityLevelOne false ;
+    eCH-0265:specialCrop false ;
+    skos:inScheme mgdm:ConceptScheme ;
+    skos:broader mgdm:ArableLand ;
+    eCH-0265:exactMatch cultivationtype:575 .
+
+mgdm:576 a eCH-0265:GeodataCrop ;
+    schema:identifier "576" ;
+    schema:name "Hanf zur Fasernutzung"@de,
+        "Chanvre pour l’utilisation des fibres"@fr,
+        "Canapa da fibra"@it ;
+    schema:validFrom 2022 ;
+    eCH-0265:overlapping false ;
+    eCH-0265:biodiversityPromotionAreaQualityLevelOne false ;
+    eCH-0265:specialCrop false ;
+    skos:inScheme mgdm:ConceptScheme ;
+    skos:broader mgdm:ArableLand ;
+    eCH-0265:exactMatch cultivationtype:576 .
+
+mgdm:577 a eCH-0265:GeodataCrop ;
+    schema:identifier "577" ;
+    schema:name "Anderer Hanf"@de,
+        "Autre chanvre"@fr,
+        "Altra canapa"@it ;
+    schema:validFrom 2022 ;
+    eCH-0265:overlapping false ;
+    eCH-0265:biodiversityPromotionAreaQualityLevelOne false ;
+    eCH-0265:specialCrop false ;
+    skos:inScheme mgdm:ConceptScheme ;
+    skos:broader mgdm:ArableLand ;
+    eCH-0265:exactMatch cultivationtype:577 .
+
+mgdm:578 a eCH-0265:GeodataCrop ;
+    schema:identifier "578" ;
+    schema:name "Hirse zur Körnergewinnung"@de,
+        "Millet grains"@fr,
+        "Miglio per l’estrazione di gra-nelli"@it ;
+    schema:validFrom 2023 ;
+    eCH-0265:overlapping false ;
+    eCH-0265:biodiversityPromotionAreaQualityLevelOne false ;
+    eCH-0265:specialCrop false ;
+    skos:inScheme mgdm:ConceptScheme ;
+    skos:broader mgdm:ArableLand ;
+    eCH-0265:exactMatch cultivationtype:578 .
+
+mgdm:579 a eCH-0265:GeodataCrop ;
+    schema:identifier "579" ;
+    schema:name "Hirse zur Nutzung ganze Pflanze"@de,
+        "Millet plante entière"@fr,
+        "Miglio per la raccolta della pianta intera"@it ;
+    schema:validFrom 2023 ;
+    eCH-0265:overlapping false ;
+    eCH-0265:biodiversityPromotionAreaQualityLevelOne false ;
+    eCH-0265:specialCrop false ;
+    skos:inScheme mgdm:ConceptScheme ;
+    skos:broader mgdm:ArableLand ;
+    eCH-0265:exactMatch cultivationtype:579 .
+
+mgdm:580 a eCH-0265:GeodataCrop ;
+    schema:identifier "580" ;
+    schema:name "Sorghum zur Körnergewinnung"@de,
+        "Sorgho grains"@fr,
+        "Sorgo per l’estrazione di gra-nelli"@it ;
+    schema:validFrom 2023 ;
+    eCH-0265:overlapping false ;
+    eCH-0265:biodiversityPromotionAreaQualityLevelOne false ;
+    eCH-0265:specialCrop false ;
+    skos:inScheme mgdm:ConceptScheme ;
+    skos:broader mgdm:ArableLand ;
+    eCH-0265:exactMatch cultivationtype:580 .
+
+mgdm:581 a eCH-0265:GeodataCrop ;
+    schema:identifier "581" ;
+    schema:name "Sorghum zur Nutzung ganze Pflanze"@de,
+        "Sorgho plante entière"@fr,
+        "Sorgo per la raccolta della pianta intera"@it ;
+    schema:validFrom 2023 ;
+    eCH-0265:overlapping false ;
+    eCH-0265:biodiversityPromotionAreaQualityLevelOne false ;
+    eCH-0265:specialCrop false ;
+    skos:inScheme mgdm:ConceptScheme ;
+    skos:broader mgdm:ArableLand ;
+    eCH-0265:exactMatch cultivationtype:581 .
+
+mgdm:590 a eCH-0265:GeodataCrop ;
+    schema:identifier "590" ;
+    schema:name "Sommerraps als nachwachsender Rohstoff"@de,
+        "Colza de printemps comme matière première renouvelable"@fr,
+        "Colza primaverile quale materia prima rinnovabile"@it ;
+    eCH-0265:overlapping false ;
+    eCH-0265:biodiversityPromotionAreaQualityLevelOne false ;
+    eCH-0265:specialCrop false ;
+    skos:inScheme mgdm:ConceptScheme ;
+    skos:broader mgdm:ArableLand ;
+    eCH-0265:exactMatch cultivationtype:590 .
+
+mgdm:591 a eCH-0265:GeodataCrop ;
+    schema:identifier "591" ;
+    schema:name "Winterraps als nachwachsender Rohstoff"@de,
+        "Colza d’automne comme matière première renouvelable"@fr,
+        "Colza autunnale quale materia prima rinnovabile"@it ;
+    eCH-0265:overlapping false ;
+    eCH-0265:biodiversityPromotionAreaQualityLevelOne false ;
+    eCH-0265:specialCrop false ;
+    skos:inScheme mgdm:ConceptScheme ;
+    skos:broader mgdm:ArableLand ;
+    eCH-0265:exactMatch cultivationtype:591 .
+
+mgdm:592 a eCH-0265:GeodataCrop ;
+    schema:identifier "592" ;
+    schema:name "Sonnenblumen als nachwachsender Rohstoff"@de,
+        "Tournesol comme matière première renouvelable"@fr,
+        "Girasole quale materia prima rinnovabile"@it ;
+    eCH-0265:overlapping false ;
+    eCH-0265:biodiversityPromotionAreaQualityLevelOne false ;
+    eCH-0265:specialCrop false ;
+    skos:inScheme mgdm:ConceptScheme ;
+    skos:broader mgdm:ArableLand ;
+    eCH-0265:exactMatch cultivationtype:592 .
+
+mgdm:594 a eCH-0265:GeodataCrop ;
+    schema:identifier "594" ;
+    schema:name "Offene Ackerfläche, beitragsberechtigt (regionsspezifische Biodiversitätsförderfläche)"@de,
+        "Terres ouvertes donnant droit aux contributions (surfaces de promotion de la biodiversité spécifiques à la région)"@fr,
+        "Superficie coltiva aperta, avente diritto ai contributi (superfici per la promozione della biodiversità specifiche di una regione)"@it ;
+    eCH-0265:overlapping false ;
+    eCH-0265:biodiversityPromotionAreaQualityLevelOne true ;
+    eCH-0265:specialCrop false ;
+    skos:inScheme mgdm:ConceptScheme ;
+    skos:broader mgdm:ArableLand ;
+    eCH-0265:exactMatch cultivationtype:594 .
+
+mgdm:595 a eCH-0265:GeodataCrop ;
+    schema:identifier "595" ;
+    schema:name "Übrige offene Ackerfläche, nicht beitragsberechtigt (regionsspezifische Biodiversitätsförderfläche)"@de,
+        "Autres terres ouvertes ne donnant pas droit aux contributions (surfaces de promotion de la biodiversité spécifiques à la région)"@fr,
+        "Altra superficie coltiva aperta, non avente diritto ai contributi (superfici per la promozione della biodiversità specifiche di una regione)"@it ;
+    eCH-0265:overlapping false ;
+    eCH-0265:biodiversityPromotionAreaQualityLevelOne true ;
+    eCH-0265:specialCrop false ;
+    skos:inScheme mgdm:ConceptScheme ;
+    skos:broader mgdm:ArableLand ;
+    eCH-0265:exactMatch cultivationtype:595 .
+
+mgdm:597 a eCH-0265:GeodataCrop ;
+    schema:identifier "597" ;
+    schema:name "Übrige offene Ackerfläche, beitragsberechtigt"@de,
+        "Autres terres ouvertes avec contributions"@fr,
+        "Altra superficie coltiva aperta, con contributi"@it ;
+    eCH-0265:overlapping false ;
+    eCH-0265:biodiversityPromotionAreaQualityLevelOne false ;
+    eCH-0265:specialCrop false ;
+    skos:inScheme mgdm:ConceptScheme ;
+    skos:broader mgdm:ArableLand ;
+    eCH-0265:exactMatch cultivationtype:597 .
+
+mgdm:598 a eCH-0265:GeodataCrop ;
+    schema:identifier "598" ;
+    schema:name "Übrige offene Ackerfläche, nicht beitragsberechtigt"@de,
+        "Autres terres ouvertes sans contributions"@fr,
+        "Altra superficie coltiva aperta, senza contributi"@it ;
+    eCH-0265:overlapping false ;
+    eCH-0265:biodiversityPromotionAreaQualityLevelOne false ;
+    eCH-0265:specialCrop false ;
+    skos:inScheme mgdm:ConceptScheme ;
+    skos:broader mgdm:ArableLand ;
+    eCH-0265:exactMatch cultivationtype:598 .
+
+mgdm:601 a eCH-0265:GeodataCrop ;
+    schema:identifier "601" ;
+    schema:name "Kunstwiesen (ohne Weiden)"@de,
+        "Prairies artificielles (sans les pâturages)"@fr,
+        "Prati artificiali (senza pascoli)"@it ;
+    eCH-0265:overlapping false ;
+    eCH-0265:biodiversityPromotionAreaQualityLevelOne false ;
+    eCH-0265:specialCrop false ;
+    skos:inScheme mgdm:ConceptScheme ;
+    skos:broader mgdm:ArableLand ;
+    eCH-0265:exactMatch cultivationtype:601 .
+
+mgdm:602 a eCH-0265:GeodataCrop ;
+    schema:identifier "602" ;
+    schema:name "Übrige Kunstwiese, beitragsberechtigt (z.B. Schweineweide, Geflügelweide)"@de,
+        "Autres prairies artificielles donnant droit aux contributions (p.ex. pâturages pour porcs et volaille)"@fr,
+        "Altri prati artificiali avente diritto ai contributi (p.es. pascoli riservati ai suini e al pollame)"@it ;
+    eCH-0265:overlapping false ;
+    eCH-0265:biodiversityPromotionAreaQualityLevelOne false ;
+    eCH-0265:specialCrop false ;
+    skos:inScheme mgdm:ConceptScheme ;
+    skos:broader mgdm:ArableLand ;
+    eCH-0265:exactMatch cultivationtype:602 .
+
+mgdm:611 a eCH-0265:GeodataCrop ;
+    schema:identifier "611" ;
+    schema:name "Extensiv genutzte Wiesen (ohne Weiden)"@de,
+        "Prairies extensives (sans les pâturages)"@fr,
+        "Prati estensivi (senza pascoli)"@it ;
+    eCH-0265:overlapping false ;
+    eCH-0265:biodiversityPromotionAreaQualityLevelOne true ;
+    eCH-0265:specialCrop false ;
+    skos:inScheme mgdm:ConceptScheme ;
+    skos:broader mgdm:PermanentMeadows ;
+    eCH-0265:exactMatch cultivationtype:611 .
+
+mgdm:612 a eCH-0265:GeodataCrop ;
+    schema:identifier "612" ;
+    schema:name "Wenig intensiv genutzte Wiesen (ohne Weiden)"@de,
+        "Prairies peu intensives (sans les pâturages)"@fr,
+        "Prati poco intensivi (senza pascoli)"@it ;
+    eCH-0265:overlapping false ;
+    eCH-0265:biodiversityPromotionAreaQualityLevelOne true ;
+    eCH-0265:specialCrop false ;
+    skos:inScheme mgdm:ConceptScheme ;
+    skos:broader mgdm:PermanentMeadows ;
+    eCH-0265:exactMatch cultivationtype:612 .
+
+mgdm:613 a eCH-0265:GeodataCrop ;
+    schema:identifier "613" ;
+    schema:name "Übrige Dauerwiesen (ohne Weiden)"@de,
+        "Autres prairies permanentes (sans les pâturages)"@fr,
+        "Altri prati perenni (senza pascoli)"@it ;
+    eCH-0265:overlapping false ;
+    eCH-0265:biodiversityPromotionAreaQualityLevelOne false ;
+    eCH-0265:specialCrop false ;
+    skos:inScheme mgdm:ConceptScheme ;
+    skos:broader mgdm:PermanentMeadows ;
+    eCH-0265:exactMatch cultivationtype:613 .
+
+mgdm:616 a eCH-0265:GeodataCrop ;
+    schema:identifier "616" ;
+    schema:name "Weiden (Heimweiden, übrige Weiden ohne Sömmerungsweiden)"@de,
+        "Pâturages (pâturages attenants à la ferme, autres pâturages sauf les pâturages d’estivage)"@fr,
+        "Pascoli (pascoli propri, altri pascoli senza pascoli d’estivazione)"@it ;
+    eCH-0265:overlapping false ;
+    eCH-0265:biodiversityPromotionAreaQualityLevelOne false ;
+    eCH-0265:specialCrop false ;
+    skos:inScheme mgdm:ConceptScheme ;
+    skos:broader mgdm:PermanentPastures ;
+    eCH-0265:exactMatch cultivationtype:616 .
+
+mgdm:617 a eCH-0265:GeodataCrop ;
+    schema:identifier "617" ;
+    schema:name "Extensiv genutzte Weiden"@de,
+        "Pâturages extensifs"@fr,
+        "Pascoli estensivi"@it ;
+    eCH-0265:overlapping false ;
+    eCH-0265:biodiversityPromotionAreaQualityLevelOne true ;
+    eCH-0265:specialCrop false ;
+    skos:inScheme mgdm:ConceptScheme ;
+    skos:broader mgdm:PermanentPastures ;
+    eCH-0265:exactMatch cultivationtype:617 .
+
+mgdm:618 a eCH-0265:GeodataCrop ;
+    schema:identifier "618" ;
+    schema:name "Waldweiden (ohne bewaldete Fläche)"@de,
+        "Pâturages boisés (sauf surfaces boisées)"@fr,
+        "Pascoli boschivi (senza i boschi)"@it ;
+    eCH-0265:overlapping false ;
+    eCH-0265:biodiversityPromotionAreaQualityLevelOne true ;
+    eCH-0265:specialCrop false ;
+    skos:inScheme mgdm:ConceptScheme ;
+    skos:broader mgdm:PermanentPastures ;
+    eCH-0265:exactMatch cultivationtype:618 .
+
+mgdm:621 a eCH-0265:GeodataCrop ;
+    schema:identifier "621" ;
+    schema:name "Heuwiesen im Sömmerungsgebiet, Übrige Wiesen"@de,
+        "Prairies de fauche en région d’estivage, autres"@fr,
+        "Prati da sfalcio nella regione d’estivazione, altri prati"@it ;
+    eCH-0265:overlapping false ;
+    eCH-0265:biodiversityPromotionAreaQualityLevelOne false ;
+    eCH-0265:specialCrop false ;
+    skos:inScheme mgdm:ConceptScheme ;
+    skos:broader mgdm:PermanentMeadows ;
+    eCH-0265:exactMatch cultivationtype:621 .
+
+mgdm:622 a eCH-0265:GeodataCrop ;
+    schema:identifier "622" ;
+    schema:name "Heuwiesen im Sömmerungsgebiet, Typ extensiv genutzte Wiese"@de,
+        "Prairies de fauche en région d’estivage, type prairie extensive"@fr,
+        "Prati da sfalcio nella regione d’estivazione, tipo prati sfruttati in modo estensivo"@it ;
+    eCH-0265:overlapping false ;
+    eCH-0265:biodiversityPromotionAreaQualityLevelOne true ;
+    eCH-0265:specialCrop false ;
+    skos:inScheme mgdm:ConceptScheme ;
+    skos:broader mgdm:PermanentMeadows ;
+    eCH-0265:exactMatch cultivationtype:622 .
+
+mgdm:623 a eCH-0265:GeodataCrop ;
+    schema:identifier "623" ;
+    schema:name "Heuwiesen im Sömmerungsgebiet, Typ wenig intensiv genutzte Wiese"@de,
+        "Prairies de fauche en région d’estivage, type prairie peu intensive"@fr,
+        "Prati da sfalcio nella regione d’estivazione, tipo prati sfruttati in modo poco intensivo"@it ;
+    eCH-0265:overlapping false ;
+    eCH-0265:biodiversityPromotionAreaQualityLevelOne true ;
+    eCH-0265:specialCrop false ;
+    skos:inScheme mgdm:ConceptScheme ;
+    skos:broader mgdm:PermanentMeadows ;
+    eCH-0265:exactMatch cultivationtype:623 .
+
+mgdm:625 a eCH-0265:GeodataCrop ;
+    schema:identifier "625" ;
+    schema:name "Waldweiden (ohne bewaldete Fläche)"@de,
+        "Pâturages boisés (sauf surfaces boisées)"@fr,
+        "Pascoli boschivi (senza i boschi)"@it ;
+    eCH-0265:overlapping false ;
+    eCH-0265:biodiversityPromotionAreaQualityLevelOne false ;
+    eCH-0265:specialCrop false ;
+    skos:inScheme mgdm:ConceptScheme ;
+    skos:broader mgdm:PermanentPastures ;
+    eCH-0265:exactMatch cultivationtype:625 .
+
+mgdm:631 a eCH-0265:GeodataCrop ;
+    schema:identifier "631" ;
+    schema:name "Futterleguminosen für die Samenproduktion (Vertragsanbau)"@de,
+        "Légumineuses fourragères destinées à la production de semences (contrat de culture)"@fr,
+        "Leguminose da foraggio per la produzione di sementi (coltivazione contrattuale)"@it ;
+    eCH-0265:overlapping false ;
+    eCH-0265:biodiversityPromotionAreaQualityLevelOne false ;
+    eCH-0265:specialCrop false ;
+    skos:inScheme mgdm:ConceptScheme ;
+    skos:broader mgdm:ArableLand ;
+    eCH-0265:exactMatch cultivationtype:631 .
+
+mgdm:632 a eCH-0265:GeodataCrop ;
+    schema:identifier "632" ;
+    schema:name "Futtergräser für die Samenproduktion (Vertragsanbau)"@de,
+        "Graminées fourragères destinées à la production de semences (contrat de culture)"@fr,
+        "Graminacee da foraggio per la produzione di sementi (coltivazione contrattuale)"@it ;
+    eCH-0265:overlapping false ;
+    eCH-0265:biodiversityPromotionAreaQualityLevelOne false ;
+    eCH-0265:specialCrop false ;
+    skos:inScheme mgdm:ConceptScheme ;
+    skos:broader mgdm:ArableLand ;
+    eCH-0265:exactMatch cultivationtype:632 .
+
+mgdm:634 a eCH-0265:GeodataCrop ;
+    schema:identifier "634" ;
+    schema:name "Uferwiesen entlang von Fliessgewässern (ohne Weiden)"@de,
+        "Prairies riveraines d’un cours d’eau (sauf les pâturages)"@fr,
+        "Prati rivieraschi lungo i corsi d'acqua (senza pascoli)"@it ;
+    schema:validTo 2022 ;
+    eCH-0265:overlapping false ;
+    eCH-0265:biodiversityPromotionAreaQualityLevelOne true ;
+    eCH-0265:specialCrop false ;
+    skos:inScheme mgdm:ConceptScheme ;
+    skos:broader mgdm:PermanentMeadows ;
+    eCH-0265:exactMatch cultivationtype:634 .
+
+mgdm:635 a eCH-0265:GeodataCrop ;
+    schema:identifier "635" ;
+    schema:name "Uferwiesen (ohne Weiden)"@de,
+        "Prairies riveraines (sauf les pâturages)"@fr,
+        "Prati rivieraschi (senza pascoli)"@it ;
+    schema:validFrom 2023 ;
+    eCH-0265:overlapping false ;
+    eCH-0265:biodiversityPromotionAreaQualityLevelOne true ;
+    eCH-0265:specialCrop false ;
+    skos:inScheme mgdm:ConceptScheme ;
+    skos:broader mgdm:PermanentMeadows ;
+    eCH-0265:exactMatch cultivationtype:635 .
+
+mgdm:650 a eCH-0265:GeodataCrop ;
+    schema:identifier "650" ;
+    schema:name "Übrige Dauerwiesen, beitragsberechtigt aggregiert"@de,
+        "Autres prairies permanentes, avec contributions, agrégée"@fr,
+        "Altra superficie inerbita, con contributi, aggregata"@it ;
+    schema:validTo 2022 ;
+    eCH-0265:overlapping false ;
+    eCH-0265:biodiversityPromotionAreaQualityLevelOne false ;
+    eCH-0265:specialCrop false ;
+    skos:inScheme mgdm:ConceptScheme ;
+    skos:broader mgdm:PermanentMeadows ;
+    eCH-0265:exactMatch cultivationtype:650 .
+
+mgdm:660 a eCH-0265:GeodataCrop ;
+    schema:identifier "660" ;
+    schema:name "Übrige Dauerweiden, beitragsberechtigt aggregiert"@de,
+        "Autres pâturages permanentes, avec contributions, agrégée"@fr,
+        "Altri pascoli perenni, con contributi, aggregata"@it ;
+    schema:validTo 2022 ;
+    eCH-0265:overlapping false ;
+    eCH-0265:biodiversityPromotionAreaQualityLevelOne false ;
+    eCH-0265:specialCrop false ;
+    skos:inScheme mgdm:ConceptScheme ;
+    skos:broader mgdm:PermanentPastures ;
+    eCH-0265:exactMatch cultivationtype:660 .
+
+mgdm:693 a eCH-0265:GeodataCrop ;
+    schema:identifier "693" ;
+    schema:name "Regionsspezifische Biodiversitätsförderflächen (Weiden)"@de,
+        "Surfaces de promotion de la biodiversité spécifiques à la région (pâturages)"@fr,
+        "Superfici per la promozione della biodiversità specifiche di una regione (pascoli)"@it ;
+    eCH-0265:overlapping false ;
+    eCH-0265:biodiversityPromotionAreaQualityLevelOne true ;
+    eCH-0265:specialCrop false ;
+    skos:inScheme mgdm:ConceptScheme ;
+    skos:broader mgdm:PermanentPastures ;
+    eCH-0265:exactMatch cultivationtype:693 .
+
+mgdm:694 a eCH-0265:GeodataCrop ;
+    schema:identifier "694" ;
+    schema:name "Regionsspezifische Biodiversitätsförderfläche (Grünflächen ohne Weiden)"@de,
+        "Surfaces de promotion de la biodiversité spécifiques à la région (Surface herbagère, sauf les pâturages)"@fr,
+        "Superfici per la promozione della biodiversità specifiche di una regione (superfici inerbite, senza pascoli)"@it ;
+    eCH-0265:overlapping false ;
+    eCH-0265:biodiversityPromotionAreaQualityLevelOne true ;
+    eCH-0265:specialCrop false ;
+    skos:inScheme mgdm:ConceptScheme ;
+    skos:broader mgdm:PermanentMeadows ;
+    eCH-0265:exactMatch cultivationtype:694 .
+
+mgdm:697 a eCH-0265:GeodataCrop ;
+    schema:identifier "697" ;
+    schema:name "Übrige Grünfläche (Dauergrünfläche), beitragsberechtigt"@de,
+        "Autres surfaces herbagères (surface herbagère permanente) avec contributions"@fr,
+        "Altre superfici (permanentemente) inerbite, con contributi"@it ;
+    eCH-0265:overlapping false ;
+    eCH-0265:biodiversityPromotionAreaQualityLevelOne false ;
+    eCH-0265:specialCrop false ;
+    skos:inScheme mgdm:ConceptScheme ;
+    skos:broader mgdm:PermanentMeadows ;
+    eCH-0265:exactMatch cultivationtype:697 .
+
+mgdm:698 a eCH-0265:GeodataCrop ;
+    schema:identifier "698" ;
+    schema:name "Übrige Grünfläche (Dauergrünflächen), nicht beitragsberechtigt"@de,
+        "Autres surfaces herbagères (surface herbagère permanente) sans contributions"@fr,
+        "Altre superfici (permanentemente) inerbite, senza contributi"@it ;
+    eCH-0265:overlapping false ;
+    eCH-0265:biodiversityPromotionAreaQualityLevelOne false ;
+    eCH-0265:specialCrop false ;
+    skos:inScheme mgdm:ConceptScheme ;
+    skos:broader mgdm:PermanentMeadows ;
+    eCH-0265:exactMatch cultivationtype:698 .
+
+mgdm:701 a eCH-0265:GeodataCrop ;
+    schema:identifier "701" ;
+    schema:name "Reben"@de,
+        "Vignes"@fr,
+        "Vigna"@it ;
+    eCH-0265:overlapping false ;
+    eCH-0265:biodiversityPromotionAreaQualityLevelOne false ;
+    eCH-0265:specialCrop true ;
+    skos:inScheme mgdm:ConceptScheme ;
+    skos:broader mgdm:Vineyards ;
+    eCH-0265:exactMatch cultivationtype:701 .
+
+mgdm:702 a eCH-0265:GeodataCrop ;
+    schema:identifier "702" ;
+    schema:name "Obstanlagen (Äpfel)"@de,
+        "Cultures fruitières (pommes)"@fr,
+        "Frutteto (mele)"@it ;
+    eCH-0265:overlapping false ;
+    eCH-0265:biodiversityPromotionAreaQualityLevelOne false ;
+    eCH-0265:specialCrop true ;
+    skos:inScheme mgdm:ConceptScheme ;
+    skos:broader mgdm:Orchards ;
+    eCH-0265:exactMatch cultivationtype:702 .
+
+mgdm:703 a eCH-0265:GeodataCrop ;
+    schema:identifier "703" ;
+    schema:name "Obstanlagen (Birnen)"@de,
+        "Cultures fruitières (poires)"@fr,
+        "Frutteto (pere)"@it ;
+    eCH-0265:overlapping false ;
+    eCH-0265:biodiversityPromotionAreaQualityLevelOne false ;
+    eCH-0265:specialCrop true ;
+    skos:inScheme mgdm:ConceptScheme ;
+    skos:broader mgdm:Orchards ;
+    eCH-0265:exactMatch cultivationtype:703 .
+
+mgdm:704 a eCH-0265:GeodataCrop ;
+    schema:identifier "704" ;
+    schema:name "Obstanlagen (Steinobst)"@de,
+        "Cultures fruitières (fruits à noyau)"@fr,
+        "Frutteto (frutta a nocciolo)"@it ;
+    eCH-0265:overlapping false ;
+    eCH-0265:biodiversityPromotionAreaQualityLevelOne false ;
+    eCH-0265:specialCrop true ;
+    skos:inScheme mgdm:ConceptScheme ;
+    skos:broader mgdm:Orchards ;
+    eCH-0265:exactMatch cultivationtype:704 .
+
+mgdm:705 a eCH-0265:GeodataCrop ;
+    schema:identifier "705" ;
+    schema:name "Mehrjährige Beeren"@de,
+        "Baies pluriannuelles"@fr,
+        "Bacche pluriennali"@it ;
+    eCH-0265:overlapping false ;
+    eCH-0265:biodiversityPromotionAreaQualityLevelOne false ;
+    eCH-0265:specialCrop true ;
+    skos:inScheme mgdm:ConceptScheme ;
+    skos:broader mgdm:OtherPermanentCrops ;
+    eCH-0265:exactMatch cultivationtype:705 .
+
+mgdm:706 a eCH-0265:GeodataCrop ;
+    schema:identifier "706" ;
+    schema:name "Mehrjährige Gewürz- und Medizinalpflanzen"@de,
+        "Plantes aromatiques et plantes médicinales pluriannuelles"@fr,
+        "Piante aromatiche e medicinali pluriennali"@it ;
+    eCH-0265:overlapping false ;
+    eCH-0265:biodiversityPromotionAreaQualityLevelOne false ;
+    eCH-0265:specialCrop true ;
+    skos:inScheme mgdm:ConceptScheme ;
+    skos:broader mgdm:OtherPermanentCrops ;
+    eCH-0265:exactMatch cultivationtype:706 .
+
+mgdm:707 a eCH-0265:GeodataCrop ;
+    schema:identifier "707" ;
+    schema:name "Mehrjährige nachwachsende Rohstoffe (Chinaschilf, usw.)"@de,
+        "Matières premières renouvelables pluriannuelles (roseau de Chine, etc.)"@fr,
+        "Materie prime rinnovabili pluriennali (Miscanthus sin. ecc.)"@it ;
+    eCH-0265:overlapping false ;
+    eCH-0265:biodiversityPromotionAreaQualityLevelOne false ;
+    eCH-0265:specialCrop false ;
+    skos:inScheme mgdm:ConceptScheme ;
+    skos:broader mgdm:OtherPermanentCrops ;
+    eCH-0265:exactMatch cultivationtype:707 .
+
+mgdm:708 a eCH-0265:GeodataCrop ;
+    schema:identifier "708" ;
+    schema:name "Hopfen"@de,
+        "Houblon"@fr,
+        "Luppolo"@it ;
+    eCH-0265:overlapping false ;
+    eCH-0265:biodiversityPromotionAreaQualityLevelOne false ;
+    eCH-0265:specialCrop true ;
+    skos:inScheme mgdm:ConceptScheme ;
+    skos:broader mgdm:OtherPermanentCrops ;
+    eCH-0265:exactMatch cultivationtype:708 .
+
+mgdm:709 a eCH-0265:GeodataCrop ;
+    schema:identifier "709" ;
+    schema:name "Rhabarber"@de,
+        "Rhubarbe"@fr,
+        "Rabarbaro"@it ;
+    eCH-0265:overlapping false ;
+    eCH-0265:biodiversityPromotionAreaQualityLevelOne false ;
+    eCH-0265:specialCrop true ;
+    skos:inScheme mgdm:ConceptScheme ;
+    skos:broader mgdm:OtherPermanentCrops ;
+    eCH-0265:exactMatch cultivationtype:709 .
+
+mgdm:710 a eCH-0265:GeodataCrop ;
+    schema:identifier "710" ;
+    schema:name "Spargel"@de,
+        "Asperges"@fr,
+        "Asparagi"@it ;
+    eCH-0265:overlapping false ;
+    eCH-0265:biodiversityPromotionAreaQualityLevelOne false ;
+    eCH-0265:specialCrop true ;
+    skos:inScheme mgdm:ConceptScheme ;
+    skos:broader mgdm:OtherPermanentCrops ;
+    eCH-0265:exactMatch cultivationtype:710 .
+
+mgdm:711 a eCH-0265:GeodataCrop ;
+    schema:identifier "711" ;
+    schema:name "Pilze (Freiland)"@de,
+        "Champignons en pleine terre"@fr,
+        "Funghi (in pieno campo)"@it ;
+    eCH-0265:overlapping false ;
+    eCH-0265:biodiversityPromotionAreaQualityLevelOne false ;
+    eCH-0265:specialCrop true ;
+    skos:inScheme mgdm:ConceptScheme ;
+    skos:broader mgdm:OtherPermanentCrops ;
+    eCH-0265:exactMatch cultivationtype:711 .
+
+mgdm:712 a eCH-0265:GeodataCrop ;
+    schema:identifier "712" ;
+    schema:name "Christbäume"@de,
+        "Sapins de Noël"@fr,
+        "Alberelli di Natale"@it ;
+    eCH-0265:overlapping false ;
+    eCH-0265:biodiversityPromotionAreaQualityLevelOne false ;
+    eCH-0265:specialCrop false ;
+    skos:inScheme mgdm:ConceptScheme ;
+    skos:broader mgdm:OtherPermanentCrops ;
+    eCH-0265:exactMatch cultivationtype:712 .
+
+mgdm:713 a eCH-0265:GeodataCrop ;
+    schema:identifier "713" ;
+    schema:name "Baumschule von Forstpflanzen ausserhalb der Forstzone"@de,
+        "Pépinières de plantes forestières hors zone forestière"@fr,
+        "Vivai forestali fuori delle zone forestali"@it ;
+    eCH-0265:overlapping false ;
+    eCH-0265:biodiversityPromotionAreaQualityLevelOne false ;
+    eCH-0265:specialCrop false ;
+    skos:inScheme mgdm:ConceptScheme ;
+    skos:broader mgdm:OtherPermanentCrops ;
+    eCH-0265:exactMatch cultivationtype:713 .
+
+mgdm:714 a eCH-0265:GeodataCrop ;
+    schema:identifier "714" ;
+    schema:name "Ziersträucher, Ziergehölze und Zierstauden"@de,
+        "Buissons, arbrisseaux et arbustes ornementaux"@fr,
+        "Arbusti, arboscelli, cespugli ornamentali"@it ;
+    eCH-0265:overlapping false ;
+    eCH-0265:biodiversityPromotionAreaQualityLevelOne false ;
+    eCH-0265:specialCrop false ;
+    skos:inScheme mgdm:ConceptScheme ;
+    skos:broader mgdm:OtherPermanentCrops ;
+    eCH-0265:exactMatch cultivationtype:714 .
+
+mgdm:715 a eCH-0265:GeodataCrop ;
+    schema:identifier "715" ;
+    schema:name "Übrige Baumschulen (Rosen, Früchte, usw.)"@de,
+        "Autres pépinières (roses, fruits, etc.)"@fr,
+        "Altri vivai (rose, frutta, ecc.)"@it ;
+    schema:validTo 2022 ;
+    eCH-0265:overlapping false ;
+    eCH-0265:biodiversityPromotionAreaQualityLevelOne false ;
+    eCH-0265:specialCrop false ;
+    skos:inScheme mgdm:ConceptScheme ;
+    skos:broader mgdm:OtherPermanentCrops ;
+    eCH-0265:exactMatch cultivationtype:715 .
+
+mgdm:717 a eCH-0265:GeodataCrop ;
+    schema:identifier "717" ;
+    schema:name "Rebflächen mit natürlicher Artenvielfalt"@de,
+        "Surfaces viticoles présentant une biodiversité naturelle"@fr,
+        "Vigneti con biodiversità naturale"@it ;
+    eCH-0265:overlapping false ;
+    eCH-0265:biodiversityPromotionAreaQualityLevelOne true ;
+    eCH-0265:specialCrop true ;
+    skos:inScheme mgdm:ConceptScheme ;
+    skos:broader mgdm:Vineyards ;
+    eCH-0265:exactMatch cultivationtype:717 .
+
+mgdm:718 a eCH-0265:GeodataCrop ;
+    schema:identifier "718" ;
+    schema:name "Trüffelanlagen"@de,
+        "Truffières"@fr,
+        "Tartufaie"@it ;
+    eCH-0265:overlapping false ;
+    eCH-0265:biodiversityPromotionAreaQualityLevelOne false ;
+    eCH-0265:specialCrop false ;
+    skos:inScheme mgdm:ConceptScheme ;
+    skos:broader mgdm:OtherPermanentCrops ;
+    eCH-0265:exactMatch cultivationtype:718 .
+
+mgdm:719 a eCH-0265:GeodataCrop ;
+    schema:identifier "719" ;
+    schema:name "Maulbeerbaumanlagen (Fütterung Seidenraupen)"@de,
+        "Cultures de mûriers (alimentation des vers à soie)"@fr,
+        "Coltivazioni di gelsi (foraggiamento dei bachi da seta)"@it ;
+    eCH-0265:overlapping false ;
+    eCH-0265:biodiversityPromotionAreaQualityLevelOne false ;
+    eCH-0265:specialCrop false ;
+    skos:inScheme mgdm:ConceptScheme ;
+    skos:broader mgdm:OtherPermanentCrops ;
+    eCH-0265:exactMatch cultivationtype:719 .
+
+mgdm:720 a eCH-0265:GeodataCrop ;
+    schema:identifier "720" ;
+    schema:name "Gepflegte Selven (Edelkastanienbäume)"@de,
+        "Châtaigneraies entretenues (surface)"@fr,
+        "Selve curate (castagni)"@it ;
+    eCH-0265:overlapping false ;
+    eCH-0265:biodiversityPromotionAreaQualityLevelOne false ;
+    eCH-0265:specialCrop false ;
+    skos:inScheme mgdm:ConceptScheme ;
+    skos:broader mgdm:OtherPermanentCrops ;
+    eCH-0265:exactMatch cultivationtype:720 .
+
+mgdm:721 a eCH-0265:GeodataCrop ;
+    schema:identifier "721" ;
+    schema:name "Mehrjährige gärtnerische Freilandkulturen (nicht im Gewächshaus)"@de,
+        "Cultures horticoles pluriannuelles de plein air (pas en serres)"@fr,
+        "Floricoltura di pieno campo pluriennale (non in serra)"@it ;
+    eCH-0265:overlapping false ;
+    eCH-0265:biodiversityPromotionAreaQualityLevelOne false ;
+    eCH-0265:specialCrop false ;
+    skos:inScheme mgdm:ConceptScheme ;
+    skos:broader mgdm:OtherPermanentCrops ;
+    eCH-0265:exactMatch cultivationtype:721 .
+
+mgdm:722 a eCH-0265:GeodataCrop ;
+    schema:identifier "722" ;
+    schema:name "Baumschulen von Reben"@de,
+        "Pépinières viticoles"@fr,
+        "Vivai viticoli"@it ;
+    eCH-0265:overlapping false ;
+    eCH-0265:biodiversityPromotionAreaQualityLevelOne false ;
+    eCH-0265:specialCrop false ;
+    skos:inScheme mgdm:ConceptScheme ;
+    skos:broader mgdm:OtherPermanentCrops ;
+    eCH-0265:exactMatch cultivationtype:722 .
+
+mgdm:723 a eCH-0265:GeodataCrop ;
+    schema:identifier "723" ;
+    schema:name "Baumschulen von Obst und Beeren"@de,
+        "Pépinière de fruits et de baies"@fr,
+        "Vivaio di alberi da frutto e bacche"@it ;
+    schema:validFrom 2023 ;
+    eCH-0265:overlapping false ;
+    eCH-0265:biodiversityPromotionAreaQualityLevelOne false ;
+    eCH-0265:specialCrop false ;
+    skos:inScheme mgdm:ConceptScheme ;
+    skos:broader mgdm:OtherPermanentCrops ;
+    eCH-0265:exactMatch cultivationtype:723 .
+
+mgdm:724 a eCH-0265:GeodataCrop ;
+    schema:identifier "724" ;
+    schema:name "Übrige Baumschulen (Rosen, Zierstauden, usw.)"@de,
+        "Autres pépinières (rosiers, plantes ornementales, etc.)"@fr,
+        "Altri vivai (rose, arbusti ornamentali, ecc.)"@it ;
+    schema:validFrom 2023 ;
+    eCH-0265:overlapping false ;
+    eCH-0265:biodiversityPromotionAreaQualityLevelOne false ;
+    eCH-0265:specialCrop false ;
+    skos:inScheme mgdm:ConceptScheme ;
+    skos:broader mgdm:OtherPermanentCrops ;
+    eCH-0265:exactMatch cultivationtype:724 .
+
+mgdm:725 a eCH-0265:GeodataCrop ;
+    schema:identifier "725" ;
+    schema:name "Permakultur"@de,
+        "Permaculture"@fr,
+        "Permacultura"@it ;
+    eCH-0265:overlapping false ;
+    eCH-0265:biodiversityPromotionAreaQualityLevelOne false ;
+    eCH-0265:specialCrop true ;
+    skos:inScheme mgdm:ConceptScheme ;
+    skos:broader mgdm:OtherPermanentCrops ;
+    eCH-0265:exactMatch cultivationtype:725 .
+
+mgdm:730 a eCH-0265:GeodataCrop ;
+    schema:identifier "730" ;
+    schema:name "Obstanlagen aggregiert"@de,
+        "Cultures fruitières agrégée"@fr,
+        "Frutteti aggregata"@it ;
+    eCH-0265:overlapping false ;
+    eCH-0265:biodiversityPromotionAreaQualityLevelOne false ;
+    eCH-0265:specialCrop true ;
+    skos:inScheme mgdm:ConceptScheme ;
+    skos:broader mgdm:Orchards ;
+    eCH-0265:exactMatch cultivationtype:730 .
+
+mgdm:731 a eCH-0265:GeodataCrop ;
+    schema:identifier "731" ;
+    schema:name "Andere Obstanlagen (Kiwis, Holunder usw.)"@de,
+        "Autres cultures fruitières (kiwis, sureau, etc.)"@fr,
+        "Altri frutteti (kiwi, sambuco, ecc.)"@it ;
+    eCH-0265:overlapping false ;
+    eCH-0265:biodiversityPromotionAreaQualityLevelOne false ;
+    eCH-0265:specialCrop true ;
+    skos:inScheme mgdm:ConceptScheme ;
+    skos:broader mgdm:Orchards ;
+    eCH-0265:exactMatch cultivationtype:731 .
+
+mgdm:735 a eCH-0265:GeodataCrop ;
+    schema:identifier "735" ;
+    schema:name "Reben (regionsspezifische Biodiversitätsförderflächen)"@de,
+        "Vignes (surfaces de promotion de la biodiversité spécifiques à la ré-gion)"@fr,
+        "Vigna (superfici per la promozione della biodiversità specifiche di una regione)"@it ;
+    eCH-0265:overlapping false ;
+    eCH-0265:biodiversityPromotionAreaQualityLevelOne true ;
+    eCH-0265:specialCrop true ;
+    skos:inScheme mgdm:ConceptScheme ;
+    skos:broader mgdm:Vineyards ;
+    eCH-0265:exactMatch cultivationtype:735 .
+
+mgdm:750 a eCH-0265:GeodataCrop ;
+    schema:identifier "750" ;
+    schema:name "Übrige Dauerkulturen, beitragsberechtigt, aggregiert"@de,
+        "Autres surfaces de cultures pérennes, avec contributions, agrégée"@fr,
+        "Altre colture perenni, con contributi, aggregata"@it ;
+    eCH-0265:overlapping false ;
+    eCH-0265:biodiversityPromotionAreaQualityLevelOne false ;
+    eCH-0265:specialCrop false ;
+    skos:inScheme mgdm:ConceptScheme ;
+    skos:broader mgdm:OtherPermanentCrops ;
+    eCH-0265:exactMatch cultivationtype:750 .
+
+mgdm:760 a eCH-0265:GeodataCrop ;
+    schema:identifier "760" ;
+    schema:name "Dauerkulturen, nicht beitragsberechtigt, aggregiert"@de,
+        "Surfaces de cultures pérennes, sans contributions, agrégée"@fr,
+        "Colture perenni, senza contributi, aggregata"@it ;
+    schema:validTo 2022 ;
+    eCH-0265:overlapping false ;
+    eCH-0265:biodiversityPromotionAreaQualityLevelOne false ;
+    eCH-0265:specialCrop false ;
+    skos:inScheme mgdm:ConceptScheme ;
+    skos:broader mgdm:OtherPermanentCrops ;
+    eCH-0265:exactMatch cultivationtype:760 .
+
+mgdm:797 a eCH-0265:GeodataCrop ;
+    schema:identifier "797" ;
+    schema:name "Übrige Flächen mit Dauerkulturen, beitragsberechtigt"@de,
+        "Autres surfaces de cultures pérennes, avec contributions"@fr,
+        "Altre superfici con colture perenni, con contributi"@it ;
+    eCH-0265:overlapping false ;
+    eCH-0265:biodiversityPromotionAreaQualityLevelOne false ;
+    eCH-0265:specialCrop false ;
+    skos:inScheme mgdm:ConceptScheme ;
+    skos:broader mgdm:OtherPermanentCrops ;
+    eCH-0265:exactMatch cultivationtype:797 .
+
+mgdm:798 a eCH-0265:GeodataCrop ;
+    schema:identifier "798" ;
+    schema:name "Übrige Flächen mit Dauerkulturen, nicht beitragsberechtigt"@de,
+        "Autres surfaces de cultures pérennes, sans contributions"@fr,
+        "Altre superfici con colture perenni, senza contributi"@it ;
+    eCH-0265:overlapping false ;
+    eCH-0265:biodiversityPromotionAreaQualityLevelOne false ;
+    eCH-0265:specialCrop false ;
+    skos:inScheme mgdm:ConceptScheme ;
+    skos:broader mgdm:OtherPermanentCrops ;
+    eCH-0265:exactMatch cultivationtype:798 .
+
+mgdm:801 a eCH-0265:GeodataCrop ;
+    schema:identifier "801" ;
+    schema:name "Gemüsekulturen in Gewächshäusern mit festem Fundament"@de,
+        "Cultures maraîchères sous abri avec fondations permanentes"@fr,
+        "Colture orticole in serre con fondamenta fisse"@it ;
+    eCH-0265:overlapping false ;
+    eCH-0265:biodiversityPromotionAreaQualityLevelOne false ;
+    eCH-0265:specialCrop true ;
+    skos:inScheme mgdm:ConceptScheme ;
+    skos:broader mgdm:ProtectedCultivation ;
+    eCH-0265:exactMatch cultivationtype:801 .
+
+mgdm:802 a eCH-0265:GeodataCrop ;
+    schema:identifier "802" ;
+    schema:name "Übrige Spezialkulturen in Gewächshäusern mit festem Fundament"@de,
+        "Autres cultures spéciales sous abri avec fondations permanentes"@fr,
+        "Altre colture speciali in serre con fondamenta fisse"@it ;
+    eCH-0265:overlapping false ;
+    eCH-0265:biodiversityPromotionAreaQualityLevelOne false ;
+    eCH-0265:specialCrop true ;
+    skos:inScheme mgdm:ConceptScheme ;
+    skos:broader mgdm:ProtectedCultivation ;
+    eCH-0265:exactMatch cultivationtype:802 .
+
+mgdm:803 a eCH-0265:GeodataCrop ;
+    schema:identifier "803" ;
+    schema:name "Gärtnerische Kulturen in Gewächshäusern mit festem Fundament"@de,
+        "Cultures horticoles sous abri avec fondations permanentes"@fr,
+        "Floricoltura in serre con fondamenta fisse"@it ;
+    eCH-0265:overlapping false ;
+    eCH-0265:biodiversityPromotionAreaQualityLevelOne false ;
+    eCH-0265:specialCrop false ;
+    skos:inScheme mgdm:ConceptScheme ;
+    skos:broader mgdm:ProtectedCultivation ;
+    eCH-0265:exactMatch cultivationtype:803 .
+
+mgdm:804 a eCH-0265:GeodataCrop ;
+    schema:identifier "804" ;
+    schema:name "Beerenkulturen in Gewächshäusern mit festem Fundament"@de,
+        "Cultures des baies sous serres avec fondations permanentes"@fr,
+        "Colture bacche in serra con fondamenta fisse"@it ;
+    schema:validFrom 2023 ;
+    eCH-0265:overlapping false ;
+    eCH-0265:biodiversityPromotionAreaQualityLevelOne false ;
+    eCH-0265:specialCrop true ;
+    skos:inScheme mgdm:ConceptScheme ;
+    skos:broader mgdm:ProtectedCultivation ;
+    eCH-0265:exactMatch cultivationtype:804 .
+
+mgdm:806 a eCH-0265:GeodataCrop ;
+    schema:identifier "806" ;
+    schema:name "Gemüsekulturen in geschütztem Anbau ohne festes Fundament"@de,
+        "Cultures maraîchères sous abri sans fondations permanentes"@fr,
+        "Colture orticole in serre senza fondamenta fisse"@it ;
+    schema:validTo 2022 ;
+    eCH-0265:overlapping false ;
+    eCH-0265:biodiversityPromotionAreaQualityLevelOne false ;
+    eCH-0265:specialCrop true ;
+    skos:inScheme mgdm:ConceptScheme ;
+    skos:broader mgdm:ProtectedCultivation ;
+    eCH-0265:exactMatch cultivationtype:806 .
+
+mgdm:807 a eCH-0265:GeodataCrop ;
+    schema:identifier "807" ;
+    schema:name "Übrige Spezialkulturen in geschütztem Anbau ohne festes Fundament"@de,
+        "Autres cultures spéciales sous abri sans fondations permanentes"@fr,
+        "Altre colture speciali in serre senza fondamenta fisse"@it ;
+    eCH-0265:overlapping false ;
+    eCH-0265:biodiversityPromotionAreaQualityLevelOne false ;
+    eCH-0265:specialCrop true ;
+    skos:inScheme mgdm:ConceptScheme ;
+    skos:broader mgdm:ProtectedCultivation ;
+    eCH-0265:exactMatch cultivationtype:807 .
+
+mgdm:808 a eCH-0265:GeodataCrop ;
+    schema:identifier "808" ;
+    schema:name "Gärtnerische Kulturen in geschütztem Anbau ohne festes Fundament"@de,
+        "Cultures horticoles sous abri sans fondations permanentes"@fr,
+        "Floricoltura in serre senza fondamenta fisse"@it ;
+    eCH-0265:overlapping false ;
+    eCH-0265:biodiversityPromotionAreaQualityLevelOne false ;
+    eCH-0265:specialCrop false ;
+    skos:inScheme mgdm:ConceptScheme ;
+    skos:broader mgdm:ProtectedCultivation ;
+    eCH-0265:exactMatch cultivationtype:808 .
+
+mgdm:810 a eCH-0265:GeodataCrop ;
+    schema:identifier "810" ;
+    schema:name "Pilze in geschütztem Anbau mit festem Fundament"@de,
+        "Champignons sous abri avec fondations permanentes"@fr,
+        "Funghi coltivati al coperto con fondamenta fisse"@it ;
+    eCH-0265:overlapping false ;
+    eCH-0265:biodiversityPromotionAreaQualityLevelOne false ;
+    eCH-0265:specialCrop true ;
+    skos:inScheme mgdm:ConceptScheme ;
+    skos:broader mgdm:ProtectedCultivation ;
+    eCH-0265:exactMatch cultivationtype:810 .
+
+mgdm:811 a eCH-0265:GeodataCrop ;
+    schema:identifier "811" ;
+    schema:name "Gemüsekulturen in geschütztem Anbau ohne festes Fundament; im gewachsenen Boden"@de,
+        "Cultures maraîchères sous abri sans fondations permanentes; sur sol naturel"@fr,
+        "Colture orticole coltivate al coperto senza fondamenta fisse; nel terreno naturale"@it ;
+    schema:validFrom 2023 ;
+    eCH-0265:overlapping false ;
+    eCH-0265:biodiversityPromotionAreaQualityLevelOne false ;
+    eCH-0265:specialCrop true ;
+    skos:inScheme mgdm:ConceptScheme ;
+    skos:broader mgdm:ProtectedCultivation ;
+    eCH-0265:exactMatch cultivationtype:811 .
+
+mgdm:812 a eCH-0265:GeodataCrop ;
+    schema:identifier "812" ;
+    schema:name "Gemüsekulturen in geschütztem Anbau ohne festes Fundament; auf Pflanztischen oder -gestellen"@de,
+        "Cultures maraîchères sous abri sans fondations permanentes; sur des tables de plantation ou des étagères"@fr,
+        "Colture orticole coltivate al coperto senza fondamenta fisse; su tavole di piantagione o rastrelliere"@it ;
+    schema:validFrom 2023 ;
+    eCH-0265:overlapping false ;
+    eCH-0265:biodiversityPromotionAreaQualityLevelOne false ;
+    eCH-0265:specialCrop true ;
+    skos:inScheme mgdm:ConceptScheme ;
+    skos:broader mgdm:ProtectedCultivation ;
+    eCH-0265:exactMatch cultivationtype:812 .
+
+mgdm:813 a eCH-0265:GeodataCrop ;
+    schema:identifier "813" ;
+    schema:name "Beerenkulturen in geschütztem Anbau ohne festes Fundament; im gewachsenen Boden"@de,
+        "Cultures des baies sous abri sans fondations permanentes; sur sol naturel"@fr,
+        "Colture di bacche coltivate al coperto senza fondamenta fisse; nel terreno naturale"@it ;
+    schema:validFrom 2023 ;
+    eCH-0265:overlapping false ;
+    eCH-0265:biodiversityPromotionAreaQualityLevelOne false ;
+    eCH-0265:specialCrop true ;
+    skos:inScheme mgdm:ConceptScheme ;
+    skos:broader mgdm:ProtectedCultivation ;
+    eCH-0265:exactMatch cultivationtype:813 .
+
+mgdm:814 a eCH-0265:GeodataCrop ;
+    schema:identifier "814" ;
+    schema:name "Beerenkulturen in geschütztem Anbau ohne festes Fundament; auf Pflanztischen oder -gestellen"@de,
+        "Cultures des baies sous abri sans fondations permanentes; sur des tables de plantation ou  des étagères"@fr,
+        "Colture di bacche coltivate al coperto senza fondamenta fisse; su tavole di piantagione o rastrelliere"@it ;
+    schema:validFrom 2023 ;
+    eCH-0265:overlapping false ;
+    eCH-0265:biodiversityPromotionAreaQualityLevelOne false ;
+    eCH-0265:specialCrop true ;
+    skos:inScheme mgdm:ConceptScheme ;
+    skos:broader mgdm:ProtectedCultivation ;
+    eCH-0265:exactMatch cultivationtype:814 .
+
+mgdm:830 a eCH-0265:GeodataCrop ;
+    schema:identifier "830" ;
+    schema:name "Kulturen in ganzjährig geschütztem Anbau, beitragsberechtigt aggregiert"@de,
+        "Cultures sous abri sans fondations permanentes, avec contributions, agrégée"@fr,
+        "Superfici con colture protette tutto l’anno, con contributi, aggregata"@it ;
+    eCH-0265:overlapping false ;
+    eCH-0265:biodiversityPromotionAreaQualityLevelOne false ;
+    eCH-0265:specialCrop false ;
+    skos:inScheme mgdm:ConceptScheme ;
+    skos:broader mgdm:ProtectedCultivation ;
+    eCH-0265:exactMatch cultivationtype:830 .
+
+mgdm:840 a eCH-0265:GeodataCrop ;
+    schema:identifier "840" ;
+    schema:name "Kulturen in ganzjährig geschütztem Anbau, nicht beitragsberechtigt aggregiert"@de,
+        "Cultures sous abri sans fondations permanentes, sans contributions, agrégée"@fr,
+        "Superfici con colture protette tutto l’anno, senza contributi, aggregata"@it ;
+    schema:validTo 2022 ;
+    eCH-0265:overlapping false ;
+    eCH-0265:biodiversityPromotionAreaQualityLevelOne false ;
+    eCH-0265:specialCrop false ;
+    skos:inScheme mgdm:ConceptScheme ;
+    skos:broader mgdm:ProtectedCultivation ;
+    eCH-0265:exactMatch cultivationtype:840 .
+
+mgdm:847 a eCH-0265:GeodataCrop ;
+    schema:identifier "847" ;
+    schema:name "Übrige Kulturen in geschütztem Anbau ohne festes Fundament, beitragsberechtigt"@de,
+        "Autres cultures sous abri sans fondations permanentes, avec contributions"@fr,
+        "Altre colture coltivate al coperto senza fondamenta fisse, con contributi"@it ;
+    eCH-0265:overlapping false ;
+    eCH-0265:biodiversityPromotionAreaQualityLevelOne false ;
+    eCH-0265:specialCrop false ;
+    skos:inScheme mgdm:ConceptScheme ;
+    skos:broader mgdm:ProtectedCultivation ;
+    eCH-0265:exactMatch cultivationtype:847 .
+
+mgdm:848 a eCH-0265:GeodataCrop ;
+    schema:identifier "848" ;
+    schema:name "Übrige Kulturen in geschütztem Anbau mit festem Fundament"@de,
+        "Autres cultures sous abri avec fondations permanentes"@fr,
+        "Altre colture coltivate al coperto con fondamenta fisse"@it ;
+    eCH-0265:overlapping false ;
+    eCH-0265:biodiversityPromotionAreaQualityLevelOne false ;
+    eCH-0265:specialCrop false ;
+    skos:inScheme mgdm:ConceptScheme ;
+    skos:broader mgdm:ProtectedCultivation ;
+    eCH-0265:exactMatch cultivationtype:848 .
+
+mgdm:849 a eCH-0265:GeodataCrop ;
+    schema:identifier "849" ;
+    schema:name "Übrige Kulturen in geschütztem Anbau ohne festes Fundament, nicht beitragsberechtigt"@de,
+        "Autres cultures sous abri sans fondations permanentes, sans contributions"@fr,
+        "Altre colture coltivate al coperto senza fondamenta fisse, senza contributi"@it ;
+    eCH-0265:overlapping false ;
+    eCH-0265:biodiversityPromotionAreaQualityLevelOne false ;
+    eCH-0265:specialCrop false ;
+    skos:inScheme mgdm:ConceptScheme ;
+    skos:broader mgdm:ProtectedCultivation ;
+    eCH-0265:exactMatch cultivationtype:849 .
+
+mgdm:851 a eCH-0265:GeodataCrop ;
+    schema:identifier "851" ;
+    schema:name "Streueflächen in der landwirtschaftlichen Nutzfläche"@de,
+        "Surfaces à litière dans la surface agricole utile"@fr,
+        "Terreni da strame all’interno della superficie agricola utilizzata"@it ;
+    eCH-0265:overlapping false ;
+    eCH-0265:biodiversityPromotionAreaQualityLevelOne true ;
+    eCH-0265:specialCrop false ;
+    skos:inScheme mgdm:ConceptScheme ;
+    skos:broader mgdm:LitterMeadows ;
+    eCH-0265:exactMatch cultivationtype:851 .
+
+mgdm:852 a eCH-0265:GeodataCrop ;
+    schema:identifier "852" ;
+    schema:name "Hecken-, Feld- und Ufergehölze (mit Krautsaum)"@de,
+        "Haies, bosquets champêtres et berges boisées (avec la bande herbeuse)"@fr,
+        "Siepi, boschetti campestri e rivieraschi (con bordo inerbito)"@it ;
+    eCH-0265:overlapping false ;
+    eCH-0265:biodiversityPromotionAreaQualityLevelOne true ;
+    eCH-0265:specialCrop false ;
+    skos:inScheme mgdm:ConceptScheme ;
+    skos:broader mgdm:HedgesAndCopses ;
+    eCH-0265:exactMatch cultivationtype:852 .
+
+mgdm:857 a eCH-0265:GeodataCrop ;
+    schema:identifier "857" ;
+    schema:name "Hecken-, Feld- und Ufergehölze (mit Pufferstreifen)"@de,
+        "Haies, bosquets champêtres et berges boisées (avec la bande herbeuse)"@fr,
+        "Siepi, boschetti campestri e rivieraschi (con fascia tampone)"@it ;
+    eCH-0265:overlapping false ;
+    eCH-0265:biodiversityPromotionAreaQualityLevelOne false ;
+    eCH-0265:specialCrop false ;
+    skos:inScheme mgdm:ConceptScheme ;
+    skos:broader mgdm:HedgesAndCopses ;
+    eCH-0265:exactMatch cultivationtype:857 .
+
+mgdm:858 a eCH-0265:GeodataCrop ;
+    schema:identifier "858" ;
+    schema:name "Hecken-, Feld- und Ufergehölze (mit Pufferstreifen) (regionsspezifische Biodiversitätsförderfläche)"@de,
+        "Haies, bosquets champêtres et berges boisées (avec la bande tampon) (Surfaces de promotion de la biodiversité spécifiques à la région)"@fr,
+        "Siepi, boschetti campestri e rivieraschi (con fascia tampone) (Superfici per la promozione della biodiversità specifiche di una regione)"@it ;
+    eCH-0265:overlapping false ;
+    eCH-0265:biodiversityPromotionAreaQualityLevelOne true ;
+    eCH-0265:specialCrop false ;
+    skos:inScheme mgdm:ConceptScheme ;
+    skos:broader mgdm:HedgesAndCopses ;
+    eCH-0265:exactMatch cultivationtype:858 .
+
+mgdm:897 a eCH-0265:GeodataCrop ;
+    schema:identifier "897" ;
+    schema:name "Übrige Flächen innerhalb der landwirtschaftlichen Nutzfläche, beitragsberechtigt"@de,
+        "Autres surfaces dans la surface agricole utile, avec contributions"@fr,
+        "Altre superfici all’interno della superficie agricola utilizzata, con contributi"@it ;
+    eCH-0265:overlapping false ;
+    eCH-0265:biodiversityPromotionAreaQualityLevelOne false ;
+    eCH-0265:specialCrop false ;
+    skos:inScheme mgdm:ConceptScheme ;
+    skos:broader mgdm:OtherAreasWithinAgriculturalArea ;
+    eCH-0265:exactMatch cultivationtype:897 .
+
+mgdm:898 a eCH-0265:GeodataCrop ;
+    schema:identifier "898" ;
+    schema:name "Übrige Flächen innerhalb der landwirtschaftlichen Nutzfläche, nicht beitragsberechtigt"@de,
+        "Autres surfaces dans la surface agricole utile, sans contributions"@fr,
+        "Altre superfici all’interno della superficie agricola utilizzata, senza contributi"@it ;
+    eCH-0265:overlapping false ;
+    eCH-0265:biodiversityPromotionAreaQualityLevelOne false ;
+    eCH-0265:specialCrop false ;
+    skos:inScheme mgdm:ConceptScheme ;
+    skos:broader mgdm:OtherAreasWithinAgriculturalArea ;
+    eCH-0265:exactMatch cultivationtype:898 .
+
+mgdm:901 a eCH-0265:GeodataCrop ;
+    schema:identifier "901" ;
+    schema:name "Wald"@de,
+        "Forêt"@fr,
+        "Bosco"@it ;
+    eCH-0265:overlapping false ;
+    eCH-0265:biodiversityPromotionAreaQualityLevelOne false ;
+    eCH-0265:specialCrop false ;
+    skos:inScheme mgdm:ConceptScheme ;
+    skos:broader mgdm:Forest ;
+    eCH-0265:exactMatch cultivationtype:901 .
+
+mgdm:902 a eCH-0265:GeodataCrop ;
+    schema:identifier "902" ;
+    schema:name "Übrige unproduktive Flächen (z.B. gemulchte Flächen, stark verunkrautete Flächen, Hecken ohne Pufferstreifen)"@de,
+        "Surfaces improductives (p. ex. haies sans les bandes tampons, surfaces broyées, surfaces avec un degré élevé de mauvaises herbes)"@fr,
+        "Altre superfici improduttive (p.es. siepi senza fascia tampone, superfici pacciamate, superfici con elevata presenza di malerbe)"@it ;
+    eCH-0265:overlapping false ;
+    eCH-0265:biodiversityPromotionAreaQualityLevelOne false ;
+    eCH-0265:specialCrop false ;
+    skos:inScheme mgdm:ConceptScheme ;
+    skos:broader mgdm:AreasOutsideAgriculturalArea ;
+    eCH-0265:exactMatch cultivationtype:902 .
+
+mgdm:903 a eCH-0265:GeodataCrop ;
+    schema:identifier "903" ;
+    schema:name "Flächen ohne landwirtschaftliche Hauptzweckbestimmung (erschlossenes Bauland, Spiel-, Reit-, Camping-, Golf-, Flug- und Militärplätze oder ausgemarchte Bereiche von Eisenbahnen, öffentlichen Strassen und Gewässern)"@de,
+        "Surfaces dont l’affectation principale n’est pas l’exploitation agricole (terrains à bâtir équipés et surfaces comprises dans les terrains de golf et de camping, aérodromes et terrains d’entraînement militaire, surfaces délimitées des bas-côtés des lignes de chemins de fer, de routes publiques, de cours et de plans d’eau)"@fr,
+        "Superfici la cui destinazione principale non è l’utilizzazione agricola (quelle inserite in terreni edificabili urbanizzati, da golf, da equitazione, da campeggio, di aerodromi e d’esercitazione militare o che rientrano nella zona delimitata di ferrovie, strade pubbliche e corsi d’acqua)"@it ;
+    eCH-0265:overlapping false ;
+    eCH-0265:biodiversityPromotionAreaQualityLevelOne false ;
+    eCH-0265:specialCrop false ;
+    skos:inScheme mgdm:ConceptScheme ;
+    skos:broader mgdm:AreasOutsideAgriculturalArea ;
+    eCH-0265:exactMatch cultivationtype:903 .
+
+mgdm:904 a eCH-0265:GeodataCrop ;
+    schema:identifier "904" ;
+    schema:name "Wassergräben, Tümpel, Teiche"@de,
+        "Fossés humides, mares, étangs"@fr,
+        "Fossati umidi, stagni, pozze"@it ;
+    eCH-0265:overlapping false ;
+    eCH-0265:biodiversityPromotionAreaQualityLevelOne true ;
+    eCH-0265:specialCrop false ;
+    skos:inScheme mgdm:ConceptScheme ;
+    skos:broader mgdm:AreasOutsideAgriculturalArea ;
+    eCH-0265:exactMatch cultivationtype:904 .
+
+mgdm:905 a eCH-0265:GeodataCrop ;
+    schema:identifier "905" ;
+    schema:name "Ruderalflächen, Steinhaufen und -wälle"@de,
+        "Surfaces rudérales, tas d'épierrage et affleurements rocheux"@fr,
+        "Superfici ruderali, cumuli di pietra, affioramenti rocciosi"@it ;
+    eCH-0265:overlapping false ;
+    eCH-0265:biodiversityPromotionAreaQualityLevelOne true ;
+    eCH-0265:specialCrop false ;
+    skos:inScheme mgdm:ConceptScheme ;
+    skos:broader mgdm:AreasOutsideAgriculturalArea ;
+    eCH-0265:exactMatch cultivationtype:905 .
+
+mgdm:906 a eCH-0265:GeodataCrop ;
+    schema:identifier "906" ;
+    schema:name "Trockenmauern"@de,
+        "Murs de pierres sèches"@fr,
+        "Muri a secco"@it ;
+    eCH-0265:overlapping false ;
+    eCH-0265:biodiversityPromotionAreaQualityLevelOne true ;
+    eCH-0265:specialCrop false ;
+    skos:inScheme mgdm:ConceptScheme ;
+    skos:broader mgdm:AreasOutsideAgriculturalArea ;
+    eCH-0265:exactMatch cultivationtype:906 .
+
+mgdm:907 a eCH-0265:GeodataCrop ;
+    schema:identifier "907" ;
+    schema:name "Unbefestigte, natürliche Wege"@de,
+        "Chemins naturels non stabilisés"@fr,
+        "Sentieri e accessi naturali non consolidati"@it ;
+    eCH-0265:overlapping false ;
+    eCH-0265:biodiversityPromotionAreaQualityLevelOne false ;
+    eCH-0265:specialCrop false ;
+    skos:inScheme mgdm:ConceptScheme ;
+    skos:broader mgdm:AreasOutsideAgriculturalArea ;
+    eCH-0265:exactMatch cultivationtype:907 .
+
+mgdm:908 a eCH-0265:GeodataCrop ;
+    schema:identifier "908" ;
+    schema:name "Regionsspezifische Biodiversitätsförderflächen"@de,
+        "Surfaces de promotion de la biodiversité spécifiques à la région"@fr,
+        "Superfici per la promozione della biodiversità specifiche di una regione"@it ;
+    eCH-0265:overlapping false ;
+    eCH-0265:biodiversityPromotionAreaQualityLevelOne true ;
+    eCH-0265:specialCrop false ;
+    skos:inScheme mgdm:ConceptScheme ;
+    skos:broader mgdm:AreasOutsideAgriculturalArea ;
+    eCH-0265:exactMatch cultivationtype:908 .
+
+mgdm:909 a eCH-0265:GeodataCrop ;
+    schema:identifier "909" ;
+    schema:name "Hausgärten"@de,
+        "Jardins potager"@fr,
+        "Giardini e orti domestici"@it ;
+    eCH-0265:overlapping false ;
+    eCH-0265:biodiversityPromotionAreaQualityLevelOne false ;
+    eCH-0265:specialCrop false ;
+    skos:inScheme mgdm:ConceptScheme ;
+    skos:broader mgdm:AreasOutsideAgriculturalArea ;
+    eCH-0265:exactMatch cultivationtype:909 .
+
+mgdm:911 a eCH-0265:GeodataCrop ;
+    schema:identifier "911" ;
+    schema:name "Landwirtschaftliche Produktion in Gebäuden (z. B. Champignon, Brüsseler)"@de,
+        "Production agricole sous abri (par ex. champignons de Paris, chicorée witloof)"@fr,
+        "Produzione agricola in edifici (p.es. funghi, cicoria belga)"@it ;
+    eCH-0265:overlapping false ;
+    eCH-0265:biodiversityPromotionAreaQualityLevelOne false ;
+    eCH-0265:specialCrop false ;
+    skos:inScheme mgdm:ConceptScheme ;
+    skos:broader mgdm:AreasOutsideAgriculturalArea ;
+    eCH-0265:exactMatch cultivationtype:911 .
+
+mgdm:921 a eCH-0265:GeodataCrop ;
+    schema:identifier "921" ;
+    schema:name "Hochstamm-Feldobstbäume (Punkte oder Flächen)"@de,
+        "Arbres fruitiers champêtres haute-tige (points ou surface)"@fr,
+        "Alberi da frutto ad alto fusto nei campi (punti o superfici)"@it ;
+    eCH-0265:overlapping true ;
+    eCH-0265:biodiversityPromotionAreaQualityLevelOne true ;
+    eCH-0265:specialCrop false ;
+    skos:inScheme mgdm:ConceptScheme ;
+    eCH-0265:exactMatch cultivationtype:921 .
+
+mgdm:922 a eCH-0265:GeodataCrop ;
+    schema:identifier "922" ;
+    schema:name "Nussbäume (Punkte oder Flächen)"@de,
+        "Noyers (points ou surfaces)"@fr,
+        "Noci (Punti o superfici)"@it ;
+    eCH-0265:overlapping true ;
+    eCH-0265:biodiversityPromotionAreaQualityLevelOne true ;
+    eCH-0265:specialCrop false ;
+    skos:inScheme mgdm:ConceptScheme ;
+    eCH-0265:exactMatch cultivationtype:922 .
+
+mgdm:923 a eCH-0265:GeodataCrop ;
+    schema:identifier "923" ;
+    schema:name "Edelkastanienbäume"@de,
+        "Châtaigniers"@fr,
+        "Alberi castagni"@it ;
+    eCH-0265:overlapping true ;
+    eCH-0265:biodiversityPromotionAreaQualityLevelOne true ;
+    eCH-0265:specialCrop false ;
+    skos:inScheme mgdm:ConceptScheme ;
+    eCH-0265:exactMatch cultivationtype:923 .
+
+mgdm:924 a eCH-0265:GeodataCrop ;
+    schema:identifier "924" ;
+    schema:name "Einheimische standortgerechte Einzelbäume und Alleen (Punkte oder Flächen)"@de,
+        "Arbres isolés indigènes adaptés au site et allées d'arbres (points ou surfaces)"@fr,
+        "Alberi indigeni isolati adatti al luogo e viali alberati (Punti o superfici)"@it ;
+    eCH-0265:overlapping true ;
+    eCH-0265:biodiversityPromotionAreaQualityLevelOne true ;
+    eCH-0265:specialCrop false ;
+    skos:inScheme mgdm:ConceptScheme ;
+    eCH-0265:exactMatch cultivationtype:924 .
+
+mgdm:926 a eCH-0265:GeodataCrop ;
+    schema:identifier "926" ;
+    schema:name "Andere Bäume"@de,
+        "Autres arbres"@fr,
+        "Altri alberi"@it ;
+    schema:validFrom 2022 ;
+    eCH-0265:overlapping true ;
+    eCH-0265:biodiversityPromotionAreaQualityLevelOne false ;
+    eCH-0265:specialCrop false ;
+    skos:inScheme mgdm:ConceptScheme ;
+    eCH-0265:exactMatch cultivationtype:926 .
+
+mgdm:927 a eCH-0265:GeodataCrop ;
+    schema:identifier "927" ;
+    schema:name "Andere Bäume (regionsspezifische Biodiversitätsförderfläche)"@de,
+        "Autres arbres (surfaces de promotion de la biodiversité spécifiques à la région)"@fr,
+        "Altri alberi (superfici per la promozione della biodiversità specifiche di una regione)"@it ;
+    eCH-0265:overlapping true ;
+    eCH-0265:biodiversityPromotionAreaQualityLevelOne true ;
+    eCH-0265:specialCrop false ;
+    skos:inScheme mgdm:ConceptScheme ;
+    eCH-0265:exactMatch cultivationtype:927 .
+
+mgdm:928 a eCH-0265:GeodataCrop ;
+    schema:identifier "928" ;
+    schema:name "Andere Elemente (regionsspezifische Biodiversitätsförderfläche)"@de,
+        "Autres éléments (surfaces de promotion de la biodiversité spécifiques à la région)"@fr,
+        "Altri elementi (superficie per la promozione della biodiversità specifica di una regione)"@it ;
+    eCH-0265:overlapping true ;
+    eCH-0265:biodiversityPromotionAreaQualityLevelOne true ;
+    eCH-0265:specialCrop false ;
+    skos:inScheme mgdm:ConceptScheme ;
+    eCH-0265:exactMatch cultivationtype:928 .
+
+mgdm:930 a eCH-0265:GeodataCrop ;
+    schema:identifier "930" ;
+    schema:name "Sömmerungsweiden"@de,
+        "Pâturages d’estivage"@fr,
+        "Pascoli d’estivazione"@it ;
+    eCH-0265:overlapping false ;
+    eCH-0265:biodiversityPromotionAreaQualityLevelOne false ;
+    eCH-0265:specialCrop false ;
+    skos:inScheme mgdm:ConceptScheme ;
+    skos:broader mgdm:SummerPastureArea ;
+    eCH-0265:exactMatch cultivationtype:930 .
+
+mgdm:933 a eCH-0265:GeodataCrop ;
+    schema:identifier "933" ;
+    schema:name "Gemeinschaftsweiden"@de,
+        "Pâturages communautaires"@fr,
+        "Pascoli comunitari"@it ;
+    eCH-0265:overlapping false ;
+    eCH-0265:biodiversityPromotionAreaQualityLevelOne false ;
+    eCH-0265:specialCrop false ;
+    skos:inScheme mgdm:ConceptScheme ;
+    skos:broader mgdm:SummerPastureArea ;
+    eCH-0265:exactMatch cultivationtype:933 .
+
+mgdm:935 a eCH-0265:GeodataCrop ;
+    schema:identifier "935" ;
+    schema:name "Heuwiesen mit Zufütterung während der Sömmerung"@de,
+        "Prairies de fauche en région d’estivage, pour l'affouragement pendant l'estivage"@fr,
+        "Prati da sfalcio nella regione d’estivazione, per l'alimentazione durante l'estivazione"@it ;
+    eCH-0265:overlapping false ;
+    eCH-0265:biodiversityPromotionAreaQualityLevelOne false ;
+    eCH-0265:specialCrop false ;
+    skos:inScheme mgdm:ConceptScheme ;
+    skos:broader mgdm:SummerPastureArea ;
+    eCH-0265:exactMatch cultivationtype:935 .
+
+mgdm:936 a eCH-0265:GeodataCrop ;
+    schema:identifier "936" ;
+    schema:name "Streueflächen im Sömmerungsgebiet"@de,
+        "Surfaces à litière, région d’estivage"@fr,
+        "Terreni da strame nella regione d’estivazione"@it ;
+    eCH-0265:overlapping false ;
+    eCH-0265:biodiversityPromotionAreaQualityLevelOne false ;
+    eCH-0265:specialCrop false ;
+    skos:inScheme mgdm:ConceptScheme ;
+    skos:broader mgdm:SummerPastureArea ;
+    eCH-0265:exactMatch cultivationtype:936 .
+
+mgdm:950 a eCH-0265:GeodataCrop ;
+    schema:identifier "950" ;
+    schema:name "Ackerschonstreifen"@de,
+        "Bande culturale extensive"@fr,
+        "Fasce di colture estensive in campicoltura"@it ;
+    schema:validFrom 2023 ;
+    eCH-0265:overlapping true ;
+    eCH-0265:biodiversityPromotionAreaQualityLevelOne true ;
+    eCH-0265:specialCrop false ;
+    skos:inScheme mgdm:ConceptScheme ;
+    eCH-0265:exactMatch cultivationtype:950 .
+
+mgdm:951 a eCH-0265:GeodataCrop ;
+    schema:identifier "951" ;
+    schema:name "Getreide in weiter Reihe"@de,
+        "Céréales en lignes de semis espacées"@fr,
+        "Cereali in file distanziate"@it ;
+    schema:validFrom 2023 ;
+    schema:validTo 2024 ;
+    eCH-0265:overlapping true ;
+    eCH-0265:biodiversityPromotionAreaQualityLevelOne true ;
+    eCH-0265:specialCrop false ;
+    skos:inScheme mgdm:ConceptScheme ;
+    eCH-0265:exactMatch cultivationtype:951 .
+
+mgdm:998 a eCH-0265:GeodataCrop ;
+    schema:identifier "998" ;
+    schema:name "Übrige Flächen ausserhalb der landwirtschaftlichen Nutzfläche und Sömmerungsfläche"@de,
+        "Autres surfaces situées en dehors de la surface agricole utile et la surface d’estivage"@fr,
+        "Altre superfici fuori della superficie agricola utilizzata e superfici d’estivazione"@it ;
+    eCH-0265:overlapping false ;
+    eCH-0265:biodiversityPromotionAreaQualityLevelOne false ;
+    eCH-0265:specialCrop false ;
+    skos:inScheme mgdm:ConceptScheme ;
+    skos:broader mgdm:AreasOutsideAgriculturalArea ;
+    eCH-0265:exactMatch cultivationtype:998 .
