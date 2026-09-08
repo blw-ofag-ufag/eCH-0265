@@ -2011,7 +2011,7 @@ cultivationtype:496 a eCH-0265:CultivationType ;
 cultivationtype:497 a eCH-0265:CultivationType ;
     schema:name "Mais"@de ;
     schema:description "Der Anbau von Mais (Zea mays) für alle möglichen Zwecke."@de ;
-    rdfs:subClassOf cultivationtype:14, cultivationtype:1022 ;
+    rdfs:subClassOf cultivationtype:14 ;
     eCH-0265:botanicalPlant taxon:ZEAMX .
 
 cultivationtype:498 a eCH-0265:CultivationType ;
