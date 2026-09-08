@@ -19,7 +19,7 @@ This repository includes a full semantic web pipeline, including
 7. uploading of the final graph to LINDAS
 8. a documentation building pipeline using Quarto
 
-## Development Tools
+## Development tools
 
 This repository uses a variety of tools to ensure robust data integration, reasoning, validation, and documentation.
 
@@ -30,7 +30,7 @@ This repository uses a variety of tools to ensure robust data integration, reaso
 - [RDFLib](https://rdflib.readthedocs.io/): A Python library used to parse, serialize, and programmatically manipulate RDF data.
 - [Quarto](https://quarto.org/): An open-source publishing system used for rendering the documentation.
 
-## Semantic Web Standards
+## Semantic web standards
 
 The project relies on core W3C Semantic Web standards to model, link, and validate data effectively.
 
@@ -40,7 +40,7 @@ The project relies on core W3C Semantic Web standards to model, link, and valida
 - [SPARQL](https://www.w3.org/TR/sparql11-overview/): The standard query language used to extract, transform, and post-process the RDF graphs.
 - [Turtle](https://www.w3.org/TR/turtle/): The primary, human-readable serialization format used for all RDF files in this repository.
 
-## Build and Deployment Orchestration
+## Build and deployment orchestration
 
 To streamline the workflow, this project uses `make` as its primary orchestration tool, automating everything from setup to deployment. The `Makefile` defines a single entry point to sequentially execute data integration, logical reasoning, SPARQL updates, SHACL validation, testing, and documentation rendering.
 
@@ -53,28 +53,46 @@ To streamline the workflow, this project uses `make` as its primary orchestratio
     ENDPOINT=********
     ```
 
-2. Set up dependencies
+2. Set up dependencies:
 
     ``` sh
     make setup
     ```
 
-3. Run the build process
+3. Run the build process:
 
     ``` sh
     make
     ```
 
-    Make sure you pass all tests with `pytest`.
+    The default target runs `make test` followed by `make docs`.
+
+    **Run tests**
+
+    To build the graph (data integration, reasoning, SPARQL processing and SHACL validation) and run the Pytest suite, run:
+
+    ``` sh
+    make test
+    ```
+
+    **Build documentation**
+
+    To render the model UML diagram, and builds the Quarto website into `build/docs/`:
+    
+    ``` sh
+    make docs
+    ```
+    
+    Note that this step requires [Quarto](https://quarto.org/) to be installed.
 
 4. Upload the final data to [LINDAS](https://lindas.admin.ch/), the linked data service by the federal archives:
 
-    **Automatic Deployment**
+    **Automatic deployment**
 
     The deployment is automatically triggered via GitHub Actions whenever changes are pushed or merged to the `main` branch. 
     To enable this, configure the environment variables listed in step 1 as **repository secrets** in your GitHub project settings (`Settings > Secrets and variables > Actions > New repository secret`):
 
-    **Manual Deployment**
+    **Manual deployment**
 
     You can still upload the final data manually by running:
 
