@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE language>
+<language name="Turtle" section="Database" version="1" kateversion="5.0"
+    extensions="*.ttl"
+    mimetype="text/turtle"
+    author="Damian Oswald (damian.oswald@protonmail.com)"
+    license="MIT">
+  <highlighting>
+    <list name="keywords">
+      <item>@prefix</item>
+      <item>@base</item>
+      <item>PREFIX</item>
+      <item>BASE</item>
+    </list>
+    <contexts>
+      <context name="Normal" attribute="Normal Text" lineEndContext="#stay">
+        <DetectSpaces/>
+        <DetectChar attribute="Comment" context="Singleline Comment" char="#"/>
+        <RangeDetect attribute="IRI" context="#stay" char="&lt;" char1="&gt;"/>
+        <StringDetect attribute="String" context="StringTSS" String="'''"/>
+        <StringDetect attribute="String" context="StringTDS" String="&quot;&quot;&quot;"/>
+        <DetectChar attribute="String" context="StringS" char="'"/>
+        <DetectChar attribute="String" context="StringD" char="&quot;"/>
+        <RegExpr attribute="Double" context="#stay" String="[+-]?([0-9]+\.[0-9]*|\.[0-9]+|[0-9]+)[eE][+-]?[0-9]+"/>
+        <RegExpr attribute="Decimal" context="#stay" String="[+-]?([0-9]+\.[0-9]*|\.[0-9]+)"/>
+        <RegExpr attribute="Integer" context="#stay" String="[+-]?[0-9]+"/>
+        <WordDetect attribute="Keyword" context="#stay" String="a"/>
+        <keyword attribute="Keyword" String="keywords" context="#stay" insensitive="true"/>
+        <Detect2Chars attribute="Operator" context="#stay" char="^" char1="^"/>
+        <AnyChar attribute="Operator" context="#stay" String=".;,[]()"/>
+        <RegExpr attribute="Boolean" context="#stay" String="\b(true|false)\b" insensitive="true"/>
+        <RegExpr attribute="Prefixed Name" context="#stay" String="[a-zA-Z0-9_.-]*:[a-zA-Z0-9_.-]*"/>
+        <RegExpr attribute="Blank Node" context="#stay" String="_:[a-zA-Z0-9_.-]+"/>
+        <RegExpr attribute="LangTag" context="#stay" String="@[a-zA-Z]+(-[a-zA-Z0-9]+)*"/>
+      </context>
+
+      <context name="StringS" attribute="String" lineEndContext="#stay">
+        <HlCStringChar attribute="String Char" context="#stay"/>
+        <DetectChar attribute="String" context="#pop" char="'"/>
+      </context>
+      <context name="StringD" attribute="String" lineEndContext="#stay">
+        <HlCStringChar attribute="String Char" context="#stay"/>
+        <DetectChar attribute="String" context="#pop" char="&quot;"/>
+      </context>
+      <context name="StringTSS" attribute="String" lineEndContext="#stay">
+        <StringDetect attribute="String" context="#pop" String="'''"/>
+      </context>
+      <context name="StringTDS" attribute="String" lineEndContext="#stay">
+        <StringDetect attribute="String" context="#pop" String="&quot;&quot;&quot;"/>
+      </context>
+      <context name="Singleline Comment" attribute="Comment" lineEndContext="#pop">
+        <IncludeRules context="##Comments"/>
+      </context>
+    </contexts>
+
+    <itemDatas>
+      <itemData name="Normal Text"   defStyleNum="dsNormal" spellChecking="false"/>
+      <itemData name="Keyword"       defStyleNum="dsKeyword" spellChecking="false"/>
+      <itemData name="Integer"       defStyleNum="dsDecVal" spellChecking="false"/>
+      <itemData name="Decimal"       defStyleNum="dsFloat" spellChecking="false"/>
+      <itemData name="Double"        defStyleNum="dsFloat" spellChecking="false"/>
+      <itemData name="String"        defStyleNum="dsString"/>
+      <itemData name="String Char"   defStyleNum="dsChar" spellChecking="false"/>
+      <itemData name="Comment"       defStyleNum="dsComment"/>
+      <itemData name="Operator"      defStyleNum="dsOperator" spellChecking="false"/>
+      <itemData name="IRI"           defStyleNum="dsBuiltIn" spellChecking="false"/>
+      <itemData name="Prefixed Name" defStyleNum="dsDataType" spellChecking="false"/>
+      <itemData name="Blank Node"    defStyleNum="dsOthers" spellChecking="false"/>
+      <itemData name="LangTag"       defStyleNum="dsDataType" spellChecking="false"/>
+      <itemData name="Boolean"       defStyleNum="dsConstant" spellChecking="false"/>
+    </itemDatas>
+  </highlighting>
+  <general>
+    <comments>
+      <comment name="singleLine" start="#" />
+    </comments>
+    <keywords casesensitive="0" />
+  </general>
+</language>

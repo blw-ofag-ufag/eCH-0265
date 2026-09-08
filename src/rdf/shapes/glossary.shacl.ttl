@@ -1,0 +1,104 @@
+# ==============================================================================
+# PREFIXES
+# ==============================================================================
+
+@prefix rdf:             <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:            <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema:          <http://schema.org/> .
+@prefix sh:              <http://www.w3.org/ns/shacl#> .
+@prefix skos:            <http://www.w3.org/2004/02/skos/core#> .
+
+# ==============================================================================
+# SHAPES
+# ==============================================================================
+
+<ConceptSchemeShape> a sh:NodeShape ;
+    rdfs:label "Concept Scheme"@en ;
+    sh:targetClass skos:ConceptScheme ;
+    sh:closed true ;
+    sh:ignoredProperties ( rdf:type ) ;
+    sh:property [
+        sh:order 1 ;
+        sh:path schema:name ;
+        sh:minCount 1 ;
+        sh:nodeKind sh:Literal ;
+        sh:uniqueLang true ;
+        sh:languageIn ( "de" "en" "fr" "it" "rm" ) ;
+    ] ;
+    sh:property [
+        sh:order 2 ;
+        sh:path schema:description ;
+        sh:nodeKind sh:Literal ;
+        sh:uniqueLang true ;
+        sh:languageIn ( "de" "en" "fr" "it" "rm" ) ;
+    ] ;
+    sh:property [
+        sh:order 3 ;
+        sh:path skos:hasTopConcept ;
+        sh:class skos:Concept ;
+        sh:nodeKind sh:IRI ;
+    ] .
+
+<ConceptShape> a sh:NodeShape ;
+    rdfs:label "Concept"@en ;
+    sh:targetClass skos:Concept ;
+    sh:closed true ;
+    sh:ignoredProperties ( rdf:type ) ;
+    sh:property [
+        sh:order 1 ;
+        sh:path schema:name ;
+        sh:minCount 1 ;
+        sh:nodeKind sh:Literal ;
+        sh:uniqueLang true ;
+        sh:languageIn ( "de" "en" "fr" "it" "rm" ) ;
+    ] ;
+    sh:property [
+        sh:order 2 ;
+        sh:path schema:alternateName ;
+        sh:nodeKind sh:Literal ;
+        sh:disjoint schema:name ;
+        sh:message "A schema:alternateName cannot perfectly match the schema:name of the same concept."@en ;
+    ] ;
+    sh:property [
+        sh:order 3 ;
+        sh:path schema:description ;
+        sh:nodeKind sh:Literal ;
+        sh:uniqueLang true ;
+        sh:languageIn ( "de" "en" "fr" "it" "rm" ) ;
+    ] ;
+    sh:property [
+        sh:order 4 ;
+        sh:path skos:inScheme ;
+        sh:minCount 1 ;
+        sh:class skos:ConceptScheme ;
+        sh:nodeKind sh:IRI ;
+        sh:message "Every concept must belong to a skos:ConceptScheme."@en ;
+    ] ;
+    sh:property [
+        sh:order 5 ;
+        sh:path skos:topConceptOf ;
+        sh:class skos:ConceptScheme ;
+        sh:nodeKind sh:IRI ;
+        sh:disjoint skos:broader ;
+        sh:message "A top concept of a scheme generally shouldn't have a broader concept in that same scheme."@en ;
+    ] ;
+    sh:property [
+        sh:order 6 ;
+        sh:path skos:broader ;
+        sh:class skos:Concept ;
+        sh:nodeKind sh:IRI ;
+    ] ;
+    sh:property [
+        sh:order 7 ;
+        sh:path skos:narrower ;
+        sh:class skos:Concept ;
+        sh:nodeKind sh:IRI ;
+    ] ;
+    sh:property [
+        sh:order 8 ;
+        sh:path skos:related ;
+        sh:class skos:Concept ;
+        sh:nodeKind sh:IRI ;
+        sh:disjoint skos:broader, skos:narrower ;
+        sh:message "A concept cannot be both related to and be broader/narrower than the same concept."@en ;
+    ] .

@@ -1076,8 +1076,8 @@ cultivationtype:170 a eCH-0265:CultivationType ;
         "Cassis"@fr,
         "Ribes nero"@it ;
     schema:alternateName "Cassis"@de,
-        "Schwarze Ribisel"@de,
-        "Schwarzes Meertrübeli"@de-CH,
+        "Schwarze Ribisel"@de-AT,
+        "Schwarzes Meertrübeli"@gsw-CH,
         "Groseillier noir"@fr,
         "Gadellier noir"@fr,
         "Cassis"@it,
@@ -2138,10 +2138,10 @@ cultivationtype:413 a eCH-0265:CultivationType ;
         "White cabbage"@en ,
         "Chou blanc"@fr ,
         "Cavolo cappuccio bianco"@it ;
-    schema:alternateName "Chabis"@de-CH ,
-        "Kabis"@de-CH ,
-        "Weisskabis"@de-CH ,
-        "Weisskraut"@de-AT ,
+    schema:alternateName "Chabis"@gsw-CH ,
+        "Kabis"@gsw-CH ,
+        "Weisskabis"@gsw-CH ,
+        "Weißkraut"@de-AT ,
         "Kraut"@de ,
         "Kappes"@de ,
         "Chou cabus"@fr ,
@@ -2395,14 +2395,6 @@ cultivationtype:498 a eCH-0265:CultivationType ;
         "Orzo"@it ;
     rdfs:subClassOf cultivationtype:1033 ;
     eCH-0265:botanicalPlant taxon:HORVX .
-
-cultivationtype:499 a eCH-0265:CultivationType ;
-    schema:name "Einkorn"@de,
-        "Einkorn wheat"@en,
-        "Engrain"@fr,
-        "Farro monococco"@it ;
-    rdfs:subClassOf cultivationtype:511 ;
-    eCH-0265:botanicalPlant taxon:TRZMO .
 
 cultivationtype:500 a eCH-0265:CultivationType ;
     schema:name "Emmer"@de,
