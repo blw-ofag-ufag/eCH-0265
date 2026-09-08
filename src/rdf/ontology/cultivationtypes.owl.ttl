@@ -2081,7 +2081,7 @@ cultivationtype:509 a eCH-0265:CultivationType ;
         "Riz"@fr,
         "Riso"@it ;
     schema:description "Der Anbau von Reis auf offener Fläche."@de ;
-    rdfs:subClassOf cultivationtype:1033 ;
+    rdfs:subClassOf cultivationtype:14 ;
     eCH-0265:botanicalPlant taxon:ORYSA .
 
 cultivationtype:510 a eCH-0265:CultivationType ;
@@ -2153,7 +2153,7 @@ cultivationtype:520 a eCH-0265:CultivationType ;
         "Riz en culture sèche"@fr,
         "Riso seminato su terreno asciutto"@it ;
     schema:description "Der Anbau von Reis im Trockenverfahren. Im Gegensatz zum Nassreisbau werden die Felder bei dieser Methode nicht geflutet."@de ;
-    rdfs:subClassOf cultivationtype:509, cultivationtype:1022 ;
+    rdfs:subClassOf cultivationtype:509 ;
     eCH-0265:botanicalPlant taxon:ORYSA .
 
 cultivationtype:521 a eCH-0265:CultivationType ;
