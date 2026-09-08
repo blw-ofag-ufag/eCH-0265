@@ -67,7 +67,8 @@ Die Direktzahlungskulturen kommen nicht nur im Rahmen der Strukturdatenerhebung 
 Die Kantone erfassen diese Geodaten gemäss dem minimalen Geodatenmodell 153.1 «Nutzungsflächen» und stellen die Daten via dem interkantonalen Portal [geodienste.ch](https://geodienste.ch/) zur Verfügung.
 Die im Rahmen der Geodaten verwendeten Kulturkategorien sind als XML-File auf <https://models.geo.admin.ch/BLW/> publiziert, wobei weitere (aggregierende) Kulturkategorien definiert wurden und die Attribute nicht zu 100% deckungsgleich zu denjenigen der Direktzahlungskulturen der Strukturdatenerhebung sind.
 Dieser Katalog der Nutzungsarten (`LNF_Katalog_Nutzungsart`) ist deshalb als eigenständiges Konzeptschema in diesem Hilfsmittel enthalten (Klasse «Geodaten-Nutzungsart», siehe @sec-classes).
-Jede Nutzungsart ist mit dem entsprechenden Nutzungstyp der Kulturenontologie verknüpft und trägt zusätzlich die Attribute des Geodatenmodells: ob die Nutzung überlagernd erfasst wird, ob es sich um eine Biodiversitätsförderfläche der Qualitätsstufe I handelt und ob es sich um eine Spezialkultur handelt.
+Da der Katalog auf den Direktzahlungskulturen aufbaut, ist die Geodaten-Nutzungsart als Unterklasse der Direktzahlungskultur modelliert (`rdfs:subClassOf`) und erbt deren Eigenschaften wie Identifikator, Name, Nutzungstyp und zeitliche Gültigkeit.
+Spezifisch für das Geodatenmodell sind einzig die drei zusätzlichen Attribute: ob die Nutzung überlagernd erfasst wird, ob es sich um eine Biodiversitätsförderfläche der Qualitätsstufe I handelt und ob es sich um eine Spezialkultur handelt.
 
 Die Direktzahlungskulturen sind selbst in acht Kulturkategorien eingeteilt (@tbl-directpaymentcrops-categories).
 Eine Mehrheit dieser Kategorien wird explizit in der landwirtschaftlichen Begriffsverordnung (LBV) definiert.

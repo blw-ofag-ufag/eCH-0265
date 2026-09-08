@@ -50,8 +50,17 @@ eCH-0265:NutrientBalanceCrop a owl:Class ;
 eCH-0265:PlantProtectionCrop a owl:Class ;
     rdfs:subClassOf skos:Concept .
 
+# The land use types of the minimal geodata model are direct payment crops that
+# carry a few additional, geodata-specific attributes. They are therefore
+# modelled as a subclass and inherit the properties of the direct payment crop.
 eCH-0265:GeodataCrop a owl:Class ;
-    rdfs:subClassOf skos:Concept .
+    rdfs:subClassOf eCH-0265:DirectPaymentCrop .
+
+eCH-0265:DirectPaymentCropScheme a owl:Class ;
+    rdfs:subClassOf skos:ConceptScheme .
+
+eCH-0265:GeodataCropScheme a owl:Class ;
+    rdfs:subClassOf eCH-0265:DirectPaymentCropScheme .
 
 # ==============================================================================
 # DATATYPE PROPERTIES
