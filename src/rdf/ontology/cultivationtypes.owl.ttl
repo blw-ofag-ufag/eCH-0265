@@ -2127,7 +2127,7 @@ cultivationtype:515 a eCH-0265:CultivationType ;
         "Méteil de céréales panifiables"@fr,
         "Miscela di cereali panificabili"@it ;
     schema:description "Gemeinsame Ansaat von mehreren Getreidearten bzw. von Getreide mit Hülsenfrüchten, welche mindestens auch Brotgetreide beinhaltet."@de ;
-    rdfs:subClassOf cultivationtype:1033,
+    rdfs:subClassOf cultivationtype:14 ,
         cultivationtype:18 ;
     eCH-0265:botanicalPlant taxon:TRZAX .
 
