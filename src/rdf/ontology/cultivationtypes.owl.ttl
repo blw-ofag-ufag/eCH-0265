@@ -3481,10 +3481,15 @@ cultivationtype:1031 a eCH-0265:CultivationType ;
     rdfs:subClassOf cultivationtype:543 .
 
 cultivationtype:1033 a eCH-0265:CultivationType ;
-    schema:name "Getreide ohne Mais"@de,
-        "Céréales sans Maïs"@fr,
-        "Cereali senza Mais"@it ;
-    rdfs:subClassOf cultivationtype:1022 ;
+    schema:name "Getreide (PSM)"@de,
+        "Céréales (PPh)"@fr,
+        "Cereali (PF)"@it,
+        "Cereals (PPP)"@en ;
+    schema:description "Umfasst die folgenden Getreidekulturen gemäss Pflanzenschutzmittelverzeichnis (PSM): Weizen (Weichweizen, Hartweizen, Dinkel, Emmer), Triticale, Gerste, Hafer und Roggen."@de,
+        "Comprend les cultures céréalières suivantes selon l'index des produits phytosanitaires (PPh) : blé (blé tendre, blé dur, épeautre, amidonnier), triticale, orge, avoine et seigle."@fr,
+        "Comprende le seguenti colture cerealicole secondo l'indice dei prodotti fitosanitari (PF): frumento (frumento tenero, frumento duro, spelta, ammer), triticale, orzo, avena e segale."@it,
+        "Includes the following cereal crops according to the plant protection products register (PPP): wheat (common wheat, durum wheat, spelt, emmer), triticale, barley, oats, and rye."@en ;
+    rdfs:subClassOf cultivationtype:14 ;
     owl:disjointWith cultivationtype:497 .
 
 cultivationtype:1034 a eCH-0265:CultivationType ;
