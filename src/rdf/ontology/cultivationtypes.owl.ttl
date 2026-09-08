@@ -134,7 +134,10 @@ cultivationtype:14 a eCH-0265:CultivationType ;
     schema:name "Getreide"@de,
         "Céréales"@fr,
         "Cereali"@it ;
-    schema:description "Der Anbau von verschiedenen Getreidearten wie Weizen, Gerste, Roggen, Hafer oder Dinkel. Das Hauptziel ist die Gewinnung der Körner zur Nutzung als Lebens- oder Futtermittel."@de ;
+    schema:description "Umfasst den Anbau von botanischen Getreidearten aus der Familie der Süssgräser (Poaceae) wie Weizen, Gerste, Roggen, Hafer oder Dinkel. Das Hauptziel ist die Gewinnung der Körner zur Nutzung als Lebens- oder Futtermittel."@de,
+            "Comprend la culture d'espèces céréalières botaniques de la famille des graminées (Poaceae) telles que le blé, l'orge, le seigle, l'avoine ou l'épeautre. L'objectif principal est la production de grains destinés à l'alimentation humaine ou animale."@fr,
+            "Comprende la coltivazione di specie cerealicole botaniche della famiglia delle graminacee (Poaceae) quali frumento, orzo, segale, avena o spelta. L'obiettivo principale è l'ottenimento di granella destinata all'alimentazione umana o animale."@it,
+            "Includes the cultivation of botanical cereal species from the grass family (Poaceae) such as wheat, barley, rye, oats, or spelt. The primary objective is the production of grains for use as food or feed."@en ;  
     rdfs:subClassOf cultivationtype:466 .
 
 cultivationtype:15 a eCH-0265:CultivationType ;
