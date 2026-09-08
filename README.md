@@ -53,23 +53,23 @@ To streamline the workflow, this project uses `make` as its primary orchestratio
     ENDPOINT=********
     ```
 
-2. Set up dependencies
+2. Set up dependencies:
 
     ``` sh
     make setup
     ```
 
-3. Run the build process
+3. Run the build process:
 
     ``` sh
     make
     ```
 
-    The default target runs `make test` followed by `make docs`:
+    The default target runs `make test` followed by `make docs`.
 
     **Run tests**
 
-    To build the graph (data integration, reasoning, SPARQL processing and SHACL validation) and run the Pytest suite, run
+    To build the graph (data integration, reasoning, SPARQL processing and SHACL validation) and run the Pytest suite, run:
 
     ``` sh
     make test
@@ -77,7 +77,7 @@ To streamline the workflow, this project uses `make` as its primary orchestratio
 
     **Build documentation**
 
-    To render the model UML diagram, and builds the Quarto website into `build/docs/`.
+    To render the model UML diagram, and builds the Quarto website into `build/docs/`:
     
     ``` sh
     make docs
