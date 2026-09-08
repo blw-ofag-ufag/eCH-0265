@@ -2300,7 +2300,7 @@ cultivationtype:542 a eCH-0265:CultivationType ;
         "Echte Hirse"@de,
         "Prosohirse"@de,
         "Baraga"@de ;
-    rdfs:subClassOf cultivationtype:1033 .
+    rdfs:subClassOf cultivationtype:14 .
 
 cultivationtype:543 a eCH-0265:CultivationType ;
     schema:name "Getreide siliert"@de,
