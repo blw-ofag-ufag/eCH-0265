@@ -70,6 +70,11 @@ Dieser Katalog der Nutzungsarten (`LNF_Katalog_Nutzungsart`) ist deshalb als eig
 Da der Katalog auf den Direktzahlungskulturen aufbaut, ist die Geodaten-Nutzungsart als Unterklasse der Direktzahlungskultur modelliert (`rdfs:subClassOf`) und erbt deren Eigenschaften wie Identifikator, Name, Nutzungstyp und zeitliche Gültigkeit.
 Spezifisch für das Geodatenmodell sind einzig die drei zusätzlichen Attribute: ob die Nutzung überlagernd erfasst wird, ob es sich um eine Biodiversitätsförderfläche der Qualitätsstufe I handelt und ob es sich um eine Spezialkultur handelt.
 
+Der Katalog enthält neben den eigentlichen Nutzungsarten auch sieben aggregierende Nutzungsarten (z.B. LNF-Code 730 «Obstanlagen aggregiert»), welche die Nutzungsarten einer Hauptkategorie zusammenfassen.
+Diese sind im Konzeptschema den zusammengefassten Nutzungsarten übergeordnet: eine aggregierte Nutzungsart zeigt mit `skos:broader` auf ihre aggregierende Nutzungsart, diese wiederum auf die Hauptkategorie. Die Hauptkategorie einer aggregierten Nutzungsart ergibt sich damit über `skos:broaderTransitive`.
+Der Katalog selbst führt diese Zuordnung nicht: das Attribut `Ist_Aggregiert` wurde mit der Modellversion 2.0 aus `LNF_Katalog_Nutzungsart` entfernt und bezeichnete ohnehin nur die aggregierenden Codes selbst, nie deren Mitglieder.
+Die Zuordnung ist deshalb abgeleitet: eine aggregierende Nutzungsart fasst diejenigen Nutzungsarten derselben Hauptkategorie zusammen, die ihre Beitragsberechtigung teilen und deren Gültigkeitszeitraum sich mit ihrem überschneidet.
+
 Die Direktzahlungskulturen sind selbst in acht Kulturkategorien eingeteilt (@tbl-directpaymentcrops-categories).
 Eine Mehrheit dieser Kategorien wird explizit in der landwirtschaftlichen Begriffsverordnung (LBV) definiert.
 

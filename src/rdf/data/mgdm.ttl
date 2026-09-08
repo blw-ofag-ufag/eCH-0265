@@ -162,6 +162,20 @@ mgdm:Forest a eCH-0265:GeodataCropCategory ;
 
 # ==============================================================================
 # Nutzungsarten (LNF_Katalog_Nutzungsart)
+# ------------------------------------------------------------------------------
+# Die Nutzungsarten bilden im Konzeptschema eine Hierarchie: eine Nutzungsart ist
+# über `skos:broader` entweder direkt ihrer Hauptkategorie zugeordnet oder – wenn
+# sie in einer aggregierenden Nutzungsart zusammengefasst wird – dieser, welche
+# ihrerseits auf die Hauptkategorie zeigt. Die Hauptkategorie einer aggregierten
+# Nutzungsart ergibt sich damit über `skos:broaderTransitive`.
+#
+# Der Katalog selbst kennt die Zuordnung zu den aggregierenden Nutzungsarten
+# nicht: das Attribut `Ist_Aggregiert` wurde mit der Modellversion 2.0
+# (01.01.2023) aus `LNF_Katalog_Nutzungsart` entfernt und enthielt ohnehin nur
+# ein Kennzeichen, nie eine Mitgliedschaft. Die Zuordnung wird deshalb hier
+# abgeleitet: eine aggregierende Nutzungsart fasst diejenigen Nutzungsarten
+# derselben Hauptkategorie zusammen, die ihre Beitragsberechtigung teilen und
+# deren Gültigkeitszeitraum sich mit ihrem überschneidet.
 # ==============================================================================
 
 mgdm:501 a eCH-0265:GeodataCrop ;
@@ -1102,7 +1116,7 @@ mgdm:611 a eCH-0265:GeodataCrop ;
     eCH-0265:biodiversityPromotionAreaQualityLevelOne true ;
     eCH-0265:specialCrop false ;
     skos:inScheme mgdm:ConceptScheme ;
-    skos:broader mgdm:PermanentMeadows ;
+    skos:broader mgdm:650 ;
     eCH-0265:exactMatch cultivationtype:611 .
 
 mgdm:612 a eCH-0265:GeodataCrop ;
@@ -1114,7 +1128,7 @@ mgdm:612 a eCH-0265:GeodataCrop ;
     eCH-0265:biodiversityPromotionAreaQualityLevelOne true ;
     eCH-0265:specialCrop false ;
     skos:inScheme mgdm:ConceptScheme ;
-    skos:broader mgdm:PermanentMeadows ;
+    skos:broader mgdm:650 ;
     eCH-0265:exactMatch cultivationtype:612 .
 
 mgdm:613 a eCH-0265:GeodataCrop ;
@@ -1126,7 +1140,7 @@ mgdm:613 a eCH-0265:GeodataCrop ;
     eCH-0265:biodiversityPromotionAreaQualityLevelOne false ;
     eCH-0265:specialCrop false ;
     skos:inScheme mgdm:ConceptScheme ;
-    skos:broader mgdm:PermanentMeadows ;
+    skos:broader mgdm:650 ;
     eCH-0265:exactMatch cultivationtype:613 .
 
 mgdm:616 a eCH-0265:GeodataCrop ;
@@ -1138,7 +1152,7 @@ mgdm:616 a eCH-0265:GeodataCrop ;
     eCH-0265:biodiversityPromotionAreaQualityLevelOne false ;
     eCH-0265:specialCrop false ;
     skos:inScheme mgdm:ConceptScheme ;
-    skos:broader mgdm:PermanentPastures ;
+    skos:broader mgdm:660 ;
     eCH-0265:exactMatch cultivationtype:616 .
 
 mgdm:617 a eCH-0265:GeodataCrop ;
@@ -1150,7 +1164,7 @@ mgdm:617 a eCH-0265:GeodataCrop ;
     eCH-0265:biodiversityPromotionAreaQualityLevelOne true ;
     eCH-0265:specialCrop false ;
     skos:inScheme mgdm:ConceptScheme ;
-    skos:broader mgdm:PermanentPastures ;
+    skos:broader mgdm:660 ;
     eCH-0265:exactMatch cultivationtype:617 .
 
 mgdm:618 a eCH-0265:GeodataCrop ;
@@ -1162,7 +1176,7 @@ mgdm:618 a eCH-0265:GeodataCrop ;
     eCH-0265:biodiversityPromotionAreaQualityLevelOne true ;
     eCH-0265:specialCrop false ;
     skos:inScheme mgdm:ConceptScheme ;
-    skos:broader mgdm:PermanentPastures ;
+    skos:broader mgdm:660 ;
     eCH-0265:exactMatch cultivationtype:618 .
 
 mgdm:621 a eCH-0265:GeodataCrop ;
@@ -1174,7 +1188,7 @@ mgdm:621 a eCH-0265:GeodataCrop ;
     eCH-0265:biodiversityPromotionAreaQualityLevelOne false ;
     eCH-0265:specialCrop false ;
     skos:inScheme mgdm:ConceptScheme ;
-    skos:broader mgdm:PermanentMeadows ;
+    skos:broader mgdm:650 ;
     eCH-0265:exactMatch cultivationtype:621 .
 
 mgdm:622 a eCH-0265:GeodataCrop ;
@@ -1186,7 +1200,7 @@ mgdm:622 a eCH-0265:GeodataCrop ;
     eCH-0265:biodiversityPromotionAreaQualityLevelOne true ;
     eCH-0265:specialCrop false ;
     skos:inScheme mgdm:ConceptScheme ;
-    skos:broader mgdm:PermanentMeadows ;
+    skos:broader mgdm:650 ;
     eCH-0265:exactMatch cultivationtype:622 .
 
 mgdm:623 a eCH-0265:GeodataCrop ;
@@ -1198,7 +1212,7 @@ mgdm:623 a eCH-0265:GeodataCrop ;
     eCH-0265:biodiversityPromotionAreaQualityLevelOne true ;
     eCH-0265:specialCrop false ;
     skos:inScheme mgdm:ConceptScheme ;
-    skos:broader mgdm:PermanentMeadows ;
+    skos:broader mgdm:650 ;
     eCH-0265:exactMatch cultivationtype:623 .
 
 mgdm:625 a eCH-0265:GeodataCrop ;
@@ -1210,7 +1224,7 @@ mgdm:625 a eCH-0265:GeodataCrop ;
     eCH-0265:biodiversityPromotionAreaQualityLevelOne false ;
     eCH-0265:specialCrop false ;
     skos:inScheme mgdm:ConceptScheme ;
-    skos:broader mgdm:PermanentPastures ;
+    skos:broader mgdm:660 ;
     eCH-0265:exactMatch cultivationtype:625 .
 
 mgdm:631 a eCH-0265:GeodataCrop ;
@@ -1247,7 +1261,7 @@ mgdm:634 a eCH-0265:GeodataCrop ;
     eCH-0265:biodiversityPromotionAreaQualityLevelOne true ;
     eCH-0265:specialCrop false ;
     skos:inScheme mgdm:ConceptScheme ;
-    skos:broader mgdm:PermanentMeadows ;
+    skos:broader mgdm:650 ;
     eCH-0265:exactMatch cultivationtype:634 .
 
 mgdm:635 a eCH-0265:GeodataCrop ;
@@ -1298,7 +1312,7 @@ mgdm:693 a eCH-0265:GeodataCrop ;
     eCH-0265:biodiversityPromotionAreaQualityLevelOne true ;
     eCH-0265:specialCrop false ;
     skos:inScheme mgdm:ConceptScheme ;
-    skos:broader mgdm:PermanentPastures ;
+    skos:broader mgdm:660 ;
     eCH-0265:exactMatch cultivationtype:693 .
 
 mgdm:694 a eCH-0265:GeodataCrop ;
@@ -1310,7 +1324,7 @@ mgdm:694 a eCH-0265:GeodataCrop ;
     eCH-0265:biodiversityPromotionAreaQualityLevelOne true ;
     eCH-0265:specialCrop false ;
     skos:inScheme mgdm:ConceptScheme ;
-    skos:broader mgdm:PermanentMeadows ;
+    skos:broader mgdm:650 ;
     eCH-0265:exactMatch cultivationtype:694 .
 
 mgdm:697 a eCH-0265:GeodataCrop ;
@@ -1322,7 +1336,7 @@ mgdm:697 a eCH-0265:GeodataCrop ;
     eCH-0265:biodiversityPromotionAreaQualityLevelOne false ;
     eCH-0265:specialCrop false ;
     skos:inScheme mgdm:ConceptScheme ;
-    skos:broader mgdm:PermanentMeadows ;
+    skos:broader mgdm:650 ;
     eCH-0265:exactMatch cultivationtype:697 .
 
 mgdm:698 a eCH-0265:GeodataCrop ;
@@ -1358,7 +1372,7 @@ mgdm:702 a eCH-0265:GeodataCrop ;
     eCH-0265:biodiversityPromotionAreaQualityLevelOne false ;
     eCH-0265:specialCrop true ;
     skos:inScheme mgdm:ConceptScheme ;
-    skos:broader mgdm:Orchards ;
+    skos:broader mgdm:730 ;
     eCH-0265:exactMatch cultivationtype:702 .
 
 mgdm:703 a eCH-0265:GeodataCrop ;
@@ -1370,7 +1384,7 @@ mgdm:703 a eCH-0265:GeodataCrop ;
     eCH-0265:biodiversityPromotionAreaQualityLevelOne false ;
     eCH-0265:specialCrop true ;
     skos:inScheme mgdm:ConceptScheme ;
-    skos:broader mgdm:Orchards ;
+    skos:broader mgdm:730 ;
     eCH-0265:exactMatch cultivationtype:703 .
 
 mgdm:704 a eCH-0265:GeodataCrop ;
@@ -1382,7 +1396,7 @@ mgdm:704 a eCH-0265:GeodataCrop ;
     eCH-0265:biodiversityPromotionAreaQualityLevelOne false ;
     eCH-0265:specialCrop true ;
     skos:inScheme mgdm:ConceptScheme ;
-    skos:broader mgdm:Orchards ;
+    skos:broader mgdm:730 ;
     eCH-0265:exactMatch cultivationtype:704 .
 
 mgdm:705 a eCH-0265:GeodataCrop ;
@@ -1394,7 +1408,7 @@ mgdm:705 a eCH-0265:GeodataCrop ;
     eCH-0265:biodiversityPromotionAreaQualityLevelOne false ;
     eCH-0265:specialCrop true ;
     skos:inScheme mgdm:ConceptScheme ;
-    skos:broader mgdm:OtherPermanentCrops ;
+    skos:broader mgdm:750 ;
     eCH-0265:exactMatch cultivationtype:705 .
 
 mgdm:706 a eCH-0265:GeodataCrop ;
@@ -1406,7 +1420,7 @@ mgdm:706 a eCH-0265:GeodataCrop ;
     eCH-0265:biodiversityPromotionAreaQualityLevelOne false ;
     eCH-0265:specialCrop true ;
     skos:inScheme mgdm:ConceptScheme ;
-    skos:broader mgdm:OtherPermanentCrops ;
+    skos:broader mgdm:750 ;
     eCH-0265:exactMatch cultivationtype:706 .
 
 mgdm:707 a eCH-0265:GeodataCrop ;
@@ -1418,7 +1432,7 @@ mgdm:707 a eCH-0265:GeodataCrop ;
     eCH-0265:biodiversityPromotionAreaQualityLevelOne false ;
     eCH-0265:specialCrop false ;
     skos:inScheme mgdm:ConceptScheme ;
-    skos:broader mgdm:OtherPermanentCrops ;
+    skos:broader mgdm:750 ;
     eCH-0265:exactMatch cultivationtype:707 .
 
 mgdm:708 a eCH-0265:GeodataCrop ;
@@ -1430,7 +1444,7 @@ mgdm:708 a eCH-0265:GeodataCrop ;
     eCH-0265:biodiversityPromotionAreaQualityLevelOne false ;
     eCH-0265:specialCrop true ;
     skos:inScheme mgdm:ConceptScheme ;
-    skos:broader mgdm:OtherPermanentCrops ;
+    skos:broader mgdm:750 ;
     eCH-0265:exactMatch cultivationtype:708 .
 
 mgdm:709 a eCH-0265:GeodataCrop ;
@@ -1442,7 +1456,7 @@ mgdm:709 a eCH-0265:GeodataCrop ;
     eCH-0265:biodiversityPromotionAreaQualityLevelOne false ;
     eCH-0265:specialCrop true ;
     skos:inScheme mgdm:ConceptScheme ;
-    skos:broader mgdm:OtherPermanentCrops ;
+    skos:broader mgdm:750 ;
     eCH-0265:exactMatch cultivationtype:709 .
 
 mgdm:710 a eCH-0265:GeodataCrop ;
@@ -1454,7 +1468,7 @@ mgdm:710 a eCH-0265:GeodataCrop ;
     eCH-0265:biodiversityPromotionAreaQualityLevelOne false ;
     eCH-0265:specialCrop true ;
     skos:inScheme mgdm:ConceptScheme ;
-    skos:broader mgdm:OtherPermanentCrops ;
+    skos:broader mgdm:750 ;
     eCH-0265:exactMatch cultivationtype:710 .
 
 mgdm:711 a eCH-0265:GeodataCrop ;
@@ -1466,7 +1480,7 @@ mgdm:711 a eCH-0265:GeodataCrop ;
     eCH-0265:biodiversityPromotionAreaQualityLevelOne false ;
     eCH-0265:specialCrop true ;
     skos:inScheme mgdm:ConceptScheme ;
-    skos:broader mgdm:OtherPermanentCrops ;
+    skos:broader mgdm:750 ;
     eCH-0265:exactMatch cultivationtype:711 .
 
 mgdm:712 a eCH-0265:GeodataCrop ;
@@ -1478,7 +1492,7 @@ mgdm:712 a eCH-0265:GeodataCrop ;
     eCH-0265:biodiversityPromotionAreaQualityLevelOne false ;
     eCH-0265:specialCrop false ;
     skos:inScheme mgdm:ConceptScheme ;
-    skos:broader mgdm:OtherPermanentCrops ;
+    skos:broader mgdm:750 ;
     eCH-0265:exactMatch cultivationtype:712 .
 
 mgdm:713 a eCH-0265:GeodataCrop ;
@@ -1490,7 +1504,7 @@ mgdm:713 a eCH-0265:GeodataCrop ;
     eCH-0265:biodiversityPromotionAreaQualityLevelOne false ;
     eCH-0265:specialCrop false ;
     skos:inScheme mgdm:ConceptScheme ;
-    skos:broader mgdm:OtherPermanentCrops ;
+    skos:broader mgdm:750 ;
     eCH-0265:exactMatch cultivationtype:713 .
 
 mgdm:714 a eCH-0265:GeodataCrop ;
@@ -1502,7 +1516,7 @@ mgdm:714 a eCH-0265:GeodataCrop ;
     eCH-0265:biodiversityPromotionAreaQualityLevelOne false ;
     eCH-0265:specialCrop false ;
     skos:inScheme mgdm:ConceptScheme ;
-    skos:broader mgdm:OtherPermanentCrops ;
+    skos:broader mgdm:750 ;
     eCH-0265:exactMatch cultivationtype:714 .
 
 mgdm:715 a eCH-0265:GeodataCrop ;
@@ -1515,7 +1529,7 @@ mgdm:715 a eCH-0265:GeodataCrop ;
     eCH-0265:biodiversityPromotionAreaQualityLevelOne false ;
     eCH-0265:specialCrop false ;
     skos:inScheme mgdm:ConceptScheme ;
-    skos:broader mgdm:OtherPermanentCrops ;
+    skos:broader mgdm:750 ;
     eCH-0265:exactMatch cultivationtype:715 .
 
 mgdm:717 a eCH-0265:GeodataCrop ;
@@ -1539,7 +1553,7 @@ mgdm:718 a eCH-0265:GeodataCrop ;
     eCH-0265:biodiversityPromotionAreaQualityLevelOne false ;
     eCH-0265:specialCrop false ;
     skos:inScheme mgdm:ConceptScheme ;
-    skos:broader mgdm:OtherPermanentCrops ;
+    skos:broader mgdm:750 ;
     eCH-0265:exactMatch cultivationtype:718 .
 
 mgdm:719 a eCH-0265:GeodataCrop ;
@@ -1551,7 +1565,7 @@ mgdm:719 a eCH-0265:GeodataCrop ;
     eCH-0265:biodiversityPromotionAreaQualityLevelOne false ;
     eCH-0265:specialCrop false ;
     skos:inScheme mgdm:ConceptScheme ;
-    skos:broader mgdm:OtherPermanentCrops ;
+    skos:broader mgdm:750 ;
     eCH-0265:exactMatch cultivationtype:719 .
 
 mgdm:720 a eCH-0265:GeodataCrop ;
@@ -1563,7 +1577,7 @@ mgdm:720 a eCH-0265:GeodataCrop ;
     eCH-0265:biodiversityPromotionAreaQualityLevelOne false ;
     eCH-0265:specialCrop false ;
     skos:inScheme mgdm:ConceptScheme ;
-    skos:broader mgdm:OtherPermanentCrops ;
+    skos:broader mgdm:750 ;
     eCH-0265:exactMatch cultivationtype:720 .
 
 mgdm:721 a eCH-0265:GeodataCrop ;
@@ -1575,7 +1589,7 @@ mgdm:721 a eCH-0265:GeodataCrop ;
     eCH-0265:biodiversityPromotionAreaQualityLevelOne false ;
     eCH-0265:specialCrop false ;
     skos:inScheme mgdm:ConceptScheme ;
-    skos:broader mgdm:OtherPermanentCrops ;
+    skos:broader mgdm:750 ;
     eCH-0265:exactMatch cultivationtype:721 .
 
 mgdm:722 a eCH-0265:GeodataCrop ;
@@ -1587,7 +1601,7 @@ mgdm:722 a eCH-0265:GeodataCrop ;
     eCH-0265:biodiversityPromotionAreaQualityLevelOne false ;
     eCH-0265:specialCrop false ;
     skos:inScheme mgdm:ConceptScheme ;
-    skos:broader mgdm:OtherPermanentCrops ;
+    skos:broader mgdm:750 ;
     eCH-0265:exactMatch cultivationtype:722 .
 
 mgdm:723 a eCH-0265:GeodataCrop ;
@@ -1600,7 +1614,7 @@ mgdm:723 a eCH-0265:GeodataCrop ;
     eCH-0265:biodiversityPromotionAreaQualityLevelOne false ;
     eCH-0265:specialCrop false ;
     skos:inScheme mgdm:ConceptScheme ;
-    skos:broader mgdm:OtherPermanentCrops ;
+    skos:broader mgdm:750 ;
     eCH-0265:exactMatch cultivationtype:723 .
 
 mgdm:724 a eCH-0265:GeodataCrop ;
@@ -1613,7 +1627,7 @@ mgdm:724 a eCH-0265:GeodataCrop ;
     eCH-0265:biodiversityPromotionAreaQualityLevelOne false ;
     eCH-0265:specialCrop false ;
     skos:inScheme mgdm:ConceptScheme ;
-    skos:broader mgdm:OtherPermanentCrops ;
+    skos:broader mgdm:750 ;
     eCH-0265:exactMatch cultivationtype:724 .
 
 mgdm:725 a eCH-0265:GeodataCrop ;
@@ -1625,7 +1639,7 @@ mgdm:725 a eCH-0265:GeodataCrop ;
     eCH-0265:biodiversityPromotionAreaQualityLevelOne false ;
     eCH-0265:specialCrop true ;
     skos:inScheme mgdm:ConceptScheme ;
-    skos:broader mgdm:OtherPermanentCrops ;
+    skos:broader mgdm:750 ;
     eCH-0265:exactMatch cultivationtype:725 .
 
 mgdm:730 a eCH-0265:GeodataCrop ;
@@ -1649,7 +1663,7 @@ mgdm:731 a eCH-0265:GeodataCrop ;
     eCH-0265:biodiversityPromotionAreaQualityLevelOne false ;
     eCH-0265:specialCrop true ;
     skos:inScheme mgdm:ConceptScheme ;
-    skos:broader mgdm:Orchards ;
+    skos:broader mgdm:730 ;
     eCH-0265:exactMatch cultivationtype:731 .
 
 mgdm:735 a eCH-0265:GeodataCrop ;
@@ -1698,7 +1712,7 @@ mgdm:797 a eCH-0265:GeodataCrop ;
     eCH-0265:biodiversityPromotionAreaQualityLevelOne false ;
     eCH-0265:specialCrop false ;
     skos:inScheme mgdm:ConceptScheme ;
-    skos:broader mgdm:OtherPermanentCrops ;
+    skos:broader mgdm:750 ;
     eCH-0265:exactMatch cultivationtype:797 .
 
 mgdm:798 a eCH-0265:GeodataCrop ;
@@ -1710,7 +1724,7 @@ mgdm:798 a eCH-0265:GeodataCrop ;
     eCH-0265:biodiversityPromotionAreaQualityLevelOne false ;
     eCH-0265:specialCrop false ;
     skos:inScheme mgdm:ConceptScheme ;
-    skos:broader mgdm:OtherPermanentCrops ;
+    skos:broader mgdm:760 ;
     eCH-0265:exactMatch cultivationtype:798 .
 
 mgdm:801 a eCH-0265:GeodataCrop ;
@@ -1722,7 +1736,7 @@ mgdm:801 a eCH-0265:GeodataCrop ;
     eCH-0265:biodiversityPromotionAreaQualityLevelOne false ;
     eCH-0265:specialCrop true ;
     skos:inScheme mgdm:ConceptScheme ;
-    skos:broader mgdm:ProtectedCultivation ;
+    skos:broader mgdm:830 ;
     eCH-0265:exactMatch cultivationtype:801 .
 
 mgdm:802 a eCH-0265:GeodataCrop ;
@@ -1734,7 +1748,7 @@ mgdm:802 a eCH-0265:GeodataCrop ;
     eCH-0265:biodiversityPromotionAreaQualityLevelOne false ;
     eCH-0265:specialCrop true ;
     skos:inScheme mgdm:ConceptScheme ;
-    skos:broader mgdm:ProtectedCultivation ;
+    skos:broader mgdm:830 ;
     eCH-0265:exactMatch cultivationtype:802 .
 
 mgdm:803 a eCH-0265:GeodataCrop ;
@@ -1746,7 +1760,7 @@ mgdm:803 a eCH-0265:GeodataCrop ;
     eCH-0265:biodiversityPromotionAreaQualityLevelOne false ;
     eCH-0265:specialCrop false ;
     skos:inScheme mgdm:ConceptScheme ;
-    skos:broader mgdm:ProtectedCultivation ;
+    skos:broader mgdm:830 ;
     eCH-0265:exactMatch cultivationtype:803 .
 
 mgdm:804 a eCH-0265:GeodataCrop ;
@@ -1759,7 +1773,7 @@ mgdm:804 a eCH-0265:GeodataCrop ;
     eCH-0265:biodiversityPromotionAreaQualityLevelOne false ;
     eCH-0265:specialCrop true ;
     skos:inScheme mgdm:ConceptScheme ;
-    skos:broader mgdm:ProtectedCultivation ;
+    skos:broader mgdm:830 ;
     eCH-0265:exactMatch cultivationtype:804 .
 
 mgdm:806 a eCH-0265:GeodataCrop ;
@@ -1772,7 +1786,7 @@ mgdm:806 a eCH-0265:GeodataCrop ;
     eCH-0265:biodiversityPromotionAreaQualityLevelOne false ;
     eCH-0265:specialCrop true ;
     skos:inScheme mgdm:ConceptScheme ;
-    skos:broader mgdm:ProtectedCultivation ;
+    skos:broader mgdm:830 ;
     eCH-0265:exactMatch cultivationtype:806 .
 
 mgdm:807 a eCH-0265:GeodataCrop ;
@@ -1784,7 +1798,7 @@ mgdm:807 a eCH-0265:GeodataCrop ;
     eCH-0265:biodiversityPromotionAreaQualityLevelOne false ;
     eCH-0265:specialCrop true ;
     skos:inScheme mgdm:ConceptScheme ;
-    skos:broader mgdm:ProtectedCultivation ;
+    skos:broader mgdm:830 ;
     eCH-0265:exactMatch cultivationtype:807 .
 
 mgdm:808 a eCH-0265:GeodataCrop ;
@@ -1796,7 +1810,7 @@ mgdm:808 a eCH-0265:GeodataCrop ;
     eCH-0265:biodiversityPromotionAreaQualityLevelOne false ;
     eCH-0265:specialCrop false ;
     skos:inScheme mgdm:ConceptScheme ;
-    skos:broader mgdm:ProtectedCultivation ;
+    skos:broader mgdm:830 ;
     eCH-0265:exactMatch cultivationtype:808 .
 
 mgdm:810 a eCH-0265:GeodataCrop ;
@@ -1808,7 +1822,7 @@ mgdm:810 a eCH-0265:GeodataCrop ;
     eCH-0265:biodiversityPromotionAreaQualityLevelOne false ;
     eCH-0265:specialCrop true ;
     skos:inScheme mgdm:ConceptScheme ;
-    skos:broader mgdm:ProtectedCultivation ;
+    skos:broader mgdm:830 ;
     eCH-0265:exactMatch cultivationtype:810 .
 
 mgdm:811 a eCH-0265:GeodataCrop ;
@@ -1821,7 +1835,7 @@ mgdm:811 a eCH-0265:GeodataCrop ;
     eCH-0265:biodiversityPromotionAreaQualityLevelOne false ;
     eCH-0265:specialCrop true ;
     skos:inScheme mgdm:ConceptScheme ;
-    skos:broader mgdm:ProtectedCultivation ;
+    skos:broader mgdm:830 ;
     eCH-0265:exactMatch cultivationtype:811 .
 
 mgdm:812 a eCH-0265:GeodataCrop ;
@@ -1834,7 +1848,7 @@ mgdm:812 a eCH-0265:GeodataCrop ;
     eCH-0265:biodiversityPromotionAreaQualityLevelOne false ;
     eCH-0265:specialCrop true ;
     skos:inScheme mgdm:ConceptScheme ;
-    skos:broader mgdm:ProtectedCultivation ;
+    skos:broader mgdm:830 ;
     eCH-0265:exactMatch cultivationtype:812 .
 
 mgdm:813 a eCH-0265:GeodataCrop ;
@@ -1847,7 +1861,7 @@ mgdm:813 a eCH-0265:GeodataCrop ;
     eCH-0265:biodiversityPromotionAreaQualityLevelOne false ;
     eCH-0265:specialCrop true ;
     skos:inScheme mgdm:ConceptScheme ;
-    skos:broader mgdm:ProtectedCultivation ;
+    skos:broader mgdm:830 ;
     eCH-0265:exactMatch cultivationtype:813 .
 
 mgdm:814 a eCH-0265:GeodataCrop ;
@@ -1860,7 +1874,7 @@ mgdm:814 a eCH-0265:GeodataCrop ;
     eCH-0265:biodiversityPromotionAreaQualityLevelOne false ;
     eCH-0265:specialCrop true ;
     skos:inScheme mgdm:ConceptScheme ;
-    skos:broader mgdm:ProtectedCultivation ;
+    skos:broader mgdm:830 ;
     eCH-0265:exactMatch cultivationtype:814 .
 
 mgdm:830 a eCH-0265:GeodataCrop ;
@@ -1897,7 +1911,7 @@ mgdm:847 a eCH-0265:GeodataCrop ;
     eCH-0265:biodiversityPromotionAreaQualityLevelOne false ;
     eCH-0265:specialCrop false ;
     skos:inScheme mgdm:ConceptScheme ;
-    skos:broader mgdm:ProtectedCultivation ;
+    skos:broader mgdm:830 ;
     eCH-0265:exactMatch cultivationtype:847 .
 
 mgdm:848 a eCH-0265:GeodataCrop ;
@@ -1909,7 +1923,7 @@ mgdm:848 a eCH-0265:GeodataCrop ;
     eCH-0265:biodiversityPromotionAreaQualityLevelOne false ;
     eCH-0265:specialCrop false ;
     skos:inScheme mgdm:ConceptScheme ;
-    skos:broader mgdm:ProtectedCultivation ;
+    skos:broader mgdm:830 ;
     eCH-0265:exactMatch cultivationtype:848 .
 
 mgdm:849 a eCH-0265:GeodataCrop ;
@@ -1921,7 +1935,7 @@ mgdm:849 a eCH-0265:GeodataCrop ;
     eCH-0265:biodiversityPromotionAreaQualityLevelOne false ;
     eCH-0265:specialCrop false ;
     skos:inScheme mgdm:ConceptScheme ;
-    skos:broader mgdm:ProtectedCultivation ;
+    skos:broader mgdm:840 ;
     eCH-0265:exactMatch cultivationtype:849 .
 
 mgdm:851 a eCH-0265:GeodataCrop ;

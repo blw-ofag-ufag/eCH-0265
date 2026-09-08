@@ -173,11 +173,15 @@ eCH-0265:DirectPaymentCrop a sh:NodeShape, rdfs:Class ;
     sh:property
         [
             sh:order 1 ;
+            sh:name "Übergeordnetes Konzept"@de,
+                "Broader concept"@en ;
+            sh:description "Die Flächenkategorie, welcher diese Kultur zugeordnet ist, oder eine übergeordnete Kultur."@de ;
             sh:path skos:broader ;
-            sh:class eCH-0265:DirectPaymentAreaCategory ; 
-            sh:minCount 0 ;
             sh:maxCount 1 ;
-            sh:nodeKind sh:IRI ;
+            sh:or (
+                [ sh:class eCH-0265:DirectPaymentAreaCategory ]
+                [ sh:class eCH-0265:DirectPaymentCrop ]
+            ) ;
         ],
         [
             sh:order 2 ;
@@ -426,25 +430,47 @@ eCH-0265:GeodataCrop a sh:NodeShape, rdfs:Class ;
     rdfs:comment "Nutzungsart gemäss dem Katalog `LNF_Katalog_Nutzungsart` des minimalen Geodatenmodells «Landwirtschaftliche Kulturflächen» (Geobasisdaten-Identifikator 153, Modell 153.1 Nutzungsflächen). Mit diesen Nutzungsarten erfassen die Kantone die landwirtschaftlichen Nutzungsflächen geometrisch und stellen sie über [geodienste.ch](https://geodienste.ch/) bereit. Der Katalog basiert auf den Direktzahlungskulturen, enthält jedoch zusätzliche (aggregierende) Nutzungsarten, weitere Attribute sowie eine eigene, auf das Geodatenmodell bezogene zeitliche Gültigkeit. Er wird vom Bundesamt für Landwirtschaft als INTERLIS-Katalog unter <https://models.geo.admin.ch/BLW/> publiziert. Die Klasse ist als Unterklasse der Direktzahlungskultur modelliert und erbt deren Eigenschaften (Identifikator, Name, Nutzungstyp, zeitliche Gültigkeit); nachfolgend sind nur die geodatenspezifischen Ergänzungen und Einschränkungen aufgeführt."@de ;
     sh:sparql [
         a sh:SPARQLConstraint ;
-        sh:message "A geodata crop that is not overlapping must belong to a main category (skos:broader)" ;
+        sh:message "The aggregating land use type of a geodata crop must not itself be aggregated" ;
+        sh:select """
+            PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+            PREFIX eCH-0265: <https://agriculture.ld.admin.ch/eCH-0265/2/>
+            SELECT $this ?aggregate
+            WHERE {
+                $this skos:broader ?aggregate .
+                ?aggregate a eCH-0265:GeodataCrop ;
+                    skos:broader ?grandparent .
+                ?grandparent a eCH-0265:GeodataCrop .
+            }
+        """ ;
+    ],
+    [
+        a sh:SPARQLConstraint ;
+        sh:message "A geodata crop that is not overlapping must reach a main category via skos:broader" ;
         sh:select """
             PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
             PREFIX eCH-0265: <https://agriculture.ld.admin.ch/eCH-0265/2/>
             SELECT $this
             WHERE {
                 $this eCH-0265:overlapping false .
-                FILTER NOT EXISTS { $this skos:broader ?category . }
+                FILTER NOT EXISTS {
+                    $this skos:broader+ ?category .
+                    ?category a eCH-0265:GeodataCropCategory .
+                }
             }
         """ ;
     ] ;
     sh:property
         [
             sh:order 1 ;
-            sh:name "Hauptkategorie"@de,
-                "Main category"@en ;
-            sh:description "Die Hauptkategorie, welcher diese Nutzungsart im Geodatenmodell zugeordnet ist. Überlagernd erfasste Nutzungsarten haben keine Hauptkategorie."@de ;
+            sh:name "Übergeordnetes Konzept"@de,
+                "Broader concept"@en ;
+            sh:description "Entweder die Hauptkategorie, welcher diese Nutzungsart im Geodatenmodell zugeordnet ist, oder – wenn sie in einer aggregierenden Nutzungsart zusammengefasst wird – diese aggregierende Nutzungsart, welche ihrerseits auf die Hauptkategorie zeigt. Die Hauptkategorie ergibt sich damit über `skos:broaderTransitive`. Überlagernd erfasste Nutzungsarten haben kein übergeordnetes Konzept. Aggregierende Nutzungsarten fassen die Nutzungsarten derselben Hauptkategorie mit gleicher Beitragsberechtigung zusammen; der Katalog führt diese Zuordnung nicht, sie ist hier abgeleitet."@de ;
             sh:path skos:broader ;
-            sh:class eCH-0265:GeodataCropCategory ;
+            sh:maxCount 1 ;
+            sh:or (
+                [ sh:class eCH-0265:GeodataCropCategory ]
+                [ sh:class eCH-0265:GeodataCrop ]
+            ) ;
         ],
         [
             sh:order 2 ;
