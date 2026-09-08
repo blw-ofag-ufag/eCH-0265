@@ -3906,7 +3906,7 @@ cultivationtype:1110 a eCH-0265:CultivationType ;
     schema:name "Bundzwiebeln, Frühjahr"@de,
         "Oignons en botte, printemps"@fr,
         "Cipollotti a mazzi, primavera"@it ;
-    rdfs:subClassOf cultivationtype:232 .
+    rdfs:subClassOf cultivationtype:24, cultivationtype:188 .
 
 cultivationtype:1111 a eCH-0265:CultivationType ;
     schema:name "Winterraps in 62a Nitrat-Projekt"@de,
@@ -3948,7 +3948,7 @@ cultivationtype:1118 a eCH-0265:CultivationType ;
     schema:name "Bundzwiebeln, Sommer"@de,
         "Oignons en botte, été"@fr,
         "Cipollotti a mazzi, estate"@it ;
-    rdfs:subClassOf cultivationtype:232 .
+    rdfs:subClassOf cultivationtype:24, cultivationtype:188 .
 
 cultivationtype:1119 a eCH-0265:CultivationType ;
     schema:name "Spinat, Industrie, 1 Schnitt, nach Mitte April gesät"@de,
@@ -4006,7 +4006,7 @@ cultivationtype:1127 a eCH-0265:CultivationType ;
     schema:name "Bundzwiebeln, Überwinterung"@de,
         "Oignons en botte, hivernage"@fr,
         "Cipollotti a mazzi, svernamento"@it ;
-    rdfs:subClassOf cultivationtype:232 .
+    rdfs:subClassOf cultivationtype:24, cultivationtype:188 .
 
 cultivationtype:1128 a eCH-0265:CultivationType ;
     schema:name "Erdbeeren mehrjährig"@de,
