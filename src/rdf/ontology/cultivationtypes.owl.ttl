@@ -2343,7 +2343,7 @@ cultivationtype:549 a eCH-0265:CultivationType ;
     schema:name "Sorghum"@de,
         "Sorgho"@fr,
         "Sorgo"@it ;
-    rdfs:subClassOf cultivationtype:1033 .
+    rdfs:subClassOf cultivationtype:14 .
 
 cultivationtype:550 a eCH-0265:CultivationType ;
     schema:name "Übrige Ackerfläche"@de,
