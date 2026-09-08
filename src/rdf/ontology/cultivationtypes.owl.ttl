@@ -849,12 +849,6 @@ cultivationtype:158 a eCH-0265:CultivationType ;
         "Sedano rapa"@it ;
     rdfs:subClassOf cultivationtype:94 .
 
-cultivationtype:159 a eCH-0265:CultivationType ;
-    schema:name "Birne"@de,
-        "poirier"@fr,
-        "Pero"@it ;
-    rdfs:subClassOf cultivationtype:41 .
-
 cultivationtype:161 a eCH-0265:CultivationType ;
     schema:name "Schwarzer Holunder"@de,
         "Elder berry"@en,
@@ -2937,6 +2931,13 @@ cultivationtype:725 a eCH-0265:CultivationType ;
     schema:description "Kleinräumige Mischung verschiedener Kulturen mit mehr als 50% Spezialkulturen."@de ;
     rdfs:subClassOf cultivationtype:750 .
 
+cultivationtype:730 a eCH-0265:CultivationType ;
+    schema:name "Obstanlagen (aggregiert)"@de,
+        "Cultures fruitières (agrégée)"@fr,
+        "Frutteti (aggregata)"@it ;
+    schema:description "Aggregierende Nutzungsart des Geodatenmodells «Landwirtschaftliche Kulturflächen», welche die Obstanlagen (Äpfel, Birnen, Steinobst und andere Obstanlagen) zusammenfasst."@de ;
+    rdfs:subClassOf cultivationtype:5 .
+
 cultivationtype:731 a eCH-0265:CultivationType ;
     schema:name "Andere Obstanlagen (Kiwis, Holunder usw.)"@de,
         "Autres cultures fruitières (kiwis, sureau, etc.)"@fr,
@@ -3533,8 +3534,7 @@ cultivationtype:1043 a eCH-0265:CultivationType ;
 cultivationtype:1044 a eCH-0265:CultivationType ;
     schema:name "Verarbeitungskohlrabi"@de, "Chou-rave d'industrie"@fr, "Cavolo rapa da industria"@it ;
     rdfs:subClassOf cultivationtype:1296,
-        cultivationtype:546;
-    owl:disjointWith cultivationtype:1297 .
+        cultivationtype:546 .
 
 cultivationtype:1045 a eCH-0265:CultivationType ;
     schema:name "Ölhanf"@de, "Chanvre oléagineux"@fr, "Canapa da olio"@it ;
@@ -3661,13 +3661,6 @@ cultivationtype:1073 a eCH-0265:CultivationType ;
         "Persil, jusqu'à la première coupe"@fr,
         "Prezzemolo, fino al primo taglio"@it ;
     rdfs:subClassOf cultivationtype:311 .
-
-cultivationtype:1074 a eCH-0265:CultivationType ;
-    schema:name "Kefen"@de,
-        "Mange-tout"@fr,
-        "Taccole"@it ;
-    schema:alternateName "Zuckerschoten"@de ;
-    rdfs:subClassOf cultivationtype:191 .
 
 cultivationtype:1075 a eCH-0265:CultivationType ;
     schema:name "Erbsen, Kefen"@de,
@@ -4697,10 +4690,6 @@ cultivationtype:1273 a eCH-0265:CultivationType ;
         "Uva spina, 2.5 kg/m2"@it ;
     rdfs:subClassOf cultivationtype:298 .
 
-cultivationtype:1275 a eCH-0265:CultivationType ;
-    schema:name "Gründüngung (Leguminosen)"@de ;
-    rdfs:subClassOf cultivationtype:47, cultivationtype:24 .
-
 cultivationtype:1277 a eCH-0265:CultivationType ;
     schema:name "Gründüngung (Nichtleguminosen)"@de ;
     rdfs:subClassOf cultivationtype:1 .
@@ -4762,13 +4751,6 @@ cultivationtype:1292 a eCH-0265:CultivationType ;
     schema:name "Hecken und Feldgehölz mit Krautsaum"@de ;
     rdfs:subClassOf cultivationtype:852 .
 
-cultivationtype:1293 a eCH-0265:CultivationType ;
-    schema:name "Zuckerhut (Nicht-Convenience)"@de,
-        "Chicorée pain de sucre (non-convenience)"@fr,
-        "Cicoria pan di zucchero (non-convenience)"@it ;
-    rdfs:subClassOf cultivationtype:142 ;
-    owl:disjointWith cultivationtype:1131 .
-
 cultivationtype:1294 a eCH-0265:CultivationType ;
     schema:name "Tomaten (Freiland)"@de,
         "Tomates (pleine terre)"@fr,
@@ -4778,14 +4760,6 @@ cultivationtype:1294 a eCH-0265:CultivationType ;
     owl:disjointWith cultivationtype:1141 ;
     eCH-0265:botanicalPlant taxon:SOLYC .
 
-cultivationtype:1295 a eCH-0265:CultivationType ;
-    schema:name "Krautstiel (Freiland)"@de,
-        "Bette à côte (pleine terre)"@fr,
-        "Costa (pieno campo)"@it ;
-    rdfs:subClassOf cultivationtype:76,
-        cultivationtype:24 ;
-    owl:disjointWith cultivationtype:1135 .
-
 cultivationtype:1296 a eCH-0265:CultivationType ;
     schema:name "Kohlrabi Freiland"@de,
         "Chou-rave de plein champ"@fr,
@@ -4793,14 +4767,6 @@ cultivationtype:1296 a eCH-0265:CultivationType ;
     rdfs:subClassOf cultivationtype:48, 
         cultivationtype:24 ;
     owl:disjointWith cultivationtype:1043 .
-
-cultivationtype:1297 a eCH-0265:CultivationType ;
-    schema:name "Kohlrabi (nicht für die Verarbeitung)"@de,
-        "Chou-rave (pas pour l'industrie)"@fr,
-        "Cavolo rapa (non da industria)"@it ;
-    rdfs:subClassOf cultivationtype:1296, 
-        cultivationtype:545 ;
-    owl:disjointWith cultivationtype:1044 .
 
 cultivationtype:1298 a eCH-0265:CultivationType ;
     schema:name "Radicchio und Cicorino (nicht für die Verarbeitung)"@de,
