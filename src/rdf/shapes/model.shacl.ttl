@@ -64,7 +64,7 @@ eCH-0265:CultivationType a sh:NodeShape, rdfs:Class ;
         sh:path schema:name ;
         sh:name "Name"@de,
             "Name"@en ;
-        sh:minCount 1 ;
+        sh:minCount 4 ;
         sh:nodeKind sh:Literal ;
         sh:datatype rdf:langString ;
         sh:languageIn ( "de" "fr" "it" "en" ) ;
