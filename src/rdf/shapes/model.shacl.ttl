@@ -69,6 +69,7 @@ eCH-0265:CultivationType a sh:NodeShape, rdfs:Class ;
         sh:datatype rdf:langString ;
         sh:languageIn ( "de" "fr" "it" "en" ) ;
         sh:uniqueLang true ;
+        sh:pattern "^[A-ZÀ-ÖØ-Þ]" ;
     ],
     [
         sh:order 2 ;
