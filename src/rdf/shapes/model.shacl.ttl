@@ -64,6 +64,8 @@ eCH-0265:CultivationType a sh:NodeShape, rdfs:Class ;
         sh:path schema:name ;
         sh:name "Name"@de,
             "Name"@en ;
+        sh:description "Der Name der Kultur ist in genau vier Sprachen (de, fr, it, en) erfasst und beginnt jeweils mit einem Grossbuchstaben. Der Name bleibt eine möglichst schlanke Gattungsbezeichnung und ist ohne Klammern und Kommas geschrieben. Synonyme gehören in schema:alternateName und Spezifizierungen sowie Beispiellisten in schema:description."@de,
+            "The name of the cultivation type is recorded in exactly four languages (de, fr, it, en) and each begins with an uppercase letter.  The name remains as lean a generic term as possible and is written without parentheses or commas. Synonyms belong in schema:alternateName, and specifications and lists of examples in schema:description."@en ;
         sh:minCount 4 ;
         sh:nodeKind sh:Literal ;
         sh:datatype rdf:langString ;
