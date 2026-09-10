@@ -1,6 +1,6 @@
 # eCH-0265 Landwirtschaftliche Kulturen
 eCH Fachgruppe AgriFood
-8. September 2026
+10. September 2026
 
 - [Hinweis](#sec-note)
 - [<span class="toc-section-number">1</span>
