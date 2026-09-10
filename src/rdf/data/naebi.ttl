@@ -63,7 +63,7 @@ naebi:FODDER a eCH-0265:NutrientBalanceCropCategory ;
 naebi:SPECIAL a eCH-0265:NutrientBalanceCropCategory ;
     skos:inScheme naebi:ConceptScheme ;
     skos:topConceptOf naebi:ConceptScheme ;
-    schema:identifier "CULT_ARABLE" ;
+    schema:identifier "CULT_SPECIAL" ;
     schema:name "Spezialkulturen"@de ;
     eCH-0265:exactMatch cultivationtype:465 .
 
@@ -638,7 +638,7 @@ naebi:156 a eCH-0265:NutrientBalanceCrop ;
     skos:inScheme naebi:ConceptScheme ;
     schema:identifier "CROP_OAFNT" ;
     schema:name "Nützlingsstreifen (DK)"@de ;
-    eCH-0265:cultivationCategory naebi:ARABLE ;
+    eCH-0265:cultivationCategory naebi:SPECIAL ;
     eCH-0265:cultivationSubCategory naebi:PRMCR ;
     eCH-0265:exactMatch cultivationtype:1023 .
 
