@@ -146,8 +146,11 @@ cultivationtype:14 a eCH-0265:CultivationType ;
         "Cereals"@en,
         "Céréales"@fr,
         "Cereali"@it ;
-    schema:description "Der Anbau von verschiedenen Getreidearten wie Weizen, Gerste, Roggen, Hafer oder Dinkel. Das Hauptziel ist die Gewinnung der Körner zur Nutzung als Lebens- oder Futtermittel."@de ;
-    rdfs:subClassOf cultivationtype:1 .
+    schema:description "Umfasst den Anbau von botanischen Getreidearten aus der Familie der Süssgräser (Poaceae) wie Weizen, Gerste, Roggen, Hafer oder Dinkel. Das Hauptziel ist die Gewinnung der Körner zur Nutzung als Lebens- oder Futtermittel."@de,
+            "Comprend la culture d'espèces céréalières botaniques de la famille des graminées (Poaceae) telles que le blé, l'orge, le seigle, l'avoine ou l'épeautre. L'objectif principal est la production de grains destinés à l'alimentation humaine ou animale."@fr,
+            "Comprende la coltivazione di specie cerealicole botaniche della famiglia delle graminacee (Poaceae) quali frumento, orzo, segale, avena o spelta. L'obiettivo principale è l'ottenimento di granella destinata all'alimentazione umana o animale."@it,
+            "Includes the cultivation of botanical cereal species from the grass family (Poaceae) such as wheat, barley, rye, oats, or spelt. The primary objective is the production of grains for use as food or feed."@en ;  
+    rdfs:subClassOf cultivationtype:466 .
 
 cultivationtype:15 a eCH-0265:CultivationType ;
     schema:name "Leguminosen"@de,
@@ -2209,7 +2212,7 @@ cultivationtype:466 a eCH-0265:CultivationType ;
         "Cereals and pseudocereals"@en,
         "Céréales et pseudo-céréales"@fr,
         "Cereali e pseudocereali"@it ;
-    rdfs:subClassOf cultivationtype:1 ;
+    rdfs:subClassOf cultivationtype:1022 ;
     owl:unionOf ( cultivationtype:14 cultivationtype:16 ) .
 
 cultivationtype:467 a eCH-0265:CultivationType ;
@@ -2378,7 +2381,7 @@ cultivationtype:497 a eCH-0265:CultivationType ;
         "Maïs"@fr,
         "Mais"@it ;
     schema:description "Der Anbau von Mais (Zea mays) für alle möglichen Zwecke."@de ;
-    rdfs:subClassOf cultivationtype:14, cultivationtype:1022 ;
+    rdfs:subClassOf cultivationtype:14 ;
     eCH-0265:botanicalPlant taxon:ZEAMX .
 
 cultivationtype:498 a eCH-0265:CultivationType ;
@@ -2461,7 +2464,7 @@ cultivationtype:509 a eCH-0265:CultivationType ;
         "Riz"@fr,
         "Riso"@it ;
     schema:description "Der Anbau von Reis auf offener Fläche."@de ;
-    rdfs:subClassOf cultivationtype:1033 ;
+    rdfs:subClassOf cultivationtype:14 ;
     eCH-0265:botanicalPlant taxon:ORYSA .
 
 cultivationtype:510 a eCH-0265:CultivationType ;
@@ -2509,7 +2512,7 @@ cultivationtype:515 a eCH-0265:CultivationType ;
         "Méteil de céréales panifiables"@fr,
         "Miscela di cereali panificabili"@it ;
     schema:description "Gemeinsame Ansaat von mehreren Getreidearten bzw. von Getreide mit Hülsenfrüchten, welche mindestens auch Brotgetreide beinhaltet."@de ;
-    rdfs:subClassOf cultivationtype:1033,
+    rdfs:subClassOf cultivationtype:14 ,
         cultivationtype:18 ;
     eCH-0265:botanicalPlant taxon:TRZAX .
 
@@ -2543,7 +2546,7 @@ cultivationtype:520 a eCH-0265:CultivationType ;
         "Riz en culture sèche"@fr,
         "Riso seminato su terreno asciutto"@it ;
     schema:description "Der Anbau von Reis im Trockenverfahren. Im Gegensatz zum Nassreisbau werden die Felder bei dieser Methode nicht geflutet."@de ;
-    rdfs:subClassOf cultivationtype:509, cultivationtype:1022 ;
+    rdfs:subClassOf cultivationtype:509 ;
     eCH-0265:botanicalPlant taxon:ORYSA .
 
 cultivationtype:521 a eCH-0265:CultivationType ;
@@ -2719,14 +2722,14 @@ cultivationtype:542 a eCH-0265:CultivationType ;
         "Echte Hirse"@de,
         "Prosohirse"@de,
         "Baraga"@de ;
-    rdfs:subClassOf cultivationtype:1033 .
+    rdfs:subClassOf cultivationtype:14 .
 
 cultivationtype:543 a eCH-0265:CultivationType ;
     schema:name "Getreide siliert"@de,
         "Silage cereals"@en,
         "Céréales ensilées"@fr,
         "Cereali insilati"@it ;
-    rdfs:subClassOf cultivationtype:1033 ;
+    rdfs:subClassOf cultivationtype:14 ;
     eCH-0265:botanicalPlant taxon:1GRAF .
 
 cultivationtype:544 a eCH-0265:CultivationType ;
@@ -2769,7 +2772,7 @@ cultivationtype:549 a eCH-0265:CultivationType ;
         "Sorghum"@en,
         "Sorgho"@fr,
         "Sorgo"@it ;
-    rdfs:subClassOf cultivationtype:1033 .
+    rdfs:subClassOf cultivationtype:14 .
 
 cultivationtype:550 a eCH-0265:CultivationType ;
     schema:name "Übrige Ackerfläche"@de,
@@ -4187,11 +4190,15 @@ cultivationtype:1031 a eCH-0265:CultivationType ;
     rdfs:subClassOf cultivationtype:543 .
 
 cultivationtype:1033 a eCH-0265:CultivationType ;
-    schema:name "Getreide ohne Mais"@de,
-        "Cereals excluding maize"@en,
-        "Céréales sans Maïs"@fr,
-        "Cereali senza Mais"@it ;
-    rdfs:subClassOf cultivationtype:1022 ;
+    schema:name "Kleinkörniges Getreide"@de,
+        "Céréales à paille"@fr,
+        "Cereali a paglia"@it,
+        "Small grain cereals"@en ;
+    schema:description "Umfasst die folgenden Getreidekulturen gemäss Pflanzenschutzmittelverzeichnis (PSM): Weizen (Weichweizen, Hartweizen, Dinkel, Emmer), Triticale, Gerste, Hafer und Roggen."@de,
+        "Comprend les cultures céréalières suivantes selon l'index des produits phytosanitaires (PPh) : blé (blé tendre, blé dur, épeautre, amidonnier), triticale, orge, avoine et seigle."@fr,
+        "Comprende le seguenti colture cerealicole secondo l'indice dei prodotti fitosanitari (PF): frumento (frumento tenero, frumento duro, spelta, ammer), triticale, orzo, avena e segale."@it,
+        "Includes the following cereal crops according to the plant protection products register (PPP): wheat (common wheat, durum wheat, spelt, emmer), triticale, barley, oats, and rye."@en ;
+    rdfs:subClassOf cultivationtype:14 ;
     owl:disjointWith cultivationtype:497 .
 
 cultivationtype:1034 a eCH-0265:CultivationType ;
@@ -4744,7 +4751,7 @@ cultivationtype:1110 a eCH-0265:CultivationType ;
         "Spring onions spring"@en,
         "Oignons en botte printemps"@fr,
         "Cipollotti a mazzi primavera"@it ;
-    rdfs:subClassOf cultivationtype:232 .
+    rdfs:subClassOf cultivationtype:24, cultivationtype:188 .
 
 cultivationtype:1111 a eCH-0265:CultivationType ;
     schema:name "Winterraps mit Nitratprojekt"@de,
@@ -4794,7 +4801,7 @@ cultivationtype:1118 a eCH-0265:CultivationType ;
         "Spring onions summer"@en,
         "Oignons en botte été"@fr,
         "Cipollotti a mazzi estate"@it ;
-    rdfs:subClassOf cultivationtype:232 .
+    rdfs:subClassOf cultivationtype:24, cultivationtype:188 .
 
 cultivationtype:1119 a eCH-0265:CultivationType ;
     schema:name "Spinat Industrie 1 Schnitt nach Mitte April gesät"@de,
@@ -4861,7 +4868,7 @@ cultivationtype:1127 a eCH-0265:CultivationType ;
         "Bunching onions overwintering"@en,
         "Oignons en botte hivernage"@fr,
         "Cipollotti a mazzi svernamento"@it ;
-    rdfs:subClassOf cultivationtype:232 .
+    rdfs:subClassOf cultivationtype:24, cultivationtype:188 .
 
 cultivationtype:1128 a eCH-0265:CultivationType ;
     schema:name "Erdbeeren mehrjährig"@de,
@@ -5127,7 +5134,7 @@ cultivationtype:1164 a eCH-0265:CultivationType ;
         "Pattypan squash and pumpkins in protected cultivation"@en,
         "Pâtisson et courge en culture protégée"@fr,
         "Patisson e zucca in coltura protetta"@it ;
-    owl:intersectionOf ( cultivationtype:235 cultivationtype:7 ) .
+    owl:intersectionOf ( cultivationtype:1093 cultivationtype:7 ) .
 
 cultivationtype:1165 a eCH-0265:CultivationType ;
     schema:name "Zucchetti gepflanzt Sommer und Herbst"@de,
@@ -5148,7 +5155,7 @@ cultivationtype:1167 a eCH-0265:CultivationType ;
         "Pattypan squash and pumpkins"@en,
         "Pâtisson et courge"@fr,
         "Patisson e zucca"@it ;
-    rdfs:subClassOf cultivationtype:235 .
+    owl:intersectionOf ( cultivationtype:1093 cultivationtype:24 ) .
 
 cultivationtype:1168 a eCH-0265:CultivationType ;
     schema:name "Zucchetti gesät Sommer und Herbst"@de,
