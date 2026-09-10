@@ -13,11 +13,16 @@ For every code list the same three questions are asked:
 
 Whenever a test fails, a human readable report is written to ``build/test`` so
 that the concrete differences can be inspected without re-running the test.
+
+The tests depend on remote sources, and the two ways of losing a source are
+told apart deliberately. A client error (HTTP 4xx) will trigger an error, a
+server error (HTTP 5xx) or an unreachable host is a will skip the test.
 """
 
 import csv
 import gzip
 import io
+import time
 import xml.etree.ElementTree as ET
 from collections import defaultdict
 from pathlib import Path
@@ -37,6 +42,8 @@ PSM_CSV_URL = "https://raw.githubusercontent.com/BLV-OSAV-USAV/PSMV-RDF/refs/hea
 GIS_XML_URL = "https://models.geo.admin.ch/BLW/LWB_Nutzungsflaechen_Kataloge_V3_0.xml"
 
 REQUEST_TIMEOUT = 30
+MAX_RETRIES = 3
+RETRY_DELAY = 2
 
 # The NAEBI API returns one designation per language, the PSM code list uses
 # BCP-47 language tags directly and the INTERLIS catalogue uses ISO 639-2 codes.
@@ -161,13 +168,39 @@ def duplicate_identifiers(graph, query):
 # ==============================================================================
 
 def fetch(url):
-    """Fetches a remote source, skipping the test if the source is unreachable."""
-    try:
-        response = requests.get(url, timeout=REQUEST_TIMEOUT)
-        response.raise_for_status()
-    except requests.exceptions.RequestException as error:
-        pytest.skip(f"Source {url} is unreachable. Error: {error}")
-    return response
+    """Fetches a remote source, retrying and skipping only on temporary outages.
+
+    The tests depend on remote sources, and the two ways of losing a source are
+    told apart deliberately. A client error (HTTP 4xx) means the source itself
+    moved or disappeared. That never recovers on its own and has to be fixed
+    here, so the test errors out instead of quietly disappearing from the
+    report. A server error (HTTP 5xx) or an unreachable host is a temporary
+    outage on the other side: the request is retried and the test is skipped if
+    the source stays unavailable.
+    """
+    last_error = None
+    for attempt in range(MAX_RETRIES):
+        try:
+            response = requests.get(url, timeout=REQUEST_TIMEOUT)
+        except requests.exceptions.RequestException as error:
+            last_error = error
+        else:
+            if response.status_code < 400:
+                return response
+            if response.status_code < 500:
+                pytest.fail(
+                    f"HTTP {response.status_code} for {url}. The source has moved or "
+                    f"disappeared, so this test has to be pointed at its new location."
+                )
+            last_error = f"HTTP {response.status_code} {response.reason}"
+
+        if attempt < MAX_RETRIES - 1:
+            time.sleep(RETRY_DELAY)
+
+    pytest.skip(
+        f"Source {url} did not respond after {MAX_RETRIES} attempts. "
+        f"Reason: {last_error}"
+    )
 
 def designations(payload):
     """Maps the ``descriptor`` of a NAEBI API entry to language tagged names."""
