@@ -384,7 +384,7 @@ Tabelle 6: Eigenschaften Nutzungstyp
 
 | Beschreibung | Pfad | Typ | Kard. |
 |:---|:---|:---|---:|
-| **Name** | `schema:name` | `rdf:langString` oder `sh:Literal` | 1..\* |
+| **Name**: Der Name der Kultur ist in genau vier Sprachen (de, fr, it, en) erfasst und beginnt jeweils mit einem Grossbuchstaben. Der Name bleibt eine möglichst schlanke Gattungsbezeichnung und ist ohne Klammern und Kommas geschrieben. Synonyme gehören in schema:alternateName und Spezifizierungen sowie Beispiellisten in schema:description. | `schema:name` | `rdf:langString` oder `sh:Literal` | 4..\* |
 | **Alias** | `schema:alternateName` | `rdf:langString` oder `sh:Literal` | 0..\* |
 | **Beschreibung** | `schema:description` | `rdf:langString` oder `sh:Literal` | 0..\* |
 | **Übergeordneter Nutzungstyp** | `rdfs:subClassOf` | [`eCH-0265:CultivationType`](#sec-nodeshape-cultivationtype) oder `owl:Class` | 0..\* |
