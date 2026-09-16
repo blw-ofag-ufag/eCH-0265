@@ -1,6 +1,6 @@
 # eCH-0265 Landwirtschaftliche Kulturen
 eCH Fachgruppe AgriFood
-10. September 2026
+16. September 2026
 
 - [Hinweis](#sec-note)
 - [<span class="toc-section-number">1</span>
@@ -860,10 +860,11 @@ Eine vollständige Übersicht der Veränderungen wird auf GitHub geführt:
 
 [^2]: Botanisch gesehen ist Mais ein Getreide (Süssgras), unterscheidet
     sich in der ackerbaulichen Praxis als Hackfrucht jedoch merklich von
-    klassischen Getreidearten. Buchweizen und Quinoa sind botanisch
-    nicht mit Getreide verwandt. Ihr Erntegut und dessen Verwendung
-    ähneln jedoch stark denen von echtem Getreide, daher werden sie
-    manchmal als Pseudogetreide bezeichnet.
+    klassischen Getreidearten. Buchweizen (ein Knöterichgewächs) und
+    Quinoa (ein Fuchsschwanzgewächs) sind botanisch nicht mit Getreide
+    (Süssgras) verwandt. Ihr Erntegut und dessen Verwendung ähneln
+    jedoch stark denen von echtem Getreide, daher werden sie manchmal
+    als Pseudogetreide bezeichnet.
 
 [^3]: Die Erhebung von landwirtschaftlichen Nutzflächen wird bereits mit
     dem minimale Geodatenmodell «Landwirtschaftliche Kulturflächen»
