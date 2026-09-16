@@ -42,7 +42,7 @@ format:
     toc: true
     toc-depth: 2
     number-sections: true
-    reference-doc: https://s.zazuko.com/MHXTkQ
+    reference-doc: https://ech.ch/sites/default/files/imce/eCH-Dossier/0001-0030/eCH-0003/11.1.0/Beilagen/Beilagen%20aktuell%2028.11.2025/XXXX_d_DRA_JJJJ-MM-TT_eCH-0XXX_Vx.x.x_Titel.docx
     link-citations: true
   typst:
     toc: true
