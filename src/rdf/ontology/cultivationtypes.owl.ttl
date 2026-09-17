@@ -3700,8 +3700,8 @@ cultivationtype:858 a eCH-0265:CultivationType ;
     eCH-0265:managementIntensity intensity:Extensive .
 
 cultivationtype:895 a eCH-0265:CultivationType ;
-    schema:name "Dauergrünfläche übrige Flächen innerhalb der LN"@de,
-        "Permanent grassland other areas within UAA"@en,
+    schema:name "Übrige Flächen innerhalb der LN, beitragsberechtigt"@de,
+        "Other areas within the UAA, eligible for contributions"@en,
         "Autres surfaces dans la SAU donnant droit aux contributions"@fr,
         "Altre superfici all'interno della SAU aventi diritto ai contributi"@it ;
     rdfs:subClassOf cultivationtype:21 .
