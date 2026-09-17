@@ -3486,13 +3486,6 @@ cultivationtype:725 a eCH-0265:CultivationType ;
     schema:description "Kleinräumige Mischung verschiedener Kulturen mit mehr als 50% Spezialkulturen."@de ;
     rdfs:subClassOf cultivationtype:750 .
 
-cultivationtype:730 a eCH-0265:CultivationType ;
-    schema:name "Obstanlagen (aggregiert)"@de,
-        "Cultures fruitières (agrégée)"@fr,
-        "Frutteti (aggregata)"@it ;
-    schema:description "Aggregierende Nutzungsart des Geodatenmodells «Landwirtschaftliche Kulturflächen», welche die Obstanlagen (Äpfel, Birnen, Steinobst und andere Obstanlagen) zusammenfasst."@de ;
-    rdfs:subClassOf cultivationtype:5 .
-
 cultivationtype:731 a eCH-0265:CultivationType ;
     schema:name "Andere Obstanlagen"@de,
         "Other fruit orchards"@en,

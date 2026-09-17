@@ -1652,7 +1652,7 @@ mgdm:730 a eCH-0265:GeodataCrop ;
     eCH-0265:specialCrop true ;
     skos:inScheme mgdm:ConceptScheme ;
     skos:broader mgdm:Orchards ;
-    eCH-0265:exactMatch cultivationtype:730 .
+    eCH-0265:exactMatch cultivationtype:5 .
 
 mgdm:731 a eCH-0265:GeodataCrop ;
     schema:identifier "731" ;
