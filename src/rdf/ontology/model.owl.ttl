@@ -53,6 +53,9 @@ eCH-0265:PlantProtectionCrop a owl:Class ;
 # The land use types of the minimal geodata model are direct payment crops that
 # carry a few additional, geodata-specific attributes. They are therefore
 # modelled as a subclass and inherit the properties of the direct payment crop.
+eCH-0265:AgisCrop a owl:Class ;
+    rdfs:subClassOf eCH-0265:DirectPaymentCrop .
+
 eCH-0265:GeodataCrop a owl:Class ;
     rdfs:subClassOf eCH-0265:DirectPaymentCrop .
 
@@ -91,16 +94,6 @@ dcterms:title a owl:DatatypeProperty ;
 
 eCH-0265:overlapping a owl:DatatypeProperty ;
     schema:name "Overlapping"@en ;
-    rdfs:domain eCH-0265:GeodataCrop ;
-    rdfs:range xsd:boolean .
-
-eCH-0265:biodiversityPromotionAreaQualityLevelOne a owl:DatatypeProperty ;
-    schema:name "Biodiversity promotion area of quality level I"@en ;
-    rdfs:domain eCH-0265:GeodataCrop ;
-    rdfs:range xsd:boolean .
-
-eCH-0265:specialCrop a owl:DatatypeProperty ;
-    schema:name "Special crop"@en ;
     rdfs:domain eCH-0265:GeodataCrop ;
     rdfs:range xsd:boolean .
 

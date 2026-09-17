@@ -64,8 +64,6 @@ MGDM_ATTRIBUTES = {
     "Gueltig_Von": "validFrom",
     "Gueltig_Bis": "validTo",
     "Ist_Ueberlagernd": "overlapping",
-    "Ist_BFF_QI": "bff",
-    "Ist_Spezialkultur": "special",
 }
 
 LOG_DIR = Path("build/test")
@@ -352,7 +350,7 @@ def mgdm_local_names(final_graph):
 def agis_local_names(final_graph):
     return localised_names(final_graph, """
         SELECT ?id ?name WHERE {
-            ?crop a ech:DirectPaymentCrop ;
+            ?crop a ech:AgisCrop ;
                 schema:identifier ?id .
             OPTIONAL { ?crop schema:name ?name }
         }
@@ -577,14 +575,12 @@ def test_mgdm_crop_names_match_source(mgdm_local_names, gis_source):
 def test_mgdm_attributes_match_source(final_graph, mgdm_source):
     """Validity and flags of every crop are identical to the INTERLIS catalogue."""
     rows = final_graph.query(PREFIXES + """
-        SELECT ?id ?validFrom ?validTo ?overlapping ?bff ?special WHERE {
+        SELECT ?id ?validFrom ?validTo ?overlapping WHERE {
             ?crop a ech:GeodataCrop ;
                 schema:identifier ?id .
             OPTIONAL { ?crop schema:validFrom ?validFrom }
             OPTIONAL { ?crop schema:validTo ?validTo }
             OPTIONAL { ?crop ech:overlapping ?overlapping }
-            OPTIONAL { ?crop ech:biodiversityPromotionAreaQualityLevelOne ?bff }
-            OPTIONAL { ?crop ech:specialCrop ?special }
         }
     """)
     local = defaultdict(dict)

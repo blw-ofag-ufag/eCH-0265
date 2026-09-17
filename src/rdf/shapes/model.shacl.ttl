@@ -6,6 +6,7 @@
 @prefix eCH-0265:        <https://agriculture.ld.admin.ch/eCH-0265/2/> .
 @prefix psm:             <https://agriculture.ld.admin.ch/crops/psm/1/> .
 @prefix naebi:           <https://agriculture.ld.admin.ch/crops/naebi/1/> .
+@prefix agis:            <https://agriculture.ld.admin.ch/crops/agis/1/> .
 @prefix mgdm:            <https://agriculture.ld.admin.ch/crops/mgdm/1/> .
 
 # Globally used namespaces/qnames
@@ -111,7 +112,7 @@ eCH-0265:CultivationType a sh:NodeShape, rdfs:Class ;
     ] .
 
 # ==============================================================================
-# Direct payment crop (AGIS)
+# Direct payment crop (AGIS and minimal geodata model «Landwirtschaftliche Kulturflächen»)
 # ==============================================================================
 
 eCH-0265:DirectPaymentAreaCategory a sh:NodeShape, rdfs:Class ;
@@ -123,15 +124,17 @@ eCH-0265:DirectPaymentAreaCategory a sh:NodeShape, rdfs:Class ;
         [
             sh:order 1 ;
             sh:path skos:topConceptOf ;
-            sh:class eCH-0265:DirectPaymentCropScheme ;
+            sh:in ( agis:ConceptScheme mgdm:ConceptScheme ) ;
             sh:minCount 1 ;
             sh:maxCount 1 ;
             sh:nodeKind sh:IRI ;
         ],
         [
             sh:order 2 ;
+            sh:name "Concept Scheme"@en,
+                "Konzeptschema"@de ;
             sh:path skos:inScheme ;
-            sh:class eCH-0265:DirectPaymentCropScheme ;
+            sh:in ( agis:ConceptScheme mgdm:ConceptScheme ) ;
             sh:minCount 1 ;
             sh:maxCount 1 ;
             sh:nodeKind sh:IRI ;
@@ -156,10 +159,10 @@ eCH-0265:DirectPaymentCrop a sh:NodeShape, rdfs:Class ;
         "Beschreibt eine Liste der «Kulturen», die gemäss Direktzahlungsverordnung (DZV) im Bereich Landwirtschaft relevant sind. Diese «Kulturen» werden für den Direktzahlungsvollzug verwendet. Sie entsprechen den Hauptkulturen."@de ;
     sh:closed true ;
     # `sh:closed` only takes the property shapes of this very node shape into account.
-    # The properties that the subclass eCH-0265:GeodataCrop adds are therefore listed
-    # here explicitly, so that they are not reported as violations on geodata crops.
-    sh:ignoredProperties ( rdf:type skos:exactMatch skos:broadMatch skos:narrowMatch skos:narrower
-        eCH-0265:overlapping eCH-0265:biodiversityPromotionAreaQualityLevelOne eCH-0265:specialCrop ) ;
+    # The properties that the subclasses eCH-0265:AgisCrop and eCH-0265:GeodataCrop
+    # add (skos:broader, eCH-0265:overlapping) are therefore listed here explicitly,
+    # so that they are not reported as violations on instances of the subclasses.
+    sh:ignoredProperties ( rdf:type skos:exactMatch skos:broadMatch skos:narrowMatch skos:narrower skos:broader eCH-0265:overlapping ) ;
     sh:sparql [
         a sh:SPARQLConstraint ;
         sh:message "schema:validFrom must be less than or equal to schema:validTo" ;
@@ -175,21 +178,11 @@ eCH-0265:DirectPaymentCrop a sh:NodeShape, rdfs:Class ;
     ] ;
     sh:property
         [
-            sh:order 1 ;
-            sh:name "Übergeordnetes Konzept"@de,
-                "Broader concept"@en ;
-            sh:description "Die Flächenkategorie, welcher diese Kultur zugeordnet ist, oder eine übergeordnete Kultur."@de ;
-            sh:path skos:broader ;
-            sh:maxCount 1 ;
-            sh:or (
-                [ sh:class eCH-0265:DirectPaymentAreaCategory ]
-                [ sh:class eCH-0265:DirectPaymentCrop ]
-            ) ;
-        ],
-        [
             sh:order 2 ;
+            sh:name "Concept Scheme"@en,
+                "Konzeptschema"@de ;
             sh:path skos:inScheme ;
-            sh:class eCH-0265:DirectPaymentCropScheme ;
+            sh:in ( agis:ConceptScheme mgdm:ConceptScheme ) ;
             sh:minCount 1 ;
             sh:maxCount 1 ;
             sh:nodeKind sh:IRI ;
@@ -235,6 +228,34 @@ eCH-0265:DirectPaymentCrop a sh:NodeShape, rdfs:Class ;
             sh:path schema:validTo ;
             sh:nodeKind sh:Literal ;
             sh:datatype xsd:integer ;
+        ] .
+
+# ==============================================================================
+# AGIS crop (Strukturdatenerhebung, agrarpolitisches Informationssystem AGIS)
+# ==============================================================================
+
+eCH-0265:AgisCrop a sh:NodeShape, rdfs:Class ;
+    rdfs:subClassOf eCH-0265:DirectPaymentCrop ;
+    rdfs:label "AGIS-Kultur"@de,
+        "AGIS crop"@en ;
+    rdfs:comment "Direktzahlungskultur, wie sie im Rahmen der Strukturdatenerhebung erfasst und an das agrarpolitische Informationssystem (AGIS) des Bundes übermittelt wird. Die Klasse ist als Unterklasse der Direktzahlungskultur modelliert und erbt deren Eigenschaften."@de ;
+    sh:property
+        [
+            sh:order 1 ;
+            sh:name "Flächenkategorie"@de,
+                "Area category"@en ;
+            sh:description "Die Flächenkategorie Direktzahlung, welcher diese Kultur zugeordnet ist."@de ;
+            sh:path skos:broader ;
+            sh:maxCount 1 ;
+            sh:nodeKind sh:IRI ;
+            sh:class eCH-0265:DirectPaymentAreaCategory ;
+        ],
+        [
+            sh:order 2 ;
+            sh:name "Concept Scheme"@en,
+                "Konzeptschema"@de ;
+            sh:path skos:inScheme ;
+            sh:hasValue agis:ConceptScheme ;
         ] .
 
 # ==============================================================================
@@ -414,18 +435,6 @@ eCH-0265:PlantProtectionCrop a sh:NodeShape, rdfs:Class ;
 # Geodata crop (minimal geodata model «Landwirtschaftliche Kulturflächen», 153.1)
 # ==============================================================================
 
-eCH-0265:GeodataCropCategory a sh:NodeShape, rdfs:Class ;
-    rdfs:subClassOf eCH-0265:DirectPaymentAreaCategory ;
-    rdfs:label "Hauptkategorie der Geodaten-Nutzungsarten"@de,
-        "Geodata crop main category"@en ;
-    rdfs:comment "Hauptkategorie einer Nutzungsfläche gemäss dem minimalen Geodatenmodell «Landwirtschaftliche Kulturflächen» (Modell 153.1 Nutzungsflächen, Attribut `Hauptkategorie` der Klasse `LNF_Katalog_Nutzungsart`). Die Hauptkategorien tragen im Geodatenmodell keine eigenen Codes und werden hier als oberste Konzepte des Schemas modelliert. Überlagernd erfasste Nutzungsarten (z.B. Bäume) sind keiner Hauptkategorie zugeordnet. Die Klasse ist eine Unterklasse der Flächenkategorie Direktzahlung und erbt deren Eigenschaften; hier ist einzig das Konzeptschema enger gefasst."@de ;
-    sh:property
-        [
-            sh:order 2 ;
-            sh:path skos:inScheme ;
-            sh:hasValue mgdm:ConceptScheme ;
-        ] .
-
 eCH-0265:GeodataCrop a sh:NodeShape, rdfs:Class ;
     rdfs:subClassOf eCH-0265:DirectPaymentCrop ;
     rdfs:label "Geodaten-Nutzungsart"@de,
@@ -457,7 +466,7 @@ eCH-0265:GeodataCrop a sh:NodeShape, rdfs:Class ;
                 $this eCH-0265:overlapping false .
                 FILTER NOT EXISTS {
                     $this skos:broader+ ?category .
-                    ?category a eCH-0265:GeodataCropCategory .
+                    ?category a eCH-0265:DirectPaymentAreaCategory .
                 }
             }
         """ ;
@@ -465,13 +474,13 @@ eCH-0265:GeodataCrop a sh:NodeShape, rdfs:Class ;
     sh:property
         [
             sh:order 1 ;
-            sh:name "Übergeordnetes Konzept"@de,
-                "Broader concept"@en ;
-            sh:description "Entweder die Hauptkategorie, welcher diese Nutzungsart im Geodatenmodell zugeordnet ist, oder – wenn sie in einer aggregierenden Nutzungsart zusammengefasst wird – diese aggregierende Nutzungsart, welche ihrerseits auf die Hauptkategorie zeigt. Die Hauptkategorie ergibt sich damit über `skos:broaderTransitive`. Überlagernd erfasste Nutzungsarten haben kein übergeordnetes Konzept. Aggregierende Nutzungsarten fassen die Nutzungsarten derselben Hauptkategorie mit gleicher Beitragsberechtigung zusammen; der Katalog führt diese Zuordnung nicht, sie ist hier abgeleitet."@de ;
+            sh:name "Übergeordnete Kultur"@de,
+                "Parent crop"@en ;
+            sh:description "Entweder die Hauptkategorie, welcher diese Nutzungsart im Geodatenmodell zugeordnet ist, oder – wenn sie in einer aggregierenden Nutzungsart zusammengefasst wird – diese aggregierende Nutzungsart, welche ihrerseits auf die Hauptkategorie zeigt."@de ;
             sh:path skos:broader ;
             sh:maxCount 1 ;
             sh:or (
-                [ sh:class eCH-0265:GeodataCropCategory ]
+                [ sh:class eCH-0265:DirectPaymentAreaCategory ]
                 [ sh:class eCH-0265:GeodataCrop ]
             ) ;
         ],
@@ -484,30 +493,8 @@ eCH-0265:GeodataCrop a sh:NodeShape, rdfs:Class ;
             sh:order 3 ;
             sh:name "Überlagernd"@de,
                 "Overlapping"@en ;
-            sh:description "Gibt an, ob es sich um eine überlagernde Nutzung handelt. Überlagernde Nutzungen (z.B. Bäume oder Ackerschonstreifen) werden geometrisch über anderen Nutzungsflächen erfasst."@de ;
+            sh:description "Gibt an, ob es sich um eine überlagernde Nutzung handelt. Überlagernde Nutzungen (z.B. Bäume oder Ackerschonstreifen) werden geometrisch über anderen Nutzungsflächen erfasst. Überlagernd erfasste Nutzungsarten haben kein übergeordnetes Konzept."@de ;
             sh:path eCH-0265:overlapping ;
-            sh:minCount 1 ;
-            sh:maxCount 1 ;
-            sh:nodeKind sh:Literal ;
-            sh:datatype xsd:boolean ;
-        ],
-        [
-            sh:order 4 ;
-            sh:name "Biodiversitätsförderfläche Qualitätsstufe I"@de,
-                "Biodiversity promotion area of quality level I"@en ;
-            sh:description "Gibt an, ob die Nutzungsfläche eine Biodiversitätsförderfläche der Qualitätsstufe I ist."@de ;
-            sh:path eCH-0265:biodiversityPromotionAreaQualityLevelOne ;
-            sh:minCount 1 ;
-            sh:maxCount 1 ;
-            sh:nodeKind sh:Literal ;
-            sh:datatype xsd:boolean ;
-        ],
-        [
-            sh:order 5 ;
-            sh:name "Spezialkultur"@de,
-                "Special crop"@en ;
-            sh:description "Gibt an, ob die Nutzungsfläche eine Spezialkultur ist."@de ;
-            sh:path eCH-0265:specialCrop ;
             sh:minCount 1 ;
             sh:maxCount 1 ;
             sh:nodeKind sh:Literal ;
