@@ -5148,7 +5148,7 @@ cultivationtype:1166 a eCH-0265:CultivationType ;
         "Courgette protected cultivation"@en,
         "Courgette culture protégée"@fr,
         "Zucchine coltura protetta"@it ;
-    owl:intersectionOf ( cultivationtype:235 cultivationtype:7 ) .
+    owl:intersectionOf ( cultivationtype:225 cultivationtype:7 ) .
 
 cultivationtype:1167 a eCH-0265:CultivationType ;
     schema:name "Patisson und Kürbis"@de,
