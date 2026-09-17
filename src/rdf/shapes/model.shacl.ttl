@@ -64,8 +64,8 @@ eCH-0265:CultivationType a sh:NodeShape, rdfs:Class ;
         sh:path schema:name ;
         sh:name "Name"@de,
             "Name"@en ;
-        sh:description "Der Name der Kultur ist in genau vier Sprachen (de, fr, it, en) erfasst und beginnt jeweils mit einem Grossbuchstaben. Der Name bleibt eine möglichst schlanke Gattungsbezeichnung und ist ohne Klammern und Kommas geschrieben. Synonyme gehören in schema:alternateName und Spezifizierungen sowie Beispiellisten in schema:description."@de,
-            "The name of the cultivation type is recorded in exactly four languages (de, fr, it, en) and each begins with an uppercase letter.  The name remains as lean a generic term as possible and is written without parentheses or commas. Synonyms belong in schema:alternateName, and specifications and lists of examples in schema:description."@en ;
+        sh:description "Die präferierte Bezeichnung der Nutzungsart. Sie ist viersprachig gegeben (de, fr, it, en) und beginnt immer mit einem Grossbuchstaben. Der Name ist möglichst schlank gehalten, bleibt aber eindeutig für die Nutzungsart. Klammerbemerkungen sind im Namen nicht erlaubt."@de,
+            "The preferred label of the cultivation type. It is given in four languages (de, fr, it, en) and always begins with a capital letter. The name is kept as lean as possible while remaining unambiguous for the cultivation type. Parenthetical remarks are not permitted in the name."@en ;
         sh:minCount 4 ;
         sh:nodeKind sh:Literal ;
         sh:datatype rdf:langString ;
@@ -75,7 +75,10 @@ eCH-0265:CultivationType a sh:NodeShape, rdfs:Class ;
     ],
     [
         sh:order 2 ;
-        sh:name "Alternate name"@en, "Alias"@de ;
+        sh:name "Alternate name"@en,
+            "Alias"@de ;
+        sh:description "Eine alternative Bezeichnung (also ein Synonym) der Nutzungsart. Beispiel: Stielmangold oder Rippenmangold sind Synonyme für Krautstiel. Diese Synonyme können für verbesserte Suchfunktionen gebraucht werden."@de,
+            "An alternative label (i.e. a synonym) of the cultivation type. For example, «Stielmangold» and «Rippenmangold» are synonyms for «Krautstiel» (chard). Such synonyms can be used to improve search functionality."@en ;
         sh:path schema:alternateName ;
         sh:nodeKind sh:Literal ;
         sh:datatype rdf:langString ;
@@ -85,6 +88,8 @@ eCH-0265:CultivationType a sh:NodeShape, rdfs:Class ;
         sh:path schema:description ;
         sh:name "Description"@en,
             "Beschreibung"@de ;
+        sh:description "Falls der Name der Nutzungsart nicht selbsterklärend ist, kann eine weiterführende Beschreibung beigelegt werden."@de,
+            "If the name of the cultivation type is not self-explanatory, a further description can be supplied."@en ;
         sh:nodeKind sh:Literal ;
         sh:datatype rdf:langString ;
         sh:languageIn ( "de" "fr" "it" "en" ) ;
