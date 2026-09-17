@@ -1821,7 +1821,7 @@ naebi:29 a eCH-0265:NutrientBalanceCrop ;
     schema:name "Broccoli"@de ;
     eCH-0265:cultivationCategory naebi:SPECIAL ;
     eCH-0265:cultivationSubCategory naebi:OUTVG ;
-    eCH-0265:exactMatch cultivationtype:154 .
+    eCH-0265:exactMatch cultivationtype:153 .
 
 naebi:290 a eCH-0265:NutrientBalanceCrop ;
     skos:inScheme naebi:ConceptScheme ;

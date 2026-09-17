@@ -977,6 +977,13 @@ cultivationtype:152 a eCH-0265:CultivationType ;
         "Crescione"@it ;
     rdfs:subClassOf cultivationtype:48 .
 
+cultivationtype:153 a eCH-0265:CultivationType ;
+    schema:name "Broccoli Freiland"@de,
+        "Broccoli open field"@en,
+        "Brocoli de plein champ"@fr,
+        "Broccoli di pieno campo"@it ;
+    owl:intersectionOf (cultivationtype:154 cultivationtype:24) .
+
 cultivationtype:154 a eCH-0265:CultivationType ;
     schema:name "Broccoli"@de,
         "Broccoli"@en,
@@ -5095,11 +5102,11 @@ cultivationtype:1158 a eCH-0265:CultivationType ;
     rdfs:subClassOf cultivationtype:471 .
 
 cultivationtype:1159 a eCH-0265:CultivationType ;
-    schema:name "Broccoli Verarbeitung"@de,
+    schema:name "Broccoli Verarbeitung (Freiland)"@de,
         "Processing broccoli"@en,
         "Brocoli d'industrie"@fr,
         "Broccoli da industria"@it ;
-    rdfs:subClassOf cultivationtype:324 .
+    owl:intersectionOf (cultivationtype:154 cultivationtype:24) .
 
 cultivationtype:1160 a eCH-0265:CultivationType ;
     schema:name "Winterspinat Industrie 1 Schnitt"@de,
