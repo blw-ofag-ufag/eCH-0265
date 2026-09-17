@@ -977,6 +977,13 @@ cultivationtype:152 a eCH-0265:CultivationType ;
         "Crescione"@it ;
     rdfs:subClassOf cultivationtype:48 .
 
+cultivationtype:153 a eCH-0265:CultivationType ;
+    schema:name "Broccoli Freiland"@de,
+        "Broccoli open field"@en,
+        "Brocoli de plein champ"@fr,
+        "Broccoli di pieno campo"@it ;
+    owl:intersectionOf (cultivationtype:154 cultivationtype:24) .
+
 cultivationtype:154 a eCH-0265:CultivationType ;
     schema:name "Broccoli"@de,
         "Broccoli"@en,
@@ -3700,8 +3707,8 @@ cultivationtype:858 a eCH-0265:CultivationType ;
     eCH-0265:managementIntensity intensity:Extensive .
 
 cultivationtype:895 a eCH-0265:CultivationType ;
-    schema:name "Dauergrünfläche übrige Flächen innerhalb der LN"@de,
-        "Permanent grassland other areas within UAA"@en,
+    schema:name "Übrige Flächen innerhalb der LN, beitragsberechtigt"@de,
+        "Other areas within the UAA, eligible for contributions"@en,
         "Autres surfaces dans la SAU donnant droit aux contributions"@fr,
         "Altre superfici all'interno della SAU aventi diritto ai contributi"@it ;
     rdfs:subClassOf cultivationtype:21 .
@@ -4222,7 +4229,7 @@ cultivationtype:1036 a eCH-0265:CultivationType ;
         "Aubergine soil-grown protected cultivation"@en,
         "Aubergine en pleine terre sous abri"@fr,
         "Melanzana in coltura su terreno protetta"@it ;
-    owl:intersectionOf ( cultivationtype:175 cultivationtype:23 ) .
+    owl:intersectionOf ( cultivationtype:474 cultivationtype:23 ) .
 
 cultivationtype:1037 a eCH-0265:CultivationType ;
     schema:name "Spargel Bleich"@de, 
@@ -5095,11 +5102,11 @@ cultivationtype:1158 a eCH-0265:CultivationType ;
     rdfs:subClassOf cultivationtype:471 .
 
 cultivationtype:1159 a eCH-0265:CultivationType ;
-    schema:name "Broccoli Verarbeitung"@de,
+    schema:name "Broccoli Verarbeitung (Freiland)"@de,
         "Processing broccoli"@en,
         "Brocoli d'industrie"@fr,
         "Broccoli da industria"@it ;
-    rdfs:subClassOf cultivationtype:324 .
+    owl:intersectionOf (cultivationtype:154 cultivationtype:24) .
 
 cultivationtype:1160 a eCH-0265:CultivationType ;
     schema:name "Winterspinat Industrie 1 Schnitt"@de,
@@ -5148,7 +5155,7 @@ cultivationtype:1166 a eCH-0265:CultivationType ;
         "Courgette protected cultivation"@en,
         "Courgette culture protégée"@fr,
         "Zucchine coltura protetta"@it ;
-    owl:intersectionOf ( cultivationtype:235 cultivationtype:7 ) .
+    owl:intersectionOf ( cultivationtype:225 cultivationtype:7 ) .
 
 cultivationtype:1167 a eCH-0265:CultivationType ;
     schema:name "Patisson und Kürbis"@de,
