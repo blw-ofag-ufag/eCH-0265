@@ -384,9 +384,9 @@ Tabelle 6: Eigenschaften Nutzungstyp
 
 | Beschreibung | Pfad | Typ | Kard. |
 |:---|:---|:---|---:|
-| **Name**: Der Name der Kultur ist in genau vier Sprachen (de, fr, it, en) erfasst und beginnt jeweils mit einem Grossbuchstaben. Der Name bleibt eine möglichst schlanke Gattungsbezeichnung und ist ohne Klammern und Kommas geschrieben. Synonyme gehören in schema:alternateName und Spezifizierungen sowie Beispiellisten in schema:description. | `schema:name` | `rdf:langString` oder `sh:Literal` | 4..\* |
-| **Alias** | `schema:alternateName` | `rdf:langString` oder `sh:Literal` | 0..\* |
-| **Beschreibung** | `schema:description` | `rdf:langString` oder `sh:Literal` | 0..\* |
+| **Name**: Die präferierte Bezeichnung der Nutzungsart. Sie ist viersprachig gegeben (de, fr, it, en) und beginnt immer mit einem Grossbuchstaben. Der Name ist möglichst schlank gehalten, bleibt aber eindeutig für die Nutzungsart. Klammerbemerkungen sind im Namen nicht erlaubt. | `schema:name` | `rdf:langString` oder `sh:Literal` | 4..\* |
+| **Alias**: Eine alternative Bezeichnung (also ein Synonym) der Nutzungsart. Beispiel: Stielmangold oder Rippenmangold sind Synonyme für Krautstiel. Diese Synonyme können für verbesserte Suchfunktionen gebraucht werden. | `schema:alternateName` | `rdf:langString` oder `sh:Literal` | 0..\* |
+| **Beschreibung**: Falls der Name der Nutzungsart nicht selbsterklärend ist, kann eine weiterführende Beschreibung beigelegt werden. | `schema:description` | `rdf:langString` oder `sh:Literal` | 0..\* |
 | **Übergeordneter Nutzungstyp** | `rdfs:subClassOf` | [`eCH-0265:CultivationType`](#sec-nodeshape-cultivationtype) oder `owl:Class` | 0..\* |
 |  | `owl:disjointWith` | [`eCH-0265:CultivationType`](#sec-nodeshape-cultivationtype) oder `sh:IRI` | 0..\* |
 

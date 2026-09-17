@@ -681,19 +681,19 @@ Tabelle&nbsp;6: Eigenschaften Nutzungstyp
 </thead>
 <tbody>
 <tr class="odd">
-<td style="text-align: left;"><strong>Name</strong>: Der Name der Kultur ist in genau vier Sprachen (de, fr, it, en) erfasst und beginnt jeweils mit einem Grossbuchstaben. Der Name bleibt eine möglichst schlanke Gattungsbezeichnung und ist ohne Klammern und Kommas geschrieben. Synonyme gehören in schema:alternateName und Spezifizierungen sowie Beispiellisten in schema:description.</td>
+<td style="text-align: left;"><strong>Name</strong>: Die präferierte Bezeichnung der Nutzungsart. Sie ist viersprachig gegeben (de, fr, it, en) und beginnt immer mit einem Grossbuchstaben. Der Name ist möglichst schlank gehalten, bleibt aber eindeutig für die Nutzungsart. Klammerbemerkungen sind im Namen nicht erlaubt.</td>
 <td style="text-align: left;"><code>schema:name</code></td>
 <td style="text-align: left;"><code>rdf:langString</code> oder <code>sh:Literal</code></td>
 <td style="text-align: right;">4..*</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;"><strong>Alias</strong></td>
+<td style="text-align: left;"><strong>Alias</strong>: Eine alternative Bezeichnung (also ein Synonym) der Nutzungsart. Beispiel: Stielmangold oder Rippenmangold sind Synonyme für Krautstiel. Diese Synonyme können für verbesserte Suchfunktionen gebraucht werden.</td>
 <td style="text-align: left;"><code>schema:alternateName</code></td>
 <td style="text-align: left;"><code>rdf:langString</code> oder <code>sh:Literal</code></td>
 <td style="text-align: right;">0..*</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;"><strong>Beschreibung</strong></td>
+<td style="text-align: left;"><strong>Beschreibung</strong>: Falls der Name der Nutzungsart nicht selbsterklärend ist, kann eine weiterführende Beschreibung beigelegt werden.</td>
 <td style="text-align: left;"><code>schema:description</code></td>
 <td style="text-align: left;"><code>rdf:langString</code> oder <code>sh:Literal</code></td>
 <td style="text-align: right;">0..*</td>
