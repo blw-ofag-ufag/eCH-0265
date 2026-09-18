@@ -57,18 +57,22 @@ In den folgenden Unterkapiteln werden die Kategorisierungssysteme landwirtschaft
 
 ## Direktzahlungen {#sec-direct-payments}
 
-Im Rahmen des Direktzahlungssystems sind 159 Direktzahlungskulturen (Stand Juli 2026) definiert, welche im Rahmen der Strukturdatenerhebung von den Bewirtschaftenden in den kantonalen Agrarinformationssystemen (KAIS) eingetragen und an das agrarpolitische Informationssystem (AGIS) des Bundes übermittelt werden können.
+Im Rahmen des Direktzahlungssystems sind 159 Direktzahlungskulturen (Stand Juli 2026) definiert, die je über einen Kulturcode (auch LNF-Code) identifiziert werden.
+Alle Kulturen mit Kulturcode müssen jährlich erfasst werden -- unabhängig davon, ob sie für Beiträge berechtigt sind oder nicht (vgl. [Flächenkatalog und Beitragsberechtigung](https://www.blw.admin.ch/dam/fr/sd-web/QYLa6wGfdK8G/2026%20Merkblatt%20Nr.%206.2%20Fl%C3%A4chenkatalog%20und%20Beitragsberechtigung.pdf)).
 
-Alle Kulturen mit Direktzahlungscode müssen jährlich an AGIS übermittelt werden – unabhängig davon, ob sie für Beiträge berechtigt sind oder nicht (vgl. [Flächenkatalog und Beitragsberechtigung](https://www.blw.admin.ch/dam/fr/sd-web/QYLa6wGfdK8G/2026%20Merkblatt%20Nr.%206.2%20Fl%C3%A4chenkatalog%20und%20Beitragsberechtigung.pdf)).
-In AGIS stehen also alle aktuell gültigen und historisierten Direktzahlungskulturen und deren Beitragsberechtigungen für Bund und Kantone zur Verfügung.
+Die Direktzahlungskulturen werden in zwei Systemen geführt: in der Strukturdatenerhebung (AGIS) und in den Geodaten der landwirtschaftlichen Kulturflächen (MGDM).
+Die exakten Definitionen und die exakten Kulturen sind dabei nicht zu 100% identisch.
+In diesem Hilfsmittel sind sie deshalb zweimal abgebildet.
+Die gemeinsamen Eigenschaften (Identifikator, Name, Nutzungstyp und zeitliche Gültigkeit) definiert die Oberklasse `eCH-0265:DirectPaymentCrop`; je eine Unterklasse beschreibt die systemspezifischen Ergänzungen (siehe @sec-classes).
+
+### Strukturdatenerhebung (AGIS) {#sec-direct-payments-agis}
+
+Im Rahmen der Strukturdatenerhebung tragen die Bewirtschaftenden ihre Kulturen in den kantonalen Agrarinformationssystemen (KAIS) ein, von wo sie an das agrarpolitische Informationssystem (AGIS) des Bundes übermittelt werden.
+In AGIS stehen damit alle aktuell gültigen und historisierten Direktzahlungskulturen und deren Beitragsberechtigungen für Bund und Kantone zur Verfügung.
 Momentan können diese Daten aber nicht in maschinenlesbarer Form vom AGIS-Webservice bezogen werden.
 
-Die Direktzahlungskulturen kommen nicht nur im Rahmen der Strukturdatenerhebung zum Einsatz, sondern auch bei der gesamtschweizerischen räumlichen Erfassung von Nutzungsflächen (siehe [«landwirtschaftliche Kulturflächen»](https://www.blw.admin.ch/de/landwirtschaftliche-kulturflaechen)).
-Die Kantone erfassen diese Geodaten gemäss dem minimalen Geodatenmodell 153.1 «Nutzungsflächen» und stellen die Daten via dem interkantonalen Portal [geodienste.ch](https://geodienste.ch/) zur Verfügung.
-Die im Rahmen der Geodaten verwendeten Kulturkategorien sind als XML-File auf <https://models.geo.admin.ch/BLW/> publiziert, wobei weitere (aggregierende) Kulturkategorien definiert wurden und die Attribute nicht zu 100% deckungsgleich zu denjenigen der Direktzahlungskulturen der Strukturdatenerhebung sind.
-
-Die Direktzahlungskulturen sind selbst in acht Kulturkategorien eingeteilt (@tbl-directpaymentcrops-categories).
-Eine Mehrheit dieser Kategorien wird explizit in der landwirtschaftlichen Begriffsverordnung (LBV) definiert.
+Die AGIS-Kulturen sind als Klasse `eCH-0265:AgisCrop` im Konzeptschema `agis:ConceptScheme` modelliert.
+Sie sind in acht Kulturkategorien eingeteilt (@tbl-directpaymentcrops-categories), von denen eine Mehrheit explizit in der landwirtschaftlichen Begriffsverordnung (LBV) definiert wird.
 
 | N  | Kategorie | Definition | Beispiele     |
 |:-  | :----- | :--------- | :------------ |
@@ -82,6 +86,17 @@ Eine Mehrheit dieser Kategorien wird explizit in der landwirtschaftlichen Begrif
 | 9  | Andere Elemente | | «Hochstammfeldobstbäume», «Nussbäume», «Einheimische standortgerechte Einzelbäume und Alleen» |
 
 : Anzahl Direktzahlungskulturen (N) je Kulturkategorie (Kategorie) mit Referenzen auf die geltende Definition in der landwirtschaftlichen Begriffsverordnung (LBV), wo möglich. {#tbl-directpaymentcrops-categories tbl-colwidths="[5,35,20,40]"}
+
+### Geodaten (MGDM 153.1) {#sec-direct-payments-mgdm}
+
+Die Kantone erfassen die landwirtschaftlichen Nutzungsflächen zudem geometrisch gemäss dem minimalen Geodatenmodell «Landwirtschaftliche Kulturflächen» (Identifikator 153, Modell 153.1 «Nutzungsflächen») und stellen die Daten über das interkantonale Portal [geodienste.ch](https://geodienste.ch/) zur Verfügung (siehe [«landwirtschaftliche Kulturflächen»](https://www.blw.admin.ch/de/landwirtschaftliche-kulturflaechen)).
+Der dabei verwendete Katalog der Nutzungsarten (`LNF_Katalog_Nutzungsart`) ist als INTERLIS-Katalog auf <https://models.geo.admin.ch/BLW/> publiziert.
+Er baut auf den Direktzahlungskulturen auf, enthält jedoch zusätzliche aggregierende Nutzungsarten, eine eigene, auf das Geodatenmodell bezogene zeitliche Gültigkeit sowie das Attribut, ob eine Nutzung überlagernd erfasst wird.
+
+Die Nutzungsarten sind als Klasse `eCH-0265:GeodataCrop` im Konzeptschema `mgdm:ConceptScheme` modelliert.
+Sie sind 13 Hauptkategorien zugeordnet; überlagernd erfasste Nutzungsarten (z.B. Bäume) haben keine Hauptkategorie.
+Die sieben aggregierenden Nutzungsarten (z.B. LNF-Code 730 «Obstanlagen aggregiert») fassen Nutzungsarten derselben Hauptkategorie mit gleicher Beitragsberechtigung und überschneidendem Gültigkeitszeitraum zusammen und sind diesen im Konzeptschema übergeordnet: eine zusammengefasste Nutzungsart zeigt mit `skos:broader` auf ihre aggregierende Nutzungsart, diese wiederum auf die Hauptkategorie, welche sich damit über `skos:broaderTransitive` ergibt.
+Diese Zuordnung ist abgeleitet, da der Katalog sie nicht führt: das Attribut `Ist_Aggregiert` wurde mit der Modellversion 2.0 entfernt und bezeichnete ohnehin nur die aggregierenden Codes selbst, nie deren Mitglieder.
 
 ## Nährstoffbilanz {#sec-nutrient-balance}
 
@@ -159,10 +174,10 @@ Für weiterführende Informationen zur Publikation, Nutzung und den Kernprozesse
 
 Das konsolidierte Datenmodell wird durch eine RDFS-Ontologie abgebildet und mittels SHACL-Shapes validiert [@rdf;@owl2;@shacl].
 
-![UML-Diagramm des Datenmodells von eCH-0265. Dieses Diagramm wurde automatisch mithilfe von SHACL PLAY! [@francart2020shacl] aus den SHACL-Spezifikationen generiert.](../assets/img/uml.png){#fig-uml width="100%" .lightbox}
+![UML-Diagramm des Datenmodells von eCH-0265. Dieses Diagramm wurde automatisch mithilfe von planttext generiert.](img/data_model.png){#fig-uml width="100%" .lightbox}
 
 @fig-uml veranschaulicht die grundlegende Architektur des semantischen Modells: Im Zentrum steht eine generische Referenzklasse (`eCH-0265:CultivationType`).
-Die Kulturhierarchien der drei verschiedenen Bereiche (Direktzahlungen, Nährstoffbilanz und Pflanzenschutz) sind jeweils als SKOS-Konzeptschema modelliert.
+Die Kulturhierarchien der drei Bereiche (Direktzahlungen, Nährstoffbilanz und Pflanzenschutz) sind jeweils als SKOS-Konzeptschema modelliert; im Bereich Direktzahlungen sind es zwei, eines für die Strukturdatenerhebung (AGIS) und eines für das Geodatenmodell (MGDM).
 Jede Kultur kann dabei auf die zentrale Referenzklasse "zeigen".
 Dieser modulare Aufbau erlaubt es, die historisch gewachsenen, in sich geschlossenen Kategoriensysteme unter Beibehaltung ihrer spezifischen fachlichen und rechtlichen Eigenschaften in einem gemeinsamen Graphen abzubilden und trotzdem miteinander zu verknüpfen.
 
