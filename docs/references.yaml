@@ -9,6 +9,7 @@ references:
   - family: Kontokostas
     given: Dimitris
   genre: W3C Recommendation
+  citation-label: SHACL
   id: shacl
   issued: 2017-07
   publisher: World Wide Web Consortium (W3C)
@@ -55,6 +56,7 @@ references:
     given: Markus
   genre: W3C Recommendation
   id: rdf
+  citation-label: RDF
   issued: 2014-02
   publisher: World Wide Web Consortium (W3C)
   title: "RDF 1.1 Concepts and Abstract Syntax"
@@ -207,6 +209,7 @@ references:
   - family: Bechhofer
     given: Sean
   genre: W3C Recommendation
+  citation-label: SKOS
   id: skos
   issued: 2009-08
   publisher: World Wide Web Consortium (W3C)
