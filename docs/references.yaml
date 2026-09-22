@@ -1,0 +1,379 @@
+# Literaturangaben im CSL-YAML-Format (eine Datei für alle Zitate).
+# Einträge mit Organisationen als Autorinnen/Autoren tragen ein explizites
+# `citation-label`, weil Pandoc dafür kein alphanumerisches Kürzel ableiten kann.
+references:
+
+- author:
+  - family: Knublauch
+    given: Holger
+  - family: Kontokostas
+    given: Dimitris
+  genre: W3C Recommendation
+  id: shacl
+  issued: 2017-07
+  publisher: World Wide Web Consortium (W3C)
+  title: Shapes Constraint Language (SHACL)
+  type: report
+  url: "https://www.w3.org/TR/shacl/"
+
+- author:
+  - family: Feigenbaum
+    given: Lee
+  - family: Williams
+    given: Gregory Todd
+  - family: Clark
+    given: Kendall
+  - family: Torres
+    given: Elias
+  genre: W3C Recommendation
+  id: sparql_protocol
+  issued: 2013-03
+  publisher: World Wide Web Consortium (W3C)
+  title: SPARQL 1.1 Protocol
+  type: report
+  url: "https://www.w3.org/TR/sparql11-protocol/"
+
+- author:
+  - family: Harris
+    given: Steve
+  - family: Seaborne
+    given: Andy
+  genre: W3C Recommendation
+  id: sparql_query_language
+  issued: 2013-03
+  publisher: World Wide Web Consortium (W3C)
+  title: SPARQL 1.1 Query Language
+  type: report
+  url: "https://www.w3.org/TR/sparql11-query/"
+
+- author:
+  - family: Cyganiak
+    given: Richard
+  - family: Wood
+    given: David
+  - family: Lanthaler
+    given: Markus
+  genre: W3C Recommendation
+  id: rdf
+  issued: 2014-02
+  publisher: World Wide Web Consortium (W3C)
+  title: "RDF 1.1 Concepts and Abstract Syntax"
+  type: report
+  url: "https://www.w3.org/TR/rdf11-concepts/"
+
+- author:
+  - family: Hayes
+    given: Patrick J.
+  - family: Patel-Schneider
+    given: Peter F.
+  genre: W3C Recommendation
+  id: rdf_semantics
+  issued: 2014-02
+  publisher: World Wide Web Consortium (W3C)
+  title: RDF 1.1 Semantics
+  type: report
+  url: "https://www.w3.org/TR/rdf11-mt/"
+
+- author:
+  - family: Schreiber
+    given: Guus
+  - family: Raimond
+    given: Yves
+  genre: W3C Working Group Note
+  id: rdf_primer
+  issued: 2014-06
+  publisher: World Wide Web Consortium (W3C)
+  title: RDF 1.1 Primer
+  type: report
+  url: "https://www.w3.org/TR/rdf11-primer/"
+
+- author:
+  - family: Carothers
+    given: Gavin
+  - family: Seaborne
+    given: Andy
+  genre: W3C Recommendation
+  id: ntriples
+  issued: 2014-02
+  publisher: World Wide Web Consortium (W3C)
+  title: RDF 1.1 N-Triples
+  type: report
+  url: "https://www.w3.org/TR/rdf11-n-triples/"
+
+- author:
+  - family: Berners-Lee
+    given: Tim
+  - family: Hendler
+    given: James
+  - family: Lassila
+    given: Ora
+  container-title: "Linking the world's information: essays on Tim Berners-Lee's invention of the World Wide Web"
+  id: berners2023semantic
+  issued: 2023
+  page: 91-103
+  title: "The Semantic Web: A new form of Web content that is meaningful to computers will unleash a revolution of new possibilities"
+  type: chapter
+
+- author:
+  - family: Jackson
+    given: Rebecca C
+  - family: Balhoff
+    given: James P
+  - family: Douglass
+    given: Eric
+  - family: Harris
+    given: Nomi L
+  - family: Mungall
+    given: Christopher J
+  - family: Overton
+    given: James A
+  container-title: BMC bioinformatics
+  id: jackson2019robot
+  issue: 1
+  issued: 2019
+  page: 407
+  publisher: Springer
+  title: "ROBOT: a tool for automating ontology workflows"
+  type: article-journal
+  volume: 20
+
+- author:
+  - family: Glimm
+    given: Birte
+  - family: Horrocks
+    given: Ian
+  - family: Motik
+    given: Boris
+  - family: Stoilos
+    given: Giorgos
+  - family: Wang
+    given: Zhe
+  container-title: Journal of automated reasoning
+  id: glimm2014hermit
+  issue: 3
+  issued: 2014
+  page: 245-269
+  publisher: Springer
+  title: "HermiT: an OWL 2 reasoner"
+  type: article-journal
+  volume: 53
+
+- author:
+  - family: Carlen
+    given: C.
+  - family: Flisch
+    given: R.
+  - family: Gilli
+    given: C.
+  - family: Huguenin-Elie
+    given: O.
+  - family: Kuster
+    given: T.
+  - family: Latsch
+    given: A. J.
+  - family: Mayer
+    given: J.
+  - family: Neuweiler
+    given: R.
+  - family: Richner
+    given: W.
+  - family: Sinaj
+    given: S.
+  - family: Spring
+    given: J.-L.
+  container-title: Agrarforschung Schweiz
+  id: grud2017
+  issue: 6
+  issued: 2017
+  title: "Grundlagen für die Düngung landwirtschaftlicher Kulturen in der Schweiz (GRUD 2017)"
+  type: article-journal
+  url: "https://ira.agroscope.ch/de-CH/publication/52563"
+  volume: 8
+
+- accessed: 2026-07-29
+  author:
+  - family: Francart
+    given: Thomas
+  id: francart2020shacl
+  issued: 2020
+  publisher: Sparna
+  title: SHACL Play!
+  type: software
+  url: "https://shacl-play.sparna.fr/"
+
+- author:
+  - family: Miles
+    given: Alistair
+  - family: Bechhofer
+    given: Sean
+  genre: W3C Recommendation
+  id: skos
+  issued: 2009-08
+  publisher: World Wide Web Consortium (W3C)
+  title: SKOS Simple Knowledge Organization System Reference
+  type: report
+  url: "https://www.w3.org/TR/skos-reference/"
+
+- author:
+  - family: Zeng
+    given: Marcia Lei
+  - family: Chan
+    given: Lois Mai
+  container-title: Journal of the American Society for Information
+    Science and Technology
+  doi: 10.1002/asi.10387
+  id: zeng2004trends
+  issue: 5
+  issued: 2004
+  page: 377-395
+  publisher: Wiley
+  title: "Trends and issues in establishing interoperability among knowledge organization systems"
+  type: article-journal
+  volume: 55
+
+- author:
+  - family: Doerr
+    given: Martin
+  container-title: Journal of Digital Information
+  id: doerr2001semantic
+  issue: 8
+  issued: 2001
+  title: "Semantic problems of thesaurus mapping"
+  type: article-journal
+  url: "https://jodi-ojs-tdl.tdl.org/jodi/article/view/jodi-35"
+  volume: 1
+
+- author:
+  - family: Euzenat
+    given: Jérôme
+  - family: Shvaiko
+    given: Pavel
+  doi: 10.1007/978-3-642-38721-0
+  edition: 2
+  id: euzenat2013ontology
+  issued: 2013
+  publisher: Springer
+  publisher-place: Heidelberg
+  title: Ontology Matching
+  type: book
+
+- author:
+  - family: Euzenat
+    given: Jérôme
+  - family: Mocan
+    given: Adrian
+  - family: Scharffe
+    given: François
+  container-title: "Ontology Management: Semantic Web, Semantic Web Services, and Business Applications"
+  editor:
+  - family: Hepp
+    given: Martin
+  - family: De Leenheer
+    given: Pieter
+  - family: De Moor
+    given: Aldo
+  - family: Sure
+    given: York
+  id: euzenat2008alignment
+  issued: 2008
+  page: 177-206
+  publisher: Springer
+  publisher-place: New York
+  title: "Ontology alignment: an ontology management perspective"
+  type: chapter
+  url: "https://exmo.inria.fr/files/publications/euzenat2008a.pdf"
+
+- author:
+  - family: Ehrig
+    given: Marc
+  - family: Euzenat
+    given: Jérôme
+  container-title: "Proceedings of the K-CAP 2005 Workshop on Integrating Ontologies"
+  id: ehrig2005relaxed
+  issued: 2005
+  page: 25-32
+  publisher-place: Banff
+  title: "Relaxed precision and recall for ontology matching"
+  type: paper-conference
+  url: "https://ceur-ws.org/Vol-156/paper5.pdf"
+
+- author:
+  - family: Euzenat
+    given: Jérôme
+  container-title: "Proceedings of the 20th International Joint Conference on Artificial Intelligence (IJCAI)"
+  id: euzenat2007semantic
+  issued: 2007
+  page: 348-353
+  publisher-place: Hyderabad
+  title: "Semantic precision and recall for ontology alignment evaluation"
+  type: paper-conference
+  url: "https://www.ijcai.org/Proceedings/07/Papers/054.pdf"
+
+- id: eCH-0205:1.0.0
+  citation-label: eCH-0205:1.0.0
+  type: report
+  author:
+  - literal: eCH-Fachgruppe Open Government Data
+  title: "eCH-0205 Linked Open Data"
+  genre: eCH-Hilfsmittel
+  version: 1.0.0
+  publisher: Verein eCH
+  issued: 2018-03
+  URL: https://www.ech.ch/sites/default/files/dosvers/hauptdokument/AUXI_e_DEF_2018-03-13_eCH-0205_V1.0_Linked%20Open%20Data.pdf
+
+- id: eCH-0265:1.0.0
+  citation-label: eCH-0265:1.0.0
+  type: report
+  author:
+  - literal: eCH-Fachgruppe AgriFood
+  title: "eCH-0265 Datenstandard Agrardaten – Flächen und Kulturen"
+  genre: eCH-Standard
+  version: 1.0.0
+  publisher: Verein eCH
+  issued: 2024-04
+  URL: https://ech.ch/sites/default/files/imce/eCH-Dossier/eCH-Dossier_PDF_Publikationen/Hauptdokument/STAN_d_DEF_2024-02_07_eCH-0265_V1.0.0_Datenstandard_Agrardaten_Fl%C3%A4chenKulturen.pdf
+
+- id: owl2
+  citation-label: OWL Overview
+  type: report
+  author:
+  - literal: W3C OWL Working Group
+  title: "OWL 2 Web Ontology Language Document Overview (Second Edition)"
+  genre: W3C Recommendation
+  publisher: World Wide Web Consortium (W3C)
+  issued: 2012-12
+  URL: https://www.w3.org/TR/owl2-overview/
+
+- id: iso25964-2
+  citation-label: ISO 25964-2
+  type: report
+  author:
+  - literal: International Organization for Standardization
+  title: "ISO 25964-2:2013 Information and documentation – Thesauri and interoperability with other vocabularies – Part 2: Interoperability with other vocabularies"
+  genre: International Standard
+  publisher: International Organization for Standardization
+  publisher-place: Geneva
+  issued: 2013
+  URL: https://www.iso.org/standard/53658.html
+
+- id: eif2017
+  citation-label: EC17
+  type: report
+  author:
+  - literal: European Commission
+  title: "New European Interoperability Framework: Promoting seamless services and data flows for European public administrations"
+  publisher: Publications Office of the European Union
+  publisher-place: Luxembourg
+  issued: 2017
+  URL: https://ec.europa.eu/isa2/eif_en/
+
+- id: suibi2025
+  citation-label: AgBL25
+  type: report
+  author:
+  - literal: Agridea
+  - literal: Bundesamt für Landwirtschaft BLW
+  title: "Wegleitung Suisse-Bilanz: Version 1.20"
+  publisher: Agridea und Bundesamt für Landwirtschaft BLW
+  issued: 2025-12
+  URL: https://www.blw.admin.ch/dam/de/sd-web/PCfDBOdwjaOm/WegleitungSuisse-Bilanz1_20_D_DEF.pdf

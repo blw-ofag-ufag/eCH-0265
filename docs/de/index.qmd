@@ -15,6 +15,7 @@ keywords:
   - Behörden
 license: CC BY 4.0
 citation: true
+csl: ../assets/din-1505-2-alphanumeric.csl
 ---
 
 # Hinweis {#sec-note .unnumbered}
@@ -238,6 +239,160 @@ Im Datenverarbeitungsprozess werden hierarchische Prädikate (`narrowMatch`, `br
 Eine vorbereitete SPARQL-Abfrage zur Generierung der vollständigen Mapping-Tabelle (AGIS, NAEBI und PSM) befindet sich [im eCH-0265 Repository unter `src/sparql/queries/mapping_table.rq`](https://github.com/blw-ofag-ufag/eCH-0265/blob/main/src/sparql/queries/mapping_table.rq). 
 
 Diese Abfrage kann direkt in der Benutzeroberfläche von [LINDAS](https://lindas.admin.ch/sparql/) ausgeführt und als CSV oder JSON exportiert werden. Alternativ lässt sich die Tabelle programmatisch beziehen, siehe @sec-lindas-data-integration.
+
+# Interoperabilität der Kulturbegriffe {#sec-interoperability}
+
+```{r}
+#| label: interoperability-data
+#| include: false
+library(rdflib)
+library(dplyr)
+library(tidyr)
+library(ggplot2)
+graph <- rdf_parse("../../build/rdf/03-processed.ttl", format = "turtle")
+skos <- "http://www.w3.org/2004/02/skos/core#"
+crops <- rdf_query(graph, "
+  PREFIX eCH-0265: <https://agriculture.ld.admin.ch/eCH-0265/2/>
+  SELECT ?crop ?system
+  WHERE {
+    { ?crop a eCH-0265:DirectPaymentCrop .   BIND('DZ'  AS ?system) } UNION
+    { ?crop a eCH-0265:NutrientBalanceCrop . BIND('NB'  AS ?system) } UNION
+    { ?crop a eCH-0265:PlantProtectionCrop . BIND('PSM' AS ?system) }
+  }")
+expired <- rdf_query(graph, "SELECT ?crop ?validTo WHERE { ?crop <http://schema.org/validTo> ?validTo }") |>
+  mutate(year = suppressWarnings(as.integer(substr(as.character(validTo), 1, 4)))) |>
+  filter(!is.na(year), year < as.integer(format(Sys.Date(), "%Y")))
+crops <- crops |> anti_join(expired, by = "crop") |> distinct(crop, system)
+
+# Deterministische Mapping-Beziehungen zwischen geltenden Kulturen verschiedener Systeme
+query_edges <- function(predicate) {
+  rdf_query(graph, paste0("SELECT ?s ?t WHERE { ?s <", skos, predicate, "> ?t }")) |>
+    mutate(p = predicate)
+}
+edges <- bind_rows(query_edges("exactMatch"), query_edges("broadMatch")) |>
+  inner_join(crops, by = c("s" = "crop")) |> rename(s_system = system) |>
+  inner_join(crops, by = c("t" = "crop")) |> rename(t_system = system) |>
+  filter(s_system != t_system)
+
+# Klassifikation jeder Kultur gegenüber jedem anderen System
+class_levels <- c("exact", "broad", "reached", "none")
+classes <- crossing(crops, other = c("DZ", "NB", "PSM")) |>
+  filter(system != other) |>
+  left_join(edges |> filter(p == "exactMatch") |> distinct(s, t_system) |> mutate(exact = TRUE),
+            by = c("crop" = "s", "other" = "t_system")) |>
+  left_join(edges |> filter(p == "broadMatch") |> distinct(s, t_system) |> mutate(broad = TRUE),
+            by = c("crop" = "s", "other" = "t_system")) |>
+  left_join(edges |> filter(p == "broadMatch") |> distinct(t, s_system) |> mutate(reached = TRUE),
+            by = c("crop" = "t", "other" = "s_system")) |>
+  mutate(class = case_when(exact ~ "exact", broad ~ "broad", reached ~ "reached", TRUE ~ "none"))
+
+# Anteile je Richtung (system = Quellsystem, other = Zielsystem)
+shares <- classes |>
+  count(system, other, class, name = "n") |>
+  complete(system, other, class = class_levels, fill = list(n = 0)) |>
+  filter(system != other) |>
+  group_by(system, other) |>
+  mutate(N = sum(n), share = 100 * n / N, D = 100 * sum(n[class %in% c("exact", "broad")]) / N) |>
+  ungroup() |>
+  mutate(class = factor(class, levels = class_levels))
+```
+
+Semantische Interoperabilität bedeutet, dass die Bedeutung (die _Semantik_) einer Information beim Austausch zwischen Systemen erhalten bleibt [@eif2017].
+Die Mapping-Tabellen aus @sec-mapping-tables bilden dafür ein sogenanntes _Alignment_ zwischen den drei unabhängig entstandenen Kategorisierungssystemen der Direktzahlungen (DZ), der Nährstoffbilanz (NB) und des Pflanzenschutzmittelverzeichnisses (PSM); die verwendeten SKOS-Beziehungen entsprechen den Äquivalenz- und Hierarchie-Mappings nach ISO 25964-2 [@euzenat2013ontology; @skos; @iso25964-2].
+Dieses Kapitel quantifiziert, wie weit die beschriebenen Kulturen ohne manuellen Eingriff in ein anderes System überführt werden können.
+Berücksichtigt werden nur aktuell geltende Kulturen ohne Strukturierungsebenen (die Kulturkategorien bei Direktzahlungen und Nährstoffbilanz).
+Die in diesem Kapitel präsentierten Kennzahlen werden dabei automatisch berechnet.
+
+Die Kultur eines Quellsystems gilt als _deterministisch abbildbar_ in ein Zielsystem, wenn mindestens ein `skos:exactMatch` oder mindestens ein `skos:broadMatch` zu einer Kultur des Zielsystems vorliegt.
+Diese Überführung mittels `skos:exactMatch` ist verlustfrei; ein `sko:broadMatch` ordnet die Kultur einer allgemeineren Kategorie zu, etwa «Oelkürbisse» (Direktzahlungen) hin zu «Kürbis» (Nährstoffbilanz):
+Detailinformation geht dabei verloren, das Ziel ist aber ohne Zusatzwissen eindeutig.
+
+Liegt hingegen ein `skos:narrowMatch` vor, ist das Ziel spezifischer als die Quelle, und die Auswahl unter den Kandidaten erfordert Information, die in den Quelldaten fehlt.
+So kann «Sonnenblumen» (Nährstoffbilanz) nur mit Kenntnis des Verwendungszwecks auf «Sonnenblumen zur Speiseölgewinnung» oder «Sonnenblumen als nachwachsender Rohstoff» (Direktzahlungen) abgebildet werden, ein altbekanntes Problem beim Mapping zwischen Vokabularen unterschiedlicher Granularität [@doerr2001semantic; @zeng2004trends].
+
+Aus Sicht des Zielsystems ist eine solche Kultur nur als Aggregat erreichbar.
+Die _deterministische Abbildbarkeit_ ist der Anteil der deterministisch abbildbaren Kulturen an allen Kulturen des Quellsystems; sie ist gerichtet, weil eine Aggregation nur in eine Richtung eindeutig ist.
+@fig-mappability stellt deshalb jeweils beide Systeme eines Paars gegenüber.
+
+```{r}
+#| label: fig-mappability
+#| fig-cap: "Beziehung der Kulturen eines Quellsystems zu den Kulturen eines Zielsystems für die drei Paare zwischen den Bereichen Direktzahlungen (DZ), Nährstoffbilanz (NB) und Pflanzenschutzmittelverzeichnis (PSM). Jeder Balken zeigt die N geltenden Kulturen des Quellsystems und ihre Beziehung zum Zielsystem: exakt verknüpft (`skos:exactMatch`), deterministisch aggregierbar (`skos:broadMatch`), nur als Aggregat erreichbar (`skos:broadMatch`) oder nicht verknüpft. Zahlen sind Anteile in Prozent mit der Anzahl Kulturen in Klammern; die schwarze Markierung ist die deterministische Abbildbarkeit."
+#| fig-width: 9
+#| fig-height: 5
+class_labels <- c(
+  exact   = "exakt verknüpft",
+  broad   = "deterministisch aggregierbar",
+  reached = "nur als Aggregat erreichbar",
+  none    = "nicht verknüpft"
+)
+class_colours <- c(exact = "#063b42", broad = "#247b86", reached = "#aaaaaa", none = "#dddddd")
+pairs <- data.frame(a = c("DZ", "DZ", "NB"), b = c("NB", "PSM", "PSM"))
+rows <- bind_rows(
+  pairs |> mutate(system = a, other = b, label = paste(a, "→", b), forward = TRUE),
+  pairs |> mutate(system = b, other = a, label = paste(b, "→", a), forward = FALSE)
+) |>
+  arrange(match(paste(a, b), paste(pairs$a, pairs$b)), desc(forward)) |>
+  mutate(pair = match(paste(a, b), paste(pairs$a, pairs$b)),
+         row = -(row_number() + 0.2 * (pair - 3)))
+plot_data <- shares |>
+  inner_join(rows, by = c("system", "other")) |>
+  arrange(row, class) |>
+  group_by(row) |>
+  mutate(xmax = cumsum(share), xmin = xmax - share, xmid = (xmin + xmax) / 2) |>
+  ungroup()
+bars <- plot_data |> distinct(label, row, N, D)
+ggplot(plot_data) +
+  geom_rect(aes(xmin = xmin, xmax = xmax, ymin = row - 0.36, ymax = row + 0.36, fill = class),
+            colour = "white", linewidth = 0.4) +
+  geom_text(aes(x = xmid, y = row,
+                label = case_when(share >= 10 ~ sprintf("%.1f%% (%d)", share, n),
+                                  share >= 4  ~ sprintf("%.1f%%", share),
+                                  TRUE        ~ ""),
+                colour = class %in% c("exact", "broad")),
+            size = 2.7, show.legend = FALSE) +
+  geom_segment(data = bars, aes(x = D, xend = D, y = row - 0.44, yend = row + 0.44), linewidth = 0.7) +
+  geom_text(data = bars, aes(x = 101.5, y = row, label = paste0("N = ", N)),
+            hjust = 0, size = 3, colour = "grey30") +
+  scale_y_continuous(breaks = bars$row, labels = bars$label, expand = expansion(add = 0.5)) +
+  scale_x_continuous(limits = c(0, 115), breaks = seq(0, 100, 20), expand = c(0, 0)) +
+  scale_fill_manual(values = class_colours, labels = class_labels, name = NULL) +
+  scale_colour_manual(values = c(`TRUE` = "white", `FALSE` = "black"), guide = "none") +
+  guides(fill = guide_legend(ncol = 4, byrow = TRUE)) +
+  labs(x = "Anteil der Kulturen des Quellsystems (%)", y = NULL) +
+  theme_minimal(base_size = 11) +
+  theme(legend.position = "bottom", panel.grid.major.y = element_blank(),
+        panel.grid.minor = element_blank(), axis.text.y = element_text(colour = "black"))
+```
+
+Am höchsten ist die deterministische Abbildbarkeit für NB/DZ hin zum PSM-Verzeichnis.
+Das liegt daran, dass die Polyhierarchie des PSMV generische Gruppen wie «Gemüsebau allg.» oder «Grünfläche» enthält, denen sich fast jede agronomische Kultur per `broadMatch` zuordnen lässt -- die deterministische Abbildbarkeit ist damit kein guter Indikator für die Interoperabilität mit dem Pflanzenschutzmittelverzeichnis.
+In der Gegenrichtung ist eine PSM-Gruppe wie «Getreide» nur als Aggregat erreichbar (dunkelgrau) und lässt sich nicht eindeutig auf eine NB- oder DZ-Kultur auflösen.
+Hellgrau markierte Kulturen bleiben in beiden Richtungen unerreicht, etwa Zierpflanzen wie «Gerbera» im PSMV oder Bilanzpositionen wie «Zwischenfutter» in der NB; die _Abdeckung_ in @tbl-interoperability beziffert den Anteil der Zielkulturen, die von einem Quellsystem aus erreicht werden.
+Die Abbildbarkeit in DZ ist in beiden Richtungen gering, weil DZ auch Landnutzungen wie Biodiversitätsförderflächen, Sömmerungsflächen oder Einzelelemente typisiert, die in den anderen Systemen kein Gegenstück haben.
+Ackerfläche und Dauergrünfläche lassen sich praktisch vollständig ins PSMV überführen, Sömmerungsflächen und weitere Flächen innerhalb der Nutzfläche hingegen kaum.
+
+```{r}
+#| label: tbl-interoperability
+#| tbl-cap: "Interoperabilitätskennzahlen je Richtung der Datenübertragung zwischen Direktzahlungen (DZ), Nährstoffbilanz (NB) und Pflanzenschutzmittelverzeichnis (PSM): Anzahl geltender Kulturen im Quellsystem (N), Anteil exakt verknüpfter Kulturen (Exakt), deterministische Abbildbarkeit (Abbildbar) und Abdeckung des Zielsystems (Abdeckung), jeweils in Prozent."
+#| tbl-colwidths: [22,22,14,14,14,14]
+indicators <- shares |>
+  group_by(Quellsystem = system, Zielsystem = other) |>
+  summarise(N = first(N),
+            Exakt = 100 * sum(n[class == "exact"]) / N,
+            Abbildbar = first(D),
+            .groups = "drop")
+coverage <- shares |>
+  group_by(Zielsystem = system, Quellsystem = other) |>
+  summarise(Abdeckung = 100 * sum(n[class %in% c("exact", "reached")]) / first(N), .groups = "drop")
+indicators |>
+  left_join(coverage, by = c("Quellsystem", "Zielsystem")) |>
+  select(Quellsystem, Zielsystem, N, Exakt, Abbildbar, Abdeckung) |>
+  arrange(desc(Abbildbar)) |>
+  mutate(across(c(Exakt, Abbildbar, Abdeckung), ~ sprintf("%.1f %%", .x))) |>
+  knitr::kable(align = "llrrrr")
+```
+
+Die Kennzahlen in @tbl-interoperability beschreiben den aktuellen Stand der Mapping-Tabellen; fehlende Beziehungen können fachlich begründet sein oder auf Lücken hinweisen, die bei der Pflege des Alignments zu priorisieren sind [@euzenat2008alignment].
 
 # Sicherheitsaspekte {#sec-safety-consideration}
 
