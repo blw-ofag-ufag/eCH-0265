@@ -460,9 +460,9 @@ indicators <- shares |>
             Exakt = 100 * sum(n[class == "exact"]) / N,
             Abbildbar = first(D),
             .groups = "drop")
-coverage <- shares |>
+coverage <- classes |>
   group_by(Zielsystem = system, Quellsystem = other) |>
-  summarise(Abdeckung = 100 * sum(n[class %in% c("exact", "reached")]) / first(N), .groups = "drop")
+  summarise(Abdeckung = 100 * mean(exact %in% TRUE | reached %in% TRUE), .groups = "drop")
 indicators |>
   left_join(coverage, by = c("Quellsystem", "Zielsystem")) |>
   select(Quellsystem, Zielsystem, N, Exakt, Abbildbar, Abdeckung) |>
