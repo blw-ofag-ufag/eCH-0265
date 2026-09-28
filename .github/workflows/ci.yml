@@ -49,6 +49,12 @@ jobs:
             any::dplyr
             any::tidyr
             any::ggplot2
+            any::igraph
+            any::tidygraph
+            any::ggraph
+            any::ggforce
+            any::graphlayouts
+            any::stringr
             any::knitr
             any::rmarkdown
 

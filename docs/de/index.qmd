@@ -297,9 +297,88 @@ shares <- classes |>
 Semantische Interoperabilität bedeutet, dass die Bedeutung (die _Semantik_) einer Information beim Austausch zwischen Systemen erhalten bleibt [@eif2017].
 Die Mapping-Tabellen aus @sec-mapping-tables bilden dafür ein sogenanntes _Alignment_ zwischen den drei unabhängig entstandenen Kategorisierungssystemen der Direktzahlungen (DZ), der Nährstoffbilanz (NB) und des Pflanzenschutzmittelverzeichnisses (PSM); die verwendeten SKOS-Beziehungen entsprechen den Äquivalenz- und Hierarchie-Mappings nach [@iso25964-2; @skos].
 Dieses Kapitel quantifiziert, wie weit die beschriebenen Kulturen ohne manuellen Eingriff in ein anderes System überführt werden können.
-Berücksichtigt werden nur aktuell geltende Kulturen ohne Strukturierungsebenen: die Kulturkategorien bei Direktzahlungen und Nährstoffbilanz bleiben aussen vor, und im PSMV zählen nur die untersten Kulturen, nicht übergeordnete Gruppen wie «Getreide».[^note_psm]
+Berücksichtigt werden nur aktuell geltende Kulturen ohne Strukturierungsebenen: die Kulturkategorien bei Direktzahlungen und Nährstoffbilanz bleiben aussen vor, und im PSMV zählen nur die untersten Kulturen, nicht übergeordnete Gruppen wie «Getreide» oder «Korbblütler» (@fig-psm-hierarchy).[^note_psm]
 
 [^note_psm]: Als unterste Kulturen gelten PSM-Kulturen, die selbst keine Unterkulturen (`skos:broader`) haben. Dieses Kriterium erfasst nicht alle Sammelbegriffe: «Offene Ackerfläche» und «Grünfläche» haben im PSMV keine Unterkulturen und zählen deshalb mit, sind fachlich aber sehr allgemein und nehmen einen Grossteil der aggregierenden Zuordnungen aus DZ und NB auf.
+
+```{r}
+#| label: fig-psm-hierarchy
+#| fig-cap: "Ausschnitt aus der Hierarchie der Kulturen im Pflanzenschutzmittelverzeichnis: die oberste Gruppe «Gemüsebau allg.» mit den drei Untergruppen «Nachtschattengewächse», «Korbblütler» und «Hülsenfrüchtler». Gezeigt ist damit nur ein sehr kleiner Teil der Taxonomie; das Verzeichnis umfasst über 300 Kulturen in mehr als 20 obersten Gruppen. Grau gefüllte Knoten sind unterste Kulturen; nur sie gehen in die Kennzahlen dieses Kapitels ein."
+#| fig-width: 8
+#| fig-height: 8.3
+library(tidygraph)
+library(ggraph)
+library(ggforce)
+root <- "https://agriculture.ld.admin.ch/crops/psm/1/134"  # «Gemüsebau allg.»
+psm <- rdf_query(graph, "
+  PREFIX eCH-0265: <https://agriculture.ld.admin.ch/eCH-0265/2/>
+  SELECT ?crop WHERE { ?crop a eCH-0265:PlantProtectionCrop }") |>
+  anti_join(expired, by = "crop")
+titles <- rdf_query(graph, "SELECT ?crop ?title WHERE { ?crop <http://schema.org/name> ?title . FILTER(lang(?title) = 'de') }")
+broader <- rdf_query(graph, paste0("SELECT ?child ?parent WHERE { ?child <", skos, "broader> ?parent }")) |>
+  filter(child %in% psm$crop, parent %in% psm$crop)
+hierarchy <- igraph::graph_from_data_frame(broader |> transmute(from = parent, to = child), vertices = psm)
+branches <- titles$crop[titles$title %in% c("Nachtschattengewächse (Solanaceae)", "Korbblütler (Asteraceae)", "Hülsenfrüchtler (Fabaceae)")]
+subtree <- c(root, unique(unlist(lapply(branches, \(v) igraph::subcomponent(hierarchy, v, mode = "out")$name))))
+nodes <- psm |> filter(crop %in% subtree) |>
+  left_join(titles, by = "crop") |>
+  transmute(name = crop, label = sub(" \\([^()]*\\)$", "", title),  # Zusatz in Klammern weglassen
+            class = case_when(!(crop %in% broader$parent) ~ "leaf", crop == root ~ "root", TRUE ~ "inner"))
+edges <- broader |> filter(child %in% subtree, parent %in% subtree) |> transmute(from = parent, to = child)
+# Kreisradius (mm) aus dem umbrochenen Text ableiten, damit die Beschriftung im Knoten Platz hat
+font <- c(root = 3.0, inner = 2.6, leaf = 2.4)
+nodes <- nodes |>
+  mutate(wrapped = stringr::str_wrap(label, width = 11), size = font[class],
+         n_lines = stringr::str_count(wrapped, "\n") + 1,
+         max_chars = sapply(strsplit(wrapped, "\n"), \(l) max(nchar(l))),
+         r = sqrt((max_chars * 0.72 * size / 2)^2 + (n_lines * size * 1.15 / 2)^2) + 1.4,
+         r = pmax(r, c(root = 12, inner = 6, leaf = 5)[class]))
+tree <- tbl_graph(nodes = nodes, edges = edges, directed = TRUE)
+# Startlayout (Stress-Majorization), danach Federsimulation: Kreise dürfen sich nicht überlappen,
+# Kanten streben eine Länge von Radius + Radius + link_extra an, eine schwache Kraft zieht zur Mitte
+simulate <- function(xy, r, ei, ej, gap = 3, link_extra = 10, charge = 150, iters = 2500) {
+  n <- nrow(xy)
+  for (it in 1:iters) {
+    dx <- outer(xy[, 1], xy[, 1], "-"); dy <- outer(xy[, 2], xy[, 2], "-")
+    d <- sqrt(dx^2 + dy^2); diag(d) <- Inf
+    overlap <- pmax(0, outer(r, r, "+") + gap - d)
+    push <- overlap / d * 0.5
+    rep <- charge / pmax(d, 5)^2; rep[d > 80] <- 0
+    fx <- rowSums(dx * (push + rep / d)); fy <- rowSums(dy * (push + rep / d))
+    vx <- xy[ej, 1] - xy[ei, 1]; vy <- xy[ej, 2] - xy[ei, 2]; len <- sqrt(vx^2 + vy^2)
+    k <- (len - (r[ei] + r[ej] + link_extra)) / len * 0.15
+    sx <- vx * k; sy <- vy * k
+    fx <- fx + tapply(sx, factor(ei, 1:n), sum, default = 0) - tapply(sx, factor(ej, 1:n), sum, default = 0)
+    fy <- fy + tapply(sy, factor(ei, 1:n), sum, default = 0) - tapply(sy, factor(ej, 1:n), sum, default = 0)
+    fx <- fx - xy[, 1] * 0.002; fy <- fy - xy[, 2] * 0.002
+    xy <- xy + cbind(fx, fy) * 0.6
+  }
+  xy
+}
+set.seed(2026)
+ei <- match(edges$from, nodes$name); ej <- match(edges$to, nodes$name)
+xy <- graphlayouts::layout_with_stress(as.igraph(tree))
+xy <- scale(xy, scale = FALSE); xy <- xy / max(abs(xy)) * 70
+xy <- simulate(xy, nodes$r, ei, ej)
+layout <- create_layout(tree, layout = "manual", x = xy[, 1], y = xy[, 2])
+ld <- as_tibble(layout)
+grey <- "#bdbdbd"
+class_labels <- c(root = "oberste Gruppe", inner = "Gruppe", leaf = "unterste Kultur")
+ggraph(layout) +
+  geom_edge_arc(strength = 0.12, colour = grey, edge_width = 0.6) +
+  geom_point(data = ld, aes(x = x, y = y, fill = class), shape = 21, size = 0, colour = grey, key_glyph = "point") +
+  geom_circle(data = ld, aes(x0 = x, y0 = y, r = r, fill = class, linewidth = class), colour = grey, show.legend = FALSE) +
+  geom_text(data = ld, aes(x = x, y = y, label = wrapped, size = size, fontface = ifelse(class == "root", "bold", "plain")),
+            colour = "black", lineheight = 0.85) +
+  scale_size_identity() +
+  scale_fill_manual(values = c(root = "white", inner = "white", leaf = grey),
+                    breaks = names(class_labels), labels = class_labels, name = NULL) +
+  scale_linewidth_manual(values = c(root = 1.4, inner = 0.7, leaf = 0.7)) +
+  guides(fill = guide_legend(override.aes = list(size = 5, stroke = c(1.6, 0.8, 0.8)))) +
+  coord_fixed(clip = "off") +
+  theme_void(base_size = 10) +
+  theme(legend.position = "bottom", legend.margin = margin(0, 0, 0, 0), plot.margin = margin(4, 4, 4, 4))
+```
 
 Die Kultur eines Quellsystems gilt als _deterministisch abbildbar_ in ein Zielsystem, wenn mindestens ein `skos:exactMatch` oder mindestens ein `skos:broadMatch` zu einer Kultur des Zielsystems vorliegt.
 Diese Überführung mittels `skos:exactMatch` ist verlustfrei; ein `skos:broadMatch` ordnet die Kultur einer allgemeineren Kategorie zu, etwa «Oelkürbisse» (Direktzahlungen) hin zu «Kürbis» (Nährstoffbilanz):
