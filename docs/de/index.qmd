@@ -302,7 +302,7 @@ Berücksichtigt werden nur aktuell geltende Kulturen ohne Strukturierungsebenen:
 [^note_psm]: Als unterste Kulturen gelten PSM-Kulturen, die selbst keine Unterkulturen (`skos:broader`) haben. Dieses Kriterium erfasst nicht alle Sammelbegriffe: «Offene Ackerfläche» und «Grünfläche» haben im PSMV keine Unterkulturen und zählen deshalb mit, sind fachlich aber sehr allgemein und nehmen einen Grossteil der aggregierenden Zuordnungen aus DZ und NB auf.
 
 Die Kultur eines Quellsystems gilt als _deterministisch abbildbar_ in ein Zielsystem, wenn mindestens ein `skos:exactMatch` oder mindestens ein `skos:broadMatch` zu einer Kultur des Zielsystems vorliegt.
-Diese Überführung mittels `skos:exactMatch` ist verlustfrei; ein `sko:broadMatch` ordnet die Kultur einer allgemeineren Kategorie zu, etwa «Oelkürbisse» (Direktzahlungen) hin zu «Kürbis» (Nährstoffbilanz):
+Diese Überführung mittels `skos:exactMatch` ist verlustfrei; ein `skos:broadMatch` ordnet die Kultur einer allgemeineren Kategorie zu, etwa «Oelkürbisse» (Direktzahlungen) hin zu «Kürbis» (Nährstoffbilanz):
 Detailinformation geht dabei verloren, das Ziel ist aber ohne Zusatzwissen eindeutig.
 
 Liegt hingegen ein `skos:narrowMatch` vor, ist das Ziel spezifischer als die Quelle, und die Auswahl unter den Kandidaten erfordert Information, die in den Quelldaten fehlt.
