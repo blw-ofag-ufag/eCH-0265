@@ -394,8 +394,8 @@ Die _deterministische Abbildbarkeit_ ist der Anteil der deterministisch abbildba
 ```{r}
 #| label: fig-mappability
 #| fig-cap: "Beziehung der Kulturen eines Quellsystems zu den Kulturen eines Zielsystems für die drei Paare zwischen den Bereichen Direktzahlungen (DZ), Nährstoffbilanz (NB) und Pflanzenschutzmittelverzeichnis (PSM). Jeder Balken zeigt die N geltenden Kulturen des Quellsystems und ihre Beziehung zum Zielsystem: exakt verknüpft (`skos:exactMatch`), deterministisch aggregierbar (`skos:broadMatch`), nur als Aggregat erreichbar (`skos:broadMatch`) oder nicht verknüpft. Zahlen sind Anteile in Prozent mit der Anzahl Kulturen in Klammern; die schwarze Markierung ist die deterministische Abbildbarkeit."
-#| fig-width: 9
-#| fig-height: 6
+#| fig-width: 7.5
+#| fig-height: 5
 class_labels <- c(
   exact   = "exakt verknüpft",
   broad   = "deterministisch aggregierbar",
