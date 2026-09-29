@@ -1,6 +1,6 @@
 # eCH-0265 Landwirtschaftliche Kulturen
 eCH Fachgruppe AgriFood
-17. September 2026
+29. September 2026
 
 - [Hinweis](#sec-note)
 - [<span class="toc-section-number">1</span>
@@ -38,11 +38,13 @@ eCH Fachgruppe AgriFood
     über LINDAS](#sec-lindas-data-integration)
   - [<span class="toc-section-number">4.2</span> Bezug von
     Mapping-Tabellen](#sec-mapping-tables)
-- [<span class="toc-section-number">5</span>
-  Sicherheitsaspekte](#sec-safety-consideration)
+- [<span class="toc-section-number">5</span> Interoperabilität der
+  Kulturbegriffe](#sec-interoperability)
 - [<span class="toc-section-number">6</span>
-  Haftungsausschluss](#sec-disclaimer)
+  Sicherheitsaspekte](#sec-safety-consideration)
 - [<span class="toc-section-number">7</span>
+  Haftungsausschluss](#sec-disclaimer)
+- [<span class="toc-section-number">8</span>
   Urheberrechte](#sec-copyrights)
 - [Anhang A - Referenzen](#sec-appendix-a)
 - [Anhang B - Mitwirkung und Prüfung](#sec-appendix-b)
@@ -86,11 +88,10 @@ von Daten aus einem System in ein anderes ermöglicht.
 
 Der Begriff der landwirtschaftlichen Kultur stützt sich in diesem
 Hilfsmittel massgeblich auf das Konzept `CultivationType` aus der
-Vorversion (<span class="nocase">eCH-Fachgruppe AgriFood</span> 2024).
-Eine Kultur definiert sich demnach als Kategorie beziehungsweise als
-Teil eines Kategorisierungssystems, welches die Art der Nutzung und
-Kultivierung eines bestimmten Stücks Land über einen definierten
-Zeitraum beschreibt.
+Vorversion \[eCH-0265:1.0.0\]. Eine Kultur definiert sich demnach als
+Kategorie beziehungsweise als Teil eines Kategorisierungssystems,
+welches die Art der Nutzung und Kultivierung eines bestimmten Stücks
+Land über einen definierten Zeitraum beschreibt.
 
 Durch diese Definition ist die landwirtschaftliche Kultur strikt von der
 botanischen Taxonomie abzugrenzen. Die botanische Systematik
@@ -173,22 +174,20 @@ landwirtschaftlichen Begriffsverordnung (LBV), wo möglich.
 Um umweltbelastende Nährstoffverluste zu reduzieren und die
 Ertragsfähigkeit der Böden nachhaltig zu sichern, müssen Schweizer
 Landwirtschaftsbetriebe eine ausgeglichene Nährstoffbilanz ausweisen
-(Carlen u. a. 2017). Das zentrale Berechnungsinstrument hierfür ist die
+\[CFGH17\]. Das zentrale Berechnungsinstrument hierfür ist die
 Suisse-Bilanz, welche den Nährstoffanfall (etwa durch Hofdünger) und den
-Nährstoffbedarf auf Betriebsebene systematisch gegenüberstellt (Agridea
-und Bundesamt für Landwirtschaft BLW 2025). Für diese Bilanzierung
-wurden spezifische Kulturen definiert, weil jede landwirtschaftliche
-Kultur einen anderen, normierten Nährstoffbedarf (z.B. für Stickstoff
-oder Phosphor) aufweist (Carlen u. a. 2017). Die Zuweisung dieser
-Kulturen ist die Grundvoraussetzung, um eine Nährstoffbilanz für einen
-Betrieb berechnen zu können.
+Nährstoffbedarf auf Betriebsebene systematisch gegenüberstellt
+\[AgBL25\]. Für diese Bilanzierung wurden spezifische Kulturen
+definiert, weil jede landwirtschaftliche Kultur einen anderen,
+normierten Nährstoffbedarf (z.B. für Stickstoff oder Phosphor) aufweist
+\[CFGH17\]. Die Zuweisung dieser Kulturen ist die Grundvoraussetzung, um
+eine Nährstoffbilanz für einen Betrieb berechnen zu können.
 
 Um die Suisse-Bilanz zu berechnen, ist die «Wegleitung Suisse-Bilanz»
 entscheidend, welche von Agridea und dem Bundesamt für Landwirtschaft
-herausgegeben wird (Agridea und Bundesamt für Landwirtschaft BLW 2025).
-In dem Dokument sind viele Referenztabellen enthalten, die entsprechend
-nach Kulturen aufgegliedert sind, abgeleitet von den detaillierteren
-Tabellen in Carlen u. a. (2017).
+herausgegeben wird \[AgBL25\]. In dem Dokument sind viele
+Referenztabellen enthalten, die entsprechend nach Kulturen aufgegliedert
+sind, abgeleitet von den detaillierteren Tabellen in \[CFGH17\].
 
 Zur Standardisierung der Suisse-Bilanz-Berechnung stellt das Bundesamt
 für Landwirtschaft neu den Nährstoffbilanz-Berechnungsservice (NBBS) als
@@ -279,12 +278,10 @@ Nährstoffbilanzrechner Mais als Getreide gezählt – es existieren also
 verschiedene Definitionen von Getreide. Um diese eindeutig kennzeichnen
 zu können, setzen wir auf Linked Data. Für weiterführende Informationen
 zur Publikation, Nutzung und den Kernprozessen von vernetzten Daten
-verweisen wir auf <span class="nocase">eCH-Fachgruppe Open Government
-Data</span> (2018).
+verweisen wir auf \[eCH-0205:1.0.0\].
 
 Das konsolidierte Datenmodell wird durch eine RDFS-Ontologie abgebildet
-und mittels SHACL-Shapes validiert (Cyganiak u. a. 2014; W3C OWL Working
-Group 2012; Knublauch und Kontokostas 2017).
+und mittels SHACL-Shapes validiert \[OWL Overview; RDF; SHACL\].
 
 <div id="fig-uml">
 
@@ -292,7 +289,7 @@ Group 2012; Knublauch und Kontokostas 2017).
 style="width:100.0%" />
 
 Abbildung 1: UML-Diagramm des Datenmodells von eCH-0265. Dieses Diagramm
-wurde automatisch mithilfe von SHACL PLAY! (Francart 2020) aus den
+wurde automatisch mithilfe von SHACL PLAY! \[Fran20\] aus den
 SHACL-Spezifikationen generiert.
 
 </div>
@@ -582,6 +579,133 @@ JSON exportiert werden. Alternativ lässt sich die Tabelle programmatisch
 beziehen, siehe <a href="#sec-lindas-data-integration"
 class="quarto-xref">Kapitel 4.1</a>.
 
+# Interoperabilität der Kulturbegriffe
+
+Semantische Interoperabilität bedeutet, dass die Bedeutung (die
+*Semantik*) einer Information beim Austausch zwischen Systemen erhalten
+bleibt \[EC17\]. Die Mapping-Tabellen aus
+<a href="#sec-mapping-tables" class="quarto-xref">Kapitel 4.2</a> bilden
+dafür ein sogenanntes *Alignment* zwischen den drei unabhängig
+entstandenen Kategorisierungssystemen der Direktzahlungen (DZ), der
+Nährstoffbilanz (NB) und des Pflanzenschutzmittelverzeichnisses (PSM);
+die verwendeten SKOS-Beziehungen entsprechen den Äquivalenz- und
+Hierarchie-Mappings nach \[ISO 25964-2; SKOS\]. Dieses Kapitel
+quantifiziert, wie weit die beschriebenen Kulturen ohne manuellen
+Eingriff in ein anderes System überführt werden können. Berücksichtigt
+werden nur aktuell geltende Kulturen ohne Strukturierungsebenen: die
+Kulturkategorien bei Direktzahlungen und Nährstoffbilanz bleiben aussen
+vor, und im PSMV zählen nur die untersten Kulturen, nicht übergeordnete
+Gruppen wie «Getreide» oder «Wintergetreide»
+(<a href="#fig-psm-hierarchy" class="quarto-xref">Abbildung 2</a>).[^3]
+
+<div id="fig-psm-hierarchy">
+
+![](index_files/figure-commonmark/fig-psm-hierarchy-1.png)
+
+Abbildung 2: Ausschnitt aus der Hierarchie der Kulturen im
+Pflanzenschutzmittelverzeichnis: die oberste Gruppe «Feldbau allg.» mit
+allen Untergruppen und Kulturen des Ackerbaus. Gezeigt ist damit nur ein
+kleiner Teil der Taxonomie; das Verzeichnis umfasst über 300 Kulturen in
+mehr als 20 obersten Gruppen. Grau gefüllte Knoten sind unterste
+Kulturen; nur sie gehen in die Kennzahlen dieses Kapitels ein. Umrandete
+Knoten sind übergeordnete Gruppen, die weder bei der Abbildbarkeit noch
+bei der Abdeckung mitzählen. Kulturen mit zwei Übergruppen, etwa
+«Winterroggen» unter «Roggen» und «Wintergetreide», sind mit beiden
+verbunden.
+
+</div>
+
+Die Kultur eines Quellsystems gilt als *deterministisch abbildbar* in
+ein Zielsystem, wenn mindestens ein `skos:exactMatch` oder mindestens
+ein `skos:broadMatch` zu einer Kultur des Zielsystems vorliegt. Diese
+Überführung mittels `skos:exactMatch` ist verlustfrei; ein
+`skos:broadMatch` ordnet die Kultur einer allgemeineren Kategorie zu,
+etwa «Winterraps zur Speiseölgewinnung» (Direktzahlungen) hin zu
+«Winterraps» (Pflanzenschutzmittelverzeichnis): Detailinformation geht
+dabei verloren, das Ziel ist aber ohne Zusatzwissen eindeutig.
+
+Liegt hingegen ein `skos:narrowMatch` vor, ist das Ziel spezifischer als
+die Quelle, und die Auswahl unter den Kandidaten erfordert Information,
+die in den Quelldaten fehlt. So kann «Hafer» (Direktzahlungen) nur mit
+Kenntnis des Saatzeitpunkets auf «Sommerhafer»
+(Pflanzenschutzmittelverzeichnis) abgebildet werden, ein altbekanntes
+Problem beim Mapping zwischen Vokabularen unterschiedlicher Granularität
+\[Doer01; ZeCh04\].
+
+Aus Sicht des Zielsystems ist eine solche Kultur nur als Aggregat
+erreichbar. Die *deterministische Abbildbarkeit* ist der Anteil der
+deterministisch abbildbaren Kulturen an allen Kulturen des Quellsystems;
+sie ist gerichtet, weil eine Aggregation nur in eine Richtung eindeutig
+ist. <a href="#fig-mappability" class="quarto-xref">Abbildung 3</a>
+stellt deshalb jeweils beide Systeme eines Paars gegenüber.
+
+<div id="fig-mappability">
+
+![](index_files/figure-commonmark/fig-mappability-1.png)
+
+Abbildung 3: Beziehung der Kulturen eines Quellsystems zu den Kulturen
+eines Zielsystems für die drei Paare zwischen den Bereichen
+Direktzahlungen (DZ), Nährstoffbilanz (NB) und
+Pflanzenschutzmittelverzeichnis (PSM). Jeder Balken zeigt die N
+geltenden Kulturen des Quellsystems und ihre Beziehung zum Zielsystem:
+exakt verknüpft (`skos:exactMatch`), deterministisch aggregierbar
+(`skos:broadMatch`), nur als Aggregat erreichbar (`skos:broadMatch`)
+oder nicht verknüpft. Zahlen sind Anteile in Prozent mit der Anzahl
+Kulturen in Klammern; die schwarze Markierung ist die deterministische
+Abbildbarkeit.
+
+</div>
+
+Am höchsten ist die deterministische Abbildbarkeit für NB/DZ hin zum
+PSM-Verzeichnis. Sie beruht überwiegend auf Aggregationen in sehr
+allgemeine PSM-Kulturen wie «Offene Ackerfläche» oder «Grünfläche» und
+ist damit nur ein grober Indikator für die Interoperabilität mit dem
+Pflanzenschutzmittelverzeichnis. In der Gegenrichtung ist eine solche
+PSM-Kultur nur als Aggregat erreichbar (dunkelgrau) und lässt sich nicht
+eindeutig auf eine NB- oder DZ-Kultur auflösen. Hellgrau markierte
+Kulturen bleiben in beiden Richtungen unerreicht, etwa Heil- und
+Gewürzpflanzen wie «Süssdolde» oder «Wolliger Fingerhut» im PSMV oder
+Bilanzpositionen wie «Zwischenfutter» in der NB; die *Abdeckung* in
+<a href="#tbl-interoperability" class="quarto-xref">Tabelle 11</a>
+beziffert den Anteil der Zielkulturen, die von einem Quellsystem aus
+erreicht werden.
+
+Die Abbildbarkeit in DZ ist in beiden Richtungen gering, weil DZ auch
+Landnutzungen wie Biodiversitätsförderflächen, Sömmerungsflächen oder
+Einzelelemente typisiert, die in den anderen Systemen kein Gegenstück
+haben. Ackerfläche und Dauergrünfläche lassen sich praktisch vollständig
+ins Pflanzenschutzmittelverzeichnis überführen, Sömmerungsflächen
+hingegen kaum.
+
+<div id="tbl-interoperability">
+
+Tabelle 11: Interoperabilitätskennzahlen zwischen Direktzahlungen (DZ),
+Nährstoffbilanz (NB) und Pflanzenschutzmittelverzeichnis (PSM): Anzahl
+geltender Kulturen im Quellsystem (N), Anteil exakt verknüpfter Kulturen
+(Exakt), deterministische Abbildbarkeit (Abbildbar) und Abdeckung des
+Zielsystems (Abdeckung).
+
+<div class="cell-output-display">
+
+| Quellsystem | Zielsystem |   N | Exakt | Abbildbar | Abdeckung |
+|:------------|:-----------|----:|------:|----------:|----------:|
+| NB          | PSM        | 314 | 15.6% |     71.3% |     40.8% |
+| DZ          | PSM        | 159 | 13.8% |     59.7% |     14.2% |
+| PSM         | NB         | 240 | 20.4% |     31.2% |     18.2% |
+| NB          | DZ         | 314 |  8.6% |     27.4% |     30.2% |
+| DZ          | NB         | 159 | 16.4% |     24.5% |     11.1% |
+| PSM         | DZ         | 240 |  9.2% |     17.9% |     20.8% |
+
+</div>
+
+</div>
+
+Die in diesem Kapitel präsentierten Kennzahlen werden dabei automatisch
+berechnet (Stand der Berechnung: 29. September 2026). Sie beschreiben
+den aktuellen Stand der Mapping-Tabellen; fehlende Beziehungen können
+fachlich begründet sein oder auf Lücken hinweisen, die bei der Pflege
+des Alignments zu priorisieren sind \[EuMoSc08\].
+
 # Sicherheitsaspekte
 
 Informationen zu den ausdrücklich massgeblichen rechtlichen Grundlagen
@@ -639,71 +763,152 @@ Standards enthalten die entsprechenden Hinweise auf Rechte Dritter.
 
 # Anhang A - Referenzen
 
-<div id="refs" class="references csl-bib-body hanging-indent">
+<div id="refs" class="references csl-bib-body">
 
 <div id="ref-suibi2025" class="csl-entry">
 
-Agridea, und Bundesamt für Landwirtschaft BLW. 2025. *Wegleitung
-Suisse-Bilanz: Version 1.20*. Agridea und Bundesamt für Landwirtschaft
-BLW.
-<https://www.blw.admin.ch/dam/de/sd-web/PCfDBOdwjaOm/WegleitungSuisse-Bilanz1_20_D_DEF.pdf>.
+<span class="csl-left-margin">\[AgBL25\]
+</span><span class="csl-right-inline">Agridea ; Bundesamt für
+Landwirtschaft BLW: *[Wegleitung Suisse-Bilanz: Version
+1.20](https://www.blw.admin.ch/dam/de/sd-web/PCfDBOdwjaOm/WegleitungSuisse-Bilanz1_20_D_DEF.pdf)* :
+Agridea und Bundesamt für Landwirtschaft BLW, 2025</span>
 
 </div>
 
 <div id="ref-grud2017" class="csl-entry">
 
-Carlen, C., R. Flisch, C. Gilli, u. a. 2017. «Grundlagen für die Düngung
-landwirtschaftlicher Kulturen in der Schweiz (GRUD 2017)».
-*Agrarforschung Schweiz* 8 (6).
-<https://ira.agroscope.ch/de-CH/publication/52563>.
+<span class="csl-left-margin">\[CFGH17\]
+</span><span class="csl-right-inline">Carlen, C. ; Flisch, R. ; Gilli,
+C. ; Huguenin-Elie, O. ; Kuster, T. ; Latsch, A. J. ; Mayer, J. ;
+Neuweiler, R. ; u. a.: [Grundlagen für die Düngung landwirtschaftlicher
+Kulturen in der Schweiz (GRUD
+2017)](https://ira.agroscope.ch/de-CH/publication/52563). In:
+*Agrarforschung Schweiz* Bd. 8 (2017), Nr. 6</span>
 
 </div>
 
-<div id="ref-rdf" class="csl-entry">
+<div id="ref-doerr2001semantic" class="csl-entry">
 
-Cyganiak, Richard, David Wood, und Markus Lanthaler. 2014. *RDF 1.1
-Concepts and Abstract Syntax*. W3C Recommendation. World Wide Web
-Consortium (W3C). <https://www.w3.org/TR/rdf11-concepts/>.
+<span class="csl-left-margin">\[Doer01\]
+</span><span class="csl-right-inline">Doerr, Martin: [Semantic problems
+of thesaurus
+mapping](https://jodi-ojs-tdl.tdl.org/jodi/article/view/jodi-35). In:
+*Journal of Digital Information* Bd. 1 (2001), Nr. 8</span>
 
 </div>
 
-<div id="ref-eCH-0265:1.0.0" class="csl-entry">
+<div id="ref-eif2017" class="csl-entry">
 
-<span class="nocase">eCH-Fachgruppe AgriFood</span>. 2024. *eCH-0205
-Datenstandard Agrardaten – Flächen und Kulturen*. eCH-Standard. Version
-1.0.0. Verein eCH.
-<https://ech.ch/sites/default/files/imce/eCH-Dossier/eCH-Dossier_PDF_Publikationen/Hauptdokument/STAN_d_DEF_2024-02_07_eCH-0265_V1.0.0_Datenstandard_Agrardaten_Fl%C3%A4chenKulturen.pdf>.
+<span class="csl-left-margin">\[EC17\]
+</span><span class="csl-right-inline">European Commission: *[New
+European Interoperability Framework: Promoting seamless services and
+data flows for European public
+administrations](https://ec.europa.eu/isa2/eif_en/)*. Luxembourg :
+Publications Office of the European Union, 2017</span>
 
 </div>
 
 <div id="ref-eCH-0205:1.0.0" class="csl-entry">
 
-<span class="nocase">eCH-Fachgruppe Open Government Data</span>. 2018.
-*eCH-0205 Linked Open Data*. eCH-Hilfsmittel. Version 1.0.0. Verein eCH.
-<https://www.ech.ch/sites/default/files/dosvers/hauptdokument/AUXI_e_DEF_2018-03-13_eCH-0205_V1.0_Linked%20Open%20Data.pdf>.
+<span class="csl-left-margin">\[eCH-0205:1.0.0\]
+</span><span class="csl-right-inline"><span class="nocase">eCH-Fachgruppe
+Open Government Data</span>: *[eCH-0205 Linked Open
+Data](https://www.ech.ch/sites/default/files/dosvers/hauptdokument/AUXI_e_DEF_2018-03-13_eCH-0205_V1.0_Linked%20Open%20Data.pdf)*
+(eCH-Hilfsmittel) : Verein eCH, 2018</span>
+
+</div>
+
+<div id="ref-eCH-0265:1.0.0" class="csl-entry">
+
+<span class="csl-left-margin">\[eCH-0265:1.0.0\]
+</span><span class="csl-right-inline"><span class="nocase">eCH-Fachgruppe
+AgriFood</span>: *[eCH-0265 Datenstandard Agrardaten – Flächen und
+Kulturen](https://ech.ch/sites/default/files/imce/eCH-Dossier/eCH-Dossier_PDF_Publikationen/Hauptdokument/STAN_d_DEF_2024-02_07_eCH-0265_V1.0.0_Datenstandard_Agrardaten_Fl%C3%A4chenKulturen.pdf)*
+(eCH-Standard) : Verein eCH, 2024</span>
+
+</div>
+
+<div id="ref-euzenat2008alignment" class="csl-entry">
+
+<span class="csl-left-margin">\[EuMoSc08\]
+</span><span class="csl-right-inline">Euzenat, Jérôme ; Mocan, Adrian ;
+Scharffe, François: [Ontology alignment: an ontology management
+perspective](https://exmo.inria.fr/files/publications/euzenat2008a.pdf).
+In: Hepp, M. ; De Leenheer, P. ; De Moor, A. ; Sure, Y. (Hrsg.):
+*Ontology Management: Semantic Web, Semantic Web Services, and Business
+Applications*. New York : Springer, 2008, S. 177–206</span>
 
 </div>
 
 <div id="ref-francart2020shacl" class="csl-entry">
 
-Francart, Thomas. 2020. *SHACL Play!* Sparna, released.
-<https://shacl-play.sparna.fr/>.
+<span class="csl-left-margin">\[Fran20\]
+</span><span class="csl-right-inline">Francart, Thomas: [SHACL
+Play!](https://shacl-play.sparna.fr/)</span>
 
 </div>
 
-<div id="ref-shacl" class="csl-entry">
+<div id="ref-iso25964-2" class="csl-entry">
 
-Knublauch, Holger, und Dimitris Kontokostas. 2017. *Shapes Constraint
-Language (SHACL)*. W3C Recommendation. World Wide Web Consortium (W3C).
-<https://www.w3.org/TR/shacl/>.
+<span class="csl-left-margin">\[ISO 25964-2\]
+</span><span class="csl-right-inline">International Organization for
+Standardization: *[ISO 25964-2:2013 Information and documentation –
+Thesauri and interoperability with other vocabularies – Part 2:
+Interoperability with other
+vocabularies](https://www.iso.org/standard/53658.html)* (International
+Standard). Geneva : International Organization for Standardization,
+2013</span>
 
 </div>
 
 <div id="ref-owl2" class="csl-entry">
 
-W3C OWL Working Group. 2012. *OWL 2 Web Ontology Language Document
-Overview (Second Edition)*. W3C Recommendation. World Wide Web
-Consortium (W3C). <https://www.w3.org/TR/owl2-overview/>.
+<span class="csl-left-margin">\[OWL Overview\]
+</span><span class="csl-right-inline">W3C OWL Working Group: *[OWL 2 Web
+Ontology Language Document Overview (Second
+Edition)](https://www.w3.org/TR/owl2-overview/)* (W3C Recommendation) :
+World Wide Web Consortium (W3C), 2012</span>
+
+</div>
+
+<div id="ref-rdf" class="csl-entry">
+
+<span class="csl-left-margin">\[RDF\]
+</span><span class="csl-right-inline">Cyganiak, Richard ; Wood, David ;
+Lanthaler, Markus: *[RDF 1.1 Concepts and Abstract
+Syntax](https://www.w3.org/TR/rdf11-concepts/)* (W3C Recommendation) :
+World Wide Web Consortium (W3C), 2014</span>
+
+</div>
+
+<div id="ref-shacl" class="csl-entry">
+
+<span class="csl-left-margin">\[SHACL\]
+</span><span class="csl-right-inline">Knublauch, Holger ; Kontokostas,
+Dimitris: *[Shapes Constraint Language
+(SHACL)](https://www.w3.org/TR/shacl/)* (W3C Recommendation) : World
+Wide Web Consortium (W3C), 2017</span>
+
+</div>
+
+<div id="ref-skos" class="csl-entry">
+
+<span class="csl-left-margin">\[SKOS\]
+</span><span class="csl-right-inline">Miles, Alistair ; Bechhofer, Sean:
+*[SKOS Simple Knowledge Organization System
+Reference](https://www.w3.org/TR/skos-reference/)* (W3C
+Recommendation) : World Wide Web Consortium (W3C), 2009</span>
+
+</div>
+
+<div id="ref-zeng2004trends" class="csl-entry">
+
+<span class="csl-left-margin">\[ZeCh04\]
+</span><span class="csl-right-inline">Zeng, Marcia Lei ; Chan, Lois Mai:
+[Trends and issues in establishing interoperability among knowledge
+organization systems](https://doi.org/10.1002/asi.10387). In: *Journal
+of the American Society for Information Science and Technology* Bd. 55,
+Wiley (2004), Nr. 5, S. 377–395</span>
 
 </div>
 
@@ -713,7 +918,7 @@ Consortium (W3C). <https://www.w3.org/TR/owl2-overview/>.
 
 <div id="tbl-authors">
 
-Tabelle 11: Autoren und Revision
+Tabelle 12: Autoren und Revision
 
 | Name            | Organisation                 |
 |:----------------|:-----------------------------|
@@ -728,7 +933,7 @@ Tabelle 11: Autoren und Revision
 
 <div id="tbl-glossary">
 
-Tabelle 12: **Glossar des Standards eCH-0265:** Diese Glossar soll
+Tabelle 13: **Glossar des Standards eCH-0265:** Diese Glossar soll
 sämtliche verwendeten Fachbegriffe inklusive Abkürzungen des Standards
 eCH-0265 enthalten.
 
@@ -839,9 +1044,9 @@ systemübergreifenden Nutzung von landwirtschaftlichen Kulturdaten in der
 Schweiz. Gegenüber der Version 1.1.0 (eCH-0265 Datenstandard Agrardaten
 – Flächen und Kulturen) wurde das Dokument von einem unverbindlichen
 Standard zu einem Hilfsmittel umgewandelt. Gleichzeitig wurde der
-inhaltliche Fokus geschärft: Klassen rund um Geometrien/Flächen[^3],
+inhaltliche Fokus geschärft: Klassen rund um Geometrien/Flächen[^4],
 Sorten sowie Direktzahlungsprogrammen sind nicht mehr Teil dieses
-Dokuments.[^4] Neu enthalten sind dafür die Kulturen aus dem
+Dokuments.[^5] Neu enthalten sind dafür die Kulturen aus dem
 Pflanzenschutzmittelverzeichnis.
 
 Eine vollständige Übersicht der Veränderungen wird auf GitHub geführt:
@@ -866,10 +1071,17 @@ Eine vollständige Übersicht der Veränderungen wird auf GitHub geführt:
     jedoch stark denen von echtem Getreide, daher werden sie manchmal
     als Pseudogetreide bezeichnet.
 
-[^3]: Die Erhebung von landwirtschaftlichen Nutzflächen wird bereits mit
+[^3]: Als unterste Kulturen gelten PSM-Kulturen, die selbst keine
+    Unterkulturen (`skos:broader`) haben. Dieses Kriterium erfasst nicht
+    alle Sammelbegriffe: «Offene Ackerfläche» und «Grünfläche» haben im
+    PSMV keine Unterkulturen und zählen deshalb mit, sind fachlich aber
+    sehr allgemein und nehmen einen Grossteil der aggregierenden
+    Zuordnungen aus DZ und NB auf.
+
+[^4]: Die Erhebung von landwirtschaftlichen Nutzflächen wird bereits mit
     dem minimale Geodatenmodell «Landwirtschaftliche Kulturflächen»
     (Identifikator 153) spezifiziert:
     <https://www.blw.admin.ch/de/landwirtschaftliche-kulturflaechen>
 
-[^4]: Eine spätere Wiederaufnahme von Sorten und Programmen bleibt
+[^5]: Eine spätere Wiederaufnahme von Sorten und Programmen bleibt
     vorbehalten.
