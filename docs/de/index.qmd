@@ -363,7 +363,7 @@ xy <- simulate(xy, nodes$r, ei, ej)
 layout <- create_layout(tree, layout = "manual", x = xy[, 1], y = xy[, 2])
 ld <- as_tibble(layout)
 grey <- "#bdbdbd"
-class_labels <- c(root = "oberste Gruppe", inner = "Gruppe", leaf = "unterste Kultur")
+class_labels <- c(root = "oberste Gruppe", inner = "Untergruppe", leaf = "unterste Kultur")
 ggraph(layout) +
   geom_edge_arc(strength = 0.12, colour = grey, edge_width = 0.6) +
   geom_point(data = ld, aes(x = x, y = y, fill = class), shape = 21, size = 0, colour = grey, key_glyph = "point") +
