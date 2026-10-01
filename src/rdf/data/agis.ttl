@@ -104,7 +104,7 @@ agis:21 a eCH-0265:DirectPaymentAreaCategory ;
 # Direktzahlungskulturen
 # ==============================================================================
 
-agis:501 a eCH-0265:DirectPaymentCrop ;
+agis:501 a eCH-0265:AgisCrop ;
     schema:identifier "501" ;
     schema:name "Sommergerste"@de,
         "Orge de printemps"@fr,
@@ -114,7 +114,7 @@ agis:501 a eCH-0265:DirectPaymentCrop ;
     skos:broader agis:1 ;
     eCH-0265:exactMatch cultivationtype:501 .
 
-agis:502 a eCH-0265:DirectPaymentCrop ;
+agis:502 a eCH-0265:AgisCrop ;
     schema:identifier "502" ;
     schema:name "Wintergerste"@de,
         "Orge d'automne"@fr,
@@ -124,7 +124,7 @@ agis:502 a eCH-0265:DirectPaymentCrop ;
     skos:broader agis:1 ;
     eCH-0265:exactMatch cultivationtype:502 .
 
-agis:504 a eCH-0265:DirectPaymentCrop ;
+agis:504 a eCH-0265:AgisCrop ;
     schema:identifier "504" ;
     schema:name "Hafer"@de,
         "Avoine"@fr,
@@ -134,7 +134,7 @@ agis:504 a eCH-0265:DirectPaymentCrop ;
     skos:broader agis:1 ;
     eCH-0265:exactMatch cultivationtype:504 .
 
-agis:505 a eCH-0265:DirectPaymentCrop ;
+agis:505 a eCH-0265:AgisCrop ;
     schema:identifier "505" ;
     schema:name "Triticale"@de,
         "Triticale"@fr,
@@ -144,7 +144,7 @@ agis:505 a eCH-0265:DirectPaymentCrop ;
     skos:broader agis:1 ;
     eCH-0265:exactMatch cultivationtype:505 .
 
-agis:506 a eCH-0265:DirectPaymentCrop ;
+agis:506 a eCH-0265:AgisCrop ;
     schema:identifier "506" ;
     schema:name "Mischel Futtergetreide"@de,
         "Méteil de céréales fourragères"@fr,
@@ -154,7 +154,7 @@ agis:506 a eCH-0265:DirectPaymentCrop ;
     skos:broader agis:1 ;
     eCH-0265:exactMatch cultivationtype:506 .
 
-agis:507 a eCH-0265:DirectPaymentCrop ;
+agis:507 a eCH-0265:AgisCrop ;
     schema:identifier "507" ;
     schema:name "Futterweizen gemäss Sortenliste swiss granum"@de,
         "Blé fourrager selon la liste swiss granum"@fr,
@@ -164,7 +164,7 @@ agis:507 a eCH-0265:DirectPaymentCrop ;
     skos:broader agis:1 ;
     eCH-0265:exactMatch cultivationtype:507 .
 
-agis:508 a eCH-0265:DirectPaymentCrop ;
+agis:508 a eCH-0265:AgisCrop ;
     schema:identifier "508" ;
     schema:name "Körnermais"@de,
         "Maïs grain"@fr,
@@ -174,7 +174,7 @@ agis:508 a eCH-0265:DirectPaymentCrop ;
     skos:broader agis:1 ;
     eCH-0265:exactMatch cultivationtype:508 .
 
-agis:509 a eCH-0265:DirectPaymentCrop ;
+agis:509 a eCH-0265:AgisCrop ;
     schema:identifier "509" ;
     schema:name "Reis"@de,
         "Riz"@fr,
@@ -185,7 +185,7 @@ agis:509 a eCH-0265:DirectPaymentCrop ;
     skos:broader agis:1 ;
     eCH-0265:exactMatch cultivationtype:509 .
 
-agis:510 a eCH-0265:DirectPaymentCrop ;
+agis:510 a eCH-0265:AgisCrop ;
     schema:identifier "510" ;
     schema:name "Hartweizen"@de,
         "Blé dur"@fr,
@@ -195,7 +195,7 @@ agis:510 a eCH-0265:DirectPaymentCrop ;
     skos:broader agis:1 ;
     eCH-0265:exactMatch cultivationtype:510 .
 
-agis:511 a eCH-0265:DirectPaymentCrop ;
+agis:511 a eCH-0265:AgisCrop ;
     schema:identifier "511" ;
     schema:name "Emmer, Einkorn"@de,
         "Amidonnier, engrain"@fr,
@@ -205,7 +205,7 @@ agis:511 a eCH-0265:DirectPaymentCrop ;
     skos:broader agis:1 ;
     eCH-0265:exactMatch cultivationtype:511 .
 
-agis:512 a eCH-0265:DirectPaymentCrop ;
+agis:512 a eCH-0265:AgisCrop ;
     schema:identifier "512" ;
     schema:name "Sommerweizen (ohne Futterweizen der Sortenliste swiss granum)"@de,
         "Blé de printemps (sans le blé fourrager de la liste swiss granum)"@fr,
@@ -215,7 +215,7 @@ agis:512 a eCH-0265:DirectPaymentCrop ;
     skos:broader agis:1 ;
     eCH-0265:exactMatch cultivationtype:512 .
 
-agis:513 a eCH-0265:DirectPaymentCrop ;
+agis:513 a eCH-0265:AgisCrop ;
     schema:identifier "513" ;
     schema:name "Winterweizen (ohne Futterweizen der Sortenliste swiss granum)"@de,
         "Blé d'automne (sans le blé fourrager de la liste swiss granum)"@fr,
@@ -225,7 +225,7 @@ agis:513 a eCH-0265:DirectPaymentCrop ;
     skos:broader agis:1 ;
     eCH-0265:exactMatch cultivationtype:513 .
 
-agis:514 a eCH-0265:DirectPaymentCrop ;
+agis:514 a eCH-0265:AgisCrop ;
     schema:identifier "514" ;
     schema:name "Roggen"@de,
         "Seigle"@fr,
@@ -235,7 +235,7 @@ agis:514 a eCH-0265:DirectPaymentCrop ;
     skos:broader agis:1 ;
     eCH-0265:exactMatch cultivationtype:514 .
 
-agis:515 a eCH-0265:DirectPaymentCrop ;
+agis:515 a eCH-0265:AgisCrop ;
     schema:identifier "515" ;
     schema:name "Mischel Brotgetreide"@de,
         "Méteil de céréales panifiables"@fr,
@@ -245,7 +245,7 @@ agis:515 a eCH-0265:DirectPaymentCrop ;
     skos:broader agis:1 ;
     eCH-0265:exactMatch cultivationtype:515 .
 
-agis:516 a eCH-0265:DirectPaymentCrop ;
+agis:516 a eCH-0265:AgisCrop ;
     schema:identifier "516" ;
     schema:name "Dinkel"@de,
         "Epeautre"@fr,
@@ -255,7 +255,7 @@ agis:516 a eCH-0265:DirectPaymentCrop ;
     skos:broader agis:1 ;
     eCH-0265:exactMatch cultivationtype:516 .
 
-agis:517 a eCH-0265:DirectPaymentCrop ;
+agis:517 a eCH-0265:AgisCrop ;
     schema:identifier "517" ;
     schema:name "Getreide für die Saatgutproduktion"@de,
         "Semences de céréales"@fr,
@@ -266,7 +266,7 @@ agis:517 a eCH-0265:DirectPaymentCrop ;
     skos:broader agis:1 ;
     eCH-0265:exactMatch cultivationtype:517 .
 
-agis:519 a eCH-0265:DirectPaymentCrop ;
+agis:519 a eCH-0265:AgisCrop ;
     schema:identifier "519" ;
     schema:name "Saatmais (Vertragsanbau)"@de,
         "Semences de maïs (contrat de culture)"@fr,
@@ -276,7 +276,7 @@ agis:519 a eCH-0265:DirectPaymentCrop ;
     skos:broader agis:1 ;
     eCH-0265:exactMatch cultivationtype:519 .
 
-agis:520 a eCH-0265:DirectPaymentCrop ;
+agis:520 a eCH-0265:AgisCrop ;
     schema:identifier "520" ;
     schema:name "Trockenreis"@de,
         "Riz en culture sèche"@fr,
@@ -286,7 +286,7 @@ agis:520 a eCH-0265:DirectPaymentCrop ;
     skos:broader agis:1 ;
     eCH-0265:exactMatch cultivationtype:520 .
 
-agis:521 a eCH-0265:DirectPaymentCrop ;
+agis:521 a eCH-0265:AgisCrop ;
     schema:identifier "521" ;
     schema:name "Silo- und Grünmais"@de,
         "Maïs d'ensilage et maïs vert"@fr,
@@ -296,7 +296,7 @@ agis:521 a eCH-0265:DirectPaymentCrop ;
     skos:broader agis:1 ;
     eCH-0265:exactMatch cultivationtype:521 .
 
-agis:522 a eCH-0265:DirectPaymentCrop ;
+agis:522 a eCH-0265:AgisCrop ;
     schema:identifier "522" ;
     schema:name "Zuckerrüben"@de,
         "Betteraves sucrières"@fr,
@@ -306,7 +306,7 @@ agis:522 a eCH-0265:DirectPaymentCrop ;
     skos:broader agis:1 ;
     eCH-0265:exactMatch cultivationtype:522 .
 
-agis:523 a eCH-0265:DirectPaymentCrop ;
+agis:523 a eCH-0265:AgisCrop ;
     schema:identifier "523" ;
     schema:name "Futterrüben"@de,
         "Betteraves fourragères"@fr,
@@ -316,7 +316,7 @@ agis:523 a eCH-0265:DirectPaymentCrop ;
     skos:broader agis:1 ;
     eCH-0265:exactMatch cultivationtype:523 .
 
-agis:524 a eCH-0265:DirectPaymentCrop ;
+agis:524 a eCH-0265:AgisCrop ;
     schema:identifier "524" ;
     schema:name "Kartoffeln"@de,
         "Pommes de terre"@fr,
@@ -326,7 +326,7 @@ agis:524 a eCH-0265:DirectPaymentCrop ;
     skos:broader agis:1 ;
     eCH-0265:exactMatch cultivationtype:524 .
 
-agis:525 a eCH-0265:DirectPaymentCrop ;
+agis:525 a eCH-0265:AgisCrop ;
     schema:identifier "525" ;
     schema:name "Pflanzkartoffeln (Vertragsanbau)"@de,
         "Plants de pommes de terre (contrat de culture)"@fr,
@@ -336,7 +336,7 @@ agis:525 a eCH-0265:DirectPaymentCrop ;
     skos:broader agis:1 ;
     eCH-0265:exactMatch cultivationtype:525 .
 
-agis:526 a eCH-0265:DirectPaymentCrop ;
+agis:526 a eCH-0265:AgisCrop ;
     schema:identifier "526" ;
     schema:name "Sommerraps zur Speiseölgewinnung"@de,
         "Colza de printemps destiné à la fabrication d'huile comestible"@fr,
@@ -346,7 +346,7 @@ agis:526 a eCH-0265:DirectPaymentCrop ;
     skos:broader agis:1 ;
     eCH-0265:exactMatch cultivationtype:526 .
 
-agis:527 a eCH-0265:DirectPaymentCrop ;
+agis:527 a eCH-0265:AgisCrop ;
     schema:identifier "527" ;
     schema:name "Winterraps zur Speiseölgewinnung"@de,
         "Colza d'automne destiné à la fabrication d'huile comestible"@fr,
@@ -356,7 +356,7 @@ agis:527 a eCH-0265:DirectPaymentCrop ;
     skos:broader agis:1 ;
     eCH-0265:exactMatch cultivationtype:527 .
 
-agis:528 a eCH-0265:DirectPaymentCrop ;
+agis:528 a eCH-0265:AgisCrop ;
     schema:identifier "528" ;
     schema:name "Soja"@de,
         "Soja"@fr,
@@ -366,7 +366,7 @@ agis:528 a eCH-0265:DirectPaymentCrop ;
     skos:broader agis:1 ;
     eCH-0265:exactMatch cultivationtype:528 .
 
-agis:529 a eCH-0265:DirectPaymentCrop ;
+agis:529 a eCH-0265:AgisCrop ;
     schema:identifier "529" ;
     schema:name "Nassreis"@de,
         "Riz en culture humide"@fr,
@@ -376,7 +376,7 @@ agis:529 a eCH-0265:DirectPaymentCrop ;
     skos:broader agis:1 ;
     eCH-0265:exactMatch cultivationtype:529 .
 
-agis:531 a eCH-0265:DirectPaymentCrop ;
+agis:531 a eCH-0265:AgisCrop ;
     schema:identifier "531" ;
     schema:name "Sonnenblumen zur Speiseölgewinnung"@de,
         "Tournesol destiné à la fabrication d'huile comestible"@fr,
@@ -386,7 +386,7 @@ agis:531 a eCH-0265:DirectPaymentCrop ;
     skos:broader agis:1 ;
     eCH-0265:exactMatch cultivationtype:531 .
 
-agis:532 a eCH-0265:DirectPaymentCrop ;
+agis:532 a eCH-0265:AgisCrop ;
     schema:identifier "532" ;
     schema:name "Hanf (THC-arme Sorten nach BLW-Sortenliste)"@de,
         "Chanvre (sorte pauvre en THC selon liste OFAG)"@fr,
@@ -397,7 +397,7 @@ agis:532 a eCH-0265:DirectPaymentCrop ;
     skos:broader agis:1 ;
     eCH-0265:exactMatch cultivationtype:532 .
 
-agis:533 a eCH-0265:DirectPaymentCrop ;
+agis:533 a eCH-0265:AgisCrop ;
     schema:identifier "533" ;
     schema:name "Hanf (andere Sorten)"@de,
         "Chanvre (autres variétés)"@fr,
@@ -408,7 +408,7 @@ agis:533 a eCH-0265:DirectPaymentCrop ;
     skos:broader agis:1 ;
     eCH-0265:exactMatch cultivationtype:533 .
 
-agis:534 a eCH-0265:DirectPaymentCrop ;
+agis:534 a eCH-0265:AgisCrop ;
     schema:identifier "534" ;
     schema:name "Lein"@de,
         "Lin"@fr,
@@ -418,7 +418,7 @@ agis:534 a eCH-0265:DirectPaymentCrop ;
     skos:broader agis:1 ;
     eCH-0265:exactMatch cultivationtype:534 .
 
-agis:535 a eCH-0265:DirectPaymentCrop ;
+agis:535 a eCH-0265:AgisCrop ;
     schema:identifier "535" ;
     schema:name "Hanf (nur Sorten nach BLW- und EU-Sortenkatalog)"@de,
         "Chanvre (uniquement variétés selon catalogue OFAG et UE)"@fr,
@@ -429,7 +429,7 @@ agis:535 a eCH-0265:DirectPaymentCrop ;
     skos:broader agis:1 ;
     eCH-0265:exactMatch cultivationtype:535 .
 
-agis:536 a eCH-0265:DirectPaymentCrop ;
+agis:536 a eCH-0265:AgisCrop ;
     schema:identifier "536" ;
     schema:name "Bohnen und Wicken zur Körnergewinnung (z.B. Ackerbohnen)"@de,
         "Haricots et vesces en grains (p.ex. féveroles)"@fr,
@@ -439,7 +439,7 @@ agis:536 a eCH-0265:DirectPaymentCrop ;
     skos:broader agis:1 ;
     eCH-0265:exactMatch cultivationtype:536 .
 
-agis:537 a eCH-0265:DirectPaymentCrop ;
+agis:537 a eCH-0265:AgisCrop ;
     schema:identifier "537" ;
     schema:name "Erbsen zur Körnergewinnung (z.B. Eiweisserbsen)"@de,
         "Pois en grains (p.ex. pois protéagineux)"@fr,
@@ -449,7 +449,7 @@ agis:537 a eCH-0265:DirectPaymentCrop ;
     skos:broader agis:1 ;
     eCH-0265:exactMatch cultivationtype:537 .
 
-agis:538 a eCH-0265:DirectPaymentCrop ;
+agis:538 a eCH-0265:AgisCrop ;
     schema:identifier "538" ;
     schema:name "Lupinen"@de,
         "Lupin"@fr,
@@ -459,7 +459,7 @@ agis:538 a eCH-0265:DirectPaymentCrop ;
     skos:broader agis:1 ;
     eCH-0265:exactMatch cultivationtype:538 .
 
-agis:539 a eCH-0265:DirectPaymentCrop ;
+agis:539 a eCH-0265:AgisCrop ;
     schema:identifier "539" ;
     schema:name "Oelkürbisse"@de,
         "Courges à huile"@fr,
@@ -469,7 +469,7 @@ agis:539 a eCH-0265:DirectPaymentCrop ;
     skos:broader agis:1 ;
     eCH-0265:exactMatch cultivationtype:539 .
 
-agis:540 a eCH-0265:DirectPaymentCrop ;
+agis:540 a eCH-0265:AgisCrop ;
     schema:identifier "540" ;
     schema:name "Kichererbsen"@de,
         "Pois chiches"@fr,
@@ -479,7 +479,7 @@ agis:540 a eCH-0265:DirectPaymentCrop ;
     skos:broader agis:1 ;
     eCH-0265:exactMatch cultivationtype:540 .
 
-agis:541 a eCH-0265:DirectPaymentCrop ;
+agis:541 a eCH-0265:AgisCrop ;
     schema:identifier "541" ;
     schema:name "Tabak"@de,
         "Tabac"@fr,
@@ -489,7 +489,7 @@ agis:541 a eCH-0265:DirectPaymentCrop ;
     skos:broader agis:1 ;
     eCH-0265:exactMatch cultivationtype:541 .
 
-agis:542 a eCH-0265:DirectPaymentCrop ;
+agis:542 a eCH-0265:AgisCrop ;
     schema:identifier "542" ;
     schema:name "Hirse"@de,
         "Millet"@fr,
@@ -500,7 +500,7 @@ agis:542 a eCH-0265:DirectPaymentCrop ;
     skos:broader agis:1 ;
     eCH-0265:exactMatch cultivationtype:542 .
 
-agis:543 a eCH-0265:DirectPaymentCrop ;
+agis:543 a eCH-0265:AgisCrop ;
     schema:identifier "543" ;
     schema:name "Getreide siliert"@de,
         "Céréales ensilées"@fr,
@@ -510,7 +510,7 @@ agis:543 a eCH-0265:DirectPaymentCrop ;
     skos:broader agis:1 ;
     eCH-0265:exactMatch cultivationtype:543 .
 
-agis:544 a eCH-0265:DirectPaymentCrop ;
+agis:544 a eCH-0265:AgisCrop ;
     schema:identifier "544" ;
     schema:name "Leindotter"@de,
         "Cameline"@fr,
@@ -520,7 +520,7 @@ agis:544 a eCH-0265:DirectPaymentCrop ;
     skos:broader agis:1 ;
     eCH-0265:exactMatch cultivationtype:544 .
 
-agis:545 a eCH-0265:DirectPaymentCrop ;
+agis:545 a eCH-0265:AgisCrop ;
     schema:identifier "545" ;
     schema:name "Einjährige Freilandgemüse (ohne Konservengemüse)"@de,
         "Cultures maraîchères de plein champ annuelles (sans les légumes de conserve)"@fr,
@@ -530,7 +530,7 @@ agis:545 a eCH-0265:DirectPaymentCrop ;
     skos:broader agis:1 ;
     eCH-0265:exactMatch cultivationtype:545 .
 
-agis:546 a eCH-0265:DirectPaymentCrop ;
+agis:546 a eCH-0265:AgisCrop ;
     schema:identifier "546" ;
     schema:name "Freiland-Konservengemüse"@de,
         "Légumes de conserve cultivés en plein champ"@fr,
@@ -540,7 +540,7 @@ agis:546 a eCH-0265:DirectPaymentCrop ;
     skos:broader agis:1 ;
     eCH-0265:exactMatch cultivationtype:546 .
 
-agis:547 a eCH-0265:DirectPaymentCrop ;
+agis:547 a eCH-0265:AgisCrop ;
     schema:identifier "547" ;
     schema:name "Wurzeln der Treibzichorie"@de,
         "Racines de chicorée"@fr,
@@ -550,7 +550,7 @@ agis:547 a eCH-0265:DirectPaymentCrop ;
     skos:broader agis:1 ;
     eCH-0265:exactMatch cultivationtype:547 .
 
-agis:548 a eCH-0265:DirectPaymentCrop ;
+agis:548 a eCH-0265:AgisCrop ;
     schema:identifier "548" ;
     schema:name "Buchweizen"@de,
         "Sarrasin"@fr,
@@ -560,7 +560,7 @@ agis:548 a eCH-0265:DirectPaymentCrop ;
     skos:broader agis:1 ;
     eCH-0265:exactMatch cultivationtype:548 .
 
-agis:549 a eCH-0265:DirectPaymentCrop ;
+agis:549 a eCH-0265:AgisCrop ;
     schema:identifier "549" ;
     schema:name "Sorghum"@de,
         "Sorgho"@fr,
@@ -571,7 +571,7 @@ agis:549 a eCH-0265:DirectPaymentCrop ;
     skos:broader agis:1 ;
     eCH-0265:exactMatch cultivationtype:549 .
 
-agis:551 a eCH-0265:DirectPaymentCrop ;
+agis:551 a eCH-0265:AgisCrop ;
     schema:identifier "551" ;
     schema:name "Einjährige Beeren (z.B. Erdbeeren)"@de,
         "Baies annuelles (p.ex. fraises)"@fr,
@@ -581,7 +581,7 @@ agis:551 a eCH-0265:DirectPaymentCrop ;
     skos:broader agis:1 ;
     eCH-0265:exactMatch cultivationtype:551 .
 
-agis:552 a eCH-0265:DirectPaymentCrop ;
+agis:552 a eCH-0265:AgisCrop ;
     schema:identifier "552" ;
     schema:name "Einjährige nachwachsende Rohstoffe (Kenaf, usw.)"@de,
         "Matières premières renouvelables annuelles (kénaf, etc.)"@fr,
@@ -591,7 +591,7 @@ agis:552 a eCH-0265:DirectPaymentCrop ;
     skos:broader agis:1 ;
     eCH-0265:exactMatch cultivationtype:552 .
 
-agis:553 a eCH-0265:DirectPaymentCrop ;
+agis:553 a eCH-0265:AgisCrop ;
     schema:identifier "553" ;
     schema:name "Einjährige Gewürz- und Medizinalpflanzen"@de,
         "Plantes aromatiques et plantes médicinales annuelles"@fr,
@@ -601,7 +601,7 @@ agis:553 a eCH-0265:DirectPaymentCrop ;
     skos:broader agis:1 ;
     eCH-0265:exactMatch cultivationtype:553 .
 
-agis:554 a eCH-0265:DirectPaymentCrop ;
+agis:554 a eCH-0265:AgisCrop ;
     schema:identifier "554" ;
     schema:name "Einjährige gärtnerische Freilandkulturen (Blumen, Rollrasen, usw.)"@de,
         "Cultures horticoles de plein champ annuelles (p.ex. fleurs, gazon en rouleaux)"@fr,
@@ -611,7 +611,7 @@ agis:554 a eCH-0265:DirectPaymentCrop ;
     skos:broader agis:1 ;
     eCH-0265:exactMatch cultivationtype:554 .
 
-agis:555 a eCH-0265:DirectPaymentCrop ;
+agis:555 a eCH-0265:AgisCrop ;
     schema:identifier "555" ;
     schema:name "Ackerschonstreifen"@de,
         "Bande culturale extensive"@fr,
@@ -622,7 +622,7 @@ agis:555 a eCH-0265:DirectPaymentCrop ;
     skos:broader agis:1 ;
     eCH-0265:exactMatch cultivationtype:555 .
 
-agis:556 a eCH-0265:DirectPaymentCrop ;
+agis:556 a eCH-0265:AgisCrop ;
     schema:identifier "556" ;
     schema:name "Buntbrache"@de,
         "Jachère florale"@fr,
@@ -632,7 +632,7 @@ agis:556 a eCH-0265:DirectPaymentCrop ;
     skos:broader agis:1 ;
     eCH-0265:exactMatch cultivationtype:556 .
 
-agis:557 a eCH-0265:DirectPaymentCrop ;
+agis:557 a eCH-0265:AgisCrop ;
     schema:identifier "557" ;
     schema:name "Rotationsbrache"@de,
         "Jachère tournante"@fr,
@@ -642,7 +642,7 @@ agis:557 a eCH-0265:DirectPaymentCrop ;
     skos:broader agis:1 ;
     eCH-0265:exactMatch cultivationtype:557 .
 
-agis:558 a eCH-0265:DirectPaymentCrop ;
+agis:558 a eCH-0265:AgisCrop ;
     schema:identifier "558" ;
     schema:name "Grünbrache (nur 1999)"@de,
         "Jachères vertes (uniquement en 1999)"@fr,
@@ -653,7 +653,7 @@ agis:558 a eCH-0265:DirectPaymentCrop ;
     skos:broader agis:1 ;
     eCH-0265:exactMatch cultivationtype:558 .
 
-agis:559 a eCH-0265:DirectPaymentCrop ;
+agis:559 a eCH-0265:AgisCrop ;
     schema:identifier "559" ;
     schema:name "Saum auf Ackerfläche"@de,
         "Ourlet sur terres assolées"@fr,
@@ -663,7 +663,7 @@ agis:559 a eCH-0265:DirectPaymentCrop ;
     skos:broader agis:1 ;
     eCH-0265:exactMatch cultivationtype:559 .
 
-agis:561 a eCH-0265:DirectPaymentCrop ;
+agis:561 a eCH-0265:AgisCrop ;
     schema:identifier "561" ;
     schema:name "Rübsen für die Samenproduktion (Vertragsanbau)"@de,
         "Navets destinés à la production de semences (contrat de culture)"@fr,
@@ -674,7 +674,7 @@ agis:561 a eCH-0265:DirectPaymentCrop ;
     skos:broader agis:1 ;
     eCH-0265:exactMatch cultivationtype:561 .
 
-agis:562 a eCH-0265:DirectPaymentCrop ;
+agis:562 a eCH-0265:AgisCrop ;
     schema:identifier "562" ;
     schema:name "Phacelia für die Samenproduktion (Vertragsanbau)"@de,
         "Phacelia destinée à la production de semences (contrat de culture)"@fr,
@@ -685,7 +685,7 @@ agis:562 a eCH-0265:DirectPaymentCrop ;
     skos:broader agis:1 ;
     eCH-0265:exactMatch cultivationtype:562 .
 
-agis:563 a eCH-0265:DirectPaymentCrop ;
+agis:563 a eCH-0265:AgisCrop ;
     schema:identifier "563" ;
     schema:name "Übrige Kulturen für die Samenproduktion (Vertragsanbau)"@de,
         "Autres cultures destinées à la production de semences (contrat de culture)"@fr,
@@ -696,7 +696,7 @@ agis:563 a eCH-0265:DirectPaymentCrop ;
     skos:broader agis:1 ;
     eCH-0265:exactMatch cultivationtype:563 .
 
-agis:564 a eCH-0265:DirectPaymentCrop ;
+agis:564 a eCH-0265:AgisCrop ;
     schema:identifier "564" ;
     schema:name "Ackerschonstreifen Ölsaaten (Raps, Sonnenblumen, Lein)"@de,
         "Bande culturale extensive Oléagineux (colza, tournesols, lin)"@fr,
@@ -707,7 +707,7 @@ agis:564 a eCH-0265:DirectPaymentCrop ;
     skos:broader agis:1 ;
     eCH-0265:exactMatch cultivationtype:564 .
 
-agis:565 a eCH-0265:DirectPaymentCrop ;
+agis:565 a eCH-0265:AgisCrop ;
     schema:identifier "565" ;
     schema:name "Ackerschonstreifen Getreide"@de,
         "Bande culturale extensive céréales"@fr,
@@ -718,7 +718,7 @@ agis:565 a eCH-0265:DirectPaymentCrop ;
     skos:broader agis:1 ;
     eCH-0265:exactMatch cultivationtype:565 .
 
-agis:566 a eCH-0265:DirectPaymentCrop ;
+agis:566 a eCH-0265:AgisCrop ;
     schema:identifier "566" ;
     schema:name "Mohn"@de,
         "Pavot"@fr,
@@ -728,7 +728,7 @@ agis:566 a eCH-0265:DirectPaymentCrop ;
     skos:broader agis:1 ;
     eCH-0265:exactMatch cultivationtype:566 .
 
-agis:567 a eCH-0265:DirectPaymentCrop ;
+agis:567 a eCH-0265:AgisCrop ;
     schema:identifier "567" ;
     schema:name "Saflor"@de,
         "Carthame"@fr,
@@ -738,7 +738,7 @@ agis:567 a eCH-0265:DirectPaymentCrop ;
     skos:broader agis:1 ;
     eCH-0265:exactMatch cultivationtype:567 .
 
-agis:568 a eCH-0265:DirectPaymentCrop ;
+agis:568 a eCH-0265:AgisCrop ;
     schema:identifier "568" ;
     schema:name "Linsen"@de,
         "Lentilles"@fr,
@@ -748,7 +748,7 @@ agis:568 a eCH-0265:DirectPaymentCrop ;
     skos:broader agis:1 ;
     eCH-0265:exactMatch cultivationtype:568 .
 
-agis:569 a eCH-0265:DirectPaymentCrop ;
+agis:569 a eCH-0265:AgisCrop ;
     schema:identifier "569" ;
     schema:name "Mischungen von Bohnen, Wicken, Erbsen, Kichererbsen und Lupinen mit Getreide oder Leindotter, mindestens 30 % Anteil Leguminosen bei der Ernte (zur Körnergewinnung)"@de,
         "Méteil de haricots, de vesces, de pois, de pois chiches et de lupins avec des céréales ou de la caméline, au moins 30 % de légumineuses lors de la récolte (pour la production de grains)"@fr,
@@ -758,7 +758,7 @@ agis:569 a eCH-0265:DirectPaymentCrop ;
     skos:broader agis:1 ;
     eCH-0265:exactMatch cultivationtype:569 .
 
-agis:570 a eCH-0265:DirectPaymentCrop ;
+agis:570 a eCH-0265:AgisCrop ;
     schema:identifier "570" ;
     schema:name "Mischungen von Linsen mit Getreide oder Leindotter, mindestens 30 % Anteil Linsen bei der Ernte (zur Körnergewinnung)"@de,
         "Méteil de lentilles avec des céréales ou de la caméline, au moins 30 % de lentilles lors de la récolte (pour la production de grains)"@fr,
@@ -768,7 +768,7 @@ agis:570 a eCH-0265:DirectPaymentCrop ;
     skos:broader agis:1 ;
     eCH-0265:exactMatch cultivationtype:570 .
 
-agis:571 a eCH-0265:DirectPaymentCrop ;
+agis:571 a eCH-0265:AgisCrop ;
     schema:identifier "571" ;
     schema:name "Ackerschonstreifen Körnerleguminosen (Ackerbohnen, Eiweisserbsen, Lupinen und Mischungen mit Code 569)"@de,
         "Bande culturale extensive Légumineuses (féveroles, pois protéagineux, lupins et méteils du code 569)"@fr,
@@ -779,7 +779,7 @@ agis:571 a eCH-0265:DirectPaymentCrop ;
     skos:broader agis:1 ;
     eCH-0265:exactMatch cultivationtype:571 .
 
-agis:572 a eCH-0265:DirectPaymentCrop ;
+agis:572 a eCH-0265:AgisCrop ;
     schema:identifier "572" ;
     schema:name "Nützlingsstreifen auf offener Ackerfläche"@de,
         "Bandes semées pour organismes utiles dans les terres ouvertes"@fr,
@@ -789,7 +789,7 @@ agis:572 a eCH-0265:DirectPaymentCrop ;
     skos:broader agis:1 ;
     eCH-0265:exactMatch cultivationtype:572 .
 
-agis:573 a eCH-0265:DirectPaymentCrop ;
+agis:573 a eCH-0265:AgisCrop ;
     schema:identifier "573" ;
     schema:name "Senf"@de,
         "Moutarde"@fr,
@@ -799,7 +799,7 @@ agis:573 a eCH-0265:DirectPaymentCrop ;
     skos:broader agis:1 ;
     eCH-0265:exactMatch cultivationtype:573 .
 
-agis:574 a eCH-0265:DirectPaymentCrop ;
+agis:574 a eCH-0265:AgisCrop ;
     schema:identifier "574" ;
     schema:name "Quinoa"@de,
         "Quinoa"@fr,
@@ -809,7 +809,7 @@ agis:574 a eCH-0265:DirectPaymentCrop ;
     skos:broader agis:1 ;
     eCH-0265:exactMatch cultivationtype:574 .
 
-agis:575 a eCH-0265:DirectPaymentCrop ;
+agis:575 a eCH-0265:AgisCrop ;
     schema:identifier "575" ;
     schema:name "Hanf zur Nutzung der Samen"@de,
         "Chanvre pour l'utilisation des graines"@fr,
@@ -819,7 +819,7 @@ agis:575 a eCH-0265:DirectPaymentCrop ;
     skos:broader agis:1 ;
     eCH-0265:exactMatch cultivationtype:575 .
 
-agis:576 a eCH-0265:DirectPaymentCrop ;
+agis:576 a eCH-0265:AgisCrop ;
     schema:identifier "576" ;
     schema:name "Hanf zur Fasernutzung"@de,
         "Chanvre pour l'utilisation des fibres"@fr,
@@ -829,7 +829,7 @@ agis:576 a eCH-0265:DirectPaymentCrop ;
     skos:broader agis:1 ;
     eCH-0265:exactMatch cultivationtype:576 .
 
-agis:577 a eCH-0265:DirectPaymentCrop ;
+agis:577 a eCH-0265:AgisCrop ;
     schema:identifier "577" ;
     schema:name "Anderer Hanf"@de,
         "Autre chanvre"@fr,
@@ -839,7 +839,7 @@ agis:577 a eCH-0265:DirectPaymentCrop ;
     skos:broader agis:1 ;
     eCH-0265:exactMatch cultivationtype:577 .
 
-agis:578 a eCH-0265:DirectPaymentCrop ;
+agis:578 a eCH-0265:AgisCrop ;
     schema:identifier "578" ;
     schema:name "Hirse zur Körnergewinnung"@de,
         "Millet grains"@fr,
@@ -849,7 +849,7 @@ agis:578 a eCH-0265:DirectPaymentCrop ;
     skos:broader agis:1 ;
     eCH-0265:exactMatch cultivationtype:578 .
 
-agis:579 a eCH-0265:DirectPaymentCrop ;
+agis:579 a eCH-0265:AgisCrop ;
     schema:identifier "579" ;
     schema:name "Hirse zur Nutzung ganze Pflanze"@de,
         "Millet plante entière"@fr,
@@ -859,7 +859,7 @@ agis:579 a eCH-0265:DirectPaymentCrop ;
     skos:broader agis:1 ;
     eCH-0265:exactMatch cultivationtype:579 .
 
-agis:580 a eCH-0265:DirectPaymentCrop ;
+agis:580 a eCH-0265:AgisCrop ;
     schema:identifier "580" ;
     schema:name "Sorghum zur Körnergewinnung"@de,
         "Sorgho grains"@fr,
@@ -869,7 +869,7 @@ agis:580 a eCH-0265:DirectPaymentCrop ;
     skos:broader agis:1 ;
     eCH-0265:exactMatch cultivationtype:580 .
 
-agis:581 a eCH-0265:DirectPaymentCrop ;
+agis:581 a eCH-0265:AgisCrop ;
     schema:identifier "581" ;
     schema:name "Sorghum zur Nutzung ganze Pflanze"@de,
         "Sorgho plante entière"@fr,
@@ -879,7 +879,7 @@ agis:581 a eCH-0265:DirectPaymentCrop ;
     skos:broader agis:1 ;
     eCH-0265:exactMatch cultivationtype:581 .
 
-agis:590 a eCH-0265:DirectPaymentCrop ;
+agis:590 a eCH-0265:AgisCrop ;
     schema:identifier "590" ;
     schema:name "Sommerraps als nachwachsender Rohstoff"@de,
         "Colza de printemps comme matière première renouvelable"@fr,
@@ -889,7 +889,7 @@ agis:590 a eCH-0265:DirectPaymentCrop ;
     skos:broader agis:1 ;
     eCH-0265:exactMatch cultivationtype:590 .
 
-agis:591 a eCH-0265:DirectPaymentCrop ;
+agis:591 a eCH-0265:AgisCrop ;
     schema:identifier "591" ;
     schema:name "Winterraps als nachwachsender Rohstoff"@de,
         "Colza d'automne comme matière première renouvelable"@fr,
@@ -899,7 +899,7 @@ agis:591 a eCH-0265:DirectPaymentCrop ;
     skos:broader agis:1 ;
     eCH-0265:exactMatch cultivationtype:591 .
 
-agis:592 a eCH-0265:DirectPaymentCrop ;
+agis:592 a eCH-0265:AgisCrop ;
     schema:identifier "592" ;
     schema:name "Sonnenblumen als nachwachsender Rohstoff"@de,
         "Tournesol comme matière première renouvelable"@fr,
@@ -909,7 +909,7 @@ agis:592 a eCH-0265:DirectPaymentCrop ;
     skos:broader agis:1 ;
     eCH-0265:exactMatch cultivationtype:592 .
 
-agis:594 a eCH-0265:DirectPaymentCrop ;
+agis:594 a eCH-0265:AgisCrop ;
     schema:identifier "594" ;
     schema:name "Offene Ackerfläche, beitragsberechtigt (regionsspezifische Biodiversitätsförderfläche)"@de,
         "Terres ouvertes donnant droit aux contributions (surfaces de promotion de la biodiversité spécifiques à la région)"@fr,
@@ -919,7 +919,7 @@ agis:594 a eCH-0265:DirectPaymentCrop ;
     skos:broader agis:1 ;
     eCH-0265:exactMatch cultivationtype:594 .
 
-agis:595 a eCH-0265:DirectPaymentCrop ;
+agis:595 a eCH-0265:AgisCrop ;
     schema:identifier "595" ;
     schema:name "Übrige offene Ackerfläche, nicht beitragsberechtigt (regionsspezifische Biodiversitätsförderfläche)"@de,
         "Autres terres ouvertes ne donnant pas droit aux contributions (surfaces de promotion de la biodiversité spécifiques à la région)"@fr,
@@ -929,7 +929,7 @@ agis:595 a eCH-0265:DirectPaymentCrop ;
     skos:broader agis:1 ;
     eCH-0265:exactMatch cultivationtype:595 .
 
-agis:597 a eCH-0265:DirectPaymentCrop ;
+agis:597 a eCH-0265:AgisCrop ;
     schema:identifier "597" ;
     schema:name "Übrige offene Ackerfläche, beitragsberechtigt"@de,
         "Autres terres ouvertes donnant droit aux contributions"@fr,
@@ -939,7 +939,7 @@ agis:597 a eCH-0265:DirectPaymentCrop ;
     skos:broader agis:1 ;
     eCH-0265:exactMatch cultivationtype:597 .
 
-agis:598 a eCH-0265:DirectPaymentCrop ;
+agis:598 a eCH-0265:AgisCrop ;
     schema:identifier "598" ;
     schema:name "Übrige offene Ackerfläche, nicht beitragsberechtigt"@de,
         "Autres terres ouvertes ne donnant pas droit aux contributions"@fr,
@@ -949,7 +949,7 @@ agis:598 a eCH-0265:DirectPaymentCrop ;
     skos:broader agis:1 ;
     eCH-0265:exactMatch cultivationtype:598 .
 
-agis:601 a eCH-0265:DirectPaymentCrop ;
+agis:601 a eCH-0265:AgisCrop ;
     schema:identifier "601" ;
     schema:name "Kunstwiesen (ohne Weiden)"@de,
         "Prairies artificielles (sans les pâturages)"@fr,
@@ -959,7 +959,7 @@ agis:601 a eCH-0265:DirectPaymentCrop ;
     skos:broader agis:1 ;
     eCH-0265:exactMatch cultivationtype:601 .
 
-agis:602 a eCH-0265:DirectPaymentCrop ;
+agis:602 a eCH-0265:AgisCrop ;
     schema:identifier "602" ;
     schema:name "Übrige Kunstwiesen, beitragsberechtigt (z.B. Schweineweide, Geflügelweide)"@de,
         "Autres prairies artificielles donnant droit aux contributions (p.ex. pâturages pour porcs et volaille)"@fr,
@@ -969,7 +969,7 @@ agis:602 a eCH-0265:DirectPaymentCrop ;
     skos:broader agis:1 ;
     eCH-0265:exactMatch cultivationtype:602 .
 
-agis:611 a eCH-0265:DirectPaymentCrop ;
+agis:611 a eCH-0265:AgisCrop ;
     schema:identifier "611" ;
     schema:name "Extensiv genutzte Wiesen (ohne Weiden)"@de,
         "Prairies extensives (sans les pâturages)"@fr,
@@ -979,7 +979,7 @@ agis:611 a eCH-0265:DirectPaymentCrop ;
     skos:broader agis:21 ;
     eCH-0265:exactMatch cultivationtype:611 .
 
-agis:612 a eCH-0265:DirectPaymentCrop ;
+agis:612 a eCH-0265:AgisCrop ;
     schema:identifier "612" ;
     schema:name "Wenig intensiv genutzte Wiesen (ohne Weiden)"@de,
         "Prairies peu intensives (sans les pâturages)"@fr,
@@ -989,7 +989,7 @@ agis:612 a eCH-0265:DirectPaymentCrop ;
     skos:broader agis:21 ;
     eCH-0265:exactMatch cultivationtype:612 .
 
-agis:613 a eCH-0265:DirectPaymentCrop ;
+agis:613 a eCH-0265:AgisCrop ;
     schema:identifier "613" ;
     schema:name "Übrige Dauerwiesen (ohne Weiden)"@de,
         "Autres prairies permanentes (sans les pâturages)"@fr,
@@ -999,7 +999,7 @@ agis:613 a eCH-0265:DirectPaymentCrop ;
     skos:broader agis:21 ;
     eCH-0265:exactMatch cultivationtype:613 .
 
-agis:616 a eCH-0265:DirectPaymentCrop ;
+agis:616 a eCH-0265:AgisCrop ;
     schema:identifier "616" ;
     schema:name "Weiden (Heimweiden, übrige Weiden ohne Sömmerungsweiden)"@de,
         "Pâturages (pâturages attenants à la ferme, autres pâturages, sauf les pâturages d'estivage)"@fr,
@@ -1009,7 +1009,7 @@ agis:616 a eCH-0265:DirectPaymentCrop ;
     skos:broader agis:21 ;
     eCH-0265:exactMatch cultivationtype:616 .
 
-agis:617 a eCH-0265:DirectPaymentCrop ;
+agis:617 a eCH-0265:AgisCrop ;
     schema:identifier "617" ;
     schema:name "Extensiv genutzte Weiden"@de,
         "Pâturages extensifs"@fr,
@@ -1019,7 +1019,7 @@ agis:617 a eCH-0265:DirectPaymentCrop ;
     skos:broader agis:21 ;
     eCH-0265:exactMatch cultivationtype:617 .
 
-agis:618 a eCH-0265:DirectPaymentCrop ;
+agis:618 a eCH-0265:AgisCrop ;
     schema:identifier "618" ;
     schema:name "Waldweiden (ohne bewaldete Fläche)"@de,
         "Pâturages boisés (sauf surfaces boisées)"@fr,
@@ -1029,7 +1029,7 @@ agis:618 a eCH-0265:DirectPaymentCrop ;
     skos:broader agis:21 ;
     eCH-0265:exactMatch cultivationtype:618 .
 
-agis:619 a eCH-0265:DirectPaymentCrop ;
+agis:619 a eCH-0265:AgisCrop ;
     schema:identifier "619" ;
     schema:name "Weiden für Schweine, nicht anrechenbar für die Berechnung der RGVE"@de,
         "Pâturages pour porcs, non imputables pour le calcul des UGBFG"@fr,
@@ -1040,7 +1040,7 @@ agis:619 a eCH-0265:DirectPaymentCrop ;
     skos:broader agis:21 ;
     eCH-0265:exactMatch cultivationtype:619 .
 
-agis:621 a eCH-0265:DirectPaymentCrop ;
+agis:621 a eCH-0265:AgisCrop ;
     schema:identifier "621" ;
     schema:name "Heuwiesen im Sömmerungsgebiet, Übrige Wiesen (keine BFF)"@de,
         "Prairies de fauche en région d'estivage, autres (pas de SPB)"@fr,
@@ -1050,7 +1050,7 @@ agis:621 a eCH-0265:DirectPaymentCrop ;
     skos:broader agis:21 ;
     eCH-0265:exactMatch cultivationtype:621 .
 
-agis:622 a eCH-0265:DirectPaymentCrop ;
+agis:622 a eCH-0265:AgisCrop ;
     schema:identifier "622" ;
     schema:name "Heuwiesen im Sömmerungsgebiet, Typ extensiv genutzte Wiese"@de,
         "Prairies de fauche en région d'estivage, type prairie extensive"@fr,
@@ -1060,7 +1060,7 @@ agis:622 a eCH-0265:DirectPaymentCrop ;
     skos:broader agis:21 ;
     eCH-0265:exactMatch cultivationtype:622 .
 
-agis:623 a eCH-0265:DirectPaymentCrop ;
+agis:623 a eCH-0265:AgisCrop ;
     schema:identifier "623" ;
     schema:name "Heuwiesen im Sömmerungsgebiet, Typ wenig intensiv genutzte Wiese"@de,
         "Prairies de fauche en région d'estivage, type prairie peu intensive"@fr,
@@ -1070,7 +1070,7 @@ agis:623 a eCH-0265:DirectPaymentCrop ;
     skos:broader agis:21 ;
     eCH-0265:exactMatch cultivationtype:623 .
 
-agis:625 a eCH-0265:DirectPaymentCrop ;
+agis:625 a eCH-0265:AgisCrop ;
     schema:identifier "625" ;
     schema:name "Waldweiden (ohne bewaldete Fläche)"@de,
         "Pâturages boisés (sauf surfaces boisées)"@fr,
@@ -1080,7 +1080,7 @@ agis:625 a eCH-0265:DirectPaymentCrop ;
     skos:broader agis:21 ;
     eCH-0265:exactMatch cultivationtype:625 .
 
-agis:631 a eCH-0265:DirectPaymentCrop ;
+agis:631 a eCH-0265:AgisCrop ;
     schema:identifier "631" ;
     schema:name "Futterleguminosen für die Samenproduktion (Vertragsanbau)"@de,
         "Légumineuses fourragères destinées à la production de semences (contrat de culture)"@fr,
@@ -1090,7 +1090,7 @@ agis:631 a eCH-0265:DirectPaymentCrop ;
     skos:broader agis:1 ;
     eCH-0265:exactMatch cultivationtype:631 .
 
-agis:632 a eCH-0265:DirectPaymentCrop ;
+agis:632 a eCH-0265:AgisCrop ;
     schema:identifier "632" ;
     schema:name "Futtergräser für die Samenproduktion (Vertragsanbau)"@de,
         "Graminées fourragères destinées à la production de semences (contrat de culture)"@fr,
@@ -1100,7 +1100,7 @@ agis:632 a eCH-0265:DirectPaymentCrop ;
     skos:broader agis:1 ;
     eCH-0265:exactMatch cultivationtype:632 .
 
-agis:633 a eCH-0265:DirectPaymentCrop ;
+agis:633 a eCH-0265:AgisCrop ;
     schema:identifier "633" ;
     schema:name "Übrige Futterpflanzen für die Samenproduktion (Vertragsanbau)"@de,
         "Autres plantes fourragères destinées à la production de semences (contrat de culture)"@fr,
@@ -1111,7 +1111,7 @@ agis:633 a eCH-0265:DirectPaymentCrop ;
     skos:broader agis:1 ;
     eCH-0265:exactMatch cultivationtype:633 .
 
-agis:634 a eCH-0265:DirectPaymentCrop ;
+agis:634 a eCH-0265:AgisCrop ;
     schema:identifier "634" ;
     schema:name "Uferwiese (ohne Weiden) entlang von Fliessgewässern"@de,
         "prairies riveraines d'un cours d'eau (sauf les pâturages)"@fr,
@@ -1122,7 +1122,7 @@ agis:634 a eCH-0265:DirectPaymentCrop ;
     skos:broader agis:21 ;
     eCH-0265:exactMatch cultivationtype:634 .
 
-agis:635 a eCH-0265:DirectPaymentCrop ;
+agis:635 a eCH-0265:AgisCrop ;
     schema:identifier "635" ;
     schema:name "Uferwiesen (ohne Weiden)"@de,
         "Prairies riveraines (sauf les pâturages)"@fr,
@@ -1132,7 +1132,7 @@ agis:635 a eCH-0265:DirectPaymentCrop ;
     skos:broader agis:21 ;
     eCH-0265:exactMatch cultivationtype:635 .
 
-agis:693 a eCH-0265:DirectPaymentCrop ;
+agis:693 a eCH-0265:AgisCrop ;
     schema:identifier "693" ;
     schema:name "Weiden (regionsspezifische Biodiversitätsförderfläche)"@de,
         "Pâturages (surfaces de promotion de la biodiversité spécifiques à la région)"@fr,
@@ -1142,7 +1142,7 @@ agis:693 a eCH-0265:DirectPaymentCrop ;
     skos:broader agis:21 ;
     eCH-0265:exactMatch cultivationtype:693 .
 
-agis:694 a eCH-0265:DirectPaymentCrop ;
+agis:694 a eCH-0265:AgisCrop ;
     schema:identifier "694" ;
     schema:name "Grünfläche ohne Weiden (regionsspezifische Biodiversitätsförderfläche)"@de,
         "Surfaces herbagère sans les pâturages (surfaces de promotion de la biodiversité spécifiques à la région)"@fr,
@@ -1152,7 +1152,7 @@ agis:694 a eCH-0265:DirectPaymentCrop ;
     skos:broader agis:21 ;
     eCH-0265:exactMatch cultivationtype:694 .
 
-agis:695 a eCH-0265:DirectPaymentCrop ;
+agis:695 a eCH-0265:AgisCrop ;
     schema:identifier "695" ;
     schema:name "Regionsspezifische Biodiversitätsförderfläche (Grünfläche)"@de,
         "Surfaces de promotion de la biodiversité spécifiques à la région (Surface herbagère)"@fr,
@@ -1163,7 +1163,7 @@ agis:695 a eCH-0265:DirectPaymentCrop ;
     skos:broader agis:21 ;
     eCH-0265:exactMatch cultivationtype:695 .
 
-agis:697 a eCH-0265:DirectPaymentCrop ;
+agis:697 a eCH-0265:AgisCrop ;
     schema:identifier "697" ;
     schema:name "Übrige Grünfläche (Dauergrünfläche), beitragsberechtigt"@de,
         "Autres surfaces herbagères (surface herbagère permanente) donnant droit aux contributions"@fr,
@@ -1173,7 +1173,7 @@ agis:697 a eCH-0265:DirectPaymentCrop ;
     skos:broader agis:21 ;
     eCH-0265:exactMatch cultivationtype:697 .
 
-agis:698 a eCH-0265:DirectPaymentCrop ;
+agis:698 a eCH-0265:AgisCrop ;
     schema:identifier "698" ;
     schema:name "Übrige Grünfläche (Dauergrünfläche), nicht beitragsberechtigt"@de,
         "Autres surfaces herbagères (surface herbagère permanente) ne donnant pas droit aux contributions"@fr,
@@ -1183,7 +1183,7 @@ agis:698 a eCH-0265:DirectPaymentCrop ;
     skos:broader agis:21 ;
     eCH-0265:exactMatch cultivationtype:698 .
 
-agis:701 a eCH-0265:DirectPaymentCrop ;
+agis:701 a eCH-0265:AgisCrop ;
     schema:identifier "701" ;
     schema:name "Reben"@de,
         "Vignes"@fr,
@@ -1192,7 +1192,7 @@ agis:701 a eCH-0265:DirectPaymentCrop ;
     skos:inScheme agis:ConceptScheme ;
     eCH-0265:exactMatch cultivationtype:701 .
 
-agis:702 a eCH-0265:DirectPaymentCrop ;
+agis:702 a eCH-0265:AgisCrop ;
     schema:identifier "702" ;
     schema:name "Obstanlagen (Äpfel)"@de,
         "Cultures fruitières (pommes)"@fr,
@@ -1201,7 +1201,7 @@ agis:702 a eCH-0265:DirectPaymentCrop ;
     skos:inScheme agis:ConceptScheme ;
     eCH-0265:exactMatch cultivationtype:702 .
 
-agis:703 a eCH-0265:DirectPaymentCrop ;
+agis:703 a eCH-0265:AgisCrop ;
     schema:identifier "703" ;
     schema:name "Obstanlagen (Birnen)"@de,
         "Cultures fruitières (poires)"@fr,
@@ -1210,7 +1210,7 @@ agis:703 a eCH-0265:DirectPaymentCrop ;
     skos:inScheme agis:ConceptScheme ;
     eCH-0265:exactMatch cultivationtype:703 .
 
-agis:704 a eCH-0265:DirectPaymentCrop ;
+agis:704 a eCH-0265:AgisCrop ;
     schema:identifier "704" ;
     schema:name "Obstanlagen (Steinobst)"@de,
         "Cultures fruitières (fruits à noyau)"@fr,
@@ -1219,7 +1219,7 @@ agis:704 a eCH-0265:DirectPaymentCrop ;
     skos:inScheme agis:ConceptScheme ;
     eCH-0265:exactMatch cultivationtype:704 .
 
-agis:705 a eCH-0265:DirectPaymentCrop ;
+agis:705 a eCH-0265:AgisCrop ;
     schema:identifier "705" ;
     schema:name "Mehrjährige Beeren"@de,
         "Baies pluriannuelles"@fr,
@@ -1228,7 +1228,7 @@ agis:705 a eCH-0265:DirectPaymentCrop ;
     skos:inScheme agis:ConceptScheme ;
     eCH-0265:exactMatch cultivationtype:705 .
 
-agis:706 a eCH-0265:DirectPaymentCrop ;
+agis:706 a eCH-0265:AgisCrop ;
     schema:identifier "706" ;
     schema:name "Mehrjährige Gewürz- und Medizinalpflanzen"@de,
         "Plantes aromatiques et plantes médicinales pluriannuelles"@fr,
@@ -1237,7 +1237,7 @@ agis:706 a eCH-0265:DirectPaymentCrop ;
     skos:inScheme agis:ConceptScheme ;
     eCH-0265:exactMatch cultivationtype:706 .
 
-agis:707 a eCH-0265:DirectPaymentCrop ;
+agis:707 a eCH-0265:AgisCrop ;
     schema:identifier "707" ;
     schema:name "Mehrjährige nachwachsende Rohstoffe (Chinaschilf, usw.)"@de,
         "Matières premières renouvelables pluriannuelles (roseau de chine etc.)"@fr,
@@ -1246,7 +1246,7 @@ agis:707 a eCH-0265:DirectPaymentCrop ;
     skos:inScheme agis:ConceptScheme ;
     eCH-0265:exactMatch cultivationtype:707 .
 
-agis:708 a eCH-0265:DirectPaymentCrop ;
+agis:708 a eCH-0265:AgisCrop ;
     schema:identifier "708" ;
     schema:name "Hopfen"@de,
         "Houblon"@fr,
@@ -1255,7 +1255,7 @@ agis:708 a eCH-0265:DirectPaymentCrop ;
     skos:inScheme agis:ConceptScheme ;
     eCH-0265:exactMatch cultivationtype:708 .
 
-agis:709 a eCH-0265:DirectPaymentCrop ;
+agis:709 a eCH-0265:AgisCrop ;
     schema:identifier "709" ;
     schema:name "Rhabarber"@de,
         "Rhubarbe"@fr,
@@ -1264,7 +1264,7 @@ agis:709 a eCH-0265:DirectPaymentCrop ;
     skos:inScheme agis:ConceptScheme ;
     eCH-0265:exactMatch cultivationtype:709 .
 
-agis:710 a eCH-0265:DirectPaymentCrop ;
+agis:710 a eCH-0265:AgisCrop ;
     schema:identifier "710" ;
     schema:name "Spargel"@de,
         "Asperges"@fr,
@@ -1273,7 +1273,7 @@ agis:710 a eCH-0265:DirectPaymentCrop ;
     skos:inScheme agis:ConceptScheme ;
     eCH-0265:exactMatch cultivationtype:710 .
 
-agis:711 a eCH-0265:DirectPaymentCrop ;
+agis:711 a eCH-0265:AgisCrop ;
     schema:identifier "711" ;
     schema:name "Pilze (Freiland)"@de,
         "Champignons en pleine terre"@fr,
@@ -1282,7 +1282,7 @@ agis:711 a eCH-0265:DirectPaymentCrop ;
     skos:inScheme agis:ConceptScheme ;
     eCH-0265:exactMatch cultivationtype:711 .
 
-agis:712 a eCH-0265:DirectPaymentCrop ;
+agis:712 a eCH-0265:AgisCrop ;
     schema:identifier "712" ;
     schema:name "Christbäume"@de,
         "Sapins de Noël"@fr,
@@ -1291,7 +1291,7 @@ agis:712 a eCH-0265:DirectPaymentCrop ;
     skos:inScheme agis:ConceptScheme ;
     eCH-0265:exactMatch cultivationtype:712 .
 
-agis:713 a eCH-0265:DirectPaymentCrop ;
+agis:713 a eCH-0265:AgisCrop ;
     schema:identifier "713" ;
     schema:name "Baumschule von Forstpflanzen ausserhalb der Forstzone"@de,
         "Pépinières de plantes forestières hors zone forestière"@fr,
@@ -1300,7 +1300,7 @@ agis:713 a eCH-0265:DirectPaymentCrop ;
     skos:inScheme agis:ConceptScheme ;
     eCH-0265:exactMatch cultivationtype:713 .
 
-agis:714 a eCH-0265:DirectPaymentCrop ;
+agis:714 a eCH-0265:AgisCrop ;
     schema:identifier "714" ;
     schema:name "Ziersträucher, Ziergehölze und Zierstauden"@de,
         "Buissons, arbrisseaux et arbustes ornementaux"@fr,
@@ -1309,7 +1309,7 @@ agis:714 a eCH-0265:DirectPaymentCrop ;
     skos:inScheme agis:ConceptScheme ;
     eCH-0265:exactMatch cultivationtype:714 .
 
-agis:715 a eCH-0265:DirectPaymentCrop ;
+agis:715 a eCH-0265:AgisCrop ;
     schema:identifier "715" ;
     schema:name "Übrige Baumschulen (Rosen, Früchte, usw.)"@de,
         "Autres pépinières (roses, fruits, etc.)"@fr,
@@ -1319,7 +1319,7 @@ agis:715 a eCH-0265:DirectPaymentCrop ;
     skos:inScheme agis:ConceptScheme ;
     eCH-0265:exactMatch cultivationtype:715 .
 
-agis:716 a eCH-0265:DirectPaymentCrop ;
+agis:716 a eCH-0265:AgisCrop ;
     schema:identifier "716" ;
     schema:name "Gepflegte Selven (Kastanien-/Nussbäume)"@de,
         "Châtaigneraies / noiseraies entretenues"@fr,
@@ -1329,7 +1329,7 @@ agis:716 a eCH-0265:DirectPaymentCrop ;
     skos:inScheme agis:ConceptScheme ;
     eCH-0265:exactMatch cultivationtype:716 .
 
-agis:717 a eCH-0265:DirectPaymentCrop ;
+agis:717 a eCH-0265:AgisCrop ;
     schema:identifier "717" ;
     schema:name "Rebflächen mit natürlicher Artenvielfalt"@de,
         "Surfaces viticoles présentant une biodiversité naturelle"@fr,
@@ -1338,7 +1338,7 @@ agis:717 a eCH-0265:DirectPaymentCrop ;
     skos:inScheme agis:ConceptScheme ;
     eCH-0265:exactMatch cultivationtype:717 .
 
-agis:718 a eCH-0265:DirectPaymentCrop ;
+agis:718 a eCH-0265:AgisCrop ;
     schema:identifier "718" ;
     schema:name "Trüffelanlagen"@de,
         "Truffières"@fr,
@@ -1347,7 +1347,7 @@ agis:718 a eCH-0265:DirectPaymentCrop ;
     skos:inScheme agis:ConceptScheme ;
     eCH-0265:exactMatch cultivationtype:718 .
 
-agis:719 a eCH-0265:DirectPaymentCrop ;
+agis:719 a eCH-0265:AgisCrop ;
     schema:identifier "719" ;
     schema:name "Maulbeerbaumanlagen (Fütterung Seidenraupen)"@de,
         "Cultures de mûriers (alimentation des vers à soie)"@fr,
@@ -1356,7 +1356,7 @@ agis:719 a eCH-0265:DirectPaymentCrop ;
     skos:inScheme agis:ConceptScheme ;
     eCH-0265:exactMatch cultivationtype:719 .
 
-agis:720 a eCH-0265:DirectPaymentCrop ;
+agis:720 a eCH-0265:AgisCrop ;
     schema:identifier "720" ;
     schema:name "Gepflegte Selven (Edelkastanienbäume)"@de,
         "Châtaigneraies entretenues (surface)"@fr,
@@ -1365,7 +1365,7 @@ agis:720 a eCH-0265:DirectPaymentCrop ;
     skos:inScheme agis:ConceptScheme ;
     eCH-0265:exactMatch cultivationtype:720 .
 
-agis:721 a eCH-0265:DirectPaymentCrop ;
+agis:721 a eCH-0265:AgisCrop ;
     schema:identifier "721" ;
     schema:name "Mehrjährige gärtnerische Freilandkulturen (nicht im Gewächshaus)"@de,
         "Cultures horticoles pluriannuelles de plein air (pas en serres)"@fr,
@@ -1374,7 +1374,7 @@ agis:721 a eCH-0265:DirectPaymentCrop ;
     skos:inScheme agis:ConceptScheme ;
     eCH-0265:exactMatch cultivationtype:721 .
 
-agis:722 a eCH-0265:DirectPaymentCrop ;
+agis:722 a eCH-0265:AgisCrop ;
     schema:identifier "722" ;
     schema:name "Baumschule von Reben"@de,
         "Pépinière viticoles"@fr,
@@ -1383,7 +1383,7 @@ agis:722 a eCH-0265:DirectPaymentCrop ;
     skos:inScheme agis:ConceptScheme ;
     eCH-0265:exactMatch cultivationtype:722 .
 
-agis:723 a eCH-0265:DirectPaymentCrop ;
+agis:723 a eCH-0265:AgisCrop ;
     schema:identifier "723" ;
     schema:name "Baumschule von Obst und Beeren"@de,
         "Pépinière de fruits et de baies"@fr,
@@ -1392,7 +1392,7 @@ agis:723 a eCH-0265:DirectPaymentCrop ;
     skos:inScheme agis:ConceptScheme ;
     eCH-0265:exactMatch cultivationtype:723 .
 
-agis:724 a eCH-0265:DirectPaymentCrop ;
+agis:724 a eCH-0265:AgisCrop ;
     schema:identifier "724" ;
     schema:name "Übrige Baumschulen (Rosen, Zierstauden, usw.)"@de,
         "Autres pépinières (rosiers, plantes ornementales, etc.)"@fr,
@@ -1401,7 +1401,7 @@ agis:724 a eCH-0265:DirectPaymentCrop ;
     skos:inScheme agis:ConceptScheme ;
     eCH-0265:exactMatch cultivationtype:724 .
 
-agis:725 a eCH-0265:DirectPaymentCrop ;
+agis:725 a eCH-0265:AgisCrop ;
     schema:identifier "725" ;
     schema:name "Permakultur (kleinräumige Mischung verschiedener Kulturen mit mehr als 50% Spezialkulturen)"@de,
         "Permaculture (mélange à petite échelle de différentes cultures avec plus de 50 % de cultures spéciales)"@fr,
@@ -1410,7 +1410,7 @@ agis:725 a eCH-0265:DirectPaymentCrop ;
     skos:inScheme agis:ConceptScheme ;
     eCH-0265:exactMatch cultivationtype:725 .
 
-agis:731 a eCH-0265:DirectPaymentCrop ;
+agis:731 a eCH-0265:AgisCrop ;
     schema:identifier "731" ;
     schema:name "Andere Obstanlagen (Kiwi, Holunder, usw.)"@de,
         "Autres cultures fruitières (kiwi, sureau, etc.)"@fr,
@@ -1419,7 +1419,7 @@ agis:731 a eCH-0265:DirectPaymentCrop ;
     skos:inScheme agis:ConceptScheme ;
     eCH-0265:exactMatch cultivationtype:731 .
 
-agis:735 a eCH-0265:DirectPaymentCrop ;
+agis:735 a eCH-0265:AgisCrop ;
     schema:identifier "735" ;
     schema:name "Reben (regionsspezifische Biodiversitätsförderfläche)"@de,
         "Vignes (surfaces de promotion de la biodiversité spécifiques à la région)"@fr,
@@ -1428,7 +1428,7 @@ agis:735 a eCH-0265:DirectPaymentCrop ;
     skos:inScheme agis:ConceptScheme ;
     eCH-0265:exactMatch cultivationtype:735 .
 
-agis:797 a eCH-0265:DirectPaymentCrop ;
+agis:797 a eCH-0265:AgisCrop ;
     schema:identifier "797" ;
     schema:name "Übrige Flächen mit Dauerkulturen, beitragsberechtigt"@de,
         "Autres surfaces de cultures pérennes donnant droit aux contributions"@fr,
@@ -1437,7 +1437,7 @@ agis:797 a eCH-0265:DirectPaymentCrop ;
     skos:inScheme agis:ConceptScheme ;
     eCH-0265:exactMatch cultivationtype:797 .
 
-agis:798 a eCH-0265:DirectPaymentCrop ;
+agis:798 a eCH-0265:AgisCrop ;
     schema:identifier "798" ;
     schema:name "Übrige Flächen mit Dauerkulturen, nicht beitragsberechtigt"@de,
         "Autres surfaces de cultures pérennes ne donnant pas droit aux contributions"@fr,
@@ -1446,7 +1446,7 @@ agis:798 a eCH-0265:DirectPaymentCrop ;
     skos:inScheme agis:ConceptScheme ;
     eCH-0265:exactMatch cultivationtype:798 .
 
-agis:801 a eCH-0265:DirectPaymentCrop ;
+agis:801 a eCH-0265:AgisCrop ;
     schema:identifier "801" ;
     schema:name "Gemüsekulturen in Gewächshäusern mit festem Fundament"@de,
         "Cultures maraîchères sous serres avec fondations permanentes"@fr,
@@ -1456,7 +1456,7 @@ agis:801 a eCH-0265:DirectPaymentCrop ;
     skos:broader agis:7 ;
     eCH-0265:exactMatch cultivationtype:801 .
 
-agis:802 a eCH-0265:DirectPaymentCrop ;
+agis:802 a eCH-0265:AgisCrop ;
     schema:identifier "802" ;
     schema:name "Übrige Spezialkulturen in Gewächshäusern mit festem Fundament"@de,
         "Autres cultures spéciales sous serres avec fondations permanentes"@fr,
@@ -1466,7 +1466,7 @@ agis:802 a eCH-0265:DirectPaymentCrop ;
     skos:broader agis:7 ;
     eCH-0265:exactMatch cultivationtype:802 .
 
-agis:803 a eCH-0265:DirectPaymentCrop ;
+agis:803 a eCH-0265:AgisCrop ;
     schema:identifier "803" ;
     schema:name "Gärtnerische Kulturen in Gewächshäusern mit festem Fundament"@de,
         "Cultures horticoles sous serres avec fondations permanentes"@fr,
@@ -1476,7 +1476,7 @@ agis:803 a eCH-0265:DirectPaymentCrop ;
     skos:broader agis:7 ;
     eCH-0265:exactMatch cultivationtype:803 .
 
-agis:804 a eCH-0265:DirectPaymentCrop ;
+agis:804 a eCH-0265:AgisCrop ;
     schema:identifier "804" ;
     schema:name "Beerenkulturen in Gewächshäusern mit festem Fundament"@de,
         "Cultures de petits fruits sous serres avec fondations permanentes"@fr,
@@ -1486,7 +1486,7 @@ agis:804 a eCH-0265:DirectPaymentCrop ;
     skos:broader agis:7 ;
     eCH-0265:exactMatch cultivationtype:804 .
 
-agis:806 a eCH-0265:DirectPaymentCrop ;
+agis:806 a eCH-0265:AgisCrop ;
     schema:identifier "806" ;
     schema:name "Gemüsekulturen in geschütztem Anbau ohne festes Fundament"@de,
         "Cultures maraîchères sous abri sans fondations permanentes"@fr,
@@ -1497,7 +1497,7 @@ agis:806 a eCH-0265:DirectPaymentCrop ;
     skos:broader agis:7 ;
     eCH-0265:exactMatch cultivationtype:806 .
 
-agis:807 a eCH-0265:DirectPaymentCrop ;
+agis:807 a eCH-0265:AgisCrop ;
     schema:identifier "807" ;
     schema:name "Übrige Spezialkulturen in geschütztem Anbau ohne festes Fundament"@de,
         "Autres cultures spéciales sous abri sans fondations permanentes"@fr,
@@ -1507,7 +1507,7 @@ agis:807 a eCH-0265:DirectPaymentCrop ;
     skos:broader agis:7 ;
     eCH-0265:exactMatch cultivationtype:807 .
 
-agis:808 a eCH-0265:DirectPaymentCrop ;
+agis:808 a eCH-0265:AgisCrop ;
     schema:identifier "808" ;
     schema:name "Gärtnerische Kulturen in geschütztem Anbau ohne festes Fundament"@de,
         "Cultures horticoles sous abri sans fondations permanentes"@fr,
@@ -1517,7 +1517,7 @@ agis:808 a eCH-0265:DirectPaymentCrop ;
     skos:broader agis:7 ;
     eCH-0265:exactMatch cultivationtype:808 .
 
-agis:810 a eCH-0265:DirectPaymentCrop ;
+agis:810 a eCH-0265:AgisCrop ;
     schema:identifier "810" ;
     schema:name "Pilze in geschütztem Anbau mit festem Fundament"@de,
         "Champignons sous abri avec fondations permanentes"@fr,
@@ -1527,7 +1527,7 @@ agis:810 a eCH-0265:DirectPaymentCrop ;
     skos:broader agis:7 ;
     eCH-0265:exactMatch cultivationtype:810 .
 
-agis:811 a eCH-0265:DirectPaymentCrop ;
+agis:811 a eCH-0265:AgisCrop ;
     schema:identifier "811" ;
     schema:name "Gemüsekulturen in geschütztem Anbau ohne festes Fundament, im gewachsenen Boden"@de,
         "Cultures maraîchères sous abri sans fondations permanentes, sur sol naturel"@fr,
@@ -1537,7 +1537,7 @@ agis:811 a eCH-0265:DirectPaymentCrop ;
     skos:broader agis:7 ;
     eCH-0265:exactMatch cultivationtype:811 .
 
-agis:812 a eCH-0265:DirectPaymentCrop ;
+agis:812 a eCH-0265:AgisCrop ;
     schema:identifier "812" ;
     schema:name "Gemüsekulturen in geschütztem Anbau ohne festes Fundament, auf Pflanztischen oder -gestellen"@de,
         "Cultures maraîchères sous abri sans fondations permanentes, sur des tables de plantation ou des étagères"@fr,
@@ -1547,7 +1547,7 @@ agis:812 a eCH-0265:DirectPaymentCrop ;
     skos:broader agis:7 ;
     eCH-0265:exactMatch cultivationtype:812 .
 
-agis:813 a eCH-0265:DirectPaymentCrop ;
+agis:813 a eCH-0265:AgisCrop ;
     schema:identifier "813" ;
     schema:name "Beerenkulturen in geschütztem Anbau ohne festes Fundament, im gewachsenen Boden"@de,
         "Cultures de petits fruits sous abri sans fondations permanentes, sur sol naturel"@fr,
@@ -1557,7 +1557,7 @@ agis:813 a eCH-0265:DirectPaymentCrop ;
     skos:broader agis:7 ;
     eCH-0265:exactMatch cultivationtype:813 .
 
-agis:814 a eCH-0265:DirectPaymentCrop ;
+agis:814 a eCH-0265:AgisCrop ;
     schema:identifier "814" ;
     schema:name "Beerenkulturen in geschütztem Anbau ohne festes Fundament, auf Pflanztischen oder -gestellen"@de,
         "Cultures de petits fruits sous abri sans fondations permanentes, sur des tables de plantation ou des étagères"@fr,
@@ -1567,7 +1567,7 @@ agis:814 a eCH-0265:DirectPaymentCrop ;
     skos:broader agis:7 ;
     eCH-0265:exactMatch cultivationtype:814 .
 
-agis:847 a eCH-0265:DirectPaymentCrop ;
+agis:847 a eCH-0265:AgisCrop ;
     schema:identifier "847" ;
     schema:name "Übrige Kulturen in geschütztem Anbau ohne festes Fundament, beitragsberechtigt"@de,
         "Autres cultures sous abri sans fondations permanentes donnant droit aux contributions"@fr,
@@ -1577,7 +1577,7 @@ agis:847 a eCH-0265:DirectPaymentCrop ;
     skos:broader agis:7 ;
     eCH-0265:exactMatch cultivationtype:847 .
 
-agis:848 a eCH-0265:DirectPaymentCrop ;
+agis:848 a eCH-0265:AgisCrop ;
     schema:identifier "848" ;
     schema:name "Übrige Kulturen in geschütztem Anbau mit festem Fundament"@de,
         "Autres cultures sous abri avec fondations permanentes"@fr,
@@ -1587,7 +1587,7 @@ agis:848 a eCH-0265:DirectPaymentCrop ;
     skos:broader agis:7 ;
     eCH-0265:exactMatch cultivationtype:848 .
 
-agis:849 a eCH-0265:DirectPaymentCrop ;
+agis:849 a eCH-0265:AgisCrop ;
     schema:identifier "849" ;
     schema:name "Übrige Kulturen in geschütztem Anbau ohne festes Fundament, nicht beitragsberechtigt"@de,
         "Autres cultures sous abri sans fondations permanentes ne donnant pas droit aux contributions"@fr,
@@ -1597,7 +1597,7 @@ agis:849 a eCH-0265:DirectPaymentCrop ;
     skos:broader agis:7 ;
     eCH-0265:exactMatch cultivationtype:849 .
 
-agis:851 a eCH-0265:DirectPaymentCrop ;
+agis:851 a eCH-0265:AgisCrop ;
     schema:identifier "851" ;
     schema:name "Streueflächen innerhalb der landwirtschaftlichen Nutzfläche"@de,
         "Surfaces à litière dans la surface agricole utile"@fr,
@@ -1607,7 +1607,7 @@ agis:851 a eCH-0265:DirectPaymentCrop ;
     skos:broader agis:10 ;
     eCH-0265:exactMatch cultivationtype:851 .
 
-agis:852 a eCH-0265:DirectPaymentCrop ;
+agis:852 a eCH-0265:AgisCrop ;
     schema:identifier "852" ;
     schema:name "Hecken-, Feld- und Ufergehölze (mit Krautsaum)"@de,
         "Haies, bosquets champêtres et berges boisées (avec la bande herbeuse)"@fr,
@@ -1617,7 +1617,7 @@ agis:852 a eCH-0265:DirectPaymentCrop ;
     skos:broader agis:10 ;
     eCH-0265:exactMatch cultivationtype:852 .
 
-agis:857 a eCH-0265:DirectPaymentCrop ;
+agis:857 a eCH-0265:AgisCrop ;
     schema:identifier "857" ;
     schema:name "Hecken-, Feld- und Ufergehölze (mit Pufferstreifen)"@de,
         "Haies, bosquets champêtres et berges boisées (avec la bande tampon)"@fr,
@@ -1627,7 +1627,7 @@ agis:857 a eCH-0265:DirectPaymentCrop ;
     skos:broader agis:10 ;
     eCH-0265:exactMatch cultivationtype:857 .
 
-agis:858 a eCH-0265:DirectPaymentCrop ;
+agis:858 a eCH-0265:AgisCrop ;
     schema:identifier "858" ;
     schema:name "Hecken-, Feld- und Ufergehölze (mit Pufferstreifen) (regionsspezifische Biodiversitätsförderfläche)"@de,
         "Haies, bosquets champêtres et berges boisées (avec la bande tampon) (Surfaces de promotion de la biodiversité spécifiques à la région)"@fr,
@@ -1637,7 +1637,7 @@ agis:858 a eCH-0265:DirectPaymentCrop ;
     skos:broader agis:10 ;
     eCH-0265:exactMatch cultivationtype:858 .
 
-agis:895 a eCH-0265:DirectPaymentCrop ;
+agis:895 a eCH-0265:AgisCrop ;
     schema:identifier "895" ;
     schema:name "Übrige Flächen innerhalb der LN, beitragsberechtigt"@de,
         "Autres surfaces dans la SAU donnant droit aux contributions"@fr,
@@ -1648,7 +1648,7 @@ agis:895 a eCH-0265:DirectPaymentCrop ;
     skos:broader agis:10 ;
     eCH-0265:exactMatch cultivationtype:895 .
 
-agis:897 a eCH-0265:DirectPaymentCrop ;
+agis:897 a eCH-0265:AgisCrop ;
     schema:identifier "897" ;
     schema:name "Übrige Flächen innerhalb der landwirtschaftlichen Nutzfläche, beitragsberechtigt"@de,
         "Autres surfaces dans la surface agricole utile donnant droit aux contributions"@fr,
@@ -1658,7 +1658,7 @@ agis:897 a eCH-0265:DirectPaymentCrop ;
     skos:broader agis:10 ;
     eCH-0265:exactMatch cultivationtype:897 .
 
-agis:898 a eCH-0265:DirectPaymentCrop ;
+agis:898 a eCH-0265:AgisCrop ;
     schema:identifier "898" ;
     schema:name "Übrige Flächen innerhalb der landwirtschaftlichen Nutzfläche, nicht beitragsberechtigt"@de,
         "Autres surfaces dans la surface agricole utile ne donnant pas droit aux contributions"@fr,
@@ -1668,7 +1668,7 @@ agis:898 a eCH-0265:DirectPaymentCrop ;
     skos:broader agis:10 ;
     eCH-0265:exactMatch cultivationtype:898 .
 
-agis:901 a eCH-0265:DirectPaymentCrop ;
+agis:901 a eCH-0265:AgisCrop ;
     schema:identifier "901" ;
     schema:name "Wald"@de,
         "Forêt"@fr,
@@ -1678,7 +1678,7 @@ agis:901 a eCH-0265:DirectPaymentCrop ;
     skos:broader agis:12 ;
     eCH-0265:exactMatch cultivationtype:901 .
 
-agis:902 a eCH-0265:DirectPaymentCrop ;
+agis:902 a eCH-0265:AgisCrop ;
     schema:identifier "902" ;
     schema:name "Übrige unproduktive Flächen (z.B. gemulchte Flächen, stark verunkrautete Flächen, Hecke ohne Pufferstreifen)"@de,
         "Surfaces improductives (p.ex. haies sans les bandes tampons, surfaces broyées, surfaces avec un degré élevé de mauvaises herbes)"@fr,
@@ -1689,7 +1689,7 @@ agis:902 a eCH-0265:DirectPaymentCrop ;
     eCH-0265:exactMatch cultivationtype:902 .
 
 
-agis:903 a eCH-0265:DirectPaymentCrop ;
+agis:903 a eCH-0265:AgisCrop ;
     schema:identifier "903" ;
     schema:name "Flächen ohne landwirtschaftliche Hauptzweckbestimmung (erschlossenes Bauland, Spiel-, Reit-, Camping-, Golf-, Flug- und Militärplätze oder ausgemarchte Bereiche von Eisenbahnen, öffentlichen Strassen und Gewässern)"@de,
         "Surfaces dont l'affectation principale n'est pas l'exploitation agricole (terrains à bâtir équipés et surfaces comprises dans les terrains de golf et de camping, aérodromes et terrains d'entraînement militaire, surfaces délimitées des bas-côtés des lignes de chemins de fer, de routes publiques, de cours et de plans d'eau)"@fr,
@@ -1699,7 +1699,7 @@ agis:903 a eCH-0265:DirectPaymentCrop ;
     skos:broader agis:12 ;
     eCH-0265:exactMatch cultivationtype:903 .
 
-agis:904 a eCH-0265:DirectPaymentCrop ;
+agis:904 a eCH-0265:AgisCrop ;
     schema:identifier "904" ;
     schema:name "Wassergräben, Tümpel, Teiche"@de,
         "Fossés humides, mares, étangs"@fr,
@@ -1709,7 +1709,7 @@ agis:904 a eCH-0265:DirectPaymentCrop ;
     skos:broader agis:12 ;
     eCH-0265:exactMatch cultivationtype:904 .
 
-agis:905 a eCH-0265:DirectPaymentCrop ;
+agis:905 a eCH-0265:AgisCrop ;
     schema:identifier "905" ;
     schema:name "Ruderalflächen, Steinhaufen und -wälle"@de,
         "Surfaces rudérales, tas d'épierrage et affleurements rocheux"@fr,
@@ -1719,7 +1719,7 @@ agis:905 a eCH-0265:DirectPaymentCrop ;
     skos:broader agis:12 ;
     eCH-0265:exactMatch cultivationtype:905 .
 
-agis:906 a eCH-0265:DirectPaymentCrop ;
+agis:906 a eCH-0265:AgisCrop ;
     schema:identifier "906" ;
     schema:name "Trockenmauern"@de,
         "Murs de pierres sèches"@fr,
@@ -1729,7 +1729,7 @@ agis:906 a eCH-0265:DirectPaymentCrop ;
     skos:broader agis:12 ;
     eCH-0265:exactMatch cultivationtype:906 .
 
-agis:907 a eCH-0265:DirectPaymentCrop ;
+agis:907 a eCH-0265:AgisCrop ;
     schema:identifier "907" ;
     schema:name "Unbefestigte, natürliche Wege"@de,
         "Chemins naturels non stabilisés"@fr,
@@ -1739,7 +1739,7 @@ agis:907 a eCH-0265:DirectPaymentCrop ;
     skos:broader agis:12 ;
     eCH-0265:exactMatch cultivationtype:907 .
 
-agis:908 a eCH-0265:DirectPaymentCrop ;
+agis:908 a eCH-0265:AgisCrop ;
     schema:identifier "908" ;
     schema:name "Regionsspezifische Biodiversitätsförderfläche"@de,
         "Surfaces de promotion de la biodiversité spécifiques à la région"@fr,
@@ -1749,7 +1749,7 @@ agis:908 a eCH-0265:DirectPaymentCrop ;
     skos:broader agis:12 ;
     eCH-0265:exactMatch cultivationtype:908 .
 
-agis:909 a eCH-0265:DirectPaymentCrop ;
+agis:909 a eCH-0265:AgisCrop ;
     schema:identifier "909" ;
     schema:name "Hausgärten"@de,
         "Jardins potager"@fr,
@@ -1759,7 +1759,7 @@ agis:909 a eCH-0265:DirectPaymentCrop ;
     skos:broader agis:12 ;
     eCH-0265:exactMatch cultivationtype:909 .
 
-agis:911 a eCH-0265:DirectPaymentCrop ;
+agis:911 a eCH-0265:AgisCrop ;
     schema:identifier "911" ;
     schema:name "Landwirtschaftliche Produktion in Gebäuden (z.B. Pilze, Brüsseler)"@de,
         "Production agricole dans des bâtiments (p.ex. champignons, chicorée witloof)"@fr,
@@ -1769,7 +1769,7 @@ agis:911 a eCH-0265:DirectPaymentCrop ;
     skos:broader agis:12 ;
     eCH-0265:exactMatch cultivationtype:911 .
 
-agis:921 a eCH-0265:DirectPaymentCrop ;
+agis:921 a eCH-0265:AgisCrop ;
     schema:identifier "921" ;
     schema:name "Hochstammfeldobstbäume"@de,
         "Arbres fruitiers haute-tige"@fr,
@@ -1779,7 +1779,7 @@ agis:921 a eCH-0265:DirectPaymentCrop ;
     skos:broader agis:20 ;
     eCH-0265:exactMatch cultivationtype:921 .
 
-agis:922 a eCH-0265:DirectPaymentCrop ;
+agis:922 a eCH-0265:AgisCrop ;
     schema:identifier "922" ;
     schema:name "Nussbäume"@de,
         "Noyers"@fr,
@@ -1789,7 +1789,7 @@ agis:922 a eCH-0265:DirectPaymentCrop ;
     skos:broader agis:20 ;
     eCH-0265:exactMatch cultivationtype:922 .
 
-agis:923 a eCH-0265:DirectPaymentCrop ;
+agis:923 a eCH-0265:AgisCrop ;
     schema:identifier "923" ;
     schema:name "Edelkastanienbäume"@de,
         "Châtaigniers"@fr,
@@ -1799,7 +1799,7 @@ agis:923 a eCH-0265:DirectPaymentCrop ;
     skos:broader agis:20 ;
     eCH-0265:exactMatch cultivationtype:923 .
 
-agis:924 a eCH-0265:DirectPaymentCrop ;
+agis:924 a eCH-0265:AgisCrop ;
     schema:identifier "924" ;
     schema:name "Einheimische standortgerechte Einzelbäume und Alleen"@de,
         "Arbres isolés indigènes adaptés au site et allées d'arbres"@fr,
@@ -1809,7 +1809,7 @@ agis:924 a eCH-0265:DirectPaymentCrop ;
     skos:broader agis:20 ;
     eCH-0265:exactMatch cultivationtype:924 .
 
-agis:925 a eCH-0265:DirectPaymentCrop ;
+agis:925 a eCH-0265:AgisCrop ;
     schema:identifier "925" ;
     schema:name "Markante Einzelbäume"@de,
         "Arbres isolés remarquables"@fr,
@@ -1819,7 +1819,7 @@ agis:925 a eCH-0265:DirectPaymentCrop ;
     skos:broader agis:20 ;
     eCH-0265:exactMatch cultivationtype:925 .
 
-agis:926 a eCH-0265:DirectPaymentCrop ;
+agis:926 a eCH-0265:AgisCrop ;
     schema:identifier "926" ;
     schema:name "Andere Bäume"@de,
         "Autres arbres"@fr,
@@ -1829,7 +1829,7 @@ agis:926 a eCH-0265:DirectPaymentCrop ;
     skos:broader agis:20 ;
     eCH-0265:exactMatch cultivationtype:926 .
 
-agis:927 a eCH-0265:DirectPaymentCrop ;
+agis:927 a eCH-0265:AgisCrop ;
     schema:identifier "927" ;
     schema:name "Andere Bäume (regionsspezifische Biodiversitätsförderfläche)"@de,
         "Autres arbres (surfaces de promotion de la biodiversité spécifiques à la région)"@fr,
@@ -1839,7 +1839,7 @@ agis:927 a eCH-0265:DirectPaymentCrop ;
     skos:broader agis:20 ;
     eCH-0265:exactMatch cultivationtype:927 .
 
-agis:928 a eCH-0265:DirectPaymentCrop ;
+agis:928 a eCH-0265:AgisCrop ;
     schema:identifier "928" ;
     schema:name "Andere Elemente (regionsspezifische Biodiversitätsförderfläche)"@de,
         "Autres éléments (surfaces de promotion de la biodiversité spécifiques à la région)"@fr,
@@ -1849,7 +1849,7 @@ agis:928 a eCH-0265:DirectPaymentCrop ;
     skos:broader agis:20 ;
     eCH-0265:exactMatch cultivationtype:928 .
 
-agis:929 a eCH-0265:DirectPaymentCrop ;
+agis:929 a eCH-0265:AgisCrop ;
     schema:identifier "929" ;
     schema:name "Andere Elemente (Landschaftsqualität)"@de,
         "Autres éléments (qualité du paysage)"@fr,
@@ -1859,7 +1859,7 @@ agis:929 a eCH-0265:DirectPaymentCrop ;
     skos:broader agis:20 ;
     eCH-0265:exactMatch cultivationtype:929 .
 
-agis:930 a eCH-0265:DirectPaymentCrop ;
+agis:930 a eCH-0265:AgisCrop ;
     schema:identifier "930" ;
     schema:name "Sömmerungsweiden"@de,
         "Pâturages d'estivage"@fr,
@@ -1869,7 +1869,7 @@ agis:930 a eCH-0265:DirectPaymentCrop ;
     skos:broader agis:13 ;
     eCH-0265:exactMatch cultivationtype:930 .
 
-agis:931 a eCH-0265:DirectPaymentCrop ;
+agis:931 a eCH-0265:AgisCrop ;
     schema:identifier "931" ;
     schema:name "Artenreiche Grün- und Streueflächen im Sömmerungsgebiet"@de,
         "Surfaces herbagères et surfaces à litière riches en espèces dans la région d'estivage"@fr,
@@ -1879,7 +1879,7 @@ agis:931 a eCH-0265:DirectPaymentCrop ;
     skos:broader agis:13 ;
     eCH-0265:exactMatch cultivationtype:931 .
 
-agis:933 a eCH-0265:DirectPaymentCrop ;
+agis:933 a eCH-0265:AgisCrop ;
     schema:identifier "933" ;
     schema:name "Gemeinschaftsweiden"@de,
         "Pâturages communautaires"@fr,
@@ -1889,7 +1889,7 @@ agis:933 a eCH-0265:DirectPaymentCrop ;
     skos:broader agis:13 ;
     eCH-0265:exactMatch cultivationtype:933 .
 
-agis:935 a eCH-0265:DirectPaymentCrop ;
+agis:935 a eCH-0265:AgisCrop ;
     schema:identifier "935" ;
     schema:name "Heuwiesen für Zufütterung während der Sömmerung"@de,
         "Prairies de fauche en région d'estivage, pour l'affouragement pendant l'estivage"@fr,
@@ -1899,7 +1899,7 @@ agis:935 a eCH-0265:DirectPaymentCrop ;
     skos:broader agis:13 ;
     eCH-0265:exactMatch cultivationtype:935 .
 
-agis:936 a eCH-0265:DirectPaymentCrop ;
+agis:936 a eCH-0265:AgisCrop ;
     schema:identifier "936" ;
     schema:name "Streueflächen im Sömmerungsgebiet"@de,
         "Surfaces à litière, région d'estivage"@fr,
@@ -1909,7 +1909,7 @@ agis:936 a eCH-0265:DirectPaymentCrop ;
     skos:broader agis:13 ;
     eCH-0265:exactMatch cultivationtype:936 .
 
-agis:998 a eCH-0265:DirectPaymentCrop ;
+agis:998 a eCH-0265:AgisCrop ;
     schema:identifier "998" ;
     schema:name "Übrige Flächen ausserhalb der landwirtschaftlichen Nutzfläche"@de,
         "Autres surfaces hors de la surface agricole utile"@fr,

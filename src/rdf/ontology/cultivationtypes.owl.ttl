@@ -1021,13 +1021,6 @@ cultivationtype:158 a eCH-0265:CultivationType ;
         "Sedano rapa"@it ;
     rdfs:subClassOf cultivationtype:94 .
 
-cultivationtype:159 a eCH-0265:CultivationType ;
-    schema:name "Birne"@de,
-        "Pear"@en,
-        "Poirier"@fr,
-        "Pero"@it ;
-    rdfs:subClassOf cultivationtype:41 .
-
 cultivationtype:161 a eCH-0265:CultivationType ;
     schema:name "Schwarzer Holunder"@de,
         "Black elderberry"@en,
@@ -4289,8 +4282,7 @@ cultivationtype:1044 a eCH-0265:CultivationType ;
         "Chou-rave d'industrie"@fr, 
         "Cavolo rapa da industria"@it ;
     rdfs:subClassOf cultivationtype:1296,
-        cultivationtype:546;
-    owl:disjointWith cultivationtype:1297 .
+        cultivationtype:546 .
 
 cultivationtype:1045 a eCH-0265:CultivationType ;
     schema:name "Ölhanf"@de, 
@@ -4483,14 +4475,6 @@ cultivationtype:1073 a eCH-0265:CultivationType ;
         "Persil jusqu'à la première coupe"@fr,
         "Prezzemolo fino al primo taglio"@it ;
     rdfs:subClassOf cultivationtype:311 .
-
-cultivationtype:1074 a eCH-0265:CultivationType ;
-    schema:name "Kefen"@de,
-        "Snow peas"@en,
-        "Mange-tout"@fr,
-        "Taccole"@it ;
-    schema:alternateName "Zuckerschoten"@de ;
-    rdfs:subClassOf cultivationtype:191 .
 
 cultivationtype:1075 a eCH-0265:CultivationType ;
     schema:name "Erbsen und Kefen"@de,
@@ -5740,14 +5724,6 @@ cultivationtype:1292 a eCH-0265:CultivationType ;
         "Siepi e boschetti campestri con bordo inerbito"@it ;
     rdfs:subClassOf cultivationtype:852 .
 
-cultivationtype:1293 a eCH-0265:CultivationType ;
-    schema:name "Zuckerhut Nicht-Convenience"@de,
-        "Sugarloaf chicory non-convenience"@en,
-        "Chicorée pain de sucre non-convenience"@fr,
-        "Cicoria pan di zucchero non-convenience"@it ;
-    rdfs:subClassOf cultivationtype:142 ;
-    owl:disjointWith cultivationtype:1131 .
-
 cultivationtype:1294 a eCH-0265:CultivationType ;
     schema:name "Tomaten Freiland"@de,
         "Tomatoes open field"@en,
@@ -5758,15 +5734,6 @@ cultivationtype:1294 a eCH-0265:CultivationType ;
     owl:disjointWith cultivationtype:1141 ;
     eCH-0265:botanicalPlant taxon:SOLYC .
 
-cultivationtype:1295 a eCH-0265:CultivationType ;
-    schema:name "Krautstiel Freiland"@de,
-        "Swiss chard open field"@en,
-        "Bette à côte pleine terre"@fr,
-        "Costa pieno campo"@it ;
-    rdfs:subClassOf cultivationtype:76,
-        cultivationtype:24 ;
-    owl:disjointWith cultivationtype:1135 .
-
 cultivationtype:1296 a eCH-0265:CultivationType ;
     schema:name "Kohlrabi Freiland"@de,
         "Kohlrabi open field"@en,
@@ -5775,15 +5742,6 @@ cultivationtype:1296 a eCH-0265:CultivationType ;
     rdfs:subClassOf cultivationtype:48, 
         cultivationtype:24 ;
     owl:disjointWith cultivationtype:1043 .
-
-cultivationtype:1297 a eCH-0265:CultivationType ;
-    schema:name "Kohlrabi nicht für die Verarbeitung"@de,
-        "Kohlrabi not for processing"@en,
-        "Chou-rave pas pour l'industrie"@fr,
-        "Cavolo rapa non da industria"@it ;
-    rdfs:subClassOf cultivationtype:1296, 
-        cultivationtype:545 ;
-    owl:disjointWith cultivationtype:1044 .
 
 cultivationtype:1298 a eCH-0265:CultivationType ;
     schema:name "Radicchio und Cicorino nicht für die Verarbeitung"@de,

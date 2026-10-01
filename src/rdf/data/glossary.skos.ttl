@@ -50,6 +50,13 @@ term:nbbs a skos:Concept ;
     schema:alternateName "NBBS"@de ;
     schema:description "Eine vom Bundesamt für Landwirtschaft bereitgestellte RESTful API zur Standardisierung der Suisse-Bilanz-Berechnung."@de .
 
+term:mgdm a skos:Concept ;
+    skos:inScheme eCH-0265:glossary ;
+    skos:topConceptOf eCH-0265:glossary ;
+    schema:name "Minimales Geodatenmodell"@de ;
+    schema:alternateName "MGDM"@de ;
+    schema:description "Vom Bund festgelegte Mindestanforderung an die Struktur von Geobasisdaten. Das MGDM «Landwirtschaftliche Kulturflächen» (Identifikator 153) definiert unter anderem den Katalog der Nutzungsarten, mit welchem die Kantone die landwirtschaftlichen Nutzungsflächen geometrisch erfassen."@de .
+
 term:srppp a skos:Concept ;
     skos:inScheme eCH-0265:glossary ;
     skos:topConceptOf eCH-0265:glossary ;

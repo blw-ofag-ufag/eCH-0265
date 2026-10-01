@@ -1,6 +1,6 @@
 """Data drift tests.
 
-The RDF data in ``src/rdf/data`` is a curated copy of crop code lists that are
+The RDF data in `src/rdf/data` is a curated copy of crop code lists that are
 maintained in other systems. These tests compare the processed graph against
 those upstream sources and fail as soon as the sources start to drift away from
 what this repository publishes.
@@ -57,6 +57,14 @@ GIS_LANGUAGES = {"de": "de", "fr": "fr", "it": "it"}
 
 INTERLIS_NS = {"ili": "http://www.interlis.ch/INTERLIS2.3"}
 INTERLIS_CROP_TAG = "ili:LWB_Nutzungsflaechen_V3_0.LNF_Kataloge.LNF_Katalog_Nutzungsart"
+
+# Attributes of the INTERLIS catalogue that the geodata crops (MGDM 153.1)
+# reproduce, mapped from the INTERLIS element to the local variable name.
+MGDM_ATTRIBUTES = {
+    "Gueltig_Von": "validFrom",
+    "Gueltig_Bis": "validTo",
+    "Ist_Ueberlagernd": "overlapping",
+}
 
 LOG_DIR = Path("build/test")
 
@@ -260,8 +268,8 @@ def psm_source():
     return {"names": names, "parents": parents}
 
 @pytest.fixture(scope="session")
-def gis_source():
-    """Parses the INTERLIS catalogue of direct payment crops into localised names."""
+def gis_catalogue():
+    """``{code: element}`` of all crops in the INTERLIS catalogue."""
     response = fetch(GIS_XML_URL)
     try:
         root = ET.fromstring(response.content)
@@ -271,8 +279,18 @@ def gis_source():
     crops = {}
     for crop in root.findall(f".//{INTERLIS_CROP_TAG}", INTERLIS_NS):
         code = (crop.findtext("ili:LNF_Code", "", INTERLIS_NS) or "").strip()
-        if not code:
-            continue
+        if code:
+            crops[code] = crop
+
+    if not crops:
+        pytest.fail(f"No crop entries found in {GIS_XML_URL}. Did the format change?")
+    return crops
+
+@pytest.fixture(scope="session")
+def gis_source(gis_catalogue):
+    """``{code: {language: name}}`` of the direct payment crops in the INTERLIS catalogue."""
+    crops = {}
+    for code, crop in gis_catalogue.items():
         names = {}
         for text in crop.findall(".//ili:Nutzung//ili:LocalisationCH_V1.LocalisedText", INTERLIS_NS):
             language = (text.findtext("ili:Language", "", INTERLIS_NS) or "").strip().lower()
@@ -280,10 +298,19 @@ def gis_source():
             if language in GIS_LANGUAGES and value:
                 names[GIS_LANGUAGES[language]] = value
         crops[code] = names
-
-    if not crops:
-        pytest.fail(f"No crop entries found in {GIS_XML_URL}. Did the format change?")
     return crops
+
+@pytest.fixture(scope="session")
+def mgdm_source(gis_catalogue):
+    """``{code: {attribute: set(value)}}`` of the crop attributes in the INTERLIS catalogue."""
+    return {
+        code: {
+            attribute: {value}
+            for element, attribute in MGDM_ATTRIBUTES.items()
+            if (value := (crop.findtext(f"ili:{element}", "", INTERLIS_NS) or "").strip())
+        }
+        for code, crop in gis_catalogue.items()
+    }
 
 # ==============================================================================
 # LOCAL FIXTURES
@@ -310,10 +337,20 @@ def psm_local_names(final_graph):
     """)
 
 @pytest.fixture(scope="session")
+def mgdm_local_names(final_graph):
+    return localised_names(final_graph, """
+        SELECT ?id ?name WHERE {
+            ?crop a ech:GeodataCrop ;
+                schema:identifier ?id .
+            OPTIONAL { ?crop schema:name ?name }
+        }
+    """)
+
+@pytest.fixture(scope="session")
 def agis_local_names(final_graph):
     return localised_names(final_graph, """
         SELECT ?id ?name WHERE {
-            ?crop a ech:DirectPaymentCrop ;
+            ?crop a ech:AgisCrop ;
                 schema:identifier ?id .
             OPTIONAL { ?crop schema:name ?name }
         }
@@ -508,4 +545,53 @@ def test_agis_crop_names_match_source(agis_local_names, gis_source):
         "agis_crop_names.log",
         "AGIS crop name drift report",
         name_drift(agis_local_names, gis_source, sorted(set(GIS_LANGUAGES.values()))),
+    )
+
+# ==============================================================================
+# GEODATA CROPS (MGDM 153.1)
+# ==============================================================================
+
+def test_mgdm_crops_match_source(mgdm_local_names, gis_source):
+    """Exactly the crops of the INTERLIS catalogue are represented."""
+    assert_no_drift(
+        "mgdm_crops.log",
+        "MGDM crop drift report",
+        set_drift(
+            set(mgdm_local_names),
+            set(gis_source),
+            lambda key: mgdm_local_names[key].get("de", "no German name"),
+            lambda key: gis_source[key].get("de", "no German name"),
+        ),
+    )
+
+def test_mgdm_crop_names_match_source(mgdm_local_names, gis_source):
+    """All localised crop names are identical to the INTERLIS catalogue."""
+    assert_no_drift(
+        "mgdm_crop_names.log",
+        "MGDM crop name drift report",
+        name_drift(mgdm_local_names, gis_source, sorted(set(GIS_LANGUAGES.values()))),
+    )
+
+def test_mgdm_attributes_match_source(final_graph, mgdm_source):
+    """Validity and flags of every crop are identical to the INTERLIS catalogue."""
+    rows = final_graph.query(PREFIXES + """
+        SELECT ?id ?validFrom ?validTo ?overlapping WHERE {
+            ?crop a ech:GeodataCrop ;
+                schema:identifier ?id .
+            OPTIONAL { ?crop schema:validFrom ?validFrom }
+            OPTIONAL { ?crop schema:validTo ?validTo }
+            OPTIONAL { ?crop ech:overlapping ?overlapping }
+        }
+    """)
+    local = defaultdict(dict)
+    for row in rows:
+        entry = local[str(row.id)]
+        for attribute in MGDM_ATTRIBUTES.values():
+            value = getattr(row, attribute)
+            if value is not None:
+                entry.setdefault(attribute, set()).add(str(value))
+    assert_no_drift(
+        "mgdm_attributes.log",
+        "MGDM attribute drift report",
+        value_drift(dict(local), mgdm_source, "attributes"),
     )
