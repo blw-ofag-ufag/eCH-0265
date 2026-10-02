@@ -97,20 +97,54 @@ In dem Dokument sind viele Referenztabellen enthalten, die entsprechend nach Kul
 
 Zur Standardisierung der Suisse-Bilanz-Berechnung stellt das Bundesamt für Landwirtschaft neu den Nährstoffbilanz-Berechnungsservice (NBBS) als RESTful API zur Verfügung.
 Über diese Schnittstelle lässt sich unter anderem ein Katalog der landwirtschaftlichen Kulturen abrufen.[^3]
-Der NBBS ordnet die Kulturen in einer strikten, dreistufigen Hierarchie (@tbl-nbbs-hierarchy).
+Die eigentlichen Kulturen heissen im NBBS «agronomische Kulturkategorien».
+Jede von ihnen ist genau einer Kultivierungskategorie und genau einer Kultivierungsunterkategorie zugeordnet (@tbl-nbbs-classes).
 
 [^3]: Die «agronomischen Kulturkategorien» für den Nährstoffbilanzrechner sind beispielsweise über den Endpoint <https://rf-vp.agate.ch/digiflux/naebi/2-0/naebiservice-backend/agronomiccropcategories> abrufbar.
-  Mittels der Slugs `cultivationcategories` und `cultivationsubcategories` lassen sich zudem die jeweiligen Übergruppen abfragen.
+  Mittels der Slugs `cultivationcategories` und `cultivationsubcategories` lassen sich zudem die beiden Gruppierungen abfragen.
 
 | N | Name     | Beschreibung                                         | Beispiele                      |
 |:--|:---------|:-----------------------------------------------------|:-------------------------------|
-| 3      | Kultivierungskategorien (`cultivationcategories`) | Oberste Hierarchieebene, dient nur der Strukturierung. | Ackerkulturen, Grundfutterproduktion, Spezialkulturen |
-| 8      | Kultivierungsunterkategorien (`cultivationsubcategories`) | Mittlere Ebene, dient ebenfalls nur der Strukturierung. | Getreide, Dauerkulturen, Hackfrüchte, Freilandgemüse, geschützte Kulturen, Grundfutter, übriger Ökoausgleich, diverse Kulturen |
-| 314    | Agronomische Kulturkategorien (`agronomiccropcategories`) | Unterste Ebene, welche die eigentlichen Kulturen beinhaltet. Hier sind die spezifischen agronomischen und regulatorische Eigenschaften hinterlegt. | «Winterweizen», «Zuckerrüben», «Naturwiese extensiv», «Aubergine, Erdkultur (geschützter Anbau)», «Walnüsse ≥ 185 Bäume/ha» |
+| 3      | Kultivierungskategorien (`cultivationcategories`) | Gruppierung der Kulturen nach Nutzungsbereich, dient nur der Strukturierung. | Ackerkulturen, Grundfutterproduktion, Spezialkulturen |
+| 8      | Kultivierungsunterkategorien (`cultivationsubcategories`) | Gruppierung der Kulturen nach Kulturtyp, dient ebenfalls nur der Strukturierung. | Getreide, Dauerkulturen, Hackfrüchte, Freilandgemüse, geschützte Kulturen, Grundfutter, übriger Ökoausgleich, diverse Kulturen |
+| 314    | Agronomische Kulturkategorien (`agronomiccropcategories`) | Die eigentlichen Kulturen, jeweils einer Kategorie und einer Unterkategorie zugeordnet. Hier sind die spezifischen agronomischen und regulatorischen Eigenschaften hinterlegt. | «Winterweizen», «Zuckerrüben», «Naturwiese extensiv», «Aubergine, Erdkultur (geschützter Anbau)», «Walnüsse ≥ 185 Bäume/ha» |
 
-: Hierarchische Struktur der Kulturen im Nährstoffbilanz-Berechnungsservice und Anzahl der Elemente (N) je Klasse, Stand Juli 2026. {#tbl-nbbs-hierarchy tbl-colwidths="[5,30,35,30]"}
+: Klassen der Kulturen im Nährstoffbilanz-Berechnungsservice und Anzahl der Elemente (N) je Klasse, Stand Juli 2026. {#tbl-nbbs-classes tbl-colwidths="[5,30,35,30]"}
 
-Während die beiden obersten Ebenen rein der Strukturierung und Gruppierung dienen, weisen die agronomischen Kulturkategorien auf der untersten Ebene spezifische agronomische und regulatorische Eigenschaften auf.
+Entgegen dem ersten Anschein bilden diese drei Klassen keine dreistufige Hierarchie.
+Die Unterkategorien sind den Kategorien nicht untergeordnet; vielmehr handelt es sich um zwei unabhängige Gruppierungen, die sich beide direkt auf die Kulturen beziehen.
+Die Kultivierungskategorie gruppiert nach Nutzungsbereich, die Kultivierungsunterkategorie nach Kulturtyp, und derselbe Kulturtyp kann in mehreren Nutzungsbereichen vorkommen (@tbl-nbbs-crosstab).
+So sind «Silomais» und «Futterrüben» Hackfrüchte der Grundfutterproduktion, «Zuckerrüben» hingegen Hackfrüchte der Ackerkulturen; «Getreide-Silage» ist Getreide der Grundfutterproduktion, «Winterweizen» Getreide der Ackerkulturen.
+Im Datenmodell von eCH-0265 (@sec-classes) wird deshalb jede Kultur direkt mit ihrer Kategorie (`eCH-0265:cultivationCategory`) und ihrer Unterkategorie (`eCH-0265:cultivationSubCategory`) verknüpft.
+Zwischen Kategorien und Unterkategorien besteht keine Beziehung; beide sind oberste Konzepte (`skos:topConceptOf`) desselben Konzeptschemas.
+
+```{r}
+#| label: tbl-nbbs-crosstab
+#| tbl-cap: "Anzahl agronomischer Kulturkategorien im Nährstoffbilanz-Berechnungsservice je Kultivierungsunterkategorie (Zeilen) und Kultivierungskategorie (Spalten). Die Unterkategorien «Diverse Kulturen», «Getreide», «Hackfrüchte» und «übriger Ökoausgleich» kommen in mehr als einer Kategorie vor."
+library(rdflib)
+library(dplyr)
+graph <- rdf_parse("../../build/rdf/03-processed.ttl", format = "turtle")
+rdf_query(graph, "
+  PREFIX eCH-0265: <https://agriculture.ld.admin.ch/eCH-0265/2/>
+  PREFIX schema: <http://schema.org/>
+  SELECT ?Unterkategorie
+    (SUM(IF(?kategorie = 'Ackerkulturen'@de, 1, 0)) AS ?Ackerkulturen)
+    (SUM(IF(?kategorie = 'Grundfutterproduktion'@de, 1, 0)) AS ?Grundfutterproduktion)
+    (SUM(IF(?kategorie = 'Spezialkulturen'@de, 1, 0)) AS ?Spezialkulturen)
+  WHERE {
+    ?crop a eCH-0265:NutrientBalanceCrop ;
+          eCH-0265:cultivationCategory ?category ;
+          eCH-0265:cultivationSubCategory ?subcategory .
+    ?category schema:name ?kategorie .
+    ?subcategory schema:name ?Unterkategorie .
+  }
+  GROUP BY ?Unterkategorie
+  ORDER BY ?Unterkategorie") |>
+  mutate(across(-Unterkategorie, ~ ifelse(.x == 0, "", format(.x)))) |>
+  knitr::kable(align = "lrrr")
+```
+
+Während Kategorien und Unterkategorien rein der Strukturierung und Gruppierung dienen, weisen die agronomischen Kulturkategorien spezifische agronomische und regulatorische Eigenschaften auf.
 Dazu gehören beispielsweise der Ertrag, die Zulässigkeit für bestimmte Direktzahlungsprogramme oder die Teilnahme an spezifischen Vorhaben wie dem «62a Nitrat-Projekt».
 
 ## Pflanzenschutz {#sec-plant-protection}
@@ -297,7 +331,7 @@ shares <- classes |>
 Semantische Interoperabilität bedeutet, dass die Bedeutung (die _Semantik_) einer Information beim Austausch zwischen Systemen erhalten bleibt [@eif2017].
 Die Mapping-Tabellen aus @sec-mapping-tables bilden dafür ein sogenanntes _Alignment_ zwischen den drei unabhängig entstandenen Kategorisierungssystemen der Direktzahlungen (DZ), der Nährstoffbilanz (NB) und des Pflanzenschutzmittelverzeichnisses (PSM); die verwendeten SKOS-Beziehungen entsprechen den Äquivalenz- und Hierarchie-Mappings nach [@iso25964-2; @skos].
 Dieses Kapitel quantifiziert, wie weit die beschriebenen Kulturen ohne manuellen Eingriff in ein anderes System überführt werden können.
-Berücksichtigt werden nur aktuell geltende Kulturen ohne Strukturierungsebenen: die Kulturkategorien bei Direktzahlungen und Nährstoffbilanz bleiben aussen vor, und im PSMV zählen nur die untersten Kulturen, nicht übergeordnete Gruppen wie «Getreide» oder «Wintergetreide» (@fig-psm-hierarchy).[^note_psm]
+Berücksichtigt werden nur aktuell geltende Kulturen ohne Strukturierungsebenen: die Kulturkategorien der Direktzahlungen sowie die Kategorien und Unterkategorien der Nährstoffbilanz bleiben aussen vor, und im PSMV zählen nur die untersten Kulturen, nicht übergeordnete Gruppen wie «Getreide» oder «Wintergetreide» (@fig-psm-hierarchy).[^note_psm]
 
 [^note_psm]: Als unterste Kulturen gelten PSM-Kulturen, die selbst keine Unterkulturen (`skos:broader`) haben. Dieses Kriterium erfasst nicht alle Sammelbegriffe: «Offene Ackerfläche» und «Grünfläche» haben im PSMV keine Unterkulturen und zählen deshalb mit, sind fachlich aber sehr allgemein und nehmen einen Grossteil der aggregierenden Zuordnungen aus DZ und NB auf.
 
