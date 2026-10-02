@@ -10,14 +10,14 @@ For detailed (but work-in-progress) documentation, visit <https://blw-ofag-ufag.
 
 This repository includes a full semantic web pipeline, including
  
-1. manual data curation (data files in `src/rdf/data`),
-2. data integration from a relational database (using python, specifically `src/python/pipeline/...`),
-3. OWL-based inferencing (using the ontology in `src/rdf/model.owl.ttl`),
-4. SPARQL-based processing of the graph (using rules in `src/sparql/processing/...`)
-5. SHACL-based graph data validation (using `src/rdf/shapes/model.shacl.ttl`)
-6. a even more customizable Pytest test suite,
-7. uploading of the final graph to LINDAS
-8. a documentation building pipeline using Quarto
+1. manual data curation (Turtle files in `src/rdf/data`, one file per source system, plus the reference taxonomy in `src/rdf/ontology/cultivationtypes.owl.ttl`),
+2. optional automated data integration (any Python scripts placed in `src/python/pipeline/` are executed by `make` and their output is merged into the graph; the directory is currently empty, all data is curated manually),
+3. OWL-based inferencing (using the ontology in `src/rdf/ontology/model.owl.ttl`),
+4. SPARQL-based processing of the graph, e.g. the derivation of the SKOS mappings (using the update queries in `src/sparql/processing/`),
+5. SHACL-based graph data validation (using `src/rdf/shapes/model.shacl.ttl`),
+6. a Pytest test suite for syntax, SHACL reports, links, prefixes and queries,
+7. uploading of the final graph to LINDAS, and
+8. a documentation building pipeline using Quarto (`docs/`).
 
 ## Development tools
 
@@ -77,13 +77,13 @@ To streamline the workflow, this project uses `make` as its primary orchestratio
 
     **Build documentation**
 
-    To render the model UML diagram, and builds the Quarto website into `build/docs/`:
+    To generate the class and glossary reference from the SHACL shapes and the SKOS glossary, render the PlantUML diagrams in `docs/assets/puml/`, and build the Quarto website into `build/docs/`:
     
     ``` sh
     make docs
     ```
     
-    Note that this step requires [Quarto](https://quarto.org/) to be installed.
+    Note that this step requires [Quarto](https://quarto.org/) and R (with the packages listed in `.github/workflows/ci.yml`) to be installed.
 
 4. Upload the final data to [LINDAS](https://lindas.admin.ch/), the linked data service by the federal archives:
 
