@@ -1,11 +1,20 @@
-# This SPARQL update query cross-references agricultural crop observation sets
-# across different systems and materializes their relationships according to SKOS.
+# This SPARQL update query cross-references agricultural crops across the
+# concept schemes of the different systems and materialises their
+# relationships according to SKOS. Every crop points to at most one
+# cultivation type of the reference taxonomy (eCH-0265:exactMatch); the
+# SKOS mappings between crops of different schemes are derived from these
+# pointers and the subclass hierarchy of the cultivation types.
+#
+# Precedence per target scheme: a crop only receives skos:broadMatch links
+# into a scheme if it has no skos:exactMatch there, and it only receives
+# skos:narrowMatch links into a scheme if it has neither an exact nor a
+# broad match there.
 
 PREFIX eCH-0265: <https://agriculture.ld.admin.ch/eCH-0265/2/>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
 
-# 1. EXACT MATCH
+# 1. EXACT MATCH: both crops point to the same cultivation type
 INSERT {
   ?s skos:exactMatch ?t .
 }
@@ -16,7 +25,8 @@ WHERE {
   ?s eCH-0265:exactMatch / ^eCH-0265:exactMatch ?t .
 };
 
-# 2. BROAD MATCH
+# 2. BROAD MATCH: the target's cultivation type is a superclass of the
+#    source's cultivation type, and no exact match into the target scheme exists
 INSERT {
   ?s skos:broadMatch ?t .
 }
@@ -25,12 +35,15 @@ WHERE {
   ?t skos:inScheme ?t_scheme .
   FILTER(?s_scheme != ?t_scheme)
   ?s eCH-0265:exactMatch / rdfs:subClassOf+ / ^eCH-0265:exactMatch ?t .
-  FILTER NOT EXISTS { 
-    ?s eCH-0265:exactMatch / ^skos:inScheme ?t_scheme . 
+  FILTER NOT EXISTS {
+    ?s eCH-0265:exactMatch / ^eCH-0265:exactMatch ?exact .
+    ?exact skos:inScheme ?t_scheme .
   }
 };
 
-# 3. NARROW MATCH
+# 3. NARROW MATCH: the target's cultivation type is a subclass of the
+#    source's cultivation type, and neither an exact nor a broad match into
+#    the target scheme exists
 INSERT {
   ?s skos:narrowMatch ?t .
 }
@@ -39,7 +52,12 @@ WHERE {
   ?t skos:inScheme ?t_scheme .
   FILTER(?s_scheme != ?t_scheme)
   ?s eCH-0265:exactMatch / ^rdfs:subClassOf+ / ^eCH-0265:exactMatch ?t .
-  FILTER NOT EXISTS { 
-    ?s (eCH-0265:exactMatch|skos:broadMatch) / ^skos:inScheme ?t_scheme .
+  FILTER NOT EXISTS {
+    ?s eCH-0265:exactMatch / ^eCH-0265:exactMatch ?exact .
+    ?exact skos:inScheme ?t_scheme .
+  }
+  FILTER NOT EXISTS {
+    ?s eCH-0265:exactMatch / rdfs:subClassOf+ / ^eCH-0265:exactMatch ?broad .
+    ?broad skos:inScheme ?t_scheme .
   }
 }

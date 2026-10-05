@@ -1,0 +1,55 @@
+' Konzeptionelles Datenmodell von eCH-0265 (handgezeichnet, wird via Makefile nach docs/assets/img/ gerendert)
+' Der Titel der Referenztaxonomie steht unten: dafür ist das Package unbenannt und der Titel ein rahmenloses Pseudo-Element <<label>>.
+@startuml
+!pragma layout smetana
+skinparam dpi 220
+skinparam shadowing false
+skinparam roundCorner 10
+skinparam packageStyle rectangle
+skinparam defaultFontSize 12
+skinparam Padding 3
+skinparam ArrowColor #444444
+skinparam ArrowThickness 1.2
+skinparam classBorderColor #444444
+skinparam classBackgroundColor #FFFFFF
+skinparam packageBorderColor #999999
+skinparam packageBackgroundColor #F4F4F4
+skinparam classBorderColor<<label>> transparent
+skinparam classBackgroundColor<<label>> transparent
+skinparam classFontSize<<label>> 13
+hide <<label>> stereotype
+hide circle
+hide empty members
+
+package "Direktzahlungen (DZ)" as DZ {
+  class "Flächenkategorie" as DZC
+  class "Direktzahlungskultur" as DZK
+  DZK -up-> DZC : gehört zu
+}
+
+package "Nährstoffbilanz (NB)" as NB {
+  class "Kultivierungs-\nkategorie" as NBC
+  class "Kultivierungs-\nunterkategorie" as NBS
+  class "Agronomische\nKulturkategorie" as NBK
+  NBK -up-> NBC : Nutzungsbereich
+  NBK -up-> NBS : Kulturtyp
+}
+
+package "Pflanzenschutz (PSM)" as PSM {
+  class "PSM-Kultur" as PSMK
+  PSMK --> PSMK : übergeordnete\nKultur (0..2)
+}
+
+package " " as REF {
+  class "Nutzungstyp" as NT
+  class "<b>Referenztaxonomie</b>" as REFL <<label>>
+  NT --> NT : Oberbegriff
+  NT -[hidden]down- REFL
+}
+
+DZK --> NT : entspricht
+NBK --> NT : entspricht
+PSMK --> NT : entspricht
+DZ -[hidden]right- NB
+NB -[hidden]right- PSM
+@enduml

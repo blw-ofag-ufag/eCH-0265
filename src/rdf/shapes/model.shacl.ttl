@@ -237,7 +237,7 @@ eCH-0265:DirectPaymentCrop a sh:NodeShape, rdfs:Class ;
 eCH-0265:NutrientBalanceCropCategory a sh:NodeShape, rdfs:Class ;
     rdfs:label "Nährstoffbilanz-Kultivierungskategorie"@de,
         "Nutrient balance cultivation category"@en ;
-    rdfs:comment "Oberste Hierarchieebene der Kulturen im Nährstoffbilanz-Berechnungsservice, dient der reinen Strukturierung."@de ;
+    rdfs:comment "Gruppierung der agronomischen Kulturkategorien im Nährstoffbilanz-Berechnungsservice nach Nutzungsbereich (Ackerkulturen, Grundfutterproduktion, Spezialkulturen). Dient der reinen Strukturierung und steht in keiner hierarchischen Beziehung zur Kultivierungsunterkategorie."@de ;
     sh:closed true ;
     sh:ignoredProperties ( rdf:type skos:exactMatch skos:broadMatch skos:narrowMatch skos:broader skos:narrower ) ;    
     sh:property
@@ -274,7 +274,7 @@ eCH-0265:NutrientBalanceCropSubCategory a sh:NodeShape, rdfs:Class ;
     rdfs:subClassOf skos:Concept ;
     rdfs:label "Nährstoffbilanz-Kultivierungsunterkategorie"@de,
         "Nutrient balance cultivation subcategory"@en ;
-    rdfs:comment "Mittlere Hierarchieebene der Kulturen im Nährstoffbilanz-Berechnungsservice."@de ;
+    rdfs:comment "Gruppierung der agronomischen Kulturkategorien im Nährstoffbilanz-Berechnungsservice nach Kulturtyp (z.B. Getreide, Hackfrüchte, Dauerkulturen). Dient der reinen Strukturierung und ist unabhängig von der Kultivierungskategorie; derselbe Kulturtyp kann in mehreren Nutzungsbereichen vorkommen."@de ;
     sh:closed true ;
     sh:ignoredProperties ( rdf:type skos:exactMatch skos:broadMatch skos:narrowMatch skos:broader skos:narrower skos:topConceptOf ) ;
     sh:property
@@ -301,7 +301,7 @@ eCH-0265:NutrientBalanceCropSubCategory a sh:NodeShape, rdfs:Class ;
 eCH-0265:NutrientBalanceCrop a sh:NodeShape, rdfs:Class ;
     rdfs:label "Agronomische Kulturkategorie"@de,
         "Nutrient balance agronomic crop category"@en ;
-    rdfs:comment "Unterste Hierarchieebene, welche die eigentlichen Kulturen mit spezifischen agronomischen Eigenschaften für die Suisse-Bilanz beinhaltet."@de ;
+    rdfs:comment "Die eigentlichen Kulturen des Nährstoffbilanz-Berechnungsservice mit spezifischen agronomischen Eigenschaften für die Suisse-Bilanz. Jede Kultur ist genau einer Kultivierungskategorie und genau einer Kultivierungsunterkategorie zugeordnet."@de ;
     sh:closed true ;
     sh:ignoredProperties ( rdf:type skos:exactMatch skos:broadMatch skos:narrowMatch skos:broader skos:narrower ) ;
     sh:property
@@ -419,9 +419,9 @@ eCH-0265:identifier a sh:PropertyShape ;
 
 eCH-0265:cultivationType a sh:PropertyShape ;
     sh:order 0 ;
-    sh:name "Kultivierungstyp"@de,
+    sh:name "Nutzungstyp"@de,
         "Cultivation type"@en ;
-    sh:description "Der dieser bereichsspezifischen Kultur korrespondierende Kultivierungstyp in der Kulturenontologie."@de ;
+    sh:description "Der dieser bereichsspezifischen Kultur entsprechende Nutzungstyp in der Referenztaxonomie."@de ;
     sh:path eCH-0265:exactMatch ;
     sh:class eCH-0265:CultivationType ;
     sh:minCount 0 ;

@@ -1,0 +1,32 @@
+' Ableitung der Beziehungen zwischen den Fachbereichen am Beispiel (handgezeichnet, wird via Makefile nach docs/assets/img/ gerendert)
+' Durchgezogen: fachlich gepflegte Beziehungen. Gestrichelt: automatisch abgeleitete Beziehungen.
+@startuml
+!pragma layout smetana
+skinparam dpi 220
+skinparam shadowing false
+skinparam roundCorner 10
+skinparam defaultFontSize 12
+skinparam Padding 3
+skinparam ArrowColor #444444
+skinparam ArrowThickness 1.2
+skinparam rectangleBorderColor #444444
+skinparam rectangleBackgroundColor #FFFFFF
+skinparam rectangleBorderColor<<nt>> #999999
+skinparam rectangleBackgroundColor<<nt>> #F4F4F4
+hide stereotype
+
+rectangle "DZ-Kultur\n«Emmer, Einkorn»" as dz
+rectangle "NB-Kultur\n«Emmer / Einkorn»" as nb
+rectangle "PSM-Kultur\n«Getreide»" as psm
+rectangle "Nutzungstyp\n«Emmer und Einkorn»" <<nt>> as nt1
+rectangle "Nutzungstyp\n«Weizen»" <<nt>> as nt2
+rectangle "Nutzungstyp\n«Kleinkörniges Getreide»" <<nt>> as nt3
+
+dz -[#000000,dashed,thickness=2]-> nb : exactMatch (abgeleitet)
+dz -[#000000,dashed,thickness=2]-> psm : broadMatch (abgeleitet)
+nt1 -up-> nt2 : Oberbegriff
+nt2 -up-> nt3 : Oberbegriff
+dz --> nt1 : entspricht
+nb --> nt1 : entspricht
+psm --> nt3 : entspricht
+@enduml
