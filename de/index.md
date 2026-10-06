@@ -1,6 +1,6 @@
 # eCH-0265 Landwirtschaftliche Kulturen
 eCH Fachgruppe AgriFood
-29. September 2026
+6. Oktober 2026
 
 - [Hinweis](#sec-note)
 - [<span class="toc-section-number">1</span>
@@ -345,8 +345,8 @@ Tabelle 4: Eigenschaften Direktzahlungskultur
 |  | `skos:inScheme` | `sh:IRI` | 1..1 |
 | **Name**: Die offizielle Bezeichnung dieser Direktzahlungskultur, abgeglichen mit der Landwirtschaftlichen Begriffsverordnung (LBV). | `schema:name` | `rdf:langString` oder `sh:Literal` | 1..\* |
 | **Identifikator**: Der LNF-Code, auch Kulturcode genannt, ist der allgemein gebräuchliche Identifikator für Direktzahlungskulturen in der Schweiz. | `schema:identifier` | `xsd:string` oder `sh:Literal` | 1..1 |
-| **Gültig von**: Ab welchem Jahr wurde diese Direktzahlungskultur offiziell verwendet? | `schema:validFrom` | `xsd:integer` oder `sh:Literal` | 0..1 |
-| **Gültig bis**: Bis in welchem Jahr wurde diese Direktzahlungskultur offiziell verwendet? | `schema:validTo` | `xsd:integer` oder `sh:Literal` | 0..1 |
+| **Gültig von**: Ab welchem Datum wurde diese Direktzahlungskultur offiziell verwendet? | `schema:validFrom` | `xsd:date` oder `sh:Literal` | 0..1 |
+| **Gültig bis**: Bis zu welchem Datum wurde diese Direktzahlungskultur offiziell verwendet? | `schema:validTo` | `xsd:date` oder `sh:Literal` | 0..1 |
 | **Kultivierungstyp**: Der dieser bereichsspezifischen Kultur korrespondierende Kultivierungstyp in der Kulturenontologie. | `eCH-0265:exactMatch` | [`eCH-0265:CultivationType`](#sec-nodeshape-cultivationtype) | 0..1 |
 
 </div>
@@ -701,8 +701,8 @@ Zielsystems (Abdeckung).
 </div>
 
 Die in diesem Kapitel präsentierten Kennzahlen werden dabei automatisch
-berechnet (Stand der Berechnung: 29. September 2026). Sie beschreiben
-den aktuellen Stand der Mapping-Tabellen; fehlende Beziehungen können
+berechnet (Stand der Berechnung: 6. Oktober 2026). Sie beschreiben den
+aktuellen Stand der Mapping-Tabellen; fehlende Beziehungen können
 fachlich begründet sein oder auf Lücken hinweisen, die bei der Pflege
 des Alignments zu priorisieren sind \[EuMoSc08\].
 
