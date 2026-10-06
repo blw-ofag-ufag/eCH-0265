@@ -213,21 +213,21 @@ eCH-0265:DirectPaymentCrop a sh:NodeShape, rdfs:Class ;
         [
             sh:order 7 ;
             sh:name "Gültig von"@de ;
-            sh:description "Ab welchem Jahr wurde diese Direktzahlungskultur offiziell verwendet?"@de ;
+            sh:description "Ab welchem Datum wurde diese Direktzahlungskultur offiziell verwendet? Ist nur das Jahr bekannt, wird der 1. Januar angegeben."@de ;
             sh:maxCount 1 ;
-            sh:minInclusive 1999 ;
+            sh:minInclusive "1999-01-01"^^xsd:date ;
             sh:nodeKind sh:Literal ;
-            sh:datatype xsd:integer ;
+            sh:datatype xsd:date ;
             sh:path schema:validFrom ;
         ],
         [
             sh:order 8 ;
             sh:name "Gültig bis"@de ;
-            sh:description "Bis in welchem Jahr wurde diese Direktzahlungskultur offiziell verwendet?"@de ;
+            sh:description "Bis zu welchem Datum wurde diese Direktzahlungskultur offiziell verwendet? Ist nur das Jahr bekannt, wird der 31. Dezember angegeben."@de ;
             sh:maxCount 1 ;
             sh:path schema:validTo ;
             sh:nodeKind sh:Literal ;
-            sh:datatype xsd:integer ;
+            sh:datatype xsd:date ;
         ] .
 
 # ==============================================================================

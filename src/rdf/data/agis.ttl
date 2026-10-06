@@ -109,7 +109,7 @@ agis:501 a eCH-0265:DirectPaymentCrop ;
     schema:name "Sommergerste"@de,
         "Orge de printemps"@fr,
         "Orzo primaverile"@it ;
-    schema:validFrom 1999 ;
+    schema:validFrom "1999-01-01"^^xsd:date ;
     skos:inScheme agis:ConceptScheme ;
     skos:broader agis:1 ;
     eCH-0265:exactMatch cultivationtype:501 .
@@ -119,7 +119,7 @@ agis:502 a eCH-0265:DirectPaymentCrop ;
     schema:name "Wintergerste"@de,
         "Orge d'automne"@fr,
         "Orzo autunnale"@it ;
-    schema:validFrom 1999 ;
+    schema:validFrom "1999-01-01"^^xsd:date ;
     skos:inScheme agis:ConceptScheme ;
     skos:broader agis:1 ;
     eCH-0265:exactMatch cultivationtype:502 .
@@ -129,7 +129,7 @@ agis:504 a eCH-0265:DirectPaymentCrop ;
     schema:name "Hafer"@de,
         "Avoine"@fr,
         "Avena"@it ;
-    schema:validFrom 1999 ;
+    schema:validFrom "1999-01-01"^^xsd:date ;
     skos:inScheme agis:ConceptScheme ;
     skos:broader agis:1 ;
     eCH-0265:exactMatch cultivationtype:504 .
@@ -139,7 +139,7 @@ agis:505 a eCH-0265:DirectPaymentCrop ;
     schema:name "Triticale"@de,
         "Triticale"@fr,
         "Triticale"@it ;
-    schema:validFrom 1999 ;
+    schema:validFrom "1999-01-01"^^xsd:date ;
     skos:inScheme agis:ConceptScheme ;
     skos:broader agis:1 ;
     eCH-0265:exactMatch cultivationtype:505 .
@@ -149,7 +149,7 @@ agis:506 a eCH-0265:DirectPaymentCrop ;
     schema:name "Mischel Futtergetreide"@de,
         "Méteil de céréales fourragères"@fr,
         "Miscela di cereali da foraggio"@it ;
-    schema:validFrom 1999 ;
+    schema:validFrom "1999-01-01"^^xsd:date ;
     skos:inScheme agis:ConceptScheme ;
     skos:broader agis:1 ;
     eCH-0265:exactMatch cultivationtype:506 .
@@ -159,7 +159,7 @@ agis:507 a eCH-0265:DirectPaymentCrop ;
     schema:name "Futterweizen gemäss Sortenliste swiss granum"@de,
         "Blé fourrager selon la liste swiss granum"@fr,
         "Frumento da foraggio giusta la lista delle varietà di swiss granum"@it ;
-    schema:validFrom 2004 ;
+    schema:validFrom "2004-01-01"^^xsd:date ;
     skos:inScheme agis:ConceptScheme ;
     skos:broader agis:1 ;
     eCH-0265:exactMatch cultivationtype:507 .
@@ -169,7 +169,7 @@ agis:508 a eCH-0265:DirectPaymentCrop ;
     schema:name "Körnermais"@de,
         "Maïs grain"@fr,
         "Mais da granella"@it ;
-    schema:validFrom 1999 ;
+    schema:validFrom "1999-01-01"^^xsd:date ;
     skos:inScheme agis:ConceptScheme ;
     skos:broader agis:1 ;
     eCH-0265:exactMatch cultivationtype:508 .
@@ -179,8 +179,8 @@ agis:509 a eCH-0265:DirectPaymentCrop ;
     schema:name "Reis"@de,
         "Riz"@fr,
         "Riso"@it ;
-    schema:validFrom 2014 ;
-    schema:validTo 2022 ;
+    schema:validFrom "2014-01-01"^^xsd:date ;
+    schema:validTo "2022-12-31"^^xsd:date ;
     skos:inScheme agis:ConceptScheme ;
     skos:broader agis:1 ;
     eCH-0265:exactMatch cultivationtype:509 .
@@ -190,7 +190,7 @@ agis:510 a eCH-0265:DirectPaymentCrop ;
     schema:name "Hartweizen"@de,
         "Blé dur"@fr,
         "Grano duro"@it ;
-    schema:validFrom 2023 ;
+    schema:validFrom "2023-01-01"^^xsd:date ;
     skos:inScheme agis:ConceptScheme ;
     skos:broader agis:1 ;
     eCH-0265:exactMatch cultivationtype:510 .
@@ -200,7 +200,7 @@ agis:511 a eCH-0265:DirectPaymentCrop ;
     schema:name "Emmer, Einkorn"@de,
         "Amidonnier, engrain"@fr,
         "Farro, piccola spelta"@it ;
-    schema:validFrom 1999 ;
+    schema:validFrom "1999-01-01"^^xsd:date ;
     skos:inScheme agis:ConceptScheme ;
     skos:broader agis:1 ;
     eCH-0265:exactMatch cultivationtype:511 .
@@ -210,7 +210,7 @@ agis:512 a eCH-0265:DirectPaymentCrop ;
     schema:name "Sommerweizen (ohne Futterweizen der Sortenliste swiss granum)"@de,
         "Blé de printemps (sans le blé fourrager de la liste swiss granum)"@fr,
         "Frumento primaverile (escl. il frumento da foraggio di swiss granum)"@it ;
-    schema:validFrom 1999 ;
+    schema:validFrom "1999-01-01"^^xsd:date ;
     skos:inScheme agis:ConceptScheme ;
     skos:broader agis:1 ;
     eCH-0265:exactMatch cultivationtype:512 .
@@ -220,7 +220,7 @@ agis:513 a eCH-0265:DirectPaymentCrop ;
     schema:name "Winterweizen (ohne Futterweizen der Sortenliste swiss granum)"@de,
         "Blé d'automne (sans le blé fourrager de la liste swiss granum)"@fr,
         "Frumento autunnale (escl. il frumento da foraggio di swiss granum)"@it ;
-    schema:validFrom 1999 ;
+    schema:validFrom "1999-01-01"^^xsd:date ;
     skos:inScheme agis:ConceptScheme ;
     skos:broader agis:1 ;
     eCH-0265:exactMatch cultivationtype:513 .
@@ -230,7 +230,7 @@ agis:514 a eCH-0265:DirectPaymentCrop ;
     schema:name "Roggen"@de,
         "Seigle"@fr,
         "Segale"@it ;
-    schema:validFrom 1999 ;
+    schema:validFrom "1999-01-01"^^xsd:date ;
     skos:inScheme agis:ConceptScheme ;
     skos:broader agis:1 ;
     eCH-0265:exactMatch cultivationtype:514 .
@@ -240,7 +240,7 @@ agis:515 a eCH-0265:DirectPaymentCrop ;
     schema:name "Mischel Brotgetreide"@de,
         "Méteil de céréales panifiables"@fr,
         "Miscela di cereali panificabili"@it ;
-    schema:validFrom 1999 ;
+    schema:validFrom "1999-01-01"^^xsd:date ;
     skos:inScheme agis:ConceptScheme ;
     skos:broader agis:1 ;
     eCH-0265:exactMatch cultivationtype:515 .
@@ -250,7 +250,7 @@ agis:516 a eCH-0265:DirectPaymentCrop ;
     schema:name "Dinkel"@de,
         "Epeautre"@fr,
         "Spelta"@it ;
-    schema:validFrom 1999 ;
+    schema:validFrom "1999-01-01"^^xsd:date ;
     skos:inScheme agis:ConceptScheme ;
     skos:broader agis:1 ;
     eCH-0265:exactMatch cultivationtype:516 .
@@ -260,8 +260,8 @@ agis:517 a eCH-0265:DirectPaymentCrop ;
     schema:name "Getreide für die Saatgutproduktion"@de,
         "Semences de céréales"@fr,
         "Mais da semina (coltivazione contrattuale)"@it ;
-    schema:validFrom 2014 ;
-    schema:validTo 2015 ;
+    schema:validFrom "2014-01-01"^^xsd:date ;
+    schema:validTo "2015-12-31"^^xsd:date ;
     skos:inScheme agis:ConceptScheme ;
     skos:broader agis:1 ;
     eCH-0265:exactMatch cultivationtype:517 .
@@ -271,7 +271,7 @@ agis:519 a eCH-0265:DirectPaymentCrop ;
     schema:name "Saatmais (Vertragsanbau)"@de,
         "Semences de maïs (contrat de culture)"@fr,
         "Mais da semina (coltivazione contrattuale)"@it ;
-    schema:validFrom 2009 ;
+    schema:validFrom "2009-01-01"^^xsd:date ;
     skos:inScheme agis:ConceptScheme ;
     skos:broader agis:1 ;
     eCH-0265:exactMatch cultivationtype:519 .
@@ -281,7 +281,7 @@ agis:520 a eCH-0265:DirectPaymentCrop ;
     schema:name "Trockenreis"@de,
         "Riz en culture sèche"@fr,
         "Riso seminato su terreno asciutto"@it ;
-    schema:validFrom 2023 ;
+    schema:validFrom "2023-01-01"^^xsd:date ;
     skos:inScheme agis:ConceptScheme ;
     skos:broader agis:1 ;
     eCH-0265:exactMatch cultivationtype:520 .
@@ -291,7 +291,7 @@ agis:521 a eCH-0265:DirectPaymentCrop ;
     schema:name "Silo- und Grünmais"@de,
         "Maïs d'ensilage et maïs vert"@fr,
         "Mais da insilamento e verde"@it ;
-    schema:validFrom 1999 ;
+    schema:validFrom "1999-01-01"^^xsd:date ;
     skos:inScheme agis:ConceptScheme ;
     skos:broader agis:1 ;
     eCH-0265:exactMatch cultivationtype:521 .
@@ -301,7 +301,7 @@ agis:522 a eCH-0265:DirectPaymentCrop ;
     schema:name "Zuckerrüben"@de,
         "Betteraves sucrières"@fr,
         "Barbabietole da zucchero"@it ;
-    schema:validFrom 1999 ;
+    schema:validFrom "1999-01-01"^^xsd:date ;
     skos:inScheme agis:ConceptScheme ;
     skos:broader agis:1 ;
     eCH-0265:exactMatch cultivationtype:522 .
@@ -311,7 +311,7 @@ agis:523 a eCH-0265:DirectPaymentCrop ;
     schema:name "Futterrüben"@de,
         "Betteraves fourragères"@fr,
         "Barbabietole da foraggio"@it ;
-    schema:validFrom 1999 ;
+    schema:validFrom "1999-01-01"^^xsd:date ;
     skos:inScheme agis:ConceptScheme ;
     skos:broader agis:1 ;
     eCH-0265:exactMatch cultivationtype:523 .
@@ -321,7 +321,7 @@ agis:524 a eCH-0265:DirectPaymentCrop ;
     schema:name "Kartoffeln"@de,
         "Pommes de terre"@fr,
         "Patate"@it ;
-    schema:validFrom 1999 ;
+    schema:validFrom "1999-01-01"^^xsd:date ;
     skos:inScheme agis:ConceptScheme ;
     skos:broader agis:1 ;
     eCH-0265:exactMatch cultivationtype:524 .
@@ -331,7 +331,7 @@ agis:525 a eCH-0265:DirectPaymentCrop ;
     schema:name "Pflanzkartoffeln (Vertragsanbau)"@de,
         "Plants de pommes de terre (contrat de culture)"@fr,
         "Tuberi-seme di patate (coltivazione contrattuale)"@it ;
-    schema:validFrom 2009 ;
+    schema:validFrom "2009-01-01"^^xsd:date ;
     skos:inScheme agis:ConceptScheme ;
     skos:broader agis:1 ;
     eCH-0265:exactMatch cultivationtype:525 .
@@ -341,7 +341,7 @@ agis:526 a eCH-0265:DirectPaymentCrop ;
     schema:name "Sommerraps zur Speiseölgewinnung"@de,
         "Colza de printemps destiné à la fabrication d'huile comestible"@fr,
         "Colza primaverile per l'estrazione di olio commestibile"@it ;
-    schema:validFrom 1999 ;
+    schema:validFrom "1999-01-01"^^xsd:date ;
     skos:inScheme agis:ConceptScheme ;
     skos:broader agis:1 ;
     eCH-0265:exactMatch cultivationtype:526 .
@@ -351,7 +351,7 @@ agis:527 a eCH-0265:DirectPaymentCrop ;
     schema:name "Winterraps zur Speiseölgewinnung"@de,
         "Colza d'automne destiné à la fabrication d'huile comestible"@fr,
         "Colza autunnale per l'estrazione di olio commestibile"@it ;
-    schema:validFrom 1999 ;
+    schema:validFrom "1999-01-01"^^xsd:date ;
     skos:inScheme agis:ConceptScheme ;
     skos:broader agis:1 ;
     eCH-0265:exactMatch cultivationtype:527 .
@@ -361,7 +361,7 @@ agis:528 a eCH-0265:DirectPaymentCrop ;
     schema:name "Soja"@de,
         "Soja"@fr,
         "Soia"@it ;
-    schema:validFrom 1999 ;
+    schema:validFrom "1999-01-01"^^xsd:date ;
     skos:inScheme agis:ConceptScheme ;
     skos:broader agis:1 ;
     eCH-0265:exactMatch cultivationtype:528 .
@@ -371,7 +371,7 @@ agis:529 a eCH-0265:DirectPaymentCrop ;
     schema:name "Nassreis"@de,
         "Riz en culture humide"@fr,
         "Riso seminato su terreno bagnato"@it ;
-    schema:validFrom 2023 ;
+    schema:validFrom "2023-01-01"^^xsd:date ;
     skos:inScheme agis:ConceptScheme ;
     skos:broader agis:1 ;
     eCH-0265:exactMatch cultivationtype:529 .
@@ -381,7 +381,7 @@ agis:531 a eCH-0265:DirectPaymentCrop ;
     schema:name "Sonnenblumen zur Speiseölgewinnung"@de,
         "Tournesol destiné à la fabrication d'huile comestible"@fr,
         "Girasole per l'estrazione di olio commestibile"@it ;
-    schema:validFrom 1999 ;
+    schema:validFrom "1999-01-01"^^xsd:date ;
     skos:inScheme agis:ConceptScheme ;
     skos:broader agis:1 ;
     eCH-0265:exactMatch cultivationtype:531 .
@@ -391,8 +391,8 @@ agis:532 a eCH-0265:DirectPaymentCrop ;
     schema:name "Hanf (THC-arme Sorten nach BLW-Sortenliste)"@de,
         "Chanvre (sorte pauvre en THC selon liste OFAG)"@fr,
         "Canapa (varietà a basso tenore in THC cfr. elenco delle varietà UFAG)"@it ;
-    schema:validFrom 1999 ;
-    schema:validTo 2007 ;
+    schema:validFrom "1999-01-01"^^xsd:date ;
+    schema:validTo "2007-12-31"^^xsd:date ;
     skos:inScheme agis:ConceptScheme ;
     skos:broader agis:1 ;
     eCH-0265:exactMatch cultivationtype:532 .
@@ -402,8 +402,8 @@ agis:533 a eCH-0265:DirectPaymentCrop ;
     schema:name "Hanf (andere Sorten)"@de,
         "Chanvre (autres variétés)"@fr,
         "Canapa (altre varietà)"@it ;
-    schema:validFrom 1999 ;
-    schema:validTo 2007 ;
+    schema:validFrom "1999-01-01"^^xsd:date ;
+    schema:validTo "2007-12-31"^^xsd:date ;
     skos:inScheme agis:ConceptScheme ;
     skos:broader agis:1 ;
     eCH-0265:exactMatch cultivationtype:533 .
@@ -413,7 +413,7 @@ agis:534 a eCH-0265:DirectPaymentCrop ;
     schema:name "Lein"@de,
         "Lin"@fr,
         "Lino"@it ;
-    schema:validFrom 1999 ;
+    schema:validFrom "1999-01-01"^^xsd:date ;
     skos:inScheme agis:ConceptScheme ;
     skos:broader agis:1 ;
     eCH-0265:exactMatch cultivationtype:534 .
@@ -423,8 +423,8 @@ agis:535 a eCH-0265:DirectPaymentCrop ;
     schema:name "Hanf (nur Sorten nach BLW- und EU-Sortenkatalog)"@de,
         "Chanvre (uniquement variétés selon catalogue OFAG et UE)"@fr,
         "Canapa (unicamente le varietà nel catalogo UFAG e UE)"@it ;
-    schema:validFrom 2008 ;
-    schema:validTo 2021 ;
+    schema:validFrom "2008-01-01"^^xsd:date ;
+    schema:validTo "2021-12-31"^^xsd:date ;
     skos:inScheme agis:ConceptScheme ;
     skos:broader agis:1 ;
     eCH-0265:exactMatch cultivationtype:535 .
@@ -434,7 +434,7 @@ agis:536 a eCH-0265:DirectPaymentCrop ;
     schema:name "Bohnen und Wicken zur Körnergewinnung (z.B. Ackerbohnen)"@de,
         "Haricots et vesces en grains (p.ex. féveroles)"@fr,
         "Fagioli e vecce per l'estrazione di granelli (p.es. favette)"@it ;
-    schema:validFrom 1999 ;
+    schema:validFrom "1999-01-01"^^xsd:date ;
     skos:inScheme agis:ConceptScheme ;
     skos:broader agis:1 ;
     eCH-0265:exactMatch cultivationtype:536 .
@@ -444,7 +444,7 @@ agis:537 a eCH-0265:DirectPaymentCrop ;
     schema:name "Erbsen zur Körnergewinnung (z.B. Eiweisserbsen)"@de,
         "Pois en grains (p.ex. pois protéagineux)"@fr,
         "Piselli per l'estrazione di granelli (p.es. piselli proteici)"@it ;
-    schema:validFrom 1999 ;
+    schema:validFrom "1999-01-01"^^xsd:date ;
     skos:inScheme agis:ConceptScheme ;
     skos:broader agis:1 ;
     eCH-0265:exactMatch cultivationtype:537 .
@@ -454,7 +454,7 @@ agis:538 a eCH-0265:DirectPaymentCrop ;
     schema:name "Lupinen"@de,
         "Lupin"@fr,
         "Lupini"@it ;
-    schema:validFrom 1999 ;
+    schema:validFrom "1999-01-01"^^xsd:date ;
     skos:inScheme agis:ConceptScheme ;
     skos:broader agis:1 ;
     eCH-0265:exactMatch cultivationtype:538 .
@@ -464,7 +464,7 @@ agis:539 a eCH-0265:DirectPaymentCrop ;
     schema:name "Oelkürbisse"@de,
         "Courges à huile"@fr,
         "Zucche per l'estrazione di olio"@it ;
-    schema:validFrom 2001 ;
+    schema:validFrom "2001-01-01"^^xsd:date ;
     skos:inScheme agis:ConceptScheme ;
     skos:broader agis:1 ;
     eCH-0265:exactMatch cultivationtype:539 .
@@ -474,7 +474,7 @@ agis:540 a eCH-0265:DirectPaymentCrop ;
     schema:name "Kichererbsen"@de,
         "Pois chiches"@fr,
         "Ceci"@it ;
-    schema:validFrom 2023 ;
+    schema:validFrom "2023-01-01"^^xsd:date ;
     skos:inScheme agis:ConceptScheme ;
     skos:broader agis:1 ;
     eCH-0265:exactMatch cultivationtype:540 .
@@ -484,7 +484,7 @@ agis:541 a eCH-0265:DirectPaymentCrop ;
     schema:name "Tabak"@de,
         "Tabac"@fr,
         "Tabacco"@it ;
-    schema:validFrom 1999 ;
+    schema:validFrom "1999-01-01"^^xsd:date ;
     skos:inScheme agis:ConceptScheme ;
     skos:broader agis:1 ;
     eCH-0265:exactMatch cultivationtype:541 .
@@ -494,8 +494,8 @@ agis:542 a eCH-0265:DirectPaymentCrop ;
     schema:name "Hirse"@de,
         "Millet"@fr,
         "Miglio"@it ;
-    schema:validFrom 2008 ;
-    schema:validTo 2022 ;
+    schema:validFrom "2008-01-01"^^xsd:date ;
+    schema:validTo "2022-12-31"^^xsd:date ;
     skos:inScheme agis:ConceptScheme ;
     skos:broader agis:1 ;
     eCH-0265:exactMatch cultivationtype:542 .
@@ -505,7 +505,7 @@ agis:543 a eCH-0265:DirectPaymentCrop ;
     schema:name "Getreide siliert"@de,
         "Céréales ensilées"@fr,
         "Cereali insilati"@it ;
-    schema:validFrom 2016 ;
+    schema:validFrom "2016-01-01"^^xsd:date ;
     skos:inScheme agis:ConceptScheme ;
     skos:broader agis:1 ;
     eCH-0265:exactMatch cultivationtype:543 .
@@ -515,7 +515,7 @@ agis:544 a eCH-0265:DirectPaymentCrop ;
     schema:name "Leindotter"@de,
         "Cameline"@fr,
         "Dorella"@it ;
-    schema:validFrom 2016 ;
+    schema:validFrom "2016-01-01"^^xsd:date ;
     skos:inScheme agis:ConceptScheme ;
     skos:broader agis:1 ;
     eCH-0265:exactMatch cultivationtype:544 .
@@ -525,7 +525,7 @@ agis:545 a eCH-0265:DirectPaymentCrop ;
     schema:name "Einjährige Freilandgemüse (ohne Konservengemüse)"@de,
         "Cultures maraîchères de plein champ annuelles (sans les légumes de conserve)"@fr,
         "Ortaggi annuali di pieno campo (esclusi quelli destinati alla conservazione)"@it ;
-    schema:validFrom 1999 ;
+    schema:validFrom "1999-01-01"^^xsd:date ;
     skos:inScheme agis:ConceptScheme ;
     skos:broader agis:1 ;
     eCH-0265:exactMatch cultivationtype:545 .
@@ -535,7 +535,7 @@ agis:546 a eCH-0265:DirectPaymentCrop ;
     schema:name "Freiland-Konservengemüse"@de,
         "Légumes de conserve cultivés en plein champ"@fr,
         "Ortaggi di pieno campo per la conservazione"@it ;
-    schema:validFrom 1999 ;
+    schema:validFrom "1999-01-01"^^xsd:date ;
     skos:inScheme agis:ConceptScheme ;
     skos:broader agis:1 ;
     eCH-0265:exactMatch cultivationtype:546 .
@@ -545,7 +545,7 @@ agis:547 a eCH-0265:DirectPaymentCrop ;
     schema:name "Wurzeln der Treibzichorie"@de,
         "Racines de chicorée"@fr,
         "Radici di cicoria di coltura forzata"@it ;
-    schema:validFrom 2001 ;
+    schema:validFrom "2001-01-01"^^xsd:date ;
     skos:inScheme agis:ConceptScheme ;
     skos:broader agis:1 ;
     eCH-0265:exactMatch cultivationtype:547 .
@@ -555,7 +555,7 @@ agis:548 a eCH-0265:DirectPaymentCrop ;
     schema:name "Buchweizen"@de,
         "Sarrasin"@fr,
         "Grano saraceno"@it ;
-    schema:validFrom 2016 ;
+    schema:validFrom "2016-01-01"^^xsd:date ;
     skos:inScheme agis:ConceptScheme ;
     skos:broader agis:1 ;
     eCH-0265:exactMatch cultivationtype:548 .
@@ -565,8 +565,8 @@ agis:549 a eCH-0265:DirectPaymentCrop ;
     schema:name "Sorghum"@de,
         "Sorgho"@fr,
         "Sorgo"@it ;
-    schema:validFrom 2016 ;
-    schema:validTo 2022 ;
+    schema:validFrom "2016-01-01"^^xsd:date ;
+    schema:validTo "2022-12-31"^^xsd:date ;
     skos:inScheme agis:ConceptScheme ;
     skos:broader agis:1 ;
     eCH-0265:exactMatch cultivationtype:549 .
@@ -576,7 +576,7 @@ agis:551 a eCH-0265:DirectPaymentCrop ;
     schema:name "Einjährige Beeren (z.B. Erdbeeren)"@de,
         "Baies annuelles (p.ex. fraises)"@fr,
         "Bacche annuali (p.es. fragole)"@it ;
-    schema:validFrom 1999 ;
+    schema:validFrom "1999-01-01"^^xsd:date ;
     skos:inScheme agis:ConceptScheme ;
     skos:broader agis:1 ;
     eCH-0265:exactMatch cultivationtype:551 .
@@ -586,7 +586,7 @@ agis:552 a eCH-0265:DirectPaymentCrop ;
     schema:name "Einjährige nachwachsende Rohstoffe (Kenaf, usw.)"@de,
         "Matières premières renouvelables annuelles (kénaf, etc.)"@fr,
         "Materie prime rinnovabili annuali (kenaf, ecc.)"@it ;
-    schema:validFrom 1999 ;
+    schema:validFrom "1999-01-01"^^xsd:date ;
     skos:inScheme agis:ConceptScheme ;
     skos:broader agis:1 ;
     eCH-0265:exactMatch cultivationtype:552 .
@@ -596,7 +596,7 @@ agis:553 a eCH-0265:DirectPaymentCrop ;
     schema:name "Einjährige Gewürz- und Medizinalpflanzen"@de,
         "Plantes aromatiques et plantes médicinales annuelles"@fr,
         "Piante aromatiche e medicinali annuali"@it ;
-    schema:validFrom 1999 ;
+    schema:validFrom "1999-01-01"^^xsd:date ;
     skos:inScheme agis:ConceptScheme ;
     skos:broader agis:1 ;
     eCH-0265:exactMatch cultivationtype:553 .
@@ -606,7 +606,7 @@ agis:554 a eCH-0265:DirectPaymentCrop ;
     schema:name "Einjährige gärtnerische Freilandkulturen (Blumen, Rollrasen, usw.)"@de,
         "Cultures horticoles de plein champ annuelles (p.ex. fleurs, gazon en rouleaux)"@fr,
         "Floricoltura di pieno campo annuale (fiori, manto erboso in rotoli, ecc.)"@it ;
-    schema:validFrom 1999 ;
+    schema:validFrom "1999-01-01"^^xsd:date ;
     skos:inScheme agis:ConceptScheme ;
     skos:broader agis:1 ;
     eCH-0265:exactMatch cultivationtype:554 .
@@ -616,8 +616,8 @@ agis:555 a eCH-0265:DirectPaymentCrop ;
     schema:name "Ackerschonstreifen"@de,
         "Bande culturale extensive"@fr,
         "Fasce di colture estensive in campicoltura"@it ;
-    schema:validFrom 2016 ;
-    schema:validTo 2022 ;
+    schema:validFrom "2016-01-01"^^xsd:date ;
+    schema:validTo "2022-12-31"^^xsd:date ;
     skos:inScheme agis:ConceptScheme ;
     skos:broader agis:1 ;
     eCH-0265:exactMatch cultivationtype:555 .
@@ -627,7 +627,7 @@ agis:556 a eCH-0265:DirectPaymentCrop ;
     schema:name "Buntbrache"@de,
         "Jachère florale"@fr,
         "Maggese fioriti"@it ;
-    schema:validFrom 1999 ;
+    schema:validFrom "1999-01-01"^^xsd:date ;
     skos:inScheme agis:ConceptScheme ;
     skos:broader agis:1 ;
     eCH-0265:exactMatch cultivationtype:556 .
@@ -637,7 +637,7 @@ agis:557 a eCH-0265:DirectPaymentCrop ;
     schema:name "Rotationsbrache"@de,
         "Jachère tournante"@fr,
         "Maggese da rotazione"@it ;
-    schema:validFrom 1999 ;
+    schema:validFrom "1999-01-01"^^xsd:date ;
     skos:inScheme agis:ConceptScheme ;
     skos:broader agis:1 ;
     eCH-0265:exactMatch cultivationtype:557 .
@@ -647,8 +647,8 @@ agis:558 a eCH-0265:DirectPaymentCrop ;
     schema:name "Grünbrache (nur 1999)"@de,
         "Jachères vertes (uniquement en 1999)"@fr,
         "Maggesi verdi (1999)"@it ;
-    schema:validFrom 1999 ;
-    schema:validTo 1999 ;
+    schema:validFrom "1999-01-01"^^xsd:date ;
+    schema:validTo "1999-12-31"^^xsd:date ;
     skos:inScheme agis:ConceptScheme ;
     skos:broader agis:1 ;
     eCH-0265:exactMatch cultivationtype:558 .
@@ -658,7 +658,7 @@ agis:559 a eCH-0265:DirectPaymentCrop ;
     schema:name "Saum auf Ackerfläche"@de,
         "Ourlet sur terres assolées"@fr,
         "Striscia su superficie coltiva"@it ;
-    schema:validFrom 2008 ;
+    schema:validFrom "2008-01-01"^^xsd:date ;
     skos:inScheme agis:ConceptScheme ;
     skos:broader agis:1 ;
     eCH-0265:exactMatch cultivationtype:559 .
@@ -668,8 +668,8 @@ agis:561 a eCH-0265:DirectPaymentCrop ;
     schema:name "Rübsen für die Samenproduktion (Vertragsanbau)"@de,
         "Navets destinés à la production de semences (contrat de culture)"@fr,
         "Ravizzone per la produzione di sementi"@it ;
-    schema:validFrom 2011 ;
-    schema:validTo 2013 ;
+    schema:validFrom "2011-01-01"^^xsd:date ;
+    schema:validTo "2013-12-31"^^xsd:date ;
     skos:inScheme agis:ConceptScheme ;
     skos:broader agis:1 ;
     eCH-0265:exactMatch cultivationtype:561 .
@@ -679,8 +679,8 @@ agis:562 a eCH-0265:DirectPaymentCrop ;
     schema:name "Phacelia für die Samenproduktion (Vertragsanbau)"@de,
         "Phacelia destinée à la production de semences (contrat de culture)"@fr,
         "Facelia per la produzione di sementi"@it ;
-    schema:validFrom 2011 ;
-    schema:validTo 2013 ;
+    schema:validFrom "2011-01-01"^^xsd:date ;
+    schema:validTo "2013-12-31"^^xsd:date ;
     skos:inScheme agis:ConceptScheme ;
     skos:broader agis:1 ;
     eCH-0265:exactMatch cultivationtype:562 .
@@ -690,8 +690,8 @@ agis:563 a eCH-0265:DirectPaymentCrop ;
     schema:name "Übrige Kulturen für die Samenproduktion (Vertragsanbau)"@de,
         "Autres cultures destinées à la production de semences (contrat de culture)"@fr,
         "Altre colture per la produzione di sementi"@it ;
-    schema:validFrom 2011 ;
-    schema:validTo 2013 ;
+    schema:validFrom "2011-01-01"^^xsd:date ;
+    schema:validTo "2013-12-31"^^xsd:date ;
     skos:inScheme agis:ConceptScheme ;
     skos:broader agis:1 ;
     eCH-0265:exactMatch cultivationtype:563 .
@@ -701,8 +701,8 @@ agis:564 a eCH-0265:DirectPaymentCrop ;
     schema:name "Ackerschonstreifen Ölsaaten (Raps, Sonnenblumen, Lein)"@de,
         "Bande culturale extensive Oléagineux (colza, tournesols, lin)"@fr,
         "Fasce di colture estensive in campicoltura - semi oleosi (colza, girasole, lino)"@it ;
-    schema:validFrom 1999 ;
-    schema:validTo 2015 ;
+    schema:validFrom "1999-01-01"^^xsd:date ;
+    schema:validTo "2015-12-31"^^xsd:date ;
     skos:inScheme agis:ConceptScheme ;
     skos:broader agis:1 ;
     eCH-0265:exactMatch cultivationtype:564 .
@@ -712,8 +712,8 @@ agis:565 a eCH-0265:DirectPaymentCrop ;
     schema:name "Ackerschonstreifen Getreide"@de,
         "Bande culturale extensive céréales"@fr,
         "Fasce di colture estensive in campicoltura - cereali"@it ;
-    schema:validFrom 1999 ;
-    schema:validTo 2015 ;
+    schema:validFrom "1999-01-01"^^xsd:date ;
+    schema:validTo "2015-12-31"^^xsd:date ;
     skos:inScheme agis:ConceptScheme ;
     skos:broader agis:1 ;
     eCH-0265:exactMatch cultivationtype:565 .
@@ -723,7 +723,7 @@ agis:566 a eCH-0265:DirectPaymentCrop ;
     schema:name "Mohn"@de,
         "Pavot"@fr,
         "Papavero"@it ;
-    schema:validFrom 2014 ;
+    schema:validFrom "2014-01-01"^^xsd:date ;
     skos:inScheme agis:ConceptScheme ;
     skos:broader agis:1 ;
     eCH-0265:exactMatch cultivationtype:566 .
@@ -733,7 +733,7 @@ agis:567 a eCH-0265:DirectPaymentCrop ;
     schema:name "Saflor"@de,
         "Carthame"@fr,
         "Cartamo"@it ;
-    schema:validFrom 2014 ;
+    schema:validFrom "2014-01-01"^^xsd:date ;
     skos:inScheme agis:ConceptScheme ;
     skos:broader agis:1 ;
     eCH-0265:exactMatch cultivationtype:567 .
@@ -743,7 +743,7 @@ agis:568 a eCH-0265:DirectPaymentCrop ;
     schema:name "Linsen"@de,
         "Lentilles"@fr,
         "Lenticchie"@it ;
-    schema:validFrom 2014 ;
+    schema:validFrom "2014-01-01"^^xsd:date ;
     skos:inScheme agis:ConceptScheme ;
     skos:broader agis:1 ;
     eCH-0265:exactMatch cultivationtype:568 .
@@ -753,7 +753,7 @@ agis:569 a eCH-0265:DirectPaymentCrop ;
     schema:name "Mischungen von Bohnen, Wicken, Erbsen, Kichererbsen und Lupinen mit Getreide oder Leindotter, mindestens 30 % Anteil Leguminosen bei der Ernte (zur Körnergewinnung)"@de,
         "Méteil de haricots, de vesces, de pois, de pois chiches et de lupins avec des céréales ou de la caméline, au moins 30 % de légumineuses lors de la récolte (pour la production de grains)"@fr,
         "Miscele di fagioli, vecce, piselli, ceci e lupini con cereali o camelina sativa, almeno il 30% di quota di leguminose nel raccolto (per l'estrazione di granelli)"@it ;
-    schema:validFrom 2014 ;
+    schema:validFrom "2014-01-01"^^xsd:date ;
     skos:inScheme agis:ConceptScheme ;
     skos:broader agis:1 ;
     eCH-0265:exactMatch cultivationtype:569 .
@@ -763,7 +763,7 @@ agis:570 a eCH-0265:DirectPaymentCrop ;
     schema:name "Mischungen von Linsen mit Getreide oder Leindotter, mindestens 30 % Anteil Linsen bei der Ernte (zur Körnergewinnung)"@de,
         "Méteil de lentilles avec des céréales ou de la caméline, au moins 30 % de lentilles lors de la récolte (pour la production de grains)"@fr,
         "Miscele di lenticchie con cereali o camelina sativa, almeno il 30% di quota di lenticchie nel raccolto (per l'estrazione di granelli)"@it ;
-    schema:validFrom 2023 ;
+    schema:validFrom "2023-01-01"^^xsd:date ;
     skos:inScheme agis:ConceptScheme ;
     skos:broader agis:1 ;
     eCH-0265:exactMatch cultivationtype:570 .
@@ -773,8 +773,8 @@ agis:571 a eCH-0265:DirectPaymentCrop ;
     schema:name "Ackerschonstreifen Körnerleguminosen (Ackerbohnen, Eiweisserbsen, Lupinen und Mischungen mit Code 569)"@de,
         "Bande culturale extensive Légumineuses (féveroles, pois protéagineux, lupins et méteils du code 569)"@fr,
         "Fasce di colture estensive in campicoltura - leguminose a granelli (favette, piselli proteici, lupini e miscele con codice 569)"@it ;
-    schema:validFrom 1999 ;
-    schema:validTo 2015 ;
+    schema:validFrom "1999-01-01"^^xsd:date ;
+    schema:validTo "2015-12-31"^^xsd:date ;
     skos:inScheme agis:ConceptScheme ;
     skos:broader agis:1 ;
     eCH-0265:exactMatch cultivationtype:571 .
@@ -784,7 +784,7 @@ agis:572 a eCH-0265:DirectPaymentCrop ;
     schema:name "Nützlingsstreifen auf offener Ackerfläche"@de,
         "Bandes semées pour organismes utiles dans les terres ouvertes"@fr,
         "Strisce per organismi utili sulla superficie coltiva aperta"@it ;
-    schema:validFrom 2015 ;
+    schema:validFrom "2015-01-01"^^xsd:date ;
     skos:inScheme agis:ConceptScheme ;
     skos:broader agis:1 ;
     eCH-0265:exactMatch cultivationtype:572 .
@@ -794,7 +794,7 @@ agis:573 a eCH-0265:DirectPaymentCrop ;
     schema:name "Senf"@de,
         "Moutarde"@fr,
         "Senape"@it ;
-    schema:validFrom 2018 ;
+    schema:validFrom "2018-01-01"^^xsd:date ;
     skos:inScheme agis:ConceptScheme ;
     skos:broader agis:1 ;
     eCH-0265:exactMatch cultivationtype:573 .
@@ -804,7 +804,7 @@ agis:574 a eCH-0265:DirectPaymentCrop ;
     schema:name "Quinoa"@de,
         "Quinoa"@fr,
         "Quinoa"@it ;
-    schema:validFrom 2019 ;
+    schema:validFrom "2019-01-01"^^xsd:date ;
     skos:inScheme agis:ConceptScheme ;
     skos:broader agis:1 ;
     eCH-0265:exactMatch cultivationtype:574 .
@@ -814,7 +814,7 @@ agis:575 a eCH-0265:DirectPaymentCrop ;
     schema:name "Hanf zur Nutzung der Samen"@de,
         "Chanvre pour l'utilisation des graines"@fr,
         "Canapa per l'uso dei semi"@it ;
-    schema:validFrom 2022 ;
+    schema:validFrom "2022-01-01"^^xsd:date ;
     skos:inScheme agis:ConceptScheme ;
     skos:broader agis:1 ;
     eCH-0265:exactMatch cultivationtype:575 .
@@ -824,7 +824,7 @@ agis:576 a eCH-0265:DirectPaymentCrop ;
     schema:name "Hanf zur Fasernutzung"@de,
         "Chanvre pour l'utilisation des fibres"@fr,
         "Canapa per l'uso delle fibre"@it ;
-    schema:validFrom 2022 ;
+    schema:validFrom "2022-01-01"^^xsd:date ;
     skos:inScheme agis:ConceptScheme ;
     skos:broader agis:1 ;
     eCH-0265:exactMatch cultivationtype:576 .
@@ -834,7 +834,7 @@ agis:577 a eCH-0265:DirectPaymentCrop ;
     schema:name "Anderer Hanf"@de,
         "Autre chanvre"@fr,
         "Restante canapa"@it ;
-    schema:validFrom 2022 ;
+    schema:validFrom "2022-01-01"^^xsd:date ;
     skos:inScheme agis:ConceptScheme ;
     skos:broader agis:1 ;
     eCH-0265:exactMatch cultivationtype:577 .
@@ -844,7 +844,7 @@ agis:578 a eCH-0265:DirectPaymentCrop ;
     schema:name "Hirse zur Körnergewinnung"@de,
         "Millet grains"@fr,
         "Miglio per l'estrazione di granelli"@it ;
-    schema:validFrom 2023 ;
+    schema:validFrom "2023-01-01"^^xsd:date ;
     skos:inScheme agis:ConceptScheme ;
     skos:broader agis:1 ;
     eCH-0265:exactMatch cultivationtype:578 .
@@ -854,7 +854,7 @@ agis:579 a eCH-0265:DirectPaymentCrop ;
     schema:name "Hirse zur Nutzung ganze Pflanze"@de,
         "Millet plante entière"@fr,
         "Miglio per la raccolta della pianta intera"@it ;
-    schema:validFrom 2023 ;
+    schema:validFrom "2023-01-01"^^xsd:date ;
     skos:inScheme agis:ConceptScheme ;
     skos:broader agis:1 ;
     eCH-0265:exactMatch cultivationtype:579 .
@@ -864,7 +864,7 @@ agis:580 a eCH-0265:DirectPaymentCrop ;
     schema:name "Sorghum zur Körnergewinnung"@de,
         "Sorgho grains"@fr,
         "Sorgo per l'estrazione di granelli"@it ;
-    schema:validFrom 2023 ;
+    schema:validFrom "2023-01-01"^^xsd:date ;
     skos:inScheme agis:ConceptScheme ;
     skos:broader agis:1 ;
     eCH-0265:exactMatch cultivationtype:580 .
@@ -874,7 +874,7 @@ agis:581 a eCH-0265:DirectPaymentCrop ;
     schema:name "Sorghum zur Nutzung ganze Pflanze"@de,
         "Sorgho plante entière"@fr,
         "Sorgo per la raccolta della pianta intera"@it ;
-    schema:validFrom 2023 ;
+    schema:validFrom "2023-01-01"^^xsd:date ;
     skos:inScheme agis:ConceptScheme ;
     skos:broader agis:1 ;
     eCH-0265:exactMatch cultivationtype:581 .
@@ -884,7 +884,7 @@ agis:590 a eCH-0265:DirectPaymentCrop ;
     schema:name "Sommerraps als nachwachsender Rohstoff"@de,
         "Colza de printemps comme matière première renouvelable"@fr,
         "Colza primaverile quale materia prima rinnovabile"@it ;
-    schema:validFrom 1999 ;
+    schema:validFrom "1999-01-01"^^xsd:date ;
     skos:inScheme agis:ConceptScheme ;
     skos:broader agis:1 ;
     eCH-0265:exactMatch cultivationtype:590 .
@@ -894,7 +894,7 @@ agis:591 a eCH-0265:DirectPaymentCrop ;
     schema:name "Winterraps als nachwachsender Rohstoff"@de,
         "Colza d'automne comme matière première renouvelable"@fr,
         "Colza autunnale quale materia prima rinnovabile"@it ;
-    schema:validFrom 1999 ;
+    schema:validFrom "1999-01-01"^^xsd:date ;
     skos:inScheme agis:ConceptScheme ;
     skos:broader agis:1 ;
     eCH-0265:exactMatch cultivationtype:591 .
@@ -904,7 +904,7 @@ agis:592 a eCH-0265:DirectPaymentCrop ;
     schema:name "Sonnenblumen als nachwachsender Rohstoff"@de,
         "Tournesol comme matière première renouvelable"@fr,
         "Girasole quale materia prima rinnovabile"@it ;
-    schema:validFrom 1999 ;
+    schema:validFrom "1999-01-01"^^xsd:date ;
     skos:inScheme agis:ConceptScheme ;
     skos:broader agis:1 ;
     eCH-0265:exactMatch cultivationtype:592 .
@@ -914,7 +914,7 @@ agis:594 a eCH-0265:DirectPaymentCrop ;
     schema:name "Offene Ackerfläche, beitragsberechtigt (regionsspezifische Biodiversitätsförderfläche)"@de,
         "Terres ouvertes donnant droit aux contributions (surfaces de promotion de la biodiversité spécifiques à la région)"@fr,
         "Superficie coltiva aperta, avente diritto ai contributi (superfici per la promozione della biodiversità specifiche di una regione)"@it ;
-    schema:validFrom 2016 ;
+    schema:validFrom "2016-01-01"^^xsd:date ;
     skos:inScheme agis:ConceptScheme ;
     skos:broader agis:1 ;
     eCH-0265:exactMatch cultivationtype:594 .
@@ -924,7 +924,7 @@ agis:595 a eCH-0265:DirectPaymentCrop ;
     schema:name "Übrige offene Ackerfläche, nicht beitragsberechtigt (regionsspezifische Biodiversitätsförderfläche)"@de,
         "Autres terres ouvertes ne donnant pas droit aux contributions (surfaces de promotion de la biodiversité spécifiques à la région)"@fr,
         "Altra superficie coltiva aperta, non avente diritto ai contributi (superfici per la promozione della biodiversità specifiche di una regione)"@it ;
-    schema:validFrom 2016 ;
+    schema:validFrom "2016-01-01"^^xsd:date ;
     skos:inScheme agis:ConceptScheme ;
     skos:broader agis:1 ;
     eCH-0265:exactMatch cultivationtype:595 .
@@ -934,7 +934,7 @@ agis:597 a eCH-0265:DirectPaymentCrop ;
     schema:name "Übrige offene Ackerfläche, beitragsberechtigt"@de,
         "Autres terres ouvertes donnant droit aux contributions"@fr,
         "Altra superficie coltiva aperta, avente diritto ai contributi"@it ;
-    schema:validFrom 1999 ;
+    schema:validFrom "1999-01-01"^^xsd:date ;
     skos:inScheme agis:ConceptScheme ;
     skos:broader agis:1 ;
     eCH-0265:exactMatch cultivationtype:597 .
@@ -944,7 +944,7 @@ agis:598 a eCH-0265:DirectPaymentCrop ;
     schema:name "Übrige offene Ackerfläche, nicht beitragsberechtigt"@de,
         "Autres terres ouvertes ne donnant pas droit aux contributions"@fr,
         "Altra superficie coltiva aperta, non avente diritto ai contributi"@it ;
-    schema:validFrom 1999 ;
+    schema:validFrom "1999-01-01"^^xsd:date ;
     skos:inScheme agis:ConceptScheme ;
     skos:broader agis:1 ;
     eCH-0265:exactMatch cultivationtype:598 .
@@ -954,7 +954,7 @@ agis:601 a eCH-0265:DirectPaymentCrop ;
     schema:name "Kunstwiesen (ohne Weiden)"@de,
         "Prairies artificielles (sans les pâturages)"@fr,
         "Prati artificiali (senza pascoli)"@it ;
-    schema:validFrom 1999 ;
+    schema:validFrom "1999-01-01"^^xsd:date ;
     skos:inScheme agis:ConceptScheme ;
     skos:broader agis:1 ;
     eCH-0265:exactMatch cultivationtype:601 .
@@ -964,7 +964,7 @@ agis:602 a eCH-0265:DirectPaymentCrop ;
     schema:name "Übrige Kunstwiesen, beitragsberechtigt (z.B. Schweineweide, Geflügelweide)"@de,
         "Autres prairies artificielles donnant droit aux contributions (p.ex. pâturages pour porcs et volaille)"@fr,
         "Altri prati artificiali avente diritto ai contributi (p.es. pascoli riservati ai suini e al pollame)"@it ;
-    schema:validFrom 2014 ;
+    schema:validFrom "2014-01-01"^^xsd:date ;
     skos:inScheme agis:ConceptScheme ;
     skos:broader agis:1 ;
     eCH-0265:exactMatch cultivationtype:602 .
@@ -974,7 +974,7 @@ agis:611 a eCH-0265:DirectPaymentCrop ;
     schema:name "Extensiv genutzte Wiesen (ohne Weiden)"@de,
         "Prairies extensives (sans les pâturages)"@fr,
         "Prati estensivi (senza pascoli)"@it ;
-    schema:validFrom 1999 ;
+    schema:validFrom "1999-01-01"^^xsd:date ;
     skos:inScheme agis:ConceptScheme ;
     skos:broader agis:21 ;
     eCH-0265:exactMatch cultivationtype:611 .
@@ -984,7 +984,7 @@ agis:612 a eCH-0265:DirectPaymentCrop ;
     schema:name "Wenig intensiv genutzte Wiesen (ohne Weiden)"@de,
         "Prairies peu intensives (sans les pâturages)"@fr,
         "Prati poco intensivi (senza pascoli)"@it ;
-    schema:validFrom 1999 ;
+    schema:validFrom "1999-01-01"^^xsd:date ;
     skos:inScheme agis:ConceptScheme ;
     skos:broader agis:21 ;
     eCH-0265:exactMatch cultivationtype:612 .
@@ -994,7 +994,7 @@ agis:613 a eCH-0265:DirectPaymentCrop ;
     schema:name "Übrige Dauerwiesen (ohne Weiden)"@de,
         "Autres prairies permanentes (sans les pâturages)"@fr,
         "Altri prati permanenti (senza pascoli)"@it ;
-    schema:validFrom 1999 ;
+    schema:validFrom "1999-01-01"^^xsd:date ;
     skos:inScheme agis:ConceptScheme ;
     skos:broader agis:21 ;
     eCH-0265:exactMatch cultivationtype:613 .
@@ -1004,7 +1004,7 @@ agis:616 a eCH-0265:DirectPaymentCrop ;
     schema:name "Weiden (Heimweiden, übrige Weiden ohne Sömmerungsweiden)"@de,
         "Pâturages (pâturages attenants à la ferme, autres pâturages, sauf les pâturages d'estivage)"@fr,
         "Pascoli (pascoli propri, altri pascoli senza pascoli d'estivazione)"@it ;
-    schema:validFrom 1999 ;
+    schema:validFrom "1999-01-01"^^xsd:date ;
     skos:inScheme agis:ConceptScheme ;
     skos:broader agis:21 ;
     eCH-0265:exactMatch cultivationtype:616 .
@@ -1014,7 +1014,7 @@ agis:617 a eCH-0265:DirectPaymentCrop ;
     schema:name "Extensiv genutzte Weiden"@de,
         "Pâturages extensifs"@fr,
         "Pascoli estensivi"@it ;
-    schema:validFrom 1999 ;
+    schema:validFrom "1999-01-01"^^xsd:date ;
     skos:inScheme agis:ConceptScheme ;
     skos:broader agis:21 ;
     eCH-0265:exactMatch cultivationtype:617 .
@@ -1024,7 +1024,7 @@ agis:618 a eCH-0265:DirectPaymentCrop ;
     schema:name "Waldweiden (ohne bewaldete Fläche)"@de,
         "Pâturages boisés (sauf surfaces boisées)"@fr,
         "Pascoli boschivi (senza i boschi)"@it ;
-    schema:validFrom 1999 ;
+    schema:validFrom "1999-01-01"^^xsd:date ;
     skos:inScheme agis:ConceptScheme ;
     skos:broader agis:21 ;
     eCH-0265:exactMatch cultivationtype:618 .
@@ -1034,8 +1034,8 @@ agis:619 a eCH-0265:DirectPaymentCrop ;
     schema:name "Weiden für Schweine, nicht anrechenbar für die Berechnung der RGVE"@de,
         "Pâturages pour porcs, non imputables pour le calcul des UGBFG"@fr,
         "Pascoli riservati ai suini e a pollame non computabili per il calcolo delle UBGFG"@it ;
-    schema:validFrom 1999 ;
-    schema:validTo 2013 ;
+    schema:validFrom "1999-01-01"^^xsd:date ;
+    schema:validTo "2013-12-31"^^xsd:date ;
     skos:inScheme agis:ConceptScheme ;
     skos:broader agis:21 ;
     eCH-0265:exactMatch cultivationtype:619 .
@@ -1045,7 +1045,7 @@ agis:621 a eCH-0265:DirectPaymentCrop ;
     schema:name "Heuwiesen im Sömmerungsgebiet, Übrige Wiesen (keine BFF)"@de,
         "Prairies de fauche en région d'estivage, autres (pas de SPB)"@fr,
         "Prati da sfalcio nella regione d'estivazione, altri prati (nessuna SPB)"@it ;
-    schema:validFrom 1999 ;
+    schema:validFrom "1999-01-01"^^xsd:date ;
     skos:inScheme agis:ConceptScheme ;
     skos:broader agis:21 ;
     eCH-0265:exactMatch cultivationtype:621 .
@@ -1055,7 +1055,7 @@ agis:622 a eCH-0265:DirectPaymentCrop ;
     schema:name "Heuwiesen im Sömmerungsgebiet, Typ extensiv genutzte Wiese"@de,
         "Prairies de fauche en région d'estivage, type prairie extensive"@fr,
         "Prati da sfalcio nella regione d'estivazione, tipo prati sfruttati in modo estensivo"@it ;
-    schema:validFrom 2000 ;
+    schema:validFrom "2000-01-01"^^xsd:date ;
     skos:inScheme agis:ConceptScheme ;
     skos:broader agis:21 ;
     eCH-0265:exactMatch cultivationtype:622 .
@@ -1065,7 +1065,7 @@ agis:623 a eCH-0265:DirectPaymentCrop ;
     schema:name "Heuwiesen im Sömmerungsgebiet, Typ wenig intensiv genutzte Wiese"@de,
         "Prairies de fauche en région d'estivage, type prairie peu intensive"@fr,
         "Prati da sfalcio nella regione d'estivazione, tipo prati sfruttati in modo poco intensivo"@it ;
-    schema:validFrom 2000 ;
+    schema:validFrom "2000-01-01"^^xsd:date ;
     skos:inScheme agis:ConceptScheme ;
     skos:broader agis:21 ;
     eCH-0265:exactMatch cultivationtype:623 .
@@ -1075,7 +1075,7 @@ agis:625 a eCH-0265:DirectPaymentCrop ;
     schema:name "Waldweiden (ohne bewaldete Fläche)"@de,
         "Pâturages boisés (sauf surfaces boisées)"@fr,
         "Pascoli boschivi (senza i boschi)"@it ;
-    schema:validFrom 2009 ;
+    schema:validFrom "2009-01-01"^^xsd:date ;
     skos:inScheme agis:ConceptScheme ;
     skos:broader agis:21 ;
     eCH-0265:exactMatch cultivationtype:625 .
@@ -1085,7 +1085,7 @@ agis:631 a eCH-0265:DirectPaymentCrop ;
     schema:name "Futterleguminosen für die Samenproduktion (Vertragsanbau)"@de,
         "Légumineuses fourragères destinées à la production de semences (contrat de culture)"@fr,
         "Leguminose da foraggio per la produzione di sementi (coltivazione contrattuale)"@it ;
-    schema:validFrom 2009 ;
+    schema:validFrom "2009-01-01"^^xsd:date ;
     skos:inScheme agis:ConceptScheme ;
     skos:broader agis:1 ;
     eCH-0265:exactMatch cultivationtype:631 .
@@ -1095,7 +1095,7 @@ agis:632 a eCH-0265:DirectPaymentCrop ;
     schema:name "Futtergräser für die Samenproduktion (Vertragsanbau)"@de,
         "Graminées fourragères destinées à la production de semences (contrat de culture)"@fr,
         "Graminacee da foraggio per la produzione di sementi (coltivazione contrattuale)"@it ;
-    schema:validFrom 2009 ;
+    schema:validFrom "2009-01-01"^^xsd:date ;
     skos:inScheme agis:ConceptScheme ;
     skos:broader agis:1 ;
     eCH-0265:exactMatch cultivationtype:632 .
@@ -1105,8 +1105,8 @@ agis:633 a eCH-0265:DirectPaymentCrop ;
     schema:name "Übrige Futterpflanzen für die Samenproduktion (Vertragsanbau)"@de,
         "Autres plantes fourragères destinées à la production de semences (contrat de culture)"@fr,
         "Altre piante foraggiere per la produzione di sementi (coltivazione contrattuale)"@it ;
-    schema:validFrom 2009 ;
-    schema:validTo 2013 ;
+    schema:validFrom "2009-01-01"^^xsd:date ;
+    schema:validTo "2013-12-31"^^xsd:date ;
     skos:inScheme agis:ConceptScheme ;
     skos:broader agis:1 ;
     eCH-0265:exactMatch cultivationtype:633 .
@@ -1116,8 +1116,8 @@ agis:634 a eCH-0265:DirectPaymentCrop ;
     schema:name "Uferwiese (ohne Weiden) entlang von Fliessgewässern"@de,
         "prairies riveraines d'un cours d'eau (sauf les pâturages)"@fr,
         "Prati rivieraschi lungo i corsi d'acqua (senza pascoli)"@it ;
-    schema:validFrom 2014 ;
-    schema:validTo 2022 ;
+    schema:validFrom "2014-01-01"^^xsd:date ;
+    schema:validTo "2022-12-31"^^xsd:date ;
     skos:inScheme agis:ConceptScheme ;
     skos:broader agis:21 ;
     eCH-0265:exactMatch cultivationtype:634 .
@@ -1127,7 +1127,7 @@ agis:635 a eCH-0265:DirectPaymentCrop ;
     schema:name "Uferwiesen (ohne Weiden)"@de,
         "Prairies riveraines (sauf les pâturages)"@fr,
         "Prati rivieraschi (senza pascoli)"@it ;
-    schema:validFrom 2023 ;
+    schema:validFrom "2023-01-01"^^xsd:date ;
     skos:inScheme agis:ConceptScheme ;
     skos:broader agis:21 ;
     eCH-0265:exactMatch cultivationtype:635 .
@@ -1137,7 +1137,7 @@ agis:693 a eCH-0265:DirectPaymentCrop ;
     schema:name "Weiden (regionsspezifische Biodiversitätsförderfläche)"@de,
         "Pâturages (surfaces de promotion de la biodiversité spécifiques à la région)"@fr,
         "Pascoli (superfici per la promozione della biodiversità specifiche di una regione)"@it ;
-    schema:validFrom 2015 ;
+    schema:validFrom "2015-01-01"^^xsd:date ;
     skos:inScheme agis:ConceptScheme ;
     skos:broader agis:21 ;
     eCH-0265:exactMatch cultivationtype:693 .
@@ -1147,7 +1147,7 @@ agis:694 a eCH-0265:DirectPaymentCrop ;
     schema:name "Grünfläche ohne Weiden (regionsspezifische Biodiversitätsförderfläche)"@de,
         "Surfaces herbagère sans les pâturages (surfaces de promotion de la biodiversité spécifiques à la région)"@fr,
         "Superfici inerbite, senza pascoli (superfici per la promozione della biodiversità specifiche di una regione)"@it ;
-    schema:validFrom 2015 ;
+    schema:validFrom "2015-01-01"^^xsd:date ;
     skos:inScheme agis:ConceptScheme ;
     skos:broader agis:21 ;
     eCH-0265:exactMatch cultivationtype:694 .
@@ -1157,8 +1157,8 @@ agis:695 a eCH-0265:DirectPaymentCrop ;
     schema:name "Regionsspezifische Biodiversitätsförderfläche (Grünfläche)"@de,
         "Surfaces de promotion de la biodiversité spécifiques à la région (Surface herbagère)"@fr,
         "Superfici per la promozione della biodiversità specifiche di una regione (superfici inerbite)"@it ;
-    schema:validFrom 2005 ;
-    schema:validTo 2014 ;
+    schema:validFrom "2005-01-01"^^xsd:date ;
+    schema:validTo "2014-12-31"^^xsd:date ;
     skos:inScheme agis:ConceptScheme ;
     skos:broader agis:21 ;
     eCH-0265:exactMatch cultivationtype:695 .
@@ -1168,7 +1168,7 @@ agis:697 a eCH-0265:DirectPaymentCrop ;
     schema:name "Übrige Grünfläche (Dauergrünfläche), beitragsberechtigt"@de,
         "Autres surfaces herbagères (surface herbagère permanente) donnant droit aux contributions"@fr,
         "Altre superfici (permanentemente) inerbite, aventi diritto ai contributi"@it ;
-    schema:validFrom 1999 ;
+    schema:validFrom "1999-01-01"^^xsd:date ;
     skos:inScheme agis:ConceptScheme ;
     skos:broader agis:21 ;
     eCH-0265:exactMatch cultivationtype:697 .
@@ -1178,7 +1178,7 @@ agis:698 a eCH-0265:DirectPaymentCrop ;
     schema:name "Übrige Grünfläche (Dauergrünfläche), nicht beitragsberechtigt"@de,
         "Autres surfaces herbagères (surface herbagère permanente) ne donnant pas droit aux contributions"@fr,
         "Altre superfici (permanentemente) inerbite, non aventi diritto ai contributi"@it ;
-    schema:validFrom 1999 ;
+    schema:validFrom "1999-01-01"^^xsd:date ;
     skos:inScheme agis:ConceptScheme ;
     skos:broader agis:21 ;
     eCH-0265:exactMatch cultivationtype:698 .
@@ -1188,7 +1188,7 @@ agis:701 a eCH-0265:DirectPaymentCrop ;
     schema:name "Reben"@de,
         "Vignes"@fr,
         "Vigna"@it ;
-    schema:validFrom 1999 ;
+    schema:validFrom "1999-01-01"^^xsd:date ;
     skos:inScheme agis:ConceptScheme ;
     eCH-0265:exactMatch cultivationtype:701 .
 
@@ -1197,7 +1197,7 @@ agis:702 a eCH-0265:DirectPaymentCrop ;
     schema:name "Obstanlagen (Äpfel)"@de,
         "Cultures fruitières (pommes)"@fr,
         "Frutteto (mele)"@it ;
-    schema:validFrom 1999 ;
+    schema:validFrom "1999-01-01"^^xsd:date ;
     skos:inScheme agis:ConceptScheme ;
     eCH-0265:exactMatch cultivationtype:702 .
 
@@ -1206,7 +1206,7 @@ agis:703 a eCH-0265:DirectPaymentCrop ;
     schema:name "Obstanlagen (Birnen)"@de,
         "Cultures fruitières (poires)"@fr,
         "Frutteto (pere)"@it ;
-    schema:validFrom 1999 ;
+    schema:validFrom "1999-01-01"^^xsd:date ;
     skos:inScheme agis:ConceptScheme ;
     eCH-0265:exactMatch cultivationtype:703 .
 
@@ -1215,7 +1215,7 @@ agis:704 a eCH-0265:DirectPaymentCrop ;
     schema:name "Obstanlagen (Steinobst)"@de,
         "Cultures fruitières (fruits à noyau)"@fr,
         "Frutteto (frutta a nocciolo)"@it ;
-    schema:validFrom 1999 ;
+    schema:validFrom "1999-01-01"^^xsd:date ;
     skos:inScheme agis:ConceptScheme ;
     eCH-0265:exactMatch cultivationtype:704 .
 
@@ -1224,7 +1224,7 @@ agis:705 a eCH-0265:DirectPaymentCrop ;
     schema:name "Mehrjährige Beeren"@de,
         "Baies pluriannuelles"@fr,
         "Bacche pluriennali"@it ;
-    schema:validFrom 1999 ;
+    schema:validFrom "1999-01-01"^^xsd:date ;
     skos:inScheme agis:ConceptScheme ;
     eCH-0265:exactMatch cultivationtype:705 .
 
@@ -1233,7 +1233,7 @@ agis:706 a eCH-0265:DirectPaymentCrop ;
     schema:name "Mehrjährige Gewürz- und Medizinalpflanzen"@de,
         "Plantes aromatiques et plantes médicinales pluriannuelles"@fr,
         "Piante aromatiche e medicinali pluriennali"@it ;
-    schema:validFrom 1999 ;
+    schema:validFrom "1999-01-01"^^xsd:date ;
     skos:inScheme agis:ConceptScheme ;
     eCH-0265:exactMatch cultivationtype:706 .
 
@@ -1242,7 +1242,7 @@ agis:707 a eCH-0265:DirectPaymentCrop ;
     schema:name "Mehrjährige nachwachsende Rohstoffe (Chinaschilf, usw.)"@de,
         "Matières premières renouvelables pluriannuelles (roseau de chine etc.)"@fr,
         "Materie prime rinnovabili pluriennali (Miscanthus sin. ecc.)"@it ;
-    schema:validFrom 1999 ;
+    schema:validFrom "1999-01-01"^^xsd:date ;
     skos:inScheme agis:ConceptScheme ;
     eCH-0265:exactMatch cultivationtype:707 .
 
@@ -1251,7 +1251,7 @@ agis:708 a eCH-0265:DirectPaymentCrop ;
     schema:name "Hopfen"@de,
         "Houblon"@fr,
         "Luppolo"@it ;
-    schema:validFrom 1999 ;
+    schema:validFrom "1999-01-01"^^xsd:date ;
     skos:inScheme agis:ConceptScheme ;
     eCH-0265:exactMatch cultivationtype:708 .
 
@@ -1260,7 +1260,7 @@ agis:709 a eCH-0265:DirectPaymentCrop ;
     schema:name "Rhabarber"@de,
         "Rhubarbe"@fr,
         "Rabarbaro"@it ;
-    schema:validFrom 1999 ;
+    schema:validFrom "1999-01-01"^^xsd:date ;
     skos:inScheme agis:ConceptScheme ;
     eCH-0265:exactMatch cultivationtype:709 .
 
@@ -1269,7 +1269,7 @@ agis:710 a eCH-0265:DirectPaymentCrop ;
     schema:name "Spargel"@de,
         "Asperges"@fr,
         "Asparagi"@it ;
-    schema:validFrom 1999 ;
+    schema:validFrom "1999-01-01"^^xsd:date ;
     skos:inScheme agis:ConceptScheme ;
     eCH-0265:exactMatch cultivationtype:710 .
 
@@ -1278,7 +1278,7 @@ agis:711 a eCH-0265:DirectPaymentCrop ;
     schema:name "Pilze (Freiland)"@de,
         "Champignons en pleine terre"@fr,
         "Funghi (in pieno campo)"@it ;
-    schema:validFrom 1999 ;
+    schema:validFrom "1999-01-01"^^xsd:date ;
     skos:inScheme agis:ConceptScheme ;
     eCH-0265:exactMatch cultivationtype:711 .
 
@@ -1287,7 +1287,7 @@ agis:712 a eCH-0265:DirectPaymentCrop ;
     schema:name "Christbäume"@de,
         "Sapins de Noël"@fr,
         "Alberelli di Natale"@it ;
-    schema:validFrom 1999 ;
+    schema:validFrom "1999-01-01"^^xsd:date ;
     skos:inScheme agis:ConceptScheme ;
     eCH-0265:exactMatch cultivationtype:712 .
 
@@ -1296,7 +1296,7 @@ agis:713 a eCH-0265:DirectPaymentCrop ;
     schema:name "Baumschule von Forstpflanzen ausserhalb der Forstzone"@de,
         "Pépinières de plantes forestières hors zone forestière"@fr,
         "Vivai forestali fuori delle zone forestali"@it ;
-    schema:validFrom 1999 ;
+    schema:validFrom "1999-01-01"^^xsd:date ;
     skos:inScheme agis:ConceptScheme ;
     eCH-0265:exactMatch cultivationtype:713 .
 
@@ -1305,7 +1305,7 @@ agis:714 a eCH-0265:DirectPaymentCrop ;
     schema:name "Ziersträucher, Ziergehölze und Zierstauden"@de,
         "Buissons, arbrisseaux et arbustes ornementaux"@fr,
         "Arbusti, arboscelli e cespugli ornamentali"@it ;
-    schema:validFrom 1999 ;
+    schema:validFrom "1999-01-01"^^xsd:date ;
     skos:inScheme agis:ConceptScheme ;
     eCH-0265:exactMatch cultivationtype:714 .
 
@@ -1314,8 +1314,8 @@ agis:715 a eCH-0265:DirectPaymentCrop ;
     schema:name "Übrige Baumschulen (Rosen, Früchte, usw.)"@de,
         "Autres pépinières (roses, fruits, etc.)"@fr,
         "Altri vivai (rose, frutta, ecc.)"@it ;
-    schema:validFrom 1999 ;
-    schema:validTo 2022 ;
+    schema:validFrom "1999-01-01"^^xsd:date ;
+    schema:validTo "2022-12-31"^^xsd:date ;
     skos:inScheme agis:ConceptScheme ;
     eCH-0265:exactMatch cultivationtype:715 .
 
@@ -1324,8 +1324,8 @@ agis:716 a eCH-0265:DirectPaymentCrop ;
     schema:name "Gepflegte Selven (Kastanien-/Nussbäume)"@de,
         "Châtaigneraies / noiseraies entretenues"@fr,
         "Selve curate di castagni e noci"@it ;
-    schema:validFrom 2011 ;
-    schema:validTo 2013 ;
+    schema:validFrom "2011-01-01"^^xsd:date ;
+    schema:validTo "2013-12-31"^^xsd:date ;
     skos:inScheme agis:ConceptScheme ;
     eCH-0265:exactMatch cultivationtype:716 .
 
@@ -1334,7 +1334,7 @@ agis:717 a eCH-0265:DirectPaymentCrop ;
     schema:name "Rebflächen mit natürlicher Artenvielfalt"@de,
         "Surfaces viticoles présentant une biodiversité naturelle"@fr,
         "Vigneti con biodiversità naturale"@it ;
-    schema:validFrom 1999 ;
+    schema:validFrom "1999-01-01"^^xsd:date ;
     skos:inScheme agis:ConceptScheme ;
     eCH-0265:exactMatch cultivationtype:717 .
 
@@ -1343,7 +1343,7 @@ agis:718 a eCH-0265:DirectPaymentCrop ;
     schema:name "Trüffelanlagen"@de,
         "Truffières"@fr,
         "Tartufaie"@it ;
-    schema:validFrom 2014 ;
+    schema:validFrom "2014-01-01"^^xsd:date ;
     skos:inScheme agis:ConceptScheme ;
     eCH-0265:exactMatch cultivationtype:718 .
 
@@ -1352,7 +1352,7 @@ agis:719 a eCH-0265:DirectPaymentCrop ;
     schema:name "Maulbeerbaumanlagen (Fütterung Seidenraupen)"@de,
         "Cultures de mûriers (alimentation des vers à soie)"@fr,
         "Coltivazioni di gelsi (foraggiamento dei bachi da seta)"@it ;
-    schema:validFrom 2014 ;
+    schema:validFrom "2014-01-01"^^xsd:date ;
     skos:inScheme agis:ConceptScheme ;
     eCH-0265:exactMatch cultivationtype:719 .
 
@@ -1361,7 +1361,7 @@ agis:720 a eCH-0265:DirectPaymentCrop ;
     schema:name "Gepflegte Selven (Edelkastanienbäume)"@de,
         "Châtaigneraies entretenues (surface)"@fr,
         "Selve curate (castagni)"@it ;
-    schema:validFrom 2014 ;
+    schema:validFrom "2014-01-01"^^xsd:date ;
     skos:inScheme agis:ConceptScheme ;
     eCH-0265:exactMatch cultivationtype:720 .
 
@@ -1370,7 +1370,7 @@ agis:721 a eCH-0265:DirectPaymentCrop ;
     schema:name "Mehrjährige gärtnerische Freilandkulturen (nicht im Gewächshaus)"@de,
         "Cultures horticoles pluriannuelles de plein air (pas en serres)"@fr,
         "Floricoltura di pieno campo pluriennale (non in serra)"@it ;
-    schema:validFrom 2015 ;
+    schema:validFrom "2015-01-01"^^xsd:date ;
     skos:inScheme agis:ConceptScheme ;
     eCH-0265:exactMatch cultivationtype:721 .
 
@@ -1379,7 +1379,7 @@ agis:722 a eCH-0265:DirectPaymentCrop ;
     schema:name "Baumschule von Reben"@de,
         "Pépinière viticoles"@fr,
         "Vivai viticoli"@it ;
-    schema:validFrom 2016 ;
+    schema:validFrom "2016-01-01"^^xsd:date ;
     skos:inScheme agis:ConceptScheme ;
     eCH-0265:exactMatch cultivationtype:722 .
 
@@ -1388,7 +1388,7 @@ agis:723 a eCH-0265:DirectPaymentCrop ;
     schema:name "Baumschule von Obst und Beeren"@de,
         "Pépinière de fruits et de baies"@fr,
         "Vivaio di alberi da frutto e bacche"@it ;
-    schema:validFrom 2023 ;
+    schema:validFrom "2023-01-01"^^xsd:date ;
     skos:inScheme agis:ConceptScheme ;
     eCH-0265:exactMatch cultivationtype:723 .
 
@@ -1397,7 +1397,7 @@ agis:724 a eCH-0265:DirectPaymentCrop ;
     schema:name "Übrige Baumschulen (Rosen, Zierstauden, usw.)"@de,
         "Autres pépinières (rosiers, plantes ornementales, etc.)"@fr,
         "Altri vivai (rose, arbusti ornamentali, ecc.)"@it ;
-    schema:validFrom 2023 ;
+    schema:validFrom "2023-01-01"^^xsd:date ;
     skos:inScheme agis:ConceptScheme ;
     eCH-0265:exactMatch cultivationtype:724 .
 
@@ -1406,7 +1406,7 @@ agis:725 a eCH-0265:DirectPaymentCrop ;
     schema:name "Permakultur (kleinräumige Mischung verschiedener Kulturen mit mehr als 50% Spezialkulturen)"@de,
         "Permaculture (mélange à petite échelle de différentes cultures avec plus de 50 % de cultures spéciales)"@fr,
         "Permacultura (miscelazione su piccola scala di diverse colture con più del 50 % di colture speciali)"@it ;
-    schema:validFrom 2020 ;
+    schema:validFrom "2020-01-01"^^xsd:date ;
     skos:inScheme agis:ConceptScheme ;
     eCH-0265:exactMatch cultivationtype:725 .
 
@@ -1415,7 +1415,7 @@ agis:731 a eCH-0265:DirectPaymentCrop ;
     schema:name "Andere Obstanlagen (Kiwi, Holunder, usw.)"@de,
         "Autres cultures fruitières (kiwi, sureau, etc.)"@fr,
         "Altri frutteti (kiwi, sambuco, ecc.)"@it ;
-    schema:validFrom 2009 ;
+    schema:validFrom "2009-01-01"^^xsd:date ;
     skos:inScheme agis:ConceptScheme ;
     eCH-0265:exactMatch cultivationtype:731 .
 
@@ -1424,7 +1424,7 @@ agis:735 a eCH-0265:DirectPaymentCrop ;
     schema:name "Reben (regionsspezifische Biodiversitätsförderfläche)"@de,
         "Vignes (surfaces de promotion de la biodiversité spécifiques à la région)"@fr,
         "Vigna (superfici per la promozione della biodiversità specifiche di una regione)"@it ;
-    schema:validFrom 2016 ;
+    schema:validFrom "2016-01-01"^^xsd:date ;
     skos:inScheme agis:ConceptScheme ;
     eCH-0265:exactMatch cultivationtype:735 .
 
@@ -1433,7 +1433,7 @@ agis:797 a eCH-0265:DirectPaymentCrop ;
     schema:name "Übrige Flächen mit Dauerkulturen, beitragsberechtigt"@de,
         "Autres surfaces de cultures pérennes donnant droit aux contributions"@fr,
         "Altre superfici con colture perenni, aventi diritto ai contributi"@it ;
-    schema:validFrom 1999 ;
+    schema:validFrom "1999-01-01"^^xsd:date ;
     skos:inScheme agis:ConceptScheme ;
     eCH-0265:exactMatch cultivationtype:797 .
 
@@ -1442,7 +1442,7 @@ agis:798 a eCH-0265:DirectPaymentCrop ;
     schema:name "Übrige Flächen mit Dauerkulturen, nicht beitragsberechtigt"@de,
         "Autres surfaces de cultures pérennes ne donnant pas droit aux contributions"@fr,
         "Altre superfici con colture perenni, non aventi diritto ai contributi"@it ;
-    schema:validFrom 1999 ;
+    schema:validFrom "1999-01-01"^^xsd:date ;
     skos:inScheme agis:ConceptScheme ;
     eCH-0265:exactMatch cultivationtype:798 .
 
@@ -1451,7 +1451,7 @@ agis:801 a eCH-0265:DirectPaymentCrop ;
     schema:name "Gemüsekulturen in Gewächshäusern mit festem Fundament"@de,
         "Cultures maraîchères sous serres avec fondations permanentes"@fr,
         "Colture orticole in serre con fondamenta fisse"@it ;
-    schema:validFrom 1999 ;
+    schema:validFrom "1999-01-01"^^xsd:date ;
     skos:inScheme agis:ConceptScheme ;
     skos:broader agis:7 ;
     eCH-0265:exactMatch cultivationtype:801 .
@@ -1461,7 +1461,7 @@ agis:802 a eCH-0265:DirectPaymentCrop ;
     schema:name "Übrige Spezialkulturen in Gewächshäusern mit festem Fundament"@de,
         "Autres cultures spéciales sous serres avec fondations permanentes"@fr,
         "Altre colture speciali in serre con fondamenta fisse"@it ;
-    schema:validFrom 1999 ;
+    schema:validFrom "1999-01-01"^^xsd:date ;
     skos:inScheme agis:ConceptScheme ;
     skos:broader agis:7 ;
     eCH-0265:exactMatch cultivationtype:802 .
@@ -1471,7 +1471,7 @@ agis:803 a eCH-0265:DirectPaymentCrop ;
     schema:name "Gärtnerische Kulturen in Gewächshäusern mit festem Fundament"@de,
         "Cultures horticoles sous serres avec fondations permanentes"@fr,
         "Floricoltura in serre con fondamenta fisse"@it ;
-    schema:validFrom 1999 ;
+    schema:validFrom "1999-01-01"^^xsd:date ;
     skos:inScheme agis:ConceptScheme ;
     skos:broader agis:7 ;
     eCH-0265:exactMatch cultivationtype:803 .
@@ -1481,7 +1481,7 @@ agis:804 a eCH-0265:DirectPaymentCrop ;
     schema:name "Beerenkulturen in Gewächshäusern mit festem Fundament"@de,
         "Cultures de petits fruits sous serres avec fondations permanentes"@fr,
         "Colture di bacche in serre con fondamenta fisse"@it ;
-    schema:validFrom 2023 ;
+    schema:validFrom "2023-01-01"^^xsd:date ;
     skos:inScheme agis:ConceptScheme ;
     skos:broader agis:7 ;
     eCH-0265:exactMatch cultivationtype:804 .
@@ -1491,8 +1491,8 @@ agis:806 a eCH-0265:DirectPaymentCrop ;
     schema:name "Gemüsekulturen in geschütztem Anbau ohne festes Fundament"@de,
         "Cultures maraîchères sous abri sans fondations permanentes"@fr,
         "Colture orticole in serre senza fondamenta fisse"@it ;
-    schema:validFrom 1999 ;
-    schema:validTo 2022 ;
+    schema:validFrom "1999-01-01"^^xsd:date ;
+    schema:validTo "2022-12-31"^^xsd:date ;
     skos:inScheme agis:ConceptScheme ;
     skos:broader agis:7 ;
     eCH-0265:exactMatch cultivationtype:806 .
@@ -1502,7 +1502,7 @@ agis:807 a eCH-0265:DirectPaymentCrop ;
     schema:name "Übrige Spezialkulturen in geschütztem Anbau ohne festes Fundament"@de,
         "Autres cultures spéciales sous abri sans fondations permanentes"@fr,
         "Altre colture speciali coltivate al coperto senza fondamenta fisse"@it ;
-    schema:validFrom 1999 ;
+    schema:validFrom "1999-01-01"^^xsd:date ;
     skos:inScheme agis:ConceptScheme ;
     skos:broader agis:7 ;
     eCH-0265:exactMatch cultivationtype:807 .
@@ -1512,7 +1512,7 @@ agis:808 a eCH-0265:DirectPaymentCrop ;
     schema:name "Gärtnerische Kulturen in geschütztem Anbau ohne festes Fundament"@de,
         "Cultures horticoles sous abri sans fondations permanentes"@fr,
         "Floricoltura al coperto senza fondamenta fisse"@it ;
-    schema:validFrom 1999 ;
+    schema:validFrom "1999-01-01"^^xsd:date ;
     skos:inScheme agis:ConceptScheme ;
     skos:broader agis:7 ;
     eCH-0265:exactMatch cultivationtype:808 .
@@ -1522,7 +1522,7 @@ agis:810 a eCH-0265:DirectPaymentCrop ;
     schema:name "Pilze in geschütztem Anbau mit festem Fundament"@de,
         "Champignons sous abri avec fondations permanentes"@fr,
         "Funghi coltivati al coperto con fondamenta fisse"@it ;
-    schema:validFrom 2014 ;
+    schema:validFrom "2014-01-01"^^xsd:date ;
     skos:inScheme agis:ConceptScheme ;
     skos:broader agis:7 ;
     eCH-0265:exactMatch cultivationtype:810 .
@@ -1532,7 +1532,7 @@ agis:811 a eCH-0265:DirectPaymentCrop ;
     schema:name "Gemüsekulturen in geschütztem Anbau ohne festes Fundament, im gewachsenen Boden"@de,
         "Cultures maraîchères sous abri sans fondations permanentes, sur sol naturel"@fr,
         "Colture orticole coltivate al coperto senza fondamenta fisse, nel terreno naturale"@it ;
-    schema:validFrom 2023 ;
+    schema:validFrom "2023-01-01"^^xsd:date ;
     skos:inScheme agis:ConceptScheme ;
     skos:broader agis:7 ;
     eCH-0265:exactMatch cultivationtype:811 .
@@ -1542,7 +1542,7 @@ agis:812 a eCH-0265:DirectPaymentCrop ;
     schema:name "Gemüsekulturen in geschütztem Anbau ohne festes Fundament, auf Pflanztischen oder -gestellen"@de,
         "Cultures maraîchères sous abri sans fondations permanentes, sur des tables de plantation ou des étagères"@fr,
         "Colture orticole coltivate al coperto senza fondamenta fisse, su tavole di piantagione o rastrelliere"@it ;
-    schema:validFrom 2023 ;
+    schema:validFrom "2023-01-01"^^xsd:date ;
     skos:inScheme agis:ConceptScheme ;
     skos:broader agis:7 ;
     eCH-0265:exactMatch cultivationtype:812 .
@@ -1552,7 +1552,7 @@ agis:813 a eCH-0265:DirectPaymentCrop ;
     schema:name "Beerenkulturen in geschütztem Anbau ohne festes Fundament, im gewachsenen Boden"@de,
         "Cultures de petits fruits sous abri sans fondations permanentes, sur sol naturel"@fr,
         "Colture di bacche coltivate al coperto senza fondamenta fisse, nel terreno naturale"@it ;
-    schema:validFrom 2023 ;
+    schema:validFrom "2023-01-01"^^xsd:date ;
     skos:inScheme agis:ConceptScheme ;
     skos:broader agis:7 ;
     eCH-0265:exactMatch cultivationtype:813 .
@@ -1562,7 +1562,7 @@ agis:814 a eCH-0265:DirectPaymentCrop ;
     schema:name "Beerenkulturen in geschütztem Anbau ohne festes Fundament, auf Pflanztischen oder -gestellen"@de,
         "Cultures de petits fruits sous abri sans fondations permanentes, sur des tables de plantation ou des étagères"@fr,
         "Colture di bacche coltivate al coperto senza fondamenta fisse, su tavole di piantagione o rastrelliere"@it ;
-    schema:validFrom 2023 ;
+    schema:validFrom "2023-01-01"^^xsd:date ;
     skos:inScheme agis:ConceptScheme ;
     skos:broader agis:7 ;
     eCH-0265:exactMatch cultivationtype:814 .
@@ -1572,7 +1572,7 @@ agis:847 a eCH-0265:DirectPaymentCrop ;
     schema:name "Übrige Kulturen in geschütztem Anbau ohne festes Fundament, beitragsberechtigt"@de,
         "Autres cultures sous abri sans fondations permanentes donnant droit aux contributions"@fr,
         "Altre colture coltivate al coperto senza fondamenta fisse, aventi diritto ai contributi"@it ;
-    schema:validFrom 1999 ;
+    schema:validFrom "1999-01-01"^^xsd:date ;
     skos:inScheme agis:ConceptScheme ;
     skos:broader agis:7 ;
     eCH-0265:exactMatch cultivationtype:847 .
@@ -1582,7 +1582,7 @@ agis:848 a eCH-0265:DirectPaymentCrop ;
     schema:name "Übrige Kulturen in geschütztem Anbau mit festem Fundament"@de,
         "Autres cultures sous abri avec fondations permanentes"@fr,
         "Altre colture coltivate al coperto con fondamenta fisse"@it ;
-    schema:validFrom 1999 ;
+    schema:validFrom "1999-01-01"^^xsd:date ;
     skos:inScheme agis:ConceptScheme ;
     skos:broader agis:7 ;
     eCH-0265:exactMatch cultivationtype:848 .
@@ -1592,7 +1592,7 @@ agis:849 a eCH-0265:DirectPaymentCrop ;
     schema:name "Übrige Kulturen in geschütztem Anbau ohne festes Fundament, nicht beitragsberechtigt"@de,
         "Autres cultures sous abri sans fondations permanentes ne donnant pas droit aux contributions"@fr,
         "Altre colture coltivate al coperto senza fondamenta fisse, non aventi diritto ai contributi"@it ;
-    schema:validFrom 2014 ;
+    schema:validFrom "2014-01-01"^^xsd:date ;
     skos:inScheme agis:ConceptScheme ;
     skos:broader agis:7 ;
     eCH-0265:exactMatch cultivationtype:849 .
@@ -1602,7 +1602,7 @@ agis:851 a eCH-0265:DirectPaymentCrop ;
     schema:name "Streueflächen innerhalb der landwirtschaftlichen Nutzfläche"@de,
         "Surfaces à litière dans la surface agricole utile"@fr,
         "Terreni da strame all’interno della superficie agricola utile"@it ;
-    schema:validFrom 1999 ;
+    schema:validFrom "1999-01-01"^^xsd:date ;
     skos:inScheme agis:ConceptScheme ;
     skos:broader agis:10 ;
     eCH-0265:exactMatch cultivationtype:851 .
@@ -1612,7 +1612,7 @@ agis:852 a eCH-0265:DirectPaymentCrop ;
     schema:name "Hecken-, Feld- und Ufergehölze (mit Krautsaum)"@de,
         "Haies, bosquets champêtres et berges boisées (avec la bande herbeuse)"@fr,
         "Siepi, boschetti campestri e rivieraschi (con bordo inerbito)"@it ;
-    schema:validFrom 1999 ;
+    schema:validFrom "1999-01-01"^^xsd:date ;
     skos:inScheme agis:ConceptScheme ;
     skos:broader agis:10 ;
     eCH-0265:exactMatch cultivationtype:852 .
@@ -1622,7 +1622,7 @@ agis:857 a eCH-0265:DirectPaymentCrop ;
     schema:name "Hecken-, Feld- und Ufergehölze (mit Pufferstreifen)"@de,
         "Haies, bosquets champêtres et berges boisées (avec la bande tampon)"@fr,
         "Siepi, boschetti campestri e rivieraschi (con fascia tampone)"@it ;
-    schema:validFrom 2008 ;
+    schema:validFrom "2008-01-01"^^xsd:date ;
     skos:inScheme agis:ConceptScheme ;
     skos:broader agis:10 ;
     eCH-0265:exactMatch cultivationtype:857 .
@@ -1632,7 +1632,7 @@ agis:858 a eCH-0265:DirectPaymentCrop ;
     schema:name "Hecken-, Feld- und Ufergehölze (mit Pufferstreifen) (regionsspezifische Biodiversitätsförderfläche)"@de,
         "Haies, bosquets champêtres et berges boisées (avec la bande tampon) (Surfaces de promotion de la biodiversité spécifiques à la région)"@fr,
         "Siepi, boschetti campestri e rivieraschi (con fascia tampone) (Superfici per la promozione della biodiversità specifiche di una regione)"@it ;
-    schema:validFrom 2016 ;
+    schema:validFrom "2016-01-01"^^xsd:date ;
     skos:inScheme agis:ConceptScheme ;
     skos:broader agis:10 ;
     eCH-0265:exactMatch cultivationtype:858 .
@@ -1642,8 +1642,8 @@ agis:895 a eCH-0265:DirectPaymentCrop ;
     schema:name "Übrige Flächen innerhalb der LN, beitragsberechtigt"@de,
         "Autres surfaces dans la SAU donnant droit aux contributions"@fr,
         "Altre superfici all'interno della SAU, aventi diritto ai contributi"@it ;
-    schema:validFrom 2005 ;
-    schema:validTo 2013 ;
+    schema:validFrom "2005-01-01"^^xsd:date ;
+    schema:validTo "2013-12-31"^^xsd:date ;
     skos:inScheme agis:ConceptScheme ;
     skos:broader agis:10 ;
     eCH-0265:exactMatch cultivationtype:895 .
@@ -1653,7 +1653,7 @@ agis:897 a eCH-0265:DirectPaymentCrop ;
     schema:name "Übrige Flächen innerhalb der landwirtschaftlichen Nutzfläche, beitragsberechtigt"@de,
         "Autres surfaces dans la surface agricole utile donnant droit aux contributions"@fr,
         "Altre superfici all’interno della superficie agricola utile, aventi diritto ai contributi"@it ;
-    schema:validFrom 1999 ;
+    schema:validFrom "1999-01-01"^^xsd:date ;
     skos:inScheme agis:ConceptScheme ;
     skos:broader agis:10 ;
     eCH-0265:exactMatch cultivationtype:897 .
@@ -1663,7 +1663,7 @@ agis:898 a eCH-0265:DirectPaymentCrop ;
     schema:name "Übrige Flächen innerhalb der landwirtschaftlichen Nutzfläche, nicht beitragsberechtigt"@de,
         "Autres surfaces dans la surface agricole utile ne donnant pas droit aux contributions"@fr,
         "Altre superfici all’interno della superficie agricola utile, non aventi diritto ai contributi"@it ;
-    schema:validFrom 1999 ;
+    schema:validFrom "1999-01-01"^^xsd:date ;
     skos:inScheme agis:ConceptScheme ;
     skos:broader agis:10 ;
     eCH-0265:exactMatch cultivationtype:898 .
@@ -1673,7 +1673,7 @@ agis:901 a eCH-0265:DirectPaymentCrop ;
     schema:name "Wald"@de,
         "Forêt"@fr,
         "Bosco"@it ;
-    schema:validFrom 1999 ;
+    schema:validFrom "1999-01-01"^^xsd:date ;
     skos:inScheme agis:ConceptScheme ;
     skos:broader agis:12 ;
     eCH-0265:exactMatch cultivationtype:901 .
@@ -1683,7 +1683,7 @@ agis:902 a eCH-0265:DirectPaymentCrop ;
     schema:name "Übrige unproduktive Flächen (z.B. gemulchte Flächen, stark verunkrautete Flächen, Hecke ohne Pufferstreifen)"@de,
         "Surfaces improductives (p.ex. haies sans les bandes tampons, surfaces broyées, surfaces avec un degré élevé de mauvaises herbes)"@fr,
         "Altre superfici improduttive (p.es. siepi senza fascia tampone, superfici pacciamate, superfici con elevata presenza di malerbe)"@it ;
-    schema:validFrom 1999 ;
+    schema:validFrom "1999-01-01"^^xsd:date ;
     skos:inScheme agis:ConceptScheme ;
     skos:broader agis:12 ;
     eCH-0265:exactMatch cultivationtype:902 .
@@ -1694,7 +1694,7 @@ agis:903 a eCH-0265:DirectPaymentCrop ;
     schema:name "Flächen ohne landwirtschaftliche Hauptzweckbestimmung (erschlossenes Bauland, Spiel-, Reit-, Camping-, Golf-, Flug- und Militärplätze oder ausgemarchte Bereiche von Eisenbahnen, öffentlichen Strassen und Gewässern)"@de,
         "Surfaces dont l'affectation principale n'est pas l'exploitation agricole (terrains à bâtir équipés et surfaces comprises dans les terrains de golf et de camping, aérodromes et terrains d'entraînement militaire, surfaces délimitées des bas-côtés des lignes de chemins de fer, de routes publiques, de cours et de plans d'eau)"@fr,
         "Superfici la cui destinazione principale non è l'utilizzazione agricola (quelle inserite in terreni edificabili urbanizzati, da golf, da equitazione, da campeggio, di aerodromi e d'esercitazione militare o che rientrano nella zona delimitata di ferrovie, strade pubbliche e corsi d'acqua)"@it ;
-    schema:validFrom 1999 ;
+    schema:validFrom "1999-01-01"^^xsd:date ;
     skos:inScheme agis:ConceptScheme ;
     skos:broader agis:12 ;
     eCH-0265:exactMatch cultivationtype:903 .
@@ -1704,7 +1704,7 @@ agis:904 a eCH-0265:DirectPaymentCrop ;
     schema:name "Wassergräben, Tümpel, Teiche"@de,
         "Fossés humides, mares, étangs"@fr,
         "Fossati umidi, stagni, pozze"@it ;
-    schema:validFrom 1999 ;
+    schema:validFrom "1999-01-01"^^xsd:date ;
     skos:inScheme agis:ConceptScheme ;
     skos:broader agis:12 ;
     eCH-0265:exactMatch cultivationtype:904 .
@@ -1714,7 +1714,7 @@ agis:905 a eCH-0265:DirectPaymentCrop ;
     schema:name "Ruderalflächen, Steinhaufen und -wälle"@de,
         "Surfaces rudérales, tas d'épierrage et affleurements rocheux"@fr,
         "Superfici ruderali, cumuli di pietra, affioramenti rocciosi"@it ;
-    schema:validFrom 1999 ;
+    schema:validFrom "1999-01-01"^^xsd:date ;
     skos:inScheme agis:ConceptScheme ;
     skos:broader agis:12 ;
     eCH-0265:exactMatch cultivationtype:905 .
@@ -1724,7 +1724,7 @@ agis:906 a eCH-0265:DirectPaymentCrop ;
     schema:name "Trockenmauern"@de,
         "Murs de pierres sèches"@fr,
         "Muri a secco"@it ;
-    schema:validFrom 1999 ;
+    schema:validFrom "1999-01-01"^^xsd:date ;
     skos:inScheme agis:ConceptScheme ;
     skos:broader agis:12 ;
     eCH-0265:exactMatch cultivationtype:906 .
@@ -1734,7 +1734,7 @@ agis:907 a eCH-0265:DirectPaymentCrop ;
     schema:name "Unbefestigte, natürliche Wege"@de,
         "Chemins naturels non stabilisés"@fr,
         "Sentieri e accessi naturali non consolidati"@it ;
-    schema:validFrom 1999 ;
+    schema:validFrom "1999-01-01"^^xsd:date ;
     skos:inScheme agis:ConceptScheme ;
     skos:broader agis:12 ;
     eCH-0265:exactMatch cultivationtype:907 .
@@ -1744,7 +1744,7 @@ agis:908 a eCH-0265:DirectPaymentCrop ;
     schema:name "Regionsspezifische Biodiversitätsförderfläche"@de,
         "Surfaces de promotion de la biodiversité spécifiques à la région"@fr,
         "Superfici per la promozione della biodiversità specifiche di una regione"@it ;
-    schema:validFrom 1999 ;
+    schema:validFrom "1999-01-01"^^xsd:date ;
     skos:inScheme agis:ConceptScheme ;
     skos:broader agis:12 ;
     eCH-0265:exactMatch cultivationtype:908 .
@@ -1754,7 +1754,7 @@ agis:909 a eCH-0265:DirectPaymentCrop ;
     schema:name "Hausgärten"@de,
         "Jardins potager"@fr,
         "Giardini e orti domestici"@it ;
-    schema:validFrom 1999 ;
+    schema:validFrom "1999-01-01"^^xsd:date ;
     skos:inScheme agis:ConceptScheme ;
     skos:broader agis:12 ;
     eCH-0265:exactMatch cultivationtype:909 .
@@ -1764,7 +1764,7 @@ agis:911 a eCH-0265:DirectPaymentCrop ;
     schema:name "Landwirtschaftliche Produktion in Gebäuden (z.B. Pilze, Brüsseler)"@de,
         "Production agricole dans des bâtiments (p.ex. champignons, chicorée witloof)"@fr,
         "Produzione agricola in edifici (p.es. funghi, cicoria belga)"@it ;
-    schema:validFrom 2015 ;
+    schema:validFrom "2015-01-01"^^xsd:date ;
     skos:inScheme agis:ConceptScheme ;
     skos:broader agis:12 ;
     eCH-0265:exactMatch cultivationtype:911 .
@@ -1774,7 +1774,7 @@ agis:921 a eCH-0265:DirectPaymentCrop ;
     schema:name "Hochstammfeldobstbäume"@de,
         "Arbres fruitiers haute-tige"@fr,
         "Alberi da frutto ad alto fusto nei campi"@it ;
-    schema:validFrom 1999 ;
+    schema:validFrom "1999-01-01"^^xsd:date ;
     skos:inScheme agis:ConceptScheme ;
     skos:broader agis:20 ;
     eCH-0265:exactMatch cultivationtype:921 .
@@ -1784,7 +1784,7 @@ agis:922 a eCH-0265:DirectPaymentCrop ;
     schema:name "Nussbäume"@de,
         "Noyers"@fr,
         "Noci"@it ;
-    schema:validFrom 2014 ;
+    schema:validFrom "2014-01-01"^^xsd:date ;
     skos:inScheme agis:ConceptScheme ;
     skos:broader agis:20 ;
     eCH-0265:exactMatch cultivationtype:922 .
@@ -1794,7 +1794,7 @@ agis:923 a eCH-0265:DirectPaymentCrop ;
     schema:name "Edelkastanienbäume"@de,
         "Châtaigniers"@fr,
         "Castagni"@it ;
-    schema:validFrom 2014 ;
+    schema:validFrom "2014-01-01"^^xsd:date ;
     skos:inScheme agis:ConceptScheme ;
     skos:broader agis:20 ;
     eCH-0265:exactMatch cultivationtype:923 .
@@ -1804,7 +1804,7 @@ agis:924 a eCH-0265:DirectPaymentCrop ;
     schema:name "Einheimische standortgerechte Einzelbäume und Alleen"@de,
         "Arbres isolés indigènes adaptés au site et allées d'arbres"@fr,
         "Alberi indigeni isolati adatti al luogo e viali alberati"@it ;
-    schema:validFrom 1999 ;
+    schema:validFrom "1999-01-01"^^xsd:date ;
     skos:inScheme agis:ConceptScheme ;
     skos:broader agis:20 ;
     eCH-0265:exactMatch cultivationtype:924 .
@@ -1814,7 +1814,7 @@ agis:925 a eCH-0265:DirectPaymentCrop ;
     schema:name "Markante Einzelbäume"@de,
         "Arbres isolés remarquables"@fr,
         "Alberi isolati importanti"@it ;
-    schema:validFrom 2014 ;
+    schema:validFrom "2014-01-01"^^xsd:date ;
     skos:inScheme agis:ConceptScheme ;
     skos:broader agis:20 ;
     eCH-0265:exactMatch cultivationtype:925 .
@@ -1824,7 +1824,7 @@ agis:926 a eCH-0265:DirectPaymentCrop ;
     schema:name "Andere Bäume"@de,
         "Autres arbres"@fr,
         "Altri alberi"@it ;
-    schema:validFrom 2014 ;
+    schema:validFrom "2014-01-01"^^xsd:date ;
     skos:inScheme agis:ConceptScheme ;
     skos:broader agis:20 ;
     eCH-0265:exactMatch cultivationtype:926 .
@@ -1834,7 +1834,7 @@ agis:927 a eCH-0265:DirectPaymentCrop ;
     schema:name "Andere Bäume (regionsspezifische Biodiversitätsförderfläche)"@de,
         "Autres arbres (surfaces de promotion de la biodiversité spécifiques à la région)"@fr,
         "Altri alberi (superfici per la promozione della biodiversità specifiche di una regione)"@it ;
-    schema:validFrom 2016 ;
+    schema:validFrom "2016-01-01"^^xsd:date ;
     skos:inScheme agis:ConceptScheme ;
     skos:broader agis:20 ;
     eCH-0265:exactMatch cultivationtype:927 .
@@ -1844,7 +1844,7 @@ agis:928 a eCH-0265:DirectPaymentCrop ;
     schema:name "Andere Elemente (regionsspezifische Biodiversitätsförderfläche)"@de,
         "Autres éléments (surfaces de promotion de la biodiversité spécifiques à la région)"@fr,
         "Altri elementi (superficie per la promozione della biodiversità specifica di una regione)"@it ;
-    schema:validFrom 2016 ;
+    schema:validFrom "2016-01-01"^^xsd:date ;
     skos:inScheme agis:ConceptScheme ;
     skos:broader agis:20 ;
     eCH-0265:exactMatch cultivationtype:928 .
@@ -1854,7 +1854,7 @@ agis:929 a eCH-0265:DirectPaymentCrop ;
     schema:name "Andere Elemente (Landschaftsqualität)"@de,
         "Autres éléments (qualité du paysage)"@fr,
         "Altri elementi (qualità del paesaggio)"@it ;
-    schema:validFrom 2016 ;
+    schema:validFrom "2016-01-01"^^xsd:date ;
     skos:inScheme agis:ConceptScheme ;
     skos:broader agis:20 ;
     eCH-0265:exactMatch cultivationtype:929 .
@@ -1864,7 +1864,7 @@ agis:930 a eCH-0265:DirectPaymentCrop ;
     schema:name "Sömmerungsweiden"@de,
         "Pâturages d'estivage"@fr,
         "Pascoli d'estivazione"@it ;
-    schema:validFrom 1999 ;
+    schema:validFrom "1999-01-01"^^xsd:date ;
     skos:inScheme agis:ConceptScheme ;
     skos:broader agis:13 ;
     eCH-0265:exactMatch cultivationtype:930 .
@@ -1874,7 +1874,7 @@ agis:931 a eCH-0265:DirectPaymentCrop ;
     schema:name "Artenreiche Grün- und Streueflächen im Sömmerungsgebiet"@de,
         "Surfaces herbagères et surfaces à litière riches en espèces dans la région d'estivage"@fr,
         "Superfici inerbite e terreni da strame ricchi di specie nella regione d'estivazione"@it ;
-    schema:validFrom 2014 ;
+    schema:validFrom "2014-01-01"^^xsd:date ;
     skos:inScheme agis:ConceptScheme ;
     skos:broader agis:13 ;
     eCH-0265:exactMatch cultivationtype:931 .
@@ -1884,7 +1884,7 @@ agis:933 a eCH-0265:DirectPaymentCrop ;
     schema:name "Gemeinschaftsweiden"@de,
         "Pâturages communautaires"@fr,
         "Pascoli comunitari"@it ;
-    schema:validFrom 2014 ;
+    schema:validFrom "2014-01-01"^^xsd:date ;
     skos:inScheme agis:ConceptScheme ;
     skos:broader agis:13 ;
     eCH-0265:exactMatch cultivationtype:933 .
@@ -1894,7 +1894,7 @@ agis:935 a eCH-0265:DirectPaymentCrop ;
     schema:name "Heuwiesen für Zufütterung während der Sömmerung"@de,
         "Prairies de fauche en région d'estivage, pour l'affouragement pendant l'estivage"@fr,
         "Prati da sfalcio nella regione d'estivazione, per l'alimentazione durante l'estivazione"@it ;
-    schema:validFrom 2014 ;
+    schema:validFrom "2014-01-01"^^xsd:date ;
     skos:inScheme agis:ConceptScheme ;
     skos:broader agis:13 ;
     eCH-0265:exactMatch cultivationtype:935 .
@@ -1904,7 +1904,7 @@ agis:936 a eCH-0265:DirectPaymentCrop ;
     schema:name "Streueflächen im Sömmerungsgebiet"@de,
         "Surfaces à litière, région d'estivage"@fr,
         "Terreni da strame nella regione d'estivazione"@it ;
-    schema:validFrom 2014 ;
+    schema:validFrom "2014-01-01"^^xsd:date ;
     skos:inScheme agis:ConceptScheme ;
     skos:broader agis:13 ;
     eCH-0265:exactMatch cultivationtype:936 .
@@ -1914,7 +1914,7 @@ agis:998 a eCH-0265:DirectPaymentCrop ;
     schema:name "Übrige Flächen ausserhalb der landwirtschaftlichen Nutzfläche"@de,
         "Autres surfaces hors de la surface agricole utile"@fr,
         "Altre superfici fuori della superficie agricola utile"@it ;
-    schema:validFrom 1999 ;
+    schema:validFrom "1999-01-01"^^xsd:date ;
     skos:inScheme agis:ConceptScheme ;
     skos:broader agis:12 ;
     eCH-0265:exactMatch cultivationtype:998 .
