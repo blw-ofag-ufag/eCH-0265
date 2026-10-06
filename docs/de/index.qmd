@@ -1,22 +1,11 @@
 ---
-title: eCH-0265 Landwirtschaftliche Kulturen
-author: eCH Fachgruppe AgriFood
+title: Landwirtschaftliche Kulturen
 abstract: |
   Dieses Hilfsmittel beschreibt ein Datenmodell zu landwirtschaftlichen Kulturen der Schweiz in den Bereichen Direktzahlungen, Nährstoffbilanz und Pflanzenschutz.
   Es werden sowohl das Datenmodell, die effektiven Daten sowie Mapping-Tabellen bereitgestellt, um den Bezug zwischen den unterschiedlichen Bereichen herzustellen.
   Sämtliche Daten können als maschinenlesbare _Linked Data_ bezogen werden.
   Damit soll ein fachlich validierter Datenaustausch sowie die Mehrfachnutzung von Daten ermöglicht werden.
-date: last-modified
-date-format: long
-lang: de-CH
-keywords:
-  - Landwirtschaft
-  - Informatik
-  - Behörden
-license: CC BY 4.0
-citation: true
-csl: ../assets/din-1505-2-alphanumeric.csl
-lightbox: true
+lang: de
 ---
 
 # Hinweis {#sec-note .unnumbered}
@@ -43,9 +32,9 @@ Daraus entstehen Mapping-Tabellen, die zusammen mit den Kulturlisten als maschin
 
 ## Status {#sec-status}
 
-Dieses Dokument ist ein Hilfsmittel der eCH-Fachgruppe AgriFood.
-Es hat den Status *Working Draft* und ist noch nicht vom Expertenausschuss von eCH genehmigt.
-Inhalt, Datenmodell und Daten können sich bis zum Abschluss des Standardisierungsprozesses laufend ändern.
+{{< ech status >}}
+
+Inhalt, Datenmodell und Daten dieses Hilfsmittels können sich bis zum Abschluss des Standardisierungsprozesses laufend ändern.
 Die jeweils gültige Fassung wird auf <https://ech.ch/de/ech/ech-0265/> publiziert; der aktuelle Arbeitsstand ist auf GitHub einsehbar: <https://github.com/blw-ofag-ufag/eCH-0265>.
 
 Als Hilfsmittel formuliert dieses Dokument keine Vorgaben.
@@ -658,6 +647,12 @@ Sie führt für jede Klasse die zulässigen Eigenschaften mit Pfad, Typ und Kard
 
 ![UML-Klassendiagramm des Datenmodells von eCH-0265, abgeleitet aus den SHACL-Shapes. Attribute sind mit Datentyp und Kardinalität angegeben; `uniqueLang` bedeutet, dass je Sprache höchstens ein Wert zulässig ist. Alle Kulturen und Gruppen der drei Fachbereiche verweisen über `eCH-0265:exactMatch` auf höchstens einen Nutzungstyp der Referenztaxonomie.](../assets/img/data_model.png){#fig-uml width="100%" .lightbox}
 
+## Namespaces {#sec-namespaces}
+
+@tbl-namespaces listet die Präfixe und Namespaces, die das Datenmodell verwendet. Ein Präfix steht stellvertretend für eine Namespace-IRI, den gemeinsamen Anfang der IRIs eines Vokabulars.
+
+{{< include namespaces.md >}}
+
 {{< include entities.md >}}
 
 # Sicherheitsüberlegungen {#sec-safety-consideration}
@@ -697,12 +692,12 @@ Die dazugehörige Dokumentation kann kostenlos angefordert werden.
 Diese Bestimmungen gelten jedoch nur für die von eCH erarbeiteten Standards, nicht aber für Standards oder Produkte Dritter, die auf eCH-Standards verweisen.
 Die Standards enthalten die entsprechenden Hinweise auf Rechte Dritter.
 
-# Anhang A - Referenzen {#sec-appendix-a .appendix .unnumbered}
+# Anhang A – Referenzen {#sec-appendix-a .appendix .unnumbered}
 
 ::: {#refs}
 :::
 
-# Anhang B - Mitwirkung und Prüfung {#sec-appendix-b .appendix .unnumbered}
+# Anhang B – Mitwirkung und Prüfung {#sec-appendix-b .appendix .unnumbered}
 
 | Name                           | Organisation                      |
 |:-------------------------------|:----------------------------------|
@@ -713,11 +708,13 @@ Die Standards enthalten die entsprechenden Hinweise auf Rechte Dritter.
 
 : Autoren und Revision {#tbl-authors tbl-colwidths="[50,50]"}
 
-# Anhang C - Abkürzungen und Glossar {#sec-appendix-c .appendix .unnumbered}
+# Anhang C – Abkürzungen und Glossar {#sec-appendix-c .appendix .unnumbered}
+
+Dieses Glossar ist als SKOS-Glossar [@skos] auch maschinenlesbar verfügbar, auf [LINDAS](https://lindas.admin.ch/) und im [GitHub-Repository](https://github.com/blw-ofag-ufag/eCH-0265/blob/main/src/rdf/data/glossary.skos.ttl).
 
 {{< include glossary.md >}}
 
-# Anhang D - Änderungen gegenüber der Vorversion {#sec-appendix-d .appendix .unnumbered}
+# Anhang D – Änderungen gegenüber der Vorversion {#sec-appendix-d .appendix .unnumbered}
 
 Das vorliegende Dokument ist ein Hilfsmittel zur harmonisierten, systemübergreifenden Nutzung von landwirtschaftlichen Kulturdaten in der Schweiz.
 Gegenüber der Version 1.1.0 (eCH-0265 Datenstandard Agrardaten – Flächen und Kulturen) wurde das Dokument von einem unverbindlichen Standard zu einem Hilfsmittel umgewandelt.
@@ -727,6 +724,10 @@ Neu enthalten sind dafür die Kulturen aus dem Pflanzenschutzmittelverzeichnis.
 
 Eine vollständige Übersicht der Veränderungen wird auf GitHub geführt: <https://github.com/blw-ofag-ufag/eCH-0265/releases>.
 
-# Anhang E - Abbildungsverzeichnis {#sec-appendix-e .appendix .unnumbered}
+# Anhang E – Abbildungsverzeichnis {#sec-appendix-e .appendix .unnumbered}
 
-# Anhang F - Tabellenverzeichnis {#sec-appendix-f .appendix .unnumbered}
+{{< ech figures >}}
+
+# Anhang F – Tabellenverzeichnis {#sec-appendix-f .appendix .unnumbered}
+
+{{< ech tables >}}

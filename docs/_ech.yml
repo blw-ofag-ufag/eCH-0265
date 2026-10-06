@@ -1,0 +1,26 @@
+# eCH metadata shared by all language versions of the documentation.
+#
+# Values are language-neutral codes. They are translated into the labels of
+# the eCH title page by docs/assets/ech-metadata.lua, using the vocabulary in
+# docs/assets/ech-vocabulary.yml (which also lists the allowed codes).
+
+date: 2026-10-05          # date of issue (Ausgabedatum)
+date-format: iso
+
+ech:
+  number: eCH-0265
+  category: auxiliary     # standard | best-practice | auxiliary | white-paper | addendum
+  maturity: experimental  # experimental | defined | established
+  version: 2.0.0
+  status: in-progress     # in-progress | draft | proposal | approved | replaced | repealed | suspended
+  decision-date: null
+  replaces:
+    version: 1.1.0
+    change: major         # minor | major | new
+  prerequisites: []       # e.g. [eCH-0200]
+  attachments: []         # e.g. [model.ttl, shapes.ttl]
+  languages:
+    original: de
+    translations: []
+  group: AgriFood         # name of the Fachgruppe, the prefix is added per language
+  graph: https://lindas.admin.ch/foag/ech/0265/2   # named graph on LINDAS holding the published data

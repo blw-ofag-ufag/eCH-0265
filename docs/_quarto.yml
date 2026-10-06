@@ -7,16 +7,22 @@ project:
 website:
   title: eCH-0265 Version 2.0.0 (Working Draft)
   repo-url: https://github.com/blw-ofag-ufag/eCH-0265
-  repo-subdir: docs
-  repo-actions: [source, issue]
   favicon: assets/favicon.svg
   navbar:
     background: dark
+    title: false
+    logo: assets/ech.svg
+    logo-alt: eCH
     right:
       - icon: github
         href: https://github.com/blw-ofag-ufag/eCH-0265
+        aria-label: GitHub
+      - icon: bug
+        href: https://github.com/blw-ofag-ufag/eCH-0265/issues/new
+        aria-label: Issue
       - icon: envelope
         href: mailto:agridata.ch@blw.admin.ch
+        aria-label: Contact
   announcement:
     icon: info-circle
     dismissable: true
@@ -24,13 +30,41 @@ website:
     type: warning
 
 bibliography: references.yaml
+csl: assets/din-1505-2-alphanumeric.csl
+
+# eCH metadata shared by all languages, translated by the Lua filter
+metadata-files:
+  - _ech.yml
+filters:
+  - assets/ech-metadata.lua
+  - quarto
+  - assets/ech-captions.lua
+shortcodes:
+  - assets/ech-shortcodes.lua
 
 format:
   html:
-    theme: cosmo
+    theme:
+      light: [cosmo, assets/ech.scss]
+      dark: [cosmo, assets/ech.scss, assets/ech-dark.scss]
+    template-partials:
+      - assets/title-metadata.html
     toc: true
     toc-depth: 2
+    highlight-style: github   # muted colours in both the light and the dark theme
+    code-line-numbers: true
+    tbl-colwidths: true       # keep the column widths of the generated grid tables
+    reference-location: margin   # footnotes in the right margin, beside the text
+    format-links:
+      - html
+      - format: typst
+        text: PDF
+        icon: file-earmark-pdf
+      - format: gfm
+        text: Markdown
+        icon: markdown
     number-sections: true
+    lightbox: true
     syntax-definitions:
      - assets/sparql.xml
      - assets/turtle.xml
@@ -45,17 +79,17 @@ format:
     reference-doc: https://ech.ch/sites/default/files/imce/eCH-Dossier/0001-0030/eCH-0003/11.1.0/Beilagen/Beilagen%20aktuell%2028.11.2025/XXXX_d_DRA_JJJJ-MM-TT_eCH-0XXX_Vx.x.x_Titel.docx
     link-citations: true
   typst:
+    papersize: a4
+    mainfont: Nimbus Sans
+    fontsize: 11pt
     toc: true
     toc-depth: 3
     number-sections: true
     section-numbering: 1.1.1
-    mainfont: Nimbus Sans
-    fontsize: 12pt
-    margin:
-      x: 2.5cm
-      y: 3.5cm
-    include-in-header: assets/typst-header.typ
-    include-before-body: assets/typst-before-body.typ
+    template-partials:
+      - assets/typst-template.typ
+      - assets/typst-show.typ
+    code-line-numbers: true
     syntax-definitions:
      - assets/sparql.xml
      - assets/turtle.xml

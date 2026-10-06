@@ -313,7 +313,7 @@ references:
   url: "https://www.ijcai.org/Proceedings/07/Papers/054.pdf"
 
 - id: eCH-0205:1.0.0
-  citation-label: eCH-0205:1.0.0
+  citation-label: eCH-0205 1.0.0
   type: report
   author:
   - literal: eCH-Fachgruppe Open Government Data
@@ -325,7 +325,7 @@ references:
   URL: https://www.ech.ch/sites/default/files/dosvers/hauptdokument/AUXI_e_DEF_2018-03-13_eCH-0205_V1.0_Linked%20Open%20Data.pdf
 
 - id: eCH-0265:1.0.0
-  citation-label: eCH-0265:1.0.0
+  citation-label: eCH-0265 1.0.0
   type: report
   author:
   - literal: eCH-Fachgruppe AgriFood
