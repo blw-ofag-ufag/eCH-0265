@@ -21,8 +21,8 @@ rectangle "Nutzungstyp\n«Emmer und Einkorn»" <<nt>> as nt1
 rectangle "Nutzungstyp\n«Weizen»" <<nt>> as nt2
 rectangle "Nutzungstyp\n«Kleinkörniges Getreide»" <<nt>> as nt3
 
-dz -[#000000,dashed,thickness=2]-> nb : exactMatch (abgeleitet)
-dz -[#000000,dashed,thickness=2]-> psm : broadMatch (abgeleitet)
+dz -[#000000,dashed,thickness=2]-> nb : exactMatch
+dz -[#000000,dashed,thickness=2]-> psm : broadMatch
 nt1 -up-> nt2 : Oberbegriff
 nt2 -up-> nt3 : Oberbegriff
 dz --> nt1 : entspricht
