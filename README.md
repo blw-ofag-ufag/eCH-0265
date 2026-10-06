@@ -42,7 +42,7 @@ The project relies on core W3C Semantic Web standards to model, link, and valida
 
 ## Build and deployment orchestration
 
-To streamline the workflow, this project uses `make` as its primary orchestration tool, automating everything from setup to deployment. The `Makefile` defines a single entry point to sequentially execute data integration, logical reasoning, SPARQL updates, SHACL validation, testing, and documentation rendering.
+To streamline the workflow, this project uses `make` as its primary orchestration tool, automating everything from setup to deployment. The `Makefile` defines a single entry point to sequentially execute data integration, logical reasoning, SPARQL updates, SHACL validation, testing, and documentation rendering. `make help` lists all available targets with a short description.
 
 1. Add variables to `.env` (for local execution)
 

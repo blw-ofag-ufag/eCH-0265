@@ -49,6 +49,9 @@ $endif$
     page-infix: [$ech-display.page-infix$],
     organisation: [$ech-display.organisation$],
     summary: [$ech-display.summary$],
+$if(ech-display.unpublished)$
+    unpublished: true,
+$endif$
     rows: (
 $for(ech-rows)$
       (

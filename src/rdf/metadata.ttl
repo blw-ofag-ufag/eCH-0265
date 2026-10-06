@@ -1,0 +1,56 @@
+# ==============================================================================
+# GRAPH METADATA
+# ==============================================================================
+#
+# Describes the named graph on LINDAS as a dataset (schema.org, DCAT, VoID),
+# so that it can be found on LINDAS and opendata.swiss. The subject is the
+# IRI of the named graph (ech.graph in docs/_ech.yml, GRAPH in .env).
+#
+# The modification date (schema:dateModified, dcterms:modified) is not kept
+# here: `make publish` sets it automatically when the content of the graph
+# differs from the one currently on LINDAS (src/python/utils/graph_metadata.py).
+
+@prefix dcat:            <http://www.w3.org/ns/dcat#> .
+@prefix dcterms:         <http://purl.org/dc/terms/> .
+@prefix schema:          <http://schema.org/> .
+@prefix vcard:           <http://www.w3.org/2006/vcard/ns#> .
+@prefix void:            <http://rdfs.org/ns/void#> .
+@prefix xsd:             <http://www.w3.org/2001/XMLSchema#> .
+@prefix org:             <https://register.ld.admin.ch/opendataswiss/org/> .
+@prefix theme:           <https://register.ld.admin.ch/opendataswiss/category/> .
+@prefix status:          <https://ld.admin.ch/vocabulary/CreativeWorkStatus/> .
+@prefix tou:             <https://ld.admin.ch/vocabulary/TermsOfUse/> .
+@prefix frequency:       <https://publications.europa.eu/resource/authority/frequency/> .
+
+<https://lindas.admin.ch/foag/ech/0265/2> a void:Dataset,
+        dcat:Dataset,
+        schema:Dataset ;
+    schema:name
+        "eCH-0265 Landwirtschaftliche Kulturen"@de,
+        "eCH-0265 Agricultural crops"@en,
+        "eCH-0265 Cultures agricoles"@fr,
+        "eCH-0265 Colture agricole"@it ;
+    schema:description
+        "Daten des Hilfsmittels eCH-0265: die Kulturlisten der Direktzahlungen, der Nährstoffbilanz und des Pflanzenschutzmittelverzeichnisses, die Referenztaxonomie der Nutzungstypen sowie die daraus abgeleiteten Beziehungen zwischen den Fachbereichen als Linked Data."@de,
+        "Data of the eCH-0265 auxiliary document: the crop lists of direct payments, nutrient balance and the plant protection products register, the reference taxonomy of cultivation types and the derived relations between the domains as linked data."@en,
+        "Données du document auxiliaire eCH-0265: les listes de cultures des paiements directs, du bilan de fumure et de l'index des produits phytosanitaires, la taxonomie de référence des types d'utilisation ainsi que les relations dérivées entre les domaines sous forme de données liées."@fr,
+        "Dati del documento ausiliario eCH-0265: gli elenchi delle colture dei pagamenti diretti, del bilancio delle sostanze nutritive e dell'indice dei prodotti fitosanitari, la tassonomia di riferimento dei tipi di utilizzo e le relazioni derivate tra i settori come linked data."@it ;
+    dcterms:issued "2026-10-05"^^xsd:date ;
+    schema:dateCreated "2026-10-05"^^xsd:date ;
+    schema:datePublished "2026-10-05"^^xsd:date ;
+    schema:creativeWorkStatus status:Draft ;
+    schema:creator org:bundesamt-fur-landwirtschaft-blw ;
+    schema:publisher org:bundesamt-fur-landwirtschaft-blw ;
+    dcat:contactPoint [
+        a vcard:Organization ;
+        vcard:fn "Bundesamt für Landwirtschaft BLW" ;
+        vcard:hasEmail <mailto:agridata.ch@blw.admin.ch>
+    ] ;
+    dcterms:rights tou:Open-Use ;
+    dcterms:license tou:Open-Use ;
+    dcat:landingPage <https://blw-ofag-ufag.github.io/eCH-0265/> ;
+    dcat:theme theme:agriculture, theme:administration ;
+    dcterms:language "de" ;
+    dcterms:accrualPeriodicity frequency:ANNUAL ;
+    dcat:keyword "Linked Data"@de, "Landwirtschaft"@de, "Kulturen"@de, "Direktzahlungen"@de, "Nährstoffbilanz"@de, "Pflanzenschutz"@de,
+        "Linked Data"@en, "Agriculture"@en, "Crops"@en .

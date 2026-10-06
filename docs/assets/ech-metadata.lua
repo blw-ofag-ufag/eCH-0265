@@ -44,6 +44,7 @@ function Pandoc(doc)
     ["page-infix"] = display["page-infix"],
     organisation = display.organisation,
     summary = display.summary,
+    unpublished = display.unpublished,
   }
   return doc
 end

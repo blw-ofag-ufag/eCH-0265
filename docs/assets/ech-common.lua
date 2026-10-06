@@ -109,6 +109,9 @@ function M.display(meta, options)
 
   local number = ech.number and to_inlines(ech.number) or nil
   local version = ech.version and to_inlines(ech.version) or nil
+  -- Documents whose status precedes "approved" are not published yet.
+  local unpublished_statuses = { ["in-progress"] = true, draft = true, proposal = true }
+  local unpublished = code("status") ~= nil and unpublished_statuses[code("status")] == true
   local status = code("status") and lookup(voc, "status", code("status")) or nil
 
   if options.include_name ~= false and meta.title then
@@ -177,6 +180,7 @@ function M.display(meta, options)
     rows = rows,
     number = number,
     version = version,
+    unpublished = unpublished,
     status = status,
     ["status-text"] = status_text,
     tagline = to_inlines(voc.tagline),
