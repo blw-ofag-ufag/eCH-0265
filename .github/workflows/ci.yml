@@ -58,10 +58,10 @@ jobs:
             any::knitr
             any::rmarkdown
 
-      - name: Install system fonts for Typst
+      - name: Install system fonts for Typst and the SVG converter for Word output
         run: |
           sudo apt-get update
-          sudo apt-get install -y fonts-urw-base35
+          sudo apt-get install -y fonts-urw-base35 librsvg2-bin
 
       - name: Set up dependencies
         run: make setup

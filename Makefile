@@ -38,10 +38,8 @@ INFERRED_DATA    := $(RDF_DIR)/02-inferred.ttl
 PROCESSED_DATA   := $(RDF_DIR)/03-processed.ttl
 SHACL_REPORT     := $(RDF_DIR)/04-shacl-report.ttl
 DOCS_DIR         := docs
-IMG_DIR          := $(BUILD_DIR)/img
-DOCS_IMG_DIR     := $(DOCS_DIR)/assets/img
-PUML_SRC         := $(wildcard $(DOCS_DIR)/assets/puml/*.puml)
-PUML_PNG         := $(patsubst $(DOCS_DIR)/assets/puml/%.puml,$(DOCS_IMG_DIR)/%.png,$(PUML_SRC))
+PUML_SRC         := $(wildcard $(DOCS_DIR)/*/assets/puml/*.puml)
+PUML_SVG         := $(subst /puml/,/img/,$(PUML_SRC:.puml=.svg))
 
 # Logs
 LOG_DIR          := $(BUILD_DIR)/log
@@ -128,7 +126,7 @@ setup: install-dependencies robot $(PLANTUML_JAR) $(JAVA17) ## Create the virtua
 # ==============================================================================
 
 # 1. Set up directories
-$(RDF_DIR) $(LOG_DIR) $(IMG_DIR) $(BUILD_DIR):
+$(RDF_DIR) $(LOG_DIR) $(BUILD_DIR):
 	@mkdir -p $@
 
 # 2. Fetch, Query, and Transform source data sequentially
@@ -205,13 +203,17 @@ build: $(PROCESSED_DATA) ## Build the graph: integration, reasoning, SPARQL proc
 # BUILD DOCUMENTATION
 # ==============================================================================
 
-# Hand-drawn PlantUML diagrams for the documentation (docs/assets/puml/*.puml -> docs/assets/img/*.png)
-$(DOCS_IMG_DIR)/%.png: $(DOCS_DIR)/assets/puml/%.puml | $(PLANTUML_JAR) $(JAVA17)
-	@printf "$(BOLD)[*] Rendering $(notdir $<) with PlantUML...$(NC)\n"
-	@mkdir -p $(DOCS_IMG_DIR)
+# Hand-drawn PlantUML diagrams of the documentation, per language:
+# docs/<lang>/assets/puml/<name>.puml -> docs/<lang>/assets/img/<name>.svg
+define PUML_RULE
+$(subst /puml/,/img/,$(1:.puml=.svg)): $(1) | $(PLANTUML_JAR) $(JAVA17)
+	@printf "$(BOLD)[*] Rendering $(notdir $(1)) with PlantUML...$(NC)\n"
+	@mkdir -p $$(dir $$@)
 	@printf "$(GREY)"; \
-	$(JAVA17) -jar $(PLANTUML_JAR) -tpng $< -o $(abspath $(DOCS_IMG_DIR)) || { printf "$(NC)"; exit 1; }; \
+	$(JAVA17) -jar $(PLANTUML_JAR) -tsvg $$< -o $$(abspath $$(dir $$@)) || { printf "$(NC)"; exit 1; }; \
 	printf "$(NC)"
+endef
+$(foreach puml,$(PUML_SRC),$(eval $(call PUML_RULE,$(puml))))
 
 generate-shacl-docs: $(SHAPES) $(PREFIXES) $(PROCESSED_DATA) $(DOCS_DIR)/_ech.yml src/python/utils/generate_shacl_docs.py | $(VENV)/.requirements-installed.stamp ## Generate the data model pages from the SHACL shapes
 	@printf "$(BOLD)[*] Generating SHACL documentation...$(NC)\n"
@@ -225,7 +227,7 @@ generate-glossary-docs: src/rdf/data/glossary.skos.ttl $(PREFIXES) src/python/ut
 	$(VENV_PYTHON) src/python/utils/generate_glossary_docs.py -i src/rdf/data/glossary.skos.ttl -d $(DOCS_DIR) -p $(PREFIXES) || { printf "$(NC)"; exit 1; }; \
 	printf "$(NC)"
 
-docs: $(SHACL_REPORT) generate-shacl-docs generate-glossary-docs $(PUML_PNG) ## Generate the data model and glossary pages, render the diagrams and the documentation (website, PDF)
+docs: $(SHACL_REPORT) generate-shacl-docs generate-glossary-docs $(PUML_SVG) ## Generate the data model and glossary pages, render the diagrams and the documentation (website, PDF)
 	@printf "$(BOLD)[*] Rendering documentation with Quarto...$(NC)\n"
 	@printf "$(GREY)"; \
 	quarto render docs > $(QUARTO_LOG) 2>&1 || { printf "$(NC)\n$(RED)ERROR: Quarto rendering failed. See log below:$(NC)\n$(GREY)"; cat $(QUARTO_LOG); printf "$(NC)\n"; exit 1; }; \
@@ -290,4 +292,4 @@ publish: test stamp-metadata delete ## Test, then replace the graph on LINDAS wi
 
 clean: ## Remove all build artifacts, the virtual environment and generated pages
 	@printf "$(BOLD)[*] Cleaning build artifacts...$(NC)\n"
-	@rm -rf $(BUILD_DIR) $(VENV) .quarto docs/.quarto tests/__pycache__ docs/index_files docs/*/entities.md docs/*/glossary.md docs/*/namespaces.md
+	@rm -rf $(BUILD_DIR) $(VENV) .quarto docs/.quarto tests/__pycache__ docs/index_files docs/*/entities.md docs/*/glossary.md docs/*/namespaces.md docs/*/assets/img

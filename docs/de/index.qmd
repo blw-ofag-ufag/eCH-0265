@@ -261,7 +261,7 @@ Das Datenmodell beruht auf vier Prinzipien:
 3. **Eine gemeinsame Referenz.** Alle Kulturen der drei Fachbereiche verweisen auf eine gemeinsame Referenztaxonomie der Nutzungstypen. Sie ist das einzige Element, das die Fachbereiche miteinander verbindet (@fig-conceptual-model).
 4. **Abgeleitete statt gepflegte Beziehungen.** Die Beziehungen zwischen den Kulturen zweier Fachbereiche werden nicht manuell gepflegt, sondern aus der Referenztaxonomie abgeleitet. Ändert sich die Taxonomie, ändern sich die Mapping-Tabellen automatisch mit.
 
-![Konzeptionelles Datenmodell von eCH-0265. Die Kulturlisten der drei Fachbereiche bleiben eigenständige Konzeptschemata mit ihrer jeweiligen internen Struktur. Jede Kultur verweist auf den Nutzungstyp der gemeinsamen Referenztaxonomie, dem sie entspricht; nur über diese Verweise sind die Fachbereiche miteinander verbunden.](../assets/img/conceptual_model.png){#fig-conceptual-model width="100%" .lightbox}
+![Konzeptionelles Datenmodell von eCH-0265. Die Kulturlisten der drei Fachbereiche bleiben eigenständige Konzeptschemata mit ihrer jeweiligen internen Struktur. Jede Kultur verweist auf den Nutzungstyp der gemeinsamen Referenztaxonomie, dem sie entspricht; nur über diese Verweise sind die Fachbereiche miteinander verbunden.](assets/img/conceptual_model.svg){#fig-conceptual-model width="100%" .lightbox}
 
 Die Daten werden als Linked Data nach den Grundsätzen von @eCH-0205:1.0.0 publiziert.
 Die Konzeptschemata folgen dem *Simple Knowledge Organization System* (SKOS) [@skos], die Referenztaxonomie der *Web Ontology Language* (OWL) [@owl2].
@@ -305,7 +305,7 @@ Verwendet werden die drei Mapping-Beziehungen von SKOS [@skos]:
 - `skos:broadMatch`: Der Nutzungstyp der Kultur im Quellsystem ist ein Unterbegriff des Nutzungstyps der Kultur im Zielsystem; die Kultur im Zielsystem ist allgemeiner.
 - `skos:narrowMatch`: Die Umkehrung von `skos:broadMatch`; die Kultur im Zielsystem ist spezifischer.
 
-![Ableitung der Beziehungen am Beispiel. Durchgezogene Pfeile sind fachlich gepflegte Beziehungen: die Verweise der Kulturen auf ihren Nutzungstyp und die Oberbegriffe der Referenztaxonomie. Gestrichelte Pfeile sind daraus automatisch abgeleitet. Die Direktzahlungskultur «Emmer, Einkorn» und die Nährstoffbilanz-Kultur «Emmer / Einkorn» verweisen auf denselben Nutzungstyp und sind deshalb exakt verknüpft. Die PSM-Kultur «Getreide» verweist auf einen Oberbegriff dieses Nutzungstyps, weshalb die Direktzahlungskultur zu ihr in einer allgemeineren Beziehung steht.](../assets/img/mapping_derivation.png){#fig-mapping-derivation width="70%" fig-align="center" .lightbox}
+![Ableitung der Beziehungen am Beispiel. Durchgezogene Pfeile sind fachlich gepflegte Beziehungen: die Verweise der Kulturen auf ihren Nutzungstyp und die Oberbegriffe der Referenztaxonomie. Gestrichelte Pfeile sind daraus automatisch abgeleitet. Die Direktzahlungskultur «Emmer, Einkorn» und die Nährstoffbilanz-Kultur «Emmer / Einkorn» verweisen auf denselben Nutzungstyp und sind deshalb exakt verknüpft. Die PSM-Kultur «Getreide» verweist auf einen Oberbegriff dieses Nutzungstyps, weshalb die Direktzahlungskultur zu ihr in einer allgemeineren Beziehung steht.](assets/img/mapping_derivation.svg){#fig-mapping-derivation width="70%" fig-align="center" .lightbox}
 
 | Quellsystem | Kultur Quellsystem | SKOS-Beziehung | Zielsystem | Kultur Zielsystem | Begründung |
 |:--|:--|:--|:--|:--|:--|
@@ -645,7 +645,7 @@ Dieses Kapitel dokumentiert die technische Umsetzung des in @sec-data-model besc
 Die anschliessende Referenz ist automatisch aus den SHACL-Shapes (*Shapes Constraint Language*) generiert, mit denen der publizierte Graph validiert wird [@shacl].
 Sie führt für jede Klasse die zulässigen Eigenschaften mit Pfad, Typ und Kardinalität auf.
 
-![UML-Klassendiagramm des Datenmodells von eCH-0265, abgeleitet aus den SHACL-Shapes. Attribute sind mit Datentyp und Kardinalität angegeben; `uniqueLang` bedeutet, dass je Sprache höchstens ein Wert zulässig ist. Alle Kulturen und Gruppen der drei Fachbereiche verweisen über `eCH-0265:exactMatch` auf höchstens einen Nutzungstyp der Referenztaxonomie.](../assets/img/data_model.png){#fig-uml width="100%" .lightbox}
+![UML-Klassendiagramm des Datenmodells von eCH-0265, abgeleitet aus den SHACL-Shapes. Attribute sind mit Datentyp und Kardinalität angegeben; `uniqueLang` bedeutet, dass je Sprache höchstens ein Wert zulässig ist. Alle Kulturen und Gruppen der drei Fachbereiche verweisen über `eCH-0265:exactMatch` auf höchstens einen Nutzungstyp der Referenztaxonomie.](assets/img/data_model.svg){#fig-uml width="100%" .lightbox}
 
 ## Namespaces {#sec-namespaces}
 

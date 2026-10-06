@@ -2,7 +2,6 @@
 ' Bei Änderungen an den SHACL-Shapes ist dieses Diagramm nachzuführen.
 @startuml
 !pragma layout smetana
-skinparam dpi 220
 skinparam shadowing false
 skinparam roundCorner 8
 skinparam packageStyle rectangle

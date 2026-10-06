@@ -1,4 +1,4 @@
 /.quarto/
 **/*.quarto_ipynb
-/assets/img/
+/*/assets/img/
 /assets/fonts/

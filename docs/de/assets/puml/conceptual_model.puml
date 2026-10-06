@@ -1,8 +1,7 @@
-' Konzeptionelles Datenmodell von eCH-0265 (handgezeichnet, wird via Makefile nach docs/assets/img/ gerendert)
+' Konzeptionelles Datenmodell von eCH-0265 (handgezeichnet, wird via Makefile nach docs/de/assets/img/ gerendert (SVG))
 ' Der Titel der Referenztaxonomie steht unten: dafür ist das Package unbenannt und der Titel ein rahmenloses Pseudo-Element <<label>>.
 @startuml
 !pragma layout smetana
-skinparam dpi 220
 skinparam shadowing false
 skinparam roundCorner 10
 skinparam packageStyle rectangle

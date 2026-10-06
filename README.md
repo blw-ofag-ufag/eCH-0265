@@ -77,7 +77,7 @@ To streamline the workflow, this project uses `make` as its primary orchestratio
 
     **Build documentation**
 
-    To generate the class and glossary reference from the SHACL shapes and the SKOS glossary, render the PlantUML diagrams in `docs/assets/puml/`, and build the Quarto website into `build/docs/`:
+    To generate the class and glossary reference from the SHACL shapes and the SKOS glossary, render the PlantUML diagrams in `docs/<lang>/assets/puml/` to SVG, and build the Quarto website into `build/docs/`:
     
     ``` sh
     make docs

@@ -1,8 +1,7 @@
-' Ableitung der Beziehungen zwischen den Fachbereichen am Beispiel (handgezeichnet, wird via Makefile nach docs/assets/img/ gerendert)
+' Ableitung der Beziehungen zwischen den Fachbereichen am Beispiel (handgezeichnet, wird via Makefile nach docs/de/assets/img/ gerendert (SVG))
 ' Durchgezogen: fachlich gepflegte Beziehungen. Gestrichelt: automatisch abgeleitete Beziehungen.
 @startuml
 !pragma layout smetana
-skinparam dpi 220
 skinparam shadowing false
 skinparam roundCorner 10
 skinparam defaultFontSize 12
