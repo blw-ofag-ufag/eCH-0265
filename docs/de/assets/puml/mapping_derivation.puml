@@ -4,8 +4,8 @@
 !pragma layout smetana
 skinparam shadowing false
 skinparam roundCorner 10
-skinparam defaultFontSize 12
-skinparam Padding 3
+skinparam defaultFontSize 11
+skinparam Padding 1
 skinparam ArrowColor #444444
 skinparam ArrowThickness 1.2
 skinparam rectangleBorderColor #444444
@@ -14,18 +14,20 @@ skinparam rectangleBorderColor<<nt>> #999999
 skinparam rectangleBackgroundColor<<nt>> #F4F4F4
 hide stereotype
 
-rectangle "DZ-Kultur\n«Emmer, Einkorn»" as dz
+' Obere Reihe: die drei Kulturen (DZ in der Mitte, damit beide abgeleiteten Beziehungen waagrecht verlaufen).
+' Untere Reihe: die Nutzungstypen der Referenztaxonomie, Oberbegriffe von links nach rechts.
 rectangle "NB-Kultur\n«Emmer / Einkorn»" as nb
+rectangle "DZ-Kultur\n«Emmer, Einkorn»" as dz
 rectangle "PSM-Kultur\n«Getreide»" as psm
 rectangle "Nutzungstyp\n«Emmer und Einkorn»" <<nt>> as nt1
 rectangle "Nutzungstyp\n«Weizen»" <<nt>> as nt2
 rectangle "Nutzungstyp\n«Kleinkörniges Getreide»" <<nt>> as nt3
 
-dz -[#000000,dashed,thickness=2]-> nb : exactMatch
-dz -[#000000,dashed,thickness=2]-> psm : broadMatch
-nt1 -up-> nt2 : Oberbegriff
-nt2 -up-> nt3 : Oberbegriff
-dz --> nt1 : entspricht
-nb --> nt1 : entspricht
-psm --> nt3 : entspricht
+dz -[#000000,dashed,thickness=2]left-> nb : exactMatch
+dz -[#000000,dashed,thickness=2]right-> psm : broadMatch
+nt1 -right-> nt2 : Oberbegriff
+nt2 -right-> nt3 : Oberbegriff
+nb -down-> nt1 : entspricht
+dz -down-> nt1 : entspricht
+psm -down-> nt3 : entspricht
 @enduml

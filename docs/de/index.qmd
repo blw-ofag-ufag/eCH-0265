@@ -57,13 +57,13 @@ Die fachlichen und rechtlichen Grundlagen der einzelnen Bereiche bleiben massgeb
 
 [^note_later]: Eine spätere Wiederaufnahme von Sorten und Programmen bleibt vorbehalten.
 
-| Fachbereich | Abkürzung | Quellsystem der Kulturliste | Zuständig | Kulturen |
-|:------------|:----------|:----------------------------|:----------|---------:|
-| Direktzahlungen | DZ | Agrarpolitisches Informationssystem (AGIS) | BLW | 159 |
-| Nährstoffbilanz | NB | Nährstoffbilanz-Berechnungsservice (NBBS) | BLW | 314 |
-| Pflanzenschutz | PSM | Pflanzenschutzmittelverzeichnis (PSM-V) | BLV | 321 |
+| Fachbereich          | Quellsystem der Kulturliste                      | Zuständig | Kulturen |
+|:---------------------|:-------------------------------------------------|:----------|---------:|
+| Direktzahlungen (DZ) | Agrarpolitisches Informationssystem (AGIS)       | BLW       |      159 |
+| Nährstoffbilanz (NB) | Nährstoffbilanz-Berechnungsservice (NBBS)        | BLW       |      314 |
+| Pflanzenschutzmittel (PSM) | Pflanzenschutzmittelverzeichnis (PSM-V)    | BLW/BLV   |      321 |
 
-: Die drei Fachbereiche mit den in diesem Dokument verwendeten Abkürzungen, dem Quellsystem ihrer Kulturliste, der zuständigen Bundesstelle und der Anzahl aktuell geltender Kulturen (Stand Juli 2026). {#tbl-domains tbl-colwidths="[20,12,38,15,15]"}
+: Die drei Fachbereiche mit den in diesem Dokument verwendeten Abkürzungen, dem Quellsystem ihrer Kulturliste, der zuständigen Bundesstelle und der Anzahl aktuell geltender Kulturen (Stand Juli 2026). {#tbl-domains tbl-colwidths="[30,47,13,10]"}
 
 ## Aufbau des Dokuments {#sec-structure}
 
@@ -307,13 +307,13 @@ Verwendet werden die drei Mapping-Beziehungen von SKOS [@skos]:
 
 ![Ableitung der Beziehungen am Beispiel. Durchgezogene Pfeile sind fachlich gepflegte Beziehungen: die Verweise der Kulturen auf ihren Nutzungstyp und die Oberbegriffe der Referenztaxonomie. Gestrichelte Pfeile sind daraus automatisch abgeleitet. Die Direktzahlungskultur «Emmer, Einkorn» und die Nährstoffbilanz-Kultur «Emmer / Einkorn» verweisen auf denselben Nutzungstyp und sind deshalb exakt verknüpft. Die PSM-Kultur «Getreide» verweist auf einen Oberbegriff dieses Nutzungstyps, weshalb die Direktzahlungskultur zu ihr in einer allgemeineren Beziehung steht.](assets/img/mapping_derivation.svg){#fig-mapping-derivation width="70%" fig-align="center" .lightbox}
 
-| Quellsystem | Kultur Quellsystem | SKOS-Beziehung | Zielsystem | Kultur Zielsystem | Begründung |
-|:--|:--|:--|:--|:--|:--|
-| DZ | Sommergerste | `skos:exactMatch` | NB | Sommergerste | Beide Kulturen verweisen auf den Nutzungstyp «Sommergerste». |
-| DZ | Emmer, Einkorn | `skos:broadMatch` | PSM | Getreide | Der Nutzungstyp «Emmer und Einkorn» ist ein Unterbegriff von «Kleinkörniges Getreide», auf das die PSM-Kultur verweist. |
-| PSM | Kernobst | `skos:narrowMatch` | DZ | Obstanlagen (Äpfel) | Umkehrung: Der Nutzungstyp der Direktzahlungskultur ist ein Unterbegriff von «Kernobst», die Kultur im Zielsystem ist also spezifischer. |
+| Quelle | SKOS-Beziehung | Ziel | Begründung |
+|:--|:--|:--|:--|
+| Sommergerste (DZ) | `skos:exactMatch` | Sommergerste (NB) | Beide Kulturen verweisen auf den Nutzungstyp «Sommergerste». |
+| Emmer, Einkorn (DZ) | `skos:broadMatch` | Getreide (PSM) | Der Nutzungstyp «Emmer und Einkorn» ist ein Unterbegriff von «Kleinkörniges Getreide», auf das die PSM-Kultur verweist. |
+| Kernobst (PSM) | `skos:narrowMatch` | Obstanlagen (Äpfel) (DZ) | Umkehrung: Der Nutzungstyp der Direktzahlungskultur ist ein Unterbegriff von «Kernobst», die Kultur im Zielsystem ist also spezifischer. |
 
-: Beispiele der abgeleiteten Beziehungen zwischen den Fachbereichen Direktzahlungen (DZ), Nährstoffbilanz (NB) und Pflanzenschutz (PSM). {#tbl-mapping-example tbl-colwidths="[10,16,16,10,16,32]"}
+: Beispiele der abgeleiteten Beziehungen zwischen den Fachbereichen Direktzahlungen (DZ), Nährstoffbilanz (NB) und Pflanzenschutz (PSM). {#tbl-mapping-example tbl-colwidths="[20,20,20,40]"}
 
 Die Beziehungen werden je Zielsystem nach einer festen Rangfolge abgeleitet.[^note_rule]
 Allgemeinere Beziehungen (`skos:broadMatch`) entstehen nur, wenn im Zielsystem keine exakte Entsprechung existiert, und spezifischere Beziehungen (`skos:narrowMatch`) nur, wenn weder eine exakte noch eine allgemeinere Beziehung besteht.
@@ -321,7 +321,7 @@ Allgemeinere Beziehungen (`skos:broadMatch`) entstehen nur, wenn im Zielsystem k
 Diese Rangfolge hält die Mapping-Tabellen frei von redundanten Beziehungen:
 Für jede Kultur und jedes Zielsystem gibt es nur eine Art von Beziehung, und zwar die genaueste verfügbare.
 
-[^note_rule]: Die Ableitung erfolgt im automatisierten Verarbeitungsprozess (@sec-quality) mit einer SPARQL-Update-Abfrage, siehe [`src/sparql/processing/02_mapping_table_skos_generation.rq`](https://github.com/blw-ofag-ufag/eCH-0265/blob/main/src/sparql/processing/02_mapping_table_skos_generation.rq) im Repository.
+[^note_rule]: Die Ableitung erfolgt im automatisierten Verarbeitungsprozess (@sec-quality) mit einer SPARQL-Update-Abfrage, siehe [src/sparql/processing/02_mapping_table_skos_generation.rq](https://github.com/blw-ofag-ufag/eCH-0265/blob/main/src/sparql/processing/02_mapping_table_skos_generation.rq) im Repository.
 
 ## Qualitätssicherung {#sec-quality}
 
@@ -387,10 +387,6 @@ shares <- classes |>
 Semantische Interoperabilität bedeutet, dass die Bedeutung (die _Semantik_) einer Information beim Austausch zwischen Systemen erhalten bleibt [@eif2017].
 Die abgeleiteten Beziehungen aus @sec-mapping-derivation bilden dafür ein sogenanntes _Alignment_ zwischen den drei unabhängig entstandenen Kategorisierungssystemen der Direktzahlungen (DZ), der Nährstoffbilanz (NB) und des Pflanzenschutzes (PSM); die verwendeten SKOS-Beziehungen entsprechen den Äquivalenz- und Hierarchie-Mappings nach [@iso25964-2; @skos].
 Dieses Kapitel quantifiziert, wie weit die beschriebenen Kulturen ohne manuellen Eingriff in ein anderes System überführt werden können, und benennt anschliessend die bekannten Grenzen dieser Übersetzung.
-
-Berücksichtigt werden nur aktuell geltende Kulturen ohne Strukturierungsebenen: die Flächenkategorien der Direktzahlungen sowie die Kategorien und Unterkategorien der Nährstoffbilanz bleiben aussen vor, und im PSM-V zählen nur die untersten Kulturen, nicht übergeordnete Gruppen wie «Getreide» oder «Wintergetreide» (@fig-psm-hierarchy).[^note_psm]
-
-[^note_psm]: Als unterste Kulturen gelten PSM-Kulturen, die selbst keine Unterkulturen (`skos:broader`) haben. Dieses Kriterium erfasst nicht alle Sammelbegriffe: «Offene Ackerfläche» und «Grünfläche» haben im PSM-V keine Unterkulturen und zählen deshalb mit, sind fachlich aber sehr allgemein und nehmen einen Grossteil der aggregierenden Zuordnungen aus DZ und NB auf.
 
 ```{r}
 #| label: fig-psm-hierarchy
@@ -469,6 +465,10 @@ ggraph(layout) +
   theme_void(base_size = 10) +
   theme(legend.position = "bottom", legend.margin = margin(0, 0, 0, 0), plot.margin = margin(4, 4, 4, 4))
 ```
+
+Berücksichtigt werden nur aktuell geltende Kulturen ohne Strukturierungsebenen: die Flächenkategorien der Direktzahlungen sowie die Kategorien und Unterkategorien der Nährstoffbilanz bleiben aussen vor, und im PSM-V zählen nur die untersten Kulturen, nicht übergeordnete Gruppen wie «Getreide» oder «Wintergetreide» (@fig-psm-hierarchy).[^note_psm]
+
+[^note_psm]: Als unterste Kulturen gelten PSM-Kulturen, die selbst keine Unterkulturen (`skos:broader`) haben. Dieses Kriterium erfasst nicht alle Sammelbegriffe: «Offene Ackerfläche» und «Grünfläche» haben im PSM-V keine Unterkulturen und zählen deshalb mit, sind fachlich aber sehr allgemein und nehmen einen Grossteil der aggregierenden Zuordnungen aus DZ und NB auf.
 
 Die Kultur eines Quellsystems gilt als _deterministisch abbildbar_ in ein Zielsystem, wenn mindestens ein `skos:exactMatch` oder mindestens ein `skos:broadMatch` zu einer Kultur des Zielsystems vorliegt.
 Diese Überführung mittels `skos:exactMatch` ist verlustfrei; ein `skos:broadMatch` ordnet die Kultur einer allgemeineren Kategorie zu, etwa «Winterraps zur Speiseölgewinnung» (Direktzahlungen) hin zu «Winterraps» (Pflanzenschutzmittelverzeichnis):
