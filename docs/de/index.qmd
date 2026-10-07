@@ -307,14 +307,6 @@ Verwendet werden die drei Mapping-Beziehungen von SKOS [@skos]:
 
 ![Ableitung der Beziehungen am Beispiel. Durchgezogene Pfeile sind fachlich gepflegte Beziehungen: die Verweise der Kulturen auf ihren Nutzungstyp und die Oberbegriffe der Referenztaxonomie. Gestrichelte Pfeile sind daraus automatisch abgeleitet. Die Direktzahlungskultur «Emmer, Einkorn» und die Nährstoffbilanz-Kultur «Emmer / Einkorn» verweisen auf denselben Nutzungstyp und sind deshalb exakt verknüpft. Die PSM-Kultur «Getreide» verweist auf einen Oberbegriff dieses Nutzungstyps, weshalb die Direktzahlungskultur zu ihr in einer allgemeineren Beziehung steht.](assets/img/mapping_derivation.svg){#fig-mapping-derivation width="70%" fig-align="center" .lightbox}
 
-| Quelle | SKOS-Beziehung | Ziel | Begründung |
-|:--|:--|:--|:--|
-| Sommergerste (DZ) | `skos:exactMatch` | Sommergerste (NB) | Beide Kulturen verweisen auf den Nutzungstyp «Sommergerste». |
-| Emmer, Einkorn (DZ) | `skos:broadMatch` | Getreide (PSM) | Der Nutzungstyp «Emmer und Einkorn» ist ein Unterbegriff von «Kleinkörniges Getreide», auf das die PSM-Kultur verweist. |
-| Kernobst (PSM) | `skos:narrowMatch` | Obstanlagen (Äpfel) (DZ) | Umkehrung: Der Nutzungstyp der Direktzahlungskultur ist ein Unterbegriff von «Kernobst», die Kultur im Zielsystem ist also spezifischer. |
-
-: Beispiele der abgeleiteten Beziehungen zwischen den Fachbereichen Direktzahlungen (DZ), Nährstoffbilanz (NB) und Pflanzenschutz (PSM). {#tbl-mapping-example tbl-colwidths="[20,20,20,40]"}
-
 Die Beziehungen werden je Zielsystem nach einer festen Rangfolge abgeleitet.[^note_rule]
 Allgemeinere Beziehungen (`skos:broadMatch`) entstehen nur, wenn im Zielsystem keine exakte Entsprechung existiert, und spezifischere Beziehungen (`skos:narrowMatch`) nur, wenn weder eine exakte noch eine allgemeinere Beziehung besteht.
 «Sommergerste» (DZ) ist deshalb ausschliesslich exakt mit «Sommergerste» (PSM) verknüpft, obwohl ihr Nutzungstyp auch ein Unterbegriff von «Gerste» und «Getreide» ist.
@@ -322,6 +314,14 @@ Diese Rangfolge hält die Mapping-Tabellen frei von redundanten Beziehungen:
 Für jede Kultur und jedes Zielsystem gibt es nur eine Art von Beziehung, und zwar die genaueste verfügbare.
 
 [^note_rule]: Die Ableitung erfolgt im automatisierten Verarbeitungsprozess (@sec-quality) mit einer SPARQL-Update-Abfrage, siehe [src/sparql/processing/02_mapping_table_skos_generation.rq](https://github.com/blw-ofag-ufag/eCH-0265/blob/main/src/sparql/processing/02_mapping_table_skos_generation.rq) im Repository.
+
+| Quelle | SKOS-Beziehung | Ziel | Begründung |
+|:--|:--|:--|:--|
+| Sommergerste (DZ) | `skos:exactMatch` | Sommergerste (NB) | Beide Kulturen verweisen auf den Nutzungstyp «Sommergerste». |
+| Emmer, Einkorn (DZ) | `skos:broadMatch` | Getreide (PSM) | Der Nutzungstyp «Emmer und Einkorn» ist ein Unterbegriff von «Kleinkörniges Getreide», auf das die PSM-Kultur verweist. |
+| Kernobst (PSM) | `skos:narrowMatch` | Obstanlagen (Äpfel) (DZ) | Umkehrung: Der Nutzungstyp der Direktzahlungskultur ist ein Unterbegriff von «Kernobst», die Kultur im Zielsystem ist also spezifischer. |
+
+: Beispiele der abgeleiteten Beziehungen zwischen den Fachbereichen Direktzahlungen (DZ), Nährstoffbilanz (NB) und Pflanzenschutz (PSM). {#tbl-mapping-example tbl-colwidths="[20,20,20,40]"}
 
 ## Qualitätssicherung {#sec-quality}
 
@@ -537,9 +537,6 @@ Sie beruht überwiegend auf Aggregationen in sehr allgemeine PSM-Kulturen wie «
 In der Gegenrichtung ist eine solche PSM-Kultur nur als Aggregat erreichbar (dunkelgrau) und lässt sich nicht eindeutig auf eine NB- oder DZ-Kultur auflösen.
 Hellgrau markierte Kulturen bleiben in beiden Richtungen unerreicht, etwa Heil- und Gewürzpflanzen wie «Süssdolde» oder «Wolliger Fingerhut» im PSM-V oder Bilanzpositionen wie «Zwischenfutter» in der NB; die _Abdeckung_ in @tbl-interoperability beziffert den Anteil der Zielkulturen, die von einem Quellsystem aus erreicht werden.
 
-Die Abbildbarkeit in DZ ist in beiden Richtungen gering, weil DZ auch Landnutzungen wie Biodiversitätsförderflächen, Sömmerungsflächen oder Einzelelemente typisiert, die in den anderen Systemen kein Gegenstück haben.
-Ackerfläche und Dauergrünfläche lassen sich praktisch vollständig ins Pflanzenschutzmittelverzeichnis überführen, Sömmerungsflächen hingegen kaum.
-
 ```{r}
 #| label: tbl-interoperability
 #| tbl-cap: "Interoperabilitätskennzahlen zwischen Direktzahlungen (DZ), Nährstoffbilanz (NB) und Pflanzenschutzmittelverzeichnis (PSM): Anzahl geltender Kulturen im Quellsystem (N), Anteil exakt verknüpfter Kulturen (Exakt), deterministische Abbildbarkeit (Abbildbar) und Abdeckung des Zielsystems (Abdeckung)."
@@ -561,9 +558,11 @@ indicators |>
   knitr::kable(align = "llrrrr")
 ```
 
+Die Abbildbarkeit in DZ ist in beiden Richtungen gering, weil DZ auch Landnutzungen wie Biodiversitätsförderflächen, Sömmerungsflächen oder Einzelelemente typisiert, die in den anderen Systemen kein Gegenstück haben.
+Ackerfläche und Dauergrünfläche lassen sich praktisch vollständig ins Pflanzenschutzmittelverzeichnis überführen, Sömmerungsflächen hingegen kaum.
+
 Die in diesem Kapitel präsentierten Kennzahlen werden dabei automatisch berechnet (Stand der Berechnung: {{< meta date >}}).
 Sie beschreiben den aktuellen Stand der Mapping-Tabellen; fehlende Beziehungen können fachlich begründet sein oder auf Lücken hinweisen, die bei der Pflege des Alignments zu priorisieren sind [@euzenat2008alignment].
-
 
 ## Bekannte Einschränkungen {#sec-limitations}
 
