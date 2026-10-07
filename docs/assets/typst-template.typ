@@ -205,6 +205,11 @@
   ]
   show footnote.entry: set text(size: 10pt)
 
+  // Figures float like in LaTeX: the text flows on and the figure goes to
+  // the top or bottom of the page, or to the next page if it does not fit.
+  // Tables (kind "quarto-float-tbl") stay inline.
+  show figure.where(kind: "quarto-float-fig"): set figure(placement: auto)
+
   // Tables: bold header row, zebra stripes, rules above and below. Quarto
   // wraps tables in figures, which must be made breakable for long tables.
   show figure.where(kind: "quarto-float-tbl"): set block(breakable: true)
