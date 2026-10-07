@@ -705,8 +705,12 @@ Die Standards enthalten die entsprechenden Hinweise auf Rechte Dritter.
 
 | Name                           | Organisation                      |
 |:-------------------------------|:----------------------------------|
+| Youssef Arrine                 | Bundesamt für Landwirtschaft      |
 | Marc Beringer                  | Bundesamt für Landwirtschaft      |
+| Numa Courvoisier               | Bundesamt für Landwirtschaft      |
+| Ursina Hutter                  | Bundesamt für Landwirtschaft      |
 | Damian Oswald                  | Bundesamt für Landwirtschaft      |
+| Jonas Plattner                 | Bundesamt für Landwirtschaft      |
 | Lea Stauber                    | Bundesamt für Landwirtschaft      |
 | Christian Wilda                | Bundesamt für Landwirtschaft      |
 
