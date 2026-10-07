@@ -22,8 +22,8 @@ Genderstern und ähnliche Schreibweisen werden nicht verwendet.
 # Einleitung {#sec-introduction}
 
 Die Definitionen landwirtschaftlicher Kulturen wurden in der Schweiz historisch unabhängig voneinander für spezifische gesetzliche Aufträge und Informationssysteme entwickelt.
-Drei Fachbereiche sprechen von «Kulturen», meinen damit aber nicht dasselbe:
-Die Direktzahlungen typisieren Flächen für die Beitragsberechtigung, die Nährstoffbilanz ordnet jeder Kultur einen normierten Nährstoffbedarf zu, und der Pflanzenschutz regelt, auf welchen Kulturen ein Pflanzenschutzmittel angewendet werden darf.
+Verschiedene Fachbereiche sprechen von «Kulturen», meinen damit aber nicht unbedingt dasselbe, da sie ganz unterschiedliche Blikwinkel haben:
+Die Direktzahlungen typisieren Flächen für die Beitragsberechtigung, die Nährstoffbilanz ordnet jeder Kultur einen normierten Nährstoffbedarf zu, und das Pflanzenschutzmittelverzeichnis regelt, auf welchen Kulturen ein Pflanzenschutzmittel angewendet werden darf.
 Die fehlende systemübergreifende Harmonisierung (eine *Single Source of Truth*) erschwert die Informationsverarbeitung über die jeweiligen Systemgrenzen hinaus.
 
 Das vorliegende Hilfsmittel löst dieses Problem nicht durch eine Vereinheitlichung der Kulturbegriffe, sondern durch deren Übersetzung:
@@ -42,20 +42,21 @@ Es unterstützt die Datenintegration über Fachbereiche und Organisationen hinwe
 
 ## Anwendungsgebiet {#sec-scope}
 
-Das Hilfsmittel richtet sich an Fachpersonen und Entwickelnde, die Daten zu landwirtschaftlichen Kulturen zwischen den Fachbereichen Direktzahlungen (DZ), Nährstoffbilanz (NB) und Pflanzenschutz (PSM) austauschen oder gemeinsam auswerten (@tbl-domains).
+Dieses Hilfsmittel richtet sich an Fachpersonen und Entwickelnde, die Daten zu landwirtschaftlichen Kulturen zwischen den Fachbereichen Direktzahlungen (DZ), Nährstoffbilanz (NB) und Pflanzenschutz (PSM) austauschen oder gemeinsam auswerten (@tbl-domains).
 Es umfasst:
 
 - die Kulturlisten der drei Fachbereiche mit ihren Identifikatoren, Bezeichnungen und bereichsinternen Strukturen,
 - eine bereichsübergreifende Referenztaxonomie der Nutzungstypen,
 - die daraus abgeleiteten Mapping-Tabellen zwischen den Fachbereichen sowie
-- die Bereitstellung aller Daten als Linked Data.
 
-Nicht Gegenstand sind Flächen und Geometrien[^note_geodata], Sorten sowie Direktzahlungsprogramme.[^note_later]
+Sämtliche Referenzdaten sind dabei als _Linked Data_ maschinenlesbar verfügbar.
+
+Nicht Gegenstand sind Flächen und Geometrien[^geodata], Sorten sowie Direktzahlungsprogramme.[^later]
 Die fachlichen und rechtlichen Grundlagen der einzelnen Bereiche bleiben massgeblich; das Hilfsmittel bildet sie ab, ersetzt sie aber nicht.
 
-[^note_geodata]: Die Erhebung von landwirtschaftlichen Nutzflächen wird bereits mit dem minimalen Geodatenmodell «Landwirtschaftliche Kulturflächen» (Identifikator 153) spezifiziert: <https://www.blw.admin.ch/de/landwirtschaftliche-kulturflaechen>
+[^geodata]: Die Erhebung von landwirtschaftlichen Nutzflächen wird bereits mit dem minimalen Geodatenmodell «Landwirtschaftliche Kulturflächen» (Identifikator 153) spezifiziert: <https://www.blw.admin.ch/de/landwirtschaftliche-kulturflaechen>
 
-[^note_later]: Eine spätere Wiederaufnahme von Sorten und Programmen bleibt vorbehalten.
+[^later]: Eine spätere Wiederaufnahme von Sorten und Programmen (und deren Referenzdaten) in dieses Hilfsmittel bleibt vorbehalten.
 
 | Fachbereich          | Quellsystem der Kulturliste                      | Zuständig | Kulturen |
 |:---------------------|:-------------------------------------------------|:----------|---------:|
@@ -82,7 +83,9 @@ Eine Kultur definiert sich demnach als Kategorie beziehungsweise als Teil eines 
 Durch diese Definition ist die landwirtschaftliche Kultur strikt von der botanischen Taxonomie abzugrenzen.
 Die botanische Systematik klassifiziert einzelne Pflanzen.
 Die landwirtschaftliche Kultur hingegen typisiert keine Individuen, sondern spezifische Formen der Landnutzung.
-Es geht bei der Kultur folglich nicht um die biologische Pflanze an sich, sondern um die flächen- und zeitbezogene Bewirtschaftungsform, an welche die jeweiligen agronomischen, rechtlichen oder systemischen Eigenschaften geknüpft sind.
+Es geht bei der Kultur folglich nicht um die biologische Pflanze an sich, sondern um die flächen- und zeitbezogene Bewirtschaftungsform, an welche die jeweiligen agronomischen, rechtlichen oder systemischen Eigenschaften geknüpft sind.[^crop]
+
+[^crop]: Da in der Landwirtschaft meist Reinkulturen angebaut werden, besteht dennoch ein enger Zusammenhang zwischen der Kultur und der dominierenden botanischen Pflanzenart, häufig in Form einer 1:1-Beziehung.
 
 Diese Definition gilt für alle drei Fachbereiche gleichermassen, auch wenn jeder Bereich seine Kulturen nach eigenen Kriterien abgrenzt.
 Im Datenmodell dieses Hilfsmittels wird der bereichsübergreifende Kulturbegriff als *Nutzungstyp* bezeichnet (@sec-cultivation-type).
@@ -99,13 +102,15 @@ Direktzahlungen sind Beiträge des Bundes an Landwirtschaftsbetriebe, die unter 
 Die Beitragsberechtigung hängt von der Nutzung der einzelnen Flächen ab, weshalb jede Fläche eines Betriebs einer Direktzahlungskultur zugeordnet wird.
 Im Rahmen des Direktzahlungssystems sind 159 Direktzahlungskulturen (Stand Juli 2026) definiert, welche im Rahmen der Strukturdatenerhebung von den Bewirtschaftenden in den kantonalen Agrarinformationssystemen (KAIS) eingetragen und an das agrarpolitische Informationssystem (AGIS) des Bundes übermittelt werden.
 
-Alle Kulturen mit Direktzahlungscode müssen jährlich an AGIS übermittelt werden – unabhängig davon, ob sie für Beiträge berechtigt sind oder nicht (vgl. [Flächenkatalog und Beitragsberechtigung](https://www.blw.admin.ch/dam/fr/sd-web/QYLa6wGfdK8G/2026%20Merkblatt%20Nr.%206.2%20Fl%C3%A4chenkatalog%20und%20Beitragsberechtigung.pdf)).
-In AGIS stehen also alle aktuell gültigen und historisierten Direktzahlungskulturen und deren Beitragsberechtigungen für Bund und Kantone zur Verfügung.
+Betriebe, die Direktzahlungen beziehen, deklarieren dabei ihre gesamte landwirtschaftliche Nutzfläche gegenüber dem Kanton, nicht nur die beitragsberechtigten Flächen.
+Die Kantone übermitteln diese Daten jährlich an AGIS, wo sie als Grundlage für die Berechnung der Direktzahlungen dienen (vgl. [Flächenkatalog und Beitragsberechtigung](https://www.blw.admin.ch/dam/fr/sd-web/QYLa6wGfdK8G/2026%20Merkblatt%20Nr.%206.2%20Fl%C3%A4chenkatalog%20und%20Beitragsberechtigung.pdf)).
+Betriebe ohne Direktzahlungsbezug sind hingegen nicht zur Deklaration verpflichtet und daher in AGIS nicht oder nur unvollständig erfasst.
+In AGIS stehen somit alle aktuell gültigen und historisierten Direktzahlungskulturen und deren Beitragsberechtigungen für Bund und Kantone zur Verfügung.
 Momentan können diese Daten aber nicht in maschinenlesbarer Form vom AGIS-Webservice bezogen werden.
 
 Die Direktzahlungskulturen kommen nicht nur im Rahmen der Strukturdatenerhebung zum Einsatz, sondern auch bei der gesamtschweizerischen räumlichen Erfassung von Nutzungsflächen (siehe [«landwirtschaftliche Kulturflächen»](https://www.blw.admin.ch/de/landwirtschaftliche-kulturflaechen)).
 Die Kantone erfassen diese Geodaten gemäss dem minimalen Geodatenmodell 153.1 «Nutzungsflächen» und stellen die Daten via dem interkantonalen Portal [geodienste.ch](https://geodienste.ch/) zur Verfügung.
-Die im Rahmen der Geodaten verwendeten Kulturkategorien sind als XML-File auf <https://models.geo.admin.ch/BLW/> publiziert, wobei weitere (aggregierende) Kulturkategorien definiert wurden und die Attribute nicht zu 100% deckungsgleich zu denjenigen der Direktzahlungskulturen der Strukturdatenerhebung sind.
+Die im Rahmen der Geodaten verwendeten Kulturkategorien sind als XML-File auf <https://models.geo.admin.ch/BLW/> publiziert, wobei weitere (aggregierende) Kulturkategorien definiert wurden und die Gültigkeitsangaben nicht deckungsgleich zu denjenigen der Direktzahlungskulturen der Strukturdatenerhebung (AGIS) sind.
 
 Die Direktzahlungskulturen sind selbst in acht Flächenkategorien eingeteilt (@tbl-directpaymentcrops-categories).
 Eine Mehrheit dieser Kategorien wird explizit in der landwirtschaftlichen Begriffsverordnung (LBV) definiert.
