@@ -11,6 +11,10 @@
 **/__pycache__/**
 .pytest_cache
 
+# R session artifacts
+.Rhistory
+.RData
+
 # Quarto execution artifacts
 *_files/
 *_cache/

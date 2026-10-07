@@ -1,7 +1,7 @@
 -- Shared logic of the eCH metadata filter and shortcodes.
 --
 -- Reads the language-neutral codes under `ech` in the document metadata
--- (see docs/_ech.yml) and translates them with docs/assets/ech-vocabulary.yml
+-- (see docs/_ech.yml) and translates them with docs/assets/ech_vocabulary.yml
 -- into the rows of the eCH title page and a few display strings.
 
 local M = {}
@@ -64,7 +64,7 @@ local vocabulary_cache = nil
 -- Loads the vocabulary file next to this script.
 function M.vocabulary(lang)
   if vocabulary_cache == nil then
-    local path = quarto.utils.resolve_path("ech-vocabulary.yml")
+    local path = quarto.utils.resolve_path("ech_vocabulary.yml")
     local file = assert(io.open(path, "r"), "eCH vocabulary not found: " .. path)
     local yaml = file:read("a")
     file:close()

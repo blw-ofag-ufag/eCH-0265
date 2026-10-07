@@ -7,9 +7,9 @@
 --   {{< ech tables >}}   list of all tables with their captions, linked
 --
 -- The lists are produced for the PDF (Typst outline) and the website (filled
--- in by ech-captions.lua after Quarto has numbered the floats).
+-- in by ech_captions.lua after Quarto has numbered the floats).
 
-local common = dofile(quarto.utils.resolve_path("ech-common.lua"))
+local common = dofile(quarto.utils.resolve_path("ech_common.lua"))
 
 return {
   ["ech"] = function(args, kwargs, meta)
@@ -19,7 +19,7 @@ return {
       error("{{< ech >}}: the document has no `ech` metadata (see docs/_ech.yml)")
     end
     if what == "title" then
-      -- On the website, ech-metadata.lua has already prefixed the title.
+      -- On the website, ech_metadata.lua has already prefixed the title.
       local name = meta.title
       if pandoc.utils.type(name) ~= "Inlines" then name = pandoc.Inlines(pandoc.Str(pandoc.utils.stringify(name or ""))) end
       local title = pandoc.Inlines({})

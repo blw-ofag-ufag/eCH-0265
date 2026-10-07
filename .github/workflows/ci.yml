@@ -37,31 +37,22 @@ jobs:
         uses: quarto-dev/quarto-actions/setup@v2
 
       - name: Set up R
+        id: setup-r
         uses: r-lib/actions/setup-r@v2
         with:
+          r-version: 'release'
           use-public-rspm: true
 
-      - name: Install R packages for the documentation
-        uses: r-lib/actions/setup-r-dependencies@v2
+      - name: Cache R packages
+        uses: actions/cache@v4
         with:
-          packages: |
-            any::rdflib
-            any::dplyr
-            any::tidyr
-            any::ggplot2
-            any::igraph
-            any::tidygraph
-            any::ggraph
-            any::ggforce
-            any::graphlayouts
-            any::stringr
-            any::knitr
-            any::rmarkdown
+          path: ${{ env.R_LIBS_USER }}
+          key: r-${{ runner.os }}-${{ steps.setup-r.outputs.installed-r-version }}-${{ hashFiles('src/r/requirements.txt') }}
 
-      - name: Install system fonts for Typst and the SVG converter for Word output
+      - name: Install system packages (fonts for Typst, SVG converter for Word output, Redland for the R package rdflib)
         run: |
           sudo apt-get update
-          sudo apt-get install -y fonts-urw-base35 librsvg2-bin
+          sudo apt-get install -y fonts-urw-base35 librsvg2-bin librdf0-dev
 
       - name: Set up dependencies
         run: make setup

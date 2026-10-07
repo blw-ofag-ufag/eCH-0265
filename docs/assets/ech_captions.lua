@@ -4,7 +4,7 @@
 --     "**Tabelle 3:** Beschreibung" (the PDF does the same with a Typst
 --     show rule in typst-template.typ);
 --   * fills the placeholders of the shortcodes {{< ech figures >}} and
---     {{< ech tables >}} (see ech-shortcodes.lua) with linked lists of the
+--     {{< ech tables >}} (see ech_shortcodes.lua) with linked lists of the
 --     captions of all figures or tables of the document.
 
 if not quarto.doc.is_format("html") then return {} end
@@ -54,10 +54,24 @@ local function collect(div)
   return div
 end
 
+-- Shortens a caption to its first sentence (prefix "Tabelle 3:" included):
+-- everything up to the first Str that ends a sentence is kept.
+local function first_sentence(inlines)
+  local result = pandoc.Inlines({})
+  for i, inline in ipairs(inlines) do
+    result:insert(inline)
+    -- the prefix is a Strong at the start; sentence ends are plain Str
+    if i > 1 and inline.t == "Str" and inline.text:match("[.!?]$") then
+      break
+    end
+  end
+  return result
+end
+
 local function float_list(kind)
   local items = {}
   for _, float in ipairs(floats[kind]) do
-    table.insert(items, pandoc.Plain({ pandoc.Link(float.caption, "#" .. float.id) }))
+    table.insert(items, pandoc.Plain({ pandoc.Link(first_sentence(float.caption), "#" .. float.id) }))
   end
   if #items == 0 then return pandoc.Blocks({}) end
   return pandoc.Blocks({ pandoc.BulletList(items) })

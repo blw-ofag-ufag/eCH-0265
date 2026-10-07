@@ -2,7 +2,7 @@
 
 // eCH look for the Quarto website: Noto Sans, eCH red for links, a dark
 // header, plain headings and PDF-like tables. The colours below are the light
-// theme; docs/assets/ech-dark.scss overrides them for the dark theme.
+// theme; docs/assets/ech_dark.scss overrides them for the dark theme.
 
 $ech-red: #d00d28;
 $ech-text: #212529 !default;      // headings and title
@@ -173,12 +173,13 @@ $grid-margin-width: 375px;
 }
 
 // Captions: body colour, slightly smaller; the prefix is set in bold by
-// docs/assets/ech-captions.lua.
+// docs/assets/ech_captions.lua.
 #quarto-content .quarto-float-caption,
 #quarto-content figcaption,
 #quarto-content caption {
   color: $body-color;
   font-size: 0.9rem;
+  text-align: left;
 }
 
 // Bibliography with alphanumeric labels: labels in one column, aligned to

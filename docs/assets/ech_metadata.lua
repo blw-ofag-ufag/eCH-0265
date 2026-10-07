@@ -8,7 +8,7 @@
 -- title with the eCH number and turns the abstract into an unnumbered,
 -- unlisted first chapter.
 
-local common = dofile(quarto.utils.resolve_path("ech-common.lua"))
+local common = dofile(quarto.utils.resolve_path("ech_common.lua"))
 
 function Pandoc(doc)
   local meta = doc.meta

@@ -83,7 +83,7 @@ To streamline the workflow, this project uses `make` as its primary orchestratio
     make docs
     ```
     
-    Note that this step requires [Quarto](https://quarto.org/) and R (with the packages listed in `.github/workflows/ci.yml`) to be installed.
+    Note that this step requires [Quarto](https://quarto.org/) and [R](https://www.r-project.org/) to be installed. The R packages of the documentation are listed in `src/r/requirements.txt` and installed by `make setup`.
 
 4. Upload the final data to [LINDAS](https://lindas.admin.ch/), the linked data service by the federal archives:
 

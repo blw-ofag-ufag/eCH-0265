@@ -6,7 +6,7 @@
 // of contents on a new page, a header with the eCH logo, the tagline and the
 // page count, and a two-line footer with the document identification.
 //
-// All eCH texts arrive translated from the Lua filter docs/assets/ech-metadata.lua
+// All eCH texts arrive translated from the Lua filter docs/assets/ech_metadata.lua
 // via typst-show.typ, in the `ech` dictionary:
 //
 //   number, version, status          Inlines for the footer
@@ -123,8 +123,16 @@
   show outline.entry: it => {
     show link: set text(fill: black)
     if it.element.func() == figure {
-      // Lists of figures and tables (appendices): "Abbildung 1: caption ... 5".
-      block(width: 100%, link(it.element.location(), [*#it.prefix():* #it.inner()]))
+      // Lists of figures and tables (appendices): "Abbildung 1: caption ... 5",
+      // with the caption shortened to its first sentence.
+      let caption = content-to-string(it.element.caption.body)
+      // (the sentence ends at the first ".", "!" or "?" followed by a space or the end)
+      let first = if caption == none { none } else { caption.match(regex("^.*?[.!?](\\s|$$)")) }
+      // Without a sentence end the whole caption is shown; the dot leader is
+      // the same in both cases (Typst's own leader would be spaced differently).
+      let text-part = if first == none { it.element.caption.body } else { first.text.trim() }
+      let body = [#text-part #box(width: 1fr, repeat[.]) #it.page()]
+      block(width: 100%, link(it.element.location(), [*#it.prefix():* #body]))
     } else {
       set text(size: if it.level == 1 { 12pt } else { 11pt })
       set text(weight: "bold") if it.level <= 2
@@ -199,10 +207,13 @@
     it
   }
 
+  // Captions are left-aligned (figures and tables stay as they are); the
+  // caption block spans the full width so that it aligns with the margin.
+  show figure: set block(width: 100%)
   show figure.caption: set text(size: 10pt)
-  show figure.caption: it => context [
+  show figure.caption: it => context align(left, block(width: 100%)[
     *#it.supplement #it.counter.display(it.numbering):* #it.body
-  ]
+  ])
   show footnote.entry: set text(size: 10pt)
 
   // Figures float like in LaTeX: the text flows on and the figure goes to

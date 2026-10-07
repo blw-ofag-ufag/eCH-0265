@@ -30,23 +30,23 @@ website:
     type: warning
 
 bibliography: references.yaml
-csl: assets/din-1505-2-alphanumeric.csl
+csl: assets/din_1505_2_alphanumeric.csl
 
 # eCH metadata shared by all languages, translated by the Lua filter
 metadata-files:
   - _ech.yml
 filters:
-  - assets/ech-metadata.lua
+  - assets/ech_metadata.lua
   - quarto
-  - assets/ech-captions.lua
+  - assets/ech_captions.lua
 shortcodes:
-  - assets/ech-shortcodes.lua
+  - assets/ech_shortcodes.lua
 
 format:
   html:
     theme:
       light: [cosmo, assets/ech.scss]
-      dark: [cosmo, assets/ech.scss, assets/ech-dark.scss]
+      dark: [cosmo, assets/ech.scss, assets/ech_dark.scss]
     template-partials:
       - assets/title-metadata.html
     toc: true
@@ -96,6 +96,7 @@ format:
     citeproc: true
     link-citations: true
 
+# Code chunks show only their output; use `#| echo: true` to show the code.
 execute:
   echo: false
   warning: false

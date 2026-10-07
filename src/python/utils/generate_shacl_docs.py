@@ -15,7 +15,8 @@ TRANSLATIONS = {
         "path": "Path",
         "type": "Type",
         "details": "Details",
-        "facts_shape": "IRI",
+        "facts_shape": "Shape",
+        "facts_class": "Class",
         "facts_target": "Target class",
         "facts_closed": "Closed",
         "facts_closed_yes": "Yes (only the listed properties are allowed)",
@@ -23,9 +24,9 @@ TRANSLATIONS = {
         "facts_figures": "Key figures",
         "facts_figures_range": "{instances} instances with {min} to {max} triples each ({avg} on average)",
         "facts_figures_fixed": "{instances} instances with {min} triples each",
-        "facts_open_data": "Open data",
-        "facts_open_yes": "Yes ([published on LINDAS]({link}))",
-        "facts_open_no": "No (transactional data, not part of the published graph)",
+        "facts_open_data": "Data access",
+        "facts_open_yes": "[SPARQL service]({link})",
+        "facts_open_no": "None (transactional data, not part of the published graph)",
         "section_overview": "Overview",
         "section_properties": "Properties",
         "section_rules": "Rules (SPARQL)",
@@ -55,7 +56,8 @@ TRANSLATIONS = {
         "path": "Pfad",
         "type": "Typ",
         "details": "Details",
-        "facts_shape": "IRI",
+        "facts_shape": "Shape",
+        "facts_class": "Klasse",
         "facts_target": "Zielklasse",
         "facts_closed": "Geschlossen",
         "facts_closed_yes": "Ja (nur die aufgeführten Eigenschaften zulässig)",
@@ -63,9 +65,9 @@ TRANSLATIONS = {
         "facts_figures": "Kennzahlen",
         "facts_figures_range": "{instances} Instanzen mit je {min} bis {max} Tripeln (im Mittel {avg})",
         "facts_figures_fixed": "{instances} Instanzen mit je {min} Tripeln",
-        "facts_open_data": "Open Data",
-        "facts_open_yes": "Ja ([auf LINDAS publiziert]({link}))",
-        "facts_open_no": "Nein (Transaktionsdaten, nicht Teil des publizierten Graphen)",
+        "facts_open_data": "Datenzugriff",
+        "facts_open_yes": "[SPARQL-Dienst]({link})",
+        "facts_open_no": "Keiner (Transaktionsdaten, nicht Teil des publizierten Graphen)",
         "section_overview": "Übersicht",
         "section_properties": "Eigenschaften",
         "section_rules": "Regeln (SPARQL)",
@@ -95,7 +97,8 @@ TRANSLATIONS = {
         "path": "Chemin",
         "type": "Type",
         "details": "Détails",
-        "facts_shape": "IRI",
+        "facts_shape": "Shape",
+        "facts_class": "Classe",
         "facts_target": "Classe cible",
         "facts_closed": "Fermée",
         "facts_closed_yes": "Oui (seules les propriétés énumérées sont admises)",
@@ -103,9 +106,9 @@ TRANSLATIONS = {
         "facts_figures": "Chiffres clés",
         "facts_figures_range": "{instances} instances avec chacune {min} à {max} triplets ({avg} en moyenne)",
         "facts_figures_fixed": "{instances} instances avec chacune {min} triplets",
-        "facts_open_data": "Open data",
-        "facts_open_yes": "Oui ([publiées sur LINDAS]({link}))",
-        "facts_open_no": "Non (données transactionnelles, ne faisant pas partie du graphe publié)",
+        "facts_open_data": "Accès aux données",
+        "facts_open_yes": "[Service SPARQL]({link})",
+        "facts_open_no": "Aucun (données transactionnelles, ne faisant pas partie du graphe publié)",
         "section_overview": "Aperçu",
         "section_properties": "Propriétés",
         "section_rules": "Règles (SPARQL)",
@@ -135,7 +138,8 @@ TRANSLATIONS = {
         "path": "Percorso",
         "type": "Tipo",
         "details": "Dettagli",
-        "facts_shape": "IRI",
+        "facts_shape": "Shape",
+        "facts_class": "Classe",
         "facts_target": "Classe di destinazione",
         "facts_closed": "Chiusa",
         "facts_closed_yes": "Sì (solo le proprietà elencate sono ammesse)",
@@ -143,9 +147,9 @@ TRANSLATIONS = {
         "facts_figures": "Indicatori",
         "facts_figures_range": "{instances} istanze con {min}–{max} triple ciascuna ({avg} in media)",
         "facts_figures_fixed": "{instances} istanze con {min} triple ciascuna",
-        "facts_open_data": "Open data",
-        "facts_open_yes": "Sì ([pubblicate su LINDAS]({link}))",
-        "facts_open_no": "No (dati transazionali, non inclusi nel grafo pubblicato)",
+        "facts_open_data": "Accesso ai dati",
+        "facts_open_yes": "[Servizio SPARQL]({link})",
+        "facts_open_no": "Nessuno (dati transazionali, non inclusi nel grafo pubblicato)",
         "section_overview": "Panoramica",
         "section_properties": "Proprietà",
         "section_rules": "Regole (SPARQL)",
@@ -182,6 +186,11 @@ RANGE_PREDICATES = [
 def code(text):
     """Inline code for a table cell; pipes must be escaped inside pipe tables."""
     return "`" + str(text).replace("|", "\\|") + "`"
+
+
+def qname_link(g, uri):
+    """A prefixed name linked to its IRI: [prefix:Name](https://…/Name)."""
+    return f"[{format_uri(g, uri)}]({uri})"
 
 
 def format_literal(value):
@@ -233,18 +242,18 @@ def describe_constraints(g, prop, trans):
 
     allowed = g.value(prop, SH["in"])
     if allowed is not None:
-        values = [code(format_uri(g, v)) if not hasattr(v, "language") and str(v).startswith("http") else code(format_literal(v))
+        values = [qname_link(g, v) if not hasattr(v, "language") and str(v).startswith("http") else code(format_literal(v))
                   for v in rdf_list(g, allowed)]
         parts.append((trans['values'], ', '.join(values)))
 
     required = g.value(prop, SH.hasValue)
     if required is not None:
-        text = code(format_uri(g, required)) if str(required).startswith("http") else code(format_literal(required))
+        text = qname_link(g, required) if str(required).startswith("http") else code(format_literal(required))
         parts.append((trans['has_value'], text))
 
     examples = sorted(g.objects(prop, SKOS.example), key=str)
     if examples:
-        rendered = [code(format_uri(g, e)) if isinstance(e, URIRef) else format_literal(e) for e in examples]
+        rendered = [qname_link(g, e) if isinstance(e, URIRef) else format_literal(e) for e in examples]
         parts.append((trans['examples'], ", ".join(rendered)))
 
     severity = g.value(prop, SH.severity)
@@ -401,9 +410,13 @@ def yasgui_link(g, target_class, properties, graph_iri):
 
 def fact_sheet(g, data, shape, target_class, properties, graph_iri, trans):
     """Key-value lines (Pandoc definition list) summarising a node shape."""
-    facts = [(trans['facts_shape'], f"<{shape}>")]
-    if target_class is not None:
-        facts.append((trans['facts_target'], f"`{format_uri(g, target_class)}`"))
+    if target_class is not None and target_class == shape:
+        # a class that is its own shape ("shape class")
+        facts = [(trans['facts_class'], qname_link(g, shape))]
+    else:
+        facts = [(trans['facts_shape'], qname_link(g, shape))]
+        if target_class is not None:
+            facts.append((trans['facts_target'], qname_link(g, target_class)))
     closed = g.value(shape, SH.closed)
     facts.append((trans['facts_closed'], trans['facts_closed_yes'] if closed is not None and bool(closed.toPython()) else trans['facts_closed_no']))
     stats = class_statistics(data, target_class)
@@ -412,8 +425,9 @@ def fact_sheet(g, data, shape, target_class, properties, graph_iri, trans):
             template = trans['facts_figures_fixed'] if stats['min'] == stats['max'] else trans['facts_figures_range']
             facts.append((trans['facts_figures'], template.format(
                 instances=stats['instances'], min=stats['min'], max=stats['max'], avg=f"{stats['avg']:.1f}")))
-            link = yasgui_link(g, target_class, properties, graph_iri)
-            facts.append((trans['facts_open_data'], trans['facts_open_yes'].format(link=link)))
+            # comma-separated list of access points (more to come, e.g. i14y)
+            access = [trans['facts_open_yes'].format(link=yasgui_link(g, target_class, properties, graph_iri))]
+            facts.append((trans['facts_open_data'], ", ".join(access)))
         else:
             facts.append((trans['facts_open_data'], trans['facts_open_no']))
     lines = ["::: {.ech-facts}"]
@@ -619,7 +633,7 @@ def main():
                     sh_desc = sanitize_cell(p["desc"])
 
                     # "**Name** (`path`): description"
-                    p_path_str = f"`{p['path_qname']}`" if p["path_qname"] else ""
+                    p_path_str = qname_link(g, p['path']) if p["path"] else ""
                     heading_parts = []
                     if sh_name:
                         heading_parts.append(f"**{sh_name}**")
@@ -640,8 +654,8 @@ def main():
                         qname = format_uri(g, t_uri)
                         local = str(t_uri).split('#')[-1].split('/')[-1]
                         if local in trans['datatypes']:
-                            return f"{trans['datatypes'][local]} (`{qname}`)"
-                        return f"`{qname}`"
+                            return f"{trans['datatypes'][local]} ({qname_link(g, t_uri)})"
+                        return qname_link(g, t_uri)
 
                     primary = next((t for t in [p["node"], p["class"], p["datatype"]] if t), None)
                     types = [format_type(primary)] if primary else []
@@ -706,7 +720,7 @@ def main():
             f.write("\n".join(md_lines))
 
         # Prefixes and namespaces used by the data model
-        ns_rows = [[f"`{prefix}:`", f"<{namespace}>"] for prefix, namespace in used_namespaces(g, [s['uri'] for s in shapes_list])]
+        ns_rows = [[f"{prefix}:", namespace] for prefix, namespace in used_namespaces(g, [s['uri'] for s in shapes_list])]
         ns_lines = build_grid_table([trans['ns_prefix'], trans['ns_namespace']], ns_rows, [20, 80])
         ns_lines.append(f"\n: {trans['ns_caption']} {{#tbl-namespaces}}")
         with open(docs_dir / lang / "namespaces.md", "w", encoding="utf-8") as f:

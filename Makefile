@@ -6,6 +6,7 @@
 BUILD_DIR        := build
 RDF_DIR          := $(BUILD_DIR)/rdf
 PYTHON_DIR       := src/python
+R_DIR            := src/r
 
 # Tools and binaries
 ROBOT_VERSION    := v1.9.5
@@ -17,6 +18,9 @@ VENV_PIP         := $(VENV_BIN)/pip
 PYSHACL          := $(VENV_BIN)/pyshacl
 PYTEST           := $(VENV_BIN)/pytest -p no:cacheprovider # suppress cache
 ROBOT            := java -jar $(VENV_BIN)/robot.jar
+RSCRIPT          ?= Rscript
+R_REQUIREMENTS   := $(wildcard $(R_DIR)/requirements.txt)
+R_STAMP          := $(if $(R_REQUIREMENTS),$(VENV)/.r-packages-installed.stamp)
 PLANTUML_VERSION   := 1.2024.3
 PLANTUML_JAR       := $(VENV_BIN)/plantuml.jar
 VENV_JAVA_DIR      := $(VENV)/java17
@@ -55,7 +59,7 @@ GREY             := \033[0;90m
 BOLD             := \033[1;37m
 NC               := \033[0m
 
-.PHONY: all help robot test docs clean check-python venv install-dependencies setup build delete publish stamp-metadata generate-shacl-docs generate-glossary-docs
+.PHONY: all help robot test docs clean check-python venv install-dependencies install-r-packages setup build delete publish stamp-metadata generate-shacl-docs generate-glossary-docs
 
 # Default target
 all: test docs ## Run the tests and build the documentation (default)
@@ -98,27 +102,37 @@ $(VENV)/.requirements-installed.stamp: $(PYTHON_DIR)/requirements.txt | $(VENV_P
 
 install-dependencies: $(VENV)/.requirements-installed.stamp
 
-# 4. Install robot
+# 4. Install R packages (the stamp is only defined if src/r/requirements.txt exists)
+$(VENV)/.r-packages-installed.stamp: $(R_REQUIREMENTS) $(R_DIR)/utils/install_packages.R | $(VENV_PYTHON)
+	@command -v $(RSCRIPT) >/dev/null 2>&1 || \
+		(printf "$(RED)ERROR: R not found (Rscript). Install R or delete $(R_DIR)/ if the documentation does not use R.$(NC)\n"; exit 1)
+	@printf "$(BOLD)[*] Installing R packages...$(NC)\n"
+	@printf "$(GREY)"; $(RSCRIPT) $(R_DIR)/utils/install_packages.R $(R_REQUIREMENTS) || { printf "$(NC)"; exit 1; }; printf "$(NC)"
+	@touch $@
+
+install-r-packages: $(R_STAMP)
+
+# 5. Install robot
 $(VENV_BIN)/robot.jar: | $(VENV_PYTHON)
 	@printf "$(BOLD)[*] Downloading ROBOT ontology tool...$(NC)\n"
 	@printf "$(GREY)"; curl -sL https://github.com/ontodev/robot/releases/download/$(ROBOT_VERSION)/robot.jar -o $(VENV_BIN)/robot.jar || { printf "$(NC)"; exit 1; }; printf "$(NC)"
 
 robot: $(VENV_BIN)/robot.jar
 
-# 5. Install PlantUML (for root-free pure Java rendering)
+# 6. Install PlantUML (for root-free pure Java rendering)
 $(PLANTUML_JAR): | $(VENV_PYTHON)
 	@printf "$(BOLD)[*] Downloading PlantUML...$(NC)\n"
 	@printf "$(GREY)"; curl -sLf https://github.com/plantuml/plantuml/releases/download/v$(PLANTUML_VERSION)/plantuml-$(PLANTUML_VERSION).jar -o $(PLANTUML_JAR) || \
 	(printf "$(NC)\n$(RED)ERROR: Download failed. Check the version/URL.$(NC)\n" && rm -f $(PLANTUML_JAR) && exit 1); printf "$(NC)"
 
-# 6. Install local Java 17 for PlantUML
+# 7. Install local Java 17 for PlantUML
 $(JAVA17): | $(VENV)
 	@printf "$(BOLD)[*] Downloading portable Java 17...$(NC)\n"
 	@printf "$(GREY)"; mkdir -p $(VENV_JAVA_DIR); \
 	curl -sL https://download.java.net/java/GA/jdk17.0.2/dfd4a8d0985749f896bed50d7138ee7f/8/GPL/openjdk-17.0.2_linux-x64_bin.tar.gz | tar -xz -C $(VENV_JAVA_DIR) || { printf "$(NC)"; exit 1; }; printf "$(NC)"
 
-# 7. Full setup
-setup: install-dependencies robot $(PLANTUML_JAR) $(JAVA17) ## Create the virtual environment, install Python dependencies, ROBOT, PlantUML and Java 17
+# 8. Full setup
+setup: install-dependencies install-r-packages robot $(PLANTUML_JAR) $(JAVA17) ## Create the virtual environment, install Python and R dependencies, ROBOT, PlantUML and Java 17
 	@printf "$(BOLD)[*] Setup complete.$(NC)\n"
 
 # ==============================================================================
@@ -227,7 +241,7 @@ generate-glossary-docs: src/rdf/data/glossary.skos.ttl $(PREFIXES) src/python/ut
 	$(VENV_PYTHON) src/python/utils/generate_glossary_docs.py -i src/rdf/data/glossary.skos.ttl -d $(DOCS_DIR) -p $(PREFIXES) || { printf "$(NC)"; exit 1; }; \
 	printf "$(NC)"
 
-docs: $(SHACL_REPORT) generate-shacl-docs generate-glossary-docs $(PUML_SVG) ## Generate the data model and glossary pages, render the diagrams and the documentation (website, PDF)
+docs: $(SHACL_REPORT) generate-shacl-docs generate-glossary-docs $(PUML_SVG) $(R_STAMP) ## Generate the data model and glossary pages, render the diagrams and the documentation (website, PDF)
 	@printf "$(BOLD)[*] Rendering documentation with Quarto...$(NC)\n"
 	@printf "$(GREY)"; \
 	quarto render docs > $(QUARTO_LOG) 2>&1 || { printf "$(NC)\n$(RED)ERROR: Quarto rendering failed. See log below:$(NC)\n$(GREY)"; cat $(QUARTO_LOG); printf "$(NC)\n"; exit 1; }; \
@@ -290,6 +304,7 @@ publish: test stamp-metadata delete ## Test, then replace the graph on LINDAS wi
 # CLEANUP
 # ==============================================================================
 
-clean: ## Remove all build artifacts, the virtual environment and generated pages
+clean: ## Remove all build artifacts, caches, the virtual environment, generated pages and rendered diagrams
 	@printf "$(BOLD)[*] Cleaning build artifacts...$(NC)\n"
-	@rm -rf $(BUILD_DIR) $(VENV) .quarto docs/.quarto tests/__pycache__ docs/index_files docs/*/entities.md docs/*/glossary.md docs/*/namespaces.md docs/*/assets/img
+	@rm -rf $(BUILD_DIR) $(VENV) docs/*/entities.md docs/*/glossary.md docs/*/namespaces.md docs/*/assets/img
+	@find . -path ./.git -prune -o \( -name __pycache__ -o -name .pytest_cache -o -name .quarto -o -name '*_files' -o -name '*_cache' -o -name '*.quarto_ipynb' -o -name .Rhistory -o -name .RData \) -prune -exec rm -rf {} +
