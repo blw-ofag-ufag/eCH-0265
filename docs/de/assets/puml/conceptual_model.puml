@@ -34,9 +34,9 @@ package "Nährstoffbilanz (NB)" as NB {
   NBK -up-> NBS : Kulturtyp
 }
 
-package "Pflanzenschutz (PSM)" as PSM {
-  class "PSM-Kultur" as PSMK
-  PSMK --> PSMK : übergeordnete\nKultur (0..2)
+package "Pflanzenschutz (PS)" as PS {
+  class "PS-Kultur" as PSK
+  PSK --> PSK : übergeordnete\nKultur (0..2)
 }
 
 package " " as REF {
@@ -48,7 +48,7 @@ package " " as REF {
 
 DZK --> NT : entspricht
 NBK --> NT : entspricht
-PSMK --> NT : entspricht
+PSK --> NT : entspricht
 DZ -[hidden]right- NB
-NB -[hidden]right- PSM
+NB -[hidden]right- PS
 @enduml

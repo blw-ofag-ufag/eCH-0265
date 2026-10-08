@@ -91,21 +91,28 @@ term:dz a skos:Concept ;
     skos:topConceptOf eCH-0265:glossary ;
     schema:name "Direktzahlungen"@de ;
     schema:alternateName "DZ"@de ;
-    schema:description "Beiträge des Bundes an Landwirtschaftsbetriebe gemäss Direktzahlungsverordnung. In diesem Dokument zugleich Kurzbezeichnung für den Fachbereich und dessen Kulturliste, die Direktzahlungskulturen."@de .
+    schema:description "Beiträge des Bundes an Landwirtschaftsbetriebe gemäss Direktzahlungsverordnung. In diesem Dokument zugleich Kurzbezeichnung für den Themenbereich."@de .
 
 term:nb a skos:Concept ;
     skos:inScheme eCH-0265:glossary ;
     skos:topConceptOf eCH-0265:glossary ;
     schema:name "Nährstoffbilanz"@de ;
     schema:alternateName "NB"@de ;
-    schema:description "Gegenüberstellung von Nährstoffanfall und Nährstoffbedarf eines Landwirtschaftsbetriebs, berechnet mit der Suisse-Bilanz. In diesem Dokument zugleich Kurzbezeichnung für den Fachbereich und dessen Kulturliste aus dem Nährstoffbilanz-Berechnungsservice."@de .
+    schema:description "Gegenüberstellung von Nährstoffanfall und Nährstoffbedarf eines Landwirtschaftsbetriebs, berechnet mit der Suisse-Bilanz. In diesem Dokument zugleich Kurzbezeichnung für den Themenbereich."@de .
+
+term:ps a skos:Concept ;
+    skos:inScheme eCH-0265:glossary ;
+    skos:topConceptOf eCH-0265:glossary ;
+    schema:name "Pflanzenschutz"@de ;
+    schema:alternateName "PS"@de ;
+    schema:description "Schutz der Kulturpflanzen vor Schadorganismen, unter anderem durch den Einsatz von Pflanzenschutzmitteln. In diesem Dokument zugleich Kurzbezeichnung für den Themenbereich."@de .
 
 term:psm a skos:Concept ;
     skos:inScheme eCH-0265:glossary ;
     skos:topConceptOf eCH-0265:glossary ;
     schema:name "Pflanzenschutzmittel"@de ;
     schema:alternateName "PSM"@de ;
-    schema:description "Mittel zum Schutz von Pflanzen vor Schadorganismen. In diesem Dokument zugleich Kurzbezeichnung für den Fachbereich Pflanzenschutz und dessen Kulturliste aus dem Pflanzenschutzmittelverzeichnis."@de .
+    schema:description "Mittel zum Schutz von Pflanzen vor Schadorganismen. Ihre Zulassung und ihr Einsatzbereich je Kultur sind im Pflanzenschutzmittelverzeichnis geregelt."@de .
 
 term:blw a skos:Concept ;
     skos:inScheme eCH-0265:glossary ;
@@ -188,25 +195,25 @@ term:cultivationtype a skos:Concept ;
     skos:inScheme eCH-0265:glossary ;
     skos:topConceptOf eCH-0265:glossary ;
     schema:name "Nutzungstyp"@de ;
-    schema:description "Bereichsübergreifend definierte Form der Landnutzung in der Referenztaxonomie von eCH-0265, auf die alle Kulturen der Fachbereiche verweisen."@de .
+    schema:description "Bereichsübergreifend definierte Form der Landnutzung in der Referenztaxonomie von eCH-0265, auf die alle Kulturen der Bereiche verweisen."@de .
 
 term:referencetaxonomy a skos:Concept ;
     skos:inScheme eCH-0265:glossary ;
     skos:topConceptOf eCH-0265:glossary ;
     schema:name "Referenztaxonomie"@de ;
-    schema:description "Die hierarchisch geordnete Gesamtheit der Nutzungstypen. Sie verbindet die Kulturlisten der Fachbereiche miteinander, trägt selbst aber keine fachlichen oder rechtlichen Eigenschaften."@de .
+    schema:description "Die hierarchisch geordnete Gesamtheit der Nutzungstypen. Sie verbindet die Kulturlisten der Bereiche miteinander, trägt selbst aber keine fachlichen oder rechtlichen Eigenschaften."@de .
 
 term:conceptscheme a skos:Concept ;
     skos:inScheme eCH-0265:glossary ;
     skos:topConceptOf eCH-0265:glossary ;
     schema:name "Konzeptschema"@de ;
-    schema:description "Eine in sich geschlossene Sammlung von Begriffen (Konzepten) nach SKOS. Jede Kulturliste eines Fachbereichs bildet ein eigenes Konzeptschema."@de .
+    schema:description "Eine in sich geschlossene Sammlung von Begriffen (Konzepten) nach SKOS. Jede Kulturliste eines Bereichs bildet ein eigenes Konzeptschema."@de .
 
 term:mapping a skos:Concept ;
     skos:inScheme eCH-0265:glossary ;
     skos:topConceptOf eCH-0265:glossary ;
     schema:name "Mapping-Tabelle"@de ;
-    schema:description "Tabelle der abgeleiteten Beziehungen zwischen den Kulturen zweier Fachbereiche, ausgedrückt als exakte, allgemeinere oder spezifischere Entsprechung."@de .
+    schema:description "Tabelle der abgeleiteten Beziehungen zwischen den Kulturen zweier Bereiche, ausgedrückt als exakte, allgemeinere oder spezifischere Entsprechung."@de .
 
 term:linkeddata a skos:Concept ;
     skos:inScheme eCH-0265:glossary ;

@@ -368,7 +368,7 @@ eCH-0265:NutrientBalanceCrop a sh:NodeShape, rdfs:Class ;
 eCH-0265:PlantProtectionCrop a sh:NodeShape, rdfs:Class ;
     sh:targetClass eCH-0265:PlantProtectionCrop ;
     rdfs:subClassOf skos:Concept ;
-    rdfs:label "Pflanzenschutzmittel-Kultur"@de,
+    rdfs:label "Pflanzenschutz-Kultur"@de,
         "Plant protection crop"@en ;
     rdfs:comment "Kultur, wie sie im [Pflanzenschutzmittelverzeichnis](https://psm.admin.ch/) modelliert ist. Diese Kulturen sind über die Attribute `schema:isPartOf` sowie `schema:hasPart` hierarchisch organisiert."@de ;
     sh:closed true ;

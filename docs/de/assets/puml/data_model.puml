@@ -55,14 +55,14 @@ package "Nährstoffbilanz (NB)" as NB {
   NBK --> NBS : eCH-0265:cultivationSubCategory [1..1]
 }
 
-package "Pflanzenschutz (PSM)" as PSM {
-  class "eCH-0265:PlantProtectionCrop" as PSMK {
+package "Pflanzenschutz (PS)" as PS {
+  class "eCH-0265:PlantProtectionCrop" as PSK {
     schema:identifier : xsd:string [1..1]
     schema:name : rdf:langString [2..4] uniqueLang
     schema:version : xsd:integer [1..1]
     skos:inScheme = psm:ConceptScheme [1..1]
   }
-  PSMK --> PSMK : skos:broader [0..2]
+  PSK --> PSK : skos:broader [0..2]
 }
 
 package "Referenztaxonomie" as REF {
@@ -80,6 +80,6 @@ DZK --> CT : eCH-0265:\nexactMatch [0..1]
 NBC -up-> CT : eCH-0265:\nexactMatch [0..1]
 NBS -up-> CT : eCH-0265:\nexactMatch [0..1]
 NBK -up-> CT : eCH-0265:\nexactMatch [0..1]
-PSMK --> CT : eCH-0265:\nexactMatch [0..1]
-DZ -[hidden]right- PSM
+PSK --> CT : eCH-0265:\nexactMatch [0..1]
+DZ -[hidden]right- PS
 @enduml

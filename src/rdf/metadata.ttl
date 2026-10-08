@@ -31,7 +31,7 @@
         "eCH-0265 Cultures agricoles"@fr,
         "eCH-0265 Colture agricole"@it ;
     schema:description
-        "Daten des Hilfsmittels eCH-0265: die Kulturlisten der Direktzahlungen, der Nährstoffbilanz und des Pflanzenschutzmittelverzeichnisses, die Referenztaxonomie der Nutzungstypen sowie die daraus abgeleiteten Beziehungen zwischen den Fachbereichen als Linked Data."@de,
+        "Daten des Hilfsmittels eCH-0265: die Kulturlisten der Direktzahlungen, der Nährstoffbilanz und des Pflanzenschutzmittelverzeichnisses, die Referenztaxonomie der Nutzungstypen sowie die daraus abgeleiteten Beziehungen zwischen den Bereichen als Linked Data."@de,
         "Data of the eCH-0265 auxiliary document: the crop lists of direct payments, nutrient balance and the plant protection products register, the reference taxonomy of cultivation types and the derived relations between the domains as linked data."@en,
         "Données du document auxiliaire eCH-0265: les listes de cultures des paiements directs, du bilan de fumure et de l'index des produits phytosanitaires, la taxonomie de référence des types d'utilisation ainsi que les relations dérivées entre les domaines sous forme de données liées."@fr,
         "Dati del documento ausiliario eCH-0265: gli elenchi delle colture dei pagamenti diretti, del bilancio delle sostanze nutritive e dell'indice dei prodotti fitosanitari, la tassonomia di riferimento dei tipi di utilizzo e le relazioni derivate tra i settori come linked data."@it ;
