@@ -1,22 +1,11 @@
 ---
-title: eCH-0265 Landwirtschaftliche Kulturen
-author: eCH Fachgruppe AgriFood
+title: Landwirtschaftliche Kulturen
 abstract: |
   Dieses Hilfsmittel beschreibt ein Datenmodell zu landwirtschaftlichen Kulturen der Schweiz in den Bereichen Direktzahlungen, Nährstoffbilanz und Pflanzenschutz.
   Es werden sowohl das Datenmodell, die effektiven Daten sowie Mapping-Tabellen bereitgestellt, um den Bezug zwischen den unterschiedlichen Bereichen herzustellen.
   Sämtliche Daten können als maschinenlesbare _Linked Data_ bezogen werden.
   Damit soll ein fachlich validierter Datenaustausch sowie die Mehrfachnutzung von Daten ermöglicht werden.
-date: last-modified
-date-format: long
-lang: de-CH
-keywords:
-  - Landwirtschaft
-  - Informatik
-  - Behörden
-license: CC BY 4.0
-citation: true
-csl: ../assets/din-1505-2-alphanumeric.csl
-lightbox: true
+lang: de
 ---
 
 # Hinweis {#sec-note .unnumbered}
@@ -32,14 +21,62 @@ Genderstern und ähnliche Schreibweisen werden nicht verwendet.
 
 # Einleitung {#sec-introduction}
 
-Die Definitionen für landwirtschaftliche Kulturen wurden historisch unabhängig voneinander für spezifische gesetzliche Aufträge und Systeme entwickelt.
-Die fehlende systemübergreifende Harmonisierung (mit einer *Single Source of Truth*) erschwert jedoch die Informationsverarbeitung über jeweilige Systemgrenzen hinaus.
+Die Definitionen landwirtschaftlicher Kulturen wurden in der Schweiz historisch unabhängig voneinander für spezifische gesetzliche Aufträge und Informationssysteme entwickelt.
+Verschiedene Themenbereiche sprechen von «Kulturen», meinen damit aber nicht unbedingt dasselbe, da sie ganz unterschiedliche Blikwinkel haben:
+Die Direktzahlungen typisieren Flächen für die Beitragsberechtigung, die Nährstoffbilanz ordnet jeder Kultur einen normierten Nährstoffbedarf zu, und das Pflanzenschutzmittelverzeichnis regelt, auf welchen Kulturen ein Pflanzenschutzmittel angewendet werden darf.
+Die fehlende systemübergreifende Harmonisierung (eine *Single Source of Truth*) erschwert die Informationsverarbeitung über die jeweiligen Systemgrenzen hinaus.
 
-Das vorliegende Hilfsmittel formuliert keine Vorgaben, sondern unterstützt gezielt die reibungslose Datenintegration über verschiedene Fachbereiche und Organisationen hinweg.
-Zu diesem Zweck stehen fertige Kulturentabellen sowie die dazugehörigen Mapping-Tabellen zur Verfügung.
-Alle definierten Ressourcen sind als *Linked Data* modelliert und lassen sich vollständig automatisiert beziehen, was eine effiziente Überführung von Daten aus einem System in ein anderes ermöglicht.
+Das vorliegende Hilfsmittel löst dieses Problem nicht durch eine Vereinheitlichung der Kulturbegriffe, sondern durch deren Übersetzung:
+Die drei Kulturlisten bleiben unverändert bestehen und werden über eine gemeinsame Referenztaxonomie miteinander verknüpft.
+Daraus entstehen Mapping-Tabellen, die zusammen mit den Kulturlisten als maschinenlesbare *Linked Data* bereitstehen.
 
-## Was ist eine Kultur? {#sec-what-is-a-crop}
+## Status {#sec-status}
+
+{{< ech status >}}
+
+Inhalt, Datenmodell und Daten dieses Hilfsmittels können sich bis zum Abschluss des Standardisierungsprozesses laufend ändern.
+Die jeweils gültige Fassung wird auf <https://ech.ch/de/ech/ech-0265/> publiziert; der aktuelle Arbeitsstand ist auf GitHub einsehbar: <https://github.com/blw-ofag-ufag/eCH-0265>.
+
+Als Hilfsmittel formuliert dieses Dokument keine Vorgaben.
+Es unterstützt die Datenintegration über Bereiche und Organisationen hinweg, indem es fertige Kulturentabellen und die dazugehörigen Mapping-Tabellen bereitstellt.
+
+## Anwendungsgebiet {#sec-scope}
+
+Dieses Hilfsmittel richtet sich an Fachpersonen und Entwickelnde, die Daten zu landwirtschaftlichen Kulturen zwischen den Bereichen Direktzahlungen (DZ), Nährstoffbilanz (NB) und Pflanzenschutz (PS) austauschen oder gemeinsam auswerten (@tbl-domains).
+Es umfasst:
+
+- die Kulturlisten der drei Bereiche mit ihren Identifikatoren, Bezeichnungen und bereichsinternen Strukturen,
+- eine bereichsübergreifende Referenztaxonomie der Nutzungstypen,
+- die daraus abgeleiteten Mapping-Tabellen zwischen den Bereichen sowie
+
+Sämtliche Referenzdaten sind dabei als _Linked Data_ maschinenlesbar verfügbar.
+
+Nicht Gegenstand sind Flächen und Geometrien[^geodata], Sorten sowie Direktzahlungsprogramme.[^later]
+Die fachlichen und rechtlichen Grundlagen der einzelnen Bereiche bleiben massgeblich; das Hilfsmittel bildet sie ab, ersetzt sie aber nicht.
+Die drei Bereiche sind nach ihrer Aufgabe benannt, nicht nach Organisationseinheiten; die zuständigen Bundesstellen nennt @tbl-domains.
+
+[^geodata]: Die Erhebung von landwirtschaftlichen Nutzflächen wird bereits mit dem minimalen Geodatenmodell «Landwirtschaftliche Kulturflächen» (Identifikator 153) spezifiziert: <https://www.blw.admin.ch/de/landwirtschaftliche-kulturflaechen>
+
+[^later]: Eine spätere Wiederaufnahme von Sorten und Programmen (und deren Referenzdaten) in dieses Hilfsmittel bleibt vorbehalten.
+
+| Bereich              | Quellsystem der Kulturliste                      | Zuständig | Kulturen |
+|:---------------------|:-------------------------------------------------|:----------|---------:|
+| Direktzahlungen (DZ) | Agrarpolitisches Informationssystem (AGIS)       | BLW       |      159 |
+| Nährstoffbilanz (NB) | Nährstoffbilanz-Berechnungsservice (NBBS)        | BLW       |      314 |
+| Pflanzenschutz (PS)  | Pflanzenschutzmittelverzeichnis (PSM-V)          | BLW/BLV   |      321 |
+
+: Die drei Bereiche mit den in diesem Dokument verwendeten Abkürzungen, dem Quellsystem ihrer Kulturliste, der zuständigen Bundesstelle und der Anzahl aktuell geltender Kulturen (Stand Juli 2026). {#tbl-domains tbl-colwidths="[30,47,13,10]"}
+
+## Aufbau des Dokuments {#sec-structure}
+
+@sec-what-is-a-crop klärt, was in diesem Hilfsmittel unter einer landwirtschaftlichen Kultur verstanden wird.
+@sec-domains beschreibt die Kulturbegriffe der drei Bereiche und zeigt, worin sie sich unterscheiden.
+@sec-data-model erläutert das Datenmodell auf konzeptioneller Ebene: die Referenztaxonomie, die bereichsspezifischen Konzeptschemata und die Ableitung der Beziehungen zwischen den Bereichen.
+@sec-interoperability misst, wie weit sich die Kulturen damit ineinander überführen lassen, und benennt die Grenzen.
+@sec-data-retrieval zeigt schliesslich, wie die Daten bezogen, genutzt und gepflegt werden.
+@sec-class-reference dokumentiert die technische Umsetzung mit allen Klassen und Attributen.
+
+# Der Begriff der landwirtschaftlichen Kultur {#sec-what-is-a-crop}
 
 Der Begriff der landwirtschaftlichen Kultur stützt sich in diesem Hilfsmittel massgeblich auf das Konzept `CultivationType` aus der Vorversion [@eCH-0265:1.0.0].
 Eine Kultur definiert sich demnach als Kategorie beziehungsweise als Teil eines Kategorisierungssystems, welches die Art der Nutzung und Kultivierung eines bestimmten Stücks Land über einen definierten Zeitraum beschreibt.
@@ -47,29 +84,36 @@ Eine Kultur definiert sich demnach als Kategorie beziehungsweise als Teil eines 
 Durch diese Definition ist die landwirtschaftliche Kultur strikt von der botanischen Taxonomie abzugrenzen.
 Die botanische Systematik klassifiziert einzelne Pflanzen.
 Die landwirtschaftliche Kultur hingegen typisiert keine Individuen, sondern spezifische Formen der Landnutzung.
-Es geht bei der Kultur folglich nicht um die biologische Pflanze an sich, sondern um die flächen- und zeitbezogene Bewirtschaftungsform, an welche die jeweiligen agronomischen, rechtlichen oder systemischen Eigenschaften geknüpft sind.
+Es geht bei der Kultur folglich nicht um die biologische Pflanze an sich, sondern um die flächen- und zeitbezogene Bewirtschaftungsform, an welche die jeweiligen agronomischen, rechtlichen oder systemischen Eigenschaften geknüpft sind.[^crop]
 
-Dieses Hilfsmittel dient dem Verständnis der Kulturbegriffe aus drei unterschiedlichen Bereichen, in welchen Definitionen landwirtschaftlicher Kulturen unabhängig voneinander gemacht wurden:
+[^crop]: Da in der Landwirtschaft meist Reinkulturen angebaut werden, besteht dennoch ein enger Zusammenhang zwischen der Kultur und der dominierenden botanischen Pflanzenart, häufig in Form einer 1:1-Beziehung.
 
-- [Direktzahlungen](#sec-direct-payments)
-- [Nährstoffbilanz](#sec-nutrient-balance)
-- [Pflanzenschutz](#sec-plant-protection)
+Diese Definition gilt für alle drei Bereiche gleichermassen, auch wenn jeder Bereich seine Kulturen nach eigenen Kriterien abgrenzt.
+Im Datenmodell dieses Hilfsmittels wird der bereichsübergreifende Kulturbegriff als *Nutzungstyp* bezeichnet (@sec-cultivation-type).
+Die Kulturen der Bereiche bleiben daneben als eigenständige Begriffe erhalten; sie werden im Folgenden als Direktzahlungskulturen, Nährstoffbilanz-Kulturen beziehungsweise PS-Kulturen bezeichnet.
 
-In den folgenden Unterkapiteln werden die Kategorisierungssysteme landwirtschaftlicher Kulturen dieser drei Bereiche im Detail beschrieben.
+# Kulturbegriffe der drei Bereiche {#sec-domains}
+
+In den folgenden Abschnitten werden die Kategorisierungssysteme landwirtschaftlicher Kulturen der drei Bereiche beschrieben: ihr Zweck, ihre Grundlagen, ihr Quellsystem und ihre Struktur.
+@sec-comparison stellt die drei Systeme einander gegenüber und zeigt, weshalb sie sich nicht einfach vereinheitlichen lassen.
 
 ## Direktzahlungen {#sec-direct-payments}
 
-Im Rahmen des Direktzahlungssystems sind 159 Direktzahlungskulturen (Stand Juli 2026) definiert, welche im Rahmen der Strukturdatenerhebung von den Bewirtschaftenden in den kantonalen Agrarinformationssystemen (KAIS) eingetragen und an das agrarpolitische Informationssystem (AGIS) des Bundes übermittelt werden können.
+Direktzahlungen sind Beiträge des Bundes an Landwirtschaftsbetriebe, die unter anderem den ökologischen Leistungsnachweis (ÖLN) erfüllen.
+Die Beitragsberechtigung hängt von der Nutzung der einzelnen Flächen ab, weshalb jede Fläche eines Betriebs einer Direktzahlungskultur zugeordnet wird.
+Im Rahmen des Direktzahlungssystems sind 159 Direktzahlungskulturen (Stand Juli 2026) definiert, welche im Rahmen der Strukturdatenerhebung von den Bewirtschaftenden in den kantonalen Agrarinformationssystemen (KAIS) eingetragen und an das agrarpolitische Informationssystem (AGIS) des Bundes übermittelt werden.
 
-Alle Kulturen mit Direktzahlungscode müssen jährlich an AGIS übermittelt werden – unabhängig davon, ob sie für Beiträge berechtigt sind oder nicht (vgl. [Flächenkatalog und Beitragsberechtigung](https://www.blw.admin.ch/dam/fr/sd-web/QYLa6wGfdK8G/2026%20Merkblatt%20Nr.%206.2%20Fl%C3%A4chenkatalog%20und%20Beitragsberechtigung.pdf)).
-In AGIS stehen also alle aktuell gültigen und historisierten Direktzahlungskulturen und deren Beitragsberechtigungen für Bund und Kantone zur Verfügung.
+Betriebe, die Direktzahlungen beziehen, deklarieren dabei ihre gesamte landwirtschaftliche Nutzfläche gegenüber dem Kanton, nicht nur die beitragsberechtigten Flächen.
+Die Kantone übermitteln diese Daten jährlich an AGIS, wo sie als Grundlage für die Berechnung der Direktzahlungen dienen (vgl. [Flächenkatalog und Beitragsberechtigung](https://www.blw.admin.ch/dam/fr/sd-web/QYLa6wGfdK8G/2026%20Merkblatt%20Nr.%206.2%20Fl%C3%A4chenkatalog%20und%20Beitragsberechtigung.pdf)).
+Betriebe ohne Direktzahlungsbezug sind hingegen nicht zur Deklaration verpflichtet und daher in AGIS nicht oder nur unvollständig erfasst.
+In AGIS stehen somit alle aktuell gültigen und historisierten Direktzahlungskulturen und deren Beitragsberechtigungen für Bund und Kantone zur Verfügung.
 Momentan können diese Daten aber nicht in maschinenlesbarer Form vom AGIS-Webservice bezogen werden.
 
 Die Direktzahlungskulturen kommen nicht nur im Rahmen der Strukturdatenerhebung zum Einsatz, sondern auch bei der gesamtschweizerischen räumlichen Erfassung von Nutzungsflächen (siehe [«landwirtschaftliche Kulturflächen»](https://www.blw.admin.ch/de/landwirtschaftliche-kulturflaechen)).
 Die Kantone erfassen diese Geodaten gemäss dem minimalen Geodatenmodell 153.1 «Nutzungsflächen» und stellen die Daten via dem interkantonalen Portal [geodienste.ch](https://geodienste.ch/) zur Verfügung.
-Die im Rahmen der Geodaten verwendeten Kulturkategorien sind als XML-File auf <https://models.geo.admin.ch/BLW/> publiziert, wobei weitere (aggregierende) Kulturkategorien definiert wurden und die Attribute nicht zu 100% deckungsgleich zu denjenigen der Direktzahlungskulturen der Strukturdatenerhebung sind.
+Die im Rahmen der Geodaten verwendeten Kulturkategorien sind als XML-File auf <https://models.geo.admin.ch/BLW/> publiziert, wobei weitere (aggregierende) Kulturkategorien definiert wurden und die Gültigkeitsangaben nicht deckungsgleich zu denjenigen der Direktzahlungskulturen der Strukturdatenerhebung (AGIS) sind.
 
-Die Direktzahlungskulturen sind selbst in acht Kulturkategorien eingeteilt (@tbl-directpaymentcrops-categories).
+Die Direktzahlungskulturen sind selbst in acht Flächenkategorien eingeteilt (@tbl-directpaymentcrops-categories).
 Eine Mehrheit dieser Kategorien wird explizit in der landwirtschaftlichen Begriffsverordnung (LBV) definiert.
 
 | N  | Kategorie | Definition | Beispiele     |
@@ -87,43 +131,77 @@ Eine Mehrheit dieser Kategorien wird explizit in der landwirtschaftlichen Begrif
 
 ## Nährstoffbilanz {#sec-nutrient-balance}
 
-Um umweltbelastende Nährstoffverluste zu reduzieren und die Ertragsfähigkeit der Böden nachhaltig zu sichern, müssen Schweizer Landwirtschaftsbetriebe eine ausgeglichene Nährstoffbilanz ausweisen [@grud2017].
-Das zentrale Berechnungsinstrument hierfür ist die Suisse-Bilanz, welche den Nährstoffanfall (etwa durch Hofdünger) und den Nährstoffbedarf auf Betriebsebene systematisch gegenüberstellt [@suibi2025].
-Für diese Bilanzierung wurden spezifische Kulturen definiert, weil jede landwirtschaftliche Kultur einen anderen, normierten Nährstoffbedarf (z.B. für Stickstoff oder Phosphor) aufweist [@grud2017].
-Die Zuweisung dieser Kulturen ist die Grundvoraussetzung, um eine Nährstoffbilanz für einen Betrieb berechnen zu können.
+Die «Grundlagen für die Düngung landwirtschaftlicher Kulturen in der Schweiz» (GRUD) liefern die fachlichen Empfehlungen zum Nährstoffbedarf der Kulturen, etwa für Stickstoff und Phosphor [@grud2017].
+Sie legen fest, wie viel Dünger eine Kultur unter Schweizer Bedingungen benötigt.
+Die Suisse-Bilanz ist das Vollzugs- und Kontrollinstrument im ökologischen Leistungsnachweis (ÖLN):
+Sie prüft auf Betriebsebene, ob zugeführte und abgeführte Nährstoffe insgesamt ausgeglichen sind, und stützt sich dabei auf die Datengrundlagen der GRUD [@suibi2025].
+Kurz gesagt bestimmen die GRUD den Soll-Bedarf, und die Suisse-Bilanz kontrolliert, ob ein Betrieb seine Nährstoffe im Rahmen dieses Bedarfs bewirtschaftet.
+Weil jede Kultur einen anderen normierten Nährstoffbedarf aufweist, ist die Zuweisung der Kulturen die Grundvoraussetzung jeder Nährstoffbilanz.
 
-Um die Suisse-Bilanz zu berechnen, ist die «Wegleitung Suisse-Bilanz» entscheidend, welche von Agridea und dem Bundesamt für Landwirtschaft herausgegeben wird [@suibi2025].
-In dem Dokument sind viele Referenztabellen enthalten, die entsprechend nach Kulturen aufgegliedert sind, abgeleitet von den detaillierteren Tabellen in @grud2017.
+Massgeblich für die Berechnung ist die «Wegleitung Suisse-Bilanz», herausgegeben von Agridea und dem Bundesamt für Landwirtschaft (BLW) [@suibi2025].
+Sie enthält zahlreiche nach Kulturen gegliederte Referenztabellen, abgeleitet von den detaillierteren Tabellen der GRUD.
 
-Zur Standardisierung der Suisse-Bilanz-Berechnung stellt das Bundesamt für Landwirtschaft neu den Nährstoffbilanz-Berechnungsservice (NBBS) als RESTful API zur Verfügung.
+Zur Standardisierung der Suisse-Bilanz-Berechnung stellt das BLW neu den Nährstoffbilanz-Berechnungsservice (NBBS) als Programmierschnittstelle (API) zur Verfügung.
 Über diese Schnittstelle lässt sich unter anderem ein Katalog der landwirtschaftlichen Kulturen abrufen.[^3]
-Der NBBS ordnet die Kulturen in einer strikten, dreistufigen Hierarchie (@tbl-nbbs-hierarchy).
+Die eigentlichen Kulturen heissen im NBBS «agronomische Kulturkategorien».
+Jede von ihnen ist genau einer Kultivierungskategorie und genau einer Kultivierungsunterkategorie zugeordnet (@tbl-nbbs-classes).
 
 [^3]: Die «agronomischen Kulturkategorien» für den Nährstoffbilanzrechner sind beispielsweise über den Endpoint <https://rf-vp.agate.ch/digiflux/naebi/2-0/naebiservice-backend/agronomiccropcategories> abrufbar.
-  Mittels der Slugs `cultivationcategories` und `cultivationsubcategories` lassen sich zudem die jeweiligen Übergruppen abfragen.
+  Mittels der Slugs `cultivationcategories` und `cultivationsubcategories` lassen sich zudem die beiden Gruppierungen abfragen.
 
 | N | Name     | Beschreibung                                         | Beispiele                      |
 |:--|:---------|:-----------------------------------------------------|:-------------------------------|
-| 3      | Kultivierungskategorien (`cultivationcategories`) | Oberste Hierarchieebene, dient nur der Strukturierung. | Ackerkulturen, Grundfutterproduktion, Spezialkulturen |
-| 8      | Kultivierungsunterkategorien (`cultivationsubcategories`) | Mittlere Ebene, dient ebenfalls nur der Strukturierung. | Getreide, Dauerkulturen, Hackfrüchte, Freilandgemüse, geschützte Kulturen, Grundfutter, übriger Ökoausgleich, diverse Kulturen |
-| 314    | Agronomische Kulturkategorien (`agronomiccropcategories`) | Unterste Ebene, welche die eigentlichen Kulturen beinhaltet. Hier sind die spezifischen agronomischen und regulatorische Eigenschaften hinterlegt. | «Winterweizen», «Zuckerrüben», «Naturwiese extensiv», «Aubergine, Erdkultur (geschützter Anbau)», «Walnüsse ≥ 185 Bäume/ha» |
+| 3      | Kultivierungskategorien (`cultivationcategories`) | Gruppierung der Kulturen nach Nutzungsbereich, dient nur der Strukturierung. | Ackerkulturen, Grundfutterproduktion, Spezialkulturen |
+| 8      | Kultivierungsunterkategorien (`cultivationsubcategories`) | Gruppierung der Kulturen nach Kulturtyp, dient ebenfalls nur der Strukturierung. | Getreide, Dauerkulturen, Hackfrüchte, Freilandgemüse, geschützte Kulturen, Grundfutter, übriger Ökoausgleich, diverse Kulturen |
+| 314    | Agronomische Kulturkategorien (`agronomiccropcategories`) | Die eigentlichen Kulturen, jeweils einer Kategorie und einer Unterkategorie zugeordnet. Hier sind die spezifischen agronomischen und regulatorischen Eigenschaften hinterlegt. | «Winterweizen», «Zuckerrüben», «Naturwiese extensiv», «Aubergine, Erdkultur (geschützter Anbau)», «Walnüsse ≥ 185 Bäume/ha» |
 
-: Hierarchische Struktur der Kulturen im Nährstoffbilanz-Berechnungsservice und Anzahl der Elemente (N) je Klasse, Stand Juli 2026. {#tbl-nbbs-hierarchy tbl-colwidths="[5,30,35,30]"}
+: Klassen der Kulturen im Nährstoffbilanz-Berechnungsservice und Anzahl der Elemente (N) je Klasse, Stand Juli 2026. {#tbl-nbbs-classes tbl-colwidths="[5,30,35,30]"}
 
-Während die beiden obersten Ebenen rein der Strukturierung und Gruppierung dienen, weisen die agronomischen Kulturkategorien auf der untersten Ebene spezifische agronomische und regulatorische Eigenschaften auf.
+Entgegen dem ersten Anschein bilden diese drei Klassen keine dreistufige Hierarchie.
+Die Unterkategorien sind den Kategorien nicht untergeordnet; vielmehr handelt es sich um zwei unabhängige Gruppierungen, die sich beide direkt auf die Kulturen beziehen.
+Die Kultivierungskategorie gruppiert nach Nutzungsbereich, die Kultivierungsunterkategorie nach Kulturtyp, und derselbe Kulturtyp kann in mehreren Nutzungsbereichen vorkommen (@tbl-nbbs-crosstab).
+So sind «Silomais» und «Futterrüben» Hackfrüchte der Grundfutterproduktion, «Zuckerrüben» hingegen Hackfrüchte der Ackerkulturen; «Getreide-Silage» ist Getreide der Grundfutterproduktion, «Winterweizen» Getreide der Ackerkulturen.
+
+```{r}
+#| label: tbl-nbbs-crosstab
+#| tbl-cap: "Anzahl agronomischer Kulturkategorien im Nährstoffbilanz-Berechnungsservice je Kultivierungsunterkategorie (Zeilen) und Kultivierungskategorie (Spalten). Die Unterkategorien «Diverse Kulturen», «Getreide», «Hackfrüchte» und «übriger Ökoausgleich» kommen in mehr als einer Kategorie vor."
+library(rdflib)
+library(dplyr)
+graph <- rdf_parse("../../build/rdf/03-processed.ttl", format = "turtle")
+rdf_query(graph, "
+  PREFIX eCH-0265: <https://agriculture.ld.admin.ch/eCH-0265/2/>
+  PREFIX schema: <http://schema.org/>
+  SELECT ?Unterkategorie
+    (SUM(IF(?kategorie = 'Ackerkulturen'@de, 1, 0)) AS ?Ackerkulturen)
+    (SUM(IF(?kategorie = 'Grundfutterproduktion'@de, 1, 0)) AS ?Grundfutterproduktion)
+    (SUM(IF(?kategorie = 'Spezialkulturen'@de, 1, 0)) AS ?Spezialkulturen)
+  WHERE {
+    ?crop a eCH-0265:NutrientBalanceCrop ;
+          eCH-0265:cultivationCategory ?category ;
+          eCH-0265:cultivationSubCategory ?subcategory .
+    ?category schema:name ?kategorie .
+    ?subcategory schema:name ?Unterkategorie .
+  }
+  GROUP BY ?Unterkategorie
+  ORDER BY ?Unterkategorie") |>
+  mutate(across(-Unterkategorie, ~ ifelse(.x == 0, "", format(.x)))) |>
+  knitr::kable(align = "lrrr")
+```
+
+Während Kategorien und Unterkategorien rein der Strukturierung und Gruppierung dienen, weisen die agronomischen Kulturkategorien spezifische agronomische und regulatorische Eigenschaften auf.
 Dazu gehören beispielsweise der Ertrag, die Zulässigkeit für bestimmte Direktzahlungsprogramme oder die Teilnahme an spezifischen Vorhaben wie dem «62a Nitrat-Projekt».
 
 ## Pflanzenschutz {#sec-plant-protection}
 
-Das [Pflanzenschutzmittelverzeichnis (PSMV)](https://www.psm.admin.ch/) ist das offizielle Register des Bundes, das alle in der Schweiz zugelassenen Pflanzenschutzmittel auflistet.
+Das [Pflanzenschutzmittelverzeichnis (PSM-V)](https://www.psm.admin.ch/) ist das offizielle Register des Bundes, das alle in der Schweiz zugelassenen Pflanzenschutzmittel auflistet.
 Es regelt, für welche Kulturen und unter welchen Bedingungen diese rechtmässig eingesetzt werden dürfen.
-Es wird vom Bundesamt für Lebensmittelsicherheit und Veterinärwesen (BLV) gepflegt und umfasst 321 definierte Kulturen.
+Es wird vom Bundesamt für Lebensmittelsicherheit und Veterinärwesen (BLV) gepflegt und umfasst 321 definierte Kulturen (Stand Juli 2026).
 Die Bezeichnungen dieser Kulturen liegen mehrsprachig auf Deutsch, Französisch und Italienisch sowie teilweise auf Englisch vor.
 
-Anders als die streng monohierarchische Klassifikationen (wie in AGIS und im NBBS) sind die Kulturen im PSMV als Objekte in einer flexiblen Polyhierarchie modelliert.
+Anders als die Kulturlisten der Direktzahlungen und der Nährstoffbilanz, die ihre Kulturen in wenige flache Gruppen einteilen, sind die Kulturen im PSM-V als Objekte in einer flexiblen Polyhierarchie modelliert.
 Dies bedeutet, dass ein Element mehr als ein Überelement aufweisen kann, welches wiederum eigenen Überelementen untergeordnet ist.
 
-Diese Struktur wurde ursprünglich von der [*European Plant Protection Organization* (EPPO)](https://eppo.int/) abgeleitet, anschliessend aber für die spezifischen Schweizer Anforderungen weiter modifiziert.
+Diese Struktur wurde ursprünglich von der [*European and Mediterranean Plant Protection Organization* (EPPO)](https://eppo.int/) abgeleitet, anschliessend aber für die spezifischen Schweizer Anforderungen weiter modifiziert.
 Die Organisation in Übergruppen erlaubt eine äusserst flexible Modellierung:
 Gewisse Äste der Hierarchie sind flach, während andere sehr tief verschachtelt sein können.
 Eine Kultur kann dabei bis zu zwei direkte Übergruppen besitzen.
@@ -138,14 +216,38 @@ Die Hierarchietiefe kann bis zu fünf Übergruppen umfassen, wie folgendes Beisp
 5. **Korbblütler (Asteraceae)**, gehört zu
 6. **Gemüsebau allg.**
 
-Die präzise Abbildung dieser Hierarchie ist fachlich von grosser Bedeutung, da die Zulassungslogik direkt in die Struktur des PSMV eingebaut ist.
+Die präzise Abbildung dieser Hierarchie ist fachlich von grosser Bedeutung, da die Zulassungslogik direkt in die Struktur des PSM-V eingebaut ist.
 Wenn eine Pflanzenschutzmittel-Anwendung für eine übergeordnete Kulturgruppe bewilligt ist, gilt diese Bewilligung automatisch auch für sämtliche untergeordneten Kulturen.
 
 Ein Beispiel hierfür:
 Das Herbizid [«Ariane C»](https://www.psm.admin.ch/de/produkte/7430) darf gegen «ein- und mehrjährige Dicotyledonen» in «Getreiden» eingesetzt werden.
-Damit darf es auf alle Kulturen angewendet, welche vom PSMV als Getreide klassifiziert sind.
-Mais, Buchweizen und Quinoa gehört in diesem System aber explizit nicht zu den Getreiden – in der Systematik des NBBS aber schon.[^4]
+Damit darf es auf alle Kulturen angewendet werden, welche vom PSM-V als Getreide klassifiziert sind.
 Die korrekte Nachbildung dieser Polyhierarchie ist in den Daten folglich essenziell, um Zulassungen maschinell korrekt zu verarbeiten.
+
+## Vergleich der drei Systeme {#sec-comparison}
+
+Die drei Kategorisierungssysteme verfolgen unterschiedliche Zwecke und sind entsprechend unterschiedlich aufgebaut (@tbl-comparison).
+Sie unterscheiden sich nicht nur darin, *wie* sie ihre Kulturen gliedern, sondern auch darin, *was* sie überhaupt klassieren:
+Die Direktzahlungen typisieren jede Fläche eines Betriebs, einschliesslich Einzelelementen wie Bäumen oder Hecken.
+Die Nährstoffbilanz enthält neben Kulturen auch reine Bilanzpositionen wie «Zwischenfutter».
+Das Pflanzenschutzmittelverzeichnis beschreibt Anwendungsbereiche von Pflanzenschutzmitteln, von der einzelnen Kultur bis zu sehr allgemeinen Gruppen wie «Offene Ackerfläche».
+
+| | Direktzahlungen (DZ) | Nährstoffbilanz (NB) | Pflanzenschutz (PS) |
+|:--|:--|:--|:--|
+| Zweck | Beitragsberechtigung von Flächen | Normierter Nährstoffbedarf je Kultur | Zulassung von Pflanzenschutzmitteln je Kultur |
+| Klassiert werden | Landnutzungen einer Fläche inklusive Einzelelemente | Kulturen und Bilanzpositionen eines Betriebs | Kulturen und Kulturgruppen als Anwendungsbereiche |
+| Struktur | Eine Ebene mit acht Flächenkategorien | Zwei unabhängige Gruppierungen mit drei Kategorien und acht Unterkategorien | Polyhierarchie mit bis zu sechs Ebenen und bis zu zwei Übergruppen je Kultur |
+| Identifikator | Numerischer Direktzahlungscode | Alphanumerischer Code (z.B. `CROP_ABRGS`) | Technischer Schlüssel (UUID) |
+| Sprachen | Deutsch, Französisch, Italienisch | Deutsch | Deutsch, Französisch, Italienisch, teilweise Englisch |
+| Maschinenlesbare Quelle | Nein | Ja (API des NBBS) | Ja (PSM-V) |
+
+: Gegenüberstellung der Kategorisierungssysteme der drei Bereiche. {#tbl-comparison tbl-colwidths="[16,28,28,28]"}
+
+Die Unterschiede betreffen nicht nur die Struktur, sondern auch den Inhalt scheinbar identischer Begriffe.
+So zählt der NBBS Mais, Buchweizen und Quinoa zum Getreide, das PSM-V hingegen explizit nicht.[^4]
+Wer eine Kulturliste von einem Bereich in einen anderen überträgt, muss solche Divergenzen kennen und eindeutig benennen können.
+Wegen ihrer unterschiedlichen Zwecke lassen sich die drei Systeme nicht zu einem einzigen vereinheitlichen.
+Das folgende Kapitel zeigt, wie eCH-0265 sie dennoch miteinander verknüpft.
 
 [^4]: Botanisch gesehen ist Mais ein Getreide (Süssgras), unterscheidet sich in der ackerbaulichen Praxis als Hackfrucht jedoch merklich von klassischen Getreidearten.
   Buchweizen (ein Knöterichgewächs) und Quinoa (ein Fuchsschwanzgewächs) sind botanisch nicht mit Getreide (Süssgras) verwandt.
@@ -153,93 +255,87 @@ Die korrekte Nachbildung dieser Polyhierarchie ist in den Daten folglich essenzi
 
 # Datenmodell {#sec-data-model}
 
-## Nutzung von Semantic-Web-Technologien {#sec-linked-data}
+Dieses Kapitel beschreibt das Datenmodell auf konzeptioneller Ebene: die beteiligten Begriffe, ihre Beziehungen zueinander und die Prinzipien, nach denen sie verknüpft werden.
+Die technische Umsetzung mit ihren Klassen, Attributen und Kardinalitäten ist in @sec-class-reference dokumentiert.
 
-Im Gegensatz zum Pflanzenschutzmittelverzeichnis wird beim Nährstoffbilanzrechner Mais als Getreide gezählt – es existieren also verschiedene Definitionen von Getreide.
-Um diese eindeutig kennzeichnen zu können, setzen wir auf Linked Data.
-Für weiterführende Informationen zur Publikation, Nutzung und den Kernprozessen von vernetzten Daten verweisen wir auf @eCH-0205:1.0.0.
+## Grundprinzipien {#sec-principles}
 
-Das konsolidierte Datenmodell wird durch eine RDFS-Ontologie abgebildet und mittels SHACL-Shapes validiert [@rdf;@owl2;@shacl].
+Das Datenmodell beruht auf vier Prinzipien:
 
-![UML-Diagramm des Datenmodells von eCH-0265. Dieses Diagramm wurde automatisch mithilfe von SHACL PLAY! [@francart2020shacl] aus den SHACL-Spezifikationen generiert.](../assets/img/uml.png){#fig-uml width="100%" .lightbox}
+1. **Eindeutige Identifikation.** Jede Kultur, jede Gruppe und jeder Nutzungstyp ist eine eigenständige Ressource mit einem weltweit eindeutigen, dauerhaften Identifikator (IRI), über den sie im Web aufgelöst werden kann. Das «Getreide» des PSM-V und das «Getreide» des NBBS sind damit zwei verschiedene, klar unterscheidbare Ressourcen.
+2. **Eigenständige Bereiche.** Jede Kulturliste wird als eigenes Konzeptschema abgebildet und behält Identifikatoren, Bezeichnungen und interne Struktur ihres Quellsystems unverändert bei.
+3. **Eine gemeinsame Referenz.** Alle Kulturen der drei Bereiche verweisen auf eine gemeinsame Referenztaxonomie der Nutzungstypen. Sie ist das einzige Element, das die Bereiche direkt miteinander verbindet (@fig-conceptual-model). Die Elemente der Referenztaxonomie bekommen ausserdem eine eindeutige Bezeichnung.
+4. **Abgeleitete statt gepflegte Beziehungen.** Die Beziehungen zwischen den Kulturen zweier Bereiche werden nicht manuell gepflegt, sondern aus der Referenztaxonomie abgeleitet. Ändert sich die Taxonomie, ändern sich die Mapping-Tabellen automatisch mit.
 
-@fig-uml veranschaulicht die grundlegende Architektur des semantischen Modells: Im Zentrum steht eine generische Referenzklasse (`eCH-0265:CultivationType`).
-Die Kulturhierarchien der drei verschiedenen Bereiche (Direktzahlungen, Nährstoffbilanz und Pflanzenschutz) sind jeweils als SKOS-Konzeptschema modelliert.
-Jede Kultur kann dabei auf die zentrale Referenzklasse "zeigen".
-Dieser modulare Aufbau erlaubt es, die historisch gewachsenen, in sich geschlossenen Kategoriensysteme unter Beibehaltung ihrer spezifischen fachlichen und rechtlichen Eigenschaften in einem gemeinsamen Graphen abzubilden und trotzdem miteinander zu verknüpfen.
+![Konzeptionelles Datenmodell von eCH-0265. Die Kulturlisten der drei Bereiche bleiben eigenständige Objekte mit ihrer jeweiligen internen Struktur. Jede Kultur verweist auf den Nutzungstyp der gemeinsamen Referenztaxonomie, dem sie entspricht; nur über diese Verweise sind die Bereiche miteinander verbunden.](assets/img/conceptual_model.svg){#fig-conceptual-model width="100%"}
 
-# Klassen {#sec-classes}
+Die Daten werden als Linked Data nach den Grundsätzen von @eCH-0205:1.0.0 publiziert.
+Die Konzeptschemata folgen dem *Simple Knowledge Organization System* [@skos], die Referenztaxonomie der *Web Ontology Language* (OWL) [@owl2].
+Der modulare Aufbau erlaubt es, die historisch gewachsenen, in sich geschlossenen Kategoriensysteme unter Beibehaltung ihrer fachlichen und rechtlichen Eigenschaften in einem gemeinsamen Graphen abzubilden und trotzdem miteinander zu verknüpfen.
 
-{{< include entities.md >}}
+## Der Nutzungstyp als Referenztaxonomie {#sec-cultivation-type}
 
-# Instruktionen zur Datenintegration {#sec-data-retrieval}
+Ein Nutzungstyp ist eine bereichsübergreifend definierte Form der Landnutzung im Sinne von @sec-what-is-a-crop, beispielsweise «Sommergerste», «Dauergrünfläche» oder «Gewächshausgurken».
+Die Referenztaxonomie umfasst rund 750 Nutzungstypen (Stand Juli 2026), die viersprachig benannt sind und wo nötig eine Beschreibung sowie Synonyme tragen.
+Sie geht auf das Konzept `CultivationType` der Vorversion zurück [@eCH-0265:1.0.0] und wurde so erweitert, dass jede Kultur der drei Bereiche einen entsprechenden Nutzungstyp findet.
 
-Die diesem Dokument zugrundeliegenden Master- und Referenzdaten sind als _Linked Data_ verfügbar.
+Die Nutzungstypen sind über Oberbegriffe hierarchisch geordnet:
+«Sommergerste» ist ein Unterbegriff von «Gerste» und von «Sommergetreide», diese sind Unterbegriffe von «Getreide», und über mehrere Stufen führt die Hierarchie bis zur «Ackerfläche» und zur «Landwirtschaftlichen Nutzfläche».
+Ein Nutzungstyp kann mehrere Oberbegriffe haben, und die Hierarchie ist je nach Ast unterschiedlich tief.
+An der Spitze stehen vier Wurzeln: die landwirtschaftliche Nutzfläche (LN), die Flächen ausserhalb der LN, die Sömmerungsfläche und die Einzelelemente wie Bäume und Hecken.
+Zusammengesetzte Nutzungstypen wie «Gewächshausgurken» sind als Schnittmenge ihrer Bestandteile definiert, hier von «Gurken» und «Geschützter Anbau», und erben damit die Einordnung beider.
 
-Die technologische Basis dafür bildet das [Resource Description Framework (RDF)](https://www.w3.org/TR/rdf11-concepts/), ein zentraler Standard des World Wide Web Consortiums (W3C) zur Modellierung von Datenstrukturen im Web.
-In RDF werden Informationen nicht in klassischen Tabellen, sondern als vernetzte Graphen abgebildet.
-Jede Aussage besteht dabei aus einem sogenannten Triple (Subjekt, Prädikat, Objekt).
-Diese Struktur ermöglicht eine maschinenlesbare, interoperable und systemübergreifend eindeutige Beschreibung von Ressourcen und deren Relationen zueinander.
+Die Referenztaxonomie ist bewusst kein weiteres fachliches Kategorisierungssystem; sie trägt keine agronomischen oder rechtlichen Eigenschaften.
+Ihre einzige Aufgabe ist es, festzuhalten, welche Nutzungsformen fachübergreifend dasselbe bedeuten und wie sie sich zueinander verhalten.
+Fehlt für eine Kultur eines Bereichs ein passender Nutzungstyp, wird die Taxonomie ergänzt.
 
-Für die Speicherung und Publikation dieser RDF-Daten wird [LINDAS](https://lindas.admin.ch/) (Linked Data Service) genutzt, der offizielle Linked-Data-Dienst der Schweizer Bundesverwaltung.
-LINDAS fungiert als sogenannter _Triple Store_, einer spezialisierte Graphdatenbank, die für das effiziente Speichern und Abfragen von RDF-Triples optimiert ist und die Daten öffentlich über eine genormte Schnittstelle bereitstellt.
+## Bereichsspezifische Konzeptschemata {#sec-concept-schemes}
 
-Das folgende Kapitel gibt eine minimale Anleitung, wie die Daten von LINDAS abgefragt und bezogen werden können.
+Jeder Bereich bildet ein eigenes Konzeptschema.
+Es enthält die Kulturen mit dem Identifikator und den Bezeichnungen des Quellsystems sowie die bereichsinterne Struktur (@fig-conceptual-model):
 
-## Bezug der Stammdaten über LINDAS {#sec-lindas-data-integration}
+- **Direktzahlungen.** Jede Direktzahlungskultur gehört zu genau einer Flächenkategorie (@tbl-directpaymentcrops-categories) und trägt ihren zeitlichen Gültigkeitsbereich, da Kulturen eingeführt und wieder aufgehoben werden. Aufgehobene Kulturen bleiben im Schema erhalten, damit historische Daten interpretierbar bleiben.
+- **Nährstoffbilanz.** Jede Nährstoffbilanz-Kultur ist genau einer Kultivierungskategorie und genau einer Kultivierungsunterkategorie zugeordnet; die beiden Gruppierungen stehen in keiner Beziehung zueinander (@sec-nutrient-balance).
+- **Pflanzenschutz.** Jede PS-Kultur kann bis zu zwei übergeordnete Kulturen haben. Damit wird die Polyhierarchie des Verzeichnisses vollständig nachgebildet, einschliesslich der Vererbung von Zulassungen an untergeordnete Kulturen.
 
-Die Kulturenstammdaten können als Linked Data mittels der Abfragesprache [SPARQL 1.1 Query Language](https://www.w3.org/TR/sparql11-query/) direkt aus dem LINDAS-Triplestore bezogen werden.
-Das nachfolgende generische Beispiel zeigt eine einfache Abfrage, welche sämtliche Nutzungstypen mit deren deutschem Namen zurückgibt:
+Jede Kultur und jede Gruppe eines Konzeptschemas verweist auf höchstens einen Nutzungstyp der Referenztaxonomie, dem sie inhaltlich entspricht.
+Dieser Verweis ist die einzige Information, die bei der Aufnahme einer Kultur manuell gepflegt wird.
+Einzelne Kulturen ohne entsprechenden Nutzungstyp, etwa reine Bilanzpositionen der Nährstoffbilanz wie «Vom Betrieb weggeführtes Stroh», bleiben ohne Verweis und damit ohne Beziehung zu den anderen Bereichen.
 
-``` rq
-{{< include ../../src/sparql/queries/example.rq >}}
-```
+## Ableitung der Beziehungen zwischen den Bereichen {#sec-mapping-derivation}
 
-Auf <https://lindas.admin.ch/sparql/> können solche Abfragen manuell über eine graphische Benutzeroberfläche ausgeführt werden.
+Aus den Verweisen auf die Referenztaxonomie werden die Beziehungen zwischen den Kulturen verschiedener Bereiche abgeleitet (@fig-mapping-derivation).
+Verwendet werden die drei Mapping-Beziehungen von SKOS [@skos]:
 
-Weitere praxisnahe Abfragebeispiele stehen im [GitHub Repository unter src/sparql/queries](https://github.com/blw-ofag-ufag/eCH-0265/tree/main/src/sparql/queries) zur Verfügung.
+- `skos:exactMatch`: Zwei Kulturen verweisen auf denselben Nutzungstyp; sie bedeuten dasselbe.
+- `skos:broadMatch`: Der Nutzungstyp der Kultur im Quellsystem ist ein Unterbegriff des Nutzungstyps der Kultur im Zielsystem; die Kultur im Zielsystem ist allgemeiner.
+- `skos:narrowMatch`: Die Umkehrung von `skos:broadMatch`; die Kultur im Zielsystem ist spezifischer.
 
-Für den automatisierten Datenabruf und die Systemintegration kann der LINDAS-Endpunkt über einen HTTP-POST-Request angesprochen werden.
-Dabei wird die SPARQL-Abfrage direkt im Body der Anfrage übermittelt.
-Ein entsprechendes Aufrufbeispiel mit `curl` sieht folgendermassen aus:
+![Ableitung der Beziehungen an einem Beispiel. Durchgezogene Pfeile sind fachlich gepflegte Beziehungen: die Verweise der Kulturen auf ihren Nutzungstyp und die Oberbegriffe der Referenztaxonomie. Gestrichelte Pfeile sind daraus automatisch abgeleitet. Die Direktzahlungskultur «Emmer, Einkorn» und die Nährstoffbilanz-Kultur «Emmer / Einkorn» verweisen auf denselben Nutzungstyp und sind deshalb exakt verknüpft. Die PS-Kultur «Getreide» verweist auf einen Oberbegriff dieses Nutzungstyps, weshalb die Direktzahlungskultur zu ihr in einer allgemeineren Beziehung steht.](assets/img/mapping_derivation.svg){#fig-mapping-derivation width="100%"}
 
-``` sh
-curl -X POST "https://lindas.admin.ch/query" \
-     -H "Content-Type: application/sparql-query" \
-     -H "Accept: application/sparql-results+json" \
-     --data-binary @query.rq -o data.json
-```
+Die Beziehungen werden je Zielsystem nach einer festen Rangfolge abgeleitet.[^note_rule]
+Allgemeinere Beziehungen (`skos:broadMatch`) entstehen nur, wenn im Zielsystem keine exakte Entsprechung existiert, und spezifischere Beziehungen (`skos:narrowMatch`) nur, wenn weder eine exakte noch eine allgemeinere Beziehung besteht.
+«Sommergerste» (DZ) ist deshalb ausschliesslich exakt mit «Sommergerste» (PS) verknüpft, obwohl ihr Nutzungstyp auch ein Unterbegriff von «Gerste» und «Getreide» ist.
+Diese Rangfolge hält die Mapping-Tabellen frei von redundanten Beziehungen:
+Für jede Kultur und jedes Zielsystem gibt es nur eine Art von Beziehung, und zwar die genaueste verfügbare.
 
-Dieser Aufruf setzt voraus, dass eine gültige SPARQL-Abfrage in der lokalen Datei `query.rq` vorliegt.
-Je nach Anforderung lässt sich das Rückgabeformat über den `Accept`-Header steuern.
-Für `SELECT`-Abfragen unterstützt LINDAS standardmässig strukturierte Formate wie JSON (`application/sparql-results+json`), XML (`application/sparql-results+xml`) und CSV (`text/csv`).
+[^note_rule]: Die Ableitung erfolgt im automatisierten Verarbeitungsprozess (@sec-quality) mit einer SPARQL-Update-Abfrage, siehe [src/sparql/processing/02_mapping_table_skos_generation.rq](https://github.com/blw-ofag-ufag/eCH-0265/blob/main/src/sparql/processing/02_mapping_table_skos_generation.rq) im Repository.
 
-## Bezug von Mapping-Tabellen {#sec-mapping-tables}
+| Quelle | SKOS-Beziehung | Ziel | Begründung |
+|:--|:--|:--|:--|
+| Sommergerste (DZ) | `skos:exactMatch` | Sommergerste (NB) | Beide Kulturen verweisen auf den Nutzungstyp «Sommergerste». |
+| Emmer, Einkorn (DZ) | `skos:broadMatch` | Getreide (PS) | Der Nutzungstyp «Emmer und Einkorn» ist ein Unterbegriff von «Kleinkörniges Getreide», auf das die PS-Kultur verweist. |
+| Kernobst (PS) | `skos:narrowMatch` | Obstanlagen (Äpfel) (DZ) | Umkehrung: Der Nutzungstyp der Direktzahlungskultur ist ein Unterbegriff von «Kernobst», die Kultur im Zielsystem ist also spezifischer. |
 
-Um die Beziehungen zwischen den Kulturen der unterschiedlichen Systeme aufzuzeigen, werden Mapping-Tabellen bereitgestellt. Diese dienen als «Übersetzung» zwischen dem Direktzahlungssystem (AGIS), dem Nährstoffbilanz-Berechnungsservice (NAEBI) und dem Pflanzenschutzmittelverzeichnis (PSM). 
+: Beispiele der abgeleiteten Beziehungen zwischen den Bereichen Direktzahlungen (DZ), Nährstoffbilanz (NB) und Pflanzenschutz (PS). {#tbl-mapping-example tbl-colwidths="[20,20,20,40]"}
 
-Die Relationen der Kulturen zueinander werden durch Beziehungen des *Simple Knowledge Organization System* (SKOS) klassifiziert:
+## Qualitätssicherung {#sec-quality}
 
-- `skos:exactMatch`: Verknüpft zwei Konzepte (d.h. Kulturen aus zwei Systemen) bei denen genau dasselbe gemeint ist.
-- `skos:narrowMatch` und `skos:broadMatch`: Beschreiben eine hierarchische Zuordnung zwischen zwei Konzepten, wobei die beiden Beziehungen zueinander invers sind.
-
-| Quellsystem | Kultur Quellsystem | SKOS-Beziehung | Zielsystem | Kultur Zielsystem | Anmerkung |
-| :--- | :--- | :--- | :--- | :--- | :--- |
-| AGIS | Sommergerste | `skos:exactMatch` | NAEBI | Sommergerste | Die Kulturen im Quell- und Zielsystem sind synonym. |
-| AGIS | Wintergerste | `skos:narrowMatch` | NAEBI | Wintergerste in 62a Nitrat-Projekt | Die Kultur im Zielsystem ist spezifischer als jene im Quellsystem. |
-| AGIS | Emmer, Einkorn | `skos:broadMatch` | PSM | Getreide | Die Kultur im Quellsystem ist spezifischer als jene im Zielsystem. |
-
-: Beispiele der Mapping-Relationen {#tbl-mapping-example}
-
-Die Prädikate `skos:exactMatch`, `skos:narrowMatch` und `skos:broadMatch` werden im Verarbeitungsprozess direkt an die Kulturen im Graphen angehängt und sind auf LINDAS abfragbar. Die Generierung erfolgt über das SPARQL-Skript `src/sparql/processing/02_mapping_table_skos_generation.rq` mittels `INSERT`-Befehlen.
-
-::: {.callout-note}
-Im Datenverarbeitungsprozess werden hierarchische Prädikate (`narrowMatch`, `broadMatch`) nur dann generiert, wenn für eine Kultur aus einem Quellsystem nicht bereits ein `skos:exactMatch` im jeweiligen Zielsystem gefunden wurde. Dies verhindert redundante synonyme und hierarchische Beziehungen für dieselbe Kultur und fördert die Übersichtlichkeit der resultierenden Mapping-Tabelle.
-:::
-
-Eine vorbereitete SPARQL-Abfrage zur Generierung der vollständigen Mapping-Tabelle (AGIS, NAEBI und PSM) befindet sich [im eCH-0265 Repository unter `src/sparql/queries/mapping_table.rq`](https://github.com/blw-ofag-ufag/eCH-0265/blob/main/src/sparql/queries/mapping_table.rq). 
-
-Diese Abfrage kann direkt in der Benutzeroberfläche von [LINDAS](https://lindas.admin.ch/sparql/) ausgeführt und als CSV oder JSON exportiert werden. Alternativ lässt sich die Tabelle programmatisch beziehen, siehe @sec-lindas-data-integration.
+Die Daten werden bei jeder Änderung automatisiert aufbereitet:
+Die Konzeptschemata und die Referenztaxonomie werden zusammengeführt, implizite Oberbegriffe werden durch logisches Schliessen ergänzt, die Beziehungen zwischen den Bereichen werden abgeleitet, und der resultierende Graph wird gegen formale Regeln geprüft.
+Solche Regeln legen beispielsweise fest, dass jede Kultur genau einen Identifikator trägt oder dass jede Nährstoffbilanz-Kultur genau einer Kategorie und einer Unterkategorie zugeordnet ist.
+Nur ein Graph, der alle Regeln erfüllt, wird publiziert.
+Die Regeln sind in @sec-class-reference dokumentiert.
 
 # Interoperabilität der Kulturbegriffe {#sec-interoperability}
 
@@ -258,14 +354,14 @@ crops <- rdf_query(graph, "
   WHERE {
     { ?crop a eCH-0265:DirectPaymentCrop .   BIND('DZ'  AS ?system) } UNION
     { ?crop a eCH-0265:NutrientBalanceCrop . BIND('NB'  AS ?system) } UNION
-    { ?crop a eCH-0265:PlantProtectionCrop . BIND('PSM' AS ?system) }
+    { ?crop a eCH-0265:PlantProtectionCrop . BIND('PS'  AS ?system) }
   }")
 expired <- rdf_query(graph, "SELECT ?crop ?validTo WHERE { ?crop <http://schema.org/validTo> ?validTo }") |>
   mutate(year = suppressWarnings(as.integer(substr(as.character(validTo), 1, 4)))) |>
   filter(!is.na(year), year < as.integer(format(Sys.Date(), "%Y")))
 crops <- crops |> anti_join(expired, by = "crop") |> distinct(crop, system)
 groups <- rdf_query(graph, paste0("SELECT DISTINCT ?parent WHERE { ?child <", skos, "broader> ?parent }"))
-crops <- crops |> filter(!(system == "PSM" & crop %in% groups$parent))
+crops <- crops |> filter(!(system == "PS" & crop %in% groups$parent))
 query_edges <- function(predicate) {
   rdf_query(graph, paste0("SELECT ?s ?t WHERE { ?s <", skos, predicate, "> ?t }")) |>
     mutate(p = predicate)
@@ -275,7 +371,7 @@ edges <- bind_rows(query_edges("exactMatch"), query_edges("broadMatch")) |>
   inner_join(crops, by = c("t" = "crop")) |> rename(t_system = system) |>
   filter(s_system != t_system)
 class_levels <- c("exact", "broad", "reached", "none")
-classes <- crossing(crops, other = c("DZ", "NB", "PSM")) |>
+classes <- crossing(crops, other = c("DZ", "NB", "PS")) |>
   filter(system != other) |>
   left_join(edges |> filter(p == "exactMatch") |> distinct(s, t_system) |> mutate(exact = TRUE),
             by = c("crop" = "s", "other" = "t_system")) |>
@@ -295,11 +391,8 @@ shares <- classes |>
 ```
 
 Semantische Interoperabilität bedeutet, dass die Bedeutung (die _Semantik_) einer Information beim Austausch zwischen Systemen erhalten bleibt [@eif2017].
-Die Mapping-Tabellen aus @sec-mapping-tables bilden dafür ein sogenanntes _Alignment_ zwischen den drei unabhängig entstandenen Kategorisierungssystemen der Direktzahlungen (DZ), der Nährstoffbilanz (NB) und des Pflanzenschutzmittelverzeichnisses (PSM); die verwendeten SKOS-Beziehungen entsprechen den Äquivalenz- und Hierarchie-Mappings nach [@iso25964-2; @skos].
-Dieses Kapitel quantifiziert, wie weit die beschriebenen Kulturen ohne manuellen Eingriff in ein anderes System überführt werden können.
-Berücksichtigt werden nur aktuell geltende Kulturen ohne Strukturierungsebenen: die Kulturkategorien bei Direktzahlungen und Nährstoffbilanz bleiben aussen vor, und im PSMV zählen nur die untersten Kulturen, nicht übergeordnete Gruppen wie «Getreide» oder «Wintergetreide» (@fig-psm-hierarchy).[^note_psm]
-
-[^note_psm]: Als unterste Kulturen gelten PSM-Kulturen, die selbst keine Unterkulturen (`skos:broader`) haben. Dieses Kriterium erfasst nicht alle Sammelbegriffe: «Offene Ackerfläche» und «Grünfläche» haben im PSMV keine Unterkulturen und zählen deshalb mit, sind fachlich aber sehr allgemein und nehmen einen Grossteil der aggregierenden Zuordnungen aus DZ und NB auf.
+Die abgeleiteten Beziehungen aus @sec-mapping-derivation bilden dafür ein sogenanntes _Alignment_ zwischen den drei unabhängig entstandenen Kategorisierungssystemen der Direktzahlungen (DZ), der Nährstoffbilanz (NB) und des Pflanzenschutzes (PS); die verwendeten SKOS-Beziehungen entsprechen den Äquivalenz- und Hierarchie-Mappings nach [@iso25964-2; @skos].
+Dieses Kapitel quantifiziert, wie weit die beschriebenen Kulturen ohne manuellen Eingriff in ein anderes System überführt werden können, und benennt anschliessend die bekannten Grenzen dieser Übersetzung.
 
 ```{r}
 #| label: fig-psm-hierarchy
@@ -379,6 +472,10 @@ ggraph(layout) +
   theme(legend.position = "bottom", legend.margin = margin(0, 0, 0, 0), plot.margin = margin(4, 4, 4, 4))
 ```
 
+Berücksichtigt werden nur aktuell geltende Kulturen ohne Strukturierungsebenen: die Flächenkategorien der Direktzahlungen sowie die Kategorien und Unterkategorien der Nährstoffbilanz bleiben aussen vor, und im PSM-V zählen nur die untersten Kulturen, nicht übergeordnete Gruppen wie «Getreide» oder «Wintergetreide» (@fig-psm-hierarchy).[^note_psm]
+
+[^note_psm]: Als unterste Kulturen gelten PS-Kulturen, die selbst keine Unterkulturen (`skos:broader`) haben. Dieses Kriterium erfasst nicht alle Sammelbegriffe: «Offene Ackerfläche» und «Grünfläche» haben im PSM-V keine Unterkulturen und zählen deshalb mit, sind fachlich aber sehr allgemein und nehmen einen Grossteil der aggregierenden Zuordnungen aus DZ und NB auf.
+
 Die Kultur eines Quellsystems gilt als _deterministisch abbildbar_ in ein Zielsystem, wenn mindestens ein `skos:exactMatch` oder mindestens ein `skos:broadMatch` zu einer Kultur des Zielsystems vorliegt.
 Diese Überführung mittels `skos:exactMatch` ist verlustfrei; ein `skos:broadMatch` ordnet die Kultur einer allgemeineren Kategorie zu, etwa «Winterraps zur Speiseölgewinnung» (Direktzahlungen) hin zu «Winterraps» (Pflanzenschutzmittelverzeichnis):
 Detailinformation geht dabei verloren, das Ziel ist aber ohne Zusatzwissen eindeutig.
@@ -392,7 +489,7 @@ Die _deterministische Abbildbarkeit_ ist der Anteil der deterministisch abbildba
 
 ```{r}
 #| label: fig-mappability
-#| fig-cap: "Beziehung der Kulturen eines Quellsystems zu den Kulturen eines Zielsystems für die drei Paare zwischen den Bereichen Direktzahlungen (DZ), Nährstoffbilanz (NB) und Pflanzenschutzmittelverzeichnis (PSM). Jeder Balken zeigt die N geltenden Kulturen des Quellsystems und ihre Beziehung zum Zielsystem: exakt verknüpft (`skos:exactMatch`), deterministisch aggregierbar (`skos:broadMatch`), nur als Aggregat erreichbar (`skos:broadMatch`) oder nicht verknüpft. Zahlen sind Anteile in Prozent mit der Anzahl Kulturen in Klammern; die schwarze Markierung ist die deterministische Abbildbarkeit."
+#| fig-cap: "Beziehung der Kulturen eines Quellsystems zu den Kulturen eines Zielsystems für die drei Paare zwischen den Bereichen Direktzahlungen (DZ), Nährstoffbilanz (NB) und Pflanzenschutz (PS). Jeder Balken zeigt die N geltenden Kulturen des Quellsystems und ihre Beziehung zum Zielsystem: exakt verknüpft (`skos:exactMatch`), deterministisch aggregierbar (`skos:broadMatch`), nur als Aggregat erreichbar (`skos:broadMatch`) oder nicht verknüpft. Zahlen sind Anteile in Prozent mit der Anzahl Kulturen in Klammern; die schwarze Markierung ist die deterministische Abbildbarkeit."
 #| fig-width: 7.5
 #| fig-height: 5
 class_labels <- c(
@@ -402,7 +499,7 @@ class_labels <- c(
   none    = "nicht verknüpft"
 )
 class_colours <- c(exact = "#063b42", broad = "#247b86", reached = "#aaaaaa", none = "#dddddd")
-pairs <- data.frame(a = c("DZ", "DZ", "NB"), b = c("NB", "PSM", "PSM"))
+pairs <- data.frame(a = c("DZ", "DZ", "NB"), b = c("NB", "PS", "PS"))
 rows <- bind_rows(
   pairs |> mutate(system = a, other = b, label = paste(a, "→", b), forward = TRUE),
   pairs |> mutate(system = b, other = a, label = paste(b, "→", a), forward = FALSE)
@@ -441,17 +538,14 @@ ggplot(plot_data) +
         axis.title.x = element_text(margin = margin(t = 10)))
 ```
 
-Am höchsten ist die deterministische Abbildbarkeit für NB/DZ hin zum PSM-Verzeichnis.
-Sie beruht überwiegend auf Aggregationen in sehr allgemeine PSM-Kulturen wie «Offene Ackerfläche» oder «Grünfläche» und ist damit nur ein grober Indikator für die Interoperabilität mit dem Pflanzenschutzmittelverzeichnis.
-In der Gegenrichtung ist eine solche PSM-Kultur nur als Aggregat erreichbar (dunkelgrau) und lässt sich nicht eindeutig auf eine NB- oder DZ-Kultur auflösen.
-Hellgrau markierte Kulturen bleiben in beiden Richtungen unerreicht, etwa Heil- und Gewürzpflanzen wie «Süssdolde» oder «Wolliger Fingerhut» im PSMV oder Bilanzpositionen wie «Zwischenfutter» in der NB; die _Abdeckung_ in @tbl-interoperability beziffert den Anteil der Zielkulturen, die von einem Quellsystem aus erreicht werden.
-
-Die Abbildbarkeit in DZ ist in beiden Richtungen gering, weil DZ auch Landnutzungen wie Biodiversitätsförderflächen, Sömmerungsflächen oder Einzelelemente typisiert, die in den anderen Systemen kein Gegenstück haben.
-Ackerfläche und Dauergrünfläche lassen sich praktisch vollständig ins Pflanzenschutzmittelverzeichnis überführen, Sömmerungsflächen hingegen kaum.
+Am höchsten ist die deterministische Abbildbarkeit für NB/DZ hin zum PSM-V.
+Sie beruht überwiegend auf Aggregationen in sehr allgemeine PS-Kulturen wie «Offene Ackerfläche» oder «Grünfläche» und ist damit nur ein grober Indikator für die Interoperabilität mit dem Pflanzenschutzmittelverzeichnis.
+In der Gegenrichtung ist eine solche PS-Kultur nur als Aggregat erreichbar (dunkelgrau) und lässt sich nicht eindeutig auf eine NB- oder DZ-Kultur auflösen.
+Hellgrau markierte Kulturen bleiben in beiden Richtungen unerreicht, etwa Heil- und Gewürzpflanzen wie «Süssdolde» oder «Wolliger Fingerhut» im PSM-V oder Bilanzpositionen wie «Zwischenfutter» in der NB; die _Abdeckung_ in @tbl-interoperability beziffert den Anteil der Zielkulturen, die von einem Quellsystem aus erreicht werden.
 
 ```{r}
 #| label: tbl-interoperability
-#| tbl-cap: "Interoperabilitätskennzahlen zwischen Direktzahlungen (DZ), Nährstoffbilanz (NB) und Pflanzenschutzmittelverzeichnis (PSM): Anzahl geltender Kulturen im Quellsystem (N), Anteil exakt verknüpfter Kulturen (Exakt), deterministische Abbildbarkeit (Abbildbar) und Abdeckung des Zielsystems (Abdeckung)."
+#| tbl-cap: "Interoperabilitätskennzahlen zwischen Direktzahlungen (DZ), Nährstoffbilanz (NB) und Pflanzenschutz (PS): Anzahl geltender Kulturen im Quellsystem (N), Anteil exakt verknüpfter Kulturen (Exakt), deterministische Abbildbarkeit (Abbildbar) und Abdeckung des Zielsystems (Abdeckung)."
 #| tbl-colwidths: [20,16,16,16,16,16]
 indicators <- shares |>
   group_by(Quellsystem = system, Zielsystem = other) |>
@@ -470,14 +564,113 @@ indicators |>
   knitr::kable(align = "llrrrr")
 ```
 
+Die Abbildbarkeit in DZ ist in beiden Richtungen gering, weil DZ auch Landnutzungen wie Biodiversitätsförderflächen, Sömmerungsflächen oder Einzelelemente typisiert, die in den anderen Systemen kein Gegenstück haben.
+Ackerfläche und Dauergrünfläche lassen sich praktisch vollständig ins Pflanzenschutzmittelverzeichnis überführen, Sömmerungsflächen hingegen kaum.
+
 Die in diesem Kapitel präsentierten Kennzahlen werden dabei automatisch berechnet (Stand der Berechnung: {{< meta date >}}).
 Sie beschreiben den aktuellen Stand der Mapping-Tabellen; fehlende Beziehungen können fachlich begründet sein oder auf Lücken hinweisen, die bei der Pflege des Alignments zu priorisieren sind [@euzenat2008alignment].
 
-# Sicherheitsaspekte {#sec-safety-consideration}
+## Bekannte Einschränkungen {#sec-limitations}
 
-Informationen zu den ausdrücklich massgeblichen rechtlichen Grundlagen oder ein Hinweis darauf, dass bei der Umsetzung die entsprechenden rechtlichen Grundlagen zu beachten sind.
+Die Kennzahlen zeigen, dass die Übersetzung zwischen den Bereichen nur teilweise verlustfrei möglich ist.
+Die wichtigsten Gründe und ihre Folgen für die Nutzung sind:
 
-# Haftungsausschluss {#sec-disclaimer}
+- **Unterschiedliche Zwecke.** Die drei Systeme klassieren nicht dasselbe (@sec-comparison). Direktzahlungen typisieren Landnutzungen einschliesslich Einzelelementen, die Nährstoffbilanz enthält Bilanzpositionen wie «Zwischenfutter» oder «Getreide-Silage», und das PSM-V enthält sehr allgemeine Anwendungsbereiche. Nicht jede Kultur hat deshalb in jedem anderen Bereich ein Gegenstück.
+- **Unterschiedliche Granularität.** Wo ein System feiner unterscheidet als ein anderes, etwa die Nährstoffbilanz mit Kulturen «in 62a Nitrat-Projekt» oder mit Ertragsstufen bei Erdbeeren, existiert nur eine allgemeinere Beziehung. Die Übersetzung in das feinere System ist dann nicht deterministisch und erfordert eine fachliche Entscheidung.
+- **Gruppierungen sind nicht vergleichbar.** Flächenkategorien, Kultivierungskategorien und Übergruppen des PSM-V folgen je eigenen Logiken. Beziehungen sind nur auf der Ebene der Kulturen belastbar; die Gruppierungen der Nährstoffbilanz bilden zudem keine Hierarchie (@sec-nutrient-balance).
+- **Gleiche Namen, verschiedene Bedeutungen.** Begriffe wie «Getreide» sind in den Bereichen unterschiedlich abgegrenzt. Bezeichnungen reichen für eine Übersetzung nie aus; massgebend sind ausschliesslich die Identifikatoren und die abgeleiteten Beziehungen.
+- **Manuelle Pflege der Referenz.** Die Verweise der Kulturen auf die Nutzungstypen werden manuell gepflegt. Fehlende oder fehlerhafte Verweise sind möglich und wirken sich direkt auf die Mapping-Tabellen aus. Festgestellte Lücken können gemeldet werden (@sec-maintenance).
+- **Keine Verbindlichkeit.** Die abgeleiteten Beziehungen sind ein Hilfsmittel für die Datenintegration und keine fachlichen oder rechtlichen Entscheide (@sec-safety-consideration).
+
+# Datenbezug und Nutzung {#sec-data-retrieval}
+
+Alle in diesem Dokument beschriebenen Daten – die Referenztaxonomie, die drei Konzeptschemata und die abgeleiteten Beziehungen – sind als Linked Data öffentlich verfügbar.
+Technologische Basis ist das *Resource Description Framework* (RDF) des World Wide Web Consortium (W3C), in dem Informationen nicht als Tabellen, sondern als Graph aus Tripeln (Subjekt, Prädikat, Objekt) abgelegt werden [@rdf].
+Publiziert werden die Daten auf [LINDAS](https://lindas.admin.ch/), dem Linked Data Service der Schweizer Bundesverwaltung.
+LINDAS speichert die Daten in einem sogenannten *Triple Store* und stellt sie öffentlich über eine genormte Abfrageschnittstelle bereit.
+Eine Einführung in die Publikation und Nutzung von Linked Data gibt @eCH-0205:1.0.0.
+
+## Bezug der Stammdaten über LINDAS {#sec-lindas-data-integration}
+
+Die Kulturenstammdaten können mittels der Abfragesprache SPARQL [@sparql_query_language] direkt aus dem LINDAS-Triplestore bezogen werden.
+Das nachfolgende Beispiel zeigt eine einfache Abfrage, welche sämtliche Nutzungstypen mit deren deutschem Namen zurückgibt:
+
+``` rq
+{{< include ../../src/sparql/queries/example.rq >}}
+```
+
+Auf <https://lindas.admin.ch/sparql/> können solche Abfragen manuell über eine grafische Benutzeroberfläche ausgeführt werden.
+Weitere praxisnahe Abfragebeispiele stehen im [GitHub Repository unter src/sparql/queries](https://github.com/blw-ofag-ufag/eCH-0265/tree/main/src/sparql/queries) zur Verfügung.
+
+Für den automatisierten Datenabruf und die Systemintegration kann der LINDAS-Endpunkt über einen HTTP-POST-Request angesprochen werden.
+Dabei wird die SPARQL-Abfrage direkt im Body der Anfrage übermittelt.
+Ein entsprechendes Aufrufbeispiel mit `curl` sieht folgendermassen aus:
+
+``` sh
+curl -X POST "https://lindas.admin.ch/query" \
+     -H "Content-Type: application/sparql-query" \
+     -H "Accept: application/sparql-results+json" \
+     --data-binary @query.rq -o data.json
+```
+
+Dieser Aufruf setzt voraus, dass eine gültige SPARQL-Abfrage in der lokalen Datei `query.rq` vorliegt.
+Je nach Anforderung lässt sich das Rückgabeformat über den `Accept`-Header steuern.
+Für `SELECT`-Abfragen unterstützt LINDAS standardmässig strukturierte Formate wie JSON (`application/sparql-results+json`), XML (`application/sparql-results+xml`) und CSV (`text/csv`).
+
+## Bezug der Mapping-Tabellen {#sec-mapping-tables}
+
+Die abgeleiteten Beziehungen (@sec-mapping-derivation) sind direkt an die Kulturen im Graphen angehängt und auf LINDAS abfragbar.
+Eine vorbereitete SPARQL-Abfrage zur Generierung der vollständigen Mapping-Tabelle zwischen allen drei Bereichen befindet sich [im eCH-0265 Repository unter `src/sparql/queries/mapping_table.rq`](https://github.com/blw-ofag-ufag/eCH-0265/blob/main/src/sparql/queries/mapping_table.rq).
+Sie liefert je Zeile eine Quellkultur, die Beziehung und die Zielkultur, jeweils mit Identifikator, Bezeichnung und Konzeptschema.
+Die Abfrage kann direkt in der Benutzeroberfläche von LINDAS ausgeführt und als CSV oder JSON exportiert werden; alternativ lässt sich die Tabelle programmatisch beziehen (@sec-lindas-data-integration).
+
+## Typische Anwendungsfälle {#sec-use-cases}
+
+- **Übersetzung einer Kulturliste.** Die Direktzahlungskulturen eines Betriebs aus der Strukturdatenerhebung sollen für die Suisse-Bilanz in Nährstoffbilanz-Kulturen überführt werden. Wo eine exakte Entsprechung besteht, erfolgt die Übersetzung automatisch; wo nur allgemeinere Beziehungen bestehen, liefert die Mapping-Tabelle die Kandidaten für eine fachliche Entscheidung.
+- **Prüfung von Zulassungen.** Für eine Direktzahlungs- oder Nährstoffbilanz-Kultur sollen die zulässigen Pflanzenschutzmittel ermittelt werden. Über die exakte und die allgemeineren Beziehungen zu PS-Kulturen und deren übergeordnete Kulturen lassen sich alle relevanten Anwendungsbereiche im PSM-V bestimmen.
+- **Bereichsübergreifende Auswertung.** Flächen oder Kulturen aus verschiedenen Systemen sollen gemeinsam ausgewertet werden, etwa alle Getreideflächen. Über die Oberbegriffe der Referenztaxonomie lassen sich Kulturen aller Bereiche aggregieren, wobei explizit wird, welche Definition von «Getreide» der Auswertung zugrunde liegt.
+
+## Pflege, Aktualisierung und Versionierung {#sec-maintenance}
+
+Die Kulturlisten der Bereiche werden von den zuständigen Stellen in der Regel jährlich nachgeführt.
+Das Hilfsmittel übernimmt diese Änderungen, ergänzt neue Kulturen um ihren Verweis auf die Referenztaxonomie und publiziert den aktualisierten Graphen auf LINDAS.
+Die Identifikatoren der Kulturen und Nutzungstypen bleiben dabei dauerhaft stabil; aufgehobene Kulturen werden nicht gelöscht, sondern mit ihrem Gültigkeitsende versehen.
+Die Identifikatoren der Klassen und Eigenschaften des Datenmodells enthalten die Hauptversion des Hilfsmittels (`.../eCH-0265/2/...`).
+Nur eine neue Hauptversion mit nicht abwärtskompatiblen Änderungen führt zu neuen Identifikatoren; bestehende Daten bleiben unter der bisherigen Version gültig.
+
+Die Weiterentwicklung erfolgt offen auf GitHub.
+Fehler, fehlende Kulturen oder Änderungswünsche können als Issue gemeldet (<https://github.com/blw-ofag-ufag/eCH-0265/issues>) oder über das offizielle Formular für Änderungsanträge (*Request for Change*) von eCH eingereicht werden (<https://ech.ch/de/ech-standards/standardisierungsprozess/request-change-rfc>).
+Jede Änderung durchläuft vor der Publikation die automatisierte Qualitätssicherung (@sec-quality).
+Versionen des Hilfsmittels werden mit dem Status des Dokuments bei eCH abgestimmt.
+
+# Klassen des Datenmodells {#sec-class-reference}
+
+Dieses Kapitel dokumentiert die technische Umsetzung des in @sec-data-model beschriebenen Datenmodells.
+@fig-uml zeigt die Klassen mit ihren Attributen und Beziehungen in der Notation der *Unified Modeling Language* (UML).
+Die anschliessende Referenz ist automatisch aus den SHACL-Shapes (*Shapes Constraint Language*) generiert, mit denen der publizierte Graph validiert wird [@shacl].
+Sie führt für jede Klasse die zulässigen Eigenschaften mit Pfad, Typ und Kardinalität auf.
+
+![UML-Klassendiagramm des Datenmodells von eCH-0265, abgeleitet aus den SHACL-Shapes. Attribute sind mit Datentyp und Kardinalität angegeben; `uniqueLang` bedeutet, dass je Sprache höchstens ein Wert zulässig ist. Alle Kulturen und Gruppen der drei Bereiche verweisen über `eCH-0265:exactMatch` auf höchstens einen Nutzungstyp der Referenztaxonomie.](assets/img/data_model.svg){#fig-uml width="100%"}
+
+## Namespaces {#sec-namespaces}
+
+@tbl-namespaces listet die Präfixe und Namespaces, die das Datenmodell verwendet. Ein Präfix steht stellvertretend für eine Namespace-IRI, den gemeinsamen Anfang der IRIs eines Vokabulars.
+
+{{< include namespaces.md >}}
+
+{{< include entities.md >}}
+
+# Sicherheitsüberlegungen {#sec-safety-consideration}
+
+Die in diesem Hilfsmittel beschriebenen Daten sind öffentliche Referenz- und Stammdaten ohne Personenbezug.
+An ihre Nutzung sind keine besonderen Anforderungen des Datenschutzes oder der Informationssicherheit geknüpft.
+Bei der Umsetzung sind jedoch folgende Punkte zu beachten:
+
+- Massgeblich bleiben die rechtlichen Grundlagen der einzelnen Bereiche, insbesondere die Direktzahlungsverordnung und die landwirtschaftliche Begriffsverordnung (LBV), die Wegleitung Suisse-Bilanz als Vollzugshilfe im ÖLN sowie das Pflanzenschutzmittelverzeichnis als amtliches Zulassungsregister. Das Hilfsmittel bildet diese Quellen ab, ersetzt sie aber nicht.
+- Die abgeleiteten Beziehungen zwischen den Bereichen sind keine fachlichen oder rechtlichen Entscheide. Eine allgemeinere Beziehung zu einer PS-Kultur bedeutet keine Zulassung, und eine Beziehung zu einer Direktzahlungskultur bedeutet keine Beitragsberechtigung.
+- Die Daten sind ein Abbild zum angegebenen Stand. Wer sie in eigene Systeme übernimmt, soll Stand und Version festhalten und Aktualisierungen nachführen (@sec-maintenance).
+
+# Haftungsausschluss und Hinweise auf Rechte Dritter {#sec-disclaimer}
 
 eCH-Standards, die der Verein eCH dem Anwender kostenlos zur Verfügung stellt oder die auf eCH verweisen, haben nur den Status von Empfehlungen.
 Der Verein eCH haftet in keinem Fall für Entscheidungen oder Massnahmen, die der Anwender auf der Grundlage dieser Dokumente trifft bzw. ergreift.
@@ -504,40 +697,46 @@ Die dazugehörige Dokumentation kann kostenlos angefordert werden.
 Diese Bestimmungen gelten jedoch nur für die von eCH erarbeiteten Standards, nicht aber für Standards oder Produkte Dritter, die auf eCH-Standards verweisen.
 Die Standards enthalten die entsprechenden Hinweise auf Rechte Dritter.
 
-# Anhang A - Referenzen {#sec-appendix-a .appendix .unnumbered}
+# Anhang A – Referenzen {#sec-appendix-a .appendix .unnumbered}
 
 ::: {#refs}
 :::
 
-# Anhang B - Mitwirkung und Prüfung {#sec-appendix-b .appendix .unnumbered}
+# Anhang B – Mitwirkung und Prüfung {#sec-appendix-b .appendix .unnumbered}
 
 | Name                           | Organisation                      |
 |:-------------------------------|:----------------------------------|
+| Youssef Arrine                 | Bundesamt für Landwirtschaft      |
 | Marc Beringer                  | Bundesamt für Landwirtschaft      |
+| Numa Courvoisier               | Bundesamt für Landwirtschaft      |
+| Ursina Hutter                  | Bundesamt für Landwirtschaft      |
 | Damian Oswald                  | Bundesamt für Landwirtschaft      |
+| Jonas Plattner                 | Bundesamt für Landwirtschaft      |
 | Lea Stauber                    | Bundesamt für Landwirtschaft      |
 | Christian Wilda                | Bundesamt für Landwirtschaft      |
 
 : Autoren und Revision {#tbl-authors tbl-colwidths="[50,50]"}
 
-# Anhang C - Abkürzungen und Glossar {#sec-appendix-c .appendix .unnumbered}
+# Anhang C – Abkürzungen und Glossar {#sec-appendix-c .appendix .unnumbered}
+
+Dieses Glossar ist als SKOS-Glossar [@skos] auch maschinenlesbar verfügbar, auf [LINDAS](https://lindas.admin.ch/) und im [GitHub-Repository](https://github.com/blw-ofag-ufag/eCH-0265/blob/main/src/rdf/data/glossary.skos.ttl).
 
 {{< include glossary.md >}}
 
-# Anhang D - Änderungen gegenüber der Vorversion {#sec-appendix-d .appendix .unnumbered}
+# Anhang D – Änderungen gegenüber der Vorversion {#sec-appendix-d .appendix .unnumbered}
 
 Das vorliegende Dokument ist ein Hilfsmittel zur harmonisierten, systemübergreifenden Nutzung von landwirtschaftlichen Kulturdaten in der Schweiz.
 Gegenüber der Version 1.1.0 (eCH-0265 Datenstandard Agrardaten – Flächen und Kulturen) wurde das Dokument von einem unverbindlichen Standard zu einem Hilfsmittel umgewandelt.
 Gleichzeitig wurde der inhaltliche Fokus geschärft:
-Klassen rund um Geometrien/Flächen[^1], Sorten sowie Direktzahlungsprogrammen sind nicht mehr Teil dieses Dokuments.[^2]
+Klassen rund um Geometrien und Flächen, Sorten sowie Direktzahlungsprogramme sind nicht mehr Teil dieses Dokuments (@sec-scope).
 Neu enthalten sind dafür die Kulturen aus dem Pflanzenschutzmittelverzeichnis.
-
-[^1]: Die Erhebung von landwirtschaftlichen Nutzflächen wird bereits mit dem minimale Geodatenmodell «Landwirtschaftliche Kulturflächen» (Identifikator 153) spezifiziert: <https://www.blw.admin.ch/de/landwirtschaftliche-kulturflaechen>
-
-[^2]: Eine spätere Wiederaufnahme von Sorten und Programmen bleibt vorbehalten.
 
 Eine vollständige Übersicht der Veränderungen wird auf GitHub geführt: <https://github.com/blw-ofag-ufag/eCH-0265/releases>.
 
-# Anhang E - Abbildungsverzeichnis {#sec-appendix-e .appendix .unnumbered}
+# Anhang E – Abbildungsverzeichnis {#sec-appendix-e .appendix .unnumbered}
 
-# Anhang F - Tabellenverzeichnis {#sec-appendix-f .appendix .unnumbered}
+{{< ech figures >}}
+
+# Anhang F – Tabellenverzeichnis {#sec-appendix-f .appendix .unnumbered}
+
+{{< ech tables >}}
