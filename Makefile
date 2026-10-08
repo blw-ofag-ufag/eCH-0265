@@ -19,8 +19,8 @@ PYSHACL          := $(VENV_BIN)/pyshacl
 PYTEST           := $(VENV_BIN)/pytest -p no:cacheprovider # suppress cache
 ROBOT            := java -jar $(VENV_BIN)/robot.jar
 RSCRIPT          ?= Rscript
-R_REQUIREMENTS   := $(wildcard $(R_DIR)/requirements.txt)
-R_STAMP          := $(if $(R_REQUIREMENTS),$(VENV)/.r-packages-installed.stamp)
+R_DESCRIPTION    := $(wildcard $(R_DIR)/DESCRIPTION)
+R_STAMP          := $(if $(R_DESCRIPTION),$(VENV)/.r-packages-installed.stamp)
 PLANTUML_VERSION   := 1.2024.3
 PLANTUML_JAR       := $(VENV_BIN)/plantuml.jar
 VENV_JAVA_DIR      := $(VENV)/java17
@@ -102,12 +102,13 @@ $(VENV)/.requirements-installed.stamp: $(PYTHON_DIR)/requirements.txt | $(VENV_P
 
 install-dependencies: $(VENV)/.requirements-installed.stamp
 
-# 4. Install R packages (the stamp is only defined if src/r/requirements.txt exists)
-$(VENV)/.r-packages-installed.stamp: $(R_REQUIREMENTS) $(R_DIR)/utils/install_packages.R | $(VENV_PYTHON)
+# 4. Install the R packages of src/r/DESCRIPTION and the system libraries they need
+#    with pak (the stamp is only defined if the DESCRIPTION file exists)
+$(VENV)/.r-packages-installed.stamp: $(R_DESCRIPTION) | $(VENV_PYTHON)
 	@command -v $(RSCRIPT) >/dev/null 2>&1 || \
 		(printf "$(RED)ERROR: R not found (Rscript). Install R or delete $(R_DIR)/ if the documentation does not use R.$(NC)\n"; exit 1)
 	@printf "$(BOLD)[*] Installing R packages...$(NC)\n"
-	@printf "$(GREY)"; $(RSCRIPT) $(R_DIR)/utils/install_packages.R $(R_REQUIREMENTS) || { printf "$(NC)"; exit 1; }; printf "$(NC)"
+	@printf "$(GREY)"; $(RSCRIPT) -e 'if (!requireNamespace("pak", quietly = TRUE)) install.packages("pak", repos = "https://cloud.r-project.org"); pak::local_install_deps("$(R_DIR)")' || { printf "$(NC)"; exit 1; }; printf "$(NC)"
 	@touch $@
 
 install-r-packages: $(R_STAMP)
