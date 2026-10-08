@@ -264,13 +264,13 @@ Das Datenmodell beruht auf vier Prinzipien:
 
 1. **Eindeutige Identifikation.** Jede Kultur, jede Gruppe und jeder Nutzungstyp ist eine eigenständige Ressource mit einem weltweit eindeutigen, dauerhaften Identifikator (IRI), über den sie im Web aufgelöst werden kann. Das «Getreide» des PSM-V und das «Getreide» des NBBS sind damit zwei verschiedene, klar unterscheidbare Ressourcen.
 2. **Eigenständige Bereiche.** Jede Kulturliste wird als eigenes Konzeptschema abgebildet und behält Identifikatoren, Bezeichnungen und interne Struktur ihres Quellsystems unverändert bei.
-3. **Eine gemeinsame Referenz.** Alle Kulturen der drei Bereiche verweisen auf eine gemeinsame Referenztaxonomie der Nutzungstypen. Sie ist das einzige Element, das die Bereiche miteinander verbindet (@fig-conceptual-model).
+3. **Eine gemeinsame Referenz.** Alle Kulturen der drei Bereiche verweisen auf eine gemeinsame Referenztaxonomie der Nutzungstypen. Sie ist das einzige Element, das die Bereiche direkt miteinander verbindet (@fig-conceptual-model). Die Elemente der Referenztaxonomie bekommen ausserdem eine eindeutige Bezeichnung.
 4. **Abgeleitete statt gepflegte Beziehungen.** Die Beziehungen zwischen den Kulturen zweier Bereiche werden nicht manuell gepflegt, sondern aus der Referenztaxonomie abgeleitet. Ändert sich die Taxonomie, ändern sich die Mapping-Tabellen automatisch mit.
 
-![Konzeptionelles Datenmodell von eCH-0265. Die Kulturlisten der drei Bereiche bleiben eigenständige Konzeptschemata mit ihrer jeweiligen internen Struktur. Jede Kultur verweist auf den Nutzungstyp der gemeinsamen Referenztaxonomie, dem sie entspricht; nur über diese Verweise sind die Bereiche miteinander verbunden.](assets/img/conceptual_model.svg){#fig-conceptual-model width="100%" .lightbox}
+![Konzeptionelles Datenmodell von eCH-0265. Die Kulturlisten der drei Bereiche bleiben eigenständige Objekte mit ihrer jeweiligen internen Struktur. Jede Kultur verweist auf den Nutzungstyp der gemeinsamen Referenztaxonomie, dem sie entspricht; nur über diese Verweise sind die Bereiche miteinander verbunden.](assets/img/conceptual_model.svg){#fig-conceptual-model width="100%"}
 
 Die Daten werden als Linked Data nach den Grundsätzen von @eCH-0205:1.0.0 publiziert.
-Die Konzeptschemata folgen dem *Simple Knowledge Organization System* (SKOS) [@skos], die Referenztaxonomie der *Web Ontology Language* (OWL) [@owl2].
+Die Konzeptschemata folgen dem *Simple Knowledge Organization System* [@skos], die Referenztaxonomie der *Web Ontology Language* (OWL) [@owl2].
 Der modulare Aufbau erlaubt es, die historisch gewachsenen, in sich geschlossenen Kategoriensysteme unter Beibehaltung ihrer fachlichen und rechtlichen Eigenschaften in einem gemeinsamen Graphen abzubilden und trotzdem miteinander zu verknüpfen.
 
 ## Der Nutzungstyp als Referenztaxonomie {#sec-cultivation-type}
@@ -311,7 +311,7 @@ Verwendet werden die drei Mapping-Beziehungen von SKOS [@skos]:
 - `skos:broadMatch`: Der Nutzungstyp der Kultur im Quellsystem ist ein Unterbegriff des Nutzungstyps der Kultur im Zielsystem; die Kultur im Zielsystem ist allgemeiner.
 - `skos:narrowMatch`: Die Umkehrung von `skos:broadMatch`; die Kultur im Zielsystem ist spezifischer.
 
-![Ableitung der Beziehungen am Beispiel. Durchgezogene Pfeile sind fachlich gepflegte Beziehungen: die Verweise der Kulturen auf ihren Nutzungstyp und die Oberbegriffe der Referenztaxonomie. Gestrichelte Pfeile sind daraus automatisch abgeleitet. Die Direktzahlungskultur «Emmer, Einkorn» und die Nährstoffbilanz-Kultur «Emmer / Einkorn» verweisen auf denselben Nutzungstyp und sind deshalb exakt verknüpft. Die PS-Kultur «Getreide» verweist auf einen Oberbegriff dieses Nutzungstyps, weshalb die Direktzahlungskultur zu ihr in einer allgemeineren Beziehung steht.](assets/img/mapping_derivation.svg){#fig-mapping-derivation width="70%" fig-align="center" .lightbox}
+![Ableitung der Beziehungen an einem Beispiel. Durchgezogene Pfeile sind fachlich gepflegte Beziehungen: die Verweise der Kulturen auf ihren Nutzungstyp und die Oberbegriffe der Referenztaxonomie. Gestrichelte Pfeile sind daraus automatisch abgeleitet. Die Direktzahlungskultur «Emmer, Einkorn» und die Nährstoffbilanz-Kultur «Emmer / Einkorn» verweisen auf denselben Nutzungstyp und sind deshalb exakt verknüpft. Die PS-Kultur «Getreide» verweist auf einen Oberbegriff dieses Nutzungstyps, weshalb die Direktzahlungskultur zu ihr in einer allgemeineren Beziehung steht.](assets/img/mapping_derivation.svg){#fig-mapping-derivation width="100%"}
 
 Die Beziehungen werden je Zielsystem nach einer festen Rangfolge abgeleitet.[^note_rule]
 Allgemeinere Beziehungen (`skos:broadMatch`) entstehen nur, wenn im Zielsystem keine exakte Entsprechung existiert, und spezifischere Beziehungen (`skos:narrowMatch`) nur, wenn weder eine exakte noch eine allgemeinere Beziehung besteht.
@@ -650,7 +650,7 @@ Dieses Kapitel dokumentiert die technische Umsetzung des in @sec-data-model besc
 Die anschliessende Referenz ist automatisch aus den SHACL-Shapes (*Shapes Constraint Language*) generiert, mit denen der publizierte Graph validiert wird [@shacl].
 Sie führt für jede Klasse die zulässigen Eigenschaften mit Pfad, Typ und Kardinalität auf.
 
-![UML-Klassendiagramm des Datenmodells von eCH-0265, abgeleitet aus den SHACL-Shapes. Attribute sind mit Datentyp und Kardinalität angegeben; `uniqueLang` bedeutet, dass je Sprache höchstens ein Wert zulässig ist. Alle Kulturen und Gruppen der drei Bereiche verweisen über `eCH-0265:exactMatch` auf höchstens einen Nutzungstyp der Referenztaxonomie.](assets/img/data_model.svg){#fig-uml width="100%" .lightbox}
+![UML-Klassendiagramm des Datenmodells von eCH-0265, abgeleitet aus den SHACL-Shapes. Attribute sind mit Datentyp und Kardinalität angegeben; `uniqueLang` bedeutet, dass je Sprache höchstens ein Wert zulässig ist. Alle Kulturen und Gruppen der drei Bereiche verweisen über `eCH-0265:exactMatch` auf höchstens einen Nutzungstyp der Referenztaxonomie.](assets/img/data_model.svg){#fig-uml width="100%"}
 
 ## Namespaces {#sec-namespaces}
 
