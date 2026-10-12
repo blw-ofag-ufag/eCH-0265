@@ -5889,6 +5889,28 @@ cultivationtype:1316 a eCH-0265:CultivationType ;
         "Indication supplémentaire dans le Suisse-Bilanz pour la surface dont les feuilles de betteraves sont affouragées sur l'exploitation. La même surface est aussi saisie comme betteraves fourragères ou sucrières et ne doit pas être comptée deux fois dans les totaux de surfaces."@fr,
         "Indicazione supplementare nel Suisse-Bilanz per la superficie le cui foglie di barbabietola sono foraggiate in azienda. La stessa superficie è registrata anche come barbabietole da foraggio o da zucchero e non deve essere contata due volte nella somma delle superfici."@it ;
     rdfs:subClassOf cultivationtype:305 .
+
+cultivationtype:1317 a eCH-0265:CultivationType ;
+    schema:name "Vom Betrieb weggeführtes Stroh"@de,
+        "Straw removed from the farm"@en,
+        "Paille exportée de l'exploitation"@fr,
+        "Paglia asportata dall'azienda"@it ;
+    schema:description "Zusätzliche Angabe in der Suisse-Bilanz für die Fläche, deren Stroh vom Betrieb weggeführt wird. Dieselbe Fläche ist auch unter der jeweiligen Ackerkultur erfasst und darf bei Flächensummen nicht doppelt gezählt werden."@de,
+        "Additional declaration in the Suisse-Bilanz for the area whose straw is removed from the farm. The same area is also declared under the respective arable crop and must not be counted twice when summing areas."@en,
+        "Indication supplémentaire dans le Suisse-Bilanz pour la surface dont la paille est exportée de l'exploitation. La même surface est aussi saisie sous la grande culture correspondante et ne doit pas être comptée deux fois dans les totaux de surfaces."@fr,
+        "Indicazione supplementare nel Suisse-Bilanz per la superficie la cui paglia è asportata dall'azienda. La stessa superficie è registrata anche sotto la rispettiva coltura campicola e non deve essere contata due volte nella somma delle superfici."@it ;
+    rdfs:subClassOf cultivationtype:910 .
+
+cultivationtype:1318 a eCH-0265:CultivationType ;
+    schema:name "Betriebseigenes verfüttertes Stroh"@de,
+        "Home-grown fed straw"@en,
+        "Paille de l'exploitation affouragée"@fr,
+        "Paglia aziendale foraggiata"@it ;
+    schema:description "Zusätzliche Angabe in der Suisse-Bilanz für die Fläche, deren Stroh auf dem eigenen Betrieb verfüttert wird. Dieselbe Fläche ist auch unter der jeweiligen Ackerkultur erfasst und darf bei Flächensummen nicht doppelt gezählt werden."@de,
+        "Additional declaration in the Suisse-Bilanz for the area whose straw is fed on the farm. The same area is also declared under the respective arable crop and must not be counted twice when summing areas."@en,
+        "Indication supplémentaire dans le Suisse-Bilanz pour la surface dont la paille est affouragée sur l'exploitation. La même surface est aussi saisie sous la grande culture correspondante et ne doit pas être comptée deux fois dans les totaux de surfaces."@fr,
+        "Indicazione supplementare nel Suisse-Bilanz per la superficie la cui paglia è foraggiata in azienda. La stessa superficie è registrata anche sotto la rispettiva coltura campicola e non deve essere contata due volte nella somma delle superfici."@it ;
+    rdfs:subClassOf cultivationtype:910 .
 # ==============================================================================
 # DISJOINTNESS OF POTATO TYPES
 # ==============================================================================
