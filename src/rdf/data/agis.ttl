@@ -1909,6 +1909,15 @@ agis:936 a eCH-0265:DirectPaymentCrop ;
     skos:broader agis:13 ;
     eCH-0265:exactMatch cultivationtype:936 .
 
+agis:950 a eCH-0265:DirectPaymentCrop ;
+    schema:identifier "950" ;
+    schema:name "Ackerschonstreifen"@de,
+        "Bande culturale extensive"@fr,
+        "Fasce di colture estensive in campicoltura"@it ;
+    schema:validFrom "2023-01-01"^^xsd:date ;
+    skos:inScheme agis:ConceptScheme ;
+    eCH-0265:exactMatch cultivationtype:950 .
+
 agis:998 a eCH-0265:DirectPaymentCrop ;
     schema:identifier "998" ;
     schema:name "Übrige Flächen ausserhalb der landwirtschaftlichen Nutzfläche"@de,
