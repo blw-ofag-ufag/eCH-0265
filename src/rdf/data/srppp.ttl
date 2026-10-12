@@ -30,10 +30,10 @@
 # ==============================================================================
 
 psm:ConceptScheme a eCH-0265:PlantProtectionCropScheme ;
-    schema:name "PSM-Kulturen"@de,
-        "PSM crops"@en ;
-    schema:description "Kulturen aus dem Pflanzenschutzmittelverzeichnis (PSM) und ihre Identifikatoren."@de,
-        "Crops from the Plant Protection Products (PSM) registry and their identifiers."@en ;
+    schema:name "Pflanzenschutz-Kulturen"@de,
+        "Plant protection crops"@en ;
+    schema:description "Kulturen aus dem Pflanzenschutzmittelverzeichnis und ihre Identifikatoren."@de,
+        "Crops from the Swiss register of plant protection products and their identifiers."@en ;
     schema:creator org:bundesamt-fur-landwirtschaft-blw ;
     dcat:contactPoint
         [

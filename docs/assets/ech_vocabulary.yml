@@ -1,0 +1,195 @@
+# Translations of the eCH title page: field labels, enumeration values and
+# fixed texts, per language. Values are parsed as Markdown.
+#
+# The codes used in docs/_ech.yml are the keys of `category`, `maturity`,
+# `status`, `change` and `language`. Labels follow the eCH Word templates
+# (eCH-0003 V11.1.0) and the published French and English eCH standards.
+
+de:
+  labels:
+    name: Name
+    number: eCH-Nummer
+    category: Kategorie
+    maturity: Reifegrad
+    version: Version
+    status: Status
+    decision-date: Beschluss am
+    issue-date: Ausgabedatum
+    replaces: Ersetzt Version
+    prerequisites: Voraussetzungen
+    attachments: Beilagen
+    languages: Sprachen
+    group: Fachgruppe
+    publisher: Herausgeber / Vertrieb
+  category:
+    standard: Standard
+    best-practice: Best Practice
+    auxiliary: Hilfsmittel
+    white-paper: White Paper
+    addendum: Addendum
+  maturity:
+    experimental: Experimentell
+    defined: Definiert
+    established: Verbreitet
+  status:
+    in-progress: In Arbeit
+    draft: Entwurf
+    proposal: Vorschlag
+    approved: Genehmigt
+    replaced: Abgelöst
+    repealed: Aufgehoben
+    suspended: Sistiert
+  status-description:
+    in-progress: Der Gebrauch ist nur innerhalb der Fachgruppe, beziehungsweise im Expertenausschuss zugelassen.
+    draft: Das Dokument wurde von den zuständigen Referentinnen und Referenten aus dem Expertenausschuss zur öffentlichen Konsultation freigegeben und entsprechend publiziert.
+    proposal: Das Dokument wird dem Expertenausschuss zur Genehmigung vorgelegt, ist aber normativ noch nicht gültig.
+    approved: Das Dokument wurde vom Expertenausschuss genehmigt und hat für das definierte Einsatzgebiet im festgelegten Gültigkeitsbereich normative Kraft.
+    replaced: Das Dokument wurde durch eine neue, aktuellere Version ersetzt. Die Benutzung ist zwar noch möglich, es wird aber empfohlen, die neuere Version einzusetzen.
+    repealed: Das Dokument wurde von eCH zurückgezogen. Es darf nicht mehr genutzt werden.
+    suspended: Das Dokument wurde von eCH zurückgezogen. Es darf nicht genutzt werden. Im Unterschied zum Status «Aufgehoben» hat das Dokument die ordentlichen Prozessschritte nicht durchlaufen oder hat den Status «Genehmigt» nicht erreicht.
+  change:
+    minor: Minor Change
+    major: Major Change
+    new: Neu
+  language:
+    de: Deutsch
+    fr: Französisch
+    it: Italienisch
+    en: Englisch
+  original: Original
+  translation: Übersetzung
+  group-prefix: Fachgruppe
+  publisher:
+    - Verein eCH, Affolternstrasse 52, 8050 Zürich
+    - T 044 388 74 64 / [info@ech.ch](mailto:info@ech.ch) / [www.ech.ch](https://www.ech.ch)
+  tagline: E-Government Standards
+  page-prefix: Seite
+  page-infix: von
+  organisation: Verein eCH
+  summary: Zusammenfassung
+
+fr:
+  labels:
+    name: Nom
+    number: Numéro eCH
+    category: Catégorie
+    maturity: Degré de maturité
+    version: Version
+    status: Statut
+    decision-date: Date de décision
+    issue-date: Date de publication
+    replaces: Remplace la version
+    prerequisites: Conditions préalables
+    attachments: Annexes
+    languages: Langues
+    group: Groupe spécialisé
+    publisher: Éditeur / distribution
+  category:
+    standard: Norme
+    best-practice: Best Practice
+    auxiliary: Document auxiliaire
+    white-paper: White Paper
+    addendum: Addendum
+  maturity:
+    experimental: Expérimental
+    defined: Défini
+    established: Répandu
+  status:
+    in-progress: En cours
+    draft: Projet
+    proposal: Proposition
+    approved: Approuvé
+    replaced: Remplacé
+    repealed: Supprimé
+    suspended: Suspendu
+  status-description:
+    in-progress: L'utilisation est autorisée uniquement au sein du groupe spécialisé et/ou du Comité des experts.
+    draft: Le document a été validé par les référents et référentes compétents du Comité des experts en vue de sa consultation publique, et a été publié en conséquence.
+    proposal: Le document doit être présenté au Comité des experts en vue de son approbation, mais n'est pas encore valable d'un point de vue normatif.
+    approved: Le document a été approuvé par le Comité des experts et a force normative pour le domaine d'application défini dans la sphère de validité stipulée.
+    replaced: Le document a été remplacé par une version plus récente. Il peut encore être utilisé, mais il est recommandé d'appliquer la version la plus récente.
+    repealed: Le document a été retiré par l'association eCH. Il ne doit plus être utilisé.
+    suspended: Le document a été retiré par l'association eCH. Il ne doit pas être utilisé. À la différence du statut «Supprimé», le document n'est pas passé par toutes les étapes normales du processus ou n'a pas atteint le statut «Approuvé».
+  change:
+    minor: Minor Change
+    major: Major Change
+    new: Nouveau
+  language:
+    de: Allemand
+    fr: Français
+    it: Italien
+    en: Anglais
+  original: original
+  translation: traduction
+  group-prefix: Groupe spécialisé
+  publisher:
+    - Association eCH, Affolternstrasse 52, 8050 Zurich
+    - T 044 388 74 64 / [info@ech.ch](mailto:info@ech.ch) / [www.ech.ch](https://www.ech.ch)
+  tagline: Normes en cyberadministration
+  page-prefix: page
+  page-infix: sur
+  organisation: Association eCH
+  summary: Résumé
+
+en:
+  labels:
+    name: Name
+    number: eCH-number
+    category: Category
+    maturity: Quality stage
+    version: Version
+    status: Status
+    decision-date: Decision on
+    issue-date: Date of issue
+    replaces: Replaces version
+    prerequisites: Requirements
+    attachments: Annexes
+    languages: Languages
+    group: Technical Unit
+    publisher: Editor / Distribution
+  category:
+    standard: Standard
+    best-practice: Best Practice
+    auxiliary: Auxiliary document
+    white-paper: White Paper
+    addendum: Addendum
+  maturity:
+    experimental: Experimental
+    defined: Defined
+    established: Established
+  status:
+    in-progress: In progress
+    draft: Draft
+    proposal: Proposal
+    approved: Approved
+    replaced: Replaced
+    repealed: Repealed
+    suspended: Suspended
+  status-description:
+    in-progress: Use is only permitted within the Technical Unit or the Expert Committee.
+    draft: The document has been released for public consultation by the responsible rapporteurs of the Expert Committee and published accordingly.
+    proposal: The document is submitted to the Expert Committee for approval, but is not yet normatively valid.
+    approved: The document has been approved by the Expert Committee and has normative force for the defined field of application within the specified scope of validity.
+    replaced: The document has been replaced by a newer version. It may still be used, but it is recommended to use the newer version.
+    repealed: The document has been withdrawn by eCH. It may no longer be used.
+    suspended: The document has been withdrawn by eCH. It may not be used. Unlike the status «Repealed», the document has not passed through the regular process steps or has not reached the status «Approved».
+  change:
+    minor: Minor Change
+    major: Major Change
+    new: New
+  language:
+    de: German
+    fr: French
+    it: Italian
+    en: English
+  original: original
+  translation: translation
+  group-prefix: Technical Unit
+  publisher:
+    - eCH registered association, Affolternstrasse 52, 8050 Zurich
+    - T 044 388 74 64 / [info@ech.ch](mailto:info@ech.ch) / [www.ech.ch](https://www.ech.ch)
+  tagline: E-Government Standards
+  page-prefix: Page
+  page-infix: of
+  organisation: eCH registered association
+  summary: Summary

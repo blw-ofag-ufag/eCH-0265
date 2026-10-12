@@ -1,0 +1,85 @@
+' UML-Klassendiagramm des Datenmodells von eCH-0265, manuell aus src/rdf/shapes/model.shacl.ttl abgeleitet.
+' Bei Änderungen an den SHACL-Shapes ist dieses Diagramm nachzuführen.
+@startuml
+!pragma layout smetana
+skinparam shadowing false
+skinparam roundCorner 8
+skinparam packageStyle rectangle
+skinparam defaultFontSize 11
+skinparam classFontSize 12
+skinparam Padding 2
+skinparam ArrowColor #444444
+skinparam ArrowThickness 1.2
+skinparam classBorderColor #444444
+skinparam classBackgroundColor #FFFFFF
+skinparam classAttributeFontSize 10
+skinparam packageBorderColor #999999
+skinparam packageBackgroundColor #F4F4F4
+hide circle
+hide empty members
+
+package "Direktzahlungen (DZ)" as DZ {
+  class "eCH-0265:DirectPaymentAreaCategory" as DZC {
+    schema:name : rdf:langString [1..*]
+    skos:inScheme = agis:ConceptScheme [1..1]
+    skos:topConceptOf = agis:ConceptScheme [1..1]
+  }
+  class "eCH-0265:DirectPaymentCrop" as DZK {
+    schema:identifier : xsd:string [1..1]
+    schema:name : rdf:langString [1..*]
+    schema:validFrom : xsd:integer [0..1]
+    schema:validTo : xsd:integer [0..1]
+    skos:inScheme = agis:ConceptScheme [1..1]
+  }
+  DZK -up-> DZC : skos:broader [0..1]
+}
+
+package "Nährstoffbilanz (NB)" as NB {
+  class "eCH-0265:NutrientBalanceCropCategory" as NBC {
+    schema:identifier : xsd:string [1..1]
+    schema:name : rdf:langString [1..*]
+    skos:inScheme = naebi:ConceptScheme [1..*]
+    skos:topConceptOf = naebi:ConceptScheme [1..1]
+  }
+  class "eCH-0265:NutrientBalanceCropSubCategory" as NBS {
+    schema:identifier : xsd:string [1..1]
+    schema:name : rdf:langString [1..*]
+    skos:inScheme = naebi:ConceptScheme [1..*]
+  }
+  class "eCH-0265:NutrientBalanceCrop" as NBK {
+    schema:identifier : xsd:string [1..1]
+    schema:name : rdf:langString [1..*]
+    skos:inScheme = naebi:ConceptScheme [1..*]
+  }
+  NBK --> NBC : eCH-0265:cultivationCategory [1..1]
+  NBK --> NBS : eCH-0265:cultivationSubCategory [1..1]
+}
+
+package "Pflanzenschutz (PS)" as PS {
+  class "eCH-0265:PlantProtectionCrop" as PSK {
+    schema:identifier : xsd:string [1..1]
+    schema:name : rdf:langString [2..4] uniqueLang
+    schema:version : xsd:integer [1..1]
+    skos:inScheme = psm:ConceptScheme [1..1]
+  }
+  PSK --> PSK : skos:broader [0..2]
+}
+
+package "Referenztaxonomie" as REF {
+  class "eCH-0265:CultivationType" as CT {
+    schema:name : rdf:langString [4..*] uniqueLang
+    schema:alternateName : rdf:langString [0..*]
+    schema:description : rdf:langString [0..*] uniqueLang
+  }
+  CT --> CT : rdfs:subClassOf\n[0..*]
+  CT --> CT : owl:disjointWith\n[0..*]
+}
+
+DZC --> CT : eCH-0265:\nexactMatch [0..1]
+DZK --> CT : eCH-0265:\nexactMatch [0..1]
+NBC -up-> CT : eCH-0265:\nexactMatch [0..1]
+NBS -up-> CT : eCH-0265:\nexactMatch [0..1]
+NBK -up-> CT : eCH-0265:\nexactMatch [0..1]
+PSK --> CT : eCH-0265:\nexactMatch [0..1]
+DZ -[hidden]right- PS
+@enduml

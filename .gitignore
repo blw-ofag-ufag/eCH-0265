@@ -11,12 +11,17 @@
 **/__pycache__/**
 .pytest_cache
 
+# R session artifacts
+.Rhistory
+.RData
+
 # Quarto execution artifacts
 *_files/
 *_cache/
 **/.quarto/
 **/*.quarto_ipynb
 entities.md
+namespaces.md
 glossary.md
 
 # Small tests and notes
