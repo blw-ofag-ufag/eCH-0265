@@ -1,0 +1,108 @@
+@startuml data_model
+' =============================================================================
+' UML-Klassendiagramm des eCH-0265-Datenmodells
+' -----------------------------------------------------------------------------
+' Manuell gepflegte, aufgeräumte Darstellung der SHACL-Spezifikation in
+' src/rdf/shapes/model.shacl.ttl (vgl. Issue #479). Die Klassen sind mit ihrer
+' IRI bezeichnet.
+' Attribute und Assoziationen geben die Property Shapes mit Datentyp bzw.
+' Zielklasse und Kardinalität [min..max] wieder.
+' =============================================================================
+
+skinparam classFontSize 13
+skinparam wrapMessageWidth 120
+skinparam ArrowColor #8B0000
+skinparam shadowing false
+skinparam roundCorner 8
+skinparam defaultTextAlignment left
+skinparam packageStyle rectangle
+
+hide circle
+hide empty members
+remove @unlinked
+
+package "Kulturenontologie" {
+  class "eCH-0265:CultivationType" as CultivationType {
+    schema:name : rdf:langString [4..*] uniqueLang
+    schema:alternateName : rdf:langString [0..*]
+    schema:description : rdf:langString [0..*] uniqueLang
+  }
+  CultivationType --> CultivationType : rdfs:subClassOf [0..*]
+  CultivationType --> CultivationType : owl:disjointWith [0..*]
+}
+
+package "Direktzahlungen" {
+  class "eCH-0265:DirectPaymentAreaCategory" as DirectPaymentAreaCategory {
+    schema:name : rdf:langString [1..*] uniqueLang
+    skos:inScheme ∈ {agis:ConceptScheme, mgdm:ConceptScheme} [1..1]
+    skos:topConceptOf ∈ {agis:ConceptScheme, mgdm:ConceptScheme} [1..1]
+  }
+
+  class "eCH-0265:DirectPaymentCrop" as DirectPaymentCrop {
+    schema:identifier : xsd:string [1..1]
+    schema:name : rdf:langString [1..*] uniqueLang
+    schema:validFrom : xsd:integer [0..1] ≥ 1999
+    schema:validTo : xsd:integer [0..1] ≥ validFrom
+    skos:inScheme ∈ {agis:ConceptScheme, mgdm:ConceptScheme} [1..1]
+  }
+
+  class "eCH-0265:AgisCrop" as AgisCrop {
+    skos:inScheme = agis:ConceptScheme
+  }
+
+  class "eCH-0265:GeodataCrop" as GeodataCrop {
+    skos:inScheme = mgdm:ConceptScheme
+    eCH-0265:overlapping : xsd:boolean [1..1]
+  }
+
+  AgisCrop -up[#gray,bold]-|> DirectPaymentCrop
+  GeodataCrop -up[#gray,bold]-|> DirectPaymentCrop
+
+  AgisCrop -up-> DirectPaymentAreaCategory : skos:broader [0..1]
+  GeodataCrop -up-> DirectPaymentAreaCategory : skos:broader [0..1]
+  GeodataCrop --> GeodataCrop : skos:broader [0..1]
+}
+
+package "Nährstoffbilanz" {
+  class "eCH-0265:NutrientBalanceCropCategory" as NutrientBalanceCropCategory {
+    schema:identifier : xsd:string [1..1]
+    schema:name : rdf:langString [1..*]
+    skos:inScheme = naebi:ConceptScheme [1..*]
+    skos:topConceptOf = naebi:ConceptScheme [1..1]
+  }
+
+  class "eCH-0265:NutrientBalanceCropSubCategory" as NutrientBalanceCropSubCategory {
+    schema:identifier : xsd:string [1..1]
+    schema:name : rdf:langString [1..*]
+    skos:inScheme = naebi:ConceptScheme [1..*]
+  }
+
+  class "eCH-0265:NutrientBalanceCrop" as NutrientBalanceCrop {
+    schema:identifier : xsd:string [1..1]
+    schema:name : rdf:langString [1..*]
+    skos:inScheme = naebi:ConceptScheme [1..*]
+  }
+
+  NutrientBalanceCrop -up-> NutrientBalanceCropSubCategory : eCH-0265:cultivationSubCategory [1..1]
+  NutrientBalanceCrop -up-> NutrientBalanceCropCategory : eCH-0265:cultivationCategory [1..1]
+}
+
+package "Pflanzenschutz" {
+  class "eCH-0265:PlantProtectionCrop" as PlantProtectionCrop {
+    schema:identifier : xsd:string [1..1]
+    schema:name : rdf:langString [2..4] uniqueLang
+    schema:version : xsd:integer [1..1]
+    skos:inScheme = psm:ConceptScheme [1..1]
+  }
+
+  PlantProtectionCrop --> PlantProtectionCrop : skos:broader [0..2]
+}
+
+DirectPaymentAreaCategory      ..down..> CultivationType : eCH-0265:exactMatch [0..1]
+DirectPaymentCrop              ..down..> CultivationType : eCH-0265:exactMatch [0..1]
+NutrientBalanceCropCategory    ..up..>   CultivationType : eCH-0265:exactMatch [0..1]
+NutrientBalanceCropSubCategory ..up..>   CultivationType : eCH-0265:exactMatch [0..1]
+NutrientBalanceCrop            ..up..>   CultivationType : eCH-0265:exactMatch [0..1]
+PlantProtectionCrop            ..down..> CultivationType : eCH-0265:exactMatch [0..1]
+
+@enduml
