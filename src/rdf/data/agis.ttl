@@ -324,7 +324,7 @@ agis:524 a eCH-0265:DirectPaymentCrop ;
     schema:validFrom "1999-01-01"^^xsd:date ;
     skos:inScheme agis:ConceptScheme ;
     skos:broader agis:1 ;
-    eCH-0265:exactMatch cultivationtype:524 .
+    eCH-0265:exactMatch cultivationtype:88 .
 
 agis:525 a eCH-0265:DirectPaymentCrop ;
     schema:identifier "525" ;

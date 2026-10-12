@@ -600,7 +600,8 @@ cultivationtype:88 a eCH-0265:CultivationType ;
         "Table and fodder potatoes"@en,
         "Pommes de terre de consommation et fourragères"@fr,
         "Patate da tavola e da foraggio"@it ;
-    rdfs:subClassOf cultivationtype:410 .
+    rdfs:subClassOf cultivationtype:410 ;
+    owl:disjointWith cultivationtype:411 .
 
 cultivationtype:89 a eCH-0265:CultivationType ;
     schema:name "Speisezwiebel"@de,
@@ -2119,15 +2120,15 @@ cultivationtype:410 a eCH-0265:CultivationType ;
         "Potatoes"@en,
         "Pommes de terre"@fr,
         "Patate"@it ;
-    rdfs:subClassOf cultivationtype:17 .
+    rdfs:subClassOf cultivationtype:17 ;
+    owl:unionOf ( cultivationtype:88 cultivationtype:411 ) .
 
 cultivationtype:411 a eCH-0265:CultivationType ;
     schema:name "Kartoffeln zur Pflanzgutproduktion"@de,
         "Seed potato production"@en,
         "Pommes de terre pour la production de plants"@fr,
         "Patate per la produzione di tuberi-seme"@it ;
-    rdfs:subClassOf cultivationtype:410 ;
-    owl:unionOf ( cultivationtype:524 cultivationtype:525 ) .
+    rdfs:subClassOf cultivationtype:410 .
 
 cultivationtype:412 a eCH-0265:CultivationType ;
     schema:name "Süssdolde"@de,
@@ -2578,14 +2579,6 @@ cultivationtype:523 a eCH-0265:CultivationType ;
         "Betteraves fourragères"@fr,
         "Barbabietole da foraggio"@it ;
     rdfs:subClassOf cultivationtype:17 .
-
-cultivationtype:524 a eCH-0265:CultivationType ;
-    schema:name "Pflanzkartoffeln ohne Vertragsanbau"@de,
-        "Seed potatoes without contract"@en,
-        "Plants de pommes de terre sans contrat de culture"@fr,
-        "Tuberi-seme di patate senza coltivazione contrattuale"@it ;
-    rdfs:subClassOf cultivationtype:411 ;
-    owl:disjointWith cultivationtype:525 .
 
 cultivationtype:525 a eCH-0265:CultivationType ;
     schema:name "Pflanzkartoffeln Vertragsanbau"@de,
@@ -4602,14 +4595,14 @@ cultivationtype:1089 a eCH-0265:CultivationType ;
         "Early potatoes"@en,
         "Pommes de terre hâtives"@fr,
         "Patate novelle"@it ;
-    rdfs:subClassOf cultivationtype:410 .
+    rdfs:subClassOf cultivationtype:88 .
 
 cultivationtype:1090 a eCH-0265:CultivationType ;
     schema:name "Speise- und Verarbeitungskartoffeln"@de,
         "Table and processing potatoes"@en,
         "Pommes de terre de consommation et d'industrie"@fr,
         "Patate da consumo e da industria"@it ;
-    rdfs:subClassOf cultivationtype:410 .
+    rdfs:subClassOf cultivationtype:88 .
 
 cultivationtype:1091 a eCH-0265:CultivationType ;
     schema:name "Pfefferminze"@de,
