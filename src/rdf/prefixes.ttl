@@ -20,6 +20,7 @@
 @prefix org:             <https://register.ld.admin.ch/opendataswiss/org/> .
 @prefix status:          <https://ld.admin.ch/vocabulary/CreativeWorkStatus/> .
 @prefix theme:           <https://register.ld.admin.ch/opendataswiss/category/> .
+@prefix tou:             <https://ld.admin.ch/vocabulary/TermsOfUse/> .
 
 # Globally used namespaces/qnames
 @prefix adms:            <https://www.w3.org/ns/adms#> .

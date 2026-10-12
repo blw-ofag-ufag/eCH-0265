@@ -81,3 +81,188 @@ term:triple a skos:Concept ;
     skos:broader term:rdf ;
     schema:name "Tripel"@de ;
     schema:description "Die Grundstruktur einer Aussage in RDF, bestehend aus Subjekt, Prädikat und Objekt."@de .
+
+# ==============================================================================
+# FACHBEREICHE UND ORGANISATIONEN
+# ==============================================================================
+
+term:dz a skos:Concept ;
+    skos:inScheme eCH-0265:glossary ;
+    skos:topConceptOf eCH-0265:glossary ;
+    schema:name "Direktzahlungen"@de ;
+    schema:alternateName "DZ"@de ;
+    schema:description "Beiträge des Bundes an Landwirtschaftsbetriebe gemäss Direktzahlungsverordnung. In diesem Dokument zugleich Kurzbezeichnung für den Themenbereich."@de .
+
+term:nb a skos:Concept ;
+    skos:inScheme eCH-0265:glossary ;
+    skos:topConceptOf eCH-0265:glossary ;
+    schema:name "Nährstoffbilanz"@de ;
+    schema:alternateName "NB"@de ;
+    schema:description "Gegenüberstellung von Nährstoffanfall und Nährstoffbedarf eines Landwirtschaftsbetriebs, berechnet mit der Suisse-Bilanz. In diesem Dokument zugleich Kurzbezeichnung für den Themenbereich."@de .
+
+term:ps a skos:Concept ;
+    skos:inScheme eCH-0265:glossary ;
+    skos:topConceptOf eCH-0265:glossary ;
+    schema:name "Pflanzenschutz"@de ;
+    schema:alternateName "PS"@de ;
+    schema:description "Schutz der Kulturpflanzen vor Schadorganismen, unter anderem durch den Einsatz von Pflanzenschutzmitteln. In diesem Dokument zugleich Kurzbezeichnung für den Themenbereich."@de .
+
+term:psm a skos:Concept ;
+    skos:inScheme eCH-0265:glossary ;
+    skos:topConceptOf eCH-0265:glossary ;
+    schema:name "Pflanzenschutzmittel"@de ;
+    schema:alternateName "PSM"@de ;
+    schema:description "Mittel zum Schutz von Pflanzen vor Schadorganismen. Ihre Zulassung und ihr Einsatzbereich je Kultur sind im Pflanzenschutzmittelverzeichnis geregelt."@de .
+
+term:blw a skos:Concept ;
+    skos:inScheme eCH-0265:glossary ;
+    skos:topConceptOf eCH-0265:glossary ;
+    schema:name "Bundesamt für Landwirtschaft"@de ;
+    schema:alternateName "BLW"@de ;
+    schema:description "Zuständige Bundesstelle für die Direktzahlungen und die Nährstoffbilanz; Herausgeberin dieses Hilfsmittels."@de .
+
+term:blv a skos:Concept ;
+    skos:inScheme eCH-0265:glossary ;
+    skos:topConceptOf eCH-0265:glossary ;
+    schema:name "Bundesamt für Lebensmittelsicherheit und Veterinärwesen"@de ;
+    schema:alternateName "BLV"@de ;
+    schema:description "Zuständige Bundesstelle für das Pflanzenschutzmittelverzeichnis."@de .
+
+term:ech a skos:Concept ;
+    skos:inScheme eCH-0265:glossary ;
+    skos:topConceptOf eCH-0265:glossary ;
+    schema:name "Verein eCH"@de ;
+    schema:alternateName "eCH"@de ;
+    schema:description "Verein zur Förderung von E-Government-Standards in der Schweiz. Er publiziert Standards und Hilfsmittel wie das vorliegende Dokument."@de .
+
+term:eppo a skos:Concept ;
+    skos:inScheme eCH-0265:glossary ;
+    skos:topConceptOf eCH-0265:glossary ;
+    schema:name "European and Mediterranean Plant Protection Organization"@de ;
+    schema:alternateName "EPPO"@de ;
+    schema:description "Zwischenstaatliche Organisation für Pflanzenschutz, von deren Kulturhierarchie die Struktur des Pflanzenschutzmittelverzeichnisses ursprünglich abgeleitet wurde."@de .
+
+term:w3c a skos:Concept ;
+    skos:inScheme eCH-0265:glossary ;
+    skos:topConceptOf eCH-0265:glossary ;
+    schema:name "World Wide Web Consortium"@de ;
+    schema:alternateName "W3C"@de ;
+    schema:description "Standardisierungsgremium für das World Wide Web, das unter anderem RDF, SKOS, OWL, SHACL und SPARQL spezifiziert."@de .
+
+# ==============================================================================
+# FACHBEGRIFFE DER LANDWIRTSCHAFT
+# ==============================================================================
+
+term:lbv a skos:Concept ;
+    skos:inScheme eCH-0265:glossary ;
+    skos:topConceptOf eCH-0265:glossary ;
+    schema:name "Landwirtschaftliche Begriffsverordnung"@de ;
+    schema:alternateName "LBV"@de ;
+    schema:description "Verordnung über landwirtschaftliche Begriffe und die Anerkennung von Betriebsformen (SR 910.91), welche unter anderem die Flächenkategorien der Direktzahlungen definiert."@de .
+
+term:ln a skos:Concept ;
+    skos:inScheme eCH-0265:glossary ;
+    skos:topConceptOf eCH-0265:glossary ;
+    schema:name "Landwirtschaftliche Nutzfläche"@de ;
+    schema:alternateName "LN"@de ;
+    schema:description "Die einem Betrieb zugeordnete, für den Pflanzenbau genutzte Fläche gemäss Art. 14 LBV; eine der vier Wurzeln der Referenztaxonomie."@de .
+
+term:oeln a skos:Concept ;
+    skos:inScheme eCH-0265:glossary ;
+    skos:topConceptOf eCH-0265:glossary ;
+    schema:name "Ökologischer Leistungsnachweis"@de ;
+    schema:alternateName "ÖLN"@de ;
+    schema:description "Die ökologischen Mindestanforderungen, die ein Betrieb für den Bezug von Direktzahlungen erfüllen muss; dazu gehört eine ausgeglichene Nährstoffbilanz."@de .
+
+term:grud a skos:Concept ;
+    skos:inScheme eCH-0265:glossary ;
+    skos:topConceptOf eCH-0265:glossary ;
+    schema:name "Grundlagen für die Düngung landwirtschaftlicher Kulturen in der Schweiz"@de ;
+    schema:alternateName "GRUD"@de ;
+    schema:description "Fachliche Empfehlungen zum Nährstoffbedarf der Kulturen, auf die sich die Suisse-Bilanz stützt."@de .
+
+term:hilfsmittel a skos:Concept ;
+    skos:inScheme eCH-0265:glossary ;
+    skos:topConceptOf eCH-0265:glossary ;
+    schema:name "Hilfsmittel"@de ;
+    schema:description "Dokumenttyp von eCH ohne normative Kraft, der die Anwendung von Standards unterstützt. Das vorliegende Dokument ist ein Hilfsmittel."@de .
+
+# ==============================================================================
+# BEGRIFFE DES DATENMODELLS
+# ==============================================================================
+
+term:cultivationtype a skos:Concept ;
+    skos:inScheme eCH-0265:glossary ;
+    skos:topConceptOf eCH-0265:glossary ;
+    schema:name "Nutzungstyp"@de ;
+    schema:description "Bereichsübergreifend definierte Form der Landnutzung in der Referenztaxonomie von eCH-0265, auf die alle Kulturen der Bereiche verweisen."@de .
+
+term:referencetaxonomy a skos:Concept ;
+    skos:inScheme eCH-0265:glossary ;
+    skos:topConceptOf eCH-0265:glossary ;
+    schema:name "Referenztaxonomie"@de ;
+    schema:description "Die hierarchisch geordnete Gesamtheit der Nutzungstypen. Sie verbindet die Kulturlisten der Bereiche miteinander, trägt selbst aber keine fachlichen oder rechtlichen Eigenschaften."@de .
+
+term:conceptscheme a skos:Concept ;
+    skos:inScheme eCH-0265:glossary ;
+    skos:topConceptOf eCH-0265:glossary ;
+    schema:name "Konzeptschema"@de ;
+    schema:description "Eine in sich geschlossene Sammlung von Begriffen (Konzepten) nach SKOS. Jede Kulturliste eines Bereichs bildet ein eigenes Konzeptschema."@de .
+
+term:mapping a skos:Concept ;
+    skos:inScheme eCH-0265:glossary ;
+    skos:topConceptOf eCH-0265:glossary ;
+    schema:name "Mapping-Tabelle"@de ;
+    schema:description "Tabelle der abgeleiteten Beziehungen zwischen den Kulturen zweier Bereiche, ausgedrückt als exakte, allgemeinere oder spezifischere Entsprechung."@de .
+
+term:linkeddata a skos:Concept ;
+    skos:inScheme eCH-0265:glossary ;
+    skos:topConceptOf eCH-0265:glossary ;
+    schema:name "Linked Data"@de ;
+    schema:description "Publikationsform strukturierter Daten im Web, bei der jede Ressource über eine eindeutige Webadresse identifiziert und mit anderen Ressourcen verknüpft ist."@de .
+
+# ==============================================================================
+# TECHNISCHE STANDARDS
+# ==============================================================================
+
+term:iri a skos:Concept ;
+    skos:inScheme eCH-0265:glossary ;
+    skos:topConceptOf eCH-0265:glossary ;
+    schema:name "Internationalized Resource Identifier"@de ;
+    schema:alternateName "IRI"@de ;
+    schema:description "Weltweit eindeutiger Identifikator einer Ressource in Form einer Webadresse. Jede Kultur und jeder Nutzungstyp in eCH-0265 besitzt einen dauerhaften IRI."@de .
+
+term:owl a skos:Concept ;
+    skos:inScheme eCH-0265:glossary ;
+    skos:topConceptOf eCH-0265:glossary ;
+    schema:name "Web Ontology Language"@de ;
+    schema:alternateName "OWL"@de ;
+    schema:description "Standard des W3C zur formalen Beschreibung von Begriffen und ihren logischen Beziehungen; wird für die Referenztaxonomie verwendet."@de .
+
+term:shacl a skos:Concept ;
+    skos:inScheme eCH-0265:glossary ;
+    skos:topConceptOf eCH-0265:glossary ;
+    schema:name "Shapes Constraint Language"@de ;
+    schema:alternateName "SHACL"@de ;
+    schema:description "Standard des W3C zur Formulierung und Prüfung von Regeln für RDF-Daten; die Klassenreferenz dieses Dokuments ist daraus generiert."@de .
+
+term:sparql a skos:Concept ;
+    skos:inScheme eCH-0265:glossary ;
+    skos:topConceptOf eCH-0265:glossary ;
+    schema:name "SPARQL Protocol and RDF Query Language"@de ;
+    schema:alternateName "SPARQL"@de ;
+    schema:description "Abfragesprache des W3C für RDF-Daten, mit der die Daten von LINDAS bezogen werden."@de .
+
+term:api a skos:Concept ;
+    skos:inScheme eCH-0265:glossary ;
+    skos:topConceptOf eCH-0265:glossary ;
+    schema:name "Application Programming Interface"@de ;
+    schema:alternateName "API"@de ;
+    schema:description "Programmierschnittstelle, über die ein System Daten oder Funktionen für andere Systeme bereitstellt."@de .
+
+term:uml a skos:Concept ;
+    skos:inScheme eCH-0265:glossary ;
+    skos:topConceptOf eCH-0265:glossary ;
+    schema:name "Unified Modeling Language"@de ;
+    schema:alternateName "UML"@de ;
+    schema:description "Standardisierte grafische Notation zur Darstellung von Datenmodellen."@de .

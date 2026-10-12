@@ -8,22 +8,26 @@ SCHEMA = Namespace("http://schema.org/")
 
 TRANSLATIONS = {
     "en": {
-        "iri": "IRI", "term": "Term", "desc": "Description",
-        "broader": "broader", "narrower": "narrower", "related": "related"
+        "term": "Term", "desc": "Description",
+        "broader": "Broader", "narrower": "Narrower", "related": "Related"
     },
     "de": {
-        "iri": "IRI", "term": "Begriff", "desc": "Beschreibung",
+        "term": "Begriff", "desc": "Beschreibung",
         "broader": "Oberbegriff", "narrower": "Unterbegriff", "related": "Verwandt"
     },
     "fr": {
-        "iri": "IRI", "term": "Terme", "desc": "Description",
-        "broader": "plus générique", "narrower": "plus spécifique", "related": "lié"
+        "term": "Terme", "desc": "Description",
+        "broader": "Terme générique", "narrower": "Terme spécifique", "related": "Terme associé"
     },
     "it": {
-        "iri": "IRI", "term": "Termine", "desc": "Descrizione",
-        "broader": "più generico", "narrower": "più specifico", "related": "correlato"
+        "term": "Termine", "desc": "Descrizione",
+        "broader": "Termine generico", "narrower": "Termine specifico", "related": "Termine correlato"
     }
 }
+
+def concept_label(g, concept, lang):
+    """Preferred label of a concept, falling back to its QName."""
+    return get_localized_value(g, concept, [SCHEMA.name, SKOS.prefLabel], lang) or format_uri(g, concept)
 
 def format_uri(g, uri):
     if not uri:
@@ -69,7 +73,7 @@ def build_grid_table(headers, rows, min_col_widths):
             if paragraph.strip() == '':
                 lines.append('')
             else:
-                lines.extend(textwrap.wrap(paragraph, width, break_long_words=False))
+                lines.extend(textwrap.wrap(paragraph, width, break_long_words=False, break_on_hyphens=False))
         if not lines:
             lines = ['']
         return lines
@@ -161,45 +165,41 @@ def main():
         trans = TRANSLATIONS[lang]
         md_lines = []
         
-        headers = [trans['iri'], trans['term'], trans['desc']]
+        headers = [trans['term'], trans['desc']]
         rows = []
-        
-        # Sort concepts by IRI for stable output
-        concepts.sort(key=lambda c: format_uri(g, c).lower())
+
+        # Sort concepts by their label in the current language for stable output
+        concepts.sort(key=lambda c: concept_label(g, c, lang).lower())
 
         for c in concepts:
-            iri_qname = format_uri(g, c)
-            iri_cell = f"[`{iri_qname}`]({str(c)})"
-            
             name = get_localized_value(g, c, [SCHEMA.name, SKOS.prefLabel], lang)
             alt = get_localized_value(g, c, [SCHEMA.alternateName, SKOS.altLabel], lang)
-            
-            term_str = f"**{name}**" if name else ""
+
+            term_str = f"**{name}**" if name else f"`{format_uri(g, c)}`"
             if alt:
-                term_str += f" ({alt})" if term_str else alt
+                term_str += f" ({alt})"
             term_cell = sanitize_cell(term_str)
-            
+
             desc = get_localized_value(g, c, [SCHEMA.description, SKOS.definition], lang) or ""
             desc_str = sanitize_cell(desc)
-            
+
+            # Relations name the related concepts by their preferred label
             rels = []
             for p, label_key in [(SKOS.broader, 'broader'), (SKOS.narrower, 'narrower'), (SKOS.related, 'related')]:
-                for o in g.objects(c, p):
-                    o_qname = format_uri(g, o)
-                    rels.append(f"*{trans[label_key]}*: [`{o_qname}`]({str(o)})")
-            
-            # Combine description and relations dynamically on new paragraphs
+                targets = sorted(concept_label(g, o, lang) for o in g.objects(c, p))
+                if targets:
+                    rels.append(f"*{trans[label_key]}*: {', '.join(targets)}")
+
+            # Description and relations as separate paragraphs
             if rels:
                 if desc_str:
                     desc_str += "\n\n"
-                desc_str += "\n".join(rels)
-                
-            desc_cell = desc_str
+                desc_str += "\n\n".join(rels)
 
-            rows.append([iri_cell, term_cell, desc_cell])
-        
+            rows.append([term_cell, desc_str])
+
         # Format the collected data into a grid table natively with Python
-        grid_table = build_grid_table(headers, rows, [20, 25, 55])
+        grid_table = build_grid_table(headers, rows, [35, 65])
         md_lines.extend(grid_table)
         
         # Build table caption
@@ -219,9 +219,9 @@ def main():
                 caption_text = f"{s_desc_clean}"
         
         if caption_text:
-            md_lines.append(f"\n: {caption_text} {{#tbl-glossary tbl-colwidths=\"[20,25,55]\" }}")
+            md_lines.append(f"\n: {caption_text} {{#tbl-glossary tbl-colwidths=\"[35,65]\" }}")
         else:
-            md_lines.append("\n: {#tbl-glossary tbl-colwidths=\"[20,25,55]\"}")
+            md_lines.append("\n: {#tbl-glossary tbl-colwidths=\"[35,65]\"}")
             
         output_path = docs_dir / lang / "glossary.md"
         with open(output_path, "w", encoding="utf-8") as f:
