@@ -280,7 +280,8 @@ naebi:115 a eCH-0265:NutrientBalanceCrop ;
     schema:identifier "CROP_KARPFC" ;
     schema:name "Vom Betrieb weggeführtes Rübenblatt, ha"@de ;
     eCH-0265:cultivationCategory naebi:ARABLE ;
-    eCH-0265:cultivationSubCategory naebi:RTCRP .
+    eCH-0265:cultivationSubCategory naebi:RTCRP ;
+    eCH-0265:exactMatch cultivationtype:1315 .
 
 naebi:116 a eCH-0265:NutrientBalanceCrop ;
     skos:inScheme naebi:ConceptScheme ;
@@ -671,7 +672,8 @@ naebi:16 a eCH-0265:NutrientBalanceCrop ;
     schema:identifier "CROP_BERBL" ;
     schema:name "betriebseigenes verfütt. Rübenblatt, ha"@de ;
     eCH-0265:cultivationCategory naebi:FODDER ;
-    eCH-0265:cultivationSubCategory naebi:FORAG .
+    eCH-0265:cultivationSubCategory naebi:FORAG ;
+    eCH-0265:exactMatch cultivationtype:1316 .
 
 naebi:160 a eCH-0265:NutrientBalanceCrop ;
     skos:inScheme naebi:ConceptScheme ;
@@ -991,7 +993,7 @@ naebi:196 a eCH-0265:NutrientBalanceCrop ;
     schema:name "Kürbis"@de ;
     eCH-0265:cultivationCategory naebi:SPECIAL ;
     eCH-0265:cultivationSubCategory naebi:OUTVG ;
-    eCH-0265:exactMatch cultivationtype:1093 .
+    eCH-0265:exactMatch cultivationtype:1167 .
 
 naebi:197 a eCH-0265:NutrientBalanceCrop ;
     skos:inScheme naebi:ConceptScheme ;
@@ -1462,7 +1464,8 @@ naebi:249 a eCH-0265:NutrientBalanceCrop ;
     schema:identifier "CROP_STRAW" ;
     schema:name "Vom Betrieb weggeführtes Stroh, ha"@de ;
     eCH-0265:cultivationCategory naebi:ARABLE ;
-    eCH-0265:cultivationSubCategory naebi:GRAIN .
+    eCH-0265:cultivationSubCategory naebi:GRAIN ;
+    eCH-0265:exactMatch cultivationtype:1317 .
 
 naebi:25 a eCH-0265:NutrientBalanceCrop ;
     skos:inScheme naebi:ConceptScheme ;
@@ -2484,7 +2487,8 @@ naebi:82 a eCH-0265:NutrientBalanceCrop ;
     schema:identifier "CROP_FOSTR" ;
     schema:name "betriebseigenes verfütt. Stroh, ha"@de ;
     eCH-0265:cultivationCategory naebi:FODDER ;
-    eCH-0265:cultivationSubCategory naebi:FORAG .
+    eCH-0265:cultivationSubCategory naebi:FORAG ;
+    eCH-0265:exactMatch cultivationtype:1318 .
 
 naebi:83 a eCH-0265:NutrientBalanceCrop ;
     skos:inScheme naebi:ConceptScheme ;
