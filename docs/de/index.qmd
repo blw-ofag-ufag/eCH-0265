@@ -22,7 +22,7 @@ Genderstern und ähnliche Schreibweisen werden nicht verwendet.
 # Einleitung {#sec-introduction}
 
 Die Definitionen landwirtschaftlicher Kulturen wurden in der Schweiz historisch unabhängig voneinander für spezifische gesetzliche Aufträge und Informationssysteme entwickelt.
-Verschiedene Themenbereiche sprechen von «Kulturen», meinen damit aber nicht unbedingt dasselbe, da sie ganz unterschiedliche Blikwinkel haben:
+Verschiedene Themenbereiche sprechen von «Kulturen», meinen damit aber nicht unbedingt dasselbe, da sie ganz unterschiedliche Blickwinkel haben:
 Die Direktzahlungen typisieren Flächen für die Beitragsberechtigung, die Nährstoffbilanz ordnet jeder Kultur einen normierten Nährstoffbedarf zu, und das Pflanzenschutzmittelverzeichnis regelt, auf welchen Kulturen ein Pflanzenschutzmittel angewendet werden darf.
 Die fehlende systemübergreifende Harmonisierung (eine *Single Source of Truth*) erschwert die Informationsverarbeitung über die jeweiligen Systemgrenzen hinaus.
 
@@ -650,7 +650,7 @@ Dieses Kapitel dokumentiert die technische Umsetzung des in @sec-data-model besc
 Die anschliessende Referenz ist automatisch aus den SHACL-Shapes (*Shapes Constraint Language*) generiert, mit denen der publizierte Graph validiert wird [@shacl].
 Sie führt für jede Klasse die zulässigen Eigenschaften mit Pfad, Typ und Kardinalität auf.
 
-![UML-Klassendiagramm des Datenmodells von eCH-0265, abgeleitet aus den SHACL-Shapes. Attribute sind mit Datentyp und Kardinalität angegeben; `uniqueLang` bedeutet, dass je Sprache höchstens ein Wert zulässig ist. Alle Kulturen und Gruppen der drei Bereiche verweisen über `eCH-0265:exactMatch` auf höchstens einen Nutzungstyp der Referenztaxonomie.](assets/img/data_model.svg){#fig-uml width="100%"}
+![UML-Klassendiagramm des Datenmodells von eCH-0265, abgeleitet aus den SHACL-Shapes. Attribute sind mit Datentyp und Kardinalität angegeben; `uniqueLang` bedeutet, dass je Sprache höchstens ein Wert zulässig ist. Alle Kulturen und Gruppen der drei Bereiche verweisen über `eCH-0265:exactMatch` auf höchstens einen Nutzungstyp der Referenztaxonomie. `eCH-0265:exactMatch` ist eine Untereigenschaft (`rdfs:subPropertyOf`) von `skos:exactMatch` die sich nur auf den Nutzungstyp bezieht.](assets/img/data_model.svg){#fig-uml width="100%"}
 
 ## Namespaces {#sec-namespaces}
 
