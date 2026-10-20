@@ -399,7 +399,7 @@ naebi:129 a eCH-0265:NutrientBalanceCrop ;
     schema:identifier "CROP_LEEKE" ;
     schema:name "Lauch, früh gepflanzt"@de ;
     eCH-0265:cultivationCategory naebi:SPECIAL ;
-    eCH-0265:cultivationSubCategory naebi:PRCRP ;
+    eCH-0265:cultivationSubCategory naebi:OUTVG ;
     eCH-0265:exactMatch cultivationtype:1047 .
 
 naebi:13 a eCH-0265:NutrientBalanceCrop ;
@@ -415,7 +415,7 @@ naebi:130 a eCH-0265:NutrientBalanceCrop ;
     schema:identifier "CROP_LEEKL" ;
     schema:name "Lauch, spät gepflanzt"@de ;
     eCH-0265:cultivationCategory naebi:SPECIAL ;
-    eCH-0265:cultivationSubCategory naebi:PRCRP ;
+    eCH-0265:cultivationSubCategory naebi:OUTVG ;
     eCH-0265:exactMatch cultivationtype:1048 .
 
 naebi:131 a eCH-0265:NutrientBalanceCrop ;
@@ -439,7 +439,7 @@ naebi:133 a eCH-0265:NutrientBalanceCrop ;
     schema:identifier "CROP_LEEKSE" ;
     schema:name "Lauch, gesät"@de ;
     eCH-0265:cultivationCategory naebi:SPECIAL ;
-    eCH-0265:cultivationSubCategory naebi:PRCRP ;
+    eCH-0265:cultivationSubCategory naebi:OUTVG ;
     eCH-0265:exactMatch cultivationtype:1050 .
 
 naebi:134 a eCH-0265:NutrientBalanceCrop ;
@@ -447,7 +447,7 @@ naebi:134 a eCH-0265:NutrientBalanceCrop ;
     schema:identifier "CROP_LEEKW" ;
     schema:name "Lauch, gepflanzt, Überwinterung"@de ;
     eCH-0265:cultivationCategory naebi:SPECIAL ;
-    eCH-0265:cultivationSubCategory naebi:PRCRP ;
+    eCH-0265:cultivationSubCategory naebi:OUTVG ;
     eCH-0265:exactMatch cultivationtype:1051 .
 
 naebi:135 a eCH-0265:NutrientBalanceCrop ;
@@ -525,7 +525,7 @@ naebi:142 a eCH-0265:NutrientBalanceCrop ;
 naebi:143 a eCH-0265:NutrientBalanceCrop ;
     skos:inScheme naebi:ConceptScheme ;
     schema:identifier "CROP_MILLE" ;
-    schema:name "Getreide-Silage mit Leguminosen"@de ;
+    schema:name "Getreideganzpflanzensilage mit Leguminosen"@de ;
     eCH-0265:cultivationCategory naebi:FODDER ;
     eCH-0265:cultivationSubCategory naebi:GRAIN ;
     eCH-0265:exactMatch cultivationtype:1031 .
@@ -638,7 +638,7 @@ naebi:156 a eCH-0265:NutrientBalanceCrop ;
     skos:inScheme naebi:ConceptScheme ;
     schema:identifier "CROP_OAFNT" ;
     schema:name "Nützlingsstreifen (DK)"@de ;
-    eCH-0265:cultivationCategory naebi:SPECIAL ;
+    eCH-0265:cultivationCategory naebi:ARABLE ;
     eCH-0265:cultivationSubCategory naebi:PRMCR ;
     eCH-0265:exactMatch cultivationtype:1023 .
 
@@ -694,7 +694,7 @@ naebi:162 a eCH-0265:NutrientBalanceCrop ;
     schema:identifier "CROP_PAKCH" ;
     schema:name "Pak Choi"@de ;
     eCH-0265:cultivationCategory naebi:SPECIAL ;
-    eCH-0265:cultivationSubCategory naebi:PRCRP ;
+    eCH-0265:cultivationSubCategory naebi:OUTVG ;
     eCH-0265:exactMatch cultivationtype:325 .
 
 naebi:163 a eCH-0265:NutrientBalanceCrop ;
@@ -796,7 +796,7 @@ naebi:173 a eCH-0265:NutrientBalanceCrop ;
 naebi:174 a eCH-0265:NutrientBalanceCrop ;
     skos:inScheme naebi:ConceptScheme ;
     schema:identifier "CROP_PINTE" ;
-    schema:name "Weide (Mäh-) intensiv"@de ;
+    schema:name "Weide intensiv"@de ;
     eCH-0265:cultivationCategory naebi:FODDER ;
     eCH-0265:cultivationSubCategory naebi:FORAG ;
     eCH-0265:exactMatch cultivationtype:1080 .
@@ -836,7 +836,7 @@ naebi:178 a eCH-0265:NutrientBalanceCrop ;
 naebi:179 a eCH-0265:NutrientBalanceCrop ;
     skos:inScheme naebi:ConceptScheme ;
     schema:identifier "CROP_PMEDI" ;
-    schema:name "Weide (Mäh-) mittelintensiv"@de ;
+    schema:name "Weide mittel intensiv"@de ;
     eCH-0265:cultivationCategory naebi:FODDER ;
     eCH-0265:cultivationSubCategory naebi:FORAG ;
     eCH-0265:exactMatch cultivationtype:1085 .
@@ -1491,7 +1491,7 @@ naebi:251 a eCH-0265:NutrientBalanceCrop ;
 naebi:252 a eCH-0265:NutrientBalanceCrop ;
     skos:inScheme naebi:ConceptScheme ;
     schema:identifier "CROP_STRAWL" ;
-    schema:name "Getreide-Silage"@de ;
+    schema:name "Getreideganzpflanzensilage"@de ;
     eCH-0265:cultivationCategory naebi:FODDER ;
     eCH-0265:cultivationSubCategory naebi:GRAIN ;
     eCH-0265:exactMatch cultivationtype:1030 .
@@ -1595,7 +1595,7 @@ naebi:263 a eCH-0265:NutrientBalanceCrop ;
 naebi:264 a eCH-0265:NutrientBalanceCrop ;
     skos:inScheme naebi:ConceptScheme ;
     schema:identifier "CROP_SWEET" ;
-    schema:name "Tabak Virgine"@de ;
+    schema:name "Tabak Virginie"@de ;
     eCH-0265:cultivationCategory naebi:ARABLE ;
     eCH-0265:cultivationSubCategory naebi:DIVCR ;
     eCH-0265:exactMatch cultivationtype:1136 .
