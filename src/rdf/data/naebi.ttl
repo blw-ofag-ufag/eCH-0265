@@ -1861,7 +1861,7 @@ naebi:294 a eCH-0265:NutrientBalanceCrop ;
     schema:name "Winterroggen (Hybridsorten)"@de ;
     eCH-0265:cultivationCategory naebi:ARABLE ;
     eCH-0265:cultivationSubCategory naebi:GRAIN ;
-    eCH-0265:exactMatch cultivationtype:1034 .
+    eCH-0265:exactMatch cultivationtype:1314 .
 
 naebi:295 a eCH-0265:NutrientBalanceCrop ;
     skos:inScheme naebi:ConceptScheme ;
@@ -1869,7 +1869,7 @@ naebi:295 a eCH-0265:NutrientBalanceCrop ;
     schema:name "Winterroggen (Populationssorten) in 62a Nitrat-Projekt"@de ;
     eCH-0265:cultivationCategory naebi:ARABLE ;
     eCH-0265:cultivationSubCategory naebi:GRAIN ;
-    eCH-0265:exactMatch cultivationtype:1015 .
+    eCH-0265:exactMatch cultivationtype:1315 .
 
 naebi:296 a eCH-0265:NutrientBalanceCrop ;
     skos:inScheme naebi:ConceptScheme ;
@@ -1877,7 +1877,7 @@ naebi:296 a eCH-0265:NutrientBalanceCrop ;
     schema:name "Winterroggen (Populationssorten)"@de ;
     eCH-0265:cultivationCategory naebi:ARABLE ;
     eCH-0265:cultivationSubCategory naebi:GRAIN ;
-    eCH-0265:exactMatch cultivationtype:1035 .
+    eCH-0265:exactMatch cultivationtype:1015 .
 
 naebi:297 a eCH-0265:NutrientBalanceCrop ;
     skos:inScheme naebi:ConceptScheme ;
