@@ -53,6 +53,8 @@ NAEBI_DESIGNATIONS = {
     "designation_fra": "fr",
     "designation_ita": "it",
 }
+# Languages in which the NAEBI API provides real designations (English is a copy of German).
+NAEBI_LANGUAGES = ["de", "fr", "it"]
 GIS_LANGUAGES = {"de": "de", "fr": "fr", "it": "it"}
 
 INTERLIS_NS = {"ili": "http://www.interlis.ch/INTERLIS2.3"}
@@ -337,38 +339,33 @@ def test_naebi_crops_match_api(naebi_local_names, naebi_api_crops):
     )
 
 def test_naebi_crop_names_match_api(naebi_local_names, naebi_api_crops):
-    """The German crop names are identical to the designations of the NAEBI API.
+    """The German, French and Italian crop names are identical to the designations of the NAEBI API.
 
-    Only German is compared because the API does not provide any translations
-    yet; ``test_naebi_api_provides_no_translations`` guards that assumption.
+    English is not compared because the API does not provide English translations
+    yet; ``test_naebi_api_provides_no_english_translations`` guards that assumption.
     """
     source = {code: designations(crop) for code, crop in naebi_api_crops.items()}
     assert_no_drift(
         "naebi_crop_names.log",
         "NAEBI crop name drift report",
-        name_drift(naebi_local_names, source, ["de"]),
+        name_drift(naebi_local_names, source, NAEBI_LANGUAGES),
     )
 
-def test_naebi_api_provides_no_translations(naebi_api_crops):
-    """The NAEBI API repeats the German designation for every other language.
+def test_naebi_api_provides_no_english_translations(naebi_api_crops):
+    """The NAEBI API repeats the German designation as English designation.
 
-    As soon as the API starts to deliver real translations, this test fails and
-    the name comparison above has to be extended to those languages.
+    As soon as the API starts to deliver real English translations, this test
+    fails and ``NAEBI_LANGUAGES`` has to be extended by English.
     """
     entries = []
     for code, crop in sorted(naebi_api_crops.items()):
         names = designations(crop)
-        translated = {
-            language: name
-            for language, name in names.items()
-            if language != "de" and name != names.get("de")
-        }
-        if translated:
-            entries.append(f"  - {code}: {translated}")
+        if names.get("en") and names.get("en") != names.get("de"):
+            entries.append(f"  - {code}: {names['en']!r}")
     assert_no_drift(
         "naebi_translations.log",
         "NAEBI translation availability report",
-        [("Crops with translated designations", entries)],
+        [("Crops with English designations", entries)],
     )
 
 def test_naebi_categories_match_api(final_graph, naebi_api_categories, naebi_api_subcategories):
@@ -400,7 +397,7 @@ def test_naebi_categories_match_api(final_graph, naebi_api_categories, naebi_api
             lambda key, local=local: local[key].get("de", "no German name"),
             lambda key, source=source: source[key].get("de", "no German name"),
         )
-        sections += name_drift(local, source, ["de"])
+        sections += name_drift(local, source, NAEBI_LANGUAGES)
 
     assert_no_drift("naebi_categories.log", "NAEBI category drift report", sections)
 
