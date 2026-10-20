@@ -4209,22 +4209,6 @@ cultivationtype:1033 a eCH-0265:CultivationType ;
     rdfs:subClassOf cultivationtype:14 ;
     owl:disjointWith cultivationtype:497 .
 
-cultivationtype:1034 a eCH-0265:CultivationType ;
-    schema:name "Winterraps ohne Nitratprojekt"@de,
-        "Winter oilseed rape without nitrate project"@en,
-        "Colza d'automne sans projet nitrate"@fr,
-        "Colza autunnale senza progetto nitrati"@it ;
-    schema:alternateName "Winterraps ohne 62a Nitrat-Projekt"@de ;
-    rdfs:subClassOf cultivationtype:1033 .
-
-cultivationtype:1035 a eCH-0265:CultivationType ;
-    schema:name "Winterraps mit Nitratprojekt"@de,
-        "Winter oilseed rape with nitrate project"@en,
-        "Colza d'automne avec projet nitrate"@fr,
-        "Colza autunnale con progetto nitrati"@it ;
-    schema:alternateName "Winterraps in 62a Nitrat-Projekt"@de ;
-    rdfs:subClassOf cultivationtype:1033 .
-
 cultivationtype:1036 a eCH-0265:CultivationType ;
     schema:name "Aubergine Erdkultur geschützter Anbau"@de,
         "Aubergine soil-grown protected cultivation"@en,
