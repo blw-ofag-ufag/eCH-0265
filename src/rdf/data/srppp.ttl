@@ -2027,7 +2027,7 @@ psm:283 a eCH-0265:PlantProtectionCrop ;
         "cerisier"@fr,
         "Ciliegio"@it ;
     schema:version 0 ;
-    eCH-0265:exactMatch cultivationtype:704 .
+    eCH-0265:exactMatch cultivationtype:283 .
 
 psm:284 a eCH-0265:PlantProtectionCrop ;
     skos:inScheme psm:ConceptScheme ;

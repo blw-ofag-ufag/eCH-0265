@@ -2777,7 +2777,7 @@ naebi:53 a eCH-0265:NutrientBalanceCrop ;
         "Frutteto, ciliegie"@it ;
     eCH-0265:cultivationCategory naebi:SPECIAL ;
     eCH-0265:cultivationSubCategory naebi:PRMCR ;
-    eCH-0265:exactMatch cultivationtype:283 .
+    eCH-0265:exactMatch cultivationtype:1316 .
 
 naebi:54 a eCH-0265:NutrientBalanceCrop ;
     skos:inScheme naebi:ConceptScheme ;

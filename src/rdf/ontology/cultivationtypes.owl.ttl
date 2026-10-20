@@ -5434,7 +5434,7 @@ cultivationtype:1235 a eCH-0265:CultivationType ;
         "Cherry orchard high yield"@en,
         "Verger de cerisiers à haut rendement"@fr,
         "Ceraseto ad alta resa"@it ;
-    rdfs:subClassOf cultivationtype:704 .
+    rdfs:subClassOf cultivationtype:283 .
 
 cultivationtype:1236 a eCH-0265:CultivationType ;
     schema:name "Gurken Erdkultur geschützter Anbau"@de,
@@ -5864,6 +5864,13 @@ cultivationtype:1315 a eCH-0265:CultivationType ;
         "Segale autunnale varietà ibride con progetto nitrati"@it ;
     schema:alternateName "Winterroggen Hybridsorten in 62a Nitrat-Projekt"@de ;
     rdfs:subClassOf cultivationtype:1013 .
+
+cultivationtype:1316 a eCH-0265:CultivationType ;
+    schema:name "Kirschenanlage"@de,
+        "Cherry orchard"@en,
+        "Verger de cerisiers"@fr,
+        "Ceraseto"@it ;
+    rdfs:subClassOf cultivationtype:283 .
 # ==============================================================================
 # DISJOINTNESS OF POTATO TYPES
 # ==============================================================================
