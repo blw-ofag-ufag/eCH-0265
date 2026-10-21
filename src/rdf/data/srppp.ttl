@@ -2703,7 +2703,7 @@ psm:4 a eCH-0265:PlantProtectionCrop ;
         "bulbes des fleurs"@fr,
         "Bulbi di fiori"@it ;
     schema:version 0 ;
-    eCH-0265:exactMatch cultivationtype:329 .
+    eCH-0265:exactMatch cultivationtype:407 .
 
 psm:40 a eCH-0265:PlantProtectionCrop ;
     skos:inScheme psm:ConceptScheme ;

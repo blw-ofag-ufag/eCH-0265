@@ -1479,7 +1479,7 @@ cultivationtype:246 a eCH-0265:CultivationType ;
         "Roses"@en,
         "Rosiers"@fr,
         "Rose"@it ;
-    rdfs:subClassOf cultivationtype:329 .
+    rdfs:subClassOf cultivationtype:72 .
 
 cultivationtype:247 a eCH-0265:CultivationType ;
     schema:name "Speisekohlrüben"@de,
