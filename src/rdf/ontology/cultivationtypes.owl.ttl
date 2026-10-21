@@ -5156,6 +5156,14 @@ cultivationtype:1168 a eCH-0265:CultivationType ;
         "Zucchine seminate estate e autunno"@it ;
     rdfs:subClassOf cultivationtype:235 .
 
+cultivationtype:1170 a eCH-0265:CultivationType ;
+    schema:name "Übrige Wiesen mit Düngeverbot"@de,
+        "Other meadows with fertilisation ban"@en,
+        "Autres prairies avec interdiction de fumure"@fr,
+        "Altri prati con divieto di concimazione"@it ;
+    rdfs:subClassOf cultivationtype:2 ;
+    eCH-0265:managementIntensity intensity:Extensive .
+
 cultivationtype:1180 a eCH-0265:CultivationType ;
     schema:name "Aprikosenanlage hoher Ertrag"@de,
         "Apricot orchard high yield"@en,

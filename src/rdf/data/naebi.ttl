@@ -1479,7 +1479,7 @@ naebi:218 a eCH-0265:NutrientBalanceCrop ;
         "Altri prati con divieto di concimazione"@it ;
     eCH-0265:cultivationCategory naebi:FODDER ;
     eCH-0265:cultivationSubCategory naebi:FORAG ;
-    eCH-0265:exactMatch cultivationtype:611 .
+    eCH-0265:exactMatch cultivationtype:1170 .
 
 naebi:219 a eCH-0265:NutrientBalanceCrop ;
     skos:inScheme naebi:ConceptScheme ;
