@@ -280,8 +280,7 @@ naebi:115 a eCH-0265:NutrientBalanceCrop ;
     schema:identifier "CROP_KARPFC" ;
     schema:name "Vom Betrieb weggeführtes Rübenblatt, ha"@de ;
     eCH-0265:cultivationCategory naebi:ARABLE ;
-    eCH-0265:cultivationSubCategory naebi:RTCRP ;
-    eCH-0265:exactMatch cultivationtype:1315 .
+    eCH-0265:cultivationSubCategory naebi:RTCRP .
 
 naebi:116 a eCH-0265:NutrientBalanceCrop ;
     skos:inScheme naebi:ConceptScheme ;
@@ -672,8 +671,7 @@ naebi:16 a eCH-0265:NutrientBalanceCrop ;
     schema:identifier "CROP_BERBL" ;
     schema:name "betriebseigenes verfütt. Rübenblatt, ha"@de ;
     eCH-0265:cultivationCategory naebi:FODDER ;
-    eCH-0265:cultivationSubCategory naebi:FORAG ;
-    eCH-0265:exactMatch cultivationtype:1316 .
+    eCH-0265:cultivationSubCategory naebi:FORAG .
 
 naebi:160 a eCH-0265:NutrientBalanceCrop ;
     skos:inScheme naebi:ConceptScheme ;

@@ -5867,28 +5867,6 @@ cultivationtype:1314 a eCH-0265:CultivationType ;
         "Domaine d'application «culture maraîchère en général» de l'index des produits phytosanitaires. Comprend la culture maraîchère ainsi que toutes les cucurbitacées, y compris les courges à huile, qui sont cultivées en grandes cultures et ne font pas partie de la culture maraîchère."@fr,
         "Campo d'applicazione «orticoltura in generale» dell'elenco dei prodotti fitosanitari. Comprende l'orticoltura e tutte le cucurbitacee, incluse le zucche per l'estrazione di olio, che sono coltivate in campicoltura e non fanno parte dell'orticoltura."@it ;
     rdfs:subClassOf cultivationtype:464 .
-
-cultivationtype:1315 a eCH-0265:CultivationType ;
-    schema:name "Vom Betrieb weggeführtes Rübenblatt"@de,
-        "Beet leaves removed from the farm"@en,
-        "Feuilles de betteraves exportées de l'exploitation"@fr,
-        "Foglie di barbabietola asportate dall'azienda"@it ;
-    schema:description "Zusätzliche Angabe in der Suisse-Bilanz für die Fläche, deren Rübenblatt vom Betrieb weggeführt wird. Dieselbe Fläche ist auch als Futter- oder Zuckerrüben erfasst und darf bei Flächensummen nicht doppelt gezählt werden."@de,
-        "Additional declaration in the Suisse-Bilanz for the area whose beet leaves are removed from the farm. The same area is also declared as fodder or sugar beets and must not be counted twice when summing areas."@en,
-        "Indication supplémentaire dans le Suisse-Bilanz pour la surface dont les feuilles de betteraves sont exportées de l'exploitation. La même surface est aussi saisie comme betteraves fourragères ou sucrières et ne doit pas être comptée deux fois dans les totaux de surfaces."@fr,
-        "Indicazione supplementare nel Suisse-Bilanz per la superficie le cui foglie di barbabietola sono asportate dall'azienda. La stessa superficie è registrata anche come barbabietole da foraggio o da zucchero e non deve essere contata due volte nella somma delle superfici."@it ;
-    rdfs:subClassOf cultivationtype:305 .
-
-cultivationtype:1316 a eCH-0265:CultivationType ;
-    schema:name "Betriebseigenes verfüttertes Rübenblatt"@de,
-        "Home-grown fed beet leaves"@en,
-        "Feuilles de betteraves de l'exploitation affouragées"@fr,
-        "Foglie di barbabietola aziendali foraggiate"@it ;
-    schema:description "Zusätzliche Angabe in der Suisse-Bilanz für die Fläche, deren Rübenblatt auf dem eigenen Betrieb verfüttert wird. Dieselbe Fläche ist auch als Futter- oder Zuckerrüben erfasst und darf bei Flächensummen nicht doppelt gezählt werden."@de,
-        "Additional declaration in the Suisse-Bilanz for the area whose beet leaves are fed on the farm. The same area is also declared as fodder or sugar beets and must not be counted twice when summing areas."@en,
-        "Indication supplémentaire dans le Suisse-Bilanz pour la surface dont les feuilles de betteraves sont affouragées sur l'exploitation. La même surface est aussi saisie comme betteraves fourragères ou sucrières et ne doit pas être comptée deux fois dans les totaux de surfaces."@fr,
-        "Indicazione supplementare nel Suisse-Bilanz per la superficie le cui foglie di barbabietola sono foraggiate in azienda. La stessa superficie è registrata anche come barbabietole da foraggio o da zucchero e non deve essere contata due volte nella somma delle superfici."@it ;
-    rdfs:subClassOf cultivationtype:305 .
 # ==============================================================================
 # DISJOINTNESS OF POTATO TYPES
 # ==============================================================================
