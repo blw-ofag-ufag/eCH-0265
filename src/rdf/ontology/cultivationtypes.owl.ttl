@@ -5646,7 +5646,7 @@ cultivationtype:1275 a eCH-0265:CultivationType ;
         "Green manure legumes"@en,
         "Engrais vert légumineuses"@fr,
         "Sovescio leguminose"@it ;
-    rdfs:subClassOf cultivationtype:47, cultivationtype:24 .
+    rdfs:subClassOf cultivationtype:1 .
 
 cultivationtype:1277 a eCH-0265:CultivationType ;
     schema:name "Gründüngung Nichtleguminosen"@de,

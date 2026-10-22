@@ -3166,7 +3166,7 @@ naebi:89 a eCH-0265:NutrientBalanceCrop ;
         "Sovescio (leguminose), ha"@it ;
     eCH-0265:cultivationCategory naebi:ARABLE ;
     eCH-0265:cultivationSubCategory naebi:DIVCR ;
-    eCH-0265:exactMatch cultivationtype:1053 .
+    eCH-0265:exactMatch cultivationtype:1275 .
 
 naebi:9 a eCH-0265:NutrientBalanceCrop ;
     skos:inScheme naebi:ConceptScheme ;
