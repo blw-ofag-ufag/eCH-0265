@@ -311,8 +311,7 @@ cultivationtype:35 a eCH-0265:CultivationType ;
         "Herbes aromatiques et médicinales"@fr,
         "Erbe aromatiche e medicinali"@it ;
     schema:alternateName "Gewürz- und Medizinalpflanzen"@de, "Heil- und Gewürzpflanzen"@de ;
-    rdfs:subClassOf cultivationtype:22, cultivationtype:465 ;
-    owl:unionOf ( cultivationtype:553 cultivationtype:706 ) .
+    rdfs:subClassOf cultivationtype:22, cultivationtype:465 .
 
 cultivationtype:36 a eCH-0265:CultivationType ;
     schema:name "Zierkürbis"@de,
