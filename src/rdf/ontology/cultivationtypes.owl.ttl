@@ -210,7 +210,7 @@ cultivationtype:22 a eCH-0265:CultivationType ;
         "Vegetable production"@en,
         "Culture maraîchère"@fr,
         "Orticoltura"@it ;
-    rdfs:subClassOf cultivationtype:464, cultivationtype:1314 ;
+    rdfs:subClassOf cultivationtype:464, cultivationtype:1171 ;
     owl:unionOf (
         cultivationtype:23
         cultivationtype:24
@@ -1437,7 +1437,7 @@ cultivationtype:235 a eCH-0265:CultivationType ;
         "Cucurbitacées"@fr,
         "Cucurbitacee"@it ;
     schema:alternateName "Cucurbitaceae"@de ;
-    rdfs:subClassOf cultivationtype:1314 .
+    rdfs:subClassOf cultivationtype:1171 .
 
 cultivationtype:237 a eCH-0265:CultivationType ;
     schema:name "Markstammkohl"@de,
@@ -5164,6 +5164,17 @@ cultivationtype:1168 a eCH-0265:CultivationType ;
         "Zucchine seminate estate e autunno"@it ;
     rdfs:subClassOf cultivationtype:235, cultivationtype:22 .
 
+cultivationtype:1171 a eCH-0265:CultivationType ;
+    schema:name "Gemüsebau allgemein im Pflanzenschutz"@de,
+        "General vegetable production in plant protection"@en,
+        "Culture maraîchère en général dans la protection des végétaux"@fr,
+        "Orticoltura in generale nella protezione dei vegetali"@it ;
+    schema:description "Anwendungsbereich «Gemüsebau allg.» im Pflanzenschutzmittelverzeichnis. Umfasst den Gemüsebau sowie alle Kürbisgewächse, also auch Ölkürbisse, die im Ackerbau angebaut werden und nicht zum Gemüsebau gehören."@de,
+        "Scope «Gemüsebau allg.» in the plant protection product register. Covers vegetable production as well as all cucurbits, including oil pumpkins, which are grown as arable crops and are not part of vegetable production."@en,
+        "Domaine d'application «culture maraîchère en général» de l'index des produits phytosanitaires. Comprend la culture maraîchère ainsi que toutes les cucurbitacées, y compris les courges à huile, qui sont cultivées en grandes cultures et ne font pas partie de la culture maraîchère."@fr,
+        "Campo d'applicazione «orticoltura in generale» dell'elenco dei prodotti fitosanitari. Comprende l'orticoltura e tutte le cucurbitacee, incluse le zucche per l'estrazione di olio, che sono coltivate in campicoltura e non fanno parte dell'orticoltura."@it ;
+    rdfs:subClassOf cultivationtype:464 .
+
 cultivationtype:1180 a eCH-0265:CultivationType ;
     schema:name "Aprikosenanlage hoher Ertrag"@de,
         "Apricot orchard high yield"@en,
@@ -5856,17 +5867,6 @@ cultivationtype:1313 a eCH-0265:CultivationType ;
         "Chou de Chine d'industrie"@fr,
         "Cavolo cinese da industria"@it ;
     rdfs:subClassOf cultivationtype:58, cultivationtype:546 .
-
-cultivationtype:1314 a eCH-0265:CultivationType ;
-    schema:name "Gemüsebau allgemein im Pflanzenschutz"@de,
-        "General vegetable production in plant protection"@en,
-        "Culture maraîchère en général dans la protection des végétaux"@fr,
-        "Orticoltura in generale nella protezione dei vegetali"@it ;
-    schema:description "Anwendungsbereich «Gemüsebau allg.» im Pflanzenschutzmittelverzeichnis. Umfasst den Gemüsebau sowie alle Kürbisgewächse, also auch Ölkürbisse, die im Ackerbau angebaut werden und nicht zum Gemüsebau gehören."@de,
-        "Scope «Gemüsebau allg.» in the plant protection product register. Covers vegetable production as well as all cucurbits, including oil pumpkins, which are grown as arable crops and are not part of vegetable production."@en,
-        "Domaine d'application «culture maraîchère en général» de l'index des produits phytosanitaires. Comprend la culture maraîchère ainsi que toutes les cucurbitacées, y compris les courges à huile, qui sont cultivées en grandes cultures et ne font pas partie de la culture maraîchère."@fr,
-        "Campo d'applicazione «orticoltura in generale» dell'elenco dei prodotti fitosanitari. Comprende l'orticoltura e tutte le cucurbitacee, incluse le zucche per l'estrazione di olio, che sono coltivate in campicoltura e non fanno parte dell'orticoltura."@it ;
-    rdfs:subClassOf cultivationtype:464 .
 # ==============================================================================
 # DISJOINTNESS OF POTATO TYPES
 # ==============================================================================
