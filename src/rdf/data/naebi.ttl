@@ -1229,7 +1229,7 @@ naebi:196 a eCH-0265:NutrientBalanceCrop ;
         "Zucca"@it ;
     eCH-0265:cultivationCategory naebi:SPECIAL ;
     eCH-0265:cultivationSubCategory naebi:OUTVG ;
-    eCH-0265:exactMatch cultivationtype:1093 .
+    eCH-0265:exactMatch cultivationtype:1167 .
 
 naebi:197 a eCH-0265:NutrientBalanceCrop ;
     skos:inScheme naebi:ConceptScheme ;

@@ -451,7 +451,7 @@ psm:134 a eCH-0265:PlantProtectionCrop ;
         "culture maraîchère en général"@fr,
         "Orticoltura in generale"@it ;
     schema:version 0 ;
-    eCH-0265:exactMatch cultivationtype:22 .
+    eCH-0265:exactMatch cultivationtype:1171 .
 
 psm:135 a eCH-0265:PlantProtectionCrop ;
     skos:inScheme psm:ConceptScheme ;

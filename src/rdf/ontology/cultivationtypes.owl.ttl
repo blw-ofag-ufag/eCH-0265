@@ -210,7 +210,7 @@ cultivationtype:22 a eCH-0265:CultivationType ;
         "Vegetable production"@en,
         "Culture maraîchère"@fr,
         "Orticoltura"@it ;
-    rdfs:subClassOf cultivationtype:464 ;
+    rdfs:subClassOf cultivationtype:464, cultivationtype:1171 ;
     owl:unionOf (
         cultivationtype:23
         cultivationtype:24
@@ -288,7 +288,7 @@ cultivationtype:32 a eCH-0265:CultivationType ;
         "Cucumbers"@en,
         "Concombres"@fr,
         "Cetrioli"@it ;
-    rdfs:subClassOf cultivationtype:235 .
+    rdfs:subClassOf cultivationtype:235, cultivationtype:22 .
 
 cultivationtype:33 a eCH-0265:CultivationType ;
     schema:name "Baldrian"@de,
@@ -340,7 +340,7 @@ cultivationtype:40 a eCH-0265:CultivationType ;
         "Pumpkins with edible skin"@en,
         "Courges à peau comestible"@fr,
         "Zucche con buccia commestibile"@it ;
-    rdfs:subClassOf cultivationtype:1093 .
+    rdfs:subClassOf cultivationtype:1093, cultivationtype:22 .
 
 cultivationtype:41 a eCH-0265:CultivationType ;
     schema:name "Birne und Nashi"@de,
@@ -599,7 +599,8 @@ cultivationtype:88 a eCH-0265:CultivationType ;
         "Table and fodder potatoes"@en,
         "Pommes de terre de consommation et fourragères"@fr,
         "Patate da tavola e da foraggio"@it ;
-    rdfs:subClassOf cultivationtype:410 .
+    rdfs:subClassOf cultivationtype:410 ;
+    owl:disjointWith cultivationtype:411 .
 
 cultivationtype:89 a eCH-0265:CultivationType ;
     schema:name "Speisezwiebel"@de,
@@ -791,7 +792,7 @@ cultivationtype:119 a eCH-0265:CultivationType ;
         "Watermelons"@en,
         "Pastèques"@fr,
         "Angurie"@it ;
-    rdfs:subClassOf cultivationtype:235 .
+    rdfs:subClassOf cultivationtype:235, cultivationtype:22 .
 
 cultivationtype:120 a eCH-0265:CultivationType ;
     schema:name "Knöterichgewächse"@de,
@@ -1053,7 +1054,7 @@ cultivationtype:166 a eCH-0265:CultivationType ;
         "Pumpkins with inedible skin"@en,
         "Courges à peau non comestible"@fr,
         "Zucche a buccia non commestibile"@it ;
-    rdfs:subClassOf cultivationtype:1093 .
+    rdfs:subClassOf cultivationtype:1093, cultivationtype:22 .
 
 cultivationtype:167 a eCH-0265:CultivationType ;
     schema:name "Blautanne"@de,
@@ -1435,7 +1436,7 @@ cultivationtype:235 a eCH-0265:CultivationType ;
         "Cucurbitacées"@fr,
         "Cucurbitacee"@it ;
     schema:alternateName "Cucurbitaceae"@de ;
-    rdfs:subClassOf cultivationtype:22 .
+    rdfs:subClassOf cultivationtype:1171 .
 
 cultivationtype:237 a eCH-0265:CultivationType ;
     schema:name "Markstammkohl"@de,
@@ -1773,7 +1774,7 @@ cultivationtype:297 a eCH-0265:CultivationType ;
         "Melons"@en,
         "Melons"@fr,
         "Meloni"@it ;
-    rdfs:subClassOf cultivationtype:235 .
+    rdfs:subClassOf cultivationtype:235, cultivationtype:22 .
 
 cultivationtype:298 a eCH-0265:CultivationType ;
     schema:name "Stachelbeere"@de,
@@ -2118,15 +2119,15 @@ cultivationtype:410 a eCH-0265:CultivationType ;
         "Potatoes"@en,
         "Pommes de terre"@fr,
         "Patate"@it ;
-    rdfs:subClassOf cultivationtype:17 .
+    rdfs:subClassOf cultivationtype:17 ;
+    owl:unionOf ( cultivationtype:88 cultivationtype:411 ) .
 
 cultivationtype:411 a eCH-0265:CultivationType ;
     schema:name "Kartoffeln zur Pflanzgutproduktion"@de,
         "Seed potato production"@en,
         "Pommes de terre pour la production de plants"@fr,
         "Patate per la produzione di tuberi-seme"@it ;
-    rdfs:subClassOf cultivationtype:410 ;
-    owl:unionOf ( cultivationtype:524 cultivationtype:525 ) .
+    rdfs:subClassOf cultivationtype:410 .
 
 cultivationtype:412 a eCH-0265:CultivationType ;
     schema:name "Süssdolde"@de,
@@ -2578,14 +2579,6 @@ cultivationtype:523 a eCH-0265:CultivationType ;
         "Barbabietole da foraggio"@it ;
     rdfs:subClassOf cultivationtype:17 .
 
-cultivationtype:524 a eCH-0265:CultivationType ;
-    schema:name "Pflanzkartoffeln ohne Vertragsanbau"@de,
-        "Seed potatoes without contract"@en,
-        "Plants de pommes de terre sans contrat de culture"@fr,
-        "Tuberi-seme di patate senza coltivazione contrattuale"@it ;
-    rdfs:subClassOf cultivationtype:411 ;
-    owl:disjointWith cultivationtype:525 .
-
 cultivationtype:525 a eCH-0265:CultivationType ;
     schema:name "Pflanzkartoffeln Vertragsanbau"@de,
         "Contract seed potatoes"@en,
@@ -2703,7 +2696,7 @@ cultivationtype:539 a eCH-0265:CultivationType ;
         "Zucca da seme"@it,
         "Oilseed pumpkin"@en ;
     schema:image <https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/Steirischer_%C3%96lk%C3%BCrbis_Feld_Allhaming_20200911b.jpg/1280px-Steirischer_%C3%96lk%C3%BCrbis_Feld_Allhaming_20200911b.jpg> ;
-    rdfs:subClassOf cultivationtype:1093 .
+    rdfs:subClassOf cultivationtype:1093, cultivationtype:1 .
 
 cultivationtype:540 a eCH-0265:CultivationType ;
     schema:name "Kichererbsen"@de,
@@ -4512,7 +4505,7 @@ cultivationtype:1079 a eCH-0265:CultivationType ;
         "Cucumbers and gherkins"@en,
         "Concombres et cornichons"@fr,
         "Cetrioli e cetriolini"@it ;
-    rdfs:subClassOf cultivationtype:235 ;
+    rdfs:subClassOf cultivationtype:235, cultivationtype:22 ;
     owl:unionOf (
         cultivationtype:32
         cultivationtype:207
@@ -4586,14 +4579,14 @@ cultivationtype:1089 a eCH-0265:CultivationType ;
         "Early potatoes"@en,
         "Pommes de terre hâtives"@fr,
         "Patate novelle"@it ;
-    rdfs:subClassOf cultivationtype:410 .
+    rdfs:subClassOf cultivationtype:88 .
 
 cultivationtype:1090 a eCH-0265:CultivationType ;
     schema:name "Speise- und Verarbeitungskartoffeln"@de,
         "Table and processing potatoes"@en,
         "Pommes de terre de consommation et d'industrie"@fr,
         "Patate da consumo e da industria"@it ;
-    rdfs:subClassOf cultivationtype:410 .
+    rdfs:subClassOf cultivationtype:88 .
 
 cultivationtype:1091 a eCH-0265:CultivationType ;
     schema:name "Pfefferminze"@de,
@@ -5118,21 +5111,21 @@ cultivationtype:1163 a eCH-0265:CultivationType ;
         "Planted courgette early short-season crop"@en,
         "Courgette plantée culture courte précoce"@fr,
         "Zucchine piantate coltura breve precoce"@it ;
-    rdfs:subClassOf cultivationtype:235 .
+    rdfs:subClassOf cultivationtype:235, cultivationtype:22 .
 
 cultivationtype:1164 a eCH-0265:CultivationType ;
     schema:name "Patisson und Kürbis im geschützten Anbau"@de,
         "Pattypan squash and pumpkins in protected cultivation"@en,
         "Pâtisson et courge en culture protégée"@fr,
         "Patisson e zucca in coltura protetta"@it ;
-    owl:intersectionOf ( cultivationtype:1093 cultivationtype:7 ) .
+    owl:intersectionOf ( cultivationtype:1093 cultivationtype:23 ) .
 
 cultivationtype:1165 a eCH-0265:CultivationType ;
     schema:name "Zucchetti gepflanzt Sommer und Herbst"@de,
         "Planted courgette summer and autumn"@en,
         "Courgette plantée été et automne"@fr,
         "Zucchine piantate estate e autunno"@it ;
-    rdfs:subClassOf cultivationtype:235 .
+    rdfs:subClassOf cultivationtype:235, cultivationtype:22 .
 
 cultivationtype:1166 a eCH-0265:CultivationType ;
     schema:name "Zucchetti geschützter Anbau"@de,
@@ -5153,7 +5146,18 @@ cultivationtype:1168 a eCH-0265:CultivationType ;
         "Zucchini sown summer and fall"@en,
         "Courgette semée été et automne"@fr,
         "Zucchine seminate estate e autunno"@it ;
-    rdfs:subClassOf cultivationtype:235 .
+    rdfs:subClassOf cultivationtype:235, cultivationtype:22 .
+
+cultivationtype:1171 a eCH-0265:CultivationType ;
+    schema:name "Gemüsebau allgemein im Pflanzenschutz"@de,
+        "General vegetable production in plant protection"@en,
+        "Culture maraîchère en général dans la protection des végétaux"@fr,
+        "Orticoltura in generale nella protezione dei vegetali"@it ;
+    schema:description "Anwendungsbereich «Gemüsebau allg.» im Pflanzenschutzmittelverzeichnis. Umfasst den Gemüsebau sowie alle Kürbisgewächse, also auch Ölkürbisse, die im Ackerbau angebaut werden und nicht zum Gemüsebau gehören."@de,
+        "Scope «Gemüsebau allg.» in the plant protection product register. Covers vegetable production as well as all cucurbits, including oil pumpkins, which are grown as arable crops and are not part of vegetable production."@en,
+        "Domaine d'application «culture maraîchère en général» de l'index des produits phytosanitaires. Comprend la culture maraîchère ainsi que toutes les cucurbitacées, y compris les courges à huile, qui sont cultivées en grandes cultures et ne font pas partie de la culture maraîchère."@fr,
+        "Campo d'applicazione «orticoltura in generale» dell'elenco dei prodotti fitosanitari. Comprende l'orticoltura e tutte le cucurbitacee, incluse le zucche per l'estrazione di olio, che sono coltivate in campicoltura e non fanno parte dell'orticoltura."@it ;
+    rdfs:subClassOf cultivationtype:464 .
 
 cultivationtype:1170 a eCH-0265:CultivationType ;
     schema:name "Übrige Wiesen mit Düngeverbot"@de,
