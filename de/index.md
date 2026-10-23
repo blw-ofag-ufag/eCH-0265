@@ -356,16 +356,32 @@ kommen in mehr als einer Kategorie vor.
 
 <div class="cell-output-display">
 
-| Unterkategorie       | Ackerkulturen | Grundfutterproduktion | Spezialkulturen |
-|:---------------------|--------------:|----------------------:|----------------:|
-| Dauerkulturen        |               |                       |              77 |
-| Diverse Kulturen     |            18 |                       |               8 |
-| Freilandgemüse       |               |                       |             100 |
-| Geschützte Kulturen  |               |                       |              34 |
-| Getreide             |            22 |                     2 |                 |
-| Grundfutter          |               |                    25 |                 |
-| Hackfrüchte          |            19 |                     3 |                 |
-| übriger Ökoausgleich |             3 |                       |               3 |
+| Unterkategorie | Ackerkulturen | Grundfutterproduktion | Spezialkulturen |
+|:---|---:|---:|---:|
+| Altre colture | 18 |  | 8 |
+| Altre sup. per la compensazione ecologica | 3 |  | 3 |
+| Autre compensation écologique | 3 |  | 3 |
+| Cereali | 22 | 2 |  |
+| Colture perenni | 1 |  | 76 |
+| Colture protette |  |  | 29 |
+| Cultures divers | 18 |  | 8 |
+| Cultures pérennes | 1 |  | 76 |
+| Cultures sarclées | 19 | 3 |  |
+| Cultures sous abri |  |  | 29 |
+| Céréales | 22 | 2 |  |
+| Dauerkulturen | 1 |  | 76 |
+| Diverse Kulturen | 18 |  | 8 |
+| Foraggio di base |  | 25 |  |
+| Fourrage de base |  | 25 |  |
+| Freilandgemüse |  |  | 105 |
+| Geschützte Kulturen |  |  | 29 |
+| Getreide | 22 | 2 |  |
+| Grundfutter |  | 25 |  |
+| Hackfrüchte | 19 | 3 |  |
+| Légumes de pleine terre |  |  | 105 |
+| Ortaggi di pieno campo |  |  | 105 |
+| Sarchiate | 19 | 3 |  |
+| übriger Ökoausgleich | 3 |  | 3 |
 
 </div>
 
@@ -760,12 +776,12 @@ deterministische Abbildbarkeit (Abbildbar) und Abdeckung des Zielsystems
 
 | Quellsystem | Zielsystem |   N | Exakt | Abbildbar | Abdeckung |
 |:------------|:-----------|----:|------:|----------:|----------:|
-| NB          | PS         | 314 | 15.6% |     71.3% |     40.8% |
-| DZ          | PS         | 159 | 13.8% |     57.9% |     14.2% |
+| NB          | PS         | 314 | 15.6% |     71.0% |     42.1% |
+| DZ          | PS         | 159 | 13.2% |     57.2% |     13.8% |
 | PS          | NB         | 240 | 20.4% |     31.2% |     18.2% |
-| NB          | DZ         | 314 |  8.6% |     27.4% |     30.2% |
-| DZ          | NB         | 159 | 16.4% |     24.5% |     11.1% |
-| PS          | DZ         | 240 |  9.2% |     17.9% |     20.8% |
+| NB          | DZ         | 314 |  8.3% |     28.0% |     30.8% |
+| DZ          | NB         | 159 | 16.4% |     24.5% |     10.8% |
+| PS          | DZ         | 240 |  8.8% |     17.9% |     20.8% |
 
 </div>
 
@@ -1015,7 +1031,7 @@ Geschlossen
 Ja (nur die aufgeführten Eigenschaften zulässig)
 
 Kennzahlen  
-314 Instanzen mit je 7 bis 16 Tripeln (im Mittel 11.0)
+314 Instanzen mit je 9 bis 18 Tripeln (im Mittel 13.1)
 
 Datenzugriff  
 [SPARQL-Dienst](https://lindas.admin.ch/sparql/#query=PREFIX%20eCH-0265%3A%20%3Chttps%3A%2F%2Fagriculture.ld.admin.ch%2FeCH-0265%2F2%2F%3E%0APREFIX%20schema%3A%20%3Chttp%3A%2F%2Fschema.org%2F%3E%0APREFIX%20skos%3A%20%3Chttp%3A%2F%2Fwww.w3.org%2F2004%2F02%2Fskos%2Fcore%23%3E%0ASELECT%20%3Firi%20%3Fidentifier%20%3FinScheme%20%3Fname%20%3FcultivationSubCategory%20%3FcultivationCategory%20%3FexactMatch%0AFROM%20%3Chttps%3A%2F%2Flindas.admin.ch%2Ffoag%2Fech%2F0265%2F2%3E%0AWHERE%20%7B%0A%20%20%3Firi%20a%20eCH-0265%3ANutrientBalanceCrop%20.%0A%20%20%3Firi%20schema%3Aidentifier%20%3Fidentifier%20.%0A%20%20%3Firi%20skos%3AinScheme%20%3FinScheme%20.%0A%20%20%3Firi%20schema%3Aname%20%3Fname%20.%0A%20%20%3Firi%20eCH-0265%3AcultivationSubCategory%20%3FcultivationSubCategory%20.%0A%20%20%3Firi%20eCH-0265%3AcultivationCategory%20%3FcultivationCategory%20.%0A%20%20OPTIONAL%20%7B%20%3Firi%20eCH-0265%3AexactMatch%20%3FexactMatch%20.%20%7D%0A%7D%0ALIMIT%201000)
@@ -1322,7 +1338,7 @@ Geschlossen
 Ja (nur die aufgeführten Eigenschaften zulässig)
 
 Kennzahlen  
-755 Instanzen mit je 8 bis 21 Tripeln (im Mittel 8.8)
+757 Instanzen mit je 8 bis 21 Tripeln (im Mittel 8.8)
 
 Datenzugriff  
 [SPARQL-Dienst](https://lindas.admin.ch/sparql/#query=PREFIX%20eCH-0265%3A%20%3Chttps%3A%2F%2Fagriculture.ld.admin.ch%2FeCH-0265%2F2%2F%3E%0APREFIX%20owl%3A%20%3Chttp%3A%2F%2Fwww.w3.org%2F2002%2F07%2Fowl%23%3E%0APREFIX%20rdfs%3A%20%3Chttp%3A%2F%2Fwww.w3.org%2F2000%2F01%2Frdf-schema%23%3E%0APREFIX%20schema%3A%20%3Chttp%3A%2F%2Fschema.org%2F%3E%0ASELECT%20%3Firi%20%3Fname%20%3FalternateName%20%3Fdescription%20%3FsubClassOf%20%3FdisjointWith%0AFROM%20%3Chttps%3A%2F%2Flindas.admin.ch%2Ffoag%2Fech%2F0265%2F2%3E%0AWHERE%20%7B%0A%20%20%3Firi%20a%20eCH-0265%3ACultivationType%20.%0A%20%20%3Firi%20schema%3Aname%20%3Fname%20.%0A%20%20OPTIONAL%20%7B%20%3Firi%20schema%3AalternateName%20%3FalternateName%20.%20%7D%0A%20%20OPTIONAL%20%7B%20%3Firi%20schema%3Adescription%20%3Fdescription%20.%20%7D%0A%20%20OPTIONAL%20%7B%20%3Firi%20rdfs%3AsubClassOf%20%3FsubClassOf%20.%20%7D%0A%20%20OPTIONAL%20%7B%20%3Firi%20owl%3AdisjointWith%20%3FdisjointWith%20.%20%7D%0A%7D%0ALIMIT%201000)
@@ -1427,7 +1443,7 @@ Geschlossen
 Ja (nur die aufgeführten Eigenschaften zulässig)
 
 Kennzahlen  
-3 Instanzen mit je 7 bis 106 Tripeln (im Mittel 40.7)
+3 Instanzen mit je 9 bis 108 Tripeln (im Mittel 42.7)
 
 Datenzugriff  
 [SPARQL-Dienst](https://lindas.admin.ch/sparql/#query=PREFIX%20eCH-0265%3A%20%3Chttps%3A%2F%2Fagriculture.ld.admin.ch%2FeCH-0265%2F2%2F%3E%0APREFIX%20schema%3A%20%3Chttp%3A%2F%2Fschema.org%2F%3E%0APREFIX%20skos%3A%20%3Chttp%3A%2F%2Fwww.w3.org%2F2004%2F02%2Fskos%2Fcore%23%3E%0ASELECT%20%3Firi%20%3Fidentifier%20%3FinScheme%20%3FtopConceptOf%20%3Fname%20%3FexactMatch%0AFROM%20%3Chttps%3A%2F%2Flindas.admin.ch%2Ffoag%2Fech%2F0265%2F2%3E%0AWHERE%20%7B%0A%20%20%3Firi%20a%20eCH-0265%3ANutrientBalanceCropCategory%20.%0A%20%20%3Firi%20schema%3Aidentifier%20%3Fidentifier%20.%0A%20%20%3Firi%20skos%3AinScheme%20%3FinScheme%20.%0A%20%20%3Firi%20skos%3AtopConceptOf%20%3FtopConceptOf%20.%0A%20%20%3Firi%20schema%3Aname%20%3Fname%20.%0A%20%20OPTIONAL%20%7B%20%3Firi%20eCH-0265%3AexactMatch%20%3FexactMatch%20.%20%7D%0A%7D%0ALIMIT%201000)
@@ -1518,7 +1534,7 @@ Geschlossen
 Ja (nur die aufgeführten Eigenschaften zulässig)
 
 Kennzahlen  
-8 Instanzen mit je 7 bis 63 Tripeln (im Mittel 16.1)
+8 Instanzen mit je 9 bis 65 Tripeln (im Mittel 18.1)
 
 Datenzugriff  
 [SPARQL-Dienst](https://lindas.admin.ch/sparql/#query=PREFIX%20eCH-0265%3A%20%3Chttps%3A%2F%2Fagriculture.ld.admin.ch%2FeCH-0265%2F2%2F%3E%0APREFIX%20schema%3A%20%3Chttp%3A%2F%2Fschema.org%2F%3E%0APREFIX%20skos%3A%20%3Chttp%3A%2F%2Fwww.w3.org%2F2004%2F02%2Fskos%2Fcore%23%3E%0ASELECT%20%3Firi%20%3Fidentifier%20%3FinScheme%20%3Fname%20%3FexactMatch%0AFROM%20%3Chttps%3A%2F%2Flindas.admin.ch%2Ffoag%2Fech%2F0265%2F2%3E%0AWHERE%20%7B%0A%20%20%3Firi%20a%20eCH-0265%3ANutrientBalanceCropSubCategory%20.%0A%20%20%3Firi%20schema%3Aidentifier%20%3Fidentifier%20.%0A%20%20%3Firi%20skos%3AinScheme%20%3FinScheme%20.%0A%20%20%3Firi%20schema%3Aname%20%3Fname%20.%0A%20%20OPTIONAL%20%7B%20%3Firi%20eCH-0265%3AexactMatch%20%3FexactMatch%20.%20%7D%0A%7D%0ALIMIT%201000)
@@ -1599,7 +1615,7 @@ Geschlossen
 Ja (nur die aufgeführten Eigenschaften zulässig)
 
 Kennzahlen  
-326 Instanzen mit je 8 bis 185 Tripeln (im Mittel 12.6)
+326 Instanzen mit je 8 bis 184 Tripeln (im Mittel 12.6)
 
 Datenzugriff  
 [SPARQL-Dienst](https://lindas.admin.ch/sparql/#query=PREFIX%20eCH-0265%3A%20%3Chttps%3A%2F%2Fagriculture.ld.admin.ch%2FeCH-0265%2F2%2F%3E%0APREFIX%20schema%3A%20%3Chttp%3A%2F%2Fschema.org%2F%3E%0APREFIX%20skos%3A%20%3Chttp%3A%2F%2Fwww.w3.org%2F2004%2F02%2Fskos%2Fcore%23%3E%0ASELECT%20%3Firi%20%3Fidentifier%20%3FinScheme%20%3Fname%20%3Fversion%20%3Fbroader%20%3FexactMatch%0AFROM%20%3Chttps%3A%2F%2Flindas.admin.ch%2Ffoag%2Fech%2F0265%2F2%3E%0AWHERE%20%7B%0A%20%20%3Firi%20a%20eCH-0265%3APlantProtectionCrop%20.%0A%20%20%3Firi%20schema%3Aidentifier%20%3Fidentifier%20.%0A%20%20%3Firi%20skos%3AinScheme%20%3FinScheme%20.%0A%20%20%3Firi%20schema%3Aname%20%3Fname%20.%0A%20%20%3Firi%20schema%3Aversion%20%3Fversion%20.%0A%20%20OPTIONAL%20%7B%20%3Firi%20skos%3Abroader%20%3Fbroader%20.%20%7D%0A%20%20OPTIONAL%20%7B%20%3Firi%20eCH-0265%3AexactMatch%20%3FexactMatch%20.%20%7D%0A%7D%0ALIMIT%201000)
