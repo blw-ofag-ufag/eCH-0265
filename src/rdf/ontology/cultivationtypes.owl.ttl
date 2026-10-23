@@ -311,8 +311,7 @@ cultivationtype:35 a eCH-0265:CultivationType ;
         "Herbes aromatiques et médicinales"@fr,
         "Erbe aromatiche e medicinali"@it ;
     schema:alternateName "Gewürz- und Medizinalpflanzen"@de, "Heil- und Gewürzpflanzen"@de ;
-    rdfs:subClassOf cultivationtype:22, cultivationtype:465 ;
-    owl:unionOf ( cultivationtype:553 cultivationtype:706 ) .
+    rdfs:subClassOf cultivationtype:22, cultivationtype:465 .
 
 cultivationtype:36 a eCH-0265:CultivationType ;
     schema:name "Zierkürbis"@de,
@@ -1479,7 +1478,7 @@ cultivationtype:246 a eCH-0265:CultivationType ;
         "Roses"@en,
         "Rosiers"@fr,
         "Rose"@it ;
-    rdfs:subClassOf cultivationtype:329 .
+    rdfs:subClassOf cultivationtype:72 .
 
 cultivationtype:247 a eCH-0265:CultivationType ;
     schema:name "Speisekohlrüben"@de,
@@ -3966,7 +3965,7 @@ cultivationtype:1001 a eCH-0265:CultivationType ;
         "Blé d'automne sans projet nitrate"@fr,
         "Frumento autunnale senza progetto nitrati"@it ;
     schema:alternateName "Winterweizen ohne 62a Nitrat-Projekt"@de ;
-    rdfs:subClassOf cultivationtype:1000 .
+    rdfs:subClassOf cultivationtype:1007 .
 
 cultivationtype:1002 a eCH-0265:CultivationType ;
     schema:name "Winterweizen mit Nitratprojekt"@de,
@@ -3974,7 +3973,7 @@ cultivationtype:1002 a eCH-0265:CultivationType ;
         "Blé d'automne avec projet nitrate"@fr,
         "Frumento autunnale con progetto nitrati"@it ;
     schema:alternateName "Winterweizen in 62a Nitrat-Projekt"@de ;
-    rdfs:subClassOf cultivationtype:1000 .
+    rdfs:subClassOf cultivationtype:1007 .
 
 cultivationtype:1003 a eCH-0265:CultivationType ;
     schema:name "Futterweizen"@de,
@@ -3990,7 +3989,7 @@ cultivationtype:1004 a eCH-0265:CultivationType ;
         "Blé fourrager sans projet nitrate"@fr,
         "Frumento foraggero senza progetto nitrati"@it ;
     schema:alternateName "Futterweizen ohne 62a Nitrat-Projekt"@de ;
-    rdfs:subClassOf cultivationtype:1000 .
+    rdfs:subClassOf cultivationtype:1003 .
 
 cultivationtype:1005 a eCH-0265:CultivationType ;
     schema:name "Futterweizen mit Nitratprojekt"@de,
@@ -3998,7 +3997,7 @@ cultivationtype:1005 a eCH-0265:CultivationType ;
         "Blé fourrager avec projet nitrate"@fr,
         "Frumento foraggero con progetto nitrati"@it ;
     schema:alternateName "Futterweizen in 62a Nitrat-Projekt"@de ;
-    rdfs:subClassOf cultivationtype:1000 .
+    rdfs:subClassOf cultivationtype:1003 .
 
 cultivationtype:1006 a eCH-0265:CultivationType ;
     schema:name "Sommerweichweizen"@de,
@@ -4022,7 +4021,7 @@ cultivationtype:1008 a eCH-0265:CultivationType ;
         "Orge d'automne sans projet nitrate"@fr,
         "Orzo autunnale senza progetto nitrati"@it ;
     schema:alternateName "Wintergerste ohne 62a Nitrat-Projekt"@de ;
-    rdfs:subClassOf cultivationtype:1007 .
+    rdfs:subClassOf cultivationtype:502 .
 
 cultivationtype:1009 a eCH-0265:CultivationType ;
     schema:name "Wintergerste mit Nitratprojekt"@de,
@@ -4030,7 +4029,7 @@ cultivationtype:1009 a eCH-0265:CultivationType ;
         "Orge d'automne avec projet nitrate"@fr,
         "Orzo autunnale con progetto nitrati"@it ;
     schema:alternateName "Wintergerste in 62a Nitrat-Projekt"@de ;
-    rdfs:subClassOf cultivationtype:1007 .
+    rdfs:subClassOf cultivationtype:502 .
 
 cultivationtype:1010 a eCH-0265:CultivationType ;
     schema:name "Winterhafer"@de,
@@ -4106,7 +4105,7 @@ cultivationtype:1019 a eCH-0265:CultivationType ;
         "Triticale sans projet nitrate"@fr,
         "Triticale senza progetto nitrati"@it ;
     schema:alternateName "Triticale ohne 62a Nitrat-Projekt"@de ;
-    rdfs:subClassOf cultivationtype:1018 .
+    rdfs:subClassOf cultivationtype:1017 .
 
 cultivationtype:1020 a eCH-0265:CultivationType ;
     schema:name "Triticale mit Nitratprojekt"@de,
@@ -4114,14 +4113,15 @@ cultivationtype:1020 a eCH-0265:CultivationType ;
         "Triticale avec projet nitrate"@fr,
         "Triticale con progetto nitrati"@it ;
     schema:alternateName "Triticale in 62a Nitrat-Projekt"@de ;
-    rdfs:subClassOf cultivationtype:1018 .
+    rdfs:subClassOf cultivationtype:1017 .
 
 cultivationtype:1021 a eCH-0265:CultivationType ;
     schema:name "Winterkorn und Dinkel"@de,
         "Winter cereal and spelt"@en,
         "Céréales d'automne et épeautre"@fr,
         "Cereali autunnali e spelta"@it ;
-    rdfs:subClassOf cultivationtype:1007 .
+    rdfs:subClassOf cultivationtype:19,
+        cultivationtype:516 .
 
 cultivationtype:1022 a eCH-0265:CultivationType ;
     schema:name "Feldbau"@de,
@@ -4207,22 +4207,6 @@ cultivationtype:1033 a eCH-0265:CultivationType ;
         "Includes the following cereal crops according to the plant protection products register (PPP): wheat (common wheat, durum wheat, spelt, emmer), triticale, barley, oats, and rye."@en ;
     rdfs:subClassOf cultivationtype:14 ;
     owl:disjointWith cultivationtype:497 .
-
-cultivationtype:1034 a eCH-0265:CultivationType ;
-    schema:name "Winterraps ohne Nitratprojekt"@de,
-        "Winter oilseed rape without nitrate project"@en,
-        "Colza d'automne sans projet nitrate"@fr,
-        "Colza autunnale senza progetto nitrati"@it ;
-    schema:alternateName "Winterraps ohne 62a Nitrat-Projekt"@de ;
-    rdfs:subClassOf cultivationtype:1033 .
-
-cultivationtype:1035 a eCH-0265:CultivationType ;
-    schema:name "Winterraps mit Nitratprojekt"@de,
-        "Winter oilseed rape with nitrate project"@en,
-        "Colza d'automne avec projet nitrate"@fr,
-        "Colza autunnale con progetto nitrati"@it ;
-    schema:alternateName "Winterraps in 62a Nitrat-Projekt"@de ;
-    rdfs:subClassOf cultivationtype:1033 .
 
 cultivationtype:1036 a eCH-0265:CultivationType ;
     schema:name "Aubergine Erdkultur geschützter Anbau"@de,
@@ -5171,6 +5155,14 @@ cultivationtype:1168 a eCH-0265:CultivationType ;
         "Zucchine seminate estate e autunno"@it ;
     rdfs:subClassOf cultivationtype:235 .
 
+cultivationtype:1170 a eCH-0265:CultivationType ;
+    schema:name "Übrige Wiesen mit Düngeverbot"@de,
+        "Other meadows with fertilisation ban"@en,
+        "Autres prairies avec interdiction de fumure"@fr,
+        "Altri prati con divieto di concimazione"@it ;
+    rdfs:subClassOf cultivationtype:2 ;
+    eCH-0265:managementIntensity intensity:Extensive .
+
 cultivationtype:1180 a eCH-0265:CultivationType ;
     schema:name "Aprikosenanlage hoher Ertrag"@de,
         "Apricot orchard high yield"@en,
@@ -5449,7 +5441,7 @@ cultivationtype:1235 a eCH-0265:CultivationType ;
         "Cherry orchard high yield"@en,
         "Verger de cerisiers à haut rendement"@fr,
         "Ceraseto ad alta resa"@it ;
-    rdfs:subClassOf cultivationtype:704 .
+    rdfs:subClassOf cultivationtype:283 .
 
 cultivationtype:1236 a eCH-0265:CultivationType ;
     schema:name "Gurken Erdkultur geschützter Anbau"@de,
@@ -5653,7 +5645,7 @@ cultivationtype:1275 a eCH-0265:CultivationType ;
         "Green manure legumes"@en,
         "Engrais vert légumineuses"@fr,
         "Sovescio leguminose"@it ;
-    rdfs:subClassOf cultivationtype:47, cultivationtype:24 .
+    rdfs:subClassOf cultivationtype:1 .
 
 cultivationtype:1277 a eCH-0265:CultivationType ;
     schema:name "Gründüngung Nichtleguminosen"@de,
@@ -5863,6 +5855,29 @@ cultivationtype:1313 a eCH-0265:CultivationType ;
         "Chou de Chine d'industrie"@fr,
         "Cavolo cinese da industria"@it ;
     rdfs:subClassOf cultivationtype:58, cultivationtype:546 .
+
+cultivationtype:1314 a eCH-0265:CultivationType ;
+    schema:name "Winterroggen Hybridsorten ohne Nitratprojekt"@de,
+        "Winter rye hybrid without nitrate project"@en,
+        "Seigle d'automne variétés hybrides sans projet nitrate"@fr,
+        "Segale autunnale varietà ibride senza progetto nitrati"@it ;
+    schema:alternateName "Winterroggen Hybridsorten ohne 62a Nitrat-Projekt"@de ;
+    rdfs:subClassOf cultivationtype:1013 .
+
+cultivationtype:1315 a eCH-0265:CultivationType ;
+    schema:name "Winterroggen Hybridsorten mit Nitratprojekt"@de,
+        "Winter rye hybrid with nitrate project"@en,
+        "Seigle d'automne variétés hybrides avec projet nitrate"@fr,
+        "Segale autunnale varietà ibride con progetto nitrati"@it ;
+    schema:alternateName "Winterroggen Hybridsorten in 62a Nitrat-Projekt"@de ;
+    rdfs:subClassOf cultivationtype:1013 .
+
+cultivationtype:1316 a eCH-0265:CultivationType ;
+    schema:name "Kirschenanlage"@de,
+        "Cherry orchard"@en,
+        "Verger de cerisiers"@fr,
+        "Ceraseto"@it ;
+    rdfs:subClassOf cultivationtype:283 .
 # ==============================================================================
 # DISJOINTNESS OF POTATO TYPES
 # ==============================================================================
