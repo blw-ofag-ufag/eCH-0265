@@ -776,12 +776,12 @@ deterministische Abbildbarkeit (Abbildbar) und Abdeckung des Zielsystems
 
 | Quellsystem | Zielsystem |   N | Exakt | Abbildbar | Abdeckung |
 |:------------|:-----------|----:|------:|----------:|----------:|
-| NB          | PS         | 314 | 15.6% |     71.0% |     42.1% |
-| DZ          | PS         | 159 | 13.2% |     57.2% |     13.8% |
-| PS          | NB         | 240 | 20.4% |     31.2% |     18.2% |
-| NB          | DZ         | 314 |  8.3% |     28.0% |     30.8% |
-| DZ          | NB         | 159 | 16.4% |     24.5% |     10.8% |
-| PS          | DZ         | 240 |  8.8% |     17.9% |     20.8% |
+| NB          | PS         | 314 | 15.6% |     71.0% |     42.5% |
+| DZ          | PS         | 160 | 13.8% |     56.9% |     14.2% |
+| NB          | DZ         | 314 |  8.3% |     29.9% |     31.2% |
+| PS          | NB         | 240 | 20.4% |     28.8% |     17.8% |
+| DZ          | NB         | 160 | 16.2% |     23.8% |     10.5% |
+| PS          | DZ         | 240 |  9.2% |     18.3% |     21.2% |
 
 </div>
 
@@ -1130,7 +1130,7 @@ Geschlossen
 Ja (nur die aufgeführten Eigenschaften zulässig)
 
 Kennzahlen  
-182 Instanzen mit je 10 bis 17 Tripeln (im Mittel 12.2)
+183 Instanzen mit je 9 bis 17 Tripeln (im Mittel 12.2)
 
 Datenzugriff  
 [SPARQL-Dienst](https://lindas.admin.ch/sparql/#query=PREFIX%20eCH-0265%3A%20%3Chttps%3A%2F%2Fagriculture.ld.admin.ch%2FeCH-0265%2F2%2F%3E%0APREFIX%20schema%3A%20%3Chttp%3A%2F%2Fschema.org%2F%3E%0APREFIX%20skos%3A%20%3Chttp%3A%2F%2Fwww.w3.org%2F2004%2F02%2Fskos%2Fcore%23%3E%0ASELECT%20%3Firi%20%3Fbroader%20%3FinScheme%20%3Fname%20%3Fidentifier%20%3FvalidFrom%20%3FvalidTo%20%3FexactMatch%0AFROM%20%3Chttps%3A%2F%2Flindas.admin.ch%2Ffoag%2Fech%2F0265%2F2%3E%0AWHERE%20%7B%0A%20%20%3Firi%20a%20eCH-0265%3ADirectPaymentCrop%20.%0A%20%20OPTIONAL%20%7B%20%3Firi%20skos%3Abroader%20%3Fbroader%20.%20%7D%0A%20%20%3Firi%20skos%3AinScheme%20%3FinScheme%20.%0A%20%20%3Firi%20schema%3Aname%20%3Fname%20.%0A%20%20%3Firi%20schema%3Aidentifier%20%3Fidentifier%20.%0A%20%20OPTIONAL%20%7B%20%3Firi%20schema%3AvalidFrom%20%3FvalidFrom%20.%20%7D%0A%20%20OPTIONAL%20%7B%20%3Firi%20schema%3AvalidTo%20%3FvalidTo%20.%20%7D%0A%20%20OPTIONAL%20%7B%20%3Firi%20eCH-0265%3AexactMatch%20%3FexactMatch%20.%20%7D%0A%7D%0ALIMIT%201000)
