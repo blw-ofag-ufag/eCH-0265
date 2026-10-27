@@ -1,31 +1,24 @@
 PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
 PREFIX schema: <http://schema.org/>
 
-SELECT ?s ?s_name ?s_id ?s_scheme_name ?p ?t ?t_name ?t_id ?t_scheme_name 			  # Legt fest, welche Spalten die Ergebnistabelle hat: Quellkonzept (?s), sein Name, ID und Schema-Name, die Beziehung (?p) und das Zielkonzept (?t) mit Name, ID und Schema-Name.
-FROM <https://lindas.admin.ch/foag/ech/0265/2>									                  # Es wird nur der Named Graph https://lindas.admin.ch/foag/ech/0265/2 abgefragt
+SELECT ?s ?s_name ?s_id ?p ?t ?t_name ?t_id
+FROM <https://lindas.admin.ch/foag/ech/0265/2>
 WHERE {
-  VALUES ?lang { "de" }														                                # Definiert die Variable ?lang mit dem Wert “de”. So lässt sich die Sprache an einer Stelle ändern.
-  ?s schema:name ?s_name ;													                              # Findet jedes ?s (source system) mit Name, ID und zugehörigem Schema. Dann wird der Name des Schemas dazugeholt.
-     schema:identifier ?s_id ;
-     skos:inScheme ?s_scheme .
-  ?s_scheme schema:name ?s_scheme_name .
-  FILTER(LANG(?s_name) = ?lang && LANG(?s_scheme_name) = ?lang)					          # Behält nur Namen mit deutschem Sprach-Tag.
-  FILTER(STRSTARTS(STR(?s), "https://agriculture.ld.admin.ch/crops/agis/") ||     # Filter für das source system. STR(?s) wandelt die URI in einen String um. STRSTARTS prüft, ob dieser mit dem Präfix beginnt. Es bleiben nur Konzepte, deren URI mit …/crops/agis/ oder …/crops/psm/ beginnt.
-         STRSTARTS(STR(?s), "https://agriculture.ld.admin.ch/crops/psm/"))				      # Neben DZ- und PSM-Kulturen können auch Nährstoffbilanz-Kulturen "https://agriculture.ld.admin.ch/crops/naebi/" abgefragt werden.
-  OPTIONAL {																                                      # Sucht Mappings zu anderen Konzepten. Gibt es keines, bleibt die Zeile trotzdem erhalten, die Zielspalten sind dann leer (wie ein LEFT JOIN).
-    VALUES ?p { skos:exactMatch skos:broadMatch skos:narrowMatch }				        # Erlaubt nur diese drei Mapping-Beziehungen.
-    ?s ?p ?t .																                                    # Verbindet Quelle und Ziel über eine dieser Beziehungen.
-    ?t schema:name ?t_name ;											                                # Findet jedes ?t (target system) mit Name, ID und zugehörigem Schema. Dann wird der Name des Schemas dazugeholt.
-       schema:identifier ?t_id ;
-       skos:inScheme ?t_scheme .
-    ?t_scheme schema:name ?t_scheme_name .
-    FILTER(
-      ?s_scheme != ?t_scheme && 											                            # ?s_scheme != ?t_scheme: nur Mappings zwischen source und target system Schemas.
-      LANG(?t_name) = ?lang &&												                            # Die LANG-Bedingungen: Zielnamen ebenfalls auf Deutsch.
-      LANG(?t_scheme_name) = ?lang &&
-      (STRSTARTS(STR(?t), "https://agriculture.ld.admin.ch/crops/agis/") || 		  # Filter für das target system. STR(?s) wandelt die URI in einen String um. STRSTARTS prüft, ob dieser mit dem Präfix beginnt. Es bleiben nur Konzepte, deren URI mit …/crops/agis/ oder …/crops/psm/ beginnt.
-       STRSTARTS(STR(?t), "https://agriculture.ld.admin.ch/crops/psm/")) 			  # Neben DZ- und PSM-Kulturen können auch Nährstoffbilanz-Kulturen "https://agriculture.ld.admin.ch/crops/naebi/" abgefragt werden.
-    )
+  VALUES ?lang { "de" }
+  # Source: crops in the scheme 'direct payment crops'
+  ?s skos:inScheme <https://agriculture.ld.admin.ch/crops/agis/1/ConceptScheme> ;
+     schema:name ?s_name ;
+     schema:identifier ?s_id .
+  FILTER(LANG(?s_name) = ?lang)
+
+  OPTIONAL {
+    VALUES ?p { skos:exactMatch skos:broadMatch skos:narrowMatch }
+    # Target: crops in the scheme 'plant protection crops'
+    ?s ?p ?t .
+    ?t skos:inScheme <https://agriculture.ld.admin.ch/crops/psm/1/ConceptScheme> ;        # Alternatively use the IRI of the Nährstoffbilanz <https://agriculture.ld.admin.ch/crops/naebi/1/>
+       schema:name ?t_name ;
+       schema:identifier ?t_id .
+    FILTER(LANG(?t_name) = ?lang)
   }
 }
-ORDER BY ?s_scheme_name ?t_scheme_name ?s_name ?t_name							              # Sortiert nach Quell-Schema, Ziel-Schema, Quellname, Zielname.
+ORDER BY ?s_name ?t_name
