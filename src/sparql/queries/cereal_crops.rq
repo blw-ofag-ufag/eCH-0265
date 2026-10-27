@@ -1,0 +1,18 @@
+# Table of cereal crops in the Suisse balance, with
+# German and French names as well as identifiers.
+
+PREFIX : <https://agriculture.ld.admin.ch/eCH-0265/2/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX schema: <http://schema.org/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+SELECT *
+FROM <https://lindas.admin.ch/foag/ech/0265/2>
+WHERE {
+  ?crop :exactMatch / rdfs:subClassOf* / schema:name "Getreide"@de ;
+    skos:inScheme / schema:name "Suisse-Bilanz Kulturentabelle"@de ;
+    schema:identifier ?id ;
+    schema:name ?de ;
+    schema:name ?fr.
+  FILTER(LANG(?de)="de" && LANG(?fr)="fr")
+}
