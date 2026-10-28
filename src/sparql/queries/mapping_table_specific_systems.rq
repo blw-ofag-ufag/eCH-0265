@@ -1,0 +1,24 @@
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX schema: <http://schema.org/>
+
+SELECT ?s ?s_name ?s_id ?p ?t ?t_name ?t_id
+FROM <https://lindas.admin.ch/foag/ech/0265/2>
+WHERE {
+  VALUES ?lang { "de" }
+  # Source: crops in the scheme 'direct payment crops'
+  ?s skos:inScheme <https://agriculture.ld.admin.ch/crops/agis/1/ConceptScheme> ;
+     schema:name ?s_name ;
+     schema:identifier ?s_id .
+  FILTER(LANG(?s_name) = ?lang)
+
+  OPTIONAL {
+    VALUES ?p { skos:exactMatch skos:broadMatch skos:narrowMatch }
+    # Target: crops in the scheme 'plant protection crops'
+    ?s ?p ?t .
+    ?t skos:inScheme <https://agriculture.ld.admin.ch/crops/psm/1/ConceptScheme> ;        # Alternatively use the IRI of the Nährstoffbilanz <https://agriculture.ld.admin.ch/crops/naebi/1/>
+       schema:name ?t_name ;
+       schema:identifier ?t_id .
+    FILTER(LANG(?t_name) = ?lang)
+  }
+}
+ORDER BY ?s_name ?t_name
