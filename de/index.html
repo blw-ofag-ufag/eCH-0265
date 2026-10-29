@@ -1478,7 +1478,7 @@ Ja (nur die aufgeführten Eigenschaften zulässig)
 </dd>
 <dt>Datenzugriff</dt>
 <dd>
-<a href="https://lindas.admin.ch/sparql/#query=PREFIX%20eCH-0265%3A%20%3Chttps%3A%2F%2Fagriculture.ld.admin.ch%2FeCH-0265%2F2%2F%3E%0APREFIX%20schema%3A%20%3Chttp%3A%2F%2Fschema.org%2F%3E%0APREFIX%20skos%3A%20%3Chttp%3A%2F%2Fwww.w3.org%2F2004%2F02%2Fskos%2Fcore%23%3E%0ASELECT%20%3Firi%20%3Fbroader%20%3FinScheme%20%3Fname%20%3Fidentifier%20%3FvalidFrom%20%3FvalidTo%20%3FexactMatch%0AFROM%20%3Chttps%3A%2F%2Flindas.admin.ch%2Ffoag%2Fech%2F0265%2F2%3E%0AWHERE%20%7B%0A%20%20%3Firi%20a%20eCH-0265%3ADirectPaymentCrop%20.%0A%20%20OPTIONAL%20%7B%20%3Firi%20skos%3Abroader%20%3Fbroader%20.%20%7D%0A%20%20%3Firi%20skos%3AinScheme%20%3FinScheme%20.%0A%20%20%3Firi%20schema%3Aname%20%3Fname%20.%0A%20%20%3Firi%20schema%3Aidentifier%20%3Fidentifier%20.%0A%20%20OPTIONAL%20%7B%20%3Firi%20schema%3AvalidFrom%20%3FvalidFrom%20.%20%7D%0A%20%20OPTIONAL%20%7B%20%3Firi%20schema%3AvalidTo%20%3FvalidTo%20.%20%7D%0A%20%20OPTIONAL%20%7B%20%3Firi%20eCH-0265%3AexactMatch%20%3FexactMatch%20.%20%7D%0A%7D%0ALIMIT%201000">SPARQL-Dienst</a>
+<a href="https://lindas.admin.ch/sparql/#query=PREFIX%20eCH-0265%3A%20%3Chttps%3A%2F%2Fagriculture.ld.admin.ch%2FeCH-0265%2F2%2F%3E%0APREFIX%20schema%3A%20%3Chttp%3A%2F%2Fschema.org%2F%3E%0APREFIX%20skos%3A%20%3Chttp%3A%2F%2Fwww.w3.org%2F2004%2F02%2Fskos%2Fcore%23%3E%0ASELECT%20%3Firi%20%3Fbroader%20%3FinScheme%20%3Fname%20%3Fidentifier%20%3FvalidFrom%20%3FvalidThrough%20%3FexactMatch%0AFROM%20%3Chttps%3A%2F%2Flindas.admin.ch%2Ffoag%2Fech%2F0265%2F2%3E%0AWHERE%20%7B%0A%20%20%3Firi%20a%20eCH-0265%3ADirectPaymentCrop%20.%0A%20%20OPTIONAL%20%7B%20%3Firi%20skos%3Abroader%20%3Fbroader%20.%20%7D%0A%20%20%3Firi%20skos%3AinScheme%20%3FinScheme%20.%0A%20%20%3Firi%20schema%3Aname%20%3Fname%20.%0A%20%20%3Firi%20schema%3Aidentifier%20%3Fidentifier%20.%0A%20%20OPTIONAL%20%7B%20%3Firi%20schema%3AvalidFrom%20%3FvalidFrom%20.%20%7D%0A%20%20OPTIONAL%20%7B%20%3Firi%20schema%3AvalidThrough%20%3FvalidThrough%20.%20%7D%0A%20%20OPTIONAL%20%7B%20%3Firi%20eCH-0265%3AexactMatch%20%3FexactMatch%20.%20%7D%0A%7D%0ALIMIT%201000">SPARQL-Dienst</a>
 </dd>
 </dl>
 </div>
@@ -1536,7 +1536,7 @@ Ja (nur die aufgeführten Eigenschaften zulässig)
 <td style="text-align: right;">0..1</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;"><strong>Gültig bis</strong> (<a href="http://schema.org/validTo">schema:validTo</a>): Bis zu welchem Datum wurde diese Direktzahlungskultur offiziell verwendet?</td>
+<td style="text-align: left;"><strong>Gültig bis</strong> (<a href="http://schema.org/validThrough">schema:validThrough</a>): Bis zu welchem Datum wurde diese Direktzahlungskultur offiziell verwendet?</td>
 <td style="text-align: left;"><ul>
 <li>Typ: Datum (<a href="http://www.w3.org/2001/XMLSchema#date">xsd:date</a>)</li>
 </ul></td>
@@ -1555,13 +1555,13 @@ Ja (nur die aufgeführten Eigenschaften zulässig)
 <section id="sec-nodeshape-directpaymentcrop-rules" class="level3 unlisted" data-number="7.3.3">
 <h3 class="unlisted anchored" data-number="7.3.3" data-anchor-id="sec-nodeshape-directpaymentcrop-rules"><span class="header-section-number">7.3.3</span> Regeln (SPARQL)</h3>
 <section id="sec-nodeshape-directpaymentcrop-rule-1" class="level4 unlisted" data-number="7.3.3.1">
-<h4 class="unlisted anchored" data-number="7.3.3.1" data-anchor-id="sec-nodeshape-directpaymentcrop-rule-1"><span class="header-section-number">7.3.3.1</span> schema:validFrom must be less than or equal to schema:validTo</h4>
+<h4 class="unlisted anchored" data-number="7.3.3.1" data-anchor-id="sec-nodeshape-directpaymentcrop-rule-1"><span class="header-section-number">7.3.3.1</span> schema:validFrom must be less than or equal to schema:validThrough</h4>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode numberSource sparql number-lines code-with-copy"><code class="sourceCode sparql"><span id="cb3-1"><a href="#cb3-1" aria-label="1"></a><span class="kw">PREFIX</span> schema: <span class="st">&lt;http://schema.org/&gt;</span></span>
-<span id="cb3-2"><a href="#cb3-2" aria-label="2"></a><span class="kw">SELECT</span> $this ?validFrom ?validTo</span>
+<span id="cb3-2"><a href="#cb3-2" aria-label="2"></a><span class="kw">SELECT</span> $this ?validFrom ?validThrough</span>
 <span id="cb3-3"><a href="#cb3-3" aria-label="3"></a><span class="kw">WHERE</span> <span class="op">{</span></span>
 <span id="cb3-4"><a href="#cb3-4" aria-label="4"></a>    $this schema:validFrom ?validFrom <span class="op">.</span></span>
-<span id="cb3-5"><a href="#cb3-5" aria-label="5"></a>    $this schema:validTo ?validTo <span class="op">.</span></span>
-<span id="cb3-6"><a href="#cb3-6" aria-label="6"></a>    <span class="kw">FILTER</span> <span class="op">(</span>?validFrom <span class="op">&gt;</span> ?validTo<span class="op">)</span></span>
+<span id="cb3-5"><a href="#cb3-5" aria-label="5"></a>    $this schema:validThrough ?validThrough <span class="op">.</span></span>
+<span id="cb3-6"><a href="#cb3-6" aria-label="6"></a>    <span class="kw">FILTER</span> <span class="op">(</span>?validFrom <span class="op">&gt;</span> ?validThrough<span class="op">)</span></span>
 <span id="cb3-7"><a href="#cb3-7" aria-label="7"></a><span class="op">}</span></span></code></pre></div><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
 </section>

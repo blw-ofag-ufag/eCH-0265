@@ -1133,7 +1133,7 @@ Kennzahlen
 183 Instanzen mit je 9 bis 17 Tripeln (im Mittel 12.2)
 
 Datenzugriff  
-[SPARQL-Dienst](https://lindas.admin.ch/sparql/#query=PREFIX%20eCH-0265%3A%20%3Chttps%3A%2F%2Fagriculture.ld.admin.ch%2FeCH-0265%2F2%2F%3E%0APREFIX%20schema%3A%20%3Chttp%3A%2F%2Fschema.org%2F%3E%0APREFIX%20skos%3A%20%3Chttp%3A%2F%2Fwww.w3.org%2F2004%2F02%2Fskos%2Fcore%23%3E%0ASELECT%20%3Firi%20%3Fbroader%20%3FinScheme%20%3Fname%20%3Fidentifier%20%3FvalidFrom%20%3FvalidTo%20%3FexactMatch%0AFROM%20%3Chttps%3A%2F%2Flindas.admin.ch%2Ffoag%2Fech%2F0265%2F2%3E%0AWHERE%20%7B%0A%20%20%3Firi%20a%20eCH-0265%3ADirectPaymentCrop%20.%0A%20%20OPTIONAL%20%7B%20%3Firi%20skos%3Abroader%20%3Fbroader%20.%20%7D%0A%20%20%3Firi%20skos%3AinScheme%20%3FinScheme%20.%0A%20%20%3Firi%20schema%3Aname%20%3Fname%20.%0A%20%20%3Firi%20schema%3Aidentifier%20%3Fidentifier%20.%0A%20%20OPTIONAL%20%7B%20%3Firi%20schema%3AvalidFrom%20%3FvalidFrom%20.%20%7D%0A%20%20OPTIONAL%20%7B%20%3Firi%20schema%3AvalidTo%20%3FvalidTo%20.%20%7D%0A%20%20OPTIONAL%20%7B%20%3Firi%20eCH-0265%3AexactMatch%20%3FexactMatch%20.%20%7D%0A%7D%0ALIMIT%201000)
+[SPARQL-Dienst](https://lindas.admin.ch/sparql/#query=PREFIX%20eCH-0265%3A%20%3Chttps%3A%2F%2Fagriculture.ld.admin.ch%2FeCH-0265%2F2%2F%3E%0APREFIX%20schema%3A%20%3Chttp%3A%2F%2Fschema.org%2F%3E%0APREFIX%20skos%3A%20%3Chttp%3A%2F%2Fwww.w3.org%2F2004%2F02%2Fskos%2Fcore%23%3E%0ASELECT%20%3Firi%20%3Fbroader%20%3FinScheme%20%3Fname%20%3Fidentifier%20%3FvalidFrom%20%3FvalidThrough%20%3FexactMatch%0AFROM%20%3Chttps%3A%2F%2Flindas.admin.ch%2Ffoag%2Fech%2F0265%2F2%3E%0AWHERE%20%7B%0A%20%20%3Firi%20a%20eCH-0265%3ADirectPaymentCrop%20.%0A%20%20OPTIONAL%20%7B%20%3Firi%20skos%3Abroader%20%3Fbroader%20.%20%7D%0A%20%20%3Firi%20skos%3AinScheme%20%3FinScheme%20.%0A%20%20%3Firi%20schema%3Aname%20%3Fname%20.%0A%20%20%3Firi%20schema%3Aidentifier%20%3Fidentifier%20.%0A%20%20OPTIONAL%20%7B%20%3Firi%20schema%3AvalidFrom%20%3FvalidFrom%20.%20%7D%0A%20%20OPTIONAL%20%7B%20%3Firi%20schema%3AvalidThrough%20%3FvalidThrough%20.%20%7D%0A%20%20OPTIONAL%20%7B%20%3Firi%20eCH-0265%3AexactMatch%20%3FexactMatch%20.%20%7D%0A%7D%0ALIMIT%201000)
 
 </div>
 
@@ -1207,8 +1207,8 @@ href="http://www.w3.org/2001/XMLSchema#date">xsd:date</a>)</li>
 </tr>
 <tr>
 <td style="text-align: left;"><strong>Gültig bis</strong> (<a
-href="http://schema.org/validTo">schema:validTo</a>): Bis zu welchem
-Datum wurde diese Direktzahlungskultur offiziell verwendet?</td>
+href="http://schema.org/validThrough">schema:validThrough</a>): Bis zu
+welchem Datum wurde diese Direktzahlungskultur offiziell verwendet?</td>
 <td style="text-align: left;"><ul>
 <li>Typ: Datum (<a
 href="http://www.w3.org/2001/XMLSchema#date">xsd:date</a>)</li>
@@ -1230,15 +1230,15 @@ Referenztaxonomie.</td>
 
 ### Regeln (SPARQL)
 
-#### schema:validFrom must be less than or equal to schema:validTo
+#### schema:validFrom must be less than or equal to schema:validThrough
 
 ``` sparql
 PREFIX schema: <http://schema.org/>
-SELECT $this ?validFrom ?validTo
+SELECT $this ?validFrom ?validThrough
 WHERE {
     $this schema:validFrom ?validFrom .
-    $this schema:validTo ?validTo .
-    FILTER (?validFrom > ?validTo)
+    $this schema:validThrough ?validThrough .
+    FILTER (?validFrom > ?validThrough)
 }
 ```
 
