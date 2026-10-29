@@ -356,8 +356,8 @@ crops <- rdf_query(graph, "
     { ?crop a eCH-0265:NutrientBalanceCrop . BIND('NB'  AS ?system) } UNION
     { ?crop a eCH-0265:PlantProtectionCrop . BIND('PS'  AS ?system) }
   }")
-expired <- rdf_query(graph, "SELECT ?crop ?validTo WHERE { ?crop <http://schema.org/validTo> ?validTo }") |>
-  mutate(year = suppressWarnings(as.integer(substr(as.character(validTo), 1, 4)))) |>
+expired <- rdf_query(graph, "SELECT ?crop ?validThrough WHERE { ?crop <http://schema.org/validThrough> ?validThrough }") |>
+  mutate(year = suppressWarnings(as.integer(substr(as.character(validThrough), 1, 4)))) |>
   filter(!is.na(year), year < as.integer(format(Sys.Date(), "%Y")))
 crops <- crops |> anti_join(expired, by = "crop") |> distinct(crop, system)
 groups <- rdf_query(graph, paste0("SELECT DISTINCT ?parent WHERE { ?child <", skos, "broader> ?parent }"))
