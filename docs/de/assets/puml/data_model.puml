@@ -28,7 +28,7 @@ package "Direktzahlungen (DZ)" as DZ {
     schema:identifier : xsd:string [1..1]
     schema:name : rdf:langString [1..*]
     schema:validFrom : xsd:integer [0..1]
-    schema:validTo : xsd:integer [0..1]
+    schema:validThrough : xsd:integer [0..1]
     skos:inScheme = agis:ConceptScheme [1..1]
   }
   DZK -up-> DZC : skos:broader [0..1]

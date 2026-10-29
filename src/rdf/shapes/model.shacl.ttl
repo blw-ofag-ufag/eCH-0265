@@ -170,14 +170,14 @@ eCH-0265:DirectPaymentCrop a sh:NodeShape, rdfs:Class ;
     sh:ignoredProperties ( rdf:type skos:exactMatch skos:broadMatch skos:narrowMatch skos:narrower ) ;    
     sh:sparql [
         a sh:SPARQLConstraint ;
-        sh:message "schema:validFrom must be less than or equal to schema:validTo" ;
+        sh:message "schema:validFrom must be less than or equal to schema:validThrough" ;
         sh:select """
             PREFIX schema: <http://schema.org/>
-            SELECT $this ?validFrom ?validTo
+            SELECT $this ?validFrom ?validThrough
             WHERE {
                 $this schema:validFrom ?validFrom .
-                $this schema:validTo ?validTo .
-                FILTER (?validFrom > ?validTo)
+                $this schema:validThrough ?validThrough .
+                FILTER (?validFrom > ?validThrough)
             }
         """ ;
     ] ;
@@ -238,7 +238,7 @@ eCH-0265:DirectPaymentCrop a sh:NodeShape, rdfs:Class ;
             sh:name "Gültig bis"@de ;
             sh:description "Bis zu welchem Datum wurde diese Direktzahlungskultur offiziell verwendet?"@de ;
             sh:maxCount 1 ;
-            sh:path schema:validTo ;
+            sh:path schema:validThrough ;
             sh:nodeKind sh:Literal ;
             sh:datatype xsd:date ;
         ] .
