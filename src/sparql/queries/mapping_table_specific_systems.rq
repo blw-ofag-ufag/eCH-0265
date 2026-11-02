@@ -1,3 +1,8 @@
+# MAPPING TABLE FROM DIRECT PAYMENT TO PLANT PROTECTION CROPS
+# The query lists all currently valid direct payment crops (AGIS) with their
+# German name and identifier, together with any plant protection crops (PSM)
+# they map to via exact, broader or narrower matches.
+
 PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
 PREFIX schema: <http://schema.org/>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
