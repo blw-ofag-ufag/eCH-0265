@@ -1,0 +1,52 @@
+# MAPPING TABLE FROM DIRECT PAYMENT TO PLANT PROTECTION CROPS
+# The query lists all currently valid direct payment crops (AGIS) with their
+# German name and identifier, together with any plant protection crops (PSM)
+# they map to via exact, broader or narrower matches.
+
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX schema: <http://schema.org/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+SELECT *
+FROM <https://lindas.admin.ch/foag/ech/0265/2>
+WHERE {
+  # SOURCE: DIRECT PAYMENT CROPS
+  # Every concept in the 'direct payment crops' scheme (AGIS), with its name and
+  # identifier. Both are required: a crop without a name or identifier is dropped.
+  ?DirectPaymentCrop skos:inScheme <https://agriculture.ld.admin.ch/crops/agis/1/ConceptScheme> ;
+     schema:name ?DirectPaymentCropName ;
+     schema:identifier ?DirectPaymentCropIdentifier .
+
+  # VALIDITY
+  # Drop crops whose validity have ended. A crop is excluded if it has a
+  # validThrough on or before today; crops without validThrough are kept.
+  FILTER NOT EXISTS {
+    ?DirectPaymentCrop schema:validThrough ?validThrough .
+    FILTER (?validThrough <= xsd:date(SUBSTR(STR(NOW()), 1, 10)))
+  }
+
+  # LANGUAGE FILTER
+  # Keep only the German name.
+  FILTER(LANG(?DirectPaymentCropName) = "de")
+
+  # MATCHING PLANT PROTECTION CROPS
+  # Look up mapped concepts in the 'plant protection crops' scheme (PSM).
+  # Because this block is OPTIONAL, direct payment crops without any mapping are
+  # still returned, with the PlantProtectionCrop variables left empty.
+  OPTIONAL {
+    # Accept exact, broader and narrower matches. `?mappingRelation` is part of
+    # the result, so you can see which kind of mapping each row is.
+    VALUES ?mappingRelation { skos:exactMatch skos:broadMatch skos:narrowMatch }
+
+    # Look up the mapping
+    ?DirectPaymentCrop ?mappingRelation ?PlantProtectionCrop .
+
+    # The target must belong to the plant protection scheme
+    ?PlantProtectionCrop skos:inScheme <https://agriculture.ld.admin.ch/crops/psm/1/ConceptScheme> ;
+       schema:name ?PlantProtectionCropName ;
+       schema:identifier ?PlantProtectionCropIdentifier .
+
+    # German name only.
+    FILTER(LANG(?PlantProtectionCropName) = "de")
+  }
+}
