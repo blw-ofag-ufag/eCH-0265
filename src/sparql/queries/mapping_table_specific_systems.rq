@@ -1,24 +1,29 @@
 PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
 PREFIX schema: <http://schema.org/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
-SELECT ?s ?s_name ?s_id ?p ?t ?t_name ?t_id
+SELECT *
 FROM <https://lindas.admin.ch/foag/ech/0265/2>
 WHERE {
-  VALUES ?lang { "de" }
-  # Source: crops in the scheme 'direct payment crops'
-  ?s skos:inScheme <https://agriculture.ld.admin.ch/crops/agis/1/ConceptScheme> ;
-     schema:name ?s_name ;
-     schema:identifier ?s_id .
-  FILTER(LANG(?s_name) = ?lang)
+  # Bind crops in the scheme 'direct payment crops' and some attributes
+  ?DirectPaymentCrop skos:inScheme <https://agriculture.ld.admin.ch/crops/agis/1/ConceptScheme> ;
+     schema:name ?DirectPaymentCropName ;
+     schema:identifier ?DirectPaymentCropIdentifier .
+  
+  # Make sure the crop is still valid at the time of querying
+  FILTER NOT EXISTS {
+    ?DirectPaymentCrop schema:validThrough ?validThrough .
+    FILTER (?validThrough <= xsd:date(SUBSTR(STR(NOW()), 1, 10)))
+  }
+  FILTER(LANG(?DirectPaymentCropName) = "de")
 
   OPTIONAL {
-    VALUES ?p { skos:exactMatch skos:broadMatch skos:narrowMatch }
+    VALUES ?mappingRelation { skos:exactMatch skos:broadMatch skos:narrowMatch }
     # Target: crops in the scheme 'plant protection crops'
-    ?s ?p ?t .
-    ?t skos:inScheme <https://agriculture.ld.admin.ch/crops/psm/1/ConceptScheme> ;        # Alternatively use the IRI of the Nährstoffbilanz <https://agriculture.ld.admin.ch/crops/naebi/1/>
-       schema:name ?t_name ;
-       schema:identifier ?t_id .
-    FILTER(LANG(?t_name) = ?lang)
+    ?DirectPaymentCrop ?mappingRelation ?PlantProtectionCrop .
+    ?PlantProtectionCrop skos:inScheme <https://agriculture.ld.admin.ch/crops/psm/1/ConceptScheme> ;
+       schema:name ?PlantProtectionCropName ;
+       schema:identifier ?PlantProtectionCropIdentifier .
+    FILTER(LANG(?PlantProtectionCropName) = "de")
   }
 }
-ORDER BY ?s_name ?t_name
