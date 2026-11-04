@@ -596,7 +596,7 @@ Die Kulturenstammdaten können mittels der Abfragesprache SPARQL [@sparql_query_
 Das nachfolgende Beispiel zeigt eine einfache Abfrage, welche sämtliche Nutzungstypen mit deren deutschem Namen zurückgibt:
 
 ``` rq
-{{< include ../../src/sparql/queries/example.rq >}}
+{{< include ../../src/sparql/queries/all_cultivation_types.rq >}}
 ```
 
 Auf <https://lindas.admin.ch/sparql/> können solche Abfragen manuell über eine grafische Benutzeroberfläche ausgeführt werden.
