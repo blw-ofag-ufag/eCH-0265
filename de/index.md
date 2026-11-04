@@ -233,11 +233,11 @@ Direktzahlungen sind Beiträge des Bundes an Landwirtschaftsbetriebe, die
 unter anderem den ökologischen Leistungsnachweis (ÖLN) erfüllen. Die
 Beitragsberechtigung hängt von der Nutzung der einzelnen Flächen ab,
 weshalb jede Fläche eines Betriebs einer Direktzahlungskultur zugeordnet
-wird. Im Rahmen des Direktzahlungssystems sind 159
-Direktzahlungskulturen (Stand Juli 2026) definiert, welche im Rahmen der
-Strukturdatenerhebung von den Bewirtschaftenden in den kantonalen
-Agrarinformationssystemen (KAIS) eingetragen und an das agrarpolitische
-Informationssystem (AGIS) des Bundes übermittelt werden.
+wird. Im Rahmen des Direktzahlungssystems sind 158
+Direktzahlungskulturen (Stand Beitragsjahr 2027) definiert, welche im
+Rahmen der Strukturdatenerhebung von den Bewirtschaftenden in den
+kantonalen Agrarinformationssystemen (KAIS) eingetragen und an das
+agrarpolitische Informationssystem (AGIS) des Bundes übermittelt werden.
 
 Betriebe, die Direktzahlungen beziehen, deklarieren dabei ihre gesamte
 landwirtschaftliche Nutzfläche gegenüber dem Kanton, nicht nur die
@@ -279,9 +279,9 @@ landwirtschaftlichen Begriffsverordnung (LBV), wo möglich.
 
 | N | Kategorie | Definition | Beispiele |
 |:---|:---|:---|:---|
-| 72 | Ackerfläche | [Art. 18 LBV](https://www.fedlex.admin.ch/eli/cc/1999/13/de#art_18) | «Futterweizen gemäss Sortenliste swiss granum», «Winterraps zur Speiseölgewinnung», «Winterraps als nachwachsender Rohstoff» |
+| 70 | Ackerfläche | [Art. 18 LBV](https://www.fedlex.admin.ch/eli/cc/1999/13/de#art_18) | «Futterweizen gemäss Sortenliste swiss granum», «Winterraps zur Speiseölgewinnung», «Winterraps als nachwachsender Rohstoff» |
 | 15 | Dauergrünfläche | [Art. 19 LBV](https://www.fedlex.admin.ch/eli/cc/1999/13/de#art_19) | «Extensiv genutzte Wiesen (ohne Weiden)», «Übrige Grünfläche (Dauergrünfläche), beitragsberechtigt» |
-| 27 | Dauerkulturen | [Art. 22 LBV](https://www.fedlex.admin.ch/eli/cc/1999/13/de#art_22) | «Reben», «Obstanlagen (Äpfel)», «Reben (regionsspezifische Biodiversitätsförderfläche)» |
+| 28 | Dauerkulturen | [Art. 22 LBV](https://www.fedlex.admin.ch/eli/cc/1999/13/de#art_22) | «Reben», «Obstanlagen (Äpfel)», «Reben (regionsspezifische Biodiversitätsförderfläche)» |
 | 14 | Kulturen in ganzjährig geschütztem Anbau | [Art. 14 Abs. 1 Bst. e LBV](https://www.fedlex.admin.ch/eli/cc/1999/13/de#art_14) | «Gemüsekulturen in Gewächshäusern mit festem Fundament», «Übrige Spezialkulturen in geschütztem Anbau ohne festes Fundament» |
 | 6 | Weitere Flächen innerhalb der landwirtschaftlichen Nutzfläche |  | «Streueflächen innerhalb der landwirtschaftlichen Nutzfläche», «Hecken-, Feld- und Ufergehölze (mit Pufferstreifen) (regionsspezifische Biodiversitätsförderfläche)» |
 | 11 | Flächen ausserhalb der landwirtschaftlichen Nutzfläche |  | «Wald», «Trockenmauern», «Hausgärten» |
@@ -777,11 +777,11 @@ deterministische Abbildbarkeit (Abbildbar) und Abdeckung des Zielsystems
 | Quellsystem | Zielsystem |   N | Exakt | Abbildbar | Abdeckung |
 |:------------|:-----------|----:|------:|----------:|----------:|
 | NB          | PS         | 314 | 15.6% |     71.0% |     42.5% |
-| DZ          | PS         | 160 | 13.8% |     56.9% |     14.2% |
-| NB          | DZ         | 314 |  8.3% |     29.9% |     31.2% |
+| DZ          | PS         | 162 | 13.6% |     56.8% |     14.2% |
+| NB          | DZ         | 314 |  8.3% |     29.9% |     30.9% |
 | PS          | NB         | 240 | 20.4% |     28.8% |     17.8% |
-| DZ          | NB         | 160 | 16.2% |     23.8% |     10.5% |
-| PS          | DZ         | 240 |  9.2% |     18.3% |     21.2% |
+| DZ          | NB         | 162 | 16.0% |     23.5% |     10.5% |
+| PS          | DZ         | 240 |  9.2% |     18.8% |     21.6% |
 
 </div>
 
@@ -1130,7 +1130,7 @@ Geschlossen
 Ja (nur die aufgeführten Eigenschaften zulässig)
 
 Kennzahlen  
-183 Instanzen mit je 9 bis 17 Tripeln (im Mittel 12.2)
+185 Instanzen mit je 9 bis 17 Tripeln (im Mittel 12.2)
 
 Datenzugriff  
 [SPARQL-Dienst](https://lindas.admin.ch/sparql/#query=PREFIX%20eCH-0265%3A%20%3Chttps%3A%2F%2Fagriculture.ld.admin.ch%2FeCH-0265%2F2%2F%3E%0APREFIX%20schema%3A%20%3Chttp%3A%2F%2Fschema.org%2F%3E%0APREFIX%20skos%3A%20%3Chttp%3A%2F%2Fwww.w3.org%2F2004%2F02%2Fskos%2Fcore%23%3E%0ASELECT%20%3Firi%20%3Fbroader%20%3FinScheme%20%3Fname%20%3Fidentifier%20%3FvalidFrom%20%3FvalidThrough%20%3FexactMatch%0AFROM%20%3Chttps%3A%2F%2Flindas.admin.ch%2Ffoag%2Fech%2F0265%2F2%3E%0AWHERE%20%7B%0A%20%20%3Firi%20a%20eCH-0265%3ADirectPaymentCrop%20.%0A%20%20OPTIONAL%20%7B%20%3Firi%20skos%3Abroader%20%3Fbroader%20.%20%7D%0A%20%20%3Firi%20skos%3AinScheme%20%3FinScheme%20.%0A%20%20%3Firi%20schema%3Aname%20%3Fname%20.%0A%20%20%3Firi%20schema%3Aidentifier%20%3Fidentifier%20.%0A%20%20OPTIONAL%20%7B%20%3Firi%20schema%3AvalidFrom%20%3FvalidFrom%20.%20%7D%0A%20%20OPTIONAL%20%7B%20%3Firi%20schema%3AvalidThrough%20%3FvalidThrough%20.%20%7D%0A%20%20OPTIONAL%20%7B%20%3Firi%20eCH-0265%3AexactMatch%20%3FexactMatch%20.%20%7D%0A%7D%0ALIMIT%201000)
@@ -1338,7 +1338,7 @@ Geschlossen
 Ja (nur die aufgeführten Eigenschaften zulässig)
 
 Kennzahlen  
-757 Instanzen mit je 8 bis 21 Tripeln (im Mittel 8.8)
+759 Instanzen mit je 8 bis 21 Tripeln (im Mittel 8.8)
 
 Datenzugriff  
 [SPARQL-Dienst](https://lindas.admin.ch/sparql/#query=PREFIX%20eCH-0265%3A%20%3Chttps%3A%2F%2Fagriculture.ld.admin.ch%2FeCH-0265%2F2%2F%3E%0APREFIX%20owl%3A%20%3Chttp%3A%2F%2Fwww.w3.org%2F2002%2F07%2Fowl%23%3E%0APREFIX%20rdfs%3A%20%3Chttp%3A%2F%2Fwww.w3.org%2F2000%2F01%2Frdf-schema%23%3E%0APREFIX%20schema%3A%20%3Chttp%3A%2F%2Fschema.org%2F%3E%0ASELECT%20%3Firi%20%3Fname%20%3FalternateName%20%3Fdescription%20%3FsubClassOf%20%3FdisjointWith%0AFROM%20%3Chttps%3A%2F%2Flindas.admin.ch%2Ffoag%2Fech%2F0265%2F2%3E%0AWHERE%20%7B%0A%20%20%3Firi%20a%20eCH-0265%3ACultivationType%20.%0A%20%20%3Firi%20schema%3Aname%20%3Fname%20.%0A%20%20OPTIONAL%20%7B%20%3Firi%20schema%3AalternateName%20%3FalternateName%20.%20%7D%0A%20%20OPTIONAL%20%7B%20%3Firi%20schema%3Adescription%20%3Fdescription%20.%20%7D%0A%20%20OPTIONAL%20%7B%20%3Firi%20rdfs%3AsubClassOf%20%3FsubClassOf%20.%20%7D%0A%20%20OPTIONAL%20%7B%20%3Firi%20owl%3AdisjointWith%20%3FdisjointWith%20.%20%7D%0A%7D%0ALIMIT%201000)
@@ -1534,7 +1534,7 @@ Geschlossen
 Ja (nur die aufgeführten Eigenschaften zulässig)
 
 Kennzahlen  
-8 Instanzen mit je 9 bis 65 Tripeln (im Mittel 18.1)
+8 Instanzen mit je 9 bis 66 Tripeln (im Mittel 18.2)
 
 Datenzugriff  
 [SPARQL-Dienst](https://lindas.admin.ch/sparql/#query=PREFIX%20eCH-0265%3A%20%3Chttps%3A%2F%2Fagriculture.ld.admin.ch%2FeCH-0265%2F2%2F%3E%0APREFIX%20schema%3A%20%3Chttp%3A%2F%2Fschema.org%2F%3E%0APREFIX%20skos%3A%20%3Chttp%3A%2F%2Fwww.w3.org%2F2004%2F02%2Fskos%2Fcore%23%3E%0ASELECT%20%3Firi%20%3Fidentifier%20%3FinScheme%20%3Fname%20%3FexactMatch%0AFROM%20%3Chttps%3A%2F%2Flindas.admin.ch%2Ffoag%2Fech%2F0265%2F2%3E%0AWHERE%20%7B%0A%20%20%3Firi%20a%20eCH-0265%3ANutrientBalanceCropSubCategory%20.%0A%20%20%3Firi%20schema%3Aidentifier%20%3Fidentifier%20.%0A%20%20%3Firi%20skos%3AinScheme%20%3FinScheme%20.%0A%20%20%3Firi%20schema%3Aname%20%3Fname%20.%0A%20%20OPTIONAL%20%7B%20%3Firi%20eCH-0265%3AexactMatch%20%3FexactMatch%20.%20%7D%0A%7D%0ALIMIT%201000)
