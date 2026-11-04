@@ -5,7 +5,7 @@
 Ready-to-use SPARQL queries against the published eCH-0265 graph on [LINDAS](https://lindas.admin.ch/). These serve as examples for data consumers and are not part of the build pipeline.
 
 | File | Returns |
-|------|---------|
+|:-----|:--------|
 | `all_cultivation_types.rq` | All cultivation types of the reference taxonomy with their German name. |
 | `cereal_crops.rq` | The cereal crops of the Suisse-Bilanz crop table with German and French names and identifiers. |
 | `mapping_table.rq` | A flat mapping table: every crop with its name, identifier and scheme, together with the crops of the other schemes it maps to (exact, broad or narrow match). |
