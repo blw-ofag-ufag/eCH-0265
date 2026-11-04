@@ -1,0 +1,22 @@
+# Table of direct payment crops that are valid today, with
+# German and French names, identifiers and validity period.
+
+PREFIX eCH-0265: <https://agriculture.ld.admin.ch/eCH-0265/2/>
+PREFIX schema: <http://schema.org/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+SELECT ?crop ?id ?de ?fr ?validFrom ?validThrough
+FROM <https://lindas.admin.ch/foag/ech/0265/2>
+WHERE {
+  ?crop a eCH-0265:DirectPaymentCrop ;
+    schema:identifier ?id ;
+    schema:name ?de ;
+    schema:name ?fr .
+  FILTER(LANG(?de)="de" && LANG(?fr)="fr")
+  OPTIONAL { ?crop schema:validFrom ?validFrom }
+  OPTIONAL { ?crop schema:validThrough ?validThrough }
+  BIND(STRDT(SUBSTR(STR(NOW()), 1, 10), xsd:date) AS ?today)
+  FILTER(!BOUND(?validFrom) || ?validFrom <= ?today)
+  FILTER(!BOUND(?validThrough) || ?validThrough >= ?today)
+}
+ORDER BY ?id
