@@ -6,7 +6,7 @@ Ready-to-use SPARQL queries against the published eCH-0265 graph on [LINDAS](htt
 
 | File | Returns |
 |------|---------|
-| `example.rq` | All cultivation types of the reference taxonomy with their German name. |
+| `all_cultivation_types.rq` | All cultivation types of the reference taxonomy with their German name. |
 | `cereal_crops.rq` | The cereal crops of the Suisse-Bilanz crop table with German and French names and identifiers. |
 | `mapping_table.rq` | A flat mapping table: every crop with its name, identifier and scheme, together with the crops of the other schemes it maps to (exact, broad or narrow match). |
 | `mapping_table_specific_systems.rq` | The mapping table restricted to one pair of systems: currently valid direct payment crops (AGIS) and the plant protection crops (PSM) they map to. |
