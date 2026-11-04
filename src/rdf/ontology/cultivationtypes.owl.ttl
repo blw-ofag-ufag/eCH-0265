@@ -534,7 +534,7 @@ cultivationtype:77 a eCH-0265:CultivationType ;
         "Fallow"@en,
         "Jachère"@fr,
         "Maggese"@it ;
-    rdfs:subClassOf cultivationtype:1 .
+    rdfs:subClassOf cultivationtype:582 .
 
 cultivationtype:79 a eCH-0265:CultivationType ;
     schema:name "Grasbestände zur Saatgutproduktion"@de,
@@ -2857,7 +2857,7 @@ cultivationtype:559 a eCH-0265:CultivationType ;
         "Ourlet sur terres assolées"@fr,
         "Striscia su superficie coltiva"@it ;
     schema:alternateName "Bande sur surface assolée"@fr ;
-    rdfs:subClassOf cultivationtype:1 .
+    rdfs:subClassOf cultivationtype:582 .
 
 cultivationtype:561 a  eCH-0265:CultivationType ;
     schema:name "Rübsen für die Samenproduktion Vertragsanbau"@de,
@@ -3029,6 +3029,15 @@ cultivationtype:581 a eCH-0265:CultivationType ;
         "Sorgho plante entière"@fr,
         "Sorgo per la raccolta della pianta intera"@it ;
     rdfs:subClassOf cultivationtype:549 .
+
+cultivationtype:582 a eCH-0265:CultivationType ;
+    schema:name "Brachen und Säume"@de,
+        "Fallows and margins"@en,
+        "Jachères et ourlets"@fr,
+        "Maggesi e strisce"@it ;
+    schema:description "Ersetzt ab 2027 die Direktzahlungskulturen Buntbrache (556), Rotationsbrache (557) und Saum auf Ackerfläche (559)."@de ;
+    rdfs:subClassOf cultivationtype:1 ;
+    eCH-0265:managementIntensity intensity:Extensive .
 
 cultivationtype:590 a eCH-0265:CultivationType ;
     schema:name "Sommerraps als nachwachsender Rohstoff"@de,
@@ -3509,6 +3518,13 @@ cultivationtype:735 a eCH-0265:CultivationType ;
         "Vignes comme surfaces de promotion de la biodiversité spécifiques à la région"@fr,
         "Vigneti quali superfici per la promozione della biodiversità specifiche di una regione"@it ;
     eCH-0265:managementIntensity intensity:Extensive .
+
+cultivationtype:736 a eCH-0265:CultivationType ;
+    schema:name "Mehrjährige Nutzgehölze"@de,
+        "Perennial productive woody plants"@en,
+        "Buissons de production pluriannuels"@fr,
+        "Boschetti utili pluriennali"@it ;
+    rdfs:subClassOf cultivationtype:750 .
 
 cultivationtype:750 a eCH-0265:CultivationType ;
     schema:name "Übrige beitragsberechtigte Dauerkulturen"@de,
@@ -6023,11 +6039,11 @@ cultivationtype:1316 a eCH-0265:CultivationType ;
         cultivationtype:552
         cultivationtype:554
         cultivationtype:555
-        cultivationtype:559
         cultivationtype:566
         cultivationtype:567
         cultivationtype:572
         cultivationtype:573
+        cultivationtype:582
         cultivationtype:594
         cultivationtype:595
         cultivationtype:597

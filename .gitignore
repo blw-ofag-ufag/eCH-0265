@@ -27,6 +27,7 @@ glossary.md
 # Small tests and notes
 /test.*
 /notes.*
+/notes/**
 
 # Varia
 .DS_Store
