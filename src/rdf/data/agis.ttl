@@ -32,9 +32,8 @@ agis:ConceptScheme a eCH-0265:DirectPaymentCropScheme ;
     schema:creator org:bundesamt-fur-landwirtschaft-blw ;
     schema:publisher org:bundesamt-fur-landwirtschaft-blw ;
     schema:dateCreated "1999-01-01"^^xsd:date ;
-    schema:dateModified "2026-07-27"^^xsd:date ;
+    schema:dateModified "2026-10-30"^^xsd:date ;
     dcterms:accrualPeriodicity frequency:ANNUAL ;
-    schema:version "1.7" ;
     dcat:contactPoint
         [
             a vcard:Organization ;
@@ -628,6 +627,7 @@ agis:556 a eCH-0265:DirectPaymentCrop ;
         "Jachère florale"@fr,
         "Maggese fioriti"@it ;
     schema:validFrom "1999-01-01"^^xsd:date ;
+    schema:validThrough "2026-12-31"^^xsd:date ;
     skos:inScheme agis:ConceptScheme ;
     skos:broader agis:1 ;
     eCH-0265:exactMatch cultivationtype:556 .
@@ -638,6 +638,7 @@ agis:557 a eCH-0265:DirectPaymentCrop ;
         "Jachère tournante"@fr,
         "Maggese da rotazione"@it ;
     schema:validFrom "1999-01-01"^^xsd:date ;
+    schema:validThrough "2026-12-31"^^xsd:date ;
     skos:inScheme agis:ConceptScheme ;
     skos:broader agis:1 ;
     eCH-0265:exactMatch cultivationtype:557 .
@@ -659,6 +660,7 @@ agis:559 a eCH-0265:DirectPaymentCrop ;
         "Ourlet sur terres assolées"@fr,
         "Striscia su superficie coltiva"@it ;
     schema:validFrom "2008-01-01"^^xsd:date ;
+    schema:validThrough "2026-12-31"^^xsd:date ;
     skos:inScheme agis:ConceptScheme ;
     skos:broader agis:1 ;
     eCH-0265:exactMatch cultivationtype:559 .
@@ -878,6 +880,16 @@ agis:581 a eCH-0265:DirectPaymentCrop ;
     skos:inScheme agis:ConceptScheme ;
     skos:broader agis:1 ;
     eCH-0265:exactMatch cultivationtype:581 .
+
+agis:582 a eCH-0265:DirectPaymentCrop ;
+    schema:identifier "582" ;
+    schema:name "Brachen und Säume"@de,
+        "Jachères et ourlets"@fr,
+        "Maggesi e strisce"@it ;
+    schema:validFrom "2027-01-01"^^xsd:date ;
+    skos:inScheme agis:ConceptScheme ;
+    skos:broader agis:1 ;
+    eCH-0265:exactMatch cultivationtype:582 .
 
 agis:590 a eCH-0265:DirectPaymentCrop ;
     schema:identifier "590" ;
@@ -1427,6 +1439,15 @@ agis:735 a eCH-0265:DirectPaymentCrop ;
     schema:validFrom "2016-01-01"^^xsd:date ;
     skos:inScheme agis:ConceptScheme ;
     eCH-0265:exactMatch cultivationtype:735 .
+
+agis:736 a eCH-0265:DirectPaymentCrop ;
+    schema:identifier "736" ;
+    schema:name "Mehrjährige Nutzgehölze"@de,
+        "Buissons de production pluriannuels"@fr,
+        "Boschetti utili pluriennali"@it ;
+    schema:validFrom "2027-01-01"^^xsd:date ;
+    skos:inScheme agis:ConceptScheme ;
+    eCH-0265:exactMatch cultivationtype:736 .
 
 agis:797 a eCH-0265:DirectPaymentCrop ;
     schema:identifier "797" ;

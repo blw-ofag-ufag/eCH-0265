@@ -101,7 +101,7 @@ In den folgenden Abschnitten werden die Kategorisierungssysteme landwirtschaftli
 
 Direktzahlungen sind Beiträge des Bundes an Landwirtschaftsbetriebe, die unter anderem den ökologischen Leistungsnachweis (ÖLN) erfüllen.
 Die Beitragsberechtigung hängt von der Nutzung der einzelnen Flächen ab, weshalb jede Fläche eines Betriebs einer Direktzahlungskultur zugeordnet wird.
-Im Rahmen des Direktzahlungssystems sind 159 Direktzahlungskulturen (Stand Juli 2026) definiert, welche im Rahmen der Strukturdatenerhebung von den Bewirtschaftenden in den kantonalen Agrarinformationssystemen (KAIS) eingetragen und an das agrarpolitische Informationssystem (AGIS) des Bundes übermittelt werden.
+Im Rahmen des Direktzahlungssystems sind 158 Direktzahlungskulturen (Stand Beitragsjahr 2027) definiert, welche im Rahmen der Strukturdatenerhebung von den Bewirtschaftenden in den kantonalen Agrarinformationssystemen (KAIS) eingetragen und an das agrarpolitische Informationssystem (AGIS) des Bundes übermittelt werden.
 
 Betriebe, die Direktzahlungen beziehen, deklarieren dabei ihre gesamte landwirtschaftliche Nutzfläche gegenüber dem Kanton, nicht nur die beitragsberechtigten Flächen.
 Die Kantone übermitteln diese Daten jährlich an AGIS, wo sie als Grundlage für die Berechnung der Direktzahlungen dienen (vgl. [Flächenkatalog und Beitragsberechtigung](https://www.blw.admin.ch/dam/fr/sd-web/QYLa6wGfdK8G/2026%20Merkblatt%20Nr.%206.2%20Fl%C3%A4chenkatalog%20und%20Beitragsberechtigung.pdf)).
@@ -118,9 +118,9 @@ Eine Mehrheit dieser Kategorien wird explizit in der landwirtschaftlichen Begrif
 
 | N  | Kategorie | Definition | Beispiele     |
 |:-  | :----- | :--------- | :------------ |
-| 72 | Ackerfläche | [Art. 18 LBV](https://www.fedlex.admin.ch/eli/cc/1999/13/de#art_18) | «Futterweizen gemäss Sortenliste swiss granum», «Winterraps zur Speiseölgewinnung», «Winterraps als nachwachsender Rohstoff» |
+| 70 | Ackerfläche | [Art. 18 LBV](https://www.fedlex.admin.ch/eli/cc/1999/13/de#art_18) | «Futterweizen gemäss Sortenliste swiss granum», «Winterraps zur Speiseölgewinnung», «Winterraps als nachwachsender Rohstoff» |
 | 15 | Dauergrünfläche | [Art. 19 LBV](https://www.fedlex.admin.ch/eli/cc/1999/13/de#art_19) | «Extensiv genutzte Wiesen (ohne Weiden)», «Übrige Grünfläche (Dauergrünfläche), beitragsberechtigt» |
-| 27 | Dauerkulturen | [Art. 22 LBV](https://www.fedlex.admin.ch/eli/cc/1999/13/de#art_22) | «Reben», «Obstanlagen (Äpfel)», «Reben (regionsspezifische Biodiversitätsförderfläche)» |
+| 28 | Dauerkulturen | [Art. 22 LBV](https://www.fedlex.admin.ch/eli/cc/1999/13/de#art_22) | «Reben», «Obstanlagen (Äpfel)», «Reben (regionsspezifische Biodiversitätsförderfläche)» |
 | 14 | Kulturen in ganzjährig geschütztem Anbau | [Art. 14 Abs. 1 Bst. e LBV](https://www.fedlex.admin.ch/eli/cc/1999/13/de#art_14) | «Gemüsekulturen in Gewächshäusern mit festem Fundament», «Übrige Spezialkulturen in geschütztem Anbau ohne festes Fundament» |
 | 6  | Weitere Flächen innerhalb der landwirtschaftlichen Nutzfläche | | «Streueflächen innerhalb der landwirtschaftlichen Nutzfläche», «Hecken-, Feld- und Ufergehölze (mit Pufferstreifen) (regionsspezifische Biodiversitätsförderfläche)» |
 | 11 | Flächen ausserhalb der landwirtschaftlichen Nutzfläche | | «Wald», «Trockenmauern», «Hausgärten» |
