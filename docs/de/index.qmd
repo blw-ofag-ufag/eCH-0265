@@ -181,6 +181,7 @@ rdf_query(graph, "
           eCH-0265:cultivationSubCategory ?subcategory .
     ?category schema:name ?kategorie .
     ?subcategory schema:name ?Unterkategorie .
+    FILTER(LANG(?Unterkategorie)='de')
   }
   GROUP BY ?Unterkategorie
   ORDER BY ?Unterkategorie") |>
