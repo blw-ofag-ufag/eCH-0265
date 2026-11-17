@@ -356,32 +356,16 @@ kommen in mehr als einer Kategorie vor.
 
 <div class="cell-output-display">
 
-| Unterkategorie | Ackerkulturen | Grundfutterproduktion | Spezialkulturen |
-|:---|---:|---:|---:|
-| Altre colture | 18 |  | 8 |
-| Altre sup. per la compensazione ecologica | 3 |  | 3 |
-| Autre compensation écologique | 3 |  | 3 |
-| Cereali | 22 | 2 |  |
-| Colture perenni | 1 |  | 76 |
-| Colture protette |  |  | 29 |
-| Cultures divers | 18 |  | 8 |
-| Cultures pérennes | 1 |  | 76 |
-| Cultures sarclées | 19 | 3 |  |
-| Cultures sous abri |  |  | 29 |
-| Céréales | 22 | 2 |  |
-| Dauerkulturen | 1 |  | 76 |
-| Diverse Kulturen | 18 |  | 8 |
-| Foraggio di base |  | 25 |  |
-| Fourrage de base |  | 25 |  |
-| Freilandgemüse |  |  | 105 |
-| Geschützte Kulturen |  |  | 29 |
-| Getreide | 22 | 2 |  |
-| Grundfutter |  | 25 |  |
-| Hackfrüchte | 19 | 3 |  |
-| Légumes de pleine terre |  |  | 105 |
-| Ortaggi di pieno campo |  |  | 105 |
-| Sarchiate | 19 | 3 |  |
-| übriger Ökoausgleich | 3 |  | 3 |
+| Unterkategorie       | Ackerkulturen | Grundfutterproduktion | Spezialkulturen |
+|:---------------------|--------------:|----------------------:|----------------:|
+| Dauerkulturen        |             1 |                       |              76 |
+| Diverse Kulturen     |            18 |                       |               8 |
+| Freilandgemüse       |               |                       |             105 |
+| Geschützte Kulturen  |               |                       |              29 |
+| Getreide             |            22 |                     2 |                 |
+| Grundfutter          |               |                    25 |                 |
+| Hackfrüchte          |            19 |                     3 |                 |
+| übriger Ökoausgleich |             3 |                       |               3 |
 
 </div>
 
