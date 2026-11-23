@@ -1322,7 +1322,7 @@ Geschlossen
 Ja (nur die aufgeführten Eigenschaften zulässig)
 
 Kennzahlen  
-759 Instanzen mit je 8 bis 21 Tripeln (im Mittel 8.8)
+760 Instanzen mit je 8 bis 21 Tripeln (im Mittel 8.8)
 
 Datenzugriff  
 [SPARQL-Dienst](https://lindas.admin.ch/sparql/#query=PREFIX%20eCH-0265%3A%20%3Chttps%3A%2F%2Fagriculture.ld.admin.ch%2FeCH-0265%2F2%2F%3E%0APREFIX%20owl%3A%20%3Chttp%3A%2F%2Fwww.w3.org%2F2002%2F07%2Fowl%23%3E%0APREFIX%20rdfs%3A%20%3Chttp%3A%2F%2Fwww.w3.org%2F2000%2F01%2Frdf-schema%23%3E%0APREFIX%20schema%3A%20%3Chttp%3A%2F%2Fschema.org%2F%3E%0ASELECT%20%3Firi%20%3Fname%20%3FalternateName%20%3Fdescription%20%3FsubClassOf%20%3FdisjointWith%0AFROM%20%3Chttps%3A%2F%2Flindas.admin.ch%2Ffoag%2Fech%2F0265%2F2%3E%0AWHERE%20%7B%0A%20%20%3Firi%20a%20eCH-0265%3ACultivationType%20.%0A%20%20%3Firi%20schema%3Aname%20%3Fname%20.%0A%20%20OPTIONAL%20%7B%20%3Firi%20schema%3AalternateName%20%3FalternateName%20.%20%7D%0A%20%20OPTIONAL%20%7B%20%3Firi%20schema%3Adescription%20%3Fdescription%20.%20%7D%0A%20%20OPTIONAL%20%7B%20%3Firi%20rdfs%3AsubClassOf%20%3FsubClassOf%20.%20%7D%0A%20%20OPTIONAL%20%7B%20%3Firi%20owl%3AdisjointWith%20%3FdisjointWith%20.%20%7D%0A%7D%0ALIMIT%201000)
@@ -1427,7 +1427,7 @@ Geschlossen
 Ja (nur die aufgeführten Eigenschaften zulässig)
 
 Kennzahlen  
-3 Instanzen mit je 9 bis 108 Tripeln (im Mittel 42.7)
+3 Instanzen mit je 9 bis 109 Tripeln (im Mittel 43.0)
 
 Datenzugriff  
 [SPARQL-Dienst](https://lindas.admin.ch/sparql/#query=PREFIX%20eCH-0265%3A%20%3Chttps%3A%2F%2Fagriculture.ld.admin.ch%2FeCH-0265%2F2%2F%3E%0APREFIX%20schema%3A%20%3Chttp%3A%2F%2Fschema.org%2F%3E%0APREFIX%20skos%3A%20%3Chttp%3A%2F%2Fwww.w3.org%2F2004%2F02%2Fskos%2Fcore%23%3E%0ASELECT%20%3Firi%20%3Fidentifier%20%3FinScheme%20%3FtopConceptOf%20%3Fname%20%3FexactMatch%0AFROM%20%3Chttps%3A%2F%2Flindas.admin.ch%2Ffoag%2Fech%2F0265%2F2%3E%0AWHERE%20%7B%0A%20%20%3Firi%20a%20eCH-0265%3ANutrientBalanceCropCategory%20.%0A%20%20%3Firi%20schema%3Aidentifier%20%3Fidentifier%20.%0A%20%20%3Firi%20skos%3AinScheme%20%3FinScheme%20.%0A%20%20%3Firi%20skos%3AtopConceptOf%20%3FtopConceptOf%20.%0A%20%20%3Firi%20schema%3Aname%20%3Fname%20.%0A%20%20OPTIONAL%20%7B%20%3Firi%20eCH-0265%3AexactMatch%20%3FexactMatch%20.%20%7D%0A%7D%0ALIMIT%201000)
@@ -1518,7 +1518,7 @@ Geschlossen
 Ja (nur die aufgeführten Eigenschaften zulässig)
 
 Kennzahlen  
-8 Instanzen mit je 9 bis 66 Tripeln (im Mittel 18.2)
+8 Instanzen mit je 9 bis 67 Tripeln (im Mittel 18.4)
 
 Datenzugriff  
 [SPARQL-Dienst](https://lindas.admin.ch/sparql/#query=PREFIX%20eCH-0265%3A%20%3Chttps%3A%2F%2Fagriculture.ld.admin.ch%2FeCH-0265%2F2%2F%3E%0APREFIX%20schema%3A%20%3Chttp%3A%2F%2Fschema.org%2F%3E%0APREFIX%20skos%3A%20%3Chttp%3A%2F%2Fwww.w3.org%2F2004%2F02%2Fskos%2Fcore%23%3E%0ASELECT%20%3Firi%20%3Fidentifier%20%3FinScheme%20%3Fname%20%3FexactMatch%0AFROM%20%3Chttps%3A%2F%2Flindas.admin.ch%2Ffoag%2Fech%2F0265%2F2%3E%0AWHERE%20%7B%0A%20%20%3Firi%20a%20eCH-0265%3ANutrientBalanceCropSubCategory%20.%0A%20%20%3Firi%20schema%3Aidentifier%20%3Fidentifier%20.%0A%20%20%3Firi%20skos%3AinScheme%20%3FinScheme%20.%0A%20%20%3Firi%20schema%3Aname%20%3Fname%20.%0A%20%20OPTIONAL%20%7B%20%3Firi%20eCH-0265%3AexactMatch%20%3FexactMatch%20.%20%7D%0A%7D%0ALIMIT%201000)
