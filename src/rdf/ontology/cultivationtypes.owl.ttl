@@ -5898,6 +5898,13 @@ cultivationtype:1316 a eCH-0265:CultivationType ;
         "Verger de cerisiers"@fr,
         "Ceraseto"@it ;
     rdfs:subClassOf cultivationtype:283 .
+
+cultivationtype:1317 a eCH-0265:CultivationType ;
+    schema:name "Zitrusfrüchte"@de,
+        "Citrus fruits"@en,
+        "Agrumes"@fr,
+        "Agrumi"@it ;
+    rdfs:subClassOf cultivationtype:5 .
 # ==============================================================================
 # DISJOINTNESS OF POTATO TYPES
 # ==============================================================================
