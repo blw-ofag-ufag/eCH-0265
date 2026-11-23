@@ -3073,10 +3073,10 @@ cultivationtype:594 a eCH-0265:CultivationType ;
     eCH-0265:managementIntensity intensity:Extensive .
 
 cultivationtype:595 a eCH-0265:CultivationType ;
-    schema:name "Nicht beitragsberechtigte übrige offene Ackerfläche"@de,
-        "Non-eligible other open arable land"@en,
-        "Autres terres ouvertes ne donnant pas droit aux contributions"@fr,
-        "Altra superficie coltiva aperta non avente diritto ai contributi"@it ;
+    schema:name "Nicht beitragsberechtigte übrige offene Ackerfläche (regionsspezifische Biodiversitätsförderfläche)"@de,
+        "Non-eligible other open arable land (region-specific biodiversity conservation area)"@en,
+        "Autres terres ouvertes ne donnant pas droit aux contributions (surfaces de promotion de la biodiversité spécifiques à la région)"@fr,
+        "Altra superficie coltiva aperta non avente diritto ai contributi (superfici per la promozione della biodiversità specifiche di una regione)"@it ;
     schema:alternateName "BFF"@de,
         "SPB"@fr,
         "SPB"@it ;
