@@ -1906,16 +1906,6 @@ psm:271 a eCH-0265:PlantProtectionCrop ;
     schema:version 0 ;
     eCH-0265:exactMatch cultivationtype:271 .
 
-psm:272 a eCH-0265:PlantProtectionCrop ;
-    skos:inScheme psm:ConceptScheme ;
-    schema:identifier "18C6314C-C067-4E7F-AAB6-2DEF3F01DF9D" ;
-    skos:broader psm:94 ;
-    schema:name "Suppensellerie"@de,
-        "céleri-pomme pour bouillon"@fr,
-        "Sedano da condimento"@it ;
-    schema:version 0 ;
-    eCH-0265:exactMatch cultivationtype:272 .
-
 psm:273 a eCH-0265:PlantProtectionCrop ;
     skos:inScheme psm:ConceptScheme ;
     schema:identifier "0D20E815-633E-4F38-AC93-7B6578B0483E" ;
@@ -2634,6 +2624,15 @@ psm:339 a eCH-0265:PlantProtectionCrop ;
         "Convolvulaceae"@it ;
     schema:version 0 ;
     eCH-0265:exactMatch cultivationtype:339 .
+
+psm:340 a eCH-0265:PlantProtectionCrop ;
+    skos:inScheme psm:ConceptScheme ;
+    schema:identifier "7C7C6764-F232-4220-A715-A1CDDE460ABA" ;
+    schema:name "Zitrusfrüchte"@de,
+        "Agrumes"@fr,
+        "Agrumi"@it ;
+    schema:version 0 ;
+    eCH-0265:exactMatch cultivationtype:1317 .
 
 psm:34 a eCH-0265:PlantProtectionCrop ;
     skos:inScheme psm:ConceptScheme ;
