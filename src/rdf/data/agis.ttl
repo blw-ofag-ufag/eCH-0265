@@ -625,7 +625,7 @@ agis:556 a eCH-0265:DirectPaymentCrop ;
     schema:identifier "556" ;
     schema:name "Buntbrache"@de,
         "Jachère florale"@fr,
-        "Maggese fioriti"@it ;
+        "Maggese fiorito"@it ;
     schema:validFrom "1999-01-01"^^xsd:date ;
     schema:validThrough "2026-12-31"^^xsd:date ;
     skos:inScheme agis:ConceptScheme ;
@@ -965,7 +965,7 @@ agis:601 a eCH-0265:DirectPaymentCrop ;
     schema:identifier "601" ;
     schema:name "Kunstwiesen (ohne Weiden)"@de,
         "Prairies artificielles (sans les pâturages)"@fr,
-        "Prati artificiali (senza pascoli)"@it ;
+        "Prati temporanei (senza pascoli)"@it ;
     schema:validFrom "1999-01-01"^^xsd:date ;
     skos:inScheme agis:ConceptScheme ;
     skos:broader agis:1 ;
@@ -975,7 +975,7 @@ agis:602 a eCH-0265:DirectPaymentCrop ;
     schema:identifier "602" ;
     schema:name "Übrige Kunstwiesen, beitragsberechtigt (z.B. Schweineweide, Geflügelweide)"@de,
         "Autres prairies artificielles donnant droit aux contributions (p.ex. pâturages pour porcs et volaille)"@fr,
-        "Altri prati artificiali avente diritto ai contributi (p.es. pascoli riservati ai suini e al pollame)"@it ;
+        "Altri prati temporanei aventi diritto ai contributi (p.es. pascoli riservati ai suini e al pollame)"@it ;
     schema:validFrom "2014-01-01"^^xsd:date ;
     skos:inScheme agis:ConceptScheme ;
     skos:broader agis:1 ;
@@ -1014,7 +1014,7 @@ agis:613 a eCH-0265:DirectPaymentCrop ;
 agis:616 a eCH-0265:DirectPaymentCrop ;
     schema:identifier "616" ;
     schema:name "Weiden (Heimweiden, übrige Weiden ohne Sömmerungsweiden)"@de,
-        "Pâturages (pâturages attenants à la ferme, autres pâturages, sauf les pâturages d'estivage)"@fr,
+        "Pâturages (pâturages attenants à la ferme, autres pâturages, sans les pâturages d'estivage)"@fr,
         "Pascoli (pascoli propri, altri pascoli senza pascoli d'estivazione)"@it ;
     schema:validFrom "1999-01-01"^^xsd:date ;
     skos:inScheme agis:ConceptScheme ;
@@ -1034,7 +1034,7 @@ agis:617 a eCH-0265:DirectPaymentCrop ;
 agis:618 a eCH-0265:DirectPaymentCrop ;
     schema:identifier "618" ;
     schema:name "Waldweiden (ohne bewaldete Fläche)"@de,
-        "Pâturages boisés (sauf surfaces boisées)"@fr,
+        "Pâturages boisés (sans surfaces boisées)"@fr,
         "Pascoli boschivi (senza i boschi)"@it ;
     schema:validFrom "1999-01-01"^^xsd:date ;
     skos:inScheme agis:ConceptScheme ;
@@ -1085,7 +1085,7 @@ agis:623 a eCH-0265:DirectPaymentCrop ;
 agis:625 a eCH-0265:DirectPaymentCrop ;
     schema:identifier "625" ;
     schema:name "Waldweiden (ohne bewaldete Fläche)"@de,
-        "Pâturages boisés (sauf surfaces boisées)"@fr,
+        "Pâturages boisés (sans surfaces boisées)"@fr,
         "Pascoli boschivi (senza i boschi)"@it ;
     schema:validFrom "2009-01-01"^^xsd:date ;
     skos:inScheme agis:ConceptScheme ;
@@ -1137,7 +1137,7 @@ agis:634 a eCH-0265:DirectPaymentCrop ;
 agis:635 a eCH-0265:DirectPaymentCrop ;
     schema:identifier "635" ;
     schema:name "Uferwiesen (ohne Weiden)"@de,
-        "Prairies riveraines (sauf les pâturages)"@fr,
+        "Prairies riveraines (sans les pâturages)"@fr,
         "Prati rivieraschi (senza pascoli)"@it ;
     schema:validFrom "2023-01-01"^^xsd:date ;
     skos:inScheme agis:ConceptScheme ;
@@ -1157,7 +1157,7 @@ agis:693 a eCH-0265:DirectPaymentCrop ;
 agis:694 a eCH-0265:DirectPaymentCrop ;
     schema:identifier "694" ;
     schema:name "Grünfläche ohne Weiden (regionsspezifische Biodiversitätsförderfläche)"@de,
-        "Surfaces herbagère sans les pâturages (surfaces de promotion de la biodiversité spécifiques à la région)"@fr,
+        "Surfaces herbagères sans les pâturages (surfaces de promotion de la biodiversité spécifiques à la région)"@fr,
         "Superfici inerbite, senza pascoli (superfici per la promozione della biodiversità specifiche di una regione)"@it ;
     schema:validFrom "2015-01-01"^^xsd:date ;
     skos:inScheme agis:ConceptScheme ;
@@ -1252,8 +1252,8 @@ agis:706 a eCH-0265:DirectPaymentCrop ;
 agis:707 a eCH-0265:DirectPaymentCrop ;
     schema:identifier "707" ;
     schema:name "Mehrjährige nachwachsende Rohstoffe (Chinaschilf, usw.)"@de,
-        "Matières premières renouvelables pluriannuelles (roseau de chine etc.)"@fr,
-        "Materie prime rinnovabili pluriennali (Miscanthus sin. ecc.)"@it ;
+        "Matières premières renouvelables pluriannuelles (roseau de Chine, etc.)"@fr,
+        "Materie prime rinnovabili pluriennali (Miscanthus sin., ecc.)"@it ;
     schema:validFrom "1999-01-01"^^xsd:date ;
     skos:inScheme agis:ConceptScheme ;
     eCH-0265:exactMatch cultivationtype:707 .
@@ -1773,7 +1773,7 @@ agis:908 a eCH-0265:DirectPaymentCrop ;
 agis:909 a eCH-0265:DirectPaymentCrop ;
     schema:identifier "909" ;
     schema:name "Hausgärten"@de,
-        "Jardins potager"@fr,
+        "Jardins potagers"@fr,
         "Giardini e orti domestici"@it ;
     schema:validFrom "1999-01-01"^^xsd:date ;
     skos:inScheme agis:ConceptScheme ;
