@@ -102,12 +102,14 @@ In den folgenden Abschnitten werden die Kategorisierungssysteme landwirtschaftli
 Direktzahlungen sind Beiträge des Bundes an Landwirtschaftsbetriebe, die unter anderem den ökologischen Leistungsnachweis (ÖLN) erfüllen.
 Die Beitragsberechtigung hängt von der Nutzung der einzelnen Flächen ab, weshalb jede Fläche eines Betriebs einer Direktzahlungskultur zugeordnet wird.
 Im Rahmen des Direktzahlungssystems sind 158 Direktzahlungskulturen (Stand Beitragsjahr 2027) definiert, welche im Rahmen der Strukturdatenerhebung von den Bewirtschaftenden in den kantonalen Agrarinformationssystemen (KAIS) eingetragen und an das agrarpolitische Informationssystem (AGIS) des Bundes übermittelt werden.
+Die Direktzahlungskulturen dienen einerseits für den Vollzug der agrarpolitischen Massnahmen (Direktzahlungen, Einzelkulturbeiträge, Getreidezulage). Andererseits müssen damit auch die statistischen Anforderungen des Bundesamt für Statistik (BFS) erfüllt werden.
 
-Betriebe, die Direktzahlungen beziehen, deklarieren dabei ihre gesamte landwirtschaftliche Nutzfläche gegenüber dem Kanton, nicht nur die beitragsberechtigten Flächen.
-Die Kantone übermitteln diese Daten jährlich an AGIS, wo sie als Grundlage für die Berechnung der Direktzahlungen dienen (vgl. [Flächenkatalog und Beitragsberechtigung](https://www.blw.admin.ch/dam/fr/sd-web/QYLa6wGfdK8G/2026%20Merkblatt%20Nr.%206.2%20Fl%C3%A4chenkatalog%20und%20Beitragsberechtigung.pdf)).
-Betriebe ohne Direktzahlungsbezug sind hingegen nicht zur Deklaration verpflichtet und daher in AGIS nicht oder nur unvollständig erfasst.
+Landwirtschaftliche Betriebe[^stru] deklarieren dabei ihre gesamte landwirtschaftliche Nutzfläche gegenüber dem Kanton, nicht nur die beitragsberechtigten Flächen.
+Die Kantone wiederum übermitteln diese Daten jährlich an AGIS, wo sie als Grundlage für die Berechnung der Direktzahlungen dienen (vgl. [Flächenkatalog und Beitragsberechtigung](https://www.blw.admin.ch/dam/fr/sd-web/QYLa6wGfdK8G/2026%20Merkblatt%20Nr.%206.2%20Fl%C3%A4chenkatalog%20und%20Beitragsberechtigung.pdf)).
 In AGIS stehen somit alle aktuell gültigen und historisierten Direktzahlungskulturen und deren Beitragsberechtigungen für Bund und Kantone zur Verfügung.
 Momentan können diese Daten aber nicht in maschinenlesbarer Form vom AGIS-Webservice bezogen werden.
+
+[^stru]: Hierfür gilt die Definition, die das BFS im Rahmen der Strukturdatenerhebung macht.
 
 Die Direktzahlungskulturen kommen nicht nur im Rahmen der Strukturdatenerhebung zum Einsatz, sondern auch bei der gesamtschweizerischen räumlichen Erfassung von Nutzungsflächen (siehe [«landwirtschaftliche Kulturflächen»](https://www.blw.admin.ch/de/landwirtschaftliche-kulturflaechen)).
 Die Kantone erfassen diese Geodaten gemäss dem minimalen Geodatenmodell 153.1 «Nutzungsflächen» und stellen die Daten via dem interkantonalen Portal [geodienste.ch](https://geodienste.ch/) zur Verfügung.
