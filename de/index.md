@@ -238,16 +238,18 @@ Direktzahlungskulturen (Stand Beitragsjahr 2027) definiert, welche im
 Rahmen der Strukturdatenerhebung von den Bewirtschaftenden in den
 kantonalen Agrarinformationssystemen (KAIS) eingetragen und an das
 agrarpolitische Informationssystem (AGIS) des Bundes übermittelt werden.
+Die Direktzahlungskulturen dienen einerseits für den Vollzug der
+agrarpolitischen Massnahmen (Direktzahlungen, Einzelkulturbeiträge,
+Getreidezulage). Andererseits müssen damit auch die statistischen
+Anforderungen des Bundesamt für Statistik (BFS) erfüllt werden.
 
-Betriebe, die Direktzahlungen beziehen, deklarieren dabei ihre gesamte
+Landwirtschaftliche Betriebe[^4] deklarieren dabei ihre gesamte
 landwirtschaftliche Nutzfläche gegenüber dem Kanton, nicht nur die
-beitragsberechtigten Flächen. Die Kantone übermitteln diese Daten
-jährlich an AGIS, wo sie als Grundlage für die Berechnung der
+beitragsberechtigten Flächen. Die Kantone wiederum übermitteln diese
+Daten jährlich an AGIS, wo sie als Grundlage für die Berechnung der
 Direktzahlungen dienen (vgl. [Flächenkatalog und
 Beitragsberechtigung](https://www.blw.admin.ch/dam/fr/sd-web/QYLa6wGfdK8G/2026%20Merkblatt%20Nr.%206.2%20Fl%C3%A4chenkatalog%20und%20Beitragsberechtigung.pdf)).
-Betriebe ohne Direktzahlungsbezug sind hingegen nicht zur Deklaration
-verpflichtet und daher in AGIS nicht oder nur unvollständig erfasst. In
-AGIS stehen somit alle aktuell gültigen und historisierten
+In AGIS stehen somit alle aktuell gültigen und historisierten
 Direktzahlungskulturen und deren Beitragsberechtigungen für Bund und
 Kantone zur Verfügung. Momentan können diese Daten aber nicht in
 maschinenlesbarer Form vom AGIS-Webservice bezogen werden.
@@ -314,7 +316,7 @@ Referenztabellen, abgeleitet von den detaillierteren Tabellen der GRUD.
 Zur Standardisierung der Suisse-Bilanz-Berechnung stellt das BLW neu den
 Nährstoffbilanz-Berechnungsservice (NBBS) als Programmierschnittstelle
 (API) zur Verfügung. Über diese Schnittstelle lässt sich unter anderem
-ein Katalog der landwirtschaftlichen Kulturen abrufen.[^4] Die
+ein Katalog der landwirtschaftlichen Kulturen abrufen.[^5] Die
 eigentlichen Kulturen heissen im NBBS «agronomische Kulturkategorien».
 Jede von ihnen ist genau einer Kultivierungskategorie und genau einer
 Kultivierungsunterkategorie zugeordnet
@@ -462,7 +464,7 @@ Bereiche.
 Die Unterschiede betreffen nicht nur die Struktur, sondern auch den
 Inhalt scheinbar identischer Begriffe. So zählt der NBBS Mais,
 Buchweizen und Quinoa zum Getreide, das PSM-V hingegen explizit
-nicht.[^5] Wer eine Kulturliste von einem Bereich in einen anderen
+nicht.[^6] Wer eine Kulturliste von einem Bereich in einen anderen
 überträgt, muss solche Divergenzen kennen und eindeutig benennen können.
 Wegen ihrer unterschiedlichen Zwecke lassen sich die drei Systeme nicht
 zu einem einzigen vereinheitlichen. Das folgende Kapitel zeigt, wie
@@ -618,7 +620,7 @@ allgemeineren Beziehung steht.
 </div>
 
 Die Beziehungen werden je Zielsystem nach einer festen Rangfolge
-abgeleitet.[^6] Allgemeinere Beziehungen (`skos:broadMatch`) entstehen
+abgeleitet.[^7] Allgemeinere Beziehungen (`skos:broadMatch`) entstehen
 nur, wenn im Zielsystem keine exakte Entsprechung existiert, und
 spezifischere Beziehungen (`skos:narrowMatch`) nur, wenn weder eine
 exakte noch eine allgemeinere Beziehung besteht. «Sommergerste» (DZ) ist
@@ -692,7 +694,7 @@ Strukturierungsebenen: die Flächenkategorien der Direktzahlungen sowie
 die Kategorien und Unterkategorien der Nährstoffbilanz bleiben aussen
 vor, und im PSM-V zählen nur die untersten Kulturen, nicht übergeordnete
 Gruppen wie «Getreide» oder «Wintergetreide»
-(<a href="#fig-psm-hierarchy" class="quarto-xref">Abbildung 3</a>).[^7]
+(<a href="#fig-psm-hierarchy" class="quarto-xref">Abbildung 3</a>).[^8]
 
 Die Kultur eines Quellsystems gilt als *deterministisch abbildbar* in
 ein Zielsystem, wenn mindestens ein `skos:exactMatch` oder mindestens
@@ -2213,14 +2215,17 @@ Eine vollständige Übersicht der Veränderungen wird auf GitHub geführt:
     dominierenden botanischen Pflanzenart, häufig in Form einer
     1:1-Beziehung.
 
-[^4]: Die «agronomischen Kulturkategorien» für den
+[^4]: Hierfür gilt die Definition, die das BFS im Rahmen der
+    Strukturdatenerhebung macht.
+
+[^5]: Die «agronomischen Kulturkategorien» für den
     Nährstoffbilanzrechner sind beispielsweise über den Endpoint
     <https://rf-vp.agate.ch/digiflux/naebi/2-0/naebiservice-backend/agronomiccropcategories>
     abrufbar. Mittels der Slugs `cultivationcategories` und
     `cultivationsubcategories` lassen sich zudem die beiden
     Gruppierungen abfragen.
 
-[^5]: Botanisch gesehen ist Mais ein Getreide (Süssgras), unterscheidet
+[^6]: Botanisch gesehen ist Mais ein Getreide (Süssgras), unterscheidet
     sich in der ackerbaulichen Praxis als Hackfrucht jedoch merklich von
     klassischen Getreidearten. Buchweizen (ein Knöterichgewächs) und
     Quinoa (ein Fuchsschwanzgewächs) sind botanisch nicht mit Getreide
@@ -2228,13 +2233,13 @@ Eine vollständige Übersicht der Veränderungen wird auf GitHub geführt:
     jedoch stark denen von echtem Getreide, daher werden sie manchmal
     als Pseudogetreide bezeichnet.
 
-[^6]: Die Ableitung erfolgt im automatisierten Verarbeitungsprozess
+[^7]: Die Ableitung erfolgt im automatisierten Verarbeitungsprozess
     (<a href="#sec-quality" class="quarto-xref">Kapitel 4.5</a>) mit
     einer SPARQL-Update-Abfrage, siehe
     [src/sparql/processing/02_mapping_table_skos_generation.rq](https://github.com/blw-ofag-ufag/eCH-0265/blob/main/src/sparql/processing/02_mapping_table_skos_generation.rq)
     im Repository.
 
-[^7]: Als unterste Kulturen gelten PS-Kulturen, die selbst keine
+[^8]: Als unterste Kulturen gelten PS-Kulturen, die selbst keine
     Unterkulturen (`skos:broader`) haben. Dieses Kriterium erfasst nicht
     alle Sammelbegriffe: «Offene Ackerfläche» und «Grünfläche» haben im
     PSM-V keine Unterkulturen und zählen deshalb mit, sind fachlich aber
